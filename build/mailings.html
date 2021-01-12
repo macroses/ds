@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="color-scheme" content="dark light">
+    <title>Digiseller</title>
+    <link rel="stylesheet" href="libs/normalize/normalize.css">
+    <link rel="stylesheet" href="css/libs.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/light-theme.css" id="color_scheme"><script>window.MSInputMethodContext && document.documentMode && document.write('<link rel="stylesheet" href="libs/bootstrap-ie11.min.css"><script src="static/js/ie11-customProperty.js"><\/script><script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js"><\/script><script>!function () { var e, t; ((e = document.createEvent("CustomEvent")).initEvent("Bootstrap", !0, !0), e.preventDefault(), e.defaultPrevented) || (t = Event.prototype.preventDefault, Event.prototype.preventDefault = function () { this.cancelable && (t.call(this), Object.defineProperty(this, "defaultPrevented", { get: function () { return !0 }, configurable: !0 })) }) }();<\/script>');</script>
+    <script src="https://cdn.tiny.cloud/1/sqoo5ez8oy5x8bram4focqll8rz90rodp0tusw0e7cytsx6y/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+  </head>
+  <body>
+    <button id="change_scheme">поменять цвет</button>
+    <div class="wrapper">
+      <header>
+        <div class="box">
+          <div class="header_top"><a class="header_logo" href="/">
+              <svg class="pic-digiseller-logo ">
+                <use xlink:href="img/svg/sprite.svg#digiseller-logo"></use>
+              </svg></a>
+            <div class="header_search">
+              <div class="form_element">
+                <input type="text" autofocus placeholder="Товар, счет, уникальный код, email ...">
+              </div>
+              <div class="search_results">
+                <ul class="header_search_results_list">
+                  <li>
+                    <div class="section_title">Счет</div><a class="search_results_item-content" href="#">
+                      <div class="search_results_item-icon">
+                        <svg class="pic-invoice ">
+                          <use xlink:href="img/svg/sprite.svg#invoice"></use>
+                        </svg>
+                      </div><span class="search_results_item-text">eFootball PES 2021 ✅SEASON UPDATE STANDARD EDITION</span></a><a class="search_results_item-content" href="#">
+                      <div class="search_results_item-icon">
+                        <svg class="pic-search-res-customer ">
+                          <use xlink:href="img/svg/sprite.svg#search-res-customer"></use>
+                        </svg>
+                      </div><span class="search_results_item-text">mail@mail.com</span></a><a class="search_results_item-content" href="#">
+                      <div class="search_results_item-icon">
+                        <svg class="pic-good ">
+                          <use xlink:href="img/svg/sprite.svg#good"></use>
+                        </svg>
+                      </div><span class="search_results_item-text">Товар там какой то</span></a><a class="search_results_item-content" href="#">
+                      <div class="search_results_item-icon">
+                        <svg class="pic-invoice ">
+                          <use xlink:href="img/svg/sprite.svg#invoice"></use>
+                        </svg>
+                      </div><span class="search_results_item-text">GUID там какой то</span></a>
+                  </li>
+                  <li>
+                    <div class="section_title">Счет</div><a class="search_results_item-content" href="#">
+                      <div class="search_results_item-icon">
+                        <svg class="pic-invoice ">
+                          <use xlink:href="img/svg/sprite.svg#invoice"></use>
+                        </svg>
+                      </div><span class="search_results_item-text">eFootball PES 2021 ✅SEASON UPDATE STANDARD EDITION</span></a><a class="search_results_item-content" href="#">
+                      <div class="search_results_item-icon">
+                        <svg class="pic-search-res-customer ">
+                          <use xlink:href="img/svg/sprite.svg#search-res-customer"></use>
+                        </svg>
+                      </div><span class="search_results_item-text">mail@mail.com</span></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="header_top_nav">
+              <ul class="header_top_nav-list">
+                <li id="notice_item">
+                  <svg class="pic-notice ">
+                    <use xlink:href="img/svg/sprite.svg#notice"></use>
+                  </svg><span class="nav_list_item-title">Уведомления</span>
+                  <div class="notice_counter_box styled">
+                    <div class="notice_counter-item important">95</div>
+                    <div class="notice_counter-item">64</div>
+                  </div>
+                  <div class="notice_popup_wrap" id="notice_popup">
+                    <div class="notice_popup_box">
+                      <div class="triangle"></div>
+                      <div class="notice_popup_top">
+                        <div class="notice_popup_top-title">Список уведомлений</div>
+                        <div class="notice_popup-top_chck">
+                          <label>
+                            <input type="checkbox"><span>только важные</span>
+                          </label>
+                        </div>
+                      </div>
+                      <ul class="notice_popup_list">
+                        <!-- loader-->
+                        <li class="notice_popup_list-item">
+                          <div class="spinner-border" role="status"><span class="visually-hidden">Loading...</span></div>
+                        </li>
+                        <!-- важные-->
+                        <li class="notice_popup_list-item">
+                          <div class="item_top">
+                            <div class="item_top-title">
+                              <svg class="pic-notice-popup-important ">
+                                <use xlink:href="img/svg/sprite.svg#notice-popup-important"></use>
+                              </svg>Digiseller
+                            </div>
+                            <div class="item_top-additional">
+                              <div class="item_top-date">28.07.2020 14:56</div>
+                              <div class="item_top-settings"><a href="/" title="настройка уведомлений">
+                                  <svg class="pic-popup-settings ">
+                                    <use xlink:href="img/svg/sprite.svg#popup-settings"></use>
+                                  </svg></a></div>
+                            </div>
+                          </div>
+                          <div class="item_content">
+                            <div class="item_content_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo veritatis impedit iste assumenda non ipsum officia cum similique, ipsa repellat. <a href="/">Lorem ipsum dolor sit amet.</a></div>
+                            <div class="item_content_details"><a href="#">Подробнее</a></div>
+                          </div>
+                        </li>
+                        <!-- неважные-->
+                        <li class="notice_popup_list-item">
+                          <div class="item_top">
+                            <div class="item_top-title">
+                              <svg class="pic-notice-popup ">
+                                <use xlink:href="img/svg/sprite.svg#notice-popup"></use>
+                              </svg>Партнерская программа
+                            </div>
+                            <div class="item_top-additional">
+                              <div class="item_top-date">28.07.2020 14:56</div>
+                            </div>
+                          </div>
+                          <div class="item_content">
+                            <div class="item_content_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo veritatis impedit iste assumenda non ipsum officia cum similique, ipsa repellat. <a href="/">Lorem ipsum dolor sit amet.</a></div>
+                            <div class="item_content_details"><a href="#">Подробнее</a></div>
+                          </div>
+                        </li>
+                        <!-- непрочитанные-->
+                        <li class="notice_popup_list-item unread_notice">
+                          <div class="item_top">
+                            <div class="item_top-title">
+                              <svg class="pic-notice-popup ">
+                                <use xlink:href="img/svg/sprite.svg#notice-popup"></use>
+                              </svg>Партнерская программа
+                            </div>
+                            <div class="item_top-additional">
+                              <div class="item_top-date">28.07.2020 14:56</div>
+                            </div>
+                          </div>
+                          <div class="item_content">
+                            <div class="item_content_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo veritatis impedit iste assumenda non ipsum officia cum similique, ipsa repellat. <a href="/">Lorem ipsum dolor sit amet.</a></div>
+                            <div class="item_content_details"><a href="#">Подробнее</a></div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="sep">
+                  <svg class="pic-messages ">
+                    <use xlink:href="img/svg/sprite.svg#messages"></use>
+                  </svg><span class="nav_list_item-title">Сообщения</span>
+                  <div class="notice_counter_box">
+                    <div class="notice_counter-item">0</div>
+                  </div>
+                </li>
+                <li>
+                  <svg class="pic-responses ">
+                    <use xlink:href="img/svg/sprite.svg#responses"></use>
+                  </svg><span class="nav_list_item-title">Претенизии</span>
+                  <div class="notice_counter_box">
+                    <div class="notice_counter-item">0</div>
+                  </div>
+                </li>
+                <li>
+                  <svg class="pic-offer ">
+                    <use xlink:href="img/svg/sprite.svg#offer"></use>
+                  </svg><span class="nav_list_item-title">Предложения</span>
+                  <div class="notice_counter_box">
+                    <div class="notice_counter-item new_notice">999</div>
+                  </div>
+                </li>
+                <li> 
+                  <svg class="pic-chats ">
+                    <use xlink:href="img/svg/sprite.svg#chats"></use>
+                  </svg><span class="nav_list_item-title">Чаты</span>
+                  <div class="notice_counter_box">
+                    <div class="notice_counter-item">0</div>
+                  </div>
+                </li>
+                <li class="sep">
+                  <svg class="pic-logout ">
+                    <use xlink:href="img/svg/sprite.svg#logout"></use>
+                  </svg><span class="nav_list_item-title">Выход</span>
+                </li>
+                <li class="lang"><a class="active" href="/">
+                    <svg class="pic-rus ">
+                      <use xlink:href="img/svg/sprite.svg#rus"></use>
+                    </svg>рус</a><a href="/">
+                    <svg class="pic-eng ">
+                      <use xlink:href="img/svg/sprite.svg#eng"></use>
+                    </svg>eng</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <nav class="main_nav">
+        <div class="main_nav_top">
+          <div class="box">
+            <ul>
+              <li><a href="#">Товары</a></li>
+              <li><a href="#">Магазин</a></li>
+              <li><a href="#">Рекламные места</a></li>
+              <li><a href="#">Бухгалтерия</a></li>
+              <li><a class="active" href="#">Личный кабинет</a></li>
+              <li><a href="#">Партнерская программа</a></li>
+              <li><a href="#">Описание сервиса</a></li>
+              <li><a href="#">Торговая площадка</a></li>
+              <li><a class="question_mark" href="#" data-placement="top" data-toggle="tooltip" title="задать вопрос">
+                  <svg class="pic-question_mark ">
+                    <use xlink:href="img/svg/sprite.svg#question_mark"></use>
+                  </svg></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="main_nav_bottom">
+          <div class="box">
+            <ul>
+              <li><a class="active" href="my_info.html">Детали</a></li>
+              <li><a href="messages.html">Переписка</a></li>
+              <li><a href="news.html">Новости</a></li>
+              <li><a href="my_security.html">Безопасность</a></li>
+              <li><a href="space_rent.html">Дисковое пространство</a></li>
+              <li><a href="notify_settings.html">Уведомления</a></li>
+              <li><a href="staff.html">Сотрудники</a></li>
+              <li><a href="mailings.html">Рассылки</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <main>
+        <div class="box">
+          <div class="content_box mailings">
+            <div class="mailings_info">Здесь вы можете создать рассылку по своим покупателям, точечно указав нужных вам получателей с помощью фильтров.
+              <div class="alert_box warning"><span class="bold">Внимание! </span>Запрещено рекламировать собственный магазин, используя аудиторию торговых площадок (например, Plati.Market) <br>
+                Начало рассылки может быть не ранее, чем через 12 часов с текущего момента.
+              </div>
+              <div class="alert_box additional_info">Действуют ограничения на количество рассылок: не чаще чем <span class="bold">1 </span>в день, <span class="bold">2 </span>в месяц.</div>
+            </div>
+          </div>
+          <ul class="nav nav-tabs" role="tablist">
+            <li><a class="nav-link active" href="#tabScheduled" role="tab" data-toggle="tab">Scheduled</a></li>
+            <li><a class="nav-link" href="#tabCompleted" role="tab" data-toggle="tab">Completed</a></li>
+            <li><a class="nav-link" href="#tabSettings" role="tab" data-toggle="tab">Settings</a></li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane active" id="tabScheduled">
+              <div class="content_box">
+                <table class="equal_cells">
+                  <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>Название</th>
+                      <th class="align_center">Корреспондентов</th>
+                      <th class="align_center">Статус</th>
+                      <th class="align_center">Дата старта</th>
+                      <th class="align_center">Отменить рассылку</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Рассылка 19.02.2019</td>
+                      <td class="align_center">104</td>
+                      <td class="align_center">Ожидается</td>
+                      <td class="align_center">30.10.2020 9:40:00</td>
+                      <td class="align_center">
+                        <button class="btn btn_gray">отменить</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Рассылка 19.02.2019Рассылка 19.02.2019Рассылка 19.02.2019Рассылка 19.02.2019Рассылка 19.02.2019Рассылка 19.02.2019Рассылка 19.02.2019Рассылка 19.02.2019</td>
+                      <td class="align_center">104</td>
+                      <td class="align_center">Ожидается</td>
+                      <td class="align_center">30.10.2020 9:40:00</td>
+                      <td class="align_center">
+                        <button class="btn btn_gray">отменить</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="tab-pane" id="tabCompleted">
+              <div class="content_box">
+                <table class="equal_cells">
+                  <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>Название</th>
+                      <th>Корреспондентов</th>
+                      <th>Дата завершения</th>
+                      <th>Просмотров</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Рассылка 19.02.2019</td>
+                      <td>24</td>
+                      <td>19.02.2019 15:41:04</td>
+                      <td>13</td>
+                    </tr>
+                    <tr>
+                      <td>Рассылка 19.02.2019 ассылка 19.02.2019 ассылка 19.02.2019 ассылка 19.02.2019 ассылка 19.02.2019 ассылка 19.02.2019 ассылка 19.02.2019 ассылка 19.02.2019 ассылка 19.02.2019 </td>
+                      <td>24</td>
+                      <td>19.02.2019 15:41:04</td>
+                      <td>13</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="tab-pane" id="tabSettings">
+              <div class="content_box">
+                <div class="form_group">
+                  <div class="form_element mailings">
+                    <label class="for_check">
+                      <input type="checkbox"><span class="text">Заменить логотип в письме на <a class="main_link" href="#">логотип моего магазина</a></span>
+                    </label>
+                    <div class="hint">касается только продаж через "Мой магазин"</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content_box">
+            <button class="btn btn_blue" data-toggle="modal" data-target="#mailings_step1">создать рассылку</button>
+          </div>
+        </div>
+      </main>
+      <div class="modal fade" id="mailings_step1" tabindex="-1" aria-labelledby="mailings_step1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="modal-title">Шаг 1: Название рассылки</div><span class="close" data-dismiss="modal" aria-label="Close">
+                <svg class="pic-modal_close ">
+                  <use xlink:href="img/svg/sprite.svg#modal_close"></use>
+                </svg></span>
+            </div>
+            <div class="modal-body">
+              <div class="form_element vertical">
+                <label>Название рассылки</label>
+                <input type="text">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn_gray" data-toggle="modal" data-target="#mailings_step2" data-dismiss="modal" aria-label="Close">далее</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="mailings_step2" aria-labelledby="mailings_step2" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="modal-title">Шаг 2: Дата и время начала рассылки</div><span class="close" data-dismiss="modal" aria-label="Close">
+                <svg class="pic-modal_close ">
+                  <use xlink:href="img/svg/sprite.svg#modal_close"></use>
+                </svg></span>
+            </div>
+            <div class="modal-body">
+              <div class="form_group inline_from">
+                <div class="form_element">
+                  <!-- dates-->
+                  <label>Дата:</label>
+                  <input class="dates" type="text">
+                </div>
+                <div class="form_element">
+                  <label>Время:</label>
+                  <select>
+                    <option value="00">00</option>
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                  </select><span>ч.</span>
+                </div>
+                <div class="form_element">
+                  <select>
+                    <option value="00">00</option>
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                  </select><span>мин.</span>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn_gray" data-toggle="modal" data-target="#mailings_step1" data-dismiss="modal" aria-label="Close">назад</button>
+              <button class="btn btn_gray btn btn_gray" data-toggle="modal" data-target="#mailings_step3" data-dismiss="modal" aria-label="Close">далее</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="mailings_step3" tabindex="-1" aria-labelledby="mailings_step3" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="modal-title">Шаг 3: Создание списка получателей</div><span class="close" data-dismiss="modal" aria-label="Close">
+                <svg class="pic-modal_close ">
+                  <use xlink:href="img/svg/sprite.svg#modal_close"></use>
+                </svg></span>
+            </div>
+            <div class="modal-body">
+              <div class="mailing_current_filters">Текущие фильтры:
+                <div class="added_recipients_counter">выбрано получателей<span>0</span></div>
+              </div>
+              <div class="mailings_table_filters">
+                <table class="equal_cells">
+                  <colgroup>
+                    <col style="width: 250px">
+                    <col style="width: 90px">
+                    <col style="width: 90px">
+                    <col style="width: 110px">
+                    <col style="width: 90px">
+                    <col style="width: 60px">
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>Товар</th>
+                      <th>С</th>
+                      <th>По</th>
+                      <th>Площадка</th>
+                      <th>Язык</th>
+                      <th class="align_center">
+                        <svg class="pic-delete-btn ">
+                          <use xlink:href="img/svg/sprite.svg#delete-btn"></use>
+                        </svg>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>COLD Уникальный товар с нефиксированной ценой COLD Уникальный товар с нефиксированной ценой</td>
+                      <td>14.10.2020</td>
+                      <td>14.10.2020</td>
+                      <td>Мой магазин</td>
+                      <td>ru-RU</td>
+                      <td class="align_center">
+                        <button class="btn delete_btn">
+                          <svg class="pic-delete-btn ">
+                            <use xlink:href="img/svg/sprite.svg#delete-btn"></use>
+                          </svg>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="mailings_table_filters_setting">
+                <div class="form_element">
+                  <label>Площадка:</label>
+                  <select>
+                    <option value="0">-</option>
+                    <option value="1">Мой магазин</option>
+                    <option value="2">Plati.Market</option>
+                  </select>
+                </div>
+                <div class="form_element">
+                  <label>Язык покупки</label>
+                  <select>
+                    <option value="0">-</option>
+                    <option value="1">Русский</option>
+                    <option value="2">Английский</option>
+                  </select>
+                </div>
+                <div class="form_element">
+                  <label>Выберите товар:</label>
+                  <div class="search_result_box">
+                    <input type="text" placeholder="ID товара или его название">
+                    <ul class="search_result_list">
+                      <li>111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111</li>
+                      <li>2</li>
+                      <li>3</li>
+                      <li>4</li>
+                      <li>5</li>
+                      <li>6</li>
+                      <li>7</li>
+                      <li>8</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="mailings_table_filters_setting-date">
+                  <!-- dates-->
+                  <div class="form_element">
+                    <label>Дата покупки:</label>
+                  </div>
+                  <div class="form_element">
+                    <input type="text" placeholder="С" id="date_start">
+                  </div>
+                  <div class="form_element">
+                    <input type="text" placeholder="По" id="date_end">
+                  </div>
+                </div>
+                <button class="btn btn_gray">добавить</button>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn_gray" data-toggle="modal" data-target="#mailings_step2" data-dismiss="modal" aria-label="Close">назад</button>
+              <button class="btn btn_gray" data-toggle="modal" data-target="#mailings_step4" data-dismiss="modal" aria-label="Close">далее</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="mailings_step4" tabindex="-1" aria-labelledby="mailings_step4" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-tinymce">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="modal-title">Шаг 4: Тема и текст письма рассылки</div><span class="close" data-dismiss="modal" aria-label="Close">
+                <svg class="pic-modal_close ">
+                  <use xlink:href="img/svg/sprite.svg#modal_close"></use>
+                </svg></span>
+            </div>
+            <div class="modal-body">
+              <div class="form_element"><span>Тема и текст рассылки на</span>
+                <select>
+                  <option value="0">русском</option>
+                  <option value="1">английском</option>
+                </select><span>языке</span>
+              </div>
+              <div class="form_element mailing_title">
+                <label>Тема письма:</label>
+                <input type="text">
+              </div>
+              <textarea id="mailing_area"></textarea>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn_gray" data-toggle="modal" data-target="#mailings_step3" data-dismiss="modal" aria-label="Close">назад</button>
+              <button class="btn btn_gray" data-toggle="modal" data-target="#mailings_step5" data-dismiss="modal" aria-label="Close">далее</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="mailings_step5" tabindex="-1" aria-labelledby="mailings_step5" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="modal-title">Шаг 5: Информация о рассылке</div><span class="close" data-dismiss="modal" aria-label="Close">
+                <svg class="pic-modal_close ">
+                  <use xlink:href="img/svg/sprite.svg#modal_close"></use>
+                </svg></span>
+            </div>
+            <div class="modal-body">
+              <div class="mailings_email_title">Название: <span>Рассылка 29.10.2020</span></div>
+              <div class="mailing_current_filters">Текущие фильтры:
+                <div class="added_recipients_counter">выбрано получателей<span>0</span></div>
+              </div>
+              <div class="mailings_table_filters">
+                <table class="equal_cells">
+                  <colgroup>
+                    <col style="width: 350px">
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>Товар</th>
+                      <th>С</th>
+                      <th>По</th>
+                      <th>Площадка</th>
+                      <th>Язык</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>COLD Уникальный товар с нефиксированной ценой COLD Уникальный товар с нефиксированной ценой</td>
+                      <td>14.10.2020</td>
+                      <td>14.10.2020</td>
+                      <td>Мой магазин</td>
+                      <td>ru-RU</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="mailing_text_preview">Текст письма: <span data-placement="right" data-toggle="tooltip" title="тест письма тест письма тест письма тест письма тест письма тест письма тест письма те">
+                  <svg class="pic-rus ">
+                    <use xlink:href="img/svg/sprite.svg#rus"></use>
+                  </svg></span><span data-placement="right" data-toggle="tooltip" title="test test test">
+                  <svg class="pic-eng ">
+                    <use xlink:href="img/svg/sprite.svg#eng"></use>
+                  </svg></span></div>
+              <div class="mailings_email_title">Дата и время старта: <span>30.10.2020 01:29</span>
+                <div class="form_element inline">
+                  <label>Отправить тестовое письмо на email: </label>
+                  <input type="text">
+                  <button class="btn btn_gray">отправить</button>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn_gray" data-toggle="modal" data-target="#mailings_step4" data-dismiss="modal" aria-label="Close">назад</button>
+              <button class="btn btn_blue">завершить</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="box">
+          <div class="footer_content">
+            <div class="copy">Copyright ©2020 Fincom Teh Ltd.<br>Designed by <a href="#">Computing Forces</a></div>
+            <div class="footer_nav"><a href="#">API</a><a href="#">Telegram Bot</a><a href="#">Чат</a></div><a class="footer_logo" href="#">
+              <svg class="pic-googleplay ">
+                <use xlink:href="img/svg/sprite.svg#googleplay"></use>
+              </svg></a>
+          </div>
+        </div>
+      </footer>
+      <script src="static/js/libs.min.js"></script>
+      <script src="static/js/svgxuse.min.js" defer></script>
+      <script src="https://cdn.polyfill.io/v3/polyfill.min.js?features=Array.from%2Ces5%2Ces6%2CSymbol%2CSymbol.iterator%2CDOMTokenList%2CObject.assign%2CCustomEvent%2CElement.prototype.classList%2CElement.prototype.closest%2CElement.prototype.dataset%2CArray.prototype.find%2CArray.prototype.includes"></script>
+      <script src="js/common.js"></script>
+    </div>
+  </body>
+</html>

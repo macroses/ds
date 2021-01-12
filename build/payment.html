@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="color-scheme" content="dark light">
+    <title>Digiseller</title>
+    <link rel="stylesheet" href="libs/normalize/normalize.css">
+    <link rel="stylesheet" href="css/libs.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/light-theme.css" id="color_scheme"><script>window.MSInputMethodContext && document.documentMode && document.write('<link rel="stylesheet" href="libs/bootstrap-ie11.min.css"><script src="static/js/ie11-customProperty.js"><\/script><script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js"><\/script><script>!function () { var e, t; ((e = document.createEvent("CustomEvent")).initEvent("Bootstrap", !0, !0), e.preventDefault(), e.defaultPrevented) || (t = Event.prototype.preventDefault, Event.prototype.preventDefault = function () { this.cancelable && (t.call(this), Object.defineProperty(this, "defaultPrevented", { get: function () { return !0 }, configurable: !0 })) }) }();<\/script>');</script>
+    <script src="https://cdn.tiny.cloud/1/sqoo5ez8oy5x8bram4focqll8rz90rodp0tusw0e7cytsx6y/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+  </head>
+  <body>
+    <button id="change_scheme">поменять цвет</button>
+    <div class="wrapper">
+      <header>
+        <div class="box">
+          <div class="header_top"><a class="header_logo" href="/">
+              <svg class="pic-digiseller-logo ">
+                <use xlink:href="img/svg/sprite.svg#digiseller-logo"></use>
+              </svg></a>
+            <div class="header_search">
+              <div class="form_element">
+                <input type="text" autofocus placeholder="Товар, счет, уникальный код, email ...">
+              </div>
+              <div class="search_results">
+                <ul class="header_search_results_list">
+                  <li>
+                    <div class="section_title">Счет</div><a class="search_results_item-content" href="#">
+                      <div class="search_results_item-icon">
+                        <svg class="pic-invoice ">
+                          <use xlink:href="img/svg/sprite.svg#invoice"></use>
+                        </svg>
+                      </div><span class="search_results_item-text">eFootball PES 2021 ✅SEASON UPDATE STANDARD EDITION</span></a><a class="search_results_item-content" href="#">
+                      <div class="search_results_item-icon">
+                        <svg class="pic-search-res-customer ">
+                          <use xlink:href="img/svg/sprite.svg#search-res-customer"></use>
+                        </svg>
+                      </div><span class="search_results_item-text">mail@mail.com</span></a><a class="search_results_item-content" href="#">
+                      <div class="search_results_item-icon">
+                        <svg class="pic-good ">
+                          <use xlink:href="img/svg/sprite.svg#good"></use>
+                        </svg>
+                      </div><span class="search_results_item-text">Товар там какой то</span></a><a class="search_results_item-content" href="#">
+                      <div class="search_results_item-icon">
+                        <svg class="pic-invoice ">
+                          <use xlink:href="img/svg/sprite.svg#invoice"></use>
+                        </svg>
+                      </div><span class="search_results_item-text">GUID там какой то</span></a>
+                  </li>
+                  <li>
+                    <div class="section_title">Счет</div><a class="search_results_item-content" href="#">
+                      <div class="search_results_item-icon">
+                        <svg class="pic-invoice ">
+                          <use xlink:href="img/svg/sprite.svg#invoice"></use>
+                        </svg>
+                      </div><span class="search_results_item-text">eFootball PES 2021 ✅SEASON UPDATE STANDARD EDITION</span></a><a class="search_results_item-content" href="#">
+                      <div class="search_results_item-icon">
+                        <svg class="pic-search-res-customer ">
+                          <use xlink:href="img/svg/sprite.svg#search-res-customer"></use>
+                        </svg>
+                      </div><span class="search_results_item-text">mail@mail.com</span></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="header_top_nav">
+              <ul class="header_top_nav-list">
+                <li id="notice_item">
+                  <svg class="pic-notice ">
+                    <use xlink:href="img/svg/sprite.svg#notice"></use>
+                  </svg><span class="nav_list_item-title">Уведомления</span>
+                  <div class="notice_counter_box styled">
+                    <div class="notice_counter-item important">95</div>
+                    <div class="notice_counter-item">64</div>
+                  </div>
+                  <div class="notice_popup_wrap" id="notice_popup">
+                    <div class="notice_popup_box">
+                      <div class="triangle"></div>
+                      <div class="notice_popup_top">
+                        <div class="notice_popup_top-title">Список уведомлений</div>
+                        <div class="notice_popup-top_chck">
+                          <label>
+                            <input type="checkbox"><span>только важные</span>
+                          </label>
+                        </div>
+                      </div>
+                      <ul class="notice_popup_list">
+                        <!-- loader-->
+                        <li class="notice_popup_list-item">
+                          <div class="spinner-border" role="status"><span class="visually-hidden">Loading...</span></div>
+                        </li>
+                        <!-- важные-->
+                        <li class="notice_popup_list-item">
+                          <div class="item_top">
+                            <div class="item_top-title">
+                              <svg class="pic-notice-popup-important ">
+                                <use xlink:href="img/svg/sprite.svg#notice-popup-important"></use>
+                              </svg>Digiseller
+                            </div>
+                            <div class="item_top-additional">
+                              <div class="item_top-date">28.07.2020 14:56</div>
+                              <div class="item_top-settings"><a href="/" title="настройка уведомлений">
+                                  <svg class="pic-popup-settings ">
+                                    <use xlink:href="img/svg/sprite.svg#popup-settings"></use>
+                                  </svg></a></div>
+                            </div>
+                          </div>
+                          <div class="item_content">
+                            <div class="item_content_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo veritatis impedit iste assumenda non ipsum officia cum similique, ipsa repellat. <a href="/">Lorem ipsum dolor sit amet.</a></div>
+                            <div class="item_content_details"><a href="#">Подробнее</a></div>
+                          </div>
+                        </li>
+                        <!-- неважные-->
+                        <li class="notice_popup_list-item">
+                          <div class="item_top">
+                            <div class="item_top-title">
+                              <svg class="pic-notice-popup ">
+                                <use xlink:href="img/svg/sprite.svg#notice-popup"></use>
+                              </svg>Партнерская программа
+                            </div>
+                            <div class="item_top-additional">
+                              <div class="item_top-date">28.07.2020 14:56</div>
+                            </div>
+                          </div>
+                          <div class="item_content">
+                            <div class="item_content_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo veritatis impedit iste assumenda non ipsum officia cum similique, ipsa repellat. <a href="/">Lorem ipsum dolor sit amet.</a></div>
+                            <div class="item_content_details"><a href="#">Подробнее</a></div>
+                          </div>
+                        </li>
+                        <!-- непрочитанные-->
+                        <li class="notice_popup_list-item unread_notice">
+                          <div class="item_top">
+                            <div class="item_top-title">
+                              <svg class="pic-notice-popup ">
+                                <use xlink:href="img/svg/sprite.svg#notice-popup"></use>
+                              </svg>Партнерская программа
+                            </div>
+                            <div class="item_top-additional">
+                              <div class="item_top-date">28.07.2020 14:56</div>
+                            </div>
+                          </div>
+                          <div class="item_content">
+                            <div class="item_content_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo veritatis impedit iste assumenda non ipsum officia cum similique, ipsa repellat. <a href="/">Lorem ipsum dolor sit amet.</a></div>
+                            <div class="item_content_details"><a href="#">Подробнее</a></div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="sep">
+                  <svg class="pic-messages ">
+                    <use xlink:href="img/svg/sprite.svg#messages"></use>
+                  </svg><span class="nav_list_item-title">Сообщения</span>
+                  <div class="notice_counter_box">
+                    <div class="notice_counter-item">0</div>
+                  </div>
+                </li>
+                <li>
+                  <svg class="pic-responses ">
+                    <use xlink:href="img/svg/sprite.svg#responses"></use>
+                  </svg><span class="nav_list_item-title">Претенизии</span>
+                  <div class="notice_counter_box">
+                    <div class="notice_counter-item">0</div>
+                  </div>
+                </li>
+                <li>
+                  <svg class="pic-offer ">
+                    <use xlink:href="img/svg/sprite.svg#offer"></use>
+                  </svg><span class="nav_list_item-title">Предложения</span>
+                  <div class="notice_counter_box">
+                    <div class="notice_counter-item new_notice">999</div>
+                  </div>
+                </li>
+                <li> 
+                  <svg class="pic-chats ">
+                    <use xlink:href="img/svg/sprite.svg#chats"></use>
+                  </svg><span class="nav_list_item-title">Чаты</span>
+                  <div class="notice_counter_box">
+                    <div class="notice_counter-item">0</div>
+                  </div>
+                </li>
+                <li class="sep">
+                  <svg class="pic-logout ">
+                    <use xlink:href="img/svg/sprite.svg#logout"></use>
+                  </svg><span class="nav_list_item-title">Выход</span>
+                </li>
+                <li class="lang"><a class="active" href="/">
+                    <svg class="pic-rus ">
+                      <use xlink:href="img/svg/sprite.svg#rus"></use>
+                    </svg>рус</a><a href="/">
+                    <svg class="pic-eng ">
+                      <use xlink:href="img/svg/sprite.svg#eng"></use>
+                    </svg>eng</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <nav class="main_nav">
+        <div class="main_nav_top">
+          <div class="box">
+            <ul>
+              <li><a href="#">Товары</a></li>
+              <li><a href="#">Магазин</a></li>
+              <li><a href="#">Рекламные места</a></li>
+              <li><a href="#">Бухгалтерия</a></li>
+              <li><a class="active" href="#">Личный кабинет</a></li>
+              <li><a href="#">Партнерская программа</a></li>
+              <li><a href="#">Описание сервиса</a></li>
+              <li><a href="#">Торговая площадка</a></li>
+              <li><a class="question_mark" href="#" data-placement="top" data-toggle="tooltip" title="задать вопрос">
+                  <svg class="pic-question_mark ">
+                    <use xlink:href="img/svg/sprite.svg#question_mark"></use>
+                  </svg></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="main_nav_bottom">
+          <div class="box">
+            <ul>
+              <li><a class="active" href="my_info.html">Детали</a></li>
+              <li><a href="messages.html">Переписка</a></li>
+              <li><a href="news.html">Новости</a></li>
+              <li><a href="my_security.html">Безопасность</a></li>
+              <li><a href="space_rent.html">Дисковое пространство</a></li>
+              <li><a href="notify_settings.html">Уведомления</a></li>
+              <li><a href="staff.html">Сотрудники</a></li>
+              <li><a href="mailings.html">Рассылки</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <main>
+        <div class="box">
+          <div class="content_box">
+            <div class="page_nav">
+              <ul class="breadcrumbs_list">
+                <li class="breadcrumb_item"><a class="main_link" href="#" data-placement="top" data-toggle="tooltip" title="список моих товаров">Мои товары</a></li>
+                <li class="breadcrumb_item">
+                  <div class="breadcrumb_item_name">Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена </div><a href="#" data-placement="top" data-toggle="tooltip" title="открыть страницу с описанием товара">
+                    <svg class="pic-good_link ">
+                      <use xlink:href="img/svg/sprite.svg#good_link"></use>
+                    </svg></a>
+                  <div class="breadcrumb_item_price">14895 <span>RUB</span></div>
+                </li>
+              </ul>
+              <div class="page_nav_item">
+                <div class="prev"> <a class="main_link" href="#">предыдущий товар</a></div>
+                <div class="next"> <a class="main_link" href="#">следующий товар</a></div>
+              </div>
+            </div>
+          </div>
+          <ul class="nav nav-tabs" role="tablist">
+            <li><a class="nav-link" href="#tabBasic" role="tab" data-toggle="tab">Basic</a></li>
+            <li><a class="nav-link" href="#tabParameters" role="tab" data-toggle="tab">Parameters</a></li>
+            <li><a class="nav-link" href="#tabGallery" role="tab" data-toggle="tab">Gallery</a></li>
+            <li><a class="nav-link" href="#tabContent" role="tab" data-toggle="tab">Content
+                <div class="tab_nums">10</div></a></li>
+            <li><a class="nav-link active" href="#tabPayment" role="tab" data-toggle="tab">Payment</a></li>
+            <li><a class="nav-link" href="#tabSales" role="tab" data-toggle="tab">Sales</a></li>
+            <li><a class="nav-link" href="#tabDiscount" role="tab" data-toggle="tab">Discount</a></li>
+            <li><a class="nav-link" href="#tabHTML_code" role="tab" data-toggle="tab">HTML_code</a></li>
+            <li><a class="nav-link" href="#tabNotifications" role="tab" data-toggle="tab">Notifications</a></li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane active" id="tabPayment">
+              <div class="content_box">
+                <div class="payment">
+                  <div class="title_block">Способы оплаты:</div>
+                  <div class="form_element">
+                    <label class="for_radio">
+                      <input type="radio" name="rule" checked><span class="text">берутся из <a class="main_link" href="#">общего правила</a></span>
+                    </label>
+                  </div>
+                  <ul class="general_methods_list">
+                    <li class="general_methods_item">
+                      <div class="general_methods_item_check ds">
+                        <div class="switcher">
+                          <label>
+                            <input type="checkbox"/><span class="switcher_box"><span class="plate"></span><span class="circle"></span></span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="general_methods_item_content">
+                        <div class="general_methods_item_brand">
+                          <div class="general_methods_item_logo">
+                            <svg class="pic-payment_ds ">
+                              <use xlink:href="img/svg/sprite.svg#payment_ds"></use>
+                            </svg>
+                          </div>
+                          <div class="general_methods_item_title">Digiseller</div>
+                        </div>
+                        <div class="general_methods_item_collection">
+                          <ul class="payment_list">
+                            <li><a href="#" data-placement="top" data-toggle="tooltip" title="webmoney">
+                                <svg class="pic-webmoney ">
+                                  <use xlink:href="img/svg/sprite.svg#webmoney"></use>
+                                </svg></a></li>
+                            <li><a class="decline" href="#" data-placement="top" data-toggle="tooltip" title="Bitcoin">
+                                <svg class="pic-bitcoin ">
+                                  <use xlink:href="img/svg/sprite.svg#bitcoin"></use>
+                                </svg></a></li>
+                            <li><a class="decline" href="#" data-placement="top" data-toggle="tooltip" title="PayPal">
+                                <svg class="pic-paypal-method ">
+                                  <use xlink:href="img/svg/sprite.svg#paypal-method"></use>
+                                </svg></a></li>
+                            <li><a class="decline" href="#" data-placement="top" data-toggle="tooltip" title="Банковская карта">
+                                <svg class="pic-credit-card ">
+                                  <use xlink:href="img/svg/sprite.svg#credit-card"></use>
+                                </svg></a></li>
+                            <li><a href="#" data-placement="top" data-toggle="tooltip" title="QIWI">
+                                <svg class="pic-qiwi ">
+                                  <use xlink:href="img/svg/sprite.svg#qiwi"></use>
+                                </svg></a></li>
+                            <li><a href="#" data-placement="top" data-toggle="tooltip" title="Яндекс.Деньги">
+                                <svg class="pic-yandex-money ">
+                                  <use xlink:href="img/svg/sprite.svg#yandex-money"></use>
+                                </svg></a></li>
+                            <li><a href="#" data-placement="top" data-toggle="tooltip" title="МТС">
+                                <svg class="pic-mts ">
+                                  <use xlink:href="img/svg/sprite.svg#mts"></use>
+                                </svg></a></li>
+                            <li><a href="#" data-placement="top" data-toggle="tooltip" title="Билайн">
+                                <svg class="pic-beeline ">
+                                  <use xlink:href="img/svg/sprite.svg#beeline"></use>
+                                </svg></a></li>
+                            <li><a href="#" data-placement="top" data-toggle="tooltip" title="Мегафон">
+                                <svg class="pic-megafon ">
+                                  <use xlink:href="img/svg/sprite.svg#megafon"></use>
+                                </svg></a></li>
+                            <li><a href="#" data-placement="top" data-toggle="tooltip" title="TELE2">
+                                <svg class="pic-tele-2 ">
+                                  <use xlink:href="img/svg/sprite.svg#tele-2"></use>
+                                </svg></a></li>
+                            <li><a href="#" data-placement="top" data-toggle="tooltip" title="Терминалы оплаты">
+                                <svg class="pic-terminal ">
+                                  <use xlink:href="img/svg/sprite.svg#terminal"></use>
+                                </svg></a></li>
+                            <li><a href="#" data-placement="top" data-toggle="tooltip" title="Интернет банкинг">
+                                <svg class="pic-bank ">
+                                  <use xlink:href="img/svg/sprite.svg#bank"></use>
+                                </svg></a></li>
+                            <li><a href="#" data-placement="top" data-toggle="tooltip" title="Почта России">
+                                <svg class="pic-russian-post ">
+                                  <use xlink:href="img/svg/sprite.svg#russian-post"></use>
+                                </svg></a></li>
+                            <li><a href="#" data-placement="top" data-toggle="tooltip" title="WM-карты">
+                                <svg class="pic-wm-card ">
+                                  <use xlink:href="img/svg/sprite.svg#wm-card"></use>
+                                </svg></a></li>
+                            <li><a href="#" data-placement="top" data-toggle="tooltip" title="Подарочная карта">
+                                <svg class="pic-present-card ">
+                                  <use xlink:href="img/svg/sprite.svg#present-card"></use>
+                                </svg></a></li>
+                            <li><a href="#" data-placement="top" data-toggle="tooltip" title="Steam-скины">
+                                <svg class="pic-payment-steamskin ">
+                                  <use xlink:href="img/svg/sprite.svg#payment-steamskin"></use>
+                                </svg></a></li>
+                            <li><a href="#" data-placement="top" data-toggle="tooltip" title="Alipay">
+                                <svg class="pic-alp ">
+                                  <use xlink:href="img/svg/sprite.svg#alp"></use>
+                                </svg></a></li>
+                            <li><a href="#" data-placement="top" data-toggle="tooltip" title="Unionpay"> 
+                                <svg class="pic-union ">
+                                  <use xlink:href="img/svg/sprite.svg#union"></use>
+                                </svg></a></li>
+                          </ul>
+                        </div><a class="main_link" href="#">настроить</a>
+                        <div class="compensation">
+                          <div class="form_element">
+                            <label class="for_check">
+                              <input type="checkbox"><span class="text">компенсировать комиссии платежного шлюза</span>
+                            </label>
+                          </div>
+                          <div class="compensation_options">
+                            <div class="compensation_option_title">используется общее правило</div><a class="main_link" href="#" data-toggle="modal" data-target="#compensation_win">изменить</a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="form_element">
+                    <label class="for_radio">
+                      <input type="radio" name="rule"><span class="text">индивидуальны для этого товара</span>
+                    </label>
+                  </div>
+                  <ul class="general_methods_list">
+                    <li class="general_methods_item">
+                      <div class="general_methods_item_check ds">
+                        <div class="switcher">
+                          <label>
+                            <input type="checkbox"/><span class="switcher_box"><span class="plate"></span><span class="circle"></span></span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="general_methods_item_content">
+                        <div class="general_methods_item_brand">
+                          <div class="general_methods_item_logo">
+                            <svg class="pic-payment_ds ">
+                              <use xlink:href="img/svg/sprite.svg#payment_ds"></use>
+                            </svg>
+                          </div>
+                          <div class="general_methods_item_title">Digiseller</div>
+                        </div>
+                        <div class="general_methods_item_collection">
+                          <ul class="payment_list">
+                            <li><a href="#" data-placement="top" data-toggle="tooltip" title="webmoney">
+                                <svg class="pic-webmoney ">
+                                  <use xlink:href="img/svg/sprite.svg#webmoney"></use>
+                                </svg></a></li>
+                            <li><a class="decline" href="#" data-placement="top" data-toggle="tooltip" title="Bitcoin">
+                                <svg class="pic-bitcoin ">
+                                  <use xlink:href="img/svg/sprite.svg#bitcoin"></use>
+                                </svg></a></li>
+                            <li><a class="decline" href="#" data-placement="top" data-toggle="tooltip" title="PayPal">
+                                <svg class="pic-paypal-method ">
+                                  <use xlink:href="img/svg/sprite.svg#paypal-method"></use>
+                                </svg></a></li>
+                            <li><a class="decline" href="#" data-placement="top" data-toggle="tooltip" title="Банковская карта">
+                                <svg class="pic-credit-card ">
+                                  <use xlink:href="img/svg/sprite.svg#credit-card"></use>
+                                </svg></a></li>
+                            <li><a href="#" data-placement="top" data-toggle="tooltip" title="QIWI">
+                                <svg class="pic-qiwi ">
+                                  <use xlink:href="img/svg/sprite.svg#qiwi"></use>
+                                </svg></a></li>
+                            <li><a href="#" data-placement="top" data-toggle="tooltip" title="Яндекс.Деньги">
+                                <svg class="pic-yandex-money ">
+                                  <use xlink:href="img/svg/sprite.svg#yandex-money"></use>
+                                </svg></a></li>
+                            <li><a href="#" data-placement="top" data-toggle="tooltip" title="МТС">
+                                <svg class="pic-mts ">
+                                  <use xlink:href="img/svg/sprite.svg#mts"></use>
+                                </svg></a></li>
+                            <li><a href="#" data-placement="top" data-toggle="tooltip" title="Билайн">
+                                <svg class="pic-beeline ">
+                                  <use xlink:href="img/svg/sprite.svg#beeline"></use>
+                                </svg></a></li>
+                            <li><a href="#" data-placement="top" data-toggle="tooltip" title="Мегафон">
+                                <svg class="pic-megafon ">
+                                  <use xlink:href="img/svg/sprite.svg#megafon"></use>
+                                </svg></a></li>
+                            <li><a href="#" data-placement="top" data-toggle="tooltip" title="TELE2">
+                                <svg class="pic-tele-2 ">
+                                  <use xlink:href="img/svg/sprite.svg#tele-2"></use>
+                                </svg></a></li>
+                            <li><a href="#" data-placement="top" data-toggle="tooltip" title="Терминалы оплаты">
+                                <svg class="pic-terminal ">
+                                  <use xlink:href="img/svg/sprite.svg#terminal"></use>
+                                </svg></a></li>
+                            <li><a href="#" data-placement="top" data-toggle="tooltip" title="Интернет банкинг">
+                                <svg class="pic-bank ">
+                                  <use xlink:href="img/svg/sprite.svg#bank"></use>
+                                </svg></a></li>
+                            <li><a href="#" data-placement="top" data-toggle="tooltip" title="Почта России">
+                                <svg class="pic-russian-post ">
+                                  <use xlink:href="img/svg/sprite.svg#russian-post"></use>
+                                </svg></a></li>
+                            <li><a href="#" data-placement="top" data-toggle="tooltip" title="WM-карты">
+                                <svg class="pic-wm-card ">
+                                  <use xlink:href="img/svg/sprite.svg#wm-card"></use>
+                                </svg></a></li>
+                            <li><a href="#" data-placement="top" data-toggle="tooltip" title="Подарочная карта">
+                                <svg class="pic-present-card ">
+                                  <use xlink:href="img/svg/sprite.svg#present-card"></use>
+                                </svg></a></li>
+                            <li><a href="#" data-placement="top" data-toggle="tooltip" title="Steam-скины">
+                                <svg class="pic-payment-steamskin ">
+                                  <use xlink:href="img/svg/sprite.svg#payment-steamskin"></use>
+                                </svg></a></li>
+                            <li><a href="#" data-placement="top" data-toggle="tooltip" title="Alipay">
+                                <svg class="pic-alp ">
+                                  <use xlink:href="img/svg/sprite.svg#alp"></use>
+                                </svg></a></li>
+                            <li><a href="#" data-placement="top" data-toggle="tooltip" title="Unionpay"> 
+                                <svg class="pic-union ">
+                                  <use xlink:href="img/svg/sprite.svg#union"></use>
+                                </svg></a></li>
+                          </ul>
+                        </div><a class="main_link" href="#">настроить</a>
+                        <div class="compensation">
+                          <div class="form_element">
+                            <label class="for_check">
+                              <input type="checkbox"><span class="text">компенсировать комиссии платежного шлюза</span>
+                            </label>
+                          </div>
+                          <div class="compensation_options">
+                            <div class="compensation_option_title">используется общее правило</div><a class="main_link" href="#">изменить</a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="general_methods_item">
+                      <div class="general_methods_item_check">
+                        <div class="switcher disabled">
+                          <label>
+                            <input type="checkbox" checked="checked"/><span class="switcher_box"><span class="plate"></span><span class="circle"></span></span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="general_methods_item_content">
+                        <div class="general_methods_item_brand">
+                          <div class="general_methods_item_logo">
+                            <svg class="pic-payment_paypal ">
+                              <use xlink:href="img/svg/sprite.svg#payment_paypal"></use>
+                            </svg>
+                          </div>
+                          <div class="general_methods_item_title">PayPal</div>
+                        </div><a class="main_link err" href="#">необходимо настроить</a>
+                      </div>
+                    </li>
+                    <li class="general_methods_item">
+                      <div class="general_methods_item_check">
+                        <div class="switcher">
+                          <label>
+                            <input type="checkbox"/><span class="switcher_box"><span class="plate"></span><span class="circle"></span></span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="general_methods_item_content">
+                        <div class="general_methods_item_brand">
+                          <div class="general_methods_item_logo">
+                            <svg class="pic-payment_paymaster ">
+                              <use xlink:href="img/svg/sprite.svg#payment_paymaster"></use>
+                            </svg>
+                          </div>
+                          <div class="general_methods_item_title">PayMaster</div>
+                        </div><a class="main_link err" href="#">необходимо настроить</a>
+                      </div>
+                    </li>
+                    <li class="general_methods_item">
+                      <div class="general_methods_item_check">
+                        <div class="switcher">
+                          <label>
+                            <input type="checkbox"/><span class="switcher_box"><span class="plate"></span><span class="circle"></span></span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="general_methods_item_content">
+                        <div class="general_methods_item_brand">
+                          <div class="general_methods_item_logo">
+                            <svg class="pic-payment_robokassa ">
+                              <use xlink:href="img/svg/sprite.svg#payment_robokassa"></use>
+                            </svg>
+                          </div>
+                          <div class="general_methods_item_title">ROBOKASSA</div>
+                        </div><a class="main_link err" href="#">необходимо настроить</a>
+                      </div>
+                    </li>
+                    <li class="general_methods_item">
+                      <div class="general_methods_item_check">
+                        <div class="switcher">
+                          <label>
+                            <input type="checkbox"/><span class="switcher_box"><span class="plate"></span><span class="circle"></span></span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="general_methods_item_content">
+                        <div class="general_methods_item_brand">
+                          <div class="general_methods_item_logo">
+                            <svg class="pic-payment_ya ">
+                              <use xlink:href="img/svg/sprite.svg#payment_ya"></use>
+                            </svg>
+                          </div>
+                          <div class="general_methods_item_title">Яндекс Касса</div>
+                        </div><a class="main_link err" href="#">необходимо настроить</a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <div class="modal fade" id="compensation_win" tabindex="-1" aria-labelledby="compensation_win" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="modal-title">Тут название товара</div><span class="close" data-dismiss="modal" aria-label="Close">
+                <svg class="pic-modal_close ">
+                  <use xlink:href="img/svg/sprite.svg#modal_close"></use>
+                </svg></span>
+            </div>
+            <div class="modal-body">
+              <div class="payment payment_modal">
+                <div class="title_block">Размер компенсации комиссии платежного шлюза:</div>
+                <div class="form_element">
+                  <label class="for_radio">
+                    <input type="radio" name="comission_rule" checked><span class="text">берутся из <a class="main_link" href="#" data-toggle="modal" data-target="#general_rule" data-dismiss="modal" aria-label="Close">общего правила</a></span>
+                  </label>
+                </div>
+                <div class="form_element">
+                  <label class="for_radio">
+                    <input type="radio" name="comission_rule"><span class="text">индивидуален для данного товара</span>
+                  </label>
+                </div>
+                <div class="payment_modal_table">
+                  <table class="equal_cells">
+                    <colgroup>
+                      <col style="width: 235px">
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>Способ оплаты</th>
+                        <th class="align_center">Комиссия шлюза</th>
+                        <th class="align_center">Компенсирую</th>
+                        <th>Цена для покупателя</th>
+                        <th class="align_center">На счет/кошелек</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td> 
+                          <div class="payment_modal_table_item">
+                            <svg class="pic-credit-card ">
+                              <use xlink:href="img/svg/sprite.svg#credit-card"></use>
+                            </svg><a class="main_link" href="#">Банк. карта (Paymaster WMZ)</a>
+                          </div>
+                        </td>
+                        <td class="align_center">0%</td>
+                        <td>
+                          <div class="form_element">
+                            <select>
+                              <option value="0">да</option>
+                              <option value="1">нет</option>
+                            </select>
+                          </div>
+                        </td>
+                        <td class="align_center">5 USD</td>
+                        <td class="align_center">5 WMZ</td>
+                      </tr>
+                      <tr>
+                        <td> 
+                          <div class="payment_modal_table_item">
+                            <svg class="pic-webmoney ">
+                              <use xlink:href="img/svg/sprite.svg#webmoney"></use>
+                            </svg><a class="main_link" href="#">WebMoney</a>
+                          </div>
+                        </td>
+                        <td class="align_center">10,84%</td>
+                        <td>
+                          <div class="form_element">
+                            <select>
+                              <option value="0">да</option>
+                              <option value="1">нет</option>
+                            </select>
+                          </div>
+                        </td>
+                        <td class="align_center" colspan="2">способ оплаты недоступен</td>
+                      </tr>
+                      <tr>
+                        <td> 
+                          <div class="payment_modal_table_item">
+                            <svg class="pic-qiwi ">
+                              <use xlink:href="img/svg/sprite.svg#qiwi"></use>
+                            </svg><a class="main_link" href="#">QIWI</a>
+                          </div>
+                        </td>
+                        <td class="align_center">10,84%</td>
+                        <td>
+                          <div class="form_element">
+                            <select>
+                              <option value="0">да</option>
+                              <option value="1">нет</option>
+                            </select>
+                          </div>
+                        </td>
+                        <td class="align_center" colspan="2">способ оплаты недоступен</td>
+                      </tr>
+                      <tr>
+                        <td> 
+                          <div class="payment_modal_table_item">
+                            <svg class="pic-yandex-money ">
+                              <use xlink:href="img/svg/sprite.svg#yandex-money"></use>
+                            </svg><a class="main_link" href="#">Яндекс.Деньги (WMR)</a>
+                          </div>
+                        </td>
+                        <td class="align_center">0%</td>
+                        <td>
+                          <div class="form_element">
+                            <select>
+                              <option value="0">да</option>
+                              <option value="1">нет</option>
+                            </select>
+                          </div>
+                        </td>
+                        <td class="align_center">407,61 RUB</td>
+                        <td class="align_center">5 WMZ</td>
+                      </tr>
+                      <tr>
+                        <td> 
+                          <div class="payment_modal_table_item">
+                            <svg class="pic-mts ">
+                              <use xlink:href="img/svg/sprite.svg#mts"></use>
+                            </svg><a class="main_link" href="#">МТС</a>
+                          </div>
+                        </td>
+                        <td class="align_center">0%</td>
+                        <td>
+                          <div class="form_element">
+                            <select>
+                              <option value="0">да</option>
+                              <option value="1">нет</option>
+                            </select>
+                          </div>
+                        </td>
+                        <td class="align_center">407,61 RUB</td>
+                        <td class="align_center">5 WMZ</td>
+                      </tr>
+                      <tr>
+                        <td> 
+                          <div class="payment_modal_table_item">
+                            <svg class="pic-beeline ">
+                              <use xlink:href="img/svg/sprite.svg#beeline"></use>
+                            </svg><a class="main_link" href="#">Билайн</a>
+                          </div>
+                        </td>
+                        <td class="align_center">0%</td>
+                        <td>
+                          <div class="form_element">
+                            <select>
+                              <option value="0">да</option>
+                              <option value="1">нет</option>
+                            </select>
+                          </div>
+                        </td>
+                        <td class="align_center">407,61 RUB</td>
+                        <td class="align_center">5 WMZ</td>
+                      </tr>
+                      <tr>
+                        <td> 
+                          <div class="payment_modal_table_item">
+                            <svg class="pic-megafon ">
+                              <use xlink:href="img/svg/sprite.svg#megafon"></use>
+                            </svg><a class="main_link" href="#">Мегафон</a>
+                          </div>
+                        </td>
+                        <td class="align_center">0%</td>
+                        <td>
+                          <div class="form_element">
+                            <select>
+                              <option value="0">да</option>
+                              <option value="1">нет</option>
+                            </select>
+                          </div>
+                        </td>
+                        <td class="align_center">407,61 RUB</td>
+                        <td class="align_center">5 WMZ</td>
+                      </tr>
+                      <tr>
+                        <td> 
+                          <div class="payment_modal_table_item">
+                            <svg class="pic-tele-2 ">
+                              <use xlink:href="img/svg/sprite.svg#tele-2"></use>
+                            </svg><a class="main_link" href="#">TELE2</a>
+                          </div>
+                        </td>
+                        <td class="align_center">0%</td>
+                        <td>
+                          <div class="form_element">
+                            <select>
+                              <option value="0">да</option>
+                              <option value="1">нет</option>
+                            </select>
+                          </div>
+                        </td>
+                        <td class="align_center">407,61 RUB</td>
+                        <td class="align_center">5 WMZ</td>
+                      </tr>
+                      <tr>
+                        <td> 
+                          <div class="payment_modal_table_item">
+                            <svg class="pic-bank ">
+                              <use xlink:href="img/svg/sprite.svg#bank"></use>
+                            </svg><a class="main_link" href="#">Интернет-банкинг</a>
+                          </div>
+                        </td>
+                        <td class="align_center">0%</td>
+                        <td>
+                          <div class="form_element">
+                            <select>
+                              <option value="0">да</option>
+                              <option value="1">нет</option>
+                            </select>
+                          </div>
+                        </td>
+                        <td class="align_center">407,61 RUB</td>
+                        <td class="align_center">5 WMZ</td>
+                      </tr>
+                      <tr>
+                        <td> 
+                          <div class="payment_modal_table_item">
+                            <svg class="pic-russian-post ">
+                              <use xlink:href="img/svg/sprite.svg#russian-post"></use>
+                            </svg><a class="main_link" href="#">Почта России</a>
+                          </div>
+                        </td>
+                        <td class="align_center">0%</td>
+                        <td>
+                          <div class="form_element">
+                            <select>
+                              <option value="0">да</option>
+                              <option value="1">нет</option>
+                            </select>
+                          </div>
+                        </td>
+                        <td class="align_center">407,61 RUB</td>
+                        <td class="align_center">5 WMZ</td>
+                      </tr>
+                      <tr>
+                        <td> 
+                          <div class="payment_modal_table_item">
+                            <svg class="pic-alp ">
+                              <use xlink:href="img/svg/sprite.svg#alp"></use>
+                            </svg><a class="main_link" href="#">Alipay</a>
+                          </div>
+                        </td>
+                        <td class="align_center">0%</td>
+                        <td>
+                          <div class="form_element">
+                            <select>
+                              <option value="0">да</option>
+                              <option value="1">нет</option>
+                            </select>
+                          </div>
+                        </td>
+                        <td class="align_center">407,61 RUB</td>
+                        <td class="align_center">5 WMZ</td>
+                      </tr>
+                      <tr>
+                        <td> 
+                          <div class="payment_modal_table_item">
+                            <svg class="pic-union ">
+                              <use xlink:href="img/svg/sprite.svg#union"></use>
+                            </svg><a class="main_link" href="#">Unionpay</a>
+                          </div>
+                        </td>
+                        <td class="align_center">0%</td>
+                        <td>
+                          <div class="form_element">
+                            <select>
+                              <option value="0">да</option>
+                              <option value="1">нет</option>
+                            </select>
+                          </div>
+                        </td>
+                        <td class="align_center">407,61 RUB</td>
+                        <td class="align_center">5 WMZ</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="general_rule" tabindex="-1" aria-labelledby="general_rule" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="modal-title">Общее правило компенсации комиссии платежного шлюза покупателю</div><span class="close" data-dismiss="modal" aria-label="Close">
+                <svg class="pic-modal_close ">
+                  <use xlink:href="img/svg/sprite.svg#modal_close"></use>
+                </svg></span>
+            </div>
+            <div class="modal-body">
+              <div class="payment payment_modal">
+                <div class="form_element">
+                  <label class="for_check">
+                    <input type="checkbox"><span class="text">Автоматически включать компенсацию из общего правила для новых товаров</span>
+                  </label>
+                </div>
+                <div class="payment_modal_table">
+                  <table class="equal_cells">
+                    <colgroup>
+                      <col style="width: 235px">
+                      <col>
+                      <col>
+                      <col>
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>Способ оплаты</th>
+                        <th class="align_center">На счет</th>
+                        <th class="align_center">Комиссия шлюза</th>
+                        <th class="align_center">Компенсирую</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td> 
+                          <div class="payment_modal_table_item">
+                            <svg class="pic-credit-card ">
+                              <use xlink:href="img/svg/sprite.svg#credit-card"></use>
+                            </svg><a class="main_link" href="#">Банк. карта (Paymaster WMZ)</a>
+                          </div>
+                        </td>
+                        <td class="align_center">WM</td>
+                        <td class="align_center">10.468%</td>
+                        <td class="align_center">
+                          <div class="form_element">
+                            <select>
+                              <option value="0">да</option>
+                              <option value="1">нет</option>
+                            </select>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td> 
+                          <div class="payment_modal_table_item">
+                            <svg class="pic-credit-card ">
+                              <use xlink:href="img/svg/sprite.svg#credit-card"></use>
+                            </svg><a class="main_link" href="#">Банк. карта (Paymaster WMZ)</a>
+                          </div>
+                        </td>
+                        <td class="align_center">WM</td>
+                        <td class="align_center">10.468%</td>
+                        <td class="align_center">
+                          <div class="form_element">
+                            <select>
+                              <option value="0">да</option>
+                              <option value="1">нет</option>
+                            </select>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="box">
+          <div class="footer_content">
+            <div class="copy">Copyright ©2020 Fincom Teh Ltd.<br>Designed by <a href="#">Computing Forces</a></div>
+            <div class="footer_nav"><a href="#">API</a><a href="#">Telegram Bot</a><a href="#">Чат</a></div><a class="footer_logo" href="#">
+              <svg class="pic-googleplay ">
+                <use xlink:href="img/svg/sprite.svg#googleplay"></use>
+              </svg></a>
+          </div>
+        </div>
+      </footer>
+      <script src="static/js/libs.min.js"></script>
+      <script src="static/js/svgxuse.min.js" defer></script>
+      <script src="https://cdn.polyfill.io/v3/polyfill.min.js?features=Array.from%2Ces5%2Ces6%2CSymbol%2CSymbol.iterator%2CDOMTokenList%2CObject.assign%2CCustomEvent%2CElement.prototype.classList%2CElement.prototype.closest%2CElement.prototype.dataset%2CArray.prototype.find%2CArray.prototype.includes"></script>
+      <script src="js/common.js"></script>
+    </div>
+  </body>
+</html>

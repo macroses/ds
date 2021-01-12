@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="color-scheme" content="dark light">
+    <title>Digiseller</title>
+    <link rel="stylesheet" href="libs/normalize/normalize.css">
+    <link rel="stylesheet" href="css/libs.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/light-theme.css" id="color_scheme"><script>window.MSInputMethodContext && document.documentMode && document.write('<link rel="stylesheet" href="libs/bootstrap-ie11.min.css"><script src="static/js/ie11-customProperty.js"><\/script><script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js"><\/script><script>!function () { var e, t; ((e = document.createEvent("CustomEvent")).initEvent("Bootstrap", !0, !0), e.preventDefault(), e.defaultPrevented) || (t = Event.prototype.preventDefault, Event.prototype.preventDefault = function () { this.cancelable && (t.call(this), Object.defineProperty(this, "defaultPrevented", { get: function () { return !0 }, configurable: !0 })) }) }();<\/script>');</script>
+    <script src="https://cdn.tiny.cloud/1/sqoo5ez8oy5x8bram4focqll8rz90rodp0tusw0e7cytsx6y/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+  </head>
+  <body>
+    <button id="change_scheme">поменять цвет</button>
+    <div class="wrapper">
+      <header>
+        <div class="box">
+          <div class="header_top"><a class="header_logo" href="/">
+              <svg class="pic-digiseller-logo ">
+                <use xlink:href="img/svg/sprite.svg#digiseller-logo"></use>
+              </svg></a>
+            <div class="header_search">
+              <div class="form_element">
+                <input type="text" autofocus placeholder="Товар, счет, уникальный код, email ...">
+              </div>
+              <div class="search_results">
+                <ul class="header_search_results_list">
+                  <li>
+                    <div class="section_title">Счет</div><a class="search_results_item-content" href="#">
+                      <div class="search_results_item-icon">
+                        <svg class="pic-invoice ">
+                          <use xlink:href="img/svg/sprite.svg#invoice"></use>
+                        </svg>
+                      </div><span class="search_results_item-text">eFootball PES 2021 ✅SEASON UPDATE STANDARD EDITION</span></a><a class="search_results_item-content" href="#">
+                      <div class="search_results_item-icon">
+                        <svg class="pic-search-res-customer ">
+                          <use xlink:href="img/svg/sprite.svg#search-res-customer"></use>
+                        </svg>
+                      </div><span class="search_results_item-text">mail@mail.com</span></a><a class="search_results_item-content" href="#">
+                      <div class="search_results_item-icon">
+                        <svg class="pic-good ">
+                          <use xlink:href="img/svg/sprite.svg#good"></use>
+                        </svg>
+                      </div><span class="search_results_item-text">Товар там какой то</span></a><a class="search_results_item-content" href="#">
+                      <div class="search_results_item-icon">
+                        <svg class="pic-invoice ">
+                          <use xlink:href="img/svg/sprite.svg#invoice"></use>
+                        </svg>
+                      </div><span class="search_results_item-text">GUID там какой то</span></a>
+                  </li>
+                  <li>
+                    <div class="section_title">Счет</div><a class="search_results_item-content" href="#">
+                      <div class="search_results_item-icon">
+                        <svg class="pic-invoice ">
+                          <use xlink:href="img/svg/sprite.svg#invoice"></use>
+                        </svg>
+                      </div><span class="search_results_item-text">eFootball PES 2021 ✅SEASON UPDATE STANDARD EDITION</span></a><a class="search_results_item-content" href="#">
+                      <div class="search_results_item-icon">
+                        <svg class="pic-search-res-customer ">
+                          <use xlink:href="img/svg/sprite.svg#search-res-customer"></use>
+                        </svg>
+                      </div><span class="search_results_item-text">mail@mail.com</span></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="header_top_nav">
+              <ul class="header_top_nav-list">
+                <li id="notice_item">
+                  <svg class="pic-notice ">
+                    <use xlink:href="img/svg/sprite.svg#notice"></use>
+                  </svg><span class="nav_list_item-title">Уведомления</span>
+                  <div class="notice_counter_box styled">
+                    <div class="notice_counter-item important">95</div>
+                    <div class="notice_counter-item">64</div>
+                  </div>
+                  <div class="notice_popup_wrap" id="notice_popup">
+                    <div class="notice_popup_box">
+                      <div class="triangle"></div>
+                      <div class="notice_popup_top">
+                        <div class="notice_popup_top-title">Список уведомлений</div>
+                        <div class="notice_popup-top_chck">
+                          <label>
+                            <input type="checkbox"><span>только важные</span>
+                          </label>
+                        </div>
+                      </div>
+                      <ul class="notice_popup_list">
+                        <!-- loader-->
+                        <li class="notice_popup_list-item">
+                          <div class="spinner-border" role="status"><span class="visually-hidden">Loading...</span></div>
+                        </li>
+                        <!-- важные-->
+                        <li class="notice_popup_list-item">
+                          <div class="item_top">
+                            <div class="item_top-title">
+                              <svg class="pic-notice-popup-important ">
+                                <use xlink:href="img/svg/sprite.svg#notice-popup-important"></use>
+                              </svg>Digiseller
+                            </div>
+                            <div class="item_top-additional">
+                              <div class="item_top-date">28.07.2020 14:56</div>
+                              <div class="item_top-settings"><a href="/" title="настройка уведомлений">
+                                  <svg class="pic-popup-settings ">
+                                    <use xlink:href="img/svg/sprite.svg#popup-settings"></use>
+                                  </svg></a></div>
+                            </div>
+                          </div>
+                          <div class="item_content">
+                            <div class="item_content_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo veritatis impedit iste assumenda non ipsum officia cum similique, ipsa repellat. <a href="/">Lorem ipsum dolor sit amet.</a></div>
+                            <div class="item_content_details"><a href="#">Подробнее</a></div>
+                          </div>
+                        </li>
+                        <!-- неважные-->
+                        <li class="notice_popup_list-item">
+                          <div class="item_top">
+                            <div class="item_top-title">
+                              <svg class="pic-notice-popup ">
+                                <use xlink:href="img/svg/sprite.svg#notice-popup"></use>
+                              </svg>Партнерская программа
+                            </div>
+                            <div class="item_top-additional">
+                              <div class="item_top-date">28.07.2020 14:56</div>
+                            </div>
+                          </div>
+                          <div class="item_content">
+                            <div class="item_content_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo veritatis impedit iste assumenda non ipsum officia cum similique, ipsa repellat. <a href="/">Lorem ipsum dolor sit amet.</a></div>
+                            <div class="item_content_details"><a href="#">Подробнее</a></div>
+                          </div>
+                        </li>
+                        <!-- непрочитанные-->
+                        <li class="notice_popup_list-item unread_notice">
+                          <div class="item_top">
+                            <div class="item_top-title">
+                              <svg class="pic-notice-popup ">
+                                <use xlink:href="img/svg/sprite.svg#notice-popup"></use>
+                              </svg>Партнерская программа
+                            </div>
+                            <div class="item_top-additional">
+                              <div class="item_top-date">28.07.2020 14:56</div>
+                            </div>
+                          </div>
+                          <div class="item_content">
+                            <div class="item_content_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo veritatis impedit iste assumenda non ipsum officia cum similique, ipsa repellat. <a href="/">Lorem ipsum dolor sit amet.</a></div>
+                            <div class="item_content_details"><a href="#">Подробнее</a></div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="sep">
+                  <svg class="pic-messages ">
+                    <use xlink:href="img/svg/sprite.svg#messages"></use>
+                  </svg><span class="nav_list_item-title">Сообщения</span>
+                  <div class="notice_counter_box">
+                    <div class="notice_counter-item">0</div>
+                  </div>
+                </li>
+                <li>
+                  <svg class="pic-responses ">
+                    <use xlink:href="img/svg/sprite.svg#responses"></use>
+                  </svg><span class="nav_list_item-title">Претенизии</span>
+                  <div class="notice_counter_box">
+                    <div class="notice_counter-item">0</div>
+                  </div>
+                </li>
+                <li>
+                  <svg class="pic-offer ">
+                    <use xlink:href="img/svg/sprite.svg#offer"></use>
+                  </svg><span class="nav_list_item-title">Предложения</span>
+                  <div class="notice_counter_box">
+                    <div class="notice_counter-item new_notice">999</div>
+                  </div>
+                </li>
+                <li> 
+                  <svg class="pic-chats ">
+                    <use xlink:href="img/svg/sprite.svg#chats"></use>
+                  </svg><span class="nav_list_item-title">Чаты</span>
+                  <div class="notice_counter_box">
+                    <div class="notice_counter-item">0</div>
+                  </div>
+                </li>
+                <li class="sep">
+                  <svg class="pic-logout ">
+                    <use xlink:href="img/svg/sprite.svg#logout"></use>
+                  </svg><span class="nav_list_item-title">Выход</span>
+                </li>
+                <li class="lang"><a class="active" href="/">
+                    <svg class="pic-rus ">
+                      <use xlink:href="img/svg/sprite.svg#rus"></use>
+                    </svg>рус</a><a href="/">
+                    <svg class="pic-eng ">
+                      <use xlink:href="img/svg/sprite.svg#eng"></use>
+                    </svg>eng</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <nav class="main_nav">
+        <div class="main_nav_top">
+          <div class="box">
+            <ul>
+              <li><a href="#">Товары</a></li>
+              <li><a href="#">Магазин</a></li>
+              <li><a href="#">Рекламные места</a></li>
+              <li><a href="#">Бухгалтерия</a></li>
+              <li><a class="active" href="#">Личный кабинет</a></li>
+              <li><a href="#">Партнерская программа</a></li>
+              <li><a href="#">Описание сервиса</a></li>
+              <li><a href="#">Торговая площадка</a></li>
+              <li><a class="question_mark" href="#" data-placement="top" data-toggle="tooltip" title="задать вопрос">
+                  <svg class="pic-question_mark ">
+                    <use xlink:href="img/svg/sprite.svg#question_mark"></use>
+                  </svg></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="main_nav_bottom">
+          <div class="box">
+            <ul>
+              <li><a class="active" href="my_info.html">Детали</a></li>
+              <li><a href="messages.html">Переписка</a></li>
+              <li><a href="news.html">Новости</a></li>
+              <li><a href="my_security.html">Безопасность</a></li>
+              <li><a href="space_rent.html">Дисковое пространство</a></li>
+              <li><a href="notify_settings.html">Уведомления</a></li>
+              <li><a href="staff.html">Сотрудники</a></li>
+              <li><a href="mailings.html">Рассылки</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <main>
+        <div class="box">
+          <ul class="nav nav-tabs" role="tablist">
+            <li><a class="nav-link" href="#tabGeneral_rules" role="tab" data-toggle="tab">General_rules</a></li>
+            <li><a class="nav-link active" href="#tabDigiseller" role="tab" data-toggle="tab">Digiseller</a></li>
+            <li><a class="nav-link" href="#tabWM_Merchant" role="tab" data-toggle="tab">WM_Merchant</a></li>
+            <li><a class="nav-link" href="#tabPayPal" role="tab" data-toggle="tab">PayPal</a></li>
+            <li><a class="nav-link" href="#tabPayMaster" role="tab" data-toggle="tab">PayMaster</a></li>
+            <li><a class="nav-link" href="#tabRobokassa" role="tab" data-toggle="tab">Robokassa</a></li>
+            <li><a class="nav-link" href="#tabYandex_Checkout" role="tab" data-toggle="tab">Yandex_Checkout</a></li>
+            <li><a class="nav-link" href="#tabSettings" role="tab" data-toggle="tab">Settings</a></li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane active" id="tabDigiseller">
+              <div class="content_box">
+                <div class="pm">
+                  <div class="pm_settings">
+                    <div class="alert_box info">При оплате через Digiseller средства автоматически конвертируются в WebMoney и поступают на ваш <a class="main_link" href="#">личный счет </a>на сервисе. 
+                      Комиссия за продажу взимается с вашего личного счета при поступлении средств. Вывод средств с личного счета Digiseller может 
+                      осуществляться только на WebMoney-кошельки. <a class="main_link" href="#">Комиссия </a>за перевод составляет 0.8%. Digiseller не предоставляет возможность вывода средств 
+                      в иные платежные системы.
+                    </div>
+                    <table class="equal_cells pm_table">
+                      <colgroup>
+                        <col>
+                        <col style="width: 90px">
+                        <col style="width: 195px">
+                        <col>
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th>Способ оплаты</th>
+                          <th class="align_center">Комиссия<sup><a class="main_link" href="#">[1]</a></sup></th>
+                          <th>Причина</th>
+                          <th>Рекомендации</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td> 
+                            <div class="pm_table_cell_name"><span class="pm_status accessable"></span>WebNoney</div>
+                          </td>
+                          <td class="align_center">10.84%</td>
+                          <td>
+                            <div class="pm_table_text">не акцептованы правила приема средств посредствам банковских карт</div>
+                          </td>
+                          <td>
+                            <div class="pm_table_text"><a class="main_link" href="#" data-toggle="modal" data-target="#rules">акцептовать</a></div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="pm_table_cell_name"><span class="pm_status partly"></span>Bitcoin</div>
+                          </td>
+                          <td class="align_center">10.84%</td>
+                          <td>
+                            <div class="pm_table_text">не акцептованы правила приема средств посредствам банковских карт</div>
+                          </td>
+                          <td>
+                            <div class="pm_table_text"><a class="main_link" href="#">акцептовать</a></div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td> 
+                            <div class="pm_table_cell_name"><span class="pm_status unavailable"></span>Терминалы оплаты</div>
+                          </td>
+                          <td class="align_center">0%</td>
+                          <td>
+                            <div class="pm_table_text"><span class="empty"></span></div>
+                          </td>
+                          <td>
+                            <div class="pm_table_text">не акцептованы правила приема средств посредствам банковских карт</div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td> 
+                            <div class="pm_table_cell_name"><span class="pm_status unavailable"></span>Сбербанк Онлайн</div>
+                          </td>
+                          <td class="align_center">0%</td>
+                          <td>
+                            <div class="pm_table_text">не акцептованы правила приема средств посредствам банковских карт</div>
+                          </td>
+                          <td>
+                            <div class="pm_table_text"><span class="empty"></span></div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td> 
+                            <div class="pm_table_cell_name"><span class="pm_status unavailable"></span>QIWI</div>
+                          </td>
+                          <td class="align_center">0%</td>
+                          <td>
+                            <div class="pm_table_text"><span class="empty"></span></div>
+                          </td>
+                          <td>
+                            <div class="pm_table_text"><span class="empty"></span></div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td> 
+                            <div class="pm_table_cell_name"><span class="pm_status unavailable"></span>Яндекс.Деньги</div>
+                          </td>
+                          <td class="align_center">0%</td>
+                          <td>
+                            <div class="pm_table_text"><span class="empty"></span></div>
+                          </td>
+                          <td>
+                            <div class="pm_table_text"><a class="main_link" href="#">разрешить оплату банковскими картами другим товарам</a></div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td> 
+                            <div class="pm_table_cell_name"><span class="pm_status unavailable"></span>МТС</div>
+                          </td>
+                          <td class="align_center">0%</td>
+                          <td>
+                            <div class="pm_table_text"><span class="empty"></span></div>
+                          </td>
+                          <td>
+                            <div class="pm_table_text"><a class="main_link" href="#" data-toggle="modal" data-target="#pm_method_modal">выберите товары, доступные для оплаты банковской картой</a></div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td> 
+                            <div class="pm_table_cell_name"><span class="pm_status unavailable"></span>Билайн</div>
+                          </td>
+                          <td class="align_center">0%</td>
+                          <td>
+                            <div class="pm_table_text"><span class="empty"></span></div>
+                          </td>
+                          <td>
+                            <div class="pm_table_text"><span class="empty"></span></div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td> 
+                            <div class="pm_table_cell_name"><span class="pm_status unavailable"></span>Мегафон</div>
+                          </td>
+                          <td class="align_center">0%</td>
+                          <td>
+                            <div class="pm_table_text"><span class="empty"></span></div>
+                          </td>
+                          <td>
+                            <div class="pm_table_text"><span class="empty"></span></div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td> 
+                            <div class="pm_table_cell_name"><span class="pm_status unavailable"></span>Теле2</div>
+                          </td>
+                          <td class="align_center">0%</td>
+                          <td>
+                            <div class="pm_table_text"><span class="empty"></span></div>
+                          </td>
+                          <td>
+                            <div class="pm_table_text"><span class="empty"></span></div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <ul class="pm_desr_list">
+                      <li><span class="pm_status accessable"></span>доступен</li>
+                      <li><span class="pm_status partly"></span>доступен частично</li>
+                      <li><span class="pm_status unavailable"></span>недоступен</li>
+                    </ul>
+                    <div class="alert_box info"><span class="bold">1.</span> Комиссию оплачивает покупатель, но вы можете компенсировать её в настройках товара в закладке <span class="bold">Оплата</span></div>
+                  </div>
+                  <div class="pm_description">
+                    <div class="fieldset">
+                      <div class="legend">Настройка приема средств через Digiseller</div>
+                      <div class="fieldset_text">
+                        Для подключения оплаты через Digiseller не требуется никаких дополнительных настроек. 
+                        Обязательным условием для приема средств в собственном магазине является регистрация в системе WebMoney Transfer и наличие <a class="main_link" href="#">персонального WM-аттестата </a>или наличие <a class="main_link" href="#">проверенного PhotoID</a>. При продажах через торговую площадку (Plati.Market, GGSEL.com или WMCentre.net), 
+                        требование наличия WebMoney-аттестата определяется администратором площадки и может быть связано с типом выставляемого на продажу товаров.
+                      </div>
+                    </div>
+                    <div class="fieldset">
+                      <div class="legend">Правила приема платежей в Digiseller посредством банковских карт</div>
+                      <div class="fieldset_text">
+                        <div class="title">1. Основные определения</div>
+                        <div class="content"><span class="bold">Банк-эквайер </span>– банк, предоставляющий услуги приема к оплате банковских (кредитных/дебетных) карт. При получении данных о произведенных операциях в сети, 
+                          эквайер направляет их в систему для проведения расчетов. Банк-эквайер отвечает за возмещение средств торговым точкам, в которых производились 
+                          покупки или оплачивались услуги с помощью карт.
+                        </div>
+                        <div class="content"><span class="bold">Банк-эмитент </span>– банк, предоставивший покупателу банковскую карту, привязанную к его счету в этом банке.</div>
+                        <div class="content"><span class="bold">Фрод </span>(fraud) – мошенничество с применением банковской карты.</div>
+                        <div class="content"><span class="bold">Чарджбэк </span>(chargeback) – процедура опротестования транзакции банком-эмитентом, при которой сумма платежа безакцептно списывается с получателя и возвращается плательщику, после чего обязанность доказательства истинности транзакции возлагается на получателя.</div>
+                        <div class="title">2. Общие положения</div>
+                        <div class="content"><span class="bold">2.1 </span>При оплате товара банковской картой продавцу производится моментальное зачисление средств на личный счет Digiseller в виде WMR (WebMoney RUB).</div>
+                        <div class="content"><span class="bold">2.2 </span>Средства, полученные в качестве оплаты за товар с помощью банковской карты, доступны для вывода с личного счета Digiseller спустя 15 полных суток с момента завершения процедуры покупки. В случае задержек с перечислением средств от банка-эквайера, этот срок может быть продлен до момента погашения им задолженности.</div>
+                        <div class="content attention"><span class="bold">2.3 </span>При поступлении в банк-эквайер запроса на опротестование транзакции, продавец обязан предоставить документы о передаче и использовании проданного товара, если в системе отсутствует подтверждение факта передачи товара или предоставления услуг.</div>
+                        <div class="content attention"><span class="bold">2.4 </span>При поступлении в банк-эквайер запроса на опротестование транзакции и признания банком запроса правомочным, Digiseller оставляет за собой право инициировать процедуру удержания средств с личного счета продавца, дополнительно оповестив продавца об этом.</div>
+                        <div class="content"><span class="bold">2.5 </span>Все возможные риски, связанные с чарджбэками и фродом, берет на себя продавец.</div>
+                        <div class="content"><span class="bold">2.6 </span>Digiseller, равно как и администратор торговой площадки, оставляют за собой право приостановить функцию приема платежей посредством банковских карт как в рамках определенного раздела, так и для конкретного продавца без объяснения причин.</div>
+                        <div class="title">3. Заключительные положения</div>
+                        <div class="content"> <span class="bold">3.1 </span>Продавец вправе в любой момент приостановить возможность продажи своих товаров посредством банковских карт.</div>
+                        <div class="content"> <span class="bold">3.2 </span>Digiseller имеет право в любое время вносить изменения в настоящие Правила путем помещения на сайте my.digiseller.com их новой версии и автоматического оповещения продавцов в разделе "Новости".</div>
+                        <div class="content"> <span class="bold">3.3 </span>В случае несогласия с новой редакцией Правил продавец вправе в одностороннем порядке отказаться от их исполнения, приостановив (запретив) возможность продажи своих товаров с помощью банковских карт.</div>
+                        <div class="content"> <span class="bold">3.4 </span>Если после изменения Правил, продавец продолжает использовать данный способ оплаты, он признается согласившимся с новой редакцией Правил.</div>
+                      </div><span class="user_agreement">
+                        <svg class="pic-green_check ">
+                          <use xlink:href="img/svg/sprite.svg#green_check"></use>
+                        </svg>Я согласен(на)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <div class="modal fade" id="rules" tabindex="-1" aria-labelledby="rules" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="modal-title">Правила приема платежей в Digiseller посредством банковских карт</div><span class="close" data-dismiss="modal" aria-label="Close">
+                <svg class="pic-modal_close ">
+                  <use xlink:href="img/svg/sprite.svg#modal_close"></use>
+                </svg></span>
+            </div>
+            <div class="modal-body">
+              <div class="fieldset_text">
+                <div class="title">1. Основные определения</div>
+                <div class="content"><span class="bold">Банк-эквайер </span>– банк, предоставляющий услуги приема к оплате банковских (кредитных/дебетных) карт. При получении данных о произведенных операциях в сети, 
+                  эквайер направляет их в систему для проведения расчетов. Банк-эквайер отвечает за возмещение средств торговым точкам, в которых производились 
+                  покупки или оплачивались услуги с помощью карт.
+                </div>
+                <div class="content"><span class="bold">Банк-эмитент </span>– банк, предоставивший покупателу банковскую карту, привязанную к его счету в этом банке.</div>
+                <div class="content"><span class="bold">Фрод </span>(fraud) – мошенничество с применением банковской карты.</div>
+                <div class="content"><span class="bold">Чарджбэк </span>(chargeback) – процедура опротестования транзакции банком-эмитентом, при которой сумма платежа безакцептно списывается с получателя и возвращается плательщику, после чего обязанность доказательства истинности транзакции возлагается на получателя.</div>
+                <div class="title">2. Общие положения</div>
+                <div class="content"><span class="bold">2.1 </span>При оплате товара банковской картой продавцу производится моментальное зачисление средств на личный счет Digiseller в виде WMR (WebMoney RUB).</div>
+                <div class="content"><span class="bold">2.2 </span>Средства, полученные в качестве оплаты за товар с помощью банковской карты, доступны для вывода с личного счета Digiseller спустя 15 полных суток с момента завершения процедуры покупки. В случае задержек с перечислением средств от банка-эквайера, этот срок может быть продлен до момента погашения им задолженности.</div>
+                <div class="content attention"><span class="bold">2.3 </span>При поступлении в банк-эквайер запроса на опротестование транзакции, продавец обязан предоставить документы о передаче и использовании проданного товара, если в системе отсутствует подтверждение факта передачи товара или предоставления услуг.</div>
+                <div class="content attention"><span class="bold">2.4 </span>При поступлении в банк-эквайер запроса на опротестование транзакции и признания банком запроса правомочным, Digiseller оставляет за собой право инициировать процедуру удержания средств с личного счета продавца, дополнительно оповестив продавца об этом.</div>
+                <div class="content"><span class="bold">2.5 </span>Все возможные риски, связанные с чарджбэками и фродом, берет на себя продавец.</div>
+                <div class="content"><span class="bold">2.6 </span>Digiseller, равно как и администратор торговой площадки, оставляют за собой право приостановить функцию приема платежей посредством банковских карт как в рамках определенного раздела, так и для конкретного продавца без объяснения причин.</div>
+                <div class="title">3. Заключительные положения</div>
+                <div class="content"> <span class="bold">3.1 </span>Продавец вправе в любой момент приостановить возможность продажи своих товаров посредством банковских карт.</div>
+                <div class="content"> <span class="bold">3.2 </span>Digiseller имеет право в любое время вносить изменения в настоящие Правила путем помещения на сайте my.digiseller.com их новой версии и автоматического оповещения продавцов в разделе "Новости".</div>
+                <div class="content"> <span class="bold">3.3 </span>В случае несогласия с новой редакцией Правил продавец вправе в одностороннем порядке отказаться от их исполнения, приостановив (запретив) возможность продажи своих товаров с помощью банковских карт.</div>
+                <div class="content"> <span class="bold">3.4 </span>Если после изменения Правил, продавец продолжает использовать данный способ оплаты, он признается согласившимся с новой редакцией Правил.</div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn_blue" data-toggle="modal" data-target="#mailings_step2" data-dismiss="modal" aria-label="Close">Я согласен(на)</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="pm_method_modal" tabindex="-1" aria-labelledby="pm_method_modal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="modal-title">Выберите товары, доступные для оплаты банковской картой</div><span class="close" data-dismiss="modal" aria-label="Close">
+                <svg class="pic-modal_close ">
+                  <use xlink:href="img/svg/sprite.svg#modal_close"></use>
+                </svg></span>
+            </div>
+            <div class="modal-body">
+              <div class="pm_method_modal">
+                <div class="goods_menu_sort">
+                  <div class="form_element"><span>сортировка: </span>
+                    <select>
+                      <option value="0">id товара ↑</option>
+                      <option value="1">id товара ↓</option>
+                      <option value="2">название товара А - Я</option>
+                      <option value="3">название товара Я - A</option>
+                      <option value="6">цена ↑</option>
+                      <option value="7">цена ↓</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="pm_method_modal_table">
+                  <table class="equal_cells">
+                    <colgroup>
+                      <col style="width: 30px">
+                      <col style="width: 100px">
+                      <col style="width: 370px">
+                      <col>
+                      <col>
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th></th>
+                        <th>ID товара</th>
+                        <th>Название</th>
+                        <th>Цена</th>
+                        <th>Площадка</th>
+                      </tr>
+                      <tr class="head_selection">
+                        <th></th>
+                        <th> 
+                          <div class="form_element">
+                            <input type="text"><span class="filter_icon">
+                              <svg class="pic-filter ">
+                                <use xlink:href="img/svg/sprite.svg#filter"></use>
+                              </svg></span>
+                          </div>
+                        </th>
+                        <th> 
+                          <div class="form_element">
+                            <input class="focused" type="text"><span class="remove">
+                              <svg class="pic-remove_input_data ">
+                                <use xlink:href="img/svg/sprite.svg#remove_input_data"></use>
+                              </svg></span>
+                          </div>
+                        </th>
+                        <th> 
+                          <div class="form_element">
+                            <select>
+                              <option value="0">все валюты</option>
+                              <option value="1">в USD</option>
+                              <option value="2">в RUR</option>
+                              <option value="3">в EUR</option>
+                              <option value="4">в UAH</option>
+                            </select>
+                          </div>
+                        </th>
+                        <th> 
+                          <div class="form_element">
+                            <select>
+                              <option value="0">все площадки</option>
+                              <option value="1">Мой магазин</option>
+                              <option value="2">Plati.Market</option>
+                            </select>
+                          </div>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="form_element">
+                            <label class="for_check">
+                              <input type="checkbox"><span class="text"></span>
+                            </label>
+                          </div>
+                        </td>
+                        <td>1027406</td>
+                        <td><a class="main_link" href="#">League of Legends (EU) - Riot Points 650-9305</a></td>
+                        <td> <span class="from">от</span> 15,000.00 <small>RUR</small></td>
+                        <td>Мой магазин</td>
+                      </tr>
+                      <tr class="chosen_cell">
+                        <td>
+                          <div class="form_element">
+                            <label class="for_check">
+                              <input type="checkbox" checked><span class="text"></span>
+                            </label>
+                          </div>
+                        </td>
+                        <td>1027406</td>
+                        <td><a class="main_link" href="#">League of Legends (EU) - Riot Points 650-9305 League of Legends (EU) - Riot Points 650-9305 </a></td>
+                        <td> <span class="from">от</span> 15,000.00 <small>RUR</small></td>
+                        <td>Мой магазин</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="pagination_box">
+                <div class="pagination_title">Страницы:</div>
+                <ul class="pagination_list">
+                  <li><a class="active" href="#">1</a></li>
+                  <li><a href="#"> 2</a></li>
+                  <li><a href="#"> 3</a></li>
+                  <li><a href="#"> 4</a></li>
+                  <li><a href="#"> 5</a></li>
+                  <li><a class="sep" href="#"> ...</a></li>
+                  <li><a href="#"> 1200</a></li>
+                </ul>
+                <div class="pagination_sort">
+                  <div class="pagination_title">Товаров на странице:</div>
+                  <div class="form_element">
+                    <select>
+                      <option value="10">10</option>
+                      <option value="20" selected="selected">20</option>
+                      <option value="30">100</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <div class="pm_method_modal_auto">
+                <div class="form_element">
+                  <label class="for_check">
+                    <input type="checkbox"><span class="text">автоматически включать оплату банковской картой для новых товаров</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="box">
+          <div class="footer_content">
+            <div class="copy">Copyright ©2020 Fincom Teh Ltd.<br>Designed by <a href="#">Computing Forces</a></div>
+            <div class="footer_nav"><a href="#">API</a><a href="#">Telegram Bot</a><a href="#">Чат</a></div><a class="footer_logo" href="#">
+              <svg class="pic-googleplay ">
+                <use xlink:href="img/svg/sprite.svg#googleplay"></use>
+              </svg></a>
+          </div>
+        </div>
+      </footer>
+      <script src="static/js/libs.min.js"></script>
+      <script src="static/js/svgxuse.min.js" defer></script>
+      <script src="https://cdn.polyfill.io/v3/polyfill.min.js?features=Array.from%2Ces5%2Ces6%2CSymbol%2CSymbol.iterator%2CDOMTokenList%2CObject.assign%2CCustomEvent%2CElement.prototype.classList%2CElement.prototype.closest%2CElement.prototype.dataset%2CArray.prototype.find%2CArray.prototype.includes"></script>
+      <script src="js/common.js"></script>
+    </div>
+  </body>
+</html>

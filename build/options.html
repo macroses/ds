@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="color-scheme" content="dark light">
+    <title>Digiseller</title>
+    <link rel="stylesheet" href="libs/normalize/normalize.css">
+    <link rel="stylesheet" href="css/libs.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/light-theme.css" id="color_scheme"><script>window.MSInputMethodContext && document.documentMode && document.write('<link rel="stylesheet" href="libs/bootstrap-ie11.min.css"><script src="static/js/ie11-customProperty.js"><\/script><script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js"><\/script><script>!function () { var e, t; ((e = document.createEvent("CustomEvent")).initEvent("Bootstrap", !0, !0), e.preventDefault(), e.defaultPrevented) || (t = Event.prototype.preventDefault, Event.prototype.preventDefault = function () { this.cancelable && (t.call(this), Object.defineProperty(this, "defaultPrevented", { get: function () { return !0 }, configurable: !0 })) }) }();<\/script>');</script>
+    <script src="https://cdn.tiny.cloud/1/sqoo5ez8oy5x8bram4focqll8rz90rodp0tusw0e7cytsx6y/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+  </head>
+  <body>
+    <button id="change_scheme">поменять цвет</button>
+    <div class="wrapper">
+      <header>
+        <div class="box">
+          <div class="header_top"><a class="header_logo" href="/">
+              <svg class="pic-digiseller-logo ">
+                <use xlink:href="img/svg/sprite.svg#digiseller-logo"></use>
+              </svg></a>
+            <div class="header_search">
+              <div class="form_element">
+                <input type="text" autofocus placeholder="Товар, счет, уникальный код, email ...">
+              </div>
+              <div class="search_results">
+                <ul class="header_search_results_list">
+                  <li>
+                    <div class="section_title">Счет</div><a class="search_results_item-content" href="#">
+                      <div class="search_results_item-icon">
+                        <svg class="pic-invoice ">
+                          <use xlink:href="img/svg/sprite.svg#invoice"></use>
+                        </svg>
+                      </div><span class="search_results_item-text">eFootball PES 2021 ✅SEASON UPDATE STANDARD EDITION</span></a><a class="search_results_item-content" href="#">
+                      <div class="search_results_item-icon">
+                        <svg class="pic-search-res-customer ">
+                          <use xlink:href="img/svg/sprite.svg#search-res-customer"></use>
+                        </svg>
+                      </div><span class="search_results_item-text">mail@mail.com</span></a><a class="search_results_item-content" href="#">
+                      <div class="search_results_item-icon">
+                        <svg class="pic-good ">
+                          <use xlink:href="img/svg/sprite.svg#good"></use>
+                        </svg>
+                      </div><span class="search_results_item-text">Товар там какой то</span></a><a class="search_results_item-content" href="#">
+                      <div class="search_results_item-icon">
+                        <svg class="pic-invoice ">
+                          <use xlink:href="img/svg/sprite.svg#invoice"></use>
+                        </svg>
+                      </div><span class="search_results_item-text">GUID там какой то</span></a>
+                  </li>
+                  <li>
+                    <div class="section_title">Счет</div><a class="search_results_item-content" href="#">
+                      <div class="search_results_item-icon">
+                        <svg class="pic-invoice ">
+                          <use xlink:href="img/svg/sprite.svg#invoice"></use>
+                        </svg>
+                      </div><span class="search_results_item-text">eFootball PES 2021 ✅SEASON UPDATE STANDARD EDITION</span></a><a class="search_results_item-content" href="#">
+                      <div class="search_results_item-icon">
+                        <svg class="pic-search-res-customer ">
+                          <use xlink:href="img/svg/sprite.svg#search-res-customer"></use>
+                        </svg>
+                      </div><span class="search_results_item-text">mail@mail.com</span></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="header_top_nav">
+              <ul class="header_top_nav-list">
+                <li id="notice_item">
+                  <svg class="pic-notice ">
+                    <use xlink:href="img/svg/sprite.svg#notice"></use>
+                  </svg><span class="nav_list_item-title">Уведомления</span>
+                  <div class="notice_counter_box styled">
+                    <div class="notice_counter-item important">95</div>
+                    <div class="notice_counter-item">64</div>
+                  </div>
+                  <div class="notice_popup_wrap" id="notice_popup">
+                    <div class="notice_popup_box">
+                      <div class="triangle"></div>
+                      <div class="notice_popup_top">
+                        <div class="notice_popup_top-title">Список уведомлений</div>
+                        <div class="notice_popup-top_chck">
+                          <label>
+                            <input type="checkbox"><span>только важные</span>
+                          </label>
+                        </div>
+                      </div>
+                      <ul class="notice_popup_list">
+                        <!-- loader-->
+                        <li class="notice_popup_list-item">
+                          <div class="spinner-border" role="status"><span class="visually-hidden">Loading...</span></div>
+                        </li>
+                        <!-- важные-->
+                        <li class="notice_popup_list-item">
+                          <div class="item_top">
+                            <div class="item_top-title">
+                              <svg class="pic-notice-popup-important ">
+                                <use xlink:href="img/svg/sprite.svg#notice-popup-important"></use>
+                              </svg>Digiseller
+                            </div>
+                            <div class="item_top-additional">
+                              <div class="item_top-date">28.07.2020 14:56</div>
+                              <div class="item_top-settings"><a href="/" title="настройка уведомлений">
+                                  <svg class="pic-popup-settings ">
+                                    <use xlink:href="img/svg/sprite.svg#popup-settings"></use>
+                                  </svg></a></div>
+                            </div>
+                          </div>
+                          <div class="item_content">
+                            <div class="item_content_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo veritatis impedit iste assumenda non ipsum officia cum similique, ipsa repellat. <a href="/">Lorem ipsum dolor sit amet.</a></div>
+                            <div class="item_content_details"><a href="#">Подробнее</a></div>
+                          </div>
+                        </li>
+                        <!-- неважные-->
+                        <li class="notice_popup_list-item">
+                          <div class="item_top">
+                            <div class="item_top-title">
+                              <svg class="pic-notice-popup ">
+                                <use xlink:href="img/svg/sprite.svg#notice-popup"></use>
+                              </svg>Партнерская программа
+                            </div>
+                            <div class="item_top-additional">
+                              <div class="item_top-date">28.07.2020 14:56</div>
+                            </div>
+                          </div>
+                          <div class="item_content">
+                            <div class="item_content_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo veritatis impedit iste assumenda non ipsum officia cum similique, ipsa repellat. <a href="/">Lorem ipsum dolor sit amet.</a></div>
+                            <div class="item_content_details"><a href="#">Подробнее</a></div>
+                          </div>
+                        </li>
+                        <!-- непрочитанные-->
+                        <li class="notice_popup_list-item unread_notice">
+                          <div class="item_top">
+                            <div class="item_top-title">
+                              <svg class="pic-notice-popup ">
+                                <use xlink:href="img/svg/sprite.svg#notice-popup"></use>
+                              </svg>Партнерская программа
+                            </div>
+                            <div class="item_top-additional">
+                              <div class="item_top-date">28.07.2020 14:56</div>
+                            </div>
+                          </div>
+                          <div class="item_content">
+                            <div class="item_content_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo veritatis impedit iste assumenda non ipsum officia cum similique, ipsa repellat. <a href="/">Lorem ipsum dolor sit amet.</a></div>
+                            <div class="item_content_details"><a href="#">Подробнее</a></div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="sep">
+                  <svg class="pic-messages ">
+                    <use xlink:href="img/svg/sprite.svg#messages"></use>
+                  </svg><span class="nav_list_item-title">Сообщения</span>
+                  <div class="notice_counter_box">
+                    <div class="notice_counter-item">0</div>
+                  </div>
+                </li>
+                <li>
+                  <svg class="pic-responses ">
+                    <use xlink:href="img/svg/sprite.svg#responses"></use>
+                  </svg><span class="nav_list_item-title">Претенизии</span>
+                  <div class="notice_counter_box">
+                    <div class="notice_counter-item">0</div>
+                  </div>
+                </li>
+                <li>
+                  <svg class="pic-offer ">
+                    <use xlink:href="img/svg/sprite.svg#offer"></use>
+                  </svg><span class="nav_list_item-title">Предложения</span>
+                  <div class="notice_counter_box">
+                    <div class="notice_counter-item new_notice">999</div>
+                  </div>
+                </li>
+                <li> 
+                  <svg class="pic-chats ">
+                    <use xlink:href="img/svg/sprite.svg#chats"></use>
+                  </svg><span class="nav_list_item-title">Чаты</span>
+                  <div class="notice_counter_box">
+                    <div class="notice_counter-item">0</div>
+                  </div>
+                </li>
+                <li class="sep">
+                  <svg class="pic-logout ">
+                    <use xlink:href="img/svg/sprite.svg#logout"></use>
+                  </svg><span class="nav_list_item-title">Выход</span>
+                </li>
+                <li class="lang"><a class="active" href="/">
+                    <svg class="pic-rus ">
+                      <use xlink:href="img/svg/sprite.svg#rus"></use>
+                    </svg>рус</a><a href="/">
+                    <svg class="pic-eng ">
+                      <use xlink:href="img/svg/sprite.svg#eng"></use>
+                    </svg>eng</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <nav class="main_nav">
+        <div class="main_nav_top">
+          <div class="box">
+            <ul>
+              <li><a href="#">Товары</a></li>
+              <li><a href="#">Магазин</a></li>
+              <li><a href="#">Рекламные места</a></li>
+              <li><a href="#">Бухгалтерия</a></li>
+              <li><a class="active" href="#">Личный кабинет</a></li>
+              <li><a href="#">Партнерская программа</a></li>
+              <li><a href="#">Описание сервиса</a></li>
+              <li><a href="#">Торговая площадка</a></li>
+              <li><a class="question_mark" href="#" data-placement="top" data-toggle="tooltip" title="задать вопрос">
+                  <svg class="pic-question_mark ">
+                    <use xlink:href="img/svg/sprite.svg#question_mark"></use>
+                  </svg></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="main_nav_bottom">
+          <div class="box">
+            <ul>
+              <li><a class="active" href="my_info.html">Детали</a></li>
+              <li><a href="messages.html">Переписка</a></li>
+              <li><a href="news.html">Новости</a></li>
+              <li><a href="my_security.html">Безопасность</a></li>
+              <li><a href="space_rent.html">Дисковое пространство</a></li>
+              <li><a href="notify_settings.html">Уведомления</a></li>
+              <li><a href="staff.html">Сотрудники</a></li>
+              <li><a href="mailings.html">Рассылки</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <main>
+        <div class="box">
+          <div class="content_box">
+            <div class="page_nav">
+              <ul class="breadcrumbs_list">
+                <li class="breadcrumb_item"><a class="main_link" href="#" data-placement="top" data-toggle="tooltip" title="список моих товаров">Мои товары</a></li>
+                <li class="breadcrumb_item">
+                  <div class="breadcrumb_item_name">Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена </div><a href="#" data-placement="top" data-toggle="tooltip" title="открыть страницу с описанием товара">
+                    <svg class="pic-good_link ">
+                      <use xlink:href="img/svg/sprite.svg#good_link"></use>
+                    </svg></a>
+                  <div class="breadcrumb_item_price">14895 <span>RUB</span></div>
+                </li>
+              </ul>
+              <div class="page_nav_item">
+                <div class="prev"> <a class="main_link" href="#">предыдущий товар</a></div>
+                <div class="next"> <a class="main_link" href="#">следующий товар</a></div>
+              </div>
+            </div>
+          </div>
+          <ul class="nav nav-tabs" role="tablist">
+            <li><a class="nav-link" href="#tabBasic" role="tab" data-toggle="tab">Basic</a></li>
+            <li><a class="nav-link active" href="#tabParameters" role="tab" data-toggle="tab">Parameters</a></li>
+            <li><a class="nav-link" href="#tabGallery" role="tab" data-toggle="tab">Gallery</a></li>
+            <li><a class="nav-link" href="#tabContent" role="tab" data-toggle="tab">Content
+                <div class="tab_nums">10</div></a></li>
+            <li><a class="nav-link" href="#tabPayment" role="tab" data-toggle="tab">Payment</a></li>
+            <li><a class="nav-link" href="#tabSales" role="tab" data-toggle="tab">Sales</a></li>
+            <li><a class="nav-link" href="#tabDiscount" role="tab" data-toggle="tab">Discount</a></li>
+            <li><a class="nav-link" href="#tabHTML_code" role="tab" data-toggle="tab">HTML_code</a></li>
+            <li><a class="nav-link" href="#tabNotifications" role="tab" data-toggle="tab">Notifications</a></li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane active" id="tabParameters">
+              <div class="content_box">
+                <div class="options">
+                  <div class="params_list">
+                    <div class="fieldset">
+                      <div class="legend">Параметры</div>
+                      <div class="hint">параметры не добавлены</div>
+                      <ul class="params_list">
+                        <li>test param1</li>
+                        <li>test param2 test param2 test param2 test param2 test param2 test param2 test param2 </li>
+                        <li class="active">test param3</li>
+                      </ul>
+                    </div>
+                    <div class="params_btn_group">
+                      <div class="params_btn_group_item">
+                        <button class="btn btn_gray">добавить</button>
+                        <button class="btn btn_gray">удалить</button>
+                      </div>
+                      <div class="params_btn_group_item">
+                        <button class="btn btn_gray">выше</button>
+                        <button class="btn btn_gray" disabled>ниже</button>
+                      </div>
+                      <div class="params_btn_group_item">
+                        <button class="btn btn_gray" data-toggle="modal" data-target="#params_import">импортировать параметры</button>
+                      </div>
+                      <div class="params_btn_group_item">
+                        <button class="btn btn_gray" data-toggle="modal" data-target="#additional_settings">дополнительные настройки</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="params_funcs">
+                    <!-- нет параметров, начинаем добавлять первый-->
+                    <div class="alert_box info">
+                      Вы можете добавить к товару дополнительные параметры, которые покупатель должен будет выбрать/заполнить перед оплатой.Данные, которые он укажет, будут доступны вам на странице с информацией о покупке. У параметров с типом "Список", "Радио-кнопки" и "Флажки" 
+                      предлагается опция динамического изменения (увеличения/уменьшения) цены. Просьба не добавлять в качестве дополнительного параметра email покупателя,
+                      т.к. он уже существует и является обязательным для заполнения.
+                    </div>
+                    <div class="form_data_block"> 
+                      <div class="form_data_block_item">
+                        <div class="form_data_block_title">Название :<br> (не более 100 символов)</div>
+                        <div class="form_data_block_content"> 
+                          <div class="form_element">
+                            <input type="text">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form_data_block_item">
+                        <div class="form_data_block_title">Название :<br> (не более 100 символов)</div>
+                        <div class="form_data_block_content vertical">
+                          <div class="form_element">
+                            <input type="text"><span class="lang" data-placement="right" data-toggle="tooltip" title="The field must contain the name of the parameter in Russian">
+                              <svg class="pic-rus ">
+                                <use xlink:href="img/svg/sprite.svg#rus"></use>
+                              </svg></span>
+                          </div>
+                          <div class="form_element">
+                            <input type="text"><span class="lang" data-placement="right" data-toggle="tooltip" title="The field must contain the name of the parameter in English">
+                              <svg class="pic-eng ">
+                                <use xlink:href="img/svg/sprite.svg#eng"></use>
+                              </svg></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form_data_block_item">
+                        <div class="form_data_block_title">ID параметра:</div>
+                        <div class="form_data_block_content"> 
+                          <div class="form_element">
+                            <input type="text" disabled value="12345">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form_data_block_item">
+                        <div class="form_data_block_title">Тип параметра:</div>
+                        <div class="form_data_block_content"> 
+                          <div class="form_element">
+                            <select>
+                              <option value="0">Выпадающий список</option>
+                              <option value="1">Радио-кнопки</option>
+                              <option value="2">Чекбоксы</option>
+                              <option value="3">Текстовое поле</option>
+                              <option value="4">Многострочное текстовое поле </option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form_element">
+                      <label class="for_check">
+                        <input type="checkbox"><span class="text">параметр является обязательным</span>
+                      </label>
+                    </div>
+                    <div class="form_block_submit">
+                      <button class="btn btn_gray">добавить новый параметр</button>
+                    </div>
+                    <!-- добавили выпадающий список-->
+                    <div class="form_data_block"> 
+                      <div class="form_data_block_item">
+                        <div class="form_data_block_title">Название:</div>
+                        <div class="form_data_block_content"> 
+                          <div class="form_element">
+                            <input type="text">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form_data_block_item">
+                        <div class="form_data_block_title">Тип параметра:</div>
+                        <div class="form_data_block_content"> 
+                          <div class="form_element">
+                            <select>
+                              <option value="0">Выпадающий список</option>
+                              <option value="1">Радио-кнопки</option>
+                              <option value="2">Чекбоксы</option>
+                              <option value="3">Текстовое поле</option>
+                              <option value="4">Многострочное текстовое поле</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form_group">
+                      <div class="form_element">
+                        <label class="for_check disabled">
+                          <input type="checkbox" disabled><span class="text">параметр является обязательным</span>
+                        </label>
+                      </div>
+                      <div class="form_element">
+                        <label class="for_check">
+                          <input type="checkbox"><span class="text">у параметра отсутствует значение по умолчанию</span>
+                        </label>
+                      </div>
+                    </div>
+                    <table class="equal_cells">
+                      <colgroup>
+                        <col style="width: 240px">
+                        <col>
+                        <col style="width: 100px">
+                        <col style="width: 40px">
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th>Название варианта</th>
+                          <th class="align_center">Модификатор цены</th>
+                          <th class="align_center">По умолчанию	</th>
+                          <th class="align_right"></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <div class="form_element">
+                              <input type="text">
+                            </div>
+                          </td>
+                          <td class="align_center">
+                            <div class="mod_box"><span class="currency usd">5 USD</span>
+                              <div class="form_element">
+                                <select>
+                                  <option value="0">+</option>
+                                  <option value="1">-</option>
+                                </select>
+                                <input type="text">
+                                <select>
+                                  <option value="0">USD</option>
+                                  <option value="1">%</option>
+                                </select>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="align_center">
+                            <div class="default_param">
+                              <div class="form_element">
+                                <label class="for_radio">
+                                  <input type="radio" name="mod"><span class="text"></span>
+                                </label>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="align_right">
+                            <button class="btn btn_gray"><span>
+                                <svg class="pic-plus_button ">
+                                  <use xlink:href="img/svg/sprite.svg#plus_button"></use>
+                                </svg></span></button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="form_element">
+                              <input type="text">
+                            </div>
+                          </td>
+                          <td class="align_center">
+                            <div class="mod_box"><span class="currency usd">5 USD</span>
+                              <div class="form_element">
+                                <select>
+                                  <option value="0">+</option>
+                                  <option value="1">-</option>
+                                </select>
+                                <input type="text">
+                                <select>
+                                  <option value="0">USD</option>
+                                  <option value="1">%</option>
+                                </select>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="align_center">
+                            <div class="default_param">
+                              <div class="form_element">
+                                <label class="for_radio">
+                                  <input type="radio" name="mod"><span class="text"></span>
+                                </label>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="align_right">
+                            <button class="btn btn_gray"><span class="minus"></span></button>
+                          </td>
+                        </tr>
+                        <!-- переключились на английский язык-->
+                        <tr>
+                          <td>
+                            <div class="form_element">
+                              <input type="text"><span class="lang" data-placement="right" data-toggle="tooltip" title="The field must contain the name of the parameter in Russian">
+                                <svg class="pic-rus ">
+                                  <use xlink:href="img/svg/sprite.svg#rus"></use>
+                                </svg></span>
+                            </div>
+                            <div class="form_element">
+                              <input type="text"><span class="lang" data-placement="right" data-toggle="tooltip" title="The field must contain the name of the parameter in English">
+                                <svg class="pic-eng ">
+                                  <use xlink:href="img/svg/sprite.svg#eng"></use>
+                                </svg></span>
+                            </div>
+                          </td>
+                          <td class="align_center">
+                            <div class="mod_box"><span class="currency usd">5 USD</span>
+                              <div class="form_element">
+                                <select>
+                                  <option value="0">+</option>
+                                  <option value="1">-</option>
+                                </select>
+                                <input type="text">
+                                <select>
+                                  <option value="0">USD</option>
+                                  <option value="1">%</option>
+                                </select>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="align_center">
+                            <div class="default_param">
+                              <div class="form_element">
+                                <label class="for_radio">
+                                  <input type="radio" name="mod"><span class="text"></span>
+                                </label>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="align_right">
+                            <button class="btn btn_gray"><span>
+                                <svg class="pic-plus_button ">
+                                  <use xlink:href="img/svg/sprite.svg#plus_button"></use>
+                                </svg></span></button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div class="params_funcs_comment">
+                      <div class="form_element vertical">
+                        <div class="title">Комментарий:</div>
+                        <textarea placeholder="Здесь вы можете ввести комментарий, который будет показываться при наведении мыши на иконку с вопросом справа от названия параметра."></textarea>
+                      </div>
+                    </div>
+                    <button class="btn btn_blue">сохранить</button>
+                  </div>
+                  <div class="params_preview"> 
+                    <div class="params_preview_content">
+                      <div class="params_preview_header">
+                        <svg class="pic-preview ">
+                          <use xlink:href="img/svg/sprite.svg#preview"></use>
+                        </svg>Превью формы оплаты
+                      </div>
+                      <div class="params_preview_form">
+                        <div class="params_preview_form_item inactive">
+                          <div class="form_element vertical">
+                            <div class="title">Оплата через:</div>
+                            <select disabled>
+                              <option value="0">WebMoney</option>
+                              <option value="1">Что-то еще</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="params_preview_form_item">
+                          <div class="form_element vertical">
+                            <div class="title">Выпадающий список:</div>
+                            <select>
+                              <option value="0">Какой-то атрибут параметра</option>
+                              <option value="1">Какой-то атрибут параметраКакой-то атрибут параметраКакой-то атрибут параметраКакой-то атрибут параметраКакой-то атрибут параметра</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="params_preview_form_item active">
+                          <div class="form_element vertical">
+                            <div class="title">Радио-кнопки Радио-кнопки Радио-кнопки Радио-кнопки Радио-кнопки Радио-кнопки Радио-кнопки Радио-кнопки :</div>
+                            <label class="for_radio">
+                              <input type="radio" name="attribut"><span class="text">Какой то атрибут параметра Какой то атрибут параметра Какой то атрибут параметра </span>
+                            </label>
+                            <label class="for_radio">
+                              <input type="radio" name="attribut"><span class="text">123</span>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="params_preview_form_item">
+                          <div class="form_element vertical">
+                            <div class="title">Чекбоксы:<span class="comment_preview" data-placement="top" data-toggle="tooltip" title="тут комментарий">?</span></div>
+                            <label class="for_check">
+                              <input type="checkbox"><span class="text">Какой то атрибут</span>
+                            </label>
+                            <label class="for_check">
+                              <input type="checkbox"><span class="text">123</span>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="params_preview_form_item">
+                          <div class="form_element vertical">
+                            <div class="title">Текстовое поле:</div>
+                            <input type="text">
+                          </div>
+                        </div>
+                        <div class="params_preview_form_item">
+                          <div class="form_element vertical">
+                            <div class="title">Текстовое поле:</div>
+                            <textarea></textarea>
+                          </div>
+                        </div>
+                        <div class="params_preview_form_item inactive">
+                          <button>купить</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <div class="modal fade" id="params_import" tabindex="-1" aria-labelledby="params_import" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="modal-title">Импорт параметров</div><span class="close" data-dismiss="modal" aria-label="Close">
+                <svg class="pic-modal_close ">
+                  <use xlink:href="img/svg/sprite.svg#modal_close"></use>
+                </svg></span>
+            </div>
+            <div class="modal-body">
+              <div class="params_goods">
+                <div class="title">Выберите товар, из которого хотите скопировать параметры:</div>
+                <div class="form_element">
+                  <select>
+                    <option value="0">Товар 1</option>
+                    <option value="1">Товар 2</option>
+                    <option value="2">Товар 3</option>
+                  </select>
+                </div>
+                <div class="choose_all_params">
+                  <div class="form_element">
+                    <!-- если это чекнули, то выделяются все элементы-->
+                    <!-- на .params_import_list навешивается класс .active-->
+                    <label class="for_check">
+                      <input type="checkbox"><span class="text">название параметра</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <ul class="params_import_list">
+                <li>
+                  <div class="form_element">
+                    <label class="for_check">
+                      <input type="checkbox"><span class="text">param 1</span>
+                    </label>
+                  </div>
+                </li>
+                <li> 
+                  <div class="form_element">
+                    <label class="for_check">
+                      <input type="checkbox"><span class="text">param 2</span>
+                    </label>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn_gray" data-dismiss="modal" aria-label="Close">импортировать параметры</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="additional_settings" tabindex="-1" aria-labelledby="additional_settings" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-md">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="modal-title">Дополнительные настройки</div><span class="close" data-dismiss="modal" aria-label="Close">
+                <svg class="pic-modal_close ">
+                  <use xlink:href="img/svg/sprite.svg#modal_close"></use>
+                </svg></span>
+            </div>
+            <div class="modal-body">
+              <div class="params_to_server">
+                <div class="form_element">
+                  <label class="for_check">
+                    <input type="checkbox"><span class="text">перед оплатой отправлять параметры на мой сервер для проверки </span><a class="main_link" href="#">API</a>:
+                  </label>
+                </div>
+              </div>
+              <div class="params_to_server_address">
+                <div class="form_element">
+                  <input type="text" placeholder="http://" disabled>
+                </div>
+              </div>
+              <div class="params_to_server_condition">
+                <div class="title">Если страница моего сервера недоступна (http response <> 200):</div>
+                <div class="form_group vertical">
+                  <div class="form_element">
+                    <label class="for_radio">
+                      <input type="radio" name="server_condition" checked><span class="text">разрешать продолжать оплату</span>
+                    </label>
+                  </div>
+                  <div class="form_element">
+                    <label class="for_radio">
+                      <input type="radio" name="server_condition"><span class="text">запрещать продолжать оплату</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="params_id_interface">
+                <div class="form_element">
+                  <label class="for_check">
+                    <input type="checkbox"><span class="text">отобразить в интерфейсе id параметров и их вариантов</span>
+                  </label>
+                </div>
+                <div class="hint">Данная информация нужна только для использования <a class="main_link" href="#">API</a></div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn_gray" data-dismiss="modal" aria-label="Close">сохранить настройки</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="box">
+          <div class="footer_content">
+            <div class="copy">Copyright ©2020 Fincom Teh Ltd.<br>Designed by <a href="#">Computing Forces</a></div>
+            <div class="footer_nav"><a href="#">API</a><a href="#">Telegram Bot</a><a href="#">Чат</a></div><a class="footer_logo" href="#">
+              <svg class="pic-googleplay ">
+                <use xlink:href="img/svg/sprite.svg#googleplay"></use>
+              </svg></a>
+          </div>
+        </div>
+      </footer>
+      <script src="static/js/libs.min.js"></script>
+      <script src="static/js/svgxuse.min.js" defer></script>
+      <script src="https://cdn.polyfill.io/v3/polyfill.min.js?features=Array.from%2Ces5%2Ces6%2CSymbol%2CSymbol.iterator%2CDOMTokenList%2CObject.assign%2CCustomEvent%2CElement.prototype.classList%2CElement.prototype.closest%2CElement.prototype.dataset%2CArray.prototype.find%2CArray.prototype.includes"></script>
+      <script src="js/common.js"></script>
+    </div>
+  </body>
+</html>

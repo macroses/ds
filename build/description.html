@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="color-scheme" content="dark light">
+    <title>Digiseller</title>
+    <link rel="stylesheet" href="libs/normalize/normalize.css">
+    <link rel="stylesheet" href="css/libs.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/light-theme.css" id="color_scheme"><script>window.MSInputMethodContext && document.documentMode && document.write('<link rel="stylesheet" href="libs/bootstrap-ie11.min.css"><script src="static/js/ie11-customProperty.js"><\/script><script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js"><\/script><script>!function () { var e, t; ((e = document.createEvent("CustomEvent")).initEvent("Bootstrap", !0, !0), e.preventDefault(), e.defaultPrevented) || (t = Event.prototype.preventDefault, Event.prototype.preventDefault = function () { this.cancelable && (t.call(this), Object.defineProperty(this, "defaultPrevented", { get: function () { return !0 }, configurable: !0 })) }) }();<\/script>');</script>
+    <script src="https://cdn.tiny.cloud/1/sqoo5ez8oy5x8bram4focqll8rz90rodp0tusw0e7cytsx6y/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+  </head>
+  <body>
+    <button id="change_scheme">поменять цвет</button>
+    <div class="wrapper">
+      <header>
+        <div class="box">
+          <div class="header_top"><a class="header_logo" href="/">
+              <svg class="pic-digiseller-logo ">
+                <use xlink:href="img/svg/sprite.svg#digiseller-logo"></use>
+              </svg></a>
+            <div class="header_search">
+              <div class="form_element">
+                <input type="text" autofocus placeholder="Товар, счет, уникальный код, email ...">
+              </div>
+              <div class="search_results">
+                <ul class="header_search_results_list">
+                  <li>
+                    <div class="section_title">Счет</div><a class="search_results_item-content" href="#">
+                      <div class="search_results_item-icon">
+                        <svg class="pic-invoice ">
+                          <use xlink:href="img/svg/sprite.svg#invoice"></use>
+                        </svg>
+                      </div><span class="search_results_item-text">eFootball PES 2021 ✅SEASON UPDATE STANDARD EDITION</span></a><a class="search_results_item-content" href="#">
+                      <div class="search_results_item-icon">
+                        <svg class="pic-search-res-customer ">
+                          <use xlink:href="img/svg/sprite.svg#search-res-customer"></use>
+                        </svg>
+                      </div><span class="search_results_item-text">mail@mail.com</span></a><a class="search_results_item-content" href="#">
+                      <div class="search_results_item-icon">
+                        <svg class="pic-good ">
+                          <use xlink:href="img/svg/sprite.svg#good"></use>
+                        </svg>
+                      </div><span class="search_results_item-text">Товар там какой то</span></a><a class="search_results_item-content" href="#">
+                      <div class="search_results_item-icon">
+                        <svg class="pic-invoice ">
+                          <use xlink:href="img/svg/sprite.svg#invoice"></use>
+                        </svg>
+                      </div><span class="search_results_item-text">GUID там какой то</span></a>
+                  </li>
+                  <li>
+                    <div class="section_title">Счет</div><a class="search_results_item-content" href="#">
+                      <div class="search_results_item-icon">
+                        <svg class="pic-invoice ">
+                          <use xlink:href="img/svg/sprite.svg#invoice"></use>
+                        </svg>
+                      </div><span class="search_results_item-text">eFootball PES 2021 ✅SEASON UPDATE STANDARD EDITION</span></a><a class="search_results_item-content" href="#">
+                      <div class="search_results_item-icon">
+                        <svg class="pic-search-res-customer ">
+                          <use xlink:href="img/svg/sprite.svg#search-res-customer"></use>
+                        </svg>
+                      </div><span class="search_results_item-text">mail@mail.com</span></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="header_top_nav">
+              <ul class="header_top_nav-list">
+                <li id="notice_item">
+                  <svg class="pic-notice ">
+                    <use xlink:href="img/svg/sprite.svg#notice"></use>
+                  </svg><span class="nav_list_item-title">Уведомления</span>
+                  <div class="notice_counter_box styled">
+                    <div class="notice_counter-item important">95</div>
+                    <div class="notice_counter-item">64</div>
+                  </div>
+                  <div class="notice_popup_wrap" id="notice_popup">
+                    <div class="notice_popup_box">
+                      <div class="triangle"></div>
+                      <div class="notice_popup_top">
+                        <div class="notice_popup_top-title">Список уведомлений</div>
+                        <div class="notice_popup-top_chck">
+                          <label>
+                            <input type="checkbox"><span>только важные</span>
+                          </label>
+                        </div>
+                      </div>
+                      <ul class="notice_popup_list">
+                        <!-- loader-->
+                        <li class="notice_popup_list-item">
+                          <div class="spinner-border" role="status"><span class="visually-hidden">Loading...</span></div>
+                        </li>
+                        <!-- важные-->
+                        <li class="notice_popup_list-item">
+                          <div class="item_top">
+                            <div class="item_top-title">
+                              <svg class="pic-notice-popup-important ">
+                                <use xlink:href="img/svg/sprite.svg#notice-popup-important"></use>
+                              </svg>Digiseller
+                            </div>
+                            <div class="item_top-additional">
+                              <div class="item_top-date">28.07.2020 14:56</div>
+                              <div class="item_top-settings"><a href="/" title="настройка уведомлений">
+                                  <svg class="pic-popup-settings ">
+                                    <use xlink:href="img/svg/sprite.svg#popup-settings"></use>
+                                  </svg></a></div>
+                            </div>
+                          </div>
+                          <div class="item_content">
+                            <div class="item_content_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo veritatis impedit iste assumenda non ipsum officia cum similique, ipsa repellat. <a href="/">Lorem ipsum dolor sit amet.</a></div>
+                            <div class="item_content_details"><a href="#">Подробнее</a></div>
+                          </div>
+                        </li>
+                        <!-- неважные-->
+                        <li class="notice_popup_list-item">
+                          <div class="item_top">
+                            <div class="item_top-title">
+                              <svg class="pic-notice-popup ">
+                                <use xlink:href="img/svg/sprite.svg#notice-popup"></use>
+                              </svg>Партнерская программа
+                            </div>
+                            <div class="item_top-additional">
+                              <div class="item_top-date">28.07.2020 14:56</div>
+                            </div>
+                          </div>
+                          <div class="item_content">
+                            <div class="item_content_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo veritatis impedit iste assumenda non ipsum officia cum similique, ipsa repellat. <a href="/">Lorem ipsum dolor sit amet.</a></div>
+                            <div class="item_content_details"><a href="#">Подробнее</a></div>
+                          </div>
+                        </li>
+                        <!-- непрочитанные-->
+                        <li class="notice_popup_list-item unread_notice">
+                          <div class="item_top">
+                            <div class="item_top-title">
+                              <svg class="pic-notice-popup ">
+                                <use xlink:href="img/svg/sprite.svg#notice-popup"></use>
+                              </svg>Партнерская программа
+                            </div>
+                            <div class="item_top-additional">
+                              <div class="item_top-date">28.07.2020 14:56</div>
+                            </div>
+                          </div>
+                          <div class="item_content">
+                            <div class="item_content_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo veritatis impedit iste assumenda non ipsum officia cum similique, ipsa repellat. <a href="/">Lorem ipsum dolor sit amet.</a></div>
+                            <div class="item_content_details"><a href="#">Подробнее</a></div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="sep">
+                  <svg class="pic-messages ">
+                    <use xlink:href="img/svg/sprite.svg#messages"></use>
+                  </svg><span class="nav_list_item-title">Сообщения</span>
+                  <div class="notice_counter_box">
+                    <div class="notice_counter-item">0</div>
+                  </div>
+                </li>
+                <li>
+                  <svg class="pic-responses ">
+                    <use xlink:href="img/svg/sprite.svg#responses"></use>
+                  </svg><span class="nav_list_item-title">Претенизии</span>
+                  <div class="notice_counter_box">
+                    <div class="notice_counter-item">0</div>
+                  </div>
+                </li>
+                <li>
+                  <svg class="pic-offer ">
+                    <use xlink:href="img/svg/sprite.svg#offer"></use>
+                  </svg><span class="nav_list_item-title">Предложения</span>
+                  <div class="notice_counter_box">
+                    <div class="notice_counter-item new_notice">999</div>
+                  </div>
+                </li>
+                <li> 
+                  <svg class="pic-chats ">
+                    <use xlink:href="img/svg/sprite.svg#chats"></use>
+                  </svg><span class="nav_list_item-title">Чаты</span>
+                  <div class="notice_counter_box">
+                    <div class="notice_counter-item">0</div>
+                  </div>
+                </li>
+                <li class="sep">
+                  <svg class="pic-logout ">
+                    <use xlink:href="img/svg/sprite.svg#logout"></use>
+                  </svg><span class="nav_list_item-title">Выход</span>
+                </li>
+                <li class="lang"><a class="active" href="/">
+                    <svg class="pic-rus ">
+                      <use xlink:href="img/svg/sprite.svg#rus"></use>
+                    </svg>рус</a><a href="/">
+                    <svg class="pic-eng ">
+                      <use xlink:href="img/svg/sprite.svg#eng"></use>
+                    </svg>eng</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <nav class="main_nav">
+        <div class="main_nav_top">
+          <div class="box">
+            <ul>
+              <li><a href="#">Товары</a></li>
+              <li><a href="#">Магазин</a></li>
+              <li><a href="#">Рекламные места</a></li>
+              <li><a href="#">Бухгалтерия</a></li>
+              <li><a class="active" href="#">Личный кабинет</a></li>
+              <li><a href="#">Партнерская программа</a></li>
+              <li><a href="#">Описание сервиса</a></li>
+              <li><a href="#">Торговая площадка</a></li>
+              <li><a class="question_mark" href="#" data-placement="top" data-toggle="tooltip" title="задать вопрос">
+                  <svg class="pic-question_mark ">
+                    <use xlink:href="img/svg/sprite.svg#question_mark"></use>
+                  </svg></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="main_nav_bottom">
+          <div class="box">
+            <ul>
+              <li><a class="active" href="my_info.html">Детали</a></li>
+              <li><a href="messages.html">Переписка</a></li>
+              <li><a href="news.html">Новости</a></li>
+              <li><a href="my_security.html">Безопасность</a></li>
+              <li><a href="space_rent.html">Дисковое пространство</a></li>
+              <li><a href="notify_settings.html">Уведомления</a></li>
+              <li><a href="staff.html">Сотрудники</a></li>
+              <li><a href="mailings.html">Рассылки</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <main>
+        <div class="box">
+          <div class="content_box">
+            <div class="page_nav">
+              <ul class="breadcrumbs_list">
+                <li class="breadcrumb_item"><a class="main_link" href="#" data-placement="top" data-toggle="tooltip" title="список моих товаров">Мои товары</a></li>
+                <li class="breadcrumb_item">
+                  <div class="breadcrumb_item_name">Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена </div><a href="#" data-placement="top" data-toggle="tooltip" title="открыть страницу с описанием товара">
+                    <svg class="pic-good_link ">
+                      <use xlink:href="img/svg/sprite.svg#good_link"></use>
+                    </svg></a>
+                  <div class="breadcrumb_item_price">14895 <span>RUB</span></div>
+                </li>
+              </ul>
+              <div class="page_nav_item">
+                <div class="prev"> <a class="main_link" href="#">предыдущий товар</a></div>
+                <div class="next"> <a class="main_link" href="#">следующий товар</a></div>
+              </div>
+            </div>
+          </div>
+          <ul class="nav nav-tabs" role="tablist">
+            <li><a class="nav-link active" href="#tabBasic" role="tab" data-toggle="tab">Basic</a></li>
+            <li><a class="nav-link" href="#tabParameters" role="tab" data-toggle="tab">Parameters</a></li>
+            <li><a class="nav-link" href="#tabGallery" role="tab" data-toggle="tab">Gallery</a></li>
+            <li><a class="nav-link" href="#tabContent" role="tab" data-toggle="tab">Content
+                <div class="tab_nums">10</div></a></li>
+            <li><a class="nav-link" href="#tabPayment" role="tab" data-toggle="tab">Payment</a></li>
+            <li><a class="nav-link" href="#tabSales" role="tab" data-toggle="tab">Sales</a></li>
+            <li><a class="nav-link" href="#tabDiscount" role="tab" data-toggle="tab">Discount</a></li>
+            <li><a class="nav-link" href="#tabHTML code" role="tab" data-toggle="tab">HTML code</a></li>
+            <li><a class="nav-link" href="#tabNotifications" role="tab" data-toggle="tab">Notifications</a></li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane active" id="tabBasic">
+              <div class="content_box">
+                <div class="form_data_block">
+                  <div class="form_data_block_item">
+                    <div class="form_data_block_title">Тип товара:</div>
+                    <div class="form_data_block_content">Уникальный товар с фиксированной ценой</div>
+                  </div>
+                  <div class="form_data_block_item">
+                    <div class="form_data_block_title">Содержимое товара:</div>
+                    <div class="form_data_block_content">Уникальный текст</div>
+                  </div>
+                  <div class="form_data_block_item">
+                    <div class="form_data_block_title">Размещение товара:</div>
+                    <div class="form_data_block_content">
+                      <div class="goods_path_box">
+                        <ul class="goods_path_list">
+                          <li>Мой магазин</li>
+                          <li>Ужасы<a class="main_link" href="#">изменить</a></li>
+                        </ul>
+                        <ul class="goods_path_list">
+                          <li>Мой магазин</li>
+                          <li>Тестирование [виджета]<a class="main_link" href="#">изменить</a></li>
+                        </ul>
+                        <button class="btn btn_gray">добавить товар на торговую площадку</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form_data_block_item">
+                    <div class="form_data_block_title"> <span class="star">*</span>Название товара:</div>
+                    <div class="form_data_block_content">
+                      <div class="goods_name_field">
+                        <div class="form_element counter_box" data-placement="top" data-toggle="tooltip" title="В поле должно быть указано название товара на русском языке">
+                          <input type="text" maxlength="55">
+                          <div class="counter">осталось символов: 55<span class="lang">
+                              <svg class="pic-rus ">
+                                <use xlink:href="img/svg/sprite.svg#rus"></use>
+                              </svg></span></div>
+                        </div>
+                        <div class="form_element counter_box" data-placement="top" data-toggle="tooltip" title="В поле должно быть указано название товара на английском языке">
+                          <input type="text" maxlength="55">
+                          <div class="counter">осталось символов: 55<span class="lang">
+                              <svg class="pic-eng ">
+                                <use xlink:href="img/svg/sprite.svg#eng"></use>
+                              </svg></span></div>
+                        </div>
+                        <button class="btn btn_gray"><span class="lang">
+                            <svg class="pic-eng ">
+                              <use xlink:href="img/svg/sprite.svg#eng"></use>
+                            </svg></span>добавить английский перевод</button>
+                        <div class="hint">Название не должно содержать посторонних символов или фраз. Например,<br> символов : <span class="bold">_ # * ! + % </span>и т.п., а также слов <span class="bold">new, ok, распродажа </span>и т.п.</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form_data_block_item">
+                    <div class="form_data_block_title"><span class="star">*</span>Цена:</div>
+                    <div class="form_data_block_content">
+                      <div class="form_element inline">
+                        <input type="number">
+                        <select>
+                          <option value="0">RUB</option>
+                          <option value="1">USD</option>
+                          <option value="2">EUR</option>
+                          <option value="3">UAH</option>
+                        </select>
+                        <div class="hint">
+                          При продаже товара на ваш счёт будет зачислено: <br>0,04 WMZ 1 WMR 0,04 WME 0,41 WMU <a class="main_link" href="#">изменить курс RUB</a></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form_data_block_item">
+                    <div class="form_data_block_title">Партнерская программа:</div>
+                    <div class="form_data_block_content">
+                      <div class="form_element inline">
+                        <select>
+                          <option value="0" selected>отчисление агентам </option>
+                          <option value="1">отчисление только избранным партнерам</option>
+                          <option value="2">товар не участвует в партнерской программе</option>
+                        </select>
+                        <div class="comission_agent">
+                          <input type="number"><span>% от стоимости товара (минимум 1%)</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form_data_block_item">
+                    <div class="form_data_block_title">Бонус:</div>
+                    <div class="form_data_block_content">
+                      <div class="gift_block">
+                        <div class="form_element">
+                          <label class="for_check">
+                            <input type="checkbox" data-toggle="collapse" data-target="#gift_block" aria-expanded="false" aria-controls="gift_block" role="checked"><span class="text">за положительный отзыв о товаре</span>
+                          </label>
+                        </div>
+                        <div class="collapse form_data_block_collapse" id="gift_block"> 
+                          <div class="form_element inline">
+                            <label>Я предоставлю покупателю подарочный сертификат в размере </label>
+                            <input type="number"><span>% от оплаченной им суммы</span>
+                          </div>
+                          <div class="alert_box info">
+                            После получения товара покупателю будет предложено оставить положительный отзыв и в качестве вознаграждения за это получить 
+                            подарочный сертификат на заданную сумму. Средства на выпуск (обеспечение) сертификата будут взяты из средств, оплаченных покупателем. 
+                            Обращаем ваше внимание, что размер бонуса не может превышать <span class="bold">30% </span>от суммы, оплаченной покупателем.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form_data_block_item">
+                    <div class="form_data_block_title">Промо-код:</div>
+                    <div class="form_data_block_content">
+                      <div class="gift_block">
+                        <div class="form_element">
+                          <label class="for_check">
+                            <input type="checkbox" data-toggle="collapse" data-target="#promo_block" aria-expanded="false" aria-controls="promo_block" role="checked"><span class="text">автоматически выдать покупателю после оплаты</span>
+                          </label>
+                        </div>
+                        <div class="alert_box additional_info">У вас нет выпусков промо-кодов. <a class="main_link" href="#">Создайте выпуск</a>, чтобы получить возможность автоматически выдавать промо-коды покупателям. Выпуск может содержать один код, новые будут добавляться автоматически.</div>
+                        <div class="collapse form_data_block_collapse" id="promo_block"> 
+                          <div class="form_element inline">
+                            <label>промо-код должен быть автоматически создан и добавлен в мой выпуск</label>
+                            <select>
+                              <option value="0">выпуск 1</option>
+                              <option value="1">выпуск 2</option>
+                              <option value="2">выпуск 3</option>
+                            </select><a class="main_link" href="#">Новый выпуск</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form_data_block_item">
+                    <div class="form_data_block_title">Возврат платежа:</div>
+                    <div class="form_data_block_content">
+                      <div class="gift_block">
+                        <div class="form_element inline">
+                          <label class="for_check">
+                            <input type="checkbox" data-toggle="collapse" data-target="#return_block" aria-expanded="false" aria-controls="return_block"><span class="text">я гарантирую возврат оплаченных средств покупателю в течение</span>
+                          </label>
+                          <select>
+                            <option value="0" selected>0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                          </select><span>дней</span>
+                        </div>
+                        <div class="collapse form_data_block_collapse" id="return_block"> 
+                          <div class="alert_box info">Покупатель получит право <span class="bold">самостоятельно и без вашего ведома </span>осуществить возврат оплаченных им средств за товар в установленный вами срок. На это время средства оплаченные покупателем резервируются на вашем личном счете.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form_data_block_item">
+                    <div class="form_data_block_title">Проверка уникального кода:</div>
+                    <div class="form_data_block_content">
+                      <div class="check_code_block">
+                        <div class="form_element">
+                          <label class="for_radio">
+                            <input type="radio" name="check_code" checked><span class="text">ручная</span>
+                          </label>
+                          <div class="hint">(после оплаты покупатель сообщает вам уникальный код, вы проверяете его через форму в самом верху)</div>
+                        </div>
+                        <div class="form_element inline">
+                          <label class="for_radio">
+                            <input type="radio" name="check_code" data-toggle="collapse" data-target="#check_code_block" aria-expanded="false" aria-controls="check_code_block"><span class="text">автоматическая</span>
+                          </label>
+                          <div class="hint">(после оплаты покупатель будет автоматически перенаправлен на указанную вами web-страницу с кодом в строке запроса)</div>
+                        </div>
+                        <div class="collapse" id="check_code_block">
+                          <div class="check_code_auto">
+                            <div class="form_element">
+                              <input type="text" placeholder="http://">
+                            </div>
+                            <div class="alert_box additional_info">
+                               На указанный вами адрес (URL) система автоматически направит покупателя сразу после завершения им платежа. 
+                              Уникальный код будет добавлен к указанному URL в качестве GET-параметра <span class="bold">uniquecode </span>(например, http://мой.сайт/моя_страница?<span class="bold">uniquecode=XXXXXXXXXXXXXXXX). </span>С помощью <a class="main_link" href="#">API </a>вы можете проверить его подлинность и получить все основные реквизиты платежа для завершения сделки на вашем сайте.<br><br>Если URL не указан или на момент завершения платежа URL будет недоступен, покупатель получит уникальный код на сайте <a class="main_link">Oplata.Info</a>. Ему будет рекомендовано связаться с вами, используя <a class="main_link" href="#">контактные данные</a>, и сообщить данный код, который вы проверите через <a class="main_link" href="#">поиск</a>.
+                            </div>
+                            <div class="form_element">
+                              <label class="for_check">
+                                <input type="checkbox" data-toggle="collapse" data-target="#add_params" aria-expanded="false" aria-controls="add_params" role="checked"><span class="text">я буду передавать на страницу оплаты свои дополнительные параметры</span>
+                              </label>
+                            </div>
+                            <div class="alert_box additional_info">Кроме уникального кода, к указанному вами адресу будут добавлены все дополнительные параметры, которые вы передали в GET-запросе на <a class="main_link" href="#">страницу оплаты</a>. Например, вы можете передать идентификатор зарегистрированного у вас пользователя или его логин. 
+                              Тогда, в случае сбоя, наша система дополнительно обратится с запросом на указанный вами URL и вы сможете произвести зачисление (учет покупки)
+                            </div>
+                            <div class="collapse" id="add_params">
+                              <div class="add_new_info_list">
+                                <ul class="new_info_list">
+                                  <li class="new_info_item">
+                                    <div class="form_element">
+                                      <input type="text" value="параметр 1" readonly>
+                                      <button class="btn btn_gray"><span class="minus"></span></button>
+                                    </div>
+                                  </li>
+                                  <li class="new_info_item">
+                                    <div class="form_element">
+                                      <input type="text" value="параметр 2" readonly>
+                                      <button class="btn btn_gray"><span class="minus"></span></button>
+                                    </div>
+                                  </li>
+                                </ul>
+                                <div class="form_element">
+                                  <input type="text" placeholder="название параметра">
+                                  <button class="btn btn_gray">
+                                    <svg class="pic-plus_button ">
+                                      <use xlink:href="img/svg/sprite.svg#plus_button"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                                <div class="title">При отсутствии моих дополнительных параметров на странице оплаты :</div>
+                                <div class="form_element">
+                                  <label class="for_radio">
+                                    <input type="radio" name="continue_pay" checked><span class="text">разрешать продолжать оплату</span>
+                                  </label>
+                                </div>
+                                <div class="form_element">
+                                  <label class="for_radio">
+                                    <input type="radio" name="continue_pay"><span class="text">возвращать покупателя на</span>
+                                  </label>
+                                </div>
+                                <div class="form_element">
+                                  <input type="text" placeholder="http://">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form_data_block_item">
+                    <div class="form_data_block_title"> <span class="star">*</span>Описание товара:</div>
+                    <div class="form_data_block_content">
+                      <div class="text_block">
+                        <div class="form_element">
+                          <textarea>Табы "Холостяк" - ЛСП, Feduk, Егор Крид (AkTabs.ru</textarea><span class="lang" data-placement="top" data-toggle="tooltip" title="В поле должно быть указано название товара на русском языке">
+                            <svg class="pic-rus ">
+                              <use xlink:href="img/svg/sprite.svg#rus"></use>
+                            </svg></span>
+                        </div>
+                        <div class="form_element">
+                          <textarea></textarea><span class="lang" data-placement="top" data-toggle="tooltip" title="В поле должно быть указано название товара на английском языке">
+                            <svg class="pic-eng ">
+                              <use xlink:href="img/svg/sprite.svg#eng"></use>
+                            </svg></span>
+                        </div>
+                        <div class="alert_box info">Описание товара не должно содержать ссылок на любые другие товары продавца.  Допустимые теги - &#60;delivery&#62;особые условия доставки&#60;/delivery&#62; и &#60;attention&#62;важная информация&#60;/attention&#62;</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form_data_block_item">
+                    <div class="form_data_block_title">Дополнительная информация:</div>
+                    <div class="form_data_block_content">
+                      <div class="text_block">
+                        <div class="form_element">
+                          <textarea>Табы "Холостяк" - ЛСП, Feduk, Егор Крид (AkTabs.ru</textarea><span class="lang" data-placement="top" data-toggle="tooltip" title="В поле должно быть указано название товара на русском языке">
+                            <svg class="pic-rus ">
+                              <use xlink:href="img/svg/sprite.svg#rus"></use>
+                            </svg></span>
+                        </div>
+                        <div class="form_element">
+                          <textarea></textarea><span class="lang" data-placement="top" data-toggle="tooltip" title="В поле должно быть указано название товара на английском языке">
+                            <svg class="pic-eng ">
+                              <use xlink:href="img/svg/sprite.svg#eng"></use>
+                            </svg></span>
+                        </div>
+                        <div class="alert_box warning">Наличие перевода на английском на площадке Plati.Market является обязательным условием</div>
+                        <div class="alert_box info">Текст не должен содержать партнерские ссылки.  Допустимые теги - &#60;delivery&#62;особые условия доставки&#60;/delivery&#62; и &#60;attention&#62;важная информация&#60;/attention&#62;</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form_data_block_item">
+                    <div class="form_data_block_title">Бонус-товар:</div>
+                    <div class="form_data_block_content">
+                      <div class="text_block">
+                        <div class="form_element inline">
+                          <label class="for_check">
+                            <input type="checkbox"><span class="text">предоставить покупателю в качестве подарка один из моих товаров</span>
+                          </label>
+                          <!-- хэлпер .hidden-->
+                          <select class="hidden">
+                            <option value="0" selected>-</option>
+                            <option value="1">товар 2</option>
+                            <option value="2">товар 3</option>
+                            <option value="3">товар 3</option>
+                          </select>
+                        </div>
+                        <div class="alert_box info">В качестве подарка не могут быть предоставлены уникальные коды, автоматически создаваемые системой Digiseller, а так же товары в виде формы для заполнения регистрационных данных.</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form_data_block_item">
+                    <div class="form_data_block_title">Инструкция по использованию товара:</div>
+                    <div class="form_data_block_content">
+                      <div class="text_block">
+                        <div class="form_element inline">
+                          <label class="for_check">
+                            <input type="checkbox" data-toggle="collapse" data-target="#instruction_block" aria-expanded="false" aria-controls="instruction_block" role="checked"><span class="text">предоставить покупателю на странице описания покупки</span>
+                          </label>
+                          <!-- хелпер .hidden Для селекта добавить, когда чекбокс НЕ чекнут-->
+                          <select>
+                            <option value="0" selected>в виде ссылки</option>
+                            <option value="1">в виде текста</option>
+                          </select>
+                        </div>
+                        <div class="collapse" id="instruction_block">
+                          <!-- в виде ссылки-->
+                          <div class="instrtuctions">
+                            <div class="form_element" data-placement="top" data-toggle="tooltip" title="В поле должна быть указаны ссылка на страницу с инструкцией на русском языке">
+                              <input type="text" placeholder="http://"><span class="lang">
+                                <svg class="pic-rus ">
+                                  <use xlink:href="img/svg/sprite.svg#rus"></use>
+                                </svg></span>
+                            </div>
+                            <div class="form_element" data-placement="top" data-toggle="tooltip" title="В поле должна быть указаны ссылка на страницу с инструкцией на английском языке">
+                              <input type="text" placeholder="http://"><span class="lang">
+                                <svg class="pic-eng ">
+                                  <use xlink:href="img/svg/sprite.svg#eng"></use>
+                                </svg></span>
+                            </div>
+                            <div class="alert_box additional_info">Покупатель перейдет на указанную страницу после нажатия на соответствующую кнопку</div>
+                          </div>
+                          <!-- в виде текста-->
+                          <div class="text_block">
+                            <div class="form_element">
+                              <textarea></textarea><span class="lang" data-placement="top" data-toggle="tooltip" title="Инструкция (если необходима) должна быть указана на русском языке">
+                                <svg class="pic-rus ">
+                                  <use xlink:href="img/svg/sprite.svg#rus"></use>
+                                </svg></span>
+                            </div>
+                            <div class="form_element">
+                              <textarea></textarea><span class="lang" data-placement="top" data-toggle="tooltip" title="Инструкция (если необходима) должна быть указана на английском языке">
+                                <svg class="pic-eng ">
+                                  <use xlink:href="img/svg/sprite.svg#eng"></use>
+                                </svg></span>
+                            </div>
+                            <div class="alert_box warning">Наличие перевода на английском на площадке Plati.Market является обязательным условием</div>
+                            <div class="alert_box info">Текст будет показан покупателю на странице описания покупки после нажатия на соответствующую кнопку и в письме с содержимым покупки.</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form_data_block_item">
+                    <div class="form_data_block_title">Адрес доставки:</div>
+                    <div class="form_data_block_content">
+                      <div class="text_block">
+                        <div class="form_element inline">
+                          <label class="for_check">
+                            <input type="checkbox"><span class="text">перед оплатой покупатель должен указать адрес доставки</span>
+                          </label>
+                        </div>
+                        <div class="alert_box info"><span class="bold">Внимание! </span>Этот флаг следует включать только если товар или какая-то его часть требует физической доставки.</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form_data_block_item">
+                    <div class="form_data_block_title">Отображение числа продаж:</div>
+                    <div class="form_data_block_content">
+                      <div class="text_block">
+                        <div class="form_element">
+                          <input type="text">
+                          <!-- открывашку списка повесил на фокус по инпуту-->
+                          <ul class="sales_count_list">
+                            <li>показывать</li>
+                            <li>не показывать</li>
+                            <li>10</li>
+                            <li>50</li>
+                            <li>100</li>
+                            <li>200</li>
+                            <li>500</li>
+                          </ul>
+                        </div>
+                        <div class="alert_box info">Пустое поле - показывать; -1 - скрывать; любое другое число N>=0 - не показывать больше чем N</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form_data_block_item">
+                    <div class="form_data_block_title"></div>
+                    <div class="form_data_block_content">
+                      <button class="btn btn_blue">сохранить</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <div class="box">
+          <div class="footer_content">
+            <div class="copy">Copyright ©2020 Fincom Teh Ltd.<br>Designed by <a href="#">Computing Forces</a></div>
+            <div class="footer_nav"><a href="#">API</a><a href="#">Telegram Bot</a><a href="#">Чат</a></div><a class="footer_logo" href="#">
+              <svg class="pic-googleplay ">
+                <use xlink:href="img/svg/sprite.svg#googleplay"></use>
+              </svg></a>
+          </div>
+        </div>
+      </footer>
+      <script src="static/js/libs.min.js"></script>
+      <script src="static/js/svgxuse.min.js" defer></script>
+      <script src="https://cdn.polyfill.io/v3/polyfill.min.js?features=Array.from%2Ces5%2Ces6%2CSymbol%2CSymbol.iterator%2CDOMTokenList%2CObject.assign%2CCustomEvent%2CElement.prototype.classList%2CElement.prototype.closest%2CElement.prototype.dataset%2CArray.prototype.find%2CArray.prototype.includes"></script>
+      <script src="js/common.js"></script>
+    </div>
+  </body>
+</html>

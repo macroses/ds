@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="color-scheme" content="dark light">
+    <title></title>
+    <link rel="stylesheet" href="libs/normalize/normalize.css">
+    <link rel="stylesheet" href="css/libs.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/light-theme.css" id="color_scheme"><script>window.MSInputMethodContext && document.documentMode && document.write('<link rel="stylesheet" href="libs/bootstrap-ie11.min.css"><script src="static/js/ie11-customProperty.js"><\/script><script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js"><\/script><script>!function () { var e, t; ((e = document.createEvent("CustomEvent")).initEvent("Bootstrap", !0, !0), e.preventDefault(), e.defaultPrevented) || (t = Event.prototype.preventDefault, Event.prototype.preventDefault = function () { this.cancelable && (t.call(this), Object.defineProperty(this, "defaultPrevented", { get: function () { return !0 }, configurable: !0 })) }) }();<\/script>');</script>
+    <script src="https://cdn.tiny.cloud/1/sqoo5ez8oy5x8bram4focqll8rz90rodp0tusw0e7cytsx6y/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <style>
+      body {
+          position: relative;
+      }
+    </style>
+  </head>
+  <body data-spy="scroll" data-target="#navbar-example">
+    <div class="wrapper dev">
+      <div class="box">
+        <div class="content_box">
+          <div class="dev_kit">
+            <div class="navbar navbar-light bg-light">
+              <nav class="nav nav-pills flex-column"><a class="nav-link" href="#item-1">Установка и старт</a><a class="nav-link" href="#item-2">Структура проекта</a><a class="nav-link" href="#item-3">Создание новой страницы</a><a class="nav-link" href="#item-4">Правила именования элементов</a><a class="nav-link" href="#item-5">Компоненты и примеры их использования</a>
+                <nav class="nav nav-pills flex-column"><a class="nav-link" href="#item-5-1">Кнопки и ссылки</a><a class="nav-link" href="#item-5-2">Элементы формы</a><a class="nav-link" href="#item-5-3">Табы</a><a class="nav-link" href="#item-5-4">Иконки (все возможные варианты)</a><a class="nav-link" href="#item-5-5">Контейнеры</a><a class="nav-link" href="#item-5-6">Таблицы</a></nav><a class="nav-link" href="#item-5">Темная тема    </a>
+              </nav>
+            </div>
+            <div class="list" data-spy="scroll" data-target="#navbar-example3" data-offset="0">
+              <div class="item">
+                <h2 id="item-1">Установка и старт</h2>
+                <div class="content">Скачайте репозиторий <a class="main_link" href="#">http://</a></div>
+                <div class="content">В корне проекта </div><code>npm install</code>
+                <div class="content">Для запуска </div><code>gulp</code>
+                <div class="content">Для сборки</div><code>gulp build</code>
+              </div>
+              <div class="item">
+                <h4 id="item-2">Структура проекта</h4>
+                <div class="structure_list">
+                  <div class="structure">build <span>// собранный проект</span></div>
+                  <div class="structure">src
+                    <div class="structure">pug
+                      <div class="structure">includes <span>// основные контентные шаблоны всех страниц, шапка, футер, и т. д.</span>
+                        <div class="structure">components <span>// шаблоны для встраивания в каждую страницу</span></div>
+                      </div>
+                      <div class="structure">layout <span>// основной шаблон любой страницы, который является родительским для всех страниц</span></div>
+                      <div class="structure">pages <span>// все страницы проекта. Наследуют структуру из layout</span></div>
+                    </div>
+                    <div class="structure">static <span>// </span>
+                      <div class="structure">css <span>// в корне лежат файлы цветовых тем, файл импорта всех стилей и файл импорта css библиотек </span></div>
+                      <div class="structure">fonts</div>
+                      <div class="structure">img</div>
+                      <div class="structure">js</div>
+                      <div class="structure">libs</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <h4 id="item-3">Создание новой страницы</h4>
+                <div class="content">Создание новой страницы подразумевает создание нескольких файлов и написание некоторых зависимостей</div>
+                <div class="content">1. в папке <code>pug/pages </code>создать новый файл и назвать его соответственно тех. заданию. (например page.pug). Скопировать шаблон вида (или из любой рядом лежащей страницы)</div><code class="block">
+                  extends ../layout/layout.pug<br>
+                  block vars<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;- var title = 'Digiseller';<br>
+                  block header<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;include ../includes/header.pug<br>
+                  block content<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;include ../includes/content-file_name.pug<br>
+                  block footer<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;include ../includes/footer.pug <br></code>
+                <div class="content">в папке <code>includes</code> создать контентную часть страницы, которая должна иметь название вида <code>content-file_name.pug</code></div>
+                <div class="content">2. Файл стилей для контентной части страницы создается в папке <code>static/import/pages/page.scss</code></div>
+                <div class="content">Если необходимо создание стилей компонента, тогда создается файл в  <code>static/import/components/component.scss</code></div>
+                <div class="content">В файле <code>main.scss</code> произвести импорт необходимого файла соответственно категории (компонент, страница, шаблон)</div>
+              </div>
+              <div class="item">
+                <h4 id="item-4">Правила именования элементов</h4>
+                <div class="content">
+                  Все кастомные классы, написанные верстальщиком записаны через нижнее подчеркивание. Для удобства выделения этих классов программистами.В проекте не используется BEM или любая другая методология названия классов и структуры.</div>
+                <div class="content">
+                  Названия идентификаторов - есть отображение их сущности (seller_name_block, purchase_title, etc). Кроме случаев абстракции компонентов, которые будут повторяться.В случае когда компонент не отображает содержимого (напрпимер кнопки различного содержания, но одинакового вида: сохранить, отменить, submit), допустимо использовать название цвета.</div>
+              </div>
+              <div class="item">
+                <h2 id="item-5">Компоненты и примеры их использования</h2>
+              </div>
+              <div class="item">
+                <h4 id="item-5-1">Кнопки и ссылки</h4>
+                <div class="exercises_list">
+                  <div class="exercise_item">
+                    <div class="exercise_item_content">
+                      <button class="btn btn_gray">button</button>
+                    </div>
+                    <div class="exercise_code"><code>button.btn.btn_gray</code></div>
+                  </div>
+                  <div class="exercise_item">
+                    <div class="exercise_item_content">
+                      <button class="btn btn_blue">button</button>
+                    </div>
+                    <div class="exercise_code"><code>button.btn.btn_blue</code></div>
+                  </div>
+                  <div class="exercise_item">
+                    <div class="exercise_item_content">
+                      <button class="btn btn_blue" disabled>button</button>
+                    </div>
+                    <div class="exercise_code"><code>button.btn.btn_blue(disabled)   </code></div>
+                  </div>
+                  <div class="exercise_item">
+                    <div class="exercise_item_content"><a class="main_link" href="#">пример ссылки</a></div>
+                    <div class="exercise_code"><code>a.main_link(href="#")</code></div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <h4 id="item-5-2">Элементы формы</h4>
+                <div class="exercises_list">
+                  <div class="exercise_item">
+                    <div class="exercise_item_content">
+                      <div class="form_element">
+                        <label class="for_radio">
+                          <input type="radio" name="chck" checked><span class="text">радио</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="exercise_code"><code class="block">
+                        .form_element<br>
+                            &nbsp;&nbsp;label.for_radio<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;input(type="radio", name="ex" checked)<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;span.text радио выбран</code></div>
+                  </div>
+                  <div class="exercise_item">
+                    <div class="exercise_item_content">
+                      <div class="form_element">
+                        <label class="for_radio">
+                          <input type="radio" name="ex1"><span class="text">радио</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="exercise_code"><code class="block">
+                        .form_element<br>
+                            &nbsp;&nbsp;label.for_radio<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;input(type="radio", name="ex1")<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;span.text радио выбран</code></div>
+                  </div>
+                  <div class="exercise_item">
+                    <div class="exercise_item_content">
+                      <div class="form_element">
+                        <label class="for_radio disabled">
+                          <input type="radio" name="ex" checked disabled><span class="text">радио выбран disabled</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="exercise_code"><code class="block">
+                        .form_element<br>
+                            &nbsp;&nbsp;label.for_radio.disabled<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;input(type="radio", name="" checked disabled)<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;span.text радио выбран disabled</code></div>
+                  </div>
+                  <div class="exercise_item">
+                    <div class="exercise_item_content">
+                      <div class="form_element">
+                        <label class="for_radio disabled">
+                          <input type="radio" name="ex" disabled><span class="text">радио disabled</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="exercise_code"><code class="block">
+                        .form_element<br>
+                            &nbsp;&nbsp;label.for_radio.disabled<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;input(type="radio", name="" disabled)<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;span.text радио disabled
+                        </code></div>
+                  </div>
+                  <div class="exercise_item">
+                    <div class="exercise_item_content">
+                      <div class="form_element">
+                        <label class="for_check">
+                          <input type="checkbox" checked><span class="text">чекбокс</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="exercise_code"><code class="block">
+                        .form_element<br>
+                            &nbsp;&nbsp;label.for_check<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;input(type="checkbox" checked)<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;span.text чекбокс
+                        </code></div>
+                  </div>
+                  <div class="exercise_item">
+                    <div class="exercise_item_content">
+                      <div class="form_element">
+                        <label class="for_check">
+                          <input type="checkbox"><span class="text">чекбокс</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="exercise_code"><code class="block">
+                        .form_element<br>
+                            &nbsp;&nbsp;label.for_check<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;input(type="checkbox")<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;span.text чекбокс
+                        </code></div>
+                  </div>
+                  <div class="exercise_item">
+                    <div class="exercise_item_content">
+                      <div class="form_element">
+                        <label class="for_check disabled">
+                          <input type="checkbox" disabled><span class="text">чекбокс disabled</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="exercise_code"><code class="block">
+                        .form_element<br>
+                            &nbsp;&nbsp;label.for_check<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;input(type="checkbox" disabled)<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;span.text чекбокс disabled
+                        </code></div>
+                  </div>
+                  <div class="exercise_item">
+                    <div class="exercise_item_content">
+                      <div class="form_element">
+                        <label class="for_check disabled">
+                          <input type="checkbox" disabled checked><span class="text">чекбокс disabled checked</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="exercise_code"><code class="block">
+                        .form_element<br>
+                            &nbsp;&nbsp;label.for_check<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;input(type="checkbox" disabled checked)<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;span.text чекбокс disabled checked
+                        </code></div>
+                  </div>
+                  <div class="exercise_item">
+                    <div class="exercise_item_content">
+                      <div class="form_element">
+                        <label>
+                          <input type="text" placeholder="текстовый инпут">
+                        </label>
+                      </div>
+                    </div>
+                    <div class="exercise_code"><code class="block">
+                        .form_element<br>
+                            &nbsp;&nbsp;label<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;input(type="checkbox")<br>
+                        </code></div>
+                  </div>
+                  <div class="exercise_item">
+                    <div class="exercise_item_content">
+                      <div class="form_element">
+                        <label>
+                          <input type="text" disabled placeholder="disabled">
+                        </label>
+                      </div>
+                    </div>
+                    <div class="exercise_code"><code class="block">
+                        .form_element<br>
+                            &nbsp;&nbsp;label<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;input(type="checkbox" disabled)<br>
+                        </code></div>
+                  </div>
+                  <div class="exercise_item">
+                    <div class="exercise_item_content">
+                      <div class="form_element">
+                        <select>
+                          <option value="0">select</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="exercise_code"><code class="block">
+                        .form_element<br>
+                            &nbsp;&nbsp;select<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;option(value="0") select<br>
+                        </code></div>
+                  </div>
+                  <div class="exercise_item">
+                    <div class="exercise_item_content">
+                      <div class="form_element">
+                        <select disabled>
+                          <option value="0">select</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="exercise_code"><code class="block">
+                        .form_element<br>
+                            &nbsp;&nbsp;select(disabled)<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;option(value="0") select disabled<br>
+                        </code></div>
+                  </div>
+                  <div class="exercise_item">
+                    <div class="exercise_item_content">
+                      <div class="form_element">
+                        <textarea></textarea>
+                      </div>
+                    </div>
+                    <div class="exercise_code"><code class="block">
+                        .form_element<br>
+                            &nbsp;&nbsp;textarea
+                        </code></div>
+                  </div>
+                  <div class="exercise_item">
+                    <div class="exercise_item_content">
+                      <div class="form_element">
+                        <textarea disabled></textarea>
+                      </div>
+                    </div>
+                    <div class="exercise_code"><code class="block">
+                        .form_element<br>
+                            &nbsp;&nbsp;textarea(disabled)
+                        
+                        </code></div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <h4 id="item-5-3">Табы</h4>
+                <div class="content">Для создания собственных табов необходимо ознакомиться с файлом <code>mixins.pug</code>и узнать как в целом пишутся миксины в pug + базовые знания JS</div>
+                <div class="content">В функции <code>+tab()</code>первый аргумент - массив названий вкладок, второй - числовое значение активной вкладки (начиная с нуля)</div>
+                <div class="content">Для создания вкладки с числовым значением, в массиве названий должен быть многомерный массив, состоящий из строки и числа<code>+tab-list(['Tab1', ['Tab2', 192]], 0)</code></div>
+                <div class="exercises_list">
+                  <div class="exercise_item">
+                    <div class="exercise_item_content">
+                      <ul class="nav nav-tabs" role="tablist">
+                        <li><a class="nav-link active" href="#tabTab1" role="tab" data-toggle="tab">Tab1</a></li>
+                        <li><a class="nav-link" href="#tabTab2" role="tab" data-toggle="tab">Tab2</a></li>
+                      </ul>
+                      <div class="tab-content">
+                        <div class="tab-pane active" id="tabTab1">
+                          <div class="content_box">one </div>
+                        </div>
+                        <div class="tab-pane" id="tabTab2">
+                          <div class="content_box">two</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="exercise_code"><code class="block">
+                        +tab-list([['Tab1', 'Tab2'], 0)<br>
+                            &nbsp;&nbsp;+tab('Tab1', 'acitve')<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;.content_box one<br>
+                            &nbsp;&nbsp;+tab('Tab2')<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;.content_box two
+                        </code></div>
+                  </div>
+                  <div class="exercise_item">
+                    <div class="exercise_item_content">
+                      <ul class="nav nav-tabs" role="tablist">
+                        <li><a class="nav-link active" href="#tabTab3" role="tab" data-toggle="tab">Tab3</a></li>
+                        <li><a class="nav-link" href="#tabTab4" role="tab" data-toggle="tab">Tab4
+                            <div class="tab_nums">192</div></a></li>
+                      </ul>
+                      <div class="tab-content">
+                        <div class="tab-pane active" id="tabTab3">
+                          <div class="content_box">one</div>
+                        </div>
+                        <div class="tab-pane" id="tabTab4">
+                          <div class="content_box">two</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="exercise_code"><code class="block">
+                        +tab-list(['Tab3', ['Tab4', 192]], 0)<br>
+                            &nbsp;&nbsp;+tab('Tab3', 'acitve')<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;.content_box one<br>
+                            &nbsp;&nbsp;+tab('Tab4')<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;.content_box two</code></div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <h4 id="item-5-4">Иконки</h4>
+                <div class="content">Для вставки иконок используем миксин <code>+icon('')</code>где аргументом является название файла svg, например<code>+icon('webmoney')</code>с миксином для иконок также можно ознакомиться в файле <code>mixins.pug</code></div>
+                <div class="content">Все новые иконки добавляются в папку <code>svg</code>, после чего необходимо произвести сборку проекта, чтобы сформировался спрайт.</div>
+                <div class="icon_list">
+                  <div class="item">
+                    <svg class="pic-alp ">
+                      <use xlink:href="img/svg/sprite.svg#alp"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-attestat ">
+                      <use xlink:href="img/svg/sprite.svg#attestat"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-bank ">
+                      <use xlink:href="img/svg/sprite.svg#bank"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-beeline ">
+                      <use xlink:href="img/svg/sprite.svg#beeline"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-bitcoin ">
+                      <use xlink:href="img/svg/sprite.svg#bitcoin"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-chat_android ">
+                      <use xlink:href="img/svg/sprite.svg#chat_android"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-chat_apple ">
+                      <use xlink:href="img/svg/sprite.svg#chat_apple"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-chats ">
+                      <use xlink:href="img/svg/sprite.svg#chats"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-clip ">
+                      <use xlink:href="img/svg/sprite.svg#clip"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-close_circle ">
+                      <use xlink:href="img/svg/sprite.svg#close_circle"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-control_close ">
+                      <use xlink:href="img/svg/sprite.svg#control_close"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-control_left ">
+                      <use xlink:href="img/svg/sprite.svg#control_left"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-control_play ">
+                      <use xlink:href="img/svg/sprite.svg#control_play"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-control_right ">
+                      <use xlink:href="img/svg/sprite.svg#control_right"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-copy ">
+                      <use xlink:href="img/svg/sprite.svg#copy"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-credit-card ">
+                      <use xlink:href="img/svg/sprite.svg#credit-card"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-delete-btn ">
+                      <use xlink:href="img/svg/sprite.svg#delete-btn"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-digiseller-logo ">
+                      <use xlink:href="img/svg/sprite.svg#digiseller-logo"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-down ">
+                      <use xlink:href="img/svg/sprite.svg#down"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-eng ">
+                      <use xlink:href="img/svg/sprite.svg#eng"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-file_accept ">
+                      <use xlink:href="img/svg/sprite.svg#file_accept"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-file_denied ">
+                      <use xlink:href="img/svg/sprite.svg#file_denied"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-good_link ">
+                      <use xlink:href="img/svg/sprite.svg#good_link"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-good ">
+                      <use xlink:href="img/svg/sprite.svg#good"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-googleplay ">
+                      <use xlink:href="img/svg/sprite.svg#googleplay"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-green_check ">
+                      <use xlink:href="img/svg/sprite.svg#green_check"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-invoice ">
+                      <use xlink:href="img/svg/sprite.svg#invoice"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-logout ">
+                      <use xlink:href="img/svg/sprite.svg#logout"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-megafon ">
+                      <use xlink:href="img/svg/sprite.svg#megafon"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-messages ">
+                      <use xlink:href="img/svg/sprite.svg#messages"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-modal_close ">
+                      <use xlink:href="img/svg/sprite.svg#modal_close"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-mts ">
+                      <use xlink:href="img/svg/sprite.svg#mts"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-notice-popup-important ">
+                      <use xlink:href="img/svg/sprite.svg#notice-popup-important"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-notice-popup ">
+                      <use xlink:href="img/svg/sprite.svg#notice-popup"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-notice ">
+                      <use xlink:href="img/svg/sprite.svg#notice"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-offer ">
+                      <use xlink:href="img/svg/sprite.svg#offer"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-payment_ds ">
+                      <use xlink:href="img/svg/sprite.svg#payment_ds"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-payment_paymaster ">
+                      <use xlink:href="img/svg/sprite.svg#payment_paymaster"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-payment_paypal ">
+                      <use xlink:href="img/svg/sprite.svg#payment_paypal"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-payment_robokassa ">
+                      <use xlink:href="img/svg/sprite.svg#payment_robokassa"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-payment_ya ">
+                      <use xlink:href="img/svg/sprite.svg#payment_ya"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-payment-steamskin ">
+                      <use xlink:href="img/svg/sprite.svg#payment-steamskin"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-paypal-method ">
+                      <use xlink:href="img/svg/sprite.svg#paypal-method"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-plus_button ">
+                      <use xlink:href="img/svg/sprite.svg#plus_button"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-popup-settings ">
+                      <use xlink:href="img/svg/sprite.svg#popup-settings"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-present-card ">
+                      <use xlink:href="img/svg/sprite.svg#present-card"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-preview ">
+                      <use xlink:href="img/svg/sprite.svg#preview"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-qiwi ">
+                      <use xlink:href="img/svg/sprite.svg#qiwi"></use>
+                    </svg>
+                  </div>
+                  <div class="item" style="background: lightgray">
+                    <svg class="pic-question_mark ">
+                      <use xlink:href="img/svg/sprite.svg#question_mark"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-read_check ">
+                      <use xlink:href="img/svg/sprite.svg#read_check"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-red-close ">
+                      <use xlink:href="img/svg/sprite.svg#red-close"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-remove_input_data ">
+                      <use xlink:href="img/svg/sprite.svg#remove_input_data"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-responses ">
+                      <use xlink:href="img/svg/sprite.svg#responses"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-rus ">
+                      <use xlink:href="img/svg/sprite.svg#rus"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-russian-post ">
+                      <use xlink:href="img/svg/sprite.svg#russian-post"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-search-res-customer ">
+                      <use xlink:href="img/svg/sprite.svg#search-res-customer"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-security ">
+                      <use xlink:href="img/svg/sprite.svg#security"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-shop_play ">
+                      <use xlink:href="img/svg/sprite.svg#shop_play"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-shop_play_b ">
+                      <use xlink:href="img/svg/sprite.svg#shop_play_b"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-smile-bad ">
+                      <use xlink:href="img/svg/sprite.svg#smile-bad"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-smile-good ">
+                      <use xlink:href="img/svg/sprite.svg#smile-good"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-square-blue ">
+                      <use xlink:href="img/svg/sprite.svg#square-blue"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-square-sea ">
+                      <use xlink:href="img/svg/sprite.svg#square-sea"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-stat ">
+                      <use xlink:href="img/svg/sprite.svg#stat"></use>
+                    </svg>
+                  </div>
+                  <div class="item" style="background: lightgray">
+                    <svg class="pic-target_new_white ">
+                      <use xlink:href="img/svg/sprite.svg#target_new_white"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-tele-2 ">
+                      <use xlink:href="img/svg/sprite.svg#tele-2"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-terminal ">
+                      <use xlink:href="img/svg/sprite.svg#terminal"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-union ">
+                      <use xlink:href="img/svg/sprite.svg#union"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-up ">
+                      <use xlink:href="img/svg/sprite.svg#up"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-webmoney ">
+                      <use xlink:href="img/svg/sprite.svg#webmoney"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-wm-card ">
+                      <use xlink:href="img/svg/sprite.svg#wm-card"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-yandex-money ">
+                      <use xlink:href="img/svg/sprite.svg#yandex-money"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-youtube_play ">
+                      <use xlink:href="img/svg/sprite.svg#youtube_play"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <h4 id="item-5-5">Контейнеры</h4>
+                <div class="content"> <code>.box</code>- контейнер определяющий размеры страницы (1348px по дизайну)</div>
+                <div class="content"> <code>.content_box</code>- стилизованный контейнер, определяющий отступы во всех крупных блоках и секцияx</div>
+              </div>
+              <div class="item">
+                <h4 id="item-5-6">Таблицы</h4>
+                <div class="content">
+                  Таблицы в проекте - это одна из основ. В них хранится большинство данных, которые получает пользователь. Особенно важно сделать их одинаковыми настолько, насколько это возможно. Не только визуально, но и структурно, с точки зрения верстки.</div>
+                <div class="content">Все таблицы получают размеры из шаблона, которые определяется тегами<code>colgroup</code>и <code>col</code>. Где количество колонок должно совпадать с количеством колонок таблицы. </div><code class="block">
+                  colgroup<br>
+                  &nbsp;&nbsp;col<br>
+                  &nbsp;&nbsp;col<br>
+                  thead<br>
+                  &nbsp;&nbsp;tr<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;th ID<br>
+                  &nbsp;&nbsp;tr<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;th название<br>
+                  tbody<br>
+                  &nbsp;&nbsp;tr<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;td 1234567<br>
+                  &nbsp;&nbsp;tr<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;td Продукт 1<br></code>
+                <div class="content">
+                  Учитывая огромное количество таблиц в проекте и их неоднозначную ширину от страницы к странице - использование шаблона колонок позволит избавитьсяот инлайновых стилей в каждой из колонок, когда потребуется задать фиксированную ширину одной из колонок.
+                  Ширина колонки задается стандартным образом 
+                </div><code class="block">
+                  colgroup<br>
+                  &nbsp;&nbsp;col(style="width: 100px")<br>
+                  &nbsp;&nbsp;col(style="width: 34px")<br>
+                  </code>
+                <div class="content">
+                  По умолчанию все колонки таблицы делят ширину таблицы поровну. Если одна из колонок получает фиксированную ширину, то остальные колонки будут делить оставшееся место поровну.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="box">
+          <div class="footer_content">
+            <div class="copy">Copyright ©2020 Fincom Teh Ltd.<br>Designed by <a href="#">Computing Forces</a></div>
+            <div class="footer_nav"><a href="#">API</a><a href="#">Telegram Bot</a><a href="#">Чат</a></div><a class="footer_logo" href="#">
+              <svg class="pic-googleplay ">
+                <use xlink:href="img/svg/sprite.svg#googleplay"></use>
+              </svg></a>
+          </div>
+        </div>
+      </footer>
+      <script src="static/js/libs.min.js"></script>
+      <script src="static/js/svgxuse.min.js" defer></script>
+      <script src="https://cdn.polyfill.io/v3/polyfill.min.js?features=Array.from%2Ces5%2Ces6%2CSymbol%2CSymbol.iterator%2CDOMTokenList%2CObject.assign%2CCustomEvent%2CElement.prototype.classList%2CElement.prototype.closest%2CElement.prototype.dataset%2CArray.prototype.find%2CArray.prototype.includes"></script>
+      <script src="js/common.js"></script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="color-scheme" content="dark light">
+    <title>Digiseller</title>
+    <link rel="stylesheet" href="libs/normalize/normalize.css">
+    <link rel="stylesheet" href="css/libs.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/light-theme.css" id="color_scheme"><script>window.MSInputMethodContext && document.documentMode && document.write('<link rel="stylesheet" href="libs/bootstrap-ie11.min.css"><script src="static/js/ie11-customProperty.js"><\/script><script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js"><\/script><script>!function () { var e, t; ((e = document.createEvent("CustomEvent")).initEvent("Bootstrap", !0, !0), e.preventDefault(), e.defaultPrevented) || (t = Event.prototype.preventDefault, Event.prototype.preventDefault = function () { this.cancelable && (t.call(this), Object.defineProperty(this, "defaultPrevented", { get: function () { return !0 }, configurable: !0 })) }) }();<\/script>');</script>
+    <script src="https://cdn.tiny.cloud/1/sqoo5ez8oy5x8bram4focqll8rz90rodp0tusw0e7cytsx6y/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+  </head>
+  <body>
+    <button id="change_scheme">поменять цвет</button>
+    <div class="wrapper">
+      <header>
+        <div class="box">
+          <div class="header_top"><a class="header_logo" href="/">
+              <svg class="pic-digiseller-logo ">
+                <use xlink:href="img/svg/sprite.svg#digiseller-logo"></use>
+              </svg></a>
+            <div class="header_search">
+              <div class="form_element">
+                <input type="text" autofocus placeholder="Товар, счет, уникальный код, email ...">
+              </div>
+              <div class="search_results">
+                <ul class="header_search_results_list">
+                  <li>
+                    <div class="section_title">Счет</div><a class="search_results_item-content" href="#">
+                      <div class="search_results_item-icon">
+                        <svg class="pic-invoice ">
+                          <use xlink:href="img/svg/sprite.svg#invoice"></use>
+                        </svg>
+                      </div><span class="search_results_item-text">eFootball PES 2021 ✅SEASON UPDATE STANDARD EDITION</span></a><a class="search_results_item-content" href="#">
+                      <div class="search_results_item-icon">
+                        <svg class="pic-search-res-customer ">
+                          <use xlink:href="img/svg/sprite.svg#search-res-customer"></use>
+                        </svg>
+                      </div><span class="search_results_item-text">mail@mail.com</span></a><a class="search_results_item-content" href="#">
+                      <div class="search_results_item-icon">
+                        <svg class="pic-good ">
+                          <use xlink:href="img/svg/sprite.svg#good"></use>
+                        </svg>
+                      </div><span class="search_results_item-text">Товар там какой то</span></a><a class="search_results_item-content" href="#">
+                      <div class="search_results_item-icon">
+                        <svg class="pic-invoice ">
+                          <use xlink:href="img/svg/sprite.svg#invoice"></use>
+                        </svg>
+                      </div><span class="search_results_item-text">GUID там какой то</span></a>
+                  </li>
+                  <li>
+                    <div class="section_title">Счет</div><a class="search_results_item-content" href="#">
+                      <div class="search_results_item-icon">
+                        <svg class="pic-invoice ">
+                          <use xlink:href="img/svg/sprite.svg#invoice"></use>
+                        </svg>
+                      </div><span class="search_results_item-text">eFootball PES 2021 ✅SEASON UPDATE STANDARD EDITION</span></a><a class="search_results_item-content" href="#">
+                      <div class="search_results_item-icon">
+                        <svg class="pic-search-res-customer ">
+                          <use xlink:href="img/svg/sprite.svg#search-res-customer"></use>
+                        </svg>
+                      </div><span class="search_results_item-text">mail@mail.com</span></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="header_top_nav">
+              <ul class="header_top_nav-list">
+                <li id="notice_item">
+                  <svg class="pic-notice ">
+                    <use xlink:href="img/svg/sprite.svg#notice"></use>
+                  </svg><span class="nav_list_item-title">Уведомления</span>
+                  <div class="notice_counter_box styled">
+                    <div class="notice_counter-item important">95</div>
+                    <div class="notice_counter-item">64</div>
+                  </div>
+                  <div class="notice_popup_wrap" id="notice_popup">
+                    <div class="notice_popup_box">
+                      <div class="triangle"></div>
+                      <div class="notice_popup_top">
+                        <div class="notice_popup_top-title">Список уведомлений</div>
+                        <div class="notice_popup-top_chck">
+                          <label>
+                            <input type="checkbox"><span>только важные</span>
+                          </label>
+                        </div>
+                      </div>
+                      <ul class="notice_popup_list">
+                        <!-- loader-->
+                        <li class="notice_popup_list-item">
+                          <div class="spinner-border" role="status"><span class="visually-hidden">Loading...</span></div>
+                        </li>
+                        <!-- важные-->
+                        <li class="notice_popup_list-item">
+                          <div class="item_top">
+                            <div class="item_top-title">
+                              <svg class="pic-notice-popup-important ">
+                                <use xlink:href="img/svg/sprite.svg#notice-popup-important"></use>
+                              </svg>Digiseller
+                            </div>
+                            <div class="item_top-additional">
+                              <div class="item_top-date">28.07.2020 14:56</div>
+                              <div class="item_top-settings"><a href="/" title="настройка уведомлений">
+                                  <svg class="pic-popup-settings ">
+                                    <use xlink:href="img/svg/sprite.svg#popup-settings"></use>
+                                  </svg></a></div>
+                            </div>
+                          </div>
+                          <div class="item_content">
+                            <div class="item_content_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo veritatis impedit iste assumenda non ipsum officia cum similique, ipsa repellat. <a href="/">Lorem ipsum dolor sit amet.</a></div>
+                            <div class="item_content_details"><a href="#">Подробнее</a></div>
+                          </div>
+                        </li>
+                        <!-- неважные-->
+                        <li class="notice_popup_list-item">
+                          <div class="item_top">
+                            <div class="item_top-title">
+                              <svg class="pic-notice-popup ">
+                                <use xlink:href="img/svg/sprite.svg#notice-popup"></use>
+                              </svg>Партнерская программа
+                            </div>
+                            <div class="item_top-additional">
+                              <div class="item_top-date">28.07.2020 14:56</div>
+                            </div>
+                          </div>
+                          <div class="item_content">
+                            <div class="item_content_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo veritatis impedit iste assumenda non ipsum officia cum similique, ipsa repellat. <a href="/">Lorem ipsum dolor sit amet.</a></div>
+                            <div class="item_content_details"><a href="#">Подробнее</a></div>
+                          </div>
+                        </li>
+                        <!-- непрочитанные-->
+                        <li class="notice_popup_list-item unread_notice">
+                          <div class="item_top">
+                            <div class="item_top-title">
+                              <svg class="pic-notice-popup ">
+                                <use xlink:href="img/svg/sprite.svg#notice-popup"></use>
+                              </svg>Партнерская программа
+                            </div>
+                            <div class="item_top-additional">
+                              <div class="item_top-date">28.07.2020 14:56</div>
+                            </div>
+                          </div>
+                          <div class="item_content">
+                            <div class="item_content_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo veritatis impedit iste assumenda non ipsum officia cum similique, ipsa repellat. <a href="/">Lorem ipsum dolor sit amet.</a></div>
+                            <div class="item_content_details"><a href="#">Подробнее</a></div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="sep">
+                  <svg class="pic-messages ">
+                    <use xlink:href="img/svg/sprite.svg#messages"></use>
+                  </svg><span class="nav_list_item-title">Сообщения</span>
+                  <div class="notice_counter_box">
+                    <div class="notice_counter-item">0</div>
+                  </div>
+                </li>
+                <li>
+                  <svg class="pic-responses ">
+                    <use xlink:href="img/svg/sprite.svg#responses"></use>
+                  </svg><span class="nav_list_item-title">Претенизии</span>
+                  <div class="notice_counter_box">
+                    <div class="notice_counter-item">0</div>
+                  </div>
+                </li>
+                <li>
+                  <svg class="pic-offer ">
+                    <use xlink:href="img/svg/sprite.svg#offer"></use>
+                  </svg><span class="nav_list_item-title">Предложения</span>
+                  <div class="notice_counter_box">
+                    <div class="notice_counter-item new_notice">999</div>
+                  </div>
+                </li>
+                <li> 
+                  <svg class="pic-chats ">
+                    <use xlink:href="img/svg/sprite.svg#chats"></use>
+                  </svg><span class="nav_list_item-title">Чаты</span>
+                  <div class="notice_counter_box">
+                    <div class="notice_counter-item">0</div>
+                  </div>
+                </li>
+                <li class="sep">
+                  <svg class="pic-logout ">
+                    <use xlink:href="img/svg/sprite.svg#logout"></use>
+                  </svg><span class="nav_list_item-title">Выход</span>
+                </li>
+                <li class="lang"><a class="active" href="/">
+                    <svg class="pic-rus ">
+                      <use xlink:href="img/svg/sprite.svg#rus"></use>
+                    </svg>рус</a><a href="/">
+                    <svg class="pic-eng ">
+                      <use xlink:href="img/svg/sprite.svg#eng"></use>
+                    </svg>eng</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <nav class="main_nav">
+        <div class="main_nav_top">
+          <div class="box">
+            <ul>
+              <li><a href="#">Товары</a></li>
+              <li><a href="#">Магазин</a></li>
+              <li><a href="#">Рекламные места</a></li>
+              <li><a href="#">Бухгалтерия</a></li>
+              <li><a class="active" href="#">Личный кабинет</a></li>
+              <li><a href="#">Партнерская программа</a></li>
+              <li><a href="#">Описание сервиса</a></li>
+              <li><a href="#">Торговая площадка</a></li>
+              <li><a class="question_mark" href="#" data-placement="top" data-toggle="tooltip" title="задать вопрос">
+                  <svg class="pic-question_mark ">
+                    <use xlink:href="img/svg/sprite.svg#question_mark"></use>
+                  </svg></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="main_nav_bottom">
+          <div class="box">
+            <ul>
+              <li><a class="active" href="my_info.html">Детали</a></li>
+              <li><a href="messages.html">Переписка</a></li>
+              <li><a href="news.html">Новости</a></li>
+              <li><a href="my_security.html">Безопасность</a></li>
+              <li><a href="space_rent.html">Дисковое пространство</a></li>
+              <li><a href="notify_settings.html">Уведомления</a></li>
+              <li><a href="staff.html">Сотрудники</a></li>
+              <li><a href="mailings.html">Рассылки</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <main>
+        <div class="box">
+          <ul class="nav nav-tabs" role="tablist">
+            <li><a class="nav-link" href="#tabGeneralRules" role="tab" data-toggle="tab">GeneralRules</a></li>
+            <li><a class="nav-link" href="#tabPersonal" role="tab" data-toggle="tab">Personal</a></li>
+            <li><a class="nav-link active" href="#tabPromocodes" role="tab" data-toggle="tab">Promocodes</a></li>
+            <li><a class="nav-link" href="#tabSales" role="tab" data-toggle="tab">Sales</a></li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane active" id="tabPromocodes">
+              <div class="content_box">
+                <div class="pm promocodes_box">
+                  <div class="pm_settings">
+                    <div class="alert_box info">Для раздачи промо-кодов необходимо осуществить их выпуск. Определите количество промо-кодов, срок действия и порядок использования. Выпусков может быть несколько с разными параметрами. Обращаем внимание, что после создания выпуска внести изменения в эти параметры будет уже нельзя. После нажатия на кнопку «выпустить» вам будет предложено выбрать товары и определить размер скидки, которая будет предоставлена при использовании выпущенных промо-кодов.</div>
+                    <div class="alert_box warning">Не указано или неправильно указано сколько раз можно использовать один и тот же промо-код</div>
+                    <div class="pm_purses_settings">
+                      <ul class="pm_purses_settings_list">
+                        <li class="pm_purses_settings_list_item">
+                          <div class="title">Название выпуска:</div>
+                          <div class="form_element">
+                            <input type="text">
+                          </div>
+                          <div class="configure"></div>
+                        </li>
+                        <li class="pm_purses_settings_list_item">
+                          <div class="title">Промо-код можно использовать:	</div>
+                          <div class="form_element">
+                            <select>
+                              <option value="0">однократно</option>
+                              <option value="1">многократно</option>
+                              <option value="2">не более...</option>
+                            </select>
+                          </div>
+                          <div class="configure">
+                            <div class="form_element">
+                              <input type="text"><span>раз</span>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="pm_purses_settings_list_item">
+                          <div class="title">Количество промо-кодов в выпуске:</div>
+                          <div class="form_element">
+                            <input type="text">
+                          </div>
+                          <div class="configure"><span>штук  (не более 100 шт.)</span><span class="star">*</span></div>
+                        </li>
+                        <li class="pm_purses_settings_list_item">
+                          <!-- dates-->
+                          <div class="title">Время действия промо-кодов:</div>
+                          <div class="form_element date"><span>с</span>
+                            <input type="text"><span>по</span>
+                            <input type="text">
+                          </div>
+                          <div class="configure"></div>
+                        </li>
+                        <li class="pm_purses_settings_list_item btns">
+                          <div class="title">
+                            <button class="btn btn_gray">выпустить</button>
+                          </div>
+                          <div class="form_element date"></div>
+                          <div class="configure"></div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="hint"> <span class="star">*</span>Если вам необходимо произвести выпуск большего количество промо-кодов, пожалуйста, свяжитесь с <a class="main_link" href="#">тех. поддержкой сервиса</a> и обоснуйте данную необходимость.</div>
+                  </div>
+                  <div class="pm_description">
+                    <div class="fieldset">
+                      <div class="legend">Что такое промо-код?</div>
+                      <div class="fieldset_text">
+                        <div class="content">Промо-код – это уникальная комбинация букв и цифр, предоставляющая покупателю право приобрести ваши товары со скидкой на установленных вами льготных условиях.</div>
+                        <div class="title">Зачем мне нужны промо-коды?</div>
+                        <div class="content">Промо-код – универсальное средство привлечения покупателей: выданный вами, он дает возможность купить со скидкой исключительно ваши товары. Таким образом, отблагодарив покупателя промо-кодом, вы гарантированно вернете его к вам снова.</div>
+                        <div class="title">Где взять промо-код?</div>
+                        <div class="content">Промо-коды будут выпускаться нашим сервисом автоматически в соответствии с заданными вами характеристиками. Для этого вам необходимо определить их количество, порядок использования (активации) и период действия, после чего отобрать товары и установить размер скидки. Выпусков может быть несколько, однако одновременно могут использоваться промо-коды не более чем из 5-ти разных серий.</div>
+                        <div class="title">Как использовать промо-код?</div>
+                        <div class="content">Для получения скидки покупателю необходимо на странице оплаты товара ввести промо-код, применить его и ознакомившись с информацией о размере скидки продолжить оплату с её учетом. Передать покупателю промо-код можно вместе со ссылкой на оплату. Для этого в ссылку нужно добавить <i>&promocode=XXXXXXX</i>, где XXXXXXX – сам промо-код. Перейдя по такой ссылке промо-код будет автоматически применен и покупатель сразу увидит стоимость товара с учетом скидки.</div>
+                        <div class="title">Как распространять промо-коды?</div>
+                        <div class="content">Как угодно! Используйте форумы, электронную почту, социальные сети. Предложите владельцам популярных веб-ресурсов раздать их своим пользователям в виде бонусов. Никаких ограничений здесь нет: в пределах ваших творческих возможностей.</div>
+                        <div class="title">Что будет, если у покупателя уже есть скидка?</div>
+                        <div class="content">Если промо-код получит ваш постоянный покупатель, у которого уже есть накопительная скидка, при оплате он сам выберет, какую предпочесть: по промо-коду или накопительную. Скидки не суммируются!</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="promocodes_all_table">
+                  <table class="equal_cells">
+                    <colgroup>
+                      <col>
+                      <col style="width: 400px">
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                      <col style="width: 45px">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>Название выпуска</th>
+                        <th>Время действия</th>
+                        <th class="align_center">Промо-кодов (штук)</th>
+                        <th class="align_center">Можно использовать</th>
+                        <th class="align_center">Продаж</th>
+                        <th class="align_center">Товаров со скидкой</th>
+                        <th class="align_right" data-placement="top" data-toggle="tooltip" title="удалить выбранные выпуски">
+                          <button class="btn btn_gray" data-toggle="modal" data-target="#promocode_delete">
+                            <svg class="pic-delete-btn ">
+                              <use xlink:href="img/svg/sprite.svg#delete-btn"></use>
+                            </svg>
+                          </button>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><a class="main_link" href="#">Выпуск #1</a></td>
+                        <td>	с 29.12.2020 до 29.12.2021</td>
+                        <td class="align_center"><a class="main_link" href="#">123</a></td>
+                        <td class="align_center">однократно</td>
+                        <td class="align_center">12345</td>
+                        <td class="align_center"><a class="main_link empty" href="#">0</a></td>
+                        <td class="align_right">
+                          <div class="form_element">
+                            <label class="for_check">
+                              <input type="checkbox"><span class="text"></span>
+                            </label>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><a class="main_link" href="#">Выпуск #2</a></td>
+                        <td>	<span class="ended">с 29.12.2020 до 29.12.2021 <span>(закончился)</span></span></td>
+                        <td class="align_center"><a class="main_link" href="#">123</a></td>
+                        <td class="align_center">многократно</td>
+                        <td class="align_center">12345</td>
+                        <td class="align_center"><a class="main_link" href="#">80</a></td>
+                        <td class="align_right">
+                          <div class="form_element">
+                            <label class="for_check">
+                              <input type="checkbox"><span class="text"></span>
+                            </label>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <button class="btn btn_blue">новый выпуск</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <div class="modal fade" id="promocode_delete" tabindex="-1" aria-labelledby="promocode_delete" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-md">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="modal-title">Внимание!</div><span class="close" data-dismiss="modal" aria-label="Close">
+                <svg class="pic-modal_close ">
+                  <use xlink:href="img/svg/sprite.svg#modal_close"></use>
+                </svg></span>
+            </div>
+            <div class="modal-body">
+              <div class="alert_box additional_info">ВНИМАНИЕ: удаленные выпуски восстановлению не подлежат!</div>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn_gray" data-toggle="modal" data-target="#promocode_delete2" data-dismiss="modal" aria-label="Close">OK</button>
+              <button class="btn btn_gray" data-dismiss="modal" aria-label="Close">отменить</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="promocode_delete2" tabindex="-1" aria-labelledby="promocode_delete2" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="modal-title">Подтвердите действие</div><span class="close" data-dismiss="modal" aria-label="Close">
+                <svg class="pic-modal_close ">
+                  <use xlink:href="img/svg/sprite.svg#modal_close"></use>
+                </svg></span>
+            </div>
+            <div class="modal-body">
+              <div class="accept_msg">Вы действительно хотите удалить выбранные выпуски?</div>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn_gray" data-dismiss="modal" aria-label="Close">подтвердить</button>
+              <button class="btn btn_gray" data-dismiss="modal" aria-label="Close">отменить</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="box">
+          <div class="footer_content">
+            <div class="copy">Copyright ©2020 Fincom Teh Ltd.<br>Designed by <a href="#">Computing Forces</a></div>
+            <div class="footer_nav"><a href="#">API</a><a href="#">Telegram Bot</a><a href="#">Чат</a></div><a class="footer_logo" href="#">
+              <svg class="pic-googleplay ">
+                <use xlink:href="img/svg/sprite.svg#googleplay"></use>
+              </svg></a>
+          </div>
+        </div>
+      </footer>
+      <script src="static/js/libs.min.js"></script>
+      <script src="static/js/svgxuse.min.js" defer></script>
+      <script src="https://cdn.polyfill.io/v3/polyfill.min.js?features=Array.from%2Ces5%2Ces6%2CSymbol%2CSymbol.iterator%2CDOMTokenList%2CObject.assign%2CCustomEvent%2CElement.prototype.classList%2CElement.prototype.closest%2CElement.prototype.dataset%2CArray.prototype.find%2CArray.prototype.includes"></script>
+      <script src="js/common.js"></script>
+    </div>
+  </body>
+</html>

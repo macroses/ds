@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="color-scheme" content="dark light">
+    <title>Digiseller</title>
+    <link rel="stylesheet" href="libs/normalize/normalize.css">
+    <link rel="stylesheet" href="css/libs.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/light-theme.css" id="color_scheme"><script>window.MSInputMethodContext && document.documentMode && document.write('<link rel="stylesheet" href="libs/bootstrap-ie11.min.css"><script src="static/js/ie11-customProperty.js"><\/script><script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js"><\/script><script>!function () { var e, t; ((e = document.createEvent("CustomEvent")).initEvent("Bootstrap", !0, !0), e.preventDefault(), e.defaultPrevented) || (t = Event.prototype.preventDefault, Event.prototype.preventDefault = function () { this.cancelable && (t.call(this), Object.defineProperty(this, "defaultPrevented", { get: function () { return !0 }, configurable: !0 })) }) }();<\/script>');</script>
+    <script src="https://cdn.tiny.cloud/1/sqoo5ez8oy5x8bram4focqll8rz90rodp0tusw0e7cytsx6y/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+  </head>
+  <body>
+    <button id="change_scheme">поменять цвет</button>
+    <div class="wrapper">
+      <header>
+        <div class="box">
+          <div class="header_top"><a class="header_logo" href="/">
+              <svg class="pic-digiseller-logo ">
+                <use xlink:href="img/svg/sprite.svg#digiseller-logo"></use>
+              </svg></a>
+            <div class="header_search">
+              <div class="form_element">
+                <input type="text" autofocus placeholder="Товар, счет, уникальный код, email ...">
+              </div>
+              <div class="search_results">
+                <ul class="header_search_results_list">
+                  <li>
+                    <div class="section_title">Счет</div><a class="search_results_item-content" href="#">
+                      <div class="search_results_item-icon">
+                        <svg class="pic-invoice ">
+                          <use xlink:href="img/svg/sprite.svg#invoice"></use>
+                        </svg>
+                      </div><span class="search_results_item-text">eFootball PES 2021 ✅SEASON UPDATE STANDARD EDITION</span></a><a class="search_results_item-content" href="#">
+                      <div class="search_results_item-icon">
+                        <svg class="pic-search-res-customer ">
+                          <use xlink:href="img/svg/sprite.svg#search-res-customer"></use>
+                        </svg>
+                      </div><span class="search_results_item-text">mail@mail.com</span></a><a class="search_results_item-content" href="#">
+                      <div class="search_results_item-icon">
+                        <svg class="pic-good ">
+                          <use xlink:href="img/svg/sprite.svg#good"></use>
+                        </svg>
+                      </div><span class="search_results_item-text">Товар там какой то</span></a><a class="search_results_item-content" href="#">
+                      <div class="search_results_item-icon">
+                        <svg class="pic-invoice ">
+                          <use xlink:href="img/svg/sprite.svg#invoice"></use>
+                        </svg>
+                      </div><span class="search_results_item-text">GUID там какой то</span></a>
+                  </li>
+                  <li>
+                    <div class="section_title">Счет</div><a class="search_results_item-content" href="#">
+                      <div class="search_results_item-icon">
+                        <svg class="pic-invoice ">
+                          <use xlink:href="img/svg/sprite.svg#invoice"></use>
+                        </svg>
+                      </div><span class="search_results_item-text">eFootball PES 2021 ✅SEASON UPDATE STANDARD EDITION</span></a><a class="search_results_item-content" href="#">
+                      <div class="search_results_item-icon">
+                        <svg class="pic-search-res-customer ">
+                          <use xlink:href="img/svg/sprite.svg#search-res-customer"></use>
+                        </svg>
+                      </div><span class="search_results_item-text">mail@mail.com</span></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="header_top_nav">
+              <ul class="header_top_nav-list">
+                <li id="notice_item">
+                  <svg class="pic-notice ">
+                    <use xlink:href="img/svg/sprite.svg#notice"></use>
+                  </svg><span class="nav_list_item-title">Уведомления</span>
+                  <div class="notice_counter_box styled">
+                    <div class="notice_counter-item important">95</div>
+                    <div class="notice_counter-item">64</div>
+                  </div>
+                  <div class="notice_popup_wrap" id="notice_popup">
+                    <div class="notice_popup_box">
+                      <div class="triangle"></div>
+                      <div class="notice_popup_top">
+                        <div class="notice_popup_top-title">Список уведомлений</div>
+                        <div class="notice_popup-top_chck">
+                          <label>
+                            <input type="checkbox"><span>только важные</span>
+                          </label>
+                        </div>
+                      </div>
+                      <ul class="notice_popup_list">
+                        <!-- loader-->
+                        <li class="notice_popup_list-item">
+                          <div class="spinner-border" role="status"><span class="visually-hidden">Loading...</span></div>
+                        </li>
+                        <!-- важные-->
+                        <li class="notice_popup_list-item">
+                          <div class="item_top">
+                            <div class="item_top-title">
+                              <svg class="pic-notice-popup-important ">
+                                <use xlink:href="img/svg/sprite.svg#notice-popup-important"></use>
+                              </svg>Digiseller
+                            </div>
+                            <div class="item_top-additional">
+                              <div class="item_top-date">28.07.2020 14:56</div>
+                              <div class="item_top-settings"><a href="/" title="настройка уведомлений">
+                                  <svg class="pic-popup-settings ">
+                                    <use xlink:href="img/svg/sprite.svg#popup-settings"></use>
+                                  </svg></a></div>
+                            </div>
+                          </div>
+                          <div class="item_content">
+                            <div class="item_content_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo veritatis impedit iste assumenda non ipsum officia cum similique, ipsa repellat. <a href="/">Lorem ipsum dolor sit amet.</a></div>
+                            <div class="item_content_details"><a href="#">Подробнее</a></div>
+                          </div>
+                        </li>
+                        <!-- неважные-->
+                        <li class="notice_popup_list-item">
+                          <div class="item_top">
+                            <div class="item_top-title">
+                              <svg class="pic-notice-popup ">
+                                <use xlink:href="img/svg/sprite.svg#notice-popup"></use>
+                              </svg>Партнерская программа
+                            </div>
+                            <div class="item_top-additional">
+                              <div class="item_top-date">28.07.2020 14:56</div>
+                            </div>
+                          </div>
+                          <div class="item_content">
+                            <div class="item_content_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo veritatis impedit iste assumenda non ipsum officia cum similique, ipsa repellat. <a href="/">Lorem ipsum dolor sit amet.</a></div>
+                            <div class="item_content_details"><a href="#">Подробнее</a></div>
+                          </div>
+                        </li>
+                        <!-- непрочитанные-->
+                        <li class="notice_popup_list-item unread_notice">
+                          <div class="item_top">
+                            <div class="item_top-title">
+                              <svg class="pic-notice-popup ">
+                                <use xlink:href="img/svg/sprite.svg#notice-popup"></use>
+                              </svg>Партнерская программа
+                            </div>
+                            <div class="item_top-additional">
+                              <div class="item_top-date">28.07.2020 14:56</div>
+                            </div>
+                          </div>
+                          <div class="item_content">
+                            <div class="item_content_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo veritatis impedit iste assumenda non ipsum officia cum similique, ipsa repellat. <a href="/">Lorem ipsum dolor sit amet.</a></div>
+                            <div class="item_content_details"><a href="#">Подробнее</a></div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="sep">
+                  <svg class="pic-messages ">
+                    <use xlink:href="img/svg/sprite.svg#messages"></use>
+                  </svg><span class="nav_list_item-title">Сообщения</span>
+                  <div class="notice_counter_box">
+                    <div class="notice_counter-item">0</div>
+                  </div>
+                </li>
+                <li>
+                  <svg class="pic-responses ">
+                    <use xlink:href="img/svg/sprite.svg#responses"></use>
+                  </svg><span class="nav_list_item-title">Претенизии</span>
+                  <div class="notice_counter_box">
+                    <div class="notice_counter-item">0</div>
+                  </div>
+                </li>
+                <li>
+                  <svg class="pic-offer ">
+                    <use xlink:href="img/svg/sprite.svg#offer"></use>
+                  </svg><span class="nav_list_item-title">Предложения</span>
+                  <div class="notice_counter_box">
+                    <div class="notice_counter-item new_notice">999</div>
+                  </div>
+                </li>
+                <li> 
+                  <svg class="pic-chats ">
+                    <use xlink:href="img/svg/sprite.svg#chats"></use>
+                  </svg><span class="nav_list_item-title">Чаты</span>
+                  <div class="notice_counter_box">
+                    <div class="notice_counter-item">0</div>
+                  </div>
+                </li>
+                <li class="sep">
+                  <svg class="pic-logout ">
+                    <use xlink:href="img/svg/sprite.svg#logout"></use>
+                  </svg><span class="nav_list_item-title">Выход</span>
+                </li>
+                <li class="lang"><a class="active" href="/">
+                    <svg class="pic-rus ">
+                      <use xlink:href="img/svg/sprite.svg#rus"></use>
+                    </svg>рус</a><a href="/">
+                    <svg class="pic-eng ">
+                      <use xlink:href="img/svg/sprite.svg#eng"></use>
+                    </svg>eng</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <nav class="main_nav">
+        <div class="main_nav_top">
+          <div class="box">
+            <ul>
+              <li><a href="#">Товары</a></li>
+              <li><a href="#">Магазин</a></li>
+              <li><a href="#">Рекламные места</a></li>
+              <li><a href="#">Бухгалтерия</a></li>
+              <li><a class="active" href="#">Личный кабинет</a></li>
+              <li><a href="#">Партнерская программа</a></li>
+              <li><a href="#">Описание сервиса</a></li>
+              <li><a href="#">Торговая площадка</a></li>
+              <li><a class="question_mark" href="#" data-placement="top" data-toggle="tooltip" title="задать вопрос">
+                  <svg class="pic-question_mark ">
+                    <use xlink:href="img/svg/sprite.svg#question_mark"></use>
+                  </svg></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="main_nav_bottom">
+          <div class="box">
+            <ul>
+              <li><a class="active" href="my_info.html">Детали</a></li>
+              <li><a href="messages.html">Переписка</a></li>
+              <li><a href="news.html">Новости</a></li>
+              <li><a href="my_security.html">Безопасность</a></li>
+              <li><a href="space_rent.html">Дисковое пространство</a></li>
+              <li><a href="notify_settings.html">Уведомления</a></li>
+              <li><a href="staff.html">Сотрудники</a></li>
+              <li><a href="mailings.html">Рассылки</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <main>
+        <div class="box">
+          <div class="my_info_content">
+            <div class="my_info_content-left">
+              <ul class="nav nav-tabs" role="tablist">
+                <li><a class="nav-link active" href="#tabSales" role="tab" data-toggle="tab">Sales</a></li>
+                <li><a class="nav-link" href="#tabViews" role="tab" data-toggle="tab">Views</a></li>
+                <li>
+                  <div class="spinner-border text-light" role="status"><span class="visually-hidden">Loading...</span></div>
+                </li>
+              </ul>
+              <div class="tab-content">
+                <div class="tab-pane active" id="tabSales">
+                  <div class="content_box">
+                    <div class="my_info_graph">
+                      <div class="my_info_graph_canvas">
+                        <div class="my_info_graph_canvas_header">
+                          <div class="my_info_graph_canvas_title">Валюта</div>
+                          <div class="form_element">
+                            <select>
+                              <option value="0">USD</option>
+                              <option value="1">RUB</option>
+                              <option value="2">EUR</option>
+                              <option value="3">UAH</option>
+                            </select>
+                          </div>
+                        </div>
+                        <canvas></canvas>
+                      </div>
+                      <div class="my_info_graph_stat">
+                        <table>
+                          <colgroup>
+                            <col style="width: 80px">
+                            <col>
+                            <col>
+                            <col>
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th>
+                                <div class="form_element">
+                                  <select>
+                                    <option value="0">День</option>
+                                    <option value="1">Неделя</option>
+                                    <option value="2">Месяц</option>
+                                  </select>
+                                </div>
+                              </th>
+                              <th class="align_right">
+                                <svg class="pic-square-blue ">
+                                  <use xlink:href="img/svg/sprite.svg#square-blue"></use>
+                                </svg>Всего продаж
+                              </th>
+                              <th class="align_right"> 
+                                <svg class="pic-square-sea ">
+                                  <use xlink:href="img/svg/sprite.svg#square-sea"></use>
+                                </svg>Через партнеров
+                              </th>
+                              <th class="align_right">Сумма</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td> <a class="main_link" href="#">28.09-04.10</a></td>
+                              <td class="align_right empty_data">0</td>
+                              <td class="align_right">1</td>
+                              <td class="align_right">99999.99</td>
+                            </tr>
+                            <tr>
+                              <td> <a class="main_link" href="#">28.09-04.10</a></td>
+                              <td class="align_right empty_data">0</td>
+                              <td class="align_right empty_data">0</td>
+                              <td class="align_right empty_data">0</td>
+                            </tr>
+                            <tr>
+                              <td> <a class="main_link" href="#">28.09-04.10</a></td>
+                              <td class="align_right empty_data">0</td>
+                              <td class="align_right empty_data">0</td>
+                              <td class="align_right empty_data">0</td>
+                            </tr>
+                            <tr>
+                              <td> <a class="main_link" href="#">28.09-04.10</a></td>
+                              <td class="align_right empty_data">0</td>
+                              <td class="align_right empty_data">0</td>
+                              <td class="align_right empty_data">0</td>
+                            </tr>
+                            <tr>
+                              <td> <a class="main_link" href="#">28.09-04.10</a></td>
+                              <td class="align_right empty_data">0</td>
+                              <td class="align_right empty_data">0</td>
+                              <td class="align_right empty_data">0</td>
+                            </tr>
+                            <tr>
+                              <td> <a class="main_link" href="#">28.09-04.10</a></td>
+                              <td class="align_right empty_data">0</td>
+                              <td class="align_right empty_data">0</td>
+                              <td class="align_right empty_data">0</td>
+                            </tr>
+                            <tr>
+                              <td> <a class="main_link" href="#">28.09-04.10</a></td>
+                              <td class="align_right empty_data">0</td>
+                              <td class="align_right empty_data">0</td>
+                              <td class="align_right empty_data">0</td>
+                            </tr>
+                            <tr>
+                              <td> <a class="main_link" href="#">28.09-04.10</a></td>
+                              <td class="align_right empty_data">0</td>
+                              <td class="align_right empty_data">0</td>
+                              <td class="align_right empty_data">0</td>
+                            </tr>
+                            <tr>
+                              <td> <a class="main_link" href="#">28.09-04.10</a></td>
+                              <td class="align_right empty_data">0</td>
+                              <td class="align_right empty_data">0</td>
+                              <td class="align_right empty_data">0</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <div class="extra_stat"><a class="main_link" href="#">Подробная статистика</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane" id="tabViews">
+                  <div class="content_box">
+                    <div class="my_info_graph">
+                      <div class="my_info_graph_canvas">
+                        <div class="my_info_graph_canvas_header">
+                          <div class="my_info_graph_canvas_title"></div>
+                        </div>
+                        <canvas></canvas>
+                      </div>
+                      <div class="my_info_graph_stat">
+                        <table>
+                          <colgroup>
+                            <col>
+                            <col>
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th>
+                                <div class="form_element">
+                                  <select>
+                                    <option value="0">День</option>
+                                    <option value="1">Неделя</option>
+                                    <option value="2">Месяц</option>
+                                  </select>
+                                </div>
+                              </th>
+                              <th class="align_right">
+                                <svg class="pic-square-blue ">
+                                  <use xlink:href="img/svg/sprite.svg#square-blue"></use>
+                                </svg>Уникальных показов
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>28.09-04.10</td>
+                              <td class="align_right empty_data">0</td>
+                            </tr>
+                            <tr>
+                              <td>28.09-04.10</td>
+                              <td class="align_right empty_data">0</td>
+                            </tr>
+                            <tr>
+                              <td>28.09-04.10</td>
+                              <td class="align_right empty_data">0</td>
+                            </tr>
+                            <tr>
+                              <td>28.09-04.10</td>
+                              <td class="align_right empty_data">0</td>
+                            </tr>
+                            <tr>
+                              <td>28.09-04.10</td>
+                              <td class="align_right empty_data">0</td>
+                            </tr>
+                            <tr>
+                              <td>28.09-04.10</td>
+                              <td class="align_right empty_data">0</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <div class="extra_stat">Статистика показов товаров ведется только для товаров, размещённых на торговых площадках.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="section_content">
+                <div class="section_content_header">Мой магазин
+                </div>
+                <div class="section_content_main">
+                  <div class="content_box">
+                    <table class="my_shop">
+                      <colgroup>
+                        <col style="width: 170px">
+                        <col>
+                        <col>
+                        <col>
+                        <col style="width: 45px">
+                        <col style="width: 45px">
+                        <col>
+                        <col>
+                        <col>
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th>адрес магазина</th>
+                          <th class="align_center">товаров</th>
+                          <th class="align_center">продаж</th>
+                          <th class="align_center">возвратов</th>
+                          <th class="align_center" data-placement="top" data-toggle="tooltip" title="положит. отзывов">
+                            <svg class="pic-smile-good ">
+                              <use xlink:href="img/svg/sprite.svg#smile-good"></use>
+                            </svg>
+                          </th>
+                          <th class="align_center" data-placement="top" data-toggle="tooltip" title="отриц. отзывов">
+                            <svg class="pic-smile-bad ">
+                              <use xlink:href="img/svg/sprite.svg#smile-bad"></use>
+                            </svg>
+                          </th>
+                          <th class="align_center">зачисление на</th>
+                          <th class="align_center">
+                             рейтинг<span data-placement="right" data-toggle="tooltip" data-html="true" title="&lt;p class='tipsed_header'&gt;Как расчитывается рейтинг?&lt;/p&gt;&lt;ul class='tipsed_list'&gt;&lt;li&gt;1. Положительный отзыв покупателя увеличивает рейтинг на величину (цена товара / 100).&lt;/li&gt;&lt;li&gt;2. Отрицательный отзыв уменьшает рейтинг на величину (цена товара / 10).&lt;/li&gt;&lt;li&gt;3. Продажа без отзыва увеличивает рейтинг на величину (цена товара / 500).&lt;/li&gt;&lt;/ul&gt;&lt;p class='tipsted_text'&gt;Цена товара рассчитывается в USD по курсу на момент покупки. При расчете рейтинга учитываются продажи только за последние 12 месяцев.&lt;/p&gt;">
+                              <svg class="pic-question_table ">
+                                <use xlink:href="img/svg/sprite.svg#question_table"></use>
+                              </svg></span></th>
+                          <th class="align_right">тех. подержка</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="user_content"><a class="main_link" href="#" target="_blank">https://s12126.exaccess.com/https://s12126.exaccess.com/https://s12126.exaccess.com/</a></td>
+                          <td class="align_center"><a class="main_link" href="#">43</a>/<span>39</span></td>
+                          <td class="align_center"><a class="main_link" href="#">43</a></td>
+                          <td class="align_center">9</td>
+                          <td class="align_center"> <a class="main_link" href="#">2</a></td>
+                          <td class="align_center"><a class="main_link" href="#">99</a></td>
+                          <td class="align_center"><a class="main_link" href="#">личный счет</a></td>
+                          <td class="align_center">
+                            <div class="bold">0,0048</div>
+                          </td>
+                          <td class="align_right"><a class="main_link" href="#">задать вопрос</a></td>
+                        </tr>
+                        <tr>
+                          <td class="user_content"><a class="main_link" href="#" target="_blank">shop.com</a></td>
+                          <td class="align_center"><a class="main_link" href="#">2</a>/<span class="empty_data">0</span></td>
+                          <td class="align_center"><a class="main_link" href="#">43</a></td>
+                          <td class="align_center">9</td>
+                          <td class="align_center"> <a class="main_link" href="#">2</a></td>
+                          <td class="align_center"><a class="main_link" href="#">99</a></td>
+                          <td class="align_center"><a class="main_link" href="#">личный счет</a></td>
+                          <td class="align_center bold">
+                            <div class="rating_info"></div>
+                          </td>
+                          <td class="align_right"><a class="main_link" href="#">задать вопрос</a></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="section_content">
+                <div class="section_content_header">Моя площадка
+                </div>
+                <div class="section_content_main">
+                  <div class="content_box">
+                    <table class="my_trading_floor">
+                      <colgroup>
+                        <col style="width: 135px">
+                        <col>
+                        <col>
+                        <col>
+                        <col style="width: 45px">
+                        <col style="width: 45px">
+                        <col>
+                        <col style="width: 200px">
+                        <col style="width: 130px">
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th>площадка</th>
+                          <th class="align_center">товаров</th>
+                          <th class="align_center">продаж</th>
+                          <th class="align_center">возвратов</th>
+                          <th class="align_center" data-placement="top" data-toggle="tooltip" title="положит. отзывов">
+                            <svg class="pic-smile-good ">
+                              <use xlink:href="img/svg/sprite.svg#smile-good"></use>
+                            </svg>
+                          </th>
+                          <th class="align_center" data-placement="top" data-toggle="tooltip" title="отриц. отзывов">
+                            <svg class="pic-smile-bad ">
+                              <use xlink:href="img/svg/sprite.svg#smile-bad"></use>
+                            </svg>
+                          </th>
+                          <th class="align_center">зачисление на</th>
+                          <th class="align_center">
+                             рейтинг<span data-placement="right" data-toggle="tooltip" data-html="true" title="&lt;p class='tipsed_header'&gt;Как расчитывается рейтинг?&lt;/p&gt;&lt;ul class='tipsed_list'&gt;&lt;li&gt;1. Положительный отзыв покупателя увеличивает рейтинг на величину (цена товара / 100).&lt;/li&gt;&lt;li&gt;2. Отрицательный отзыв уменьшает рейтинг на величину (цена товара / 10).&lt;/li&gt;&lt;li&gt;3. Продажа без отзыва увеличивает рейтинг на величину (цена товара / 500).&lt;/li&gt;&lt;/ul&gt;&lt;p class='tipsted_text'&gt;Цена товара рассчитывается в USD по курсу на момент покупки. При расчете рейтинга учитываются продажи только за последние 12 месяцев.&lt;/p&gt;">
+                              <svg class="pic-question_table ">
+                                <use xlink:href="img/svg/sprite.svg#question_table"></use>
+                              </svg></span></th>
+                          <th class="align_right">администратор</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="user_content"><a class="main_link" href="#" target="_blank">
+                              <svg class="pic-shop_play ">
+                                <use xlink:href="img/svg/sprite.svg#shop_play"></use>
+                              </svg>Plati.Market</a>
+                            <div class="reg_status">зарегистрирован</div>
+                          </td>
+                          <td class="align_center"><a class="main_link" href="#">43</a>/<span>39</span></td>
+                          <td class="align_center"><a class="main_link" href="#">43</a></td>
+                          <td class="align_center">9</td>
+                          <td class="align_center"> <a class="main_link" href="#">2</a></td>
+                          <td class="align_center"><a class="main_link" href="#">99</a></td>
+                          <td class="align_center"><a class="main_link" href="#">личный счет</a></td>
+                          <td class="align_center">
+                            <div class="my_rating_info">
+                              <div class="my_rating_info_main">
+                                <div class="my_rating_pos">66</div>
+                                <div class="my_rating_value">200,0034</div>
+                              </div>
+                              <div class="my_rating_info_by_time">
+                                <div class="my_rating_info_by_time-item">
+                                  <div class="item_header" data-placement="top" data-toggle="tooltip" title="прирост за неделю">Н</div>
+                                  <div class="item_value">+100%</div>
+                                </div>
+                                <div class="my_rating_info_by_time-item">
+                                  <div class="item_header" data-placement="top" data-toggle="tooltip" title="прирост за месяц">М</div>
+                                  <div class="item_value">+100%</div>
+                                </div>
+                                <div class="my_rating_info_by_time-item">
+                                  <div class="item_header" data-placement="top" data-toggle="tooltip" title="прирост за три месяца">3М</div>
+                                  <div class="item_value">+100%</div>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="align_right"><a class="main_link" href="#">задать вопрос</a></td>
+                        </tr>
+                        <tr>
+                          <td class="user_content"><a class="main_link" href="#" target="_blank">
+                              <svg class="pic-shop_play ">
+                                <use xlink:href="img/svg/sprite.svg#shop_play"></use>
+                              </svg>Mestkom.Ru</a>
+                            <div class="reg_status">зарегистрирован</div>
+                          </td>
+                          <td class="align_center">-</td>
+                          <td class="align_center">-</td>
+                          <td class="align_center">-</td>
+                          <td class="align_center">-</td>
+                          <td class="align_center">-</td>
+                          <td class="align_center">-</td>
+                          <td class="align_center">-</td>
+                          <td class="align_right"><a class="main_link" href="#">зарегистрироваться</a></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="section_content">
+                <div class="section_content_header">
+                  <div class="title">Обсуждение</div>
+                  <div class="links_group"><a class="main_link" href="#">Правила</a><a class="main_link" href="#">Telegram-группа</a><a class="main_link" href="#">Telegram-группа Купи-продай</a>
+                    <div class="switcher">
+                      <label>
+                        <input type="checkbox"/><span class="switcher_box"><span class="plate"></span><span class="circle"></span></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="my_info_content-right">
+              <ul class="nav nav-tabs" role="tablist">
+                <li><a class="nav-link active" href="#tabContacts" role="tab" data-toggle="tab">Contacts</a></li>
+                <li><a class="nav-link" href="#tabPurses" role="tab" data-toggle="tab">Purses</a></li>
+                <li>
+                  <div class="spinner-border text-light" role="status"><span class="visually-hidden">Loading...</span></div>
+                </li>
+              </ul>
+              <div class="tab-content">
+                <div class="tab-pane active" id="tabContacts">
+                  <div class="content_box">
+                    <ul class="personal_data_list">
+                      <li class="personal_data_item">
+                        <div class="personal_data_item-title">Продавец (никнейм):</div>
+                        <div class="personal_data_item-content">WYSIWYGWYSIWYGWYSIWYGWYSIWYGWYSIWYG</div>
+                      </li>
+                      <li class="personal_data_item">
+                        <div class="personal_data_item-title">Идентификатор:</div>
+                        <div class="personal_data_item-content">12345</div>
+                      </li>
+                      <li class="personal_data_item">
+                        <div class="personal_data_item-title">Полное имя:</div>
+                        <div class="personal_data_item-content">Частное лицо</div>
+                      </li>
+                      <li class="personal_data_item">
+                        <div class="personal_data_item-title">Телефон:</div>
+                        <div class="personal_data_item-content">+7925557788</div>
+                      </li>
+                      <li class="personal_data_item">
+                        <div class="personal_data_item-title">Телеграм:</div>
+                        <div class="personal_data_item-content">Mishutka</div>
+                      </li>
+                      <li class="personal_data_item">
+                        <div class="personal_data_item-title">WhatsApp:</div>
+                        <div class="personal_data_item-content empty_data">не указан</div>
+                      </li>
+                      <li class="personal_data_item">
+                        <div class="personal_data_item-title">Skype:</div>
+                        <div class="personal_data_item-content">Mishutka</div>
+                      </li>
+                      <li class="personal_data_item">
+                        <div class="personal_data_item-title">Email:</div>
+                        <div class="personal_data_item-content">Mishutka@gmail.com</div>
+                      </li>
+                      <li class="personal_data_item">
+                        <div class="personal_data_item-title">Пароль:</div>
+                        <div class="personal_data_item-content">✳✳✳✳✳✳✳✳✳✳</div>
+                      </li>
+                    </ul>
+                    <div class="personal_data_btns">
+                      <div class="btn_group">
+                        <button class="btn btn_blue">изменить</button>
+                        <button class="btn btn_gray">удалить аккаунт</button>
+                      </div>
+                    </div>
+                    <ul class="personal_data_list">
+                      <li class="personal_data_item">
+                        <div class="personal_data_item-title">Чат:</div>
+                        <div class="personal_data_item-content"><a class="main_link" href="#">включенвключенвключенвключенвключенвключен</a></div>
+                      </li>
+                      <li class="personal_data_item">
+                        <div class="personal_data_item-title">Персональная страница:</div>
+                        <div class="personal_data_item-content"><a class="main_link" href="#">не определена</a></div>
+                      </li>
+                      <li class="personal_data_item">
+                        <div class="personal_data_item-title">Официальный статус:</div>
+                        <div class="personal_data_item-content"><a class="main_link" href="#">не подтвержден</a></div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="tab-pane" id="tabPurses">
+                  <div class="content_box">
+                    <ul class="personal_data_list">
+                      <li class="personal_data_item">
+                        <div class="personal_data_item-title">WM-идентификатор::</div>
+                        <div class="personal_data_item-content">605197088190</div>
+                      </li>
+                      <li class="personal_data_item">
+                        <div class="personal_data_item-title">Тип аттестата:</div>
+                        <div class="personal_data_item-content"><a class="main_link" href="#">аттестат продавца</a></div>
+                      </li>
+                    </ul>
+                    <div class="btn_group">
+                      <button class="btn btn_blue">изменить</button>
+                      <button class="btn btn_gray">удалить</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="section_content">
+                <div class="section_content_header"><a class="main_link" href="#">Новости</a>
+                </div>
+                <div class="section_content_main">
+                  <div class="content_box">
+                    <ul class="preview_news_list">
+                      <li class="preview_news_item">
+                        <div class="news_item_date">21.08.2020</div>
+                        <div class="news_item_text">
+                           В Digiseller появилась возможность принимать платежи через <a class="main_link" href="#">Яндекс Кассу </a>В Digiseller появилась возможность принимать платежи через <a class="main_link" href="#">подробнее...</a></div>
+                      </li>
+                      <li class="preview_news_item">
+                        <div class="news_item_date">21.08.2020</div>
+                        <div class="news_item_text">
+                           В Digiseller появилась возможность принимать платежи через <a class="main_link" href="#">Яндекс Кассу </a></div>
+                      </li>
+                      <li class="preview_news_item">
+                        <div class="news_item_date">21.08.2020</div>
+                        <div class="news_item_text">
+                           В Digiseller появилась возможность принимать платежи через <a class="main_link" href="#">Яндекс Кассу </a>В Digiseller появилась возможность принимать платежи через <a class="main_link" href="#">подробнее...</a></div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="section_content">
+                <div class="section_content_header"><a class="main_link" href="#">Способы оплаты</a>
+                </div>
+                <div class="section_content_main">
+                  <div class="content_box">
+                    <ul class="payment_list">
+                      <li><a href="#" data-placement="top" data-toggle="tooltip" title="webmoney">
+                          <svg class="pic-webmoney ">
+                            <use xlink:href="img/svg/sprite.svg#webmoney"></use>
+                          </svg></a></li>
+                      <li><a href="#" data-placement="top" data-toggle="tooltip" title="Bitcoin">
+                          <svg class="pic-bitcoin ">
+                            <use xlink:href="img/svg/sprite.svg#bitcoin"></use>
+                          </svg></a></li>
+                      <li><a href="#" data-placement="top" data-toggle="tooltip" title="PayPal">
+                          <svg class="pic-paypal-method ">
+                            <use xlink:href="img/svg/sprite.svg#paypal-method"></use>
+                          </svg></a></li>
+                      <li><a href="#" data-placement="top" data-toggle="tooltip" title="Банковская карта">
+                          <svg class="pic-credit-card ">
+                            <use xlink:href="img/svg/sprite.svg#credit-card"></use>
+                          </svg></a></li>
+                      <li><a href="#" data-placement="top" data-toggle="tooltip" title="QIWI">
+                          <svg class="pic-qiwi ">
+                            <use xlink:href="img/svg/sprite.svg#qiwi"></use>
+                          </svg></a></li>
+                      <li><a href="#" data-placement="top" data-toggle="tooltip" title="Яндекс.Деньги">
+                          <svg class="pic-yandex-money ">
+                            <use xlink:href="img/svg/sprite.svg#yandex-money"></use>
+                          </svg></a></li>
+                      <li><a href="#" data-placement="top" data-toggle="tooltip" title="МТС">
+                          <svg class="pic-mts ">
+                            <use xlink:href="img/svg/sprite.svg#mts"></use>
+                          </svg></a></li>
+                      <li><a href="#" data-placement="top" data-toggle="tooltip" title="Билайн">
+                          <svg class="pic-beeline ">
+                            <use xlink:href="img/svg/sprite.svg#beeline"></use>
+                          </svg></a></li>
+                      <li><a href="#" data-placement="top" data-toggle="tooltip" title="Мегафон">
+                          <svg class="pic-megafon ">
+                            <use xlink:href="img/svg/sprite.svg#megafon"></use>
+                          </svg></a></li>
+                      <li><a href="#" data-placement="top" data-toggle="tooltip" title="TELE2">
+                          <svg class="pic-tele-2 ">
+                            <use xlink:href="img/svg/sprite.svg#tele-2"></use>
+                          </svg></a></li>
+                      <li><a href="#" data-placement="top" data-toggle="tooltip" title="Терминалы оплаты">
+                          <svg class="pic-terminal ">
+                            <use xlink:href="img/svg/sprite.svg#terminal"></use>
+                          </svg></a></li>
+                      <li><a href="#" data-placement="top" data-toggle="tooltip" title="Интернет банкинг">
+                          <svg class="pic-bank ">
+                            <use xlink:href="img/svg/sprite.svg#bank"></use>
+                          </svg></a></li>
+                      <li><a href="#" data-placement="top" data-toggle="tooltip" title="Почта России">
+                          <svg class="pic-russian-post ">
+                            <use xlink:href="img/svg/sprite.svg#russian-post"></use>
+                          </svg></a></li>
+                      <li><a href="#" data-placement="top" data-toggle="tooltip" title="WM-карты">
+                          <svg class="pic-wm-card ">
+                            <use xlink:href="img/svg/sprite.svg#wm-card"></use>
+                          </svg></a></li>
+                      <li><a href="#" data-placement="top" data-toggle="tooltip" title="Подарочная карта">
+                          <svg class="pic-present-card ">
+                            <use xlink:href="img/svg/sprite.svg#present-card"></use>
+                          </svg></a></li>
+                      <li><a href="#" data-placement="top" data-toggle="tooltip" title="Steam-скины">
+                          <svg class="pic-payment-steamskin ">
+                            <use xlink:href="img/svg/sprite.svg#payment-steamskin"></use>
+                          </svg></a></li>
+                      <li><a href="#" data-placement="top" data-toggle="tooltip" title="Alipay">
+                          <svg class="pic-alp ">
+                            <use xlink:href="img/svg/sprite.svg#alp"></use>
+                          </svg></a></li>
+                      <li><a href="#" data-placement="top" data-toggle="tooltip" title="Unionpay"> 
+                          <svg class="pic-union ">
+                            <use xlink:href="img/svg/sprite.svg#union"></use>
+                          </svg></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="section_content">
+                <div class="section_content_header"><a class="main_link" href="#">Промо-коды</a>
+                </div>
+                <div class="section_content_main">
+                  <div class="content_box">
+                    <table class="table_promo_codes">
+                      <colgroup>
+                        <col style="width: 50%">
+                        <col style="width: 50%">
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th>Выпуск</th>
+                          <th>Время действия</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><a class="main_link" href="#">Выпуск #5</a></td>
+                          <td>
+                            <div class="promo_codes_data"><span class="title">с</span><span class="data">10.01.2019</span></div>
+                            <div class="promo_codes_data"><span class="title">по</span><span class="data">11.01.2019</span></div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><a class="main_link" href="#">Выпуск #4</a></td>
+                          <td>
+                            <div class="promo_codes_data"><span class="title">с</span><span class="data">10.01.2019</span></div>
+                            <div class="promo_codes_data"><span class="title">по</span><span class="data">11.01.2019</span></div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><a class="main_link" href="#">Все выпуски</a></td>
+                          <td></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div class="table_footer_box">Последняя продажа с промо-кодом: <span class="empty_data">не зафиксирована</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="section_content">
+                <div class="section_content_header"><a class="main_link" href="#">Избранные агенты</a>
+                </div>
+                <div class="section_content_main">
+                  <div class="content_box">
+                    <table class="table_agents">
+                      <colgroup>
+                        <col style="width: 50%">
+                        <col style="width: 50%">
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th>партнер</th>
+                          <th>продаж</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><a class="main_link" href="#">Mistand</a></td>
+                          <td> 1</td>
+                        </tr>
+                        <tr>
+                          <td><a class="main_link" href="#">Воевода</a></td>
+                          <td> 15</td>
+                        </tr>
+                        <tr>
+                          <td><a class="main_link" href="#">Контрапуцель</a></td>
+                          <td> 9999</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div class="table_footer_box">Последняя продажа с промо-кодом: <span class="date"> <b>3 мес. назад </b>(28.07.2020)</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="section_content">
+                <div class="section_content_header"><a class="main_link" href="#">Безопасность</a>
+                </div>
+                <div class="section_content_main">
+                  <div class="content_box">
+                    <div class="security_status positive"><span class="status_desc">
+                        <svg class="pic-green_check ">
+                          <use xlink:href="img/svg/sprite.svg#green_check"></use>
+                        </svg>включена</span>
+                      <div class="status_text">авторизация по WMID</div>
+                    </div>
+                    <div class="security_status negative"><span class="status_desc">
+                        <svg class="pic-red-close ">
+                          <use xlink:href="img/svg/sprite.svg#red-close"></use>
+                        </svg>выключено</span>
+                      <div class="status_text">ограничение на вход по IP</div>
+                    </div>
+                    <div class="security_status recomendation">
+                      <svg class="pic-security ">
+                        <use xlink:href="img/svg/sprite.svg#security"></use>
+                      </svg>
+                      <div class="recomendation_content">Сохранность товаров может быть под угрозой! Рекомендуем <a href="#">ограничить вход </a>в личный кабинет по IP-адресам и(или) <a href="#">установить функцию </a>дополнительной защиты.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <div class="box">
+          <div class="footer_content">
+            <div class="copy">Copyright ©2020 Fincom Teh Ltd.<br>Designed by <a href="#">Computing Forces</a></div>
+            <div class="footer_nav"><a href="#">API</a><a href="#">Telegram Bot</a><a href="#">Чат</a></div><a class="footer_logo" href="#">
+              <svg class="pic-googleplay ">
+                <use xlink:href="img/svg/sprite.svg#googleplay"></use>
+              </svg></a>
+          </div>
+        </div>
+      </footer>
+      <script src="static/js/libs.min.js"></script>
+      <script src="static/js/svgxuse.min.js" defer></script>
+      <script src="https://cdn.polyfill.io/v3/polyfill.min.js?features=Array.from%2Ces5%2Ces6%2CSymbol%2CSymbol.iterator%2CDOMTokenList%2CObject.assign%2CCustomEvent%2CElement.prototype.classList%2CElement.prototype.closest%2CElement.prototype.dataset%2CArray.prototype.find%2CArray.prototype.includes"></script>
+      <script src="js/common.js"></script>
+    </div>
+  </body>
+</html>

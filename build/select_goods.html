@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="color-scheme" content="dark light">
+    <title>Digiseller</title>
+    <link rel="stylesheet" href="libs/normalize/normalize.css">
+    <link rel="stylesheet" href="css/libs.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/light-theme.css" id="color_scheme"><script>window.MSInputMethodContext && document.documentMode && document.write('<link rel="stylesheet" href="libs/bootstrap-ie11.min.css"><script src="static/js/ie11-customProperty.js"><\/script><script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js"><\/script><script>!function () { var e, t; ((e = document.createEvent("CustomEvent")).initEvent("Bootstrap", !0, !0), e.preventDefault(), e.defaultPrevented) || (t = Event.prototype.preventDefault, Event.prototype.preventDefault = function () { this.cancelable && (t.call(this), Object.defineProperty(this, "defaultPrevented", { get: function () { return !0 }, configurable: !0 })) }) }();<\/script>');</script>
+    <script src="https://cdn.tiny.cloud/1/sqoo5ez8oy5x8bram4focqll8rz90rodp0tusw0e7cytsx6y/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+  </head>
+  <body>
+    <button id="change_scheme">поменять цвет</button>
+    <div class="wrapper">
+      <header>
+        <div class="box">
+          <div class="header_top"><a class="header_logo" href="/">
+              <svg class="pic-digiseller-logo ">
+                <use xlink:href="img/svg/sprite.svg#digiseller-logo"></use>
+              </svg></a>
+            <div class="header_search">
+              <div class="form_element">
+                <input type="text" autofocus placeholder="Товар, счет, уникальный код, email ...">
+              </div>
+              <div class="search_results">
+                <ul class="header_search_results_list">
+                  <li>
+                    <div class="section_title">Счет</div><a class="search_results_item-content" href="#">
+                      <div class="search_results_item-icon">
+                        <svg class="pic-invoice ">
+                          <use xlink:href="img/svg/sprite.svg#invoice"></use>
+                        </svg>
+                      </div><span class="search_results_item-text">eFootball PES 2021 ✅SEASON UPDATE STANDARD EDITION</span></a><a class="search_results_item-content" href="#">
+                      <div class="search_results_item-icon">
+                        <svg class="pic-search-res-customer ">
+                          <use xlink:href="img/svg/sprite.svg#search-res-customer"></use>
+                        </svg>
+                      </div><span class="search_results_item-text">mail@mail.com</span></a><a class="search_results_item-content" href="#">
+                      <div class="search_results_item-icon">
+                        <svg class="pic-good ">
+                          <use xlink:href="img/svg/sprite.svg#good"></use>
+                        </svg>
+                      </div><span class="search_results_item-text">Товар там какой то</span></a><a class="search_results_item-content" href="#">
+                      <div class="search_results_item-icon">
+                        <svg class="pic-invoice ">
+                          <use xlink:href="img/svg/sprite.svg#invoice"></use>
+                        </svg>
+                      </div><span class="search_results_item-text">GUID там какой то</span></a>
+                  </li>
+                  <li>
+                    <div class="section_title">Счет</div><a class="search_results_item-content" href="#">
+                      <div class="search_results_item-icon">
+                        <svg class="pic-invoice ">
+                          <use xlink:href="img/svg/sprite.svg#invoice"></use>
+                        </svg>
+                      </div><span class="search_results_item-text">eFootball PES 2021 ✅SEASON UPDATE STANDARD EDITION</span></a><a class="search_results_item-content" href="#">
+                      <div class="search_results_item-icon">
+                        <svg class="pic-search-res-customer ">
+                          <use xlink:href="img/svg/sprite.svg#search-res-customer"></use>
+                        </svg>
+                      </div><span class="search_results_item-text">mail@mail.com</span></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="header_top_nav">
+              <ul class="header_top_nav-list">
+                <li id="notice_item">
+                  <svg class="pic-notice ">
+                    <use xlink:href="img/svg/sprite.svg#notice"></use>
+                  </svg><span class="nav_list_item-title">Уведомления</span>
+                  <div class="notice_counter_box styled">
+                    <div class="notice_counter-item important">95</div>
+                    <div class="notice_counter-item">64</div>
+                  </div>
+                  <div class="notice_popup_wrap" id="notice_popup">
+                    <div class="notice_popup_box">
+                      <div class="triangle"></div>
+                      <div class="notice_popup_top">
+                        <div class="notice_popup_top-title">Список уведомлений</div>
+                        <div class="notice_popup-top_chck">
+                          <label>
+                            <input type="checkbox"><span>только важные</span>
+                          </label>
+                        </div>
+                      </div>
+                      <ul class="notice_popup_list">
+                        <!-- loader-->
+                        <li class="notice_popup_list-item">
+                          <div class="spinner-border" role="status"><span class="visually-hidden">Loading...</span></div>
+                        </li>
+                        <!-- важные-->
+                        <li class="notice_popup_list-item">
+                          <div class="item_top">
+                            <div class="item_top-title">
+                              <svg class="pic-notice-popup-important ">
+                                <use xlink:href="img/svg/sprite.svg#notice-popup-important"></use>
+                              </svg>Digiseller
+                            </div>
+                            <div class="item_top-additional">
+                              <div class="item_top-date">28.07.2020 14:56</div>
+                              <div class="item_top-settings"><a href="/" title="настройка уведомлений">
+                                  <svg class="pic-popup-settings ">
+                                    <use xlink:href="img/svg/sprite.svg#popup-settings"></use>
+                                  </svg></a></div>
+                            </div>
+                          </div>
+                          <div class="item_content">
+                            <div class="item_content_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo veritatis impedit iste assumenda non ipsum officia cum similique, ipsa repellat. <a href="/">Lorem ipsum dolor sit amet.</a></div>
+                            <div class="item_content_details"><a href="#">Подробнее</a></div>
+                          </div>
+                        </li>
+                        <!-- неважные-->
+                        <li class="notice_popup_list-item">
+                          <div class="item_top">
+                            <div class="item_top-title">
+                              <svg class="pic-notice-popup ">
+                                <use xlink:href="img/svg/sprite.svg#notice-popup"></use>
+                              </svg>Партнерская программа
+                            </div>
+                            <div class="item_top-additional">
+                              <div class="item_top-date">28.07.2020 14:56</div>
+                            </div>
+                          </div>
+                          <div class="item_content">
+                            <div class="item_content_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo veritatis impedit iste assumenda non ipsum officia cum similique, ipsa repellat. <a href="/">Lorem ipsum dolor sit amet.</a></div>
+                            <div class="item_content_details"><a href="#">Подробнее</a></div>
+                          </div>
+                        </li>
+                        <!-- непрочитанные-->
+                        <li class="notice_popup_list-item unread_notice">
+                          <div class="item_top">
+                            <div class="item_top-title">
+                              <svg class="pic-notice-popup ">
+                                <use xlink:href="img/svg/sprite.svg#notice-popup"></use>
+                              </svg>Партнерская программа
+                            </div>
+                            <div class="item_top-additional">
+                              <div class="item_top-date">28.07.2020 14:56</div>
+                            </div>
+                          </div>
+                          <div class="item_content">
+                            <div class="item_content_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo veritatis impedit iste assumenda non ipsum officia cum similique, ipsa repellat. <a href="/">Lorem ipsum dolor sit amet.</a></div>
+                            <div class="item_content_details"><a href="#">Подробнее</a></div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="sep">
+                  <svg class="pic-messages ">
+                    <use xlink:href="img/svg/sprite.svg#messages"></use>
+                  </svg><span class="nav_list_item-title">Сообщения</span>
+                  <div class="notice_counter_box">
+                    <div class="notice_counter-item">0</div>
+                  </div>
+                </li>
+                <li>
+                  <svg class="pic-responses ">
+                    <use xlink:href="img/svg/sprite.svg#responses"></use>
+                  </svg><span class="nav_list_item-title">Претенизии</span>
+                  <div class="notice_counter_box">
+                    <div class="notice_counter-item">0</div>
+                  </div>
+                </li>
+                <li>
+                  <svg class="pic-offer ">
+                    <use xlink:href="img/svg/sprite.svg#offer"></use>
+                  </svg><span class="nav_list_item-title">Предложения</span>
+                  <div class="notice_counter_box">
+                    <div class="notice_counter-item new_notice">999</div>
+                  </div>
+                </li>
+                <li> 
+                  <svg class="pic-chats ">
+                    <use xlink:href="img/svg/sprite.svg#chats"></use>
+                  </svg><span class="nav_list_item-title">Чаты</span>
+                  <div class="notice_counter_box">
+                    <div class="notice_counter-item">0</div>
+                  </div>
+                </li>
+                <li class="sep">
+                  <svg class="pic-logout ">
+                    <use xlink:href="img/svg/sprite.svg#logout"></use>
+                  </svg><span class="nav_list_item-title">Выход</span>
+                </li>
+                <li class="lang"><a class="active" href="/">
+                    <svg class="pic-rus ">
+                      <use xlink:href="img/svg/sprite.svg#rus"></use>
+                    </svg>рус</a><a href="/">
+                    <svg class="pic-eng ">
+                      <use xlink:href="img/svg/sprite.svg#eng"></use>
+                    </svg>eng</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <nav class="main_nav">
+        <div class="main_nav_top">
+          <div class="box">
+            <ul>
+              <li><a href="#">Товары</a></li>
+              <li><a href="#">Магазин</a></li>
+              <li><a href="#">Рекламные места</a></li>
+              <li><a href="#">Бухгалтерия</a></li>
+              <li><a class="active" href="#">Личный кабинет</a></li>
+              <li><a href="#">Партнерская программа</a></li>
+              <li><a href="#">Описание сервиса</a></li>
+              <li><a href="#">Торговая площадка</a></li>
+              <li><a class="question_mark" href="#" data-placement="top" data-toggle="tooltip" title="задать вопрос">
+                  <svg class="pic-question_mark ">
+                    <use xlink:href="img/svg/sprite.svg#question_mark"></use>
+                  </svg></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="main_nav_bottom">
+          <div class="box">
+            <ul>
+              <li><a class="active" href="my_info.html">Детали</a></li>
+              <li><a href="messages.html">Переписка</a></li>
+              <li><a href="news.html">Новости</a></li>
+              <li><a href="my_security.html">Безопасность</a></li>
+              <li><a href="space_rent.html">Дисковое пространство</a></li>
+              <li><a href="notify_settings.html">Уведомления</a></li>
+              <li><a href="staff.html">Сотрудники</a></li>
+              <li><a href="mailings.html">Рассылки</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <main>
+        <div class="box">
+          <ul class="nav nav-tabs" role="tablist">
+            <li><a class="nav-link active" href="#tabBasic" role="tab" data-toggle="tab">Basic</a></li>
+            <li><a class="nav-link" href="#tabParameters" role="tab" data-toggle="tab">Parameters</a></li>
+            <li><a class="nav-link" href="#tabGallery" role="tab" data-toggle="tab">Gallery</a></li>
+            <li><a class="nav-link" href="#tabContent" role="tab" data-toggle="tab">Content</a></li>
+            <li><a class="nav-link" href="#tabPayment" role="tab" data-toggle="tab">Payment</a></li>
+            <li><a class="nav-link" href="#tabSales" role="tab" data-toggle="tab">Sales</a></li>
+            <li><a class="nav-link" href="#tabDiscount" role="tab" data-toggle="tab">Discount</a></li>
+            <li><a class="nav-link" href="#tabHTML_code" role="tab" data-toggle="tab">HTML_code</a></li>
+            <li><a class="nav-link" href="#tabNotifications" role="tab" data-toggle="tab">Notifications</a></li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane active" id="tabBasic">
+              <div class="content_box">
+                <div class="alert_box info">
+                  <div class="flags_info">
+                    Из предложенного списка определитесь с типом товара и выберите то, что вы разместите в качестве товара. Именно это будет передано покупателю сразу после оплаты. <br>
+                    В процессе выбора типа товара обратите внимание на сопутствующую характеристику товара:<br><span class="flag unique">Уникальный </span>— товар, каждый экземпляр которого продается только один раз, без возможности повторной продажи: ПИН-код, пароль, реквизиты доступа к чему-либо и т.д. Чтобы продать 100 пин-кодов активации игры, вам понадобится загрузить все 100 кодов, и каждый покупатель получит свой уникальный код.<br><span class="flag universal">Универсальный </span>— загружается в одном экземпляре, а продается бесконечное число раз. Примеры универсальных товаров: программа, электронная книга, база данных. Так, чтобы продать электронную книгу 100 раз, достаточно загрузить ее в DigiSeller единожды.<br><span class="flag form">Форма </span>— иногда возникает необходимость продавать программное обеспечение только после получения от покупателя определенных регистрационных данных. В этом случае, вместо того чтобы загружать содержимое товара, вы настроите поля регистрационной формы и способ получения введенных покупателем данных. Покупатель после оплаты заполнит заданную вами форму.
+                  </div>
+                </div>
+                <div class="select_goods_box"><a class="btn btn_blue" href="#">вопросы и ответы по выбору типа товара в Digiseller<span>
+                      <svg class="pic-question_mark ">
+                        <use xlink:href="img/svg/sprite.svg#question_mark"></use>
+                      </svg></span></a>
+                  <div class="select_goods_item">
+                    <div class="select_goods_item_title">Тип товара:</div>
+                    <div class="select_goods_item_content" id="select_goods_collapse">
+                      <div class="select_goods_item_content_item"><a class="main_link collapse_toggle" id="uniq_fix" href="#" data-toggle="collapse" data-target="#uniq_fix_content" aria-expanded="true" aria-controls="uniq_fix_content"><span class="collapse_btn"></span>Уникальный товар с фиксированной ценой</a>
+                        <div class="collapse" id="uniq_fix_content" aria-labelledby="uniq_fix_content" data-parent="#select_goods_collapse">
+                          <div class="hint">после оплаты покупатель получит:</div>
+                          <ul class="select_goods_list">
+                            <li class="select_goods_list_item">
+                              <div class="form_element">
+                                <label class="for_radio">
+                                  <input type="radio" name="radio_elem"><span class="text">уникальный текст <span class="bold">(вы загружаете сами) </span></span><span class="flag unique">Уникальное содержимое</span>
+                                </label>
+                              </div>
+                              <div class="hint"><span class="bold">Что продавать: </span>коды активации, реквизиты доступа к чему-либо (логин пароль), уникальные текстовые ключи и т.п.<br><span class="bold">Особенности: </span>после создания карточки товара вам будет предложено загрузить необходимое количество кодов, в дальнейшем вы сможете пополнить их число. Товар продается по правилу: один код в одни руки.</div>
+                              <div class="form_element model">
+                                <label class="for_check disabled">
+                                  <input type="checkbox" disabled><span class="text">модель "Предзаказ" недоступна (минимальный рейтинг продавца: 5)</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="select_goods_list_item">
+                              <div class="form_element">
+                                <label class="for_radio">
+                                  <input type="radio" name="radio_elem"><span class="text">уникальный файл <span class="bold">(вы загружаете сами) </span></span><span class="flag unique">Уникальное содержимое</span>
+                                </label>
+                              </div>
+                              <div class="hint"><span class="bold">Что продавать: </span>сканы изображений карт или ключей, текстовые файлы с реквизитами доступа, архивы, содержащие уникальную информацию и т.п.<br><span class="bold">Особенности: </span>после указания названия, описания и цены товара вам будет предложено загрузить необходимое количество файлов, которое в дальнейшем вы сможете пополнить или сократить. Товар продается по правилу: один файл в одни руки.</div>
+                              <div class="form_element model">
+                                <label class="for_check disabled">
+                                  <input type="checkbox" disabled><span class="text">модель "Предзаказ" недоступна (минимальный рейтинг продавца: 5)</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="select_goods_list_item">
+                              <div class="form_element">
+                                <label class="for_radio">
+                                  <input type="radio" name="radio_elem"><span class="text">уникальный код <span class="bold">(создается системой Digiseller автоматически) </span></span><span class="flag unique">Уникальное содержимое</span>
+                                </label>
+                              </div>
+                              <div class="hint"><span class="bold">Что продавать: </span>товары (или услуги), предполагающие передачу товара (оказание услуги) на стороннем сайте; а так же товары, требующие дополнительной связи продавца и покупателя после оплаты.<br><span class="bold">Особенности: </span>после оплаты покупатель получает уникальный 16-значный код. Передача этого кода от покупателя к продавцу может осуществляться как вручную самим покупателем, так и путем автоматического перенаправления на вашу веб-страницу с дополнительным(и) параметрами в адресе запроса. Проверить код вы сможете вручную с помощью поиска через форму поиска вверху или программно, используя API-метод. Выбор и настройку подходящего вам варианта (от ручного до полностью автоматизированного) вы сможете сделать на одном из следующих этапов.</div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="select_goods_item_content_item"><a class="main_link collapse_toggle" id="uniq_unfix" href="#" data-toggle="collapse" data-target="#uniq_unfix_content" aria-expanded="false" aria-controls="uniq_unfix_content"><span class="collapse_btn"></span>Уникальный товар с нефиксированной ценой</a>
+                        <div class="collapse" id="uniq_unfix_content" aria-labelledby="uniq_unfix_content" data-parent="#select_goods_collapse">
+                          <div class="hint">после оплаты покупатель получит:</div>
+                          <ul class="select_goods_list">
+                            <li class="select_goods_list_item">
+                              <div class="form_element">
+                                <label class="for_radio">
+                                  <input type="radio" name="radio_elem"><span class="text">уникальный код <span class="bold">(создается системой Digiseller автоматически) </span></span><span class="flag unique">Уникальное содержимое</span>
+                                </label>
+                              </div>
+                              <div class="hint"><span class="bold">Что продавать: </span>игровую валюту, условные единицы для пополнения внутреннего счета на вашем ресурсе и т.п.<br><span class="bold">Особенности: </span>вы определяете название и стоимость одной единицы товара (""шт."", ""кк"", ""GOLD"" и т.п.), можете установить скидки в зависимости от количества приобретаемых единиц. При покупке покупатель сам задает сумму платежа в зависимости от количества приобретаемых единиц вашего товара. После оплаты покупатель получает уникальный код Digiseller, который сообщит вам вручную или путем принудительного уведомления c передачей дополнительной информации, а вы, в свою очередь, с помощью основной формы поиска личного кабинета (наверху) или <a class="main_link" href="#">API-метода </a>проверите его подлинность, узнаете сумму платежа и количество оплаченных единиц. При желании все это можно автоматизировать.</div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="select_goods_item_content_item"><a class="main_link collapse_toggle" id="soft" href="#" data-toggle="collapse" data-target="#soft_content" aria-expanded="false" aria-controls="soft_content"><span class="collapse_btn"></span>Программное обеспечение (ПО)</a>
+                        <div class="collapse" id="soft_content" aria-labelledby="soft_content" data-parent="#select_goods_collapse">
+                          <div class="hint">после оплаты покупатель получит:</div>
+                          <ul class="select_goods_list">
+                            <li class="select_goods_list_item">
+                              <div class="form_element">
+                                <label class="for_radio">
+                                  <input type="radio" name="radio_elem"><span class="text">файл (архив) с инсталляцией</span><span class="flag universal">Универсальный</span>
+                                </label>
+                              </div>
+                              <div class="hint"><span class="bold">Что продавать: </span>программное обеспечение в виде файла-архива (или файла инсталляции), не требующего ввода какого-либо регистрационного кода (ключа) для работы.<br><span class="bold">Особенности: </span>после создания карточки товара, вам будет предложено загрузить файл (архив) к нам на сервер. Именно он будет передан покупателю после оплаты.</div>
+                            </li>
+                            <li class="select_goods_list_item">
+                              <div class="form_element">
+                                <label class="for_radio">
+                                  <input type="radio" name="radio_elem"><span class="text">текстовую ссылку (URL) на файл с инсталляцией</span><span class="flag universal">Универсальный</span>
+                                </label>
+                              </div>
+                              <div class="hint"><span class="bold">Что продавать: </span>программное обеспечение в виде внешней ссылки на архив / инсталляцию, размещенную на внешнем хостинге или облачном сервисе.<br><span class="bold">Особенности: </span>после создания карточки товара, вам будет предложено указать ссылку (URL). Именно эта ссылка будет передана покупателю после оплаты. </div>
+                            </li>
+                            <li class="select_goods_list_item">
+                              <div class="form_element">
+                                <label class="for_radio">
+                                  <input type="radio" name="radio_elem"><span class="text">регистрационный код <span class="bold">(вы загружаете сами)</span></span><span class="flag unique">Уникальное содержимое</span>
+                                </label>
+                              </div>
+                              <div class="hint"><span class="bold">Что продавать: </span>программное обеспечение, которым можно полноценно воспользоваться только после ввода кода активации (ключа).<br><span class="bold">Особенности: </span>после создания карточки товара, вам будет предложено загрузить необходимое количество регистрационных кодов для продажи. В дальнейшем вы сможете пополнить или сократить их количество. Непосредственно архив / инсталляцию / trial-версию программы мы рекомендуем разместить на любом стороннем сайте (облачном хранилище), а ссылку на него добавить в описание товара. Продается по правилу: один код в одни руки.</div>
+                            </li>
+                            <li class="select_goods_list_item">
+                              <div class="form_element">
+                                <label class="for_radio">
+                                  <input type="radio" name="radio_elem"><span class="text">данные, полученные от вашего сервера</span><span class="flag form">Форма</span>
+                                </label>
+                              </div>
+                              <div class="hint"><span class="bold">Что продавать: </span>программное обеспечение, которое для полноценной работы требует от покупателя передачи регистрационных данных продавцу.<br><span class="bold">Особенности: </span>сразу после оплаты покупателю будет предложено заполнить форму, состоящую из полей, которые вы заранее определите. Эти данные будут автоматически отправлены вам по email или HTTP-методом POST с XML в теле запроса. Предусмотрена возможность автоответа (HTTP RESPONSE) покупателю сообщением, содержащим код для запуска данной конкретной копии ПО.</div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="select_goods_item_content_item"><a class="main_link collapse_toggle" id="book" href="#" data-toggle="collapse" data-target="#book_content" aria-expanded="false" aria-controls="book_content"><span class="collapse_btn"></span>Электронная книга (ЭК)</a>
+                        <div class="collapse" id="book_content" aria-labelledby="book_content" data-parent="#select_goods_collapse">
+                          <div class="hint">после оплаты покупатель получит:</div>
+                          <ul class="select_goods_list">
+                            <li class="select_goods_list_item">
+                              <div class="form_element">
+                                <label class="for_radio">
+                                  <input type="radio" name="radio_elem"><span class="text">файл</span><span class="flag universal">Универсальный</span>
+                                </label>
+                              </div>
+                              <div class="hint"><span class="bold">Что продавать: </span>ЭК в виде файла, не требующего ввода какого-либо регистрационного кода (ключа) для использования.<br><span class="bold">Особенности: </span>после указания названия, описания и цены ЭК, вам будет предложено загрузить файл к нам на сервер. Именно он будет передан покупателю после оплаты.</div>
+                            </li>
+                            <li class="select_goods_list_item">
+                              <div class="form_element">
+                                <label class="for_radio">
+                                  <input type="radio" name="radio_elem"><span class="text">текстовую ссылку (URL) на файл с инсталляцией</span><span class="flag universal">Универсальный</span>
+                                </label>
+                              </div>
+                              <div class="hint"><span class="bold">Что продавать: </span>ЭК в виде ссылки на файл, который размещен на стороннем сайте(хостинге) или файлообменном сервисе.<br><span class="bold">Особенности: </span>после указания названия, описания и цены ЭК вам будет предложено указать эту ссылку (URL). Именно она будет передана покупателю после оплаты. </div>
+                            </li>
+                            <li class="select_goods_list_item">
+                              <div class="form_element">
+                                <label class="for_radio">
+                                  <input type="radio" name="radio_elem"><span class="text">регистрационный код <span class="bold">(вы загружаете сами, не ограничен)</span></span><span class="flag unique">Уникальное содержимое</span>
+                                </label>
+                              </div>
+                              <div class="hint"><span class="bold">Что продавать: </span>ЭК, которой можно воспользоваться только после ввода регистрационного кода (ключа).<br><span class="bold">Особенности: </span>после указания названия, описания и цены ЭК, вам будет предложено загрузить необходимое количество регистрационных кодов к нам на сервер. В дальнейшем вы сможете пополнить или сократить их количество. Непосредственно файл ЭК мы рекомендуем разместить на любом стороннем сайте (хостинге), а ссылку на него добавить в описание. Товар продается по правилу: один код в одни руки.</div>
+                            </li>
+                            <li class="select_goods_list_item">
+                              <div class="form_element">
+                                <label class="for_radio">
+                                  <input type="radio" name="radio_elem"><span class="text">данные, полученные от вашего сервера</span><span class="flag form">Форма</span>
+                                </label>
+                              </div>
+                              <div class="hint"><span class="bold">Что продавать: </span>ЭК, которая перед открытием требует от покупателя передачи регистрационных данных продавцу.<br><span class="bold">Особенности: </span>после оплаты покупателю будет предложено заполнить форму, состоящую из полей, которые вы заранее определили. Данные покупателя будут автоматически отправлены вам по email или HTTP-методом POST с XML в теле запроса. Предусмотрена возможность автоматического ответа покупателю в виде регистрационного кода для открытия данной копии ЭК.</div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="select_goods_item_content_item"><a class="main_link collapse_toggle" id="random_product" href="#" data-toggle="collapse" data-target="#random_product_content" aria-expanded="false" aria-controls="random_product_content"><span class="collapse_btn"></span>Произвольный цифровой товар</a>
+                        <div class="collapse" id="random_product_content" aria-labelledby="random_product_content" data-parent="#select_goods_collapse">
+                          <div class="hint">после оплаты покупатель получит:</div>
+                          <ul class="select_goods_list">
+                            <li class="select_goods_list_item">
+                              <div class="form_element">
+                                <label class="for_radio">
+                                  <input type="radio" name="radio_elem"><span class="text">файл (архив)</span><span class="flag universal">Универсальный</span>
+                                </label>
+                              </div>
+                              <div class="hint"><span class="bold">Что продавать: </span>произвольный файл (архив).<br><span class="bold">Особенности: </span>после указания названия, описания и цены ЦТ, вам будет предложено загрузить файл к нам на сервер. Именно он будет передан покупателю после оплаты.</div>
+                              <div class="form_element model">
+                                <label class="for_check">
+                                  <input type="checkbox"><span class="text">модель "Плати сколько хочешь" - стоимость товара указывает покупатель</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="select_goods_list_item">
+                              <div class="form_element">
+                                <label class="for_radio">
+                                  <input type="radio" name="radio_elem"><span class="text">текст</span><span class="flag universal">Универсальный</span>
+                                </label>
+                              </div>
+                              <div class="hint"><span class="bold">Что продавать: </span>произвольный текст с ограничением до 2 тыс. символов.<br><span class="bold">Особенности: </span>после указания названия, описания и цены ЦТ, вам будет предложено ввести (загрузить) этот текст. Именно он будет передан покупателю после оплаты.</div>
+                              <div class="form_element model">
+                                <label class="for_check">
+                                  <input type="checkbox"><span class="text">модель "Плати сколько хочешь" - стоимость товара указывает покупатель</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="select_goods_list_item">
+                              <div class="form_element">
+                                <label class="for_radio">
+                                  <input type="radio" name="radio_elem"><span class="text">данные, полученные от вашего сервера</span><span class="flag form">Форма</span>
+                                </label>
+                              </div>
+                              <div class="hint"><span class="bold">Что продавать: </span>цифровой товар, который требует от покупателя передачи регистрационных данных продавцу.<br><span class="bold">Особенности: </span>после оплаты покупателю будет предложено заполнить форму, состоящую из полей, которые вы заранее определили. Данные покупателя будут автоматически отправлены вам по email или HTTP-методом POST с XML в теле запроса. Предусмотрена возможность автоматического ответа покупателю (RESPONSE) в виде произвольного текста длиной до 255 символов.</div>
+                              <div class="form_element model">
+                                <label class="for_check">
+                                  <input type="checkbox"><span class="text">модель "Плати сколько хочешь" - стоимость товара указывает покупатель</span>
+                                </label>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="select_goods_item">
+                    <div class="select_goods_item_title"></div>
+                    <div class="select_goods_item_content">
+                      <input class="btn btn_blue" type="submit" value="продолжить">
+                      <div class="alert_box warning">Выберите тип товара</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <div class="box">
+          <div class="footer_content">
+            <div class="copy">Copyright ©2020 Fincom Teh Ltd.<br>Designed by <a href="#">Computing Forces</a></div>
+            <div class="footer_nav"><a href="#">API</a><a href="#">Telegram Bot</a><a href="#">Чат</a></div><a class="footer_logo" href="#">
+              <svg class="pic-googleplay ">
+                <use xlink:href="img/svg/sprite.svg#googleplay"></use>
+              </svg></a>
+          </div>
+        </div>
+      </footer>
+      <script src="static/js/libs.min.js"></script>
+      <script src="static/js/svgxuse.min.js" defer></script>
+      <script src="https://cdn.polyfill.io/v3/polyfill.min.js?features=Array.from%2Ces5%2Ces6%2CSymbol%2CSymbol.iterator%2CDOMTokenList%2CObject.assign%2CCustomEvent%2CElement.prototype.classList%2CElement.prototype.closest%2CElement.prototype.dataset%2CArray.prototype.find%2CArray.prototype.includes"></script>
+      <script src="js/common.js"></script>
+    </div>
+  </body>
+</html>
