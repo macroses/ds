@@ -1,0 +1,310 @@
+main
+    .box
+        .content_box.mailings
+            .mailings_info
+                |Здесь вы можете создать рассылку по своим покупателям, точечно указав нужных вам получателей с помощью фильтров.
+                .alert_box.warning
+                    span.bold Внимание! 
+                    |Запрещено рекламировать собственный магазин, используя аудиторию торговых площадок (например, Plati.Market) <br>
+                    |Начало рассылки может быть не ранее, чем через 12 часов с текущего момента.
+                .alert_box.additional_info Действуют ограничения на количество рассылок: не чаще чем 
+                    span.bold 1 
+                    |в день, 
+                    span.bold 2 
+                    |в месяц.
+
+        +tab-list(['Scheduled', 'Completed', 'Settings'], 0)
+            +tab('Scheduled', 'active')
+                .content_box
+                    table.equal_cells
+                        colgroup
+                            col
+                            col
+                            col
+                            col
+                            col
+                        thead
+                            tr
+                                th Название
+                                th.align_center Корреспондентов
+                                th.align_center Статус
+                                th.align_center Дата старта
+                                th.align_center Отменить рассылку
+                        tbody
+                            tr
+                                td Рассылка 19.02.2019
+                                td.align_center 104
+                                td.align_center Ожидается
+                                td.align_center 30.10.2020 9:40:00
+                                td.align_center
+                                    button.btn.btn_gray отменить
+                            tr
+                                td Рассылка 19.02.2019Рассылка 19.02.2019Рассылка 19.02.2019Рассылка 19.02.2019Рассылка 19.02.2019Рассылка 19.02.2019Рассылка 19.02.2019Рассылка 19.02.2019
+                                td.align_center 104
+                                td.align_center Ожидается
+                                td.align_center 30.10.2020 9:40:00
+                                td.align_center
+                                    button.btn.btn_gray отменить
+            +tab('Completed')
+                .content_box
+                    table.equal_cells
+                        colgroup
+                            col
+                            col
+                            col
+                            col
+                        thead
+                            tr
+                                th Название
+                                th Корреспондентов
+                                th Дата завершения
+                                th Просмотров
+                        tbody
+                            tr
+                                td Рассылка 19.02.2019
+                                td 24
+                                td 19.02.2019 15:41:04
+                                td 13
+                            tr
+                                td Рассылка 19.02.2019 ассылка 19.02.2019 ассылка 19.02.2019 ассылка 19.02.2019 ассылка 19.02.2019 ассылка 19.02.2019 ассылка 19.02.2019 ассылка 19.02.2019 ассылка 19.02.2019 
+                                td 24
+                                td 19.02.2019 15:41:04
+                                td 13
+            +tab('Settings')
+                .content_box
+                    .form_group
+                        .form_element.mailings
+                            label.for_check
+                                input(type="checkbox")
+                                span.text Заменить логотип в письме на 
+                                    a.main_link(href="#") логотип моего магазина
+                            .hint касается только продаж через "Мой магазин"
+
+        .content_box
+            button.btn.btn_blue(data-toggle="modal" data-target="#mailings_step1") создать рассылку
+
+.modal.fade(id="mailings_step1" tabindex="-1" aria-labelledby="mailings_step1" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered
+        .modal-content
+            .modal-header
+                .modal-title Шаг 1: Название рассылки
+                span.close(data-dismiss="modal" aria-label="Close")
+                    +icon('modal_close')
+            .modal-body
+                .form_element.vertical
+                    label Название рассылки
+                    input(type="text")
+            .modal-footer
+                button.btn.btn_gray(data-toggle="modal" data-target="#mailings_step2" data-dismiss="modal" aria-label="Close") далее
+
+.modal.fade(id="mailings_step2" aria-labelledby="mailings_step2" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered
+        .modal-content
+            .modal-header
+                .modal-title Шаг 2: Дата и время начала рассылки
+                span.close(data-dismiss="modal" aria-label="Close")
+                    +icon('modal_close')
+            .modal-body
+                .form_group.inline_from
+                    .form_element
+                        // dates
+                        label Дата:
+                        input.dates(type="text")
+                    .form_element
+                        label Время:
+                        select
+                            option(value="00") 00
+                            option(value="01") 01
+                            option(value="02") 02
+                            option(value="03") 03
+                            option(value="04") 04
+                            option(value="05") 05
+                            option(value="06") 06
+                            option(value="07") 07
+                            option(value="08") 08
+                            option(value="09") 09
+                            option(value="10") 10
+                            option(value="11") 11
+                            option(value="12") 12
+                            option(value="13") 13
+                            option(value="14") 14
+                            option(value="15") 15
+                            option(value="16") 16
+                            option(value="17") 17
+                            option(value="18") 18
+                            option(value="19") 19
+                            option(value="20") 20
+                            option(value="21") 21
+                            option(value="22") 22
+                            option(value="23") 23
+                        span ч.
+                    .form_element
+                        select
+                            option(value="00") 00
+                            option(value="01") 01
+                            option(value="02") 02
+                        span мин.
+            .modal-footer
+                button.btn.btn_gray(data-toggle="modal" data-target="#mailings_step1" data-dismiss="modal" aria-label="Close") назад
+                button.btn.btn_gray.btn.btn_gray(data-toggle="modal" data-target="#mailings_step3" data-dismiss="modal" aria-label="Close") далее
+
+.modal.fade(id="mailings_step3" tabindex="-1" aria-labelledby="mailings_step3" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered.modal-lg
+        .modal-content
+            .modal-header
+                .modal-title Шаг 3: Создание списка получателей
+                span.close(data-dismiss="modal" aria-label="Close")
+                    +icon('modal_close')
+            .modal-body
+                .mailing_current_filters
+                    |Текущие фильтры:
+                    .added_recipients_counter
+                        |выбрано получателей
+                        span 0
+                .mailings_table_filters
+                    table.equal_cells
+                        colgroup
+                            col(style="width: 250px")
+                            col(style="width: 90px")
+                            col(style="width: 90px")
+                            col(style="width: 110px")
+                            col(style="width: 90px")
+                            col(style="width: 60px")
+                        thead
+                            tr
+                                th Товар
+                                th С
+                                th По
+                                th Площадка
+                                th Язык
+                                th.align_center
+                                    +icon('delete-btn')
+                        tbody
+                            tr
+                                td COLD Уникальный товар с нефиксированной ценой COLD Уникальный товар с нефиксированной ценой
+                                td 14.10.2020
+                                td 14.10.2020
+                                td Мой магазин
+                                td ru-RU
+                                td.align_center
+                                    button.btn.delete_btn
+                                        +icon('delete-btn')
+                    
+                .mailings_table_filters_setting
+                    .form_element
+                        label Площадка:
+                        select
+                            option(value="0") -
+                            option(value="1") Мой магазин
+                            option(value="2") Plati.Market
+                    .form_element
+                        label Язык покупки
+                        select
+                            option(value="0") -
+                            option(value="1") Русский
+                            option(value="2") Английский
+                    .form_element
+                        label Выберите товар:
+                        .search_result_box
+                            input(type="text" placeholder="ID товара или его название")
+                            ul.search_result_list
+                                li 111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+                                li 2
+                                li 3
+                                li 4
+                                li 5
+                                li 6
+                                li 7
+                                li 8
+                    .mailings_table_filters_setting-date
+                        // dates
+                        .form_element
+                            label Дата покупки:
+                        .form_element
+                            input(type="text" placeholder="С" id="date_start")
+                        .form_element
+                            input(type="text" placeholder="По" id="date_end")
+                    button.btn.btn_gray добавить
+
+            .modal-footer
+                button.btn.btn_gray(data-toggle="modal" data-target="#mailings_step2" data-dismiss="modal" aria-label="Close") назад
+                button.btn.btn_gray(data-toggle="modal" data-target="#mailings_step4" data-dismiss="modal" aria-label="Close") далее
+
+.modal.fade(id="mailings_step4" tabindex="-1" aria-labelledby="mailings_step4" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered.modal-tinymce
+        .modal-content
+            .modal-header
+                .modal-title Шаг 4: Тема и текст письма рассылки
+                span.close(data-dismiss="modal" aria-label="Close")
+                    +icon('modal_close')
+            .modal-body
+                .form_element
+                    span Тема и текст рассылки на
+                    select
+                        option(value="0") русском
+                        option(value="1") английском
+                    span языке
+                .form_element.mailing_title
+                    label Тема письма:
+                    input(type="text")
+                textarea#mailing_area
+            .modal-footer
+                button.btn.btn_gray(data-toggle="modal" data-target="#mailings_step3" data-dismiss="modal" aria-label="Close") назад
+                button.btn.btn_gray(data-toggle="modal" data-target="#mailings_step5" data-dismiss="modal" aria-label="Close") далее
+
+.modal.fade(id="mailings_step5" tabindex="-1" aria-labelledby="mailings_step5" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered.modal-lg
+        .modal-content
+            .modal-header
+                .modal-title Шаг 5: Информация о рассылке
+                span.close(data-dismiss="modal" aria-label="Close")
+                    +icon('modal_close')
+            .modal-body
+                .mailings_email_title
+                    |Название: 
+                    span Рассылка 29.10.2020
+                .mailing_current_filters
+                    |Текущие фильтры:
+                    .added_recipients_counter
+                        |выбрано получателей
+                        span 0
+                .mailings_table_filters
+                    table.equal_cells
+                        colgroup
+                            col(style="width: 350px")
+                            col
+                            col
+                            col
+                            col
+                        thead
+                            tr
+                                th Товар
+                                th С
+                                th По
+                                th Площадка
+                                th Язык
+                        tbody
+                            tr
+                                td COLD Уникальный товар с нефиксированной ценой COLD Уникальный товар с нефиксированной ценой
+                                td 14.10.2020
+                                td 14.10.2020
+                                td Мой магазин
+                                td ru-RU
+                    
+                .mailing_text_preview
+                    |Текст письма: 
+                    span(data-placement="right" data-toggle="tooltip" title="тест письма тест письма тест письма тест письма тест письма тест письма тест письма те")
+                        +icon('rus')
+                    span(data-placement="right" data-toggle="tooltip" title="test test test")
+                        +icon('eng')
+                .mailings_email_title
+                    |Дата и время старта: 
+                    span 30.10.2020 01:29
+                    .form_element.inline
+                        label Отправить тестовое письмо на email: 
+                        input(type="text")
+                        button.btn.btn_gray отправить
+
+            .modal-footer
+                button.btn.btn_gray(data-toggle="modal" data-target="#mailings_step4" data-dismiss="modal" aria-label="Close") назад
+                button.btn.btn_blue завершить

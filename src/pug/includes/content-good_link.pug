@@ -1,0 +1,80 @@
+main
+    .box
+        .content_box
+            .page_nav
+                ul.breadcrumbs_list
+                    li.breadcrumb_item
+                        a.main_link(href="#" data-placement="top" data-toggle="tooltip" title="список моих товаров") Мои товары
+                    li.breadcrumb_item
+                        .breadcrumb_item_name Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена 
+                        a(href="#" data-placement="top" data-toggle="tooltip" title="открыть страницу с описанием товара")
+                            +icon('good_link')
+                        .breadcrumb_item_price 14895 
+                            span RUB
+                .page_nav_item
+                    .prev 
+                        a.main_link(href="#") предыдущий товар
+                    .next 
+                        a.main_link(href="#") следующий товар
+
+        +tab-list(['Basic', 'Parameters', 'Gallery', ['Content', 10], 'Payment', 'Sales', 'Discount', 'HTML_code', 'Notifications'], 7)
+            +tab('HTML_code', 'active')
+                .content_box
+                    .good_link
+                        .good_link_params
+                            .alert_box.info
+                                |Если вы не используете 
+                                a.main_link(href="#") виджет магазина 
+                                |для отображения товаров, вы можете добавить HTML-код отдельных товаров на страницу вашего сайта.
+
+                            .good_link_params_content
+                                .title_block 1. Выберите, что отображать на сайте:
+                                .good_link_options
+                                    .form_element
+                                        label.for_check
+                                            input(type="checkbox" checked)
+                                            span.text Изображение
+                                        select
+                                            option(value="0") 50
+                                            option(value="1") 60
+                                            option(value="2") 70
+                                            option(value="3") 80
+                                            option(value="4") 90
+                                            option(value="5") 100
+                                        span px
+                                    .form_element
+                                        label.for_check
+                                            input(type="checkbox" checked)
+                                            span.text Название товара
+                                    .form_element
+                                        label.for_check
+                                            input(type="checkbox" checked)
+                                            span.text Цену
+
+                                .title_block 2. Вставьте HTML-код<span class="star">* </span> товара на страницу вашего сайта
+                                .good_link_code
+                                    span.clipboard 
+                                        +icon('copy')
+                                        |скопировать в буфер
+                                    .form_element
+                                        textarea.good_html_code
+                                    .hint
+                                        span.star *
+                                        |Если на вашей странице уже есть код другого товара, то код &#60;script&#62;...&#60;/script&#62; повторно можно не вставлять. Достаточно скопировать только код &#60;div&#62;…&#60;/div&#62;
+                                    .hint
+                                        span.star *
+                                        | Для указания фиксированного языка, необходимо добавить HTML-атрибут data-lang="ru-RU" или data-lang="en-US" в HTML-тег div.
+
+                                    .title_block Ссылка на страницу оплаты товара
+                                    span.clipboard 
+                                        +icon('copy')
+                                        |скопировать в буфер
+                                    .form_element
+                                        textarea
+
+                        .params_preview
+                            .params_preview_content
+                                .params_preview_header
+                                    +icon('preview')
+                                    | Превью формы оплаты
+                                .params_preview_form

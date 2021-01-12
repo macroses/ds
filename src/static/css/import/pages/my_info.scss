@@ -1,0 +1,269 @@
+.my_info_content {
+    display: flex;
+    &-left {
+        flex: 8;
+        margin-right: 10px;
+    }
+
+    &-right {
+        flex: 4;
+        margin-left: 10px;
+    }
+}
+
+.personal_data_list {
+    font-size: 13px;
+    & + .btn_group {
+        margin: 20px 0 0;
+    }
+}
+
+.personal_data_item {
+    display: flex;
+    margin-bottom: 20px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    &-title {
+        color: $titles_color;
+        flex: 1;
+    }
+    &-content{ 
+        flex: 1;
+        max-width: 50%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.my_info_graph {
+    display: flex;
+
+}
+
+.my_info_graph_canvas {
+    flex: 1;
+    margin-right: 15px;
+    canvas {
+        width: 100%;
+        height: 300px;
+        background: #4d4d4d;
+    }
+}
+
+.my_info_graph_stat {
+    flex: 1;
+    select {
+        width: 78px;
+    }
+}
+
+.my_info_graph_canvas_header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    min-height: 34px;
+}
+
+.my_info_graph_canvas_title {
+    font: bold 12px Roboto;
+    margin-right: 10px;
+}
+
+.extra_stat {
+    padding-top: 10px;
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+.section_content_header {
+    font: 700 14px Lato;
+    padding: 15px;
+    display: flex;
+    border-top-left-radius: $border-rad / 2;
+    border-top-right-radius: $border-rad / 2;
+    a {
+        color: $main_links_color;
+    }
+
+    .links_group {
+        font: 400 14px Lato;
+        margin-left: auto;
+        display: flex;
+        a {
+            margin-right: 20px;
+        }
+    }
+}
+
+.section_content_main {
+    .content_box {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+}
+
+.pic-smile-good,
+.pic-smile-bad {
+    @include box(16px);
+}
+
+.pic-question_table {
+    @include box(16px);
+    margin-left: 3px;
+}
+
+.question_span {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    span {
+        position: absolute;
+    }
+}
+
+.preview_news_item {
+    margin-bottom: 20px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    .news_item_date {
+        color: $table_color;
+        font-size: 13px;
+        margin-bottom: 5px;
+    }
+
+    .news_item_text {
+        color: $headers_color;
+        font: 400 14px/20px Lato;
+    }
+}
+
+.payment_list {
+    display: flex;
+    flex-wrap: wrap;
+    a {
+        @include flex-center;
+        @include box(34px);
+        border-radius: $border-rad;
+        margin: 4px;
+
+        &.decline {
+            border-color: #FFAAAA;
+            background-color: #FFCCCC;
+        }
+    }
+
+    .pic{
+        &-webmoney {
+            @include box(24px);
+        }
+        &-bitcoin {
+            @include box(26px);
+        }
+        &-paypal-method {
+            @include box(20px, 25px);
+        }
+        &-credit-card {
+            @include box(28px);
+        }
+        &-qiwi {
+            @include box(24px);
+        }
+        &-yandex-money {
+            @include box(26px);
+        }
+        &-mts {
+            @include box(24px);
+        }
+        &-beeline {
+            @include box(26px);
+        }
+        &-megafon {
+            @include box(24px);
+        }
+        &-tele-2 {
+            @include box(24px, 9px);
+        }
+        &-terminal {
+            @include box(16px, 24px);
+        }
+        &-bank {
+            @include box(24px);
+        }
+        &-russian-post {
+            @include box(32px);
+        }
+        &-wm-card {
+            @include box(28px);
+        }
+        &-present-card {
+            @include box(20px, 25px);
+        }
+        &-payment-steamskin {
+            @include box(25px);
+        }
+        &-alp {
+            @include box(25px);
+        }
+        &-union {
+            @include box(25px);
+        }
+    }
+}
+
+.security_status {
+    font-size: 13px;
+    svg {
+        @include box(11px);
+        margin-right: 10px;
+    }
+
+    &.positive {
+        .status_desc {
+            color: #78bd1b;
+        }
+    }
+    &.negative {
+        .status_desc {
+            color: #d0021b;
+        }
+    }
+
+    &.recomendation {
+        background: #ffebee;
+        margin: 0 -20px -20px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .pic-security {
+            @include box(44px, 58px);
+        }
+        
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+
+.recomendation_content {
+    text-align: center;
+    color: #b71c1c;
+    margin-top: 15px;
+    line-height: 16px;
+    a {
+        color: #ee2b2a;
+        text-decoration: underline;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.status_text {
+    color: $additional_info_color;
+    margin-left: 20px;
+}

@@ -1,0 +1,72 @@
+.responses {
+    table {
+        margin-top: 20px;
+
+        svg {
+            margin-right: 10px;
+        }
+    }
+
+    .deleted {
+        color: #b2b2b2;
+    }
+
+    .absent {
+        color: red;
+    }
+}
+
+.blacklist {
+    display: flex;
+}
+
+.blacklist_table {
+    max-width: 630px;
+    .for_check {
+        margin: 0 auto;
+    }
+}
+
+.blacklist_form {
+    background: #f6f8f9;
+    padding: 15px;
+    border: solid 1px #cfd8dc;
+    margin: 20px 0 30px;
+    flex: 1;
+
+    .title {
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    & + .blacklist_form {
+        margin-left: 20px;
+    }
+}
+
+.blacklist_form_options {
+    display: flex;
+    .form_element {
+        margin-right: 10px;
+    }
+
+    .complete {
+        margin-left: auto;
+    }
+
+    svg {
+        margin-left: 5px;
+    }
+
+    input[type="number"] {
+        width: 50px;
+        margin: 0 2px;
+        font-size: 13px;
+        padding: 0 6px;
+    }
+
+    .group_block {
+        font-size: 13px;
+    }
+}

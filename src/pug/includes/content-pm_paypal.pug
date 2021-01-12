@@ -1,0 +1,281 @@
+main
+    .box
+        +tab-list(['General_rules', 'Digiseller', 'WM_Merchant', 'PayPal', 'PayMaster', 'Robokassa', 'Yandex_Checkout', 'Settings'], 3)
+            +tab('WM_Merchant', 'active')
+                .content_box
+                    .pm
+                        .pm_settings
+                            .alert_box.info Прием платежей через 
+                                a.main_link(href="#") PayPal
+                                |  осуществляется напрямую на счет в системе PayPal. Категория вашего счета в PayPal должна быть не ниже 
+                                span.bold Корпоративной
+                                |  (Premier / Business). Если вы еще не зарегистрированы в PayPal или тип вашего счета ниже требуемого, воспользуйтесь инструкцией справа на странице.
+                                br
+                                br
+                                |При продаже товаров PayPal-оплатой комиссия взимается с вашего 
+                                a.main_link(href="#") личного счета
+                                |  на сервисе Digiseller. При отсутствии доступных средств на личном счете, через некоторое время этот способ оплаты автоматически блокируется. Рекомендуем заблаговременно 
+                                a.main_link(href="#") пополнить
+                                |  свой счет в Digiseller.
+
+                            .pm_purses_settings
+                                .title_top
+                                    .title.bold Ваши учетные данные в PayPal:
+                                        a(href="#"): +icon('question_table')
+                                    a.main_link(href="#") получите ваши учетные данные
+
+                                ul.pm_purses_settings_list
+                                    li.pm_purses_settings_list_item
+                                        .title Имя пользователя API:
+                                        .form_element
+                                            input(type="text")
+                                        .configure
+                                            .text
+                                                +icon('file_accept')
+                                                |проверено
+                                    li.pm_purses_settings_list_item
+                                        .title Пароль API:
+                                        .form_element
+                                            input(type="text")
+                                        .configure
+                                            .text.err 
+                                                +icon('file_denied')
+                                                |не проверено
+                                    li.pm_purses_settings_list_item
+                                        .title Подпись:
+                                        .form_element
+                                            input(type="text")
+                                        .configure
+                                            .text.err
+                                                +icon('file_denied')
+                                                |ошибка
+                                    li.pm_purses_settings_list_item.btns
+                                        .title
+                                        .form_element
+                                            .btn_group
+                                                button.btn.btn_gray(disabled) сохранить
+                                                button.btn.btn_gray проверить
+                                        .configure
+
+                            .pm_purses_settings
+                                .title_top
+                                    .title.bold API credentials:
+                                        a(href="#"): +icon('question_table')
+                                    
+
+                                ul.pm_purses_settings_list
+                                    li.pm_purses_settings_list_item
+                                        .title Имя пользователя API:
+                                        .form_element
+                                            input(type="text")
+                                        .configure
+                                            .text
+                                                +icon('file_accept')
+                                                |проверено
+                                    li.pm_purses_settings_list_item
+                                        .title Пароль API:
+                                        .form_element
+                                            input(type="text")
+                                        .configure
+                                            .text.err 
+                                                +icon('file_denied')
+                                                |не проверено
+                                    li.pm_purses_settings_list_item.btns
+                                        .title
+                                        .form_element
+                                            .btn_group
+                                                button.btn.btn_gray(disabled) сохранить
+                                                button.btn.btn_gray проверить
+                                        .configure
+
+                            .pm_purses_settings
+                                .title.bold Дополнительные настройки:
+                                .equation_box
+                                    .equation_text Стоимость товара через PayPal
+                                    +icon('equal')
+                                    .equation_text.align_center стоимость товара
+                                    +icon('equal-plus')
+                                    .form_element
+                                        input(type="text")
+                                    .equation_text.bold %
+                                    +icon('equal-plus')
+                                    .form_element.money
+                                        input(type="text")
+                                    .form_element
+                                        select
+                                            option(value="0") USD
+                                            option(value="1") RUB
+                                            option(value="2") EUR
+                                    button.btn.btn_gray сохранить
+
+                            .pm_purses_settings
+                                .title Установить <u>суточный</u> лимит покупок:
+                                .pm_day_limit
+                                    .form_element
+                                        label.for_check
+                                            input(type="checkbox")
+                                            span.text для одного PayPal пользователя (счета):
+                                    .form_element
+                                        input(type="text" disabled)
+                                        span.text USD
+                                    button.btn.btn_gray сохранить
+                                .pm_day_limit
+                                    .form_element
+                                        label.for_check
+                                            input(type="checkbox")
+                                            span.text для всех моих товаров через PayPal:s
+                                    .form_element
+                                        input(type="text")
+                                        span.text USD
+                                    button.btn.btn_gray сохранить
+                                
+                            
+
+                            .pm_purses_settings.after_pay
+                                .title Сразу после оплаты покупатель:
+                                .form_element
+                                    label.for_radio
+                                        input(type="radio", name="after_pay" checked)
+                                        span.text перенаправляется на страницу с оплаченным товаром, а также получает товар на email, указанный при оплате
+                                .form_element
+                                    label.for_radio
+                                        input(type="radio", name="after_pay")
+                                        span.text получает товар на email, привязанный к его учетной записи PayPal
+
+                            .pm_purses_settings.after_pay
+                                .title Я разрешаю принимать платежи:
+                                .form_element
+                                    label.for_radio
+                                        input(type="radio", name="payment_mode" checked)
+                                        span.text от всех пользователей PayPal
+                                .hint Включение данной опции позволит покупателям оплачивать ваш товар непосредственно с кредитной карты 
+                                    img(src="img/paypall_cc.png", alt="")
+                                    |  без привязки её к PayPal-счету.
+                                .form_element
+                                    label.for_radio
+                                        input(type="radio", name="payment_mode")
+                                        span.text только от проверенных пользователей PayPal
+                                .hint Статус «проверен» выдаётся пользователю PayPal только после успешного прохождения процедуры 
+                                    a.main_link(href="#") проверки безопасности
+                                    |  PayPal.
+                                .form_element
+                                    label.for_radio
+                                        input(type="radio", name="payment_mode")
+                                        span.text только от пользователей PayPal из моего списка
+                                .hint При выборе данной опции способ оплаты PayPal пропадет из списка доступных для оплаты. Вам придется самому сообщать прямую ссылку на оплату нужным покупателям: 
+                                    span.link_view https://www.digiseller.market/asp2/pay_pp.asp?id_d=<span class="red">XXXXX</span>
+                                    |, где <span class="red">XXXXX</span> - это ID товара.
+
+                            .pm_paypal_email_table
+                                .hint Укажите email пользователя PayPal, которому вы разрешаете оплачивать. При необходимости вы можете ограничить его дневной лимит.
+                                table.equal_cells
+                                    colgroup
+                                        col(style="width: 320px")
+                                        col
+                                        col(style="width: 100px")
+                                    thead
+                                        tr
+                                            th email в PayPal
+                                            th дневной лимит
+                                            th
+                                    tbody
+                                        tr
+                                            td mail@mail.rumail@mail.rumail@mail.rumail@mail.rumail@mail.rumail@mail.rumail@mail.rumail@mail.rumail@mail.ru
+                                            td не ограничен
+                                            td.align_right 
+                                                button.btn.btn_gray
+                                                    span.minus
+                                        tr
+                                            td mail@mail.ru
+                                            td 100 USD
+                                            td.align_right 
+                                                button.btn.btn_gray
+                                                    span.minus
+                                        tr
+                                            td 
+                                                .form_element
+                                                    input(type="text" placeholder="укажите email пользователя в PayPal")
+                                            td
+                                                .form_element
+                                                    input(type="text" placeholder="не ограничен")
+                                                    span.tip USD
+                                            td.align_right 
+                                                button.btn.btn_gray: +icon('plus_button')
+                                                    
+
+
+                        .pm_description
+                            +fieldset('Инструкция по регистрации и настройке счета в PayPal')
+                                .fieldset_text
+                                    .content
+                                        span.bold 1
+                                        |. Если вы еще не зарегистрированы в PayPal, то вам потребуется 
+                                        a.main_link(href="#") открыть корпоративный счет
+                                        |. До недавнего времени PayPal разрешал осуществлять торговую деятельность с Личного (Personal) счета и поэтому, если вы уже пользовались данной 
+                                        |услугой ранее и у вас был открыт счет категории Premier, переходите к следующему пункту нашей инструкции. Если все же выяснится, что доступа к 
+                                        |API-интерфейсу у вас нет, то вам придется 
+                                        a.main_link(href="#") повысить категорию счета до Корпоративного
+                                        |.
+                                    
+                                    a.fieldset_img_toggle(href="#" data-toggle="modal" data-target="#img_one"): img(src="img/pm_paypal_1.png", alt="")
+
+                                    .content
+                                        span.bold 2
+                                        |. Установите Доступ к интерфейсу API. Для этого кликните на иконку “Настройки” в верхней правой части экрана.
+                                    a.fieldset_img_toggle(href="#" data-toggle="modal" data-target="#img_one"): img(src="img/pm_paypal_2.jpg", alt="")
+
+                                    .content
+                                        span.bold 3
+                                        |. На следующей странице в панели “Мои инструменты продаж” найдите позицию “Доступ к API-интерфейсу”. Нажмите “Обновить”.
+                                    a.fieldset_img_toggle(href="#" data-toggle="modal" data-target="#img_one"): img(src="img/pm_paypal_3.jpg", alt="")
+
+                                    .content
+                                        span.bold 4
+                                        |. На следующей странице перейдите по ссылке “Управление учетными данными API”.
+                                    a.fieldset_img_toggle(href="#" data-toggle="modal" data-target="#img_one"): img(src="img/pm_paypal_4.jpg", alt="")
+
+                                    .content
+                                        span.bold 5
+                                        |. Далее выберите первый вариант, “Запросите подпись API”, и нажмите “Подтвердить согласие и отправить”.
+                                    a.fieldset_img_toggle(href="#" data-toggle="modal" data-target="#img_one"): img(src="img/pm_paypal_5.jpg", alt="")
+
+                                    .content
+                                        span.bold 6
+                                        |. На следующей странице вы увидите нужные для Digiseller реквизиты: Имя пользователя <span class="bold"> API</span>, <span class="bold">Пароль API</span>,
+                                        <span class="bold"> Подпись</span>. Скопируйте их и вставьте в соответствующую форму на данной странице.
+
+.modal.fade(id="img_one" tabindex="-1" aria-labelledby="img_one" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered.modal-lg.modal-preview
+        .modal-content
+            .modal-body
+                // добавляем/удаляем data-interval="false" родительскому тегу карусели, чтобы стопнуть автоплей слайдов
+                .carousel.slide(id="carouselExampleFade" data-ride="carousel" data-interval="false")
+                    .carousel-inner
+                        .carousel-item.active
+                            img(src="img/pm_paypal_1.png", alt="")
+                        .carousel-item
+                            img(src="img/pm_paypal_2.jpg", alt="")
+                        .carousel-item
+                            img(src="img/pm_paypal_3.jpg", alt="")
+                        .carousel-item
+                            img(src="img/pm_paypal_4.jpg", alt="")
+                        .carousel-item
+                            img(src="img/pm_paypal_5.jpg", alt="")
+                    a.carousel-control-prev(href="#carouselExampleFade" role="button" data-slide="prev")
+                        span.carousel-control-prev-icon(aria-hidden="true")
+                    a.carousel-control-next(href="#carouselExampleFade" role="button" data-slide="next")
+                        span.carousel-control-next-icon(aria-hidden="true")
+            .modal-footer
+                .carousel_control
+                    .carousel_control_box
+                        // на плей надо будет добавлять контейнеру карусели data-interval
+                        button.btn.btn_gray
+                            +icon('control_play')
+                        a.btn.btn_gray(href="#carouselExampleFade" role="button" data-slide="prev")
+                            +icon('control_left')
+                        span.slides_counter 1/10
+                        a.btn.btn_gray(href="#carouselExampleFade" role="button" data-slide="next")
+                            +icon('control_right')
+                    .carousel_control_close
+                        button.btn.btn_gray(data-dismiss="modal" aria-label="Close")
+                            +icon('control_close')

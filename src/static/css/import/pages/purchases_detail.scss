@@ -1,0 +1,129 @@
+.good_select {
+    display: flex;
+    align-items: center;
+
+    .title {
+        color: $additional_info_color;
+        margin-right: 10px;
+    }
+}
+
+.good_select_area {
+    flex: 1;
+    select { 
+        width: 100%;
+    }
+}
+
+.select_id {
+    font-size: 11px;
+    margin-right: 5px;
+}
+
+.stat_links {
+    margin-bottom: 20px;
+    text-align: right;
+    .main_link {
+        font: bold 14px Lato;
+        margin-left: 15px;
+    }
+}
+
+.table_detail_filters {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.table_detail_filters_item {
+    flex-basis: 49%;
+    margin-bottom: 5px;
+    &.full {
+        flex-basis: 100%;
+    }
+}
+
+.table_detail_filters_section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &.payment {
+        flex: 1;
+    }
+    &.date {
+        flex-basis: 260px;
+    }
+    &.group {
+        flex: 1;
+    }
+
+    &:not(:last-child) {
+        margin-right: 50px;
+    }
+    .form_element {
+        
+        label {
+            margin-bottom: 0;
+            color: $additional_info_color;
+        }
+
+        & > * {
+            width: 100%;
+        }
+    }
+}
+
+.items_counters {
+    margin-bottom: 20px;
+}
+
+.additional_options {
+    display: flex;
+    margin: 20px 0 5px 0;
+    .form_element {
+        margin-right: 10px;
+        label {
+            margin-right: 5px;
+        }
+    }
+}
+
+.purchase_graph_info {
+    height: 400px;
+    background: #4d4d4d;
+}
+
+// purchases.html
+.purchases {
+    table {
+        width: 50%;
+    }
+    tbody tr {
+        cursor: pointer;
+        &:hover {
+            background: #f5fafd;
+        }
+    }
+}
+
+.purchases_dates {
+    display: flex;
+    align-items: center;
+    margin: 10px 0 20px;
+    .form_element:not(:first-child) {
+        margin-right: 10px;
+        span {
+            margin-right: 5px;
+        }
+    }
+
+    .btn {
+        margin-left: 10px;
+    }
+
+    .main_link {
+        margin-left: 20px;
+        font: bold 14px Lato;
+    }
+}

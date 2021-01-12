@@ -1,0 +1,31 @@
+main
+    .box
+        .content_box
+            .buy_limit.page
+                .title_block Общее правило ограничений на покупку товара:
+                .form_element
+                    label.for_radio
+                        input(type="radio" name="limit")
+                        span.text Без ограничений
+                .form_element
+                    label.for_radio
+                        input(type="radio" name="limit" checked)
+                        span.text Ограничить покупку
+                .buy_limit_form
+                    span максимум 
+                    .form_element
+                        input(type="number")
+                    span шт. для одного покупателя в течение
+                    .form_element
+                        select()
+                            option(value="0" selected) 1 часа
+                            option(value="1") 3 часов
+                            option(value="2") 6 часов
+                            option(value="3") 12 часов
+                            option(value="4") 1 суток
+                            option(value="5") 2 суток
+                            option(value="6") 3 суток
+                            option(value="7") 5 суток
+                            option(value="8") 10 суток
+                            option(value="9") 30 суток
+                    button.btn.btn_blue сохранить

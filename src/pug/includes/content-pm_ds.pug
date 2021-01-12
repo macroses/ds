@@ -1,0 +1,406 @@
+main
+    .box
+        +tab-list(['General_rules', 'Digiseller', 'WM_Merchant', 'PayPal', 'PayMaster', 'Robokassa', 'Yandex_Checkout', 'Settings'], 1)
+            +tab('Digiseller', 'active')
+                .content_box
+                    .pm
+                        .pm_settings
+                            .alert_box.info
+                                |При оплате через Digiseller средства автоматически конвертируются в WebMoney и поступают на ваш 
+                                a.main_link(href="#") личный счет 
+                                |на сервисе. 
+                                |Комиссия за продажу взимается с вашего личного счета при поступлении средств. Вывод средств с личного счета Digiseller может 
+                                |осуществляться только на WebMoney-кошельки. 
+                                a.main_link(href="#") Комиссия 
+                                |за перевод составляет 0.8%. Digiseller не предоставляет возможность вывода средств 
+                                |в иные платежные системы.
+
+                            table.equal_cells.pm_table
+                                colgroup
+                                    col
+                                    col(style="width: 90px")
+                                    col(style="width: 195px")
+                                    col
+                                thead
+                                    tr
+                                        th Способ оплаты
+                                        th.align_center Комиссия
+                                            sup
+                                                a.main_link(href="#") [1]
+                                        th Причина
+                                        th Рекомендации
+                                tbody
+                                    tr
+                                        td 
+                                            .pm_table_cell_name
+                                                span.pm_status.accessable
+                                                |WebNoney
+                                        td.align_center 10.84%
+                                        td
+                                            .pm_table_text
+                                                |не акцептованы правила приема средств посредствам банковских карт
+                                        td
+                                            .pm_table_text
+                                                a.main_link(href="#" data-toggle="modal" data-target="#rules") акцептовать
+                                    tr
+                                        td
+                                            .pm_table_cell_name
+                                                span.pm_status.partly
+                                                |Bitcoin
+                                        td.align_center 10.84%
+                                        td
+                                            .pm_table_text
+                                                |не акцептованы правила приема средств посредствам банковских карт
+                                        td
+                                            .pm_table_text
+                                                a.main_link(href="#") акцептовать
+                                    tr
+                                        td 
+                                            .pm_table_cell_name
+                                                span.pm_status.unavailable
+                                                |Терминалы оплаты
+                                        td.align_center 0%
+                                        td
+                                            .pm_table_text
+                                                span.empty
+                                        td
+                                            .pm_table_text
+                                                |не акцептованы правила приема средств посредствам банковских карт
+                                    tr
+                                        td 
+                                            .pm_table_cell_name
+                                                span.pm_status.unavailable
+                                                |Сбербанк Онлайн
+                                        td.align_center 0%
+                                        td
+                                            .pm_table_text
+                                                |не акцептованы правила приема средств посредствам банковских карт
+                                        td
+                                            .pm_table_text
+                                                span.empty
+                                    tr
+                                        td 
+                                            .pm_table_cell_name
+                                                span.pm_status.unavailable
+                                                |QIWI
+                                        td.align_center 0%
+                                        td
+                                            .pm_table_text
+                                                span.empty
+                                        td
+                                            .pm_table_text
+                                                span.empty
+
+                                    tr
+                                        td 
+                                            .pm_table_cell_name
+                                                span.pm_status.unavailable
+                                                |Яндекс.Деньги
+                                        td.align_center 0%
+                                        td
+                                            .pm_table_text
+                                                span.empty
+                                        td
+                                            .pm_table_text
+                                                a.main_link(href="#") разрешить оплату банковскими картами другим товарам
+                                    tr
+                                        td 
+                                            .pm_table_cell_name
+                                                span.pm_status.unavailable
+                                                |МТС
+                                        td.align_center 0%
+                                        td
+                                            .pm_table_text
+                                                span.empty
+                                        td
+                                            .pm_table_text
+                                                a.main_link(href="#" data-toggle="modal" data-target="#pm_method_modal") выберите товары, доступные для оплаты банковской картой
+                                    tr
+                                        td 
+                                            .pm_table_cell_name
+                                                span.pm_status.unavailable
+                                                |Билайн
+                                        td.align_center 0%
+                                        td
+                                            .pm_table_text
+                                                span.empty
+                                        td
+                                            .pm_table_text
+                                                span.empty
+                                    tr
+                                        td 
+                                            .pm_table_cell_name
+                                                span.pm_status.unavailable
+                                                |Мегафон
+                                        td.align_center 0%
+                                        td
+                                            .pm_table_text
+                                                span.empty
+                                        td
+                                            .pm_table_text
+                                                span.empty
+                                    tr
+                                        td 
+                                            .pm_table_cell_name
+                                                span.pm_status.unavailable
+                                                |Теле2
+                                        td.align_center 0%
+                                        td
+                                            .pm_table_text
+                                                span.empty
+                                        td
+                                            .pm_table_text
+                                                span.empty
+
+                            ul.pm_desr_list
+                                li
+                                    span.pm_status.accessable
+                                    |доступен
+                                li
+                                    span.pm_status.partly
+                                    |доступен частично
+                                li
+                                    span.pm_status.unavailable
+                                    |недоступен
+                            .alert_box.info
+                                span.bold 1.
+                                |  Комиссию оплачивает покупатель, но вы можете компенсировать её в настройках товара в закладке 
+                                span.bold Оплата
+                        
+                        .pm_description
+                            +fieldset('Настройка приема средств через Digiseller')
+                                .fieldset_text
+                                    |Для подключения оплаты через Digiseller не требуется никаких дополнительных настроек. 
+                                    |Обязательным условием для приема средств в собственном магазине является регистрация в системе WebMoney Transfer и наличие 
+                                    a.main_link(href="#") персонального WM-аттестата 
+                                    |или наличие 
+                                    a.main_link(href="#") проверенного PhotoID
+                                    |. При продажах через торговую площадку (Plati.Market, GGSEL.com или WMCentre.net), 
+                                    |требование наличия WebMoney-аттестата определяется администратором площадки и может быть связано с типом выставляемого на продажу товаров.
+                            +fieldset('Правила приема платежей в Digiseller посредством банковских карт')
+                                .fieldset_text
+                                    .title 1. Основные определения
+                                    .content
+                                        span.bold Банк-эквайер 
+                                        |– банк, предоставляющий услуги приема к оплате банковских (кредитных/дебетных) карт. При получении данных о произведенных операциях в сети, 
+                                        |эквайер направляет их в систему для проведения расчетов. Банк-эквайер отвечает за возмещение средств торговым точкам, в которых производились 
+                                        |покупки или оплачивались услуги с помощью карт.
+
+                                    .content
+                                        span.bold Банк-эмитент 
+                                        |– банк, предоставивший покупателу банковскую карту, привязанную к его счету в этом банке.
+
+                                    .content
+                                        span.bold Фрод 
+                                        |(fraud) – мошенничество с применением банковской карты.
+                                    
+                                    .content
+                                        span.bold Чарджбэк 
+                                        |(chargeback) – процедура опротестования транзакции банком-эмитентом, при которой сумма платежа безакцептно списывается с получателя и возвращается плательщику, после чего обязанность доказательства истинности транзакции возлагается на получателя.
+
+                                    .title 2. Общие положения
+                                    .content
+                                        span.bold 2.1 
+                                        |При оплате товара банковской картой продавцу производится моментальное зачисление средств на личный счет Digiseller в виде WMR (WebMoney RUB).
+
+                                    .content
+                                        span.bold 2.2 
+                                        |Средства, полученные в качестве оплаты за товар с помощью банковской карты, доступны для вывода с личного счета Digiseller спустя 15 полных суток с момента завершения процедуры покупки. В случае задержек с перечислением средств от банка-эквайера, этот срок может быть продлен до момента погашения им задолженности.
+
+                                    .content.attention
+                                        span.bold 2.3 
+                                        |При поступлении в банк-эквайер запроса на опротестование транзакции, продавец обязан предоставить документы о передаче и использовании проданного товара, если в системе отсутствует подтверждение факта передачи товара или предоставления услуг.
+
+                                    .content.attention
+                                        span.bold 2.4 
+                                        |При поступлении в банк-эквайер запроса на опротестование транзакции и признания банком запроса правомочным, Digiseller оставляет за собой право инициировать процедуру удержания средств с личного счета продавца, дополнительно оповестив продавца об этом.
+
+                                    .content
+                                        span.bold 2.5 
+                                        |Все возможные риски, связанные с чарджбэками и фродом, берет на себя продавец.
+
+                                    .content
+                                        span.bold 2.6 
+                                        |Digiseller, равно как и администратор торговой площадки, оставляют за собой право приостановить функцию приема платежей посредством банковских карт как в рамках определенного раздела, так и для конкретного продавца без объяснения причин.
+
+                                    .title 3. Заключительные положения
+
+                                    .content 
+                                        span.bold 3.1 
+                                        |Продавец вправе в любой момент приостановить возможность продажи своих товаров посредством банковских карт.
+                                    
+                                    .content 
+                                        span.bold 3.2 
+                                        |Digiseller имеет право в любое время вносить изменения в настоящие Правила путем помещения на сайте my.digiseller.com их новой версии и автоматического оповещения продавцов в разделе "Новости".
+
+                                    .content 
+                                        span.bold 3.3 
+                                        |В случае несогласия с новой редакцией Правил продавец вправе в одностороннем порядке отказаться от их исполнения, приостановив (запретив) возможность продажи своих товаров с помощью банковских карт.
+                                    
+                                    .content 
+                                        span.bold 3.4 
+                                        |Если после изменения Правил, продавец продолжает использовать данный способ оплаты, он признается согласившимся с новой редакцией Правил.
+
+                                span.user_agreement
+                                    +icon('green_check')
+                                    |Я согласен(на)
+
+.modal.fade(id="rules" tabindex="-1" aria-labelledby="rules" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered.modal-dialog-scrollable.modal-lg
+        .modal-content
+            .modal-header
+                .modal-title Правила приема платежей в Digiseller посредством банковских карт
+                span.close(data-dismiss="modal" aria-label="Close")
+                    +icon('modal_close')
+            .modal-body
+                .fieldset_text
+                    .title 1. Основные определения
+                    .content
+                        span.bold Банк-эквайер 
+                        |– банк, предоставляющий услуги приема к оплате банковских (кредитных/дебетных) карт. При получении данных о произведенных операциях в сети, 
+                        |эквайер направляет их в систему для проведения расчетов. Банк-эквайер отвечает за возмещение средств торговым точкам, в которых производились 
+                        |покупки или оплачивались услуги с помощью карт.
+
+                    .content
+                        span.bold Банк-эмитент 
+                        |– банк, предоставивший покупателу банковскую карту, привязанную к его счету в этом банке.
+
+                    .content
+                        span.bold Фрод 
+                        |(fraud) – мошенничество с применением банковской карты.
+                    
+                    .content
+                        span.bold Чарджбэк 
+                        |(chargeback) – процедура опротестования транзакции банком-эмитентом, при которой сумма платежа безакцептно списывается с получателя и возвращается плательщику, после чего обязанность доказательства истинности транзакции возлагается на получателя.
+
+                    .title 2. Общие положения
+                    .content
+                        span.bold 2.1 
+                        |При оплате товара банковской картой продавцу производится моментальное зачисление средств на личный счет Digiseller в виде WMR (WebMoney RUB).
+
+                    .content
+                        span.bold 2.2 
+                        |Средства, полученные в качестве оплаты за товар с помощью банковской карты, доступны для вывода с личного счета Digiseller спустя 15 полных суток с момента завершения процедуры покупки. В случае задержек с перечислением средств от банка-эквайера, этот срок может быть продлен до момента погашения им задолженности.
+
+                    .content.attention
+                        span.bold 2.3 
+                        |При поступлении в банк-эквайер запроса на опротестование транзакции, продавец обязан предоставить документы о передаче и использовании проданного товара, если в системе отсутствует подтверждение факта передачи товара или предоставления услуг.
+
+                    .content.attention
+                        span.bold 2.4 
+                        |При поступлении в банк-эквайер запроса на опротестование транзакции и признания банком запроса правомочным, Digiseller оставляет за собой право инициировать процедуру удержания средств с личного счета продавца, дополнительно оповестив продавца об этом.
+
+                    .content
+                        span.bold 2.5 
+                        |Все возможные риски, связанные с чарджбэками и фродом, берет на себя продавец.
+
+                    .content
+                        span.bold 2.6 
+                        |Digiseller, равно как и администратор торговой площадки, оставляют за собой право приостановить функцию приема платежей посредством банковских карт как в рамках определенного раздела, так и для конкретного продавца без объяснения причин.
+
+                    .title 3. Заключительные положения
+
+                    .content 
+                        span.bold 3.1 
+                        |Продавец вправе в любой момент приостановить возможность продажи своих товаров посредством банковских карт.
+                    
+                    .content 
+                        span.bold 3.2 
+                        |Digiseller имеет право в любое время вносить изменения в настоящие Правила путем помещения на сайте my.digiseller.com их новой версии и автоматического оповещения продавцов в разделе "Новости".
+
+                    .content 
+                        span.bold 3.3 
+                        |В случае несогласия с новой редакцией Правил продавец вправе в одностороннем порядке отказаться от их исполнения, приостановив (запретив) возможность продажи своих товаров с помощью банковских карт.
+                    
+                    .content 
+                        span.bold 3.4 
+                        |Если после изменения Правил, продавец продолжает использовать данный способ оплаты, он признается согласившимся с новой редакцией Правил.
+            .modal-footer
+                button.btn.btn_blue(data-toggle="modal" data-target="#mailings_step2" data-dismiss="modal" aria-label="Close") Я согласен(на)
+
+.modal.fade(id="pm_method_modal" tabindex="-1" aria-labelledby="pm_method_modal" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered.modal-dialog-scrollable.modal-lg
+        .modal-content
+            .modal-header
+                .modal-title Выберите товары, доступные для оплаты банковской картой
+                span.close(data-dismiss="modal" aria-label="Close")
+                    +icon('modal_close')
+            .modal-body
+                .pm_method_modal
+                    .goods_menu_sort
+                        .form_element
+                            span сортировка: 
+                            select
+                                option(value="0") id товара ↑
+                                option(value="1") id товара ↓
+                                option(value="2") название товара А - Я
+                                option(value="3") название товара Я - A
+                                option(value="6") цена ↑
+                                option(value="7") цена ↓
+                    .pm_method_modal_table
+                        table.equal_cells
+                            colgroup
+                                col(style="width: 30px")
+                                col(style="width: 100px")
+                                col(style="width: 370px")
+                                col
+                                col
+                            thead
+                                tr
+                                    th
+                                    th ID товара
+                                    th Название
+                                    th Цена
+                                    th Площадка
+                                tr.head_selection
+                                    th
+                                    th 
+                                        .form_element
+                                            input(type="text")
+                                            span.filter_icon
+                                                +icon('filter')
+                                    th 
+                                        .form_element
+                                            input.focused(type="text")
+                                            span.remove
+                                                +icon('remove_input_data')
+                                    th 
+                                        +select(['все валюты', 'в USD', 'в RUR', 'в EUR', 'в UAH'])
+                                    th 
+                                        +select(['все площадки', 'Мой магазин', 'Plati.Market'])
+                            tbody
+                                tr
+                                    td
+                                        .form_element
+                                            label.for_check
+                                                input(type="checkbox")
+                                                span.text
+                                    td 1027406
+                                    td
+                                        a.main_link(href="#") League of Legends (EU) - Riot Points 650-9305
+                                    td 
+                                        span.from от
+                                        |  15,000.00 <small>RUR</small>
+                                    td Мой магазин
+                                tr.chosen_cell
+                                    td
+                                        .form_element
+                                            label.for_check
+                                                input(type="checkbox" checked)
+                                                span.text
+                                    td 1027406
+                                    td
+                                        a.main_link(href="#") League of Legends (EU) - Riot Points 650-9305 League of Legends (EU) - Riot Points 650-9305 
+                                    td 
+                                        span.from от
+                                        |  15,000.00 <small>RUR</small>
+                                    td Мой магазин
+                                
+                +pagination('Товаров на странице:')            
+                    
+            .modal-footer
+                .pm_method_modal_auto
+                    .form_element
+                        label.for_check
+                            input(type="checkbox")
+                            span.text автоматически включать оплату банковской картой для новых товаров

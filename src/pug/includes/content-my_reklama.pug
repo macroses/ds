@@ -1,0 +1,231 @@
+main
+    .box
+        .current_server_time
+            |Точное серверное время:  23.12.2020 22:59:56
+        .content_box
+            .alert_box.info Возможность оплатить рекламу товара предоставляется только на площадках. В настоящий момент вы не зарегистрированы ни на одной торговой площадке.
+            .alert_box.info Реклама товара является платной услугой, причем чем больше размер оплаты, тем выше ваш товар будет стоять в общем списке в каталоге
+                | и результатах поиска на сайтах и в мобильных приложениях. Кроме этого, ваш товар будет отображаться на первых местах в списке товаров раздела и будет выделен 
+                span.reklama_color дополнительным цветом
+                |. Для просмотра текущего списка купленной рекламы кликните на дату в таблице. В случае блокировки вашего аккаунта или снятия товара с продажи, оплата за рекламу не возвращается!
+
+            .my_reklama
+                .my_reklama_form
+                    .form_data_block
+                        .form_data_block_item
+                            .form_data_block_title Площадка:
+                            .form_data_block_content
+                                .form_element
+                                    select
+                                        option(value="0") Plati.Market
+                                        option(value="1") Мой магазин
+
+                        .form_data_block_item
+                            .form_data_block_title Товар:
+                            .form_data_block_content
+                                .form_element
+                                    select
+                                        option(value="0") Товар 1
+                                        option(value="1") Товар 2
+
+                        .form_data_block_item
+                            .form_data_block_title Размещение:
+                            .form_data_block_content
+                                .form_element.date
+                                    label c
+                                    select
+                                        option(value="0") 22.11.20
+                                        option(value="1") 22.11.20
+                                .form_element
+                                    label по
+                                    select
+                                        option(value="0") 22.11.20
+                                        option(value="1") 22.11.20
+
+                        .form_data_block_item
+                            .form_data_block_title Оплатить со счета: 
+                                a.main_link.bolder(href="#") пополнить счет
+                            .form_data_block_content.money
+                                .my_reklama_money
+                                    .form_element
+                                        label.for_radio
+                                            input(type="radio", name="money")
+                                            span.text 117,55 WMZ
+                                    .desc по курсу
+                                    .my_reklama_money_equal 1 USD = 74,67 WMR
+                                
+                                .my_reklama_money
+                                    .form_element
+                                        label.for_radio
+                                            input(type="radio", name="money")
+                                            span.text 20,55 WMZ
+                                    .desc по курсу
+                                    .my_reklama_money_equal 1 USD = 1 WMR
+
+                                .my_reklama_money
+                                    .form_element
+                                        label.for_radio
+                                            input(type="radio", name="money")
+                                            span.text 3,55 WMZ
+                                    .desc по курсу
+                                    .my_reklama_money_equal 1 USD = 1 WMR
+
+                        .form_data_block_item.active
+                            .form_data_block_title Сумма (за сутки):
+                            .form_data_block_content.money
+                                .form_element
+                                    span 0,4 +
+                                    input(type="text")
+                                    span USD
+                                .hint Минимальная стоимость услуги составляет 0,4 USD.
+
+                        .form_data_block_item
+                            .form_data_block_title
+                            .form_data_block_content
+                                .form_element
+                                    label.for_check.disabled
+                                        input(type="checkbox" disabled)
+                                        span.text скрытая ставка
+                                    span(data-placement="right" data-toggle="tooltip" title="Ставка не видна никому кроме инициатора до 00:00:01 (GMT+3) дня, на который куплена реклама. Опция доступна c 00:00 до 20:00 (GMT+3).")
+                                        +icon('question_table')
+
+                    button.btn.btn_blue оплатить
+
+                .my_reklama_info
+                    .alert_box.additional_info 
+                        |Выберите товар и дату нажав 
+                        |[+]
+                        | в таблице или из списка в выпадающем меню формы. Затем введите требуемую сумму и нажмите кнопку "оплатить". Указанная сумма автоматически снимается с вашего 
+                        a.main_link(href="#") личного счета
+                        |. В случае нулевого остатка на нем вам необходимо 
+                        a.main_link(href="#") пополнить
+                        |  его. При необходимости вы можете увеличить оплаченную сумму повторив операцию.
+
+                    .alert_box.rules
+                        .title.bold На выбранной торговой площадке работают правила:
+                        |1. Если размер оплаты за рекламу товара на сутки составляет 10 $ или более, наименование товара в каталоге становится 
+                        span.reklama_background выделенным
+                        |  (
+                        a.main_link(href="#") иллюстрация 1
+                        |), а в случае оплаты 20 $ и выше название товара 
+                        span.reklama_background выделяется
+                        |  на основной странице сайта (
+                        a.main_link(href="#") иллюстрация 2
+                        |).
+                        br
+                        br
+
+                        |2. Если по результатам оплаты рекламы, ваш товар занимает первое место в общем списке товаров раздела, его изображение будет размещено на главной странице сайта (
+                        a.main_link(href="#") иллюстрация 2
+                        |).
+
+            .my_reklama_table
+                table.equal_cells
+                    colgroup
+                        col(style="width: 600px")
+                        col
+                        col
+                        col
+                        col
+                        col
+                        col
+                        col
+                        col
+                        col
+                        col
+                    tbody
+                        tr
+                            td
+                                .form_element
+                                    label.for_check
+                                        input(type="checkbox" checked)
+                                        span.text не показывать товары, которых нет в наличии или сняты с продажи
+                            td.desc_cell(colspan="10")
+                                .desc_box Для просмотра текущих рекламируемых товаров, кликните на соответствующую дату
+                        tr.arrow_row
+                            td
+                            td: span.arrow
+                            td: span.arrow
+                            td: span.arrow
+                            td: span.arrow
+                            td: span.arrow
+                            td: span.arrow
+                            td: span.arrow
+                            td: span.arrow
+                            td: span.arrow
+                            td: span.arrow
+                        tr
+                            td.align_left
+                                .title
+                                    span.bolder Название товара 
+                                    |\ 
+                                    span.bolder дата
+                            td
+                                a.main_link.bolder(href="#") 24.12
+                            td
+                                a.main_link.bolder(href="#") 24.12
+                            td
+                                a.main_link.bolder(href="#") 24.12
+                            td
+                                a.main_link.bolder(href="#") 24.12
+                            td
+                                a.main_link.bolder(href="#") 24.12
+                            td
+                                a.main_link.bolder(href="#") 24.12
+                            td
+                                a.main_link.bolder(href="#") 24.12
+                            td
+                                a.main_link.bolder(href="#") 24.12
+                            td
+                                a.main_link.bolder(href="#") 24.12
+                            td
+                                a.main_link.bolder(href="#") 24.12
+                        tr
+                            td.align_left 
+                                a.main_link(href="#") Название товара
+                            td 0,00 
+                                a(href="#") [+]
+                            td 0,00 
+                                a(href="#") [+]
+                            td 0,00 
+                                a(href="#") [+]
+                            td 0,00 
+                                a(href="#") [+]
+                            td 
+                                span.bold 0,05 
+                                a(href="#") [+]
+                            td 0,00 
+                                a(href="#") [+]
+                            td 0,00 
+                                a(href="#") [+]
+                            td 0,00 
+                                a(href="#") [+]
+                            td 0,00 
+                                a(href="#") [+]
+                            td 0,00 
+                                a(href="#") [+]
+                        tr
+                            td.align_left 
+                                a.main_link(href="#") Название товара Название товара Название товара Название товара Название товара Название товара Название товара Название товара Название товара 
+                            td 0,00 
+                                a(href="#") [+]
+                            td 0,00 
+                                a(href="#") [+]
+                            td 0,00 
+                                a(href="#") [+]
+                            td 0,00 
+                                a(href="#") [+]
+                            td 0,00 
+                                a(href="#") [+]
+                            td 0,00 
+                                a(href="#") [+]
+                            td 0,00 
+                                a(href="#") [+]
+                            td 0,00 
+                                a(href="#") [+]
+                            td 0,00 
+                                a(href="#") [+]
+                            td 0,00 
+                                a(href="#") [+]
+
+                +pagination('Товаров на странице:')

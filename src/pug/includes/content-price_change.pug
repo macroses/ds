@@ -1,0 +1,78 @@
+main
+    .box
+        .content_box
+            .alert_box.info Для внесения изменений в цену сразу у нескольких товаров, мы предлагаем вам воспользоваться нижеприведённым интерфейсом. 
+                |Пожалуйста, будьте внимательны и 
+                span.bold обязательно проверяйте полученный результат после внесения изменений.
+
+            .alert_box.warning Внимание! Если изменения затронут товары, добавленные в 
+                a.main_link(href="#") планировщик 
+                | с задачей типа "изменение цены", то эти товары будут удалены из всех таких задач планировщика. После применения изменения цен вы увидите список задач и удаленных из них товаров.
+
+            .price_change
+                .form_group
+                    .form_element
+                        select
+                            option(value="0") для всех товаров с ценой в
+                            option(value="1") для товаров, цена которых равна
+                            option(value="2") для товаров, цена которых больше
+                            option(value="3") для товаров, цена которых меньше
+                    .form_element
+                        select
+                            option(value="0") USD
+                            option(value="1") RUB
+                            option(value="2") EUR
+                            option(value="3") UAH
+                    .form_element
+                        select
+                            option(value="0") установить цену
+                            option(value="1") увеличить цену на
+                            option(value="2") уменьшить цену на
+                    .form_element
+                        input(type="text")
+                    .form_element
+                        select
+                            option(value="0") USD
+                            option(value="1") %
+                    input.btn.btn_blue(type="submit", value="применить")
+                
+            .items_counters Изменено товаров: 
+                span.bold 5
+            
+            table.equal_cells
+                colgroup
+                    col(style="width: 75px")
+                    col(style="width: 400px")
+                    col
+                    col
+                    col
+                    col(style="width: 100px")
+                thead
+                    tr
+                        th ID
+                        th Название товара
+                        th.align_center Площадка
+                        th.align_center Старая цена
+                        th.align_center Новая цена
+                        th
+                tbody
+                    tr
+                        td 1234567
+                        td Некий товар
+                        td.align_center Мой магазин
+                        td.align_center 1234567 USD
+                        td.align_center 
+                            span.usd 12 
+                                span USD
+                        td.align_right
+                            a.btn.btn_gray(href="#") изменить
+                    tr
+                        td 1234567
+                        td Некий товар Некий товар Некий товар Некий товар Некий товар Некий товар Некий товар Некий товар Некий товар Некий товар Некий товар 
+                        td.align_center Мой магазин
+                        td.align_center 1234567 USD
+                        td.align_center 
+                            span.usd 12 
+                                span USD
+                        td.align_right
+                            a.btn.btn_gray(href="#") изменить

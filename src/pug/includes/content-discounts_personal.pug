@@ -1,0 +1,60 @@
+main
+    .box
+        +tab-list(['GeneralRules', 'Personal', 'PromoCodes', 'Sales'], 1)
+            +tab('Personal', 'acitve')
+                .content_box
+                    .alert_box.info Обращаем внимание на то, что персональные скидки распространятся только на те товары, на которые вообще предусмотрены скидки по общим
+                        |  или индивидуальным правилам! Ниже размещён список покупателей, которым вы предоставили персональные скидки.
+                
+                    .discounts_personal
+                        table.equal_cells
+                            colgroup
+                                col(style="width: 300px")
+                                col
+                                col(style="width: 130px")
+                                col(style="width: 40px")
+                            thead
+                                tr
+                                    th Email
+                                    th Фиксированная скидка
+                                        sup 1
+                                    th Сумма покупок
+                                        sup 2
+                                    th 
+                            tbody
+                                tr
+                                    td 
+                                        a.main_link(href="#") kakoi_to@email.com
+                                    td
+                                        .form_element.personal_mod
+                                            input(type="number" disabled)
+                                            |  %
+                                    td
+                                        .form_element.personal_mod
+                                            input(type="number" disabled)
+                                            |  USD
+                                    td 
+                                        button.btn.btn_gray: span.minus
+
+                                tr
+                                    td 
+                                        .form_element
+                                            input(type="text")
+                                    td
+                                        .form_element.personal_mod
+                                            input(type="number")
+                                            |  %
+                                    td
+                                        .form_element.personal_mod
+                                            input(type="number")
+                                            |  USD
+                                    td 
+                                        button.btn.btn_gray: +icon('plus_button')
+
+                        .desc
+                            .desc_item
+                                sup 1
+                                |  Фиксированная скидка начисляется покупателю вне зависимости от текущей суммы покупок.
+                            .desc_item
+                                sup 2
+                                |  Первоначальная сумма покупок добавляется к текущей (реальной) сумме покупок при расчёте скидки.

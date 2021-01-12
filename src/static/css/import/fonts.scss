@@ -1,0 +1,110 @@
+// @include font-face(Lato, "../fonts/Lato-Thin", 100, normal);
+// @include font-face(Lato, "../fonts/Lato-ThinItalic", 100, italic);
+// @include font-face(Lato, "../fonts/Lato-Light", 300, normal);
+// @include font-face(Lato, "../fonts/Lato-LightItalic", 300, italic);
+// @include font-face(Lato, "../fonts/Lato-Regular", 400, normal);
+// @include font-face(Lato, "../fonts/Lato-Italic", 400, italic);
+// @include font-face(Lato, "../fonts/Lato-Medium", 500, normal);
+// @include font-face(Lato, "../fonts/Lato-MediumItalic", 400, italic);
+// @include font-face(Lato, "../fonts/Lato-Bold", 700, normal);
+// @include font-face(Lato, "../fonts/Lato-BoldItalic", 700, italic);
+// @include font-face(Lato, "../fonts/Lato-Black", 900, normal);
+// @include font-face(Lato, "../fonts/Lato-BlackItalic", 900, italic);
+
+@font-face {
+    font-family: 'Lato';
+    src: url(../fonts/Lato-Thin.eot),
+        url(../fonts/Lato-Thin.woff),
+        url(../fonts/Lato-Thin.ttf);
+font-weight: 100;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url(../fonts/Lato-ThinItalic.eot),
+            url(../fonts/Lato-ThinItalic.woff),
+            url(../fonts/Lato-ThinItalic.ttf);
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+font-family: 'Lato';
+src: url(../fonts/Lato-Light.eot),
+        url(../fonts/Lato-Light.woff),
+        url(../fonts/Lato-Light.ttf);
+font-weight: 300;
+}
+
+@font-face {
+font-family: 'Lato';
+src: url(../fonts/Lato-LightItalic.eot),
+        url(../fonts/Lato-LightItalic.woff),
+        url(../fonts/Lato-LightItalic.ttf);
+font-weight: 300;
+font-style: italic;
+}
+
+@font-face {
+font-family: 'Lato';
+src: url(../fonts/Lato-Regular.eot),
+        url(../fonts/Lato-Regular.woff),
+        url(../fonts/Lato-Regular.ttf);
+font-weight: 400;
+}
+
+@font-face {
+font-family: 'Lato';
+src: url(../fonts/Lato-Italic.eot),
+        url(../fonts/Lato-Italic.woff),
+        url(../fonts/Lato-Italic.ttf);
+font-weight: 400;
+font-style: italic;
+}
+// url(../fonts/Lato-Bold.ttf)
+@font-face {
+font-family: 'Lato';
+src: url(../fonts/Lato-Bold.eot),
+        url(../fonts/Lato-Bold.woff),
+        url(../fonts/Lato-Bold.ttf);
+font-weight: 700;
+}
+
+@font-face {
+font-family: 'Lato';
+src: url(../fonts/Lato-BoldItalic.eot),
+        url(../fonts/Lato-BoldItalic.woff),
+        url(../fonts/Lato-BoldItalic.ttf);
+font-weight: 700;
+font-style: italic;
+}
+
+@font-face {
+font-family: 'Lato';
+src: url(../fonts/Lato-Black.eot),
+        url(../fonts/Lato-Black.woff),
+        url(../fonts/Lato-Black.ttf);
+font-weight: 900;
+}
+
+@font-face {
+font-family: 'Lato';
+src: url(../fonts/Lato-BlackItalic.eot),
+        url(../fonts/Lato-BlackItalic.woff),
+        url(../fonts/Lato-BlackItalic.ttf);
+font-weight: 900;
+font-style: italic;
+}
+
+@include font-face(Roboto, "../fonts/Roboto-Thin", 100, normal);
+@include font-face(Roboto, "../fonts/Roboto-ThinItalic", 100, italic);
+@include font-face(Roboto, "../fonts/Roboto-Light", 300, normal);
+@include font-face(Roboto, "../fonts/Roboto-LightItalic", 300, italic);
+@include font-face(Roboto, "../fonts/Roboto-Regular", 400, normal);
+@include font-face(Roboto, "../fonts/Roboto-RegularItalic", 400, italic);
+@include font-face(Roboto, "../fonts/Roboto-Medium", 500, normal);
+@include font-face(Roboto, "../fonts/Roboto-MediumItalic", 500, italic);
+@include font-face(Roboto, "../fonts/Roboto-Bold", 700, normal);
+@include font-face(Roboto, "../fonts/Roboto-BoldItalic", 700, italic);
+@include font-face(Roboto, "../fonts/Roboto-Black", 900, normal);
+@include font-face(Roboto, "../fonts/Roboto-BlackItalic", 900, italic);

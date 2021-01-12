@@ -1,0 +1,10 @@
+.spinner-border {
+    color: $main_links_color;
+}
+
+.my_info_content {
+    .spinner-border {
+        width: 20px;
+        height: 20px;
+    }
+}

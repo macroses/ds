@@ -1,0 +1,478 @@
+main
+    .box
+        .content_box
+            .page_nav
+                ul.breadcrumbs_list
+                    li.breadcrumb_item
+                        a.main_link(href="#" data-placement="top" data-toggle="tooltip" title="список моих товаров") Мои товары
+                    li.breadcrumb_item
+                        .breadcrumb_item_name Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена 
+                        a(href="#" data-placement="top" data-toggle="tooltip" title="открыть страницу с описанием товара")
+                            +icon('good_link')
+                        .breadcrumb_item_price 14895 
+                            span RUB
+                .page_nav_item
+                    .prev 
+                        a.main_link(href="#") предыдущий товар
+                    .next 
+                        a.main_link(href="#") следующий товар
+
+        +tab-list(['Basic', 'Parameters', 'Gallery', ['Content', 10], 'Payment', 'Sales', 'Discount', 'HTML_code', 'Notifications'], 4)
+            +tab('Payment', 'active')
+                .content_box
+                    .payment
+                        .title_block Способы оплаты:
+                        .form_element
+                            label.for_radio
+                                input(type="radio" name="rule" checked)
+                                span.text берутся из 
+                                    a.main_link(href="#") общего правила
+
+                        ul.general_methods_list
+                            li.general_methods_item
+                                .general_methods_item_check.ds
+                                    +switcher()
+                                .general_methods_item_content
+                                    .general_methods_item_brand
+                                        .general_methods_item_logo
+                                            +icon('payment_ds')
+                                        .general_methods_item_title Digiseller
+                                    .general_methods_item_collection
+                                        ul.payment_list
+                                            li
+                                                a(href="#" data-placement="top" data-toggle="tooltip" title="webmoney")
+                                                    +icon('webmoney')
+                                            li
+                                                a.decline(href="#" data-placement="top" data-toggle="tooltip" title="Bitcoin")
+                                                    +icon('bitcoin')
+                                            li
+                                                a.decline(href="#" data-placement="top" data-toggle="tooltip" title="PayPal")
+                                                    +icon('paypal-method')
+                                            li
+                                                a.decline(href="#" data-placement="top" data-toggle="tooltip" title="Банковская карта")
+                                                    +icon('credit-card')
+                                            li
+                                                a(href="#" data-placement="top" data-toggle="tooltip" title="QIWI")
+                                                    +icon('qiwi')
+                                            li
+                                                a(href="#" data-placement="top" data-toggle="tooltip" title="Яндекс.Деньги")
+                                                    +icon('yandex-money')
+                                            li
+                                                a(href="#" data-placement="top" data-toggle="tooltip" title="МТС")
+                                                    +icon('mts')
+                                            li
+                                                a(href="#" data-placement="top" data-toggle="tooltip" title="Билайн")
+                                                    +icon('beeline')
+                                            li
+                                                a(href="#" data-placement="top" data-toggle="tooltip" title="Мегафон")
+                                                    +icon('megafon')
+                                            li
+                                                a(href="#" data-placement="top" data-toggle="tooltip" title="TELE2")
+                                                    +icon('tele-2')
+                                            li
+                                                a(href="#" data-placement="top" data-toggle="tooltip" title="Терминалы оплаты")
+                                                    +icon('terminal')
+                                            li
+                                                a(href="#" data-placement="top" data-toggle="tooltip" title="Интернет банкинг")
+                                                    +icon('bank')
+                                            li
+                                                a(href="#" data-placement="top" data-toggle="tooltip" title="Почта России")
+                                                    +icon('russian-post')
+                                            li
+                                                a(href="#" data-placement="top" data-toggle="tooltip" title="WM-карты")
+                                                    +icon('wm-card')
+                                            li
+                                                a(href="#" data-placement="top" data-toggle="tooltip" title="Подарочная карта")
+                                                    +icon('present-card')
+                                            li
+                                                a(href="#" data-placement="top" data-toggle="tooltip" title="Steam-скины")
+                                                    +icon('payment-steamskin')
+                                            li
+                                                a(href="#" data-placement="top" data-toggle="tooltip" title="Alipay")
+                                                    +icon('alp')
+                                            li
+                                                a(href="#" data-placement="top" data-toggle="tooltip" title="Unionpay") 
+                                                    +icon('union')
+
+                                    a.main_link(href="#") настроить
+                                    .compensation
+                                        .form_element
+                                            label.for_check
+                                                input(type="checkbox")
+                                                span.text компенсировать комиссии платежного шлюза
+                                        .compensation_options
+                                            .compensation_option_title используется общее правило
+                                            a.main_link(href="#" data-toggle="modal" data-target="#compensation_win") изменить
+
+                        .form_element
+                            label.for_radio
+                                input(type="radio" name="rule")
+                                span.text индивидуальны для этого товара
+
+                        ul.general_methods_list
+                            li.general_methods_item
+                                .general_methods_item_check.ds
+                                    +switcher()
+                                .general_methods_item_content
+                                    .general_methods_item_brand
+                                        .general_methods_item_logo
+                                            +icon('payment_ds')
+                                        .general_methods_item_title Digiseller
+                                    .general_methods_item_collection
+                                        ul.payment_list
+                                            li
+                                                a(href="#" data-placement="top" data-toggle="tooltip" title="webmoney")
+                                                    +icon('webmoney')
+                                            li
+                                                a.decline(href="#" data-placement="top" data-toggle="tooltip" title="Bitcoin")
+                                                    +icon('bitcoin')
+                                            li
+                                                a.decline(href="#" data-placement="top" data-toggle="tooltip" title="PayPal")
+                                                    +icon('paypal-method')
+                                            li
+                                                a.decline(href="#" data-placement="top" data-toggle="tooltip" title="Банковская карта")
+                                                    +icon('credit-card')
+                                            li
+                                                a(href="#" data-placement="top" data-toggle="tooltip" title="QIWI")
+                                                    +icon('qiwi')
+                                            li
+                                                a(href="#" data-placement="top" data-toggle="tooltip" title="Яндекс.Деньги")
+                                                    +icon('yandex-money')
+                                            li
+                                                a(href="#" data-placement="top" data-toggle="tooltip" title="МТС")
+                                                    +icon('mts')
+                                            li
+                                                a(href="#" data-placement="top" data-toggle="tooltip" title="Билайн")
+                                                    +icon('beeline')
+                                            li
+                                                a(href="#" data-placement="top" data-toggle="tooltip" title="Мегафон")
+                                                    +icon('megafon')
+                                            li
+                                                a(href="#" data-placement="top" data-toggle="tooltip" title="TELE2")
+                                                    +icon('tele-2')
+                                            li
+                                                a(href="#" data-placement="top" data-toggle="tooltip" title="Терминалы оплаты")
+                                                    +icon('terminal')
+                                            li
+                                                a(href="#" data-placement="top" data-toggle="tooltip" title="Интернет банкинг")
+                                                    +icon('bank')
+                                            li
+                                                a(href="#" data-placement="top" data-toggle="tooltip" title="Почта России")
+                                                    +icon('russian-post')
+                                            li
+                                                a(href="#" data-placement="top" data-toggle="tooltip" title="WM-карты")
+                                                    +icon('wm-card')
+                                            li
+                                                a(href="#" data-placement="top" data-toggle="tooltip" title="Подарочная карта")
+                                                    +icon('present-card')
+                                            li
+                                                a(href="#" data-placement="top" data-toggle="tooltip" title="Steam-скины")
+                                                    +icon('payment-steamskin')
+                                            li
+                                                a(href="#" data-placement="top" data-toggle="tooltip" title="Alipay")
+                                                    +icon('alp')
+                                            li
+                                                a(href="#" data-placement="top" data-toggle="tooltip" title="Unionpay") 
+                                                    +icon('union')
+
+                                    a.main_link(href="#") настроить
+                                    .compensation
+                                        .form_element
+                                            label.for_check
+                                                input(type="checkbox")
+                                                span.text компенсировать комиссии платежного шлюза
+                                        .compensation_options
+                                            .compensation_option_title используется общее правило
+                                            a.main_link(href="#") изменить
+
+                            li.general_methods_item
+                                .general_methods_item_check
+                                    +switcher('disabled')
+                                .general_methods_item_content
+                                    .general_methods_item_brand
+                                        .general_methods_item_logo
+                                            +icon('payment_paypal')
+                                        .general_methods_item_title PayPal
+                                    
+                                    a.main_link.err(href="#") необходимо настроить
+                                
+                            li.general_methods_item
+                                .general_methods_item_check
+                                    +switcher()
+                                .general_methods_item_content
+                                    .general_methods_item_brand
+                                        .general_methods_item_logo
+                                            +icon('payment_paymaster')
+                                        .general_methods_item_title PayMaster
+                                    
+                                    a.main_link.err(href="#") необходимо настроить
+
+                            li.general_methods_item
+                                .general_methods_item_check
+                                    +switcher()
+                                .general_methods_item_content
+                                    .general_methods_item_brand
+                                        .general_methods_item_logo
+                                            +icon('payment_robokassa')
+                                        .general_methods_item_title ROBOKASSA
+                                    
+                                    a.main_link.err(href="#") необходимо настроить
+
+                            li.general_methods_item
+                                .general_methods_item_check
+                                    +switcher()
+                                .general_methods_item_content
+                                    .general_methods_item_brand
+                                        .general_methods_item_logo
+                                            +icon('payment_ya')
+                                        .general_methods_item_title Яндекс Касса
+                                    
+                                    a.main_link.err(href="#") необходимо настроить
+
+
+.modal.fade(id="compensation_win" tabindex="-1" aria-labelledby="compensation_win" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered.modal-lg
+        .modal-content
+            .modal-header
+                .modal-title Тут название товара
+                span.close(data-dismiss="modal" aria-label="Close")
+                    +icon('modal_close')
+            .modal-body
+                .payment.payment_modal
+                    .title_block Размер компенсации комиссии платежного шлюза:
+                    .form_element
+                        label.for_radio
+                            input(type="radio" name="comission_rule" checked)
+                            span.text берутся из 
+                                a.main_link(href="#" data-toggle="modal" data-target="#general_rule" data-dismiss="modal" aria-label="Close") общего правила
+                    .form_element
+                        label.for_radio
+                            input(type="radio" name="comission_rule")
+                            span.text индивидуален для данного товара
+                    
+                    .payment_modal_table
+                        table.equal_cells
+                            colgroup
+                                col(style="width: 235px")
+                                col
+                                col
+                                col
+                                col
+                            thead
+                                tr
+                                    th Способ оплаты
+                                    th.align_center Комиссия шлюза
+                                    th.align_center Компенсирую
+                                    th Цена для покупателя
+                                    th.align_center На счет/кошелек
+                            tbody
+                                tr
+                                    td 
+                                        .payment_modal_table_item
+                                            +icon('credit-card')
+                                            a.main_link(href="#") Банк. карта (Paymaster WMZ)
+                                    td.align_center 0%
+                                    td
+                                        .form_element
+                                            select
+                                                option(value="0") да
+                                                option(value="1") нет
+                                    td.align_center 5 USD
+                                    td.align_center 5 WMZ
+                                tr
+                                    td 
+                                        .payment_modal_table_item
+                                            +icon('webmoney')
+                                            a.main_link(href="#") WebMoney
+                                    td.align_center 10,84%
+                                    td
+                                        .form_element
+                                            select
+                                                option(value="0") да
+                                                option(value="1") нет
+                                    td.align_center(colspan="2") способ оплаты недоступен
+                                tr
+                                    td 
+                                        .payment_modal_table_item
+                                            +icon('qiwi')
+                                            a.main_link(href="#") QIWI
+                                    td.align_center 10,84%
+                                    td
+                                        .form_element
+                                            select
+                                                option(value="0") да
+                                                option(value="1") нет
+                                    td.align_center(colspan="2") способ оплаты недоступен
+
+                                tr
+                                    td 
+                                        .payment_modal_table_item
+                                            +icon('yandex-money')
+                                            a.main_link(href="#") Яндекс.Деньги (WMR)
+                                    td.align_center 0%
+                                    td
+                                        .form_element
+                                            select
+                                                option(value="0") да
+                                                option(value="1") нет
+                                    td.align_center 407,61 RUB
+                                    td.align_center 5 WMZ
+                                tr
+                                    td 
+                                        .payment_modal_table_item
+                                            +icon('mts')
+                                            a.main_link(href="#") МТС
+                                    td.align_center 0%
+                                    td
+                                        .form_element
+                                            select
+                                                option(value="0") да
+                                                option(value="1") нет
+                                    td.align_center 407,61 RUB
+                                    td.align_center 5 WMZ
+                                tr
+                                    td 
+                                        .payment_modal_table_item
+                                            +icon('beeline')
+                                            a.main_link(href="#") Билайн
+                                    td.align_center 0%
+                                    td
+                                        .form_element
+                                            select
+                                                option(value="0") да
+                                                option(value="1") нет
+                                    td.align_center 407,61 RUB
+                                    td.align_center 5 WMZ
+                                tr
+                                    td 
+                                        .payment_modal_table_item
+                                            +icon('megafon')
+                                            a.main_link(href="#") Мегафон
+                                    td.align_center 0%
+                                    td
+                                        .form_element
+                                            select
+                                                option(value="0") да
+                                                option(value="1") нет
+                                    td.align_center 407,61 RUB
+                                    td.align_center 5 WMZ
+                                tr
+                                    td 
+                                        .payment_modal_table_item
+                                            +icon('tele-2')
+                                            a.main_link(href="#") TELE2
+                                    td.align_center 0%
+                                    td
+                                        .form_element
+                                            select
+                                                option(value="0") да
+                                                option(value="1") нет
+                                    td.align_center 407,61 RUB
+                                    td.align_center 5 WMZ
+                                tr
+                                    td 
+                                        .payment_modal_table_item
+                                            +icon('bank')
+                                            a.main_link(href="#") Интернет-банкинг
+                                    td.align_center 0%
+                                    td
+                                        .form_element
+                                            select
+                                                option(value="0") да
+                                                option(value="1") нет
+                                    td.align_center 407,61 RUB
+                                    td.align_center 5 WMZ
+                                tr
+                                    td 
+                                        .payment_modal_table_item
+                                            +icon('russian-post')
+                                            a.main_link(href="#") Почта России
+                                    td.align_center 0%
+                                    td
+                                        .form_element
+                                            select
+                                                option(value="0") да
+                                                option(value="1") нет
+                                    td.align_center 407,61 RUB
+                                    td.align_center 5 WMZ
+                                tr
+                                    td 
+                                        .payment_modal_table_item
+                                            +icon('alp')
+                                            a.main_link(href="#") Alipay
+                                    td.align_center 0%
+                                    td
+                                        .form_element
+                                            select
+                                                option(value="0") да
+                                                option(value="1") нет
+                                    td.align_center 407,61 RUB
+                                    td.align_center 5 WMZ
+
+                                tr
+                                    td 
+                                        .payment_modal_table_item
+                                            +icon('union')
+                                            a.main_link(href="#") Unionpay
+                                    td.align_center 0%
+                                    td
+                                        .form_element
+                                            select
+                                                option(value="0") да
+                                                option(value="1") нет
+                                    td.align_center 407,61 RUB
+                                    td.align_center 5 WMZ
+
+.modal.fade(id="general_rule" tabindex="-1" aria-labelledby="general_rule" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered.modal-lg
+        .modal-content
+            .modal-header
+                .modal-title Общее правило компенсации комиссии платежного шлюза покупателю
+                span.close(data-dismiss="modal" aria-label="Close")
+                    +icon('modal_close')
+            .modal-body
+                .payment.payment_modal
+                    .form_element
+                        label.for_check
+                            input(type="checkbox")
+                            span.text Автоматически включать компенсацию из общего правила для новых товаров
+                    .payment_modal_table
+                        table.equal_cells
+                            colgroup
+                                col(style="width: 235px")
+                                col
+                                col
+                                col
+                            thead
+                                tr
+                                    th Способ оплаты
+                                    th.align_center На счет
+                                    th.align_center Комиссия шлюза
+                                    th.align_center Компенсирую
+                            tbody
+                                tr
+                                    td 
+                                        .payment_modal_table_item
+                                            +icon('credit-card')
+                                            a.main_link(href="#") Банк. карта (Paymaster WMZ)
+                                    td.align_center WM
+                                    td.align_center 10.468%
+                                        
+                                    td.align_center
+                                        .form_element
+                                            select
+                                                option(value="0") да
+                                                option(value="1") нет
+                                tr
+                                    td 
+                                        .payment_modal_table_item
+                                            +icon('credit-card')
+                                            a.main_link(href="#") Банк. карта (Paymaster WMZ)
+                                    td.align_center WM
+                                    td.align_center 10.468%
+                                        
+                                    td.align_center
+                                        .form_element
+                                            select
+                                                option(value="0") да
+                                                option(value="1") нет

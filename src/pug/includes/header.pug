@@ -1,0 +1,81 @@
+header
+    .box
+        .header_top
+            a.header_logo(href="/")
+                    +icon('digiseller-logo')
+            .header_search
+                .form_element
+                    input(type="text" autofocus placeholder="Товар, счет, уникальный код, email ...")
+                .search_results
+                    ul.header_search_results_list
+                        li
+                            .section_title Счет
+                            a(href="#").search_results_item-content
+                                .search_results_item-icon
+                                    +icon('invoice')
+                                span.search_results_item-text eFootball PES 2021 ✅SEASON UPDATE STANDARD EDITION
+                            a(href="#").search_results_item-content
+                                .search_results_item-icon
+                                    +icon('search-res-customer')
+                                span.search_results_item-text mail@mail.com
+                            a(href="#").search_results_item-content
+                                .search_results_item-icon
+                                    +icon('good')
+                                span.search_results_item-text Товар там какой то
+                            a(href="#").search_results_item-content
+                                .search_results_item-icon
+                                    +icon('invoice')
+                                span.search_results_item-text GUID там какой то
+                        li
+                            .section_title Счет
+                            a(href="#").search_results_item-content
+                                .search_results_item-icon
+                                    +icon('invoice')
+                                span.search_results_item-text eFootball PES 2021 ✅SEASON UPDATE STANDARD EDITION
+                            a(href="#").search_results_item-content
+                                .search_results_item-icon
+                                    +icon('search-res-customer')
+                                span.search_results_item-text mail@mail.com
+                                
+            .header_top_nav
+                ul.header_top_nav-list
+                    li(id="notice_item")
+                        +icon('notice')
+                        span.nav_list_item-title Уведомления
+                        .notice_counter_box.styled
+                            .notice_counter-item.important 95
+                            .notice_counter-item 64
+
+                        include ../includes/components/notice-popup.pug
+                    li.sep
+                        +icon('messages')
+                        span.nav_list_item-title Сообщения
+                        .notice_counter_box
+                            .notice_counter-item 0
+                    li
+                        +icon('responses')
+                        span.nav_list_item-title Претенизии
+                        .notice_counter_box
+                            .notice_counter-item 0
+                    li
+                        +icon('offer')
+                        span.nav_list_item-title Предложения
+                        .notice_counter_box
+                            .notice_counter-item.new_notice 999
+                    li 
+                        +icon('chats')
+                        span.nav_list_item-title Чаты
+                        .notice_counter_box
+                            .notice_counter-item 0
+                    li.sep
+                        +icon('logout')
+                        span.nav_list_item-title Выход
+                    li.lang
+                        a(href="/").active
+                            +icon('rus')
+                            |рус
+                        a(href="/")
+                            +icon('eng')
+                            |eng
+    
+include ../includes/components/main-nav.pug

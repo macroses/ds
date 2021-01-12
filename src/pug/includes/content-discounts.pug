@@ -1,0 +1,68 @@
+main
+    .box
+        +tab-list(['GeneralRules', 'Personal', 'PromoCodes', 'Sales'], 0)
+            +tab('GeneralRules', 'acitve')
+                .content_box
+                    .alert_box.info Вы находитесь на странице настройки скидок вашим постоянным покупателям. Общие правила предоставления скидок распространяются на все ваши товары,
+                        |  у которых включена опция «скидки из общего правила». Для включения/выключения опции перейдите по ссылке (да/нет) в графе 
+                        span.bold скидки 
+                        |в разделе 
+                        a.main_link Товары » Список
+                        |. Для каждого отдельного товара вы можете настроить индивидуальные правила предоставления скидок, для этого воспользуйтесь опцией «индивидуальные скидки» на той 
+                        |же самой странице.
+
+                    .discount_good
+                        .buy_limit_form
+                            span если cумма покупок моих товаров больше 
+                            .form_element
+                                input(type="text" disabled value="5")
+                            span 
+                                span.bold USD 
+                                |— скидка составляет
+                            .form_element
+                                input(type="text" disabled value="15")
+                            span % 
+                            button.btn.btn_gray
+                                span.minus
+                        .buy_limit_form
+                            span если cумма покупок моих товаров больше 
+                            .form_element
+                                input(type="text")
+                            span 
+                                span.bold USD 
+                                |— скидка составляет
+                            .form_element
+                                input.err(type="text")
+                            span % 
+                            button.btn.btn_gray
+                                +icon('plus_button')
+                    
+                        .input_err Значение нижней границы (в USD) указано некорректно
+                        .input_err Значение процента скидки указано некорректно (необходимо указать целое число от 1 до 99)
+                        .form_element.auto
+                            label.for_check
+                                input(type="checkbox")
+                                span.text Автоматически включать скидку из общего правила для новых товаров
+
+                    .discounts_goods_counter
+                        .discounts_goods_counter_item
+                            span.title Товаров без скидок:
+                            span.result 38
+                        .discounts_goods_counter_item
+                            span.title Товаров со скидками / индивидуальными: 
+                            span.result 61 / 7
+
+                    .buy_limit
+                        .form_element
+                            label.for_radio
+                                input(type="radio" name="limit")
+                                span.text Применить общее правило предоставления скидок ко всем моим товарам
+                        .form_element.inside
+                            label.for_check.disabled
+                                input(type="checkbox" disabled)
+                                span.text За исключением товаров с установленными индивидуальными скидками
+                        .form_element
+                            label.for_radio
+                                input(type="radio" name="limit" checked)
+                                span.text Убрать общее правило предоставления скидок со всех моих товаров
+                        button.btn.btn_blue выполнить

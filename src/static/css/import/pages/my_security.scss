@@ -1,0 +1,130 @@
+.my_security_box {
+    display: flex;
+    margin-top: 15px;
+}
+
+.my_security_ip {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+    .form_element {
+        flex-basis: 66px;
+        position: relative;
+        margin-right: 10px;
+        &:not(:last-child):after {
+            content: '.';
+            position: absolute;
+            right: -6px;
+            bottom: 3px;
+            color: #000;
+            font-weight: bold;
+        }
+
+        &.comment {
+            flex-basis: 293px;
+        }
+    }
+}
+
+
+
+.current_ip {
+    background: #ffde76;
+    border: 1px solid #ff9d76;
+    display: inline-block;
+    border-radius: $border-rad;
+    padding: 5px;
+}
+
+.invalid_ip {
+    color: red;
+    span {
+        font-weight: bold;
+    }
+}
+
+.my_security_wm_auth {
+    margin-bottom: 10px;
+}
+
+
+.trusted_phones {
+    .title_block {
+        margin-top: 10px;
+    }
+}
+
+.trusted_phones_list {
+    margin-top: 10px;
+    font-weight: bold;
+    li {
+        margin-bottom: 10px;
+    }
+    .pic-attestat {
+        margin-bottom: 4px;
+    }
+}
+
+.pic-attestat,
+.pic-plus_button {
+    @include box(16px);
+}
+
+.add_new_info {
+    margin-bottom: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    .btn {
+        margin-left: 5px;
+        max-height: 34px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .form_element {
+        display: flex;
+        width: 220px;
+    }
+}
+
+.new_info_list {
+    margin-bottom: 20px;
+    .new_info_item {
+        display: flex;
+        align-items: center;
+        font: 400 12px Roboto;
+        margin-bottom: 5px;
+    }
+
+    .new_info_content {
+        width: 220px;
+        margin-right: 5px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+}
+
+.sms_push {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid $table_border_header_color;
+    display: flex;
+    flex-wrap: wrap;
+    .form_element {
+        display: flex;
+        align-items: center;
+        width: 300px;
+        span {
+            margin-right: 5px;
+        }
+    }
+    .btn {
+        margin-left: 5px;
+    }
+
+    .title {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+}

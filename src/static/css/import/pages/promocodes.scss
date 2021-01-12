@@ -1,0 +1,212 @@
+.promocodes_box {
+
+    span {
+        font-size: 14px;
+        margin-left: 5px;
+        color: $additional_info_color;
+        white-space: nowrap;
+
+        &.star {
+            color: red;
+            font-size: 18px;
+        }
+    }
+
+    .pm_purses_settings_list_item .title {
+        flex-basis: 200px;
+        display: flex;
+        align-items: center;
+    }
+
+    .pm_purses_settings_list_item .configure {
+        flex-basis: 190px;
+    }
+
+    .date {
+        span {
+            margin-right: 5px;
+        }
+    }
+
+
+}
+
+.promocodes_all_table {
+    .empty {
+        color: red;
+    }
+    
+    .ended {
+        color: red;
+        span {
+            color: $additional_info_color;
+        }
+    }
+}
+
+.promocodes_goods_form {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .alert_box {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .form_element {
+        margin-bottom: 0;
+        margin-right: 5px;
+        input {
+            margin-right: 5px;
+            width: 100px;
+        }
+    }
+    
+    span {
+        margin-right: 5px;
+    }
+
+    .date {
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    .err_msg {
+        position: absolute;
+        top: 100%;
+        right: 5px;
+        color: red;
+    }
+}
+
+.promocodes_goods_tabs {
+    margin-top: 20px;
+    .form_element {
+        margin-bottom: 0;
+    }
+    
+    table {
+        margin-top: 20px;
+    }
+
+    thead {
+        border-bottom: 0;
+    }
+
+    tbody {
+        input[type=text] {
+            width: 50px;
+            text-align: center;
+        }
+
+        .form_element {
+            margin: 0 auto;
+            display: inline-block;
+        }
+    }
+
+    .used_counter {
+        margin-top: 10px;
+        font-weight: bold;
+        .form_element {
+            margin-bottom: 5px;
+            input[type=text] {
+                width: 200px;
+            }
+        }
+
+        .btn {
+            margin-left: 5px;
+        }
+    }
+}
+
+.all_goods_promo {
+    margin: 10px 0;
+    .form_element {
+        input {
+            width: 50px;
+        }
+    }
+}
+
+.tabs_inner {
+    .nav-tabs{
+        border-bottom: 1px solid #b2c1c9;
+        .nav-link {
+            border-bottom: 1px solid #b2c1c9;
+            &.active {
+                box-shadow: none;
+                border: 1px solid #b2c1c9;
+                border-bottom: 0;
+            }
+        }
+    }
+}
+
+.codes_table {
+    thead {
+        border-bottom: 1px solid #cfd8dc;
+    }
+
+    .used {
+        color: #b2b2b2;
+    }
+
+    .form_element {
+        input[type=text] {
+            width: 100%;
+            text-align: left;
+        }
+    }
+}
+
+.reports {
+    .pm_purses_settings_list {
+        width: 40%;
+    }
+
+    .form_group {
+        .form_element {
+            margin-bottom: 10px;
+        }
+    }
+    
+    .btn {
+        margin: 10px 0 0;
+    }
+
+    .hint {
+        margin-top: 10px;
+    }
+}
+
+.pic-excel {
+    @include box(20px);
+    margin-right: 3px;
+}
+
+.analytics_list {
+    li {
+        margin-bottom: 3px;
+    }
+}
+
+.analytics {
+    .form_element {
+        margin-top: 10px;
+        span {
+            margin-right: 5px;
+        }
+
+        input[type=text] {
+            width: 180px;
+        }
+        
+        .btn {
+            margin-left: 5px;
+        }
+    }
+}

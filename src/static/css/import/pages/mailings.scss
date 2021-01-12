@@ -1,0 +1,17 @@
+.mailings_info {
+    .alert_box {
+        &.warning {
+            margin: 10px 0;
+        }
+    }
+}
+
+.content_box.mailings {
+    margin-bottom: 10px;
+}
+
+.form_element {
+    &.mailings {
+        margin-bottom: 0;
+    }
+}

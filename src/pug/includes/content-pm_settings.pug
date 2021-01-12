@@ -1,0 +1,218 @@
+main
+    .box
+        +tab-list(['General_rules', 'Digiseller', 'WM_Merchant', 'PayPal', 'PayMaster', 'Robokassa', 'Yandex_Checkout', 'Settings'], 7)
+            +tab('Settings', 'active')
+                .content_box
+                    .alert_box.info Сортируйте способы оплаты перетаскиванием значка 
+                        +icon('drag')
+                        br
+                        span.bold Внимание!
+                        |  Сортировка и скрытие способов оплаты применимы только для собственных магазинов
+
+                    ul.pm_sort_list
+                        li.pm_sort_list_item
+                            .drag_handle
+                                +icon('drag')
+                            .pm_sort_list_icon
+                                +icon('bitcoin')
+                            .pm_sort_list_name Bitcoin
+                            .pm_sort_list_visibility
+                                +icon('eye_open')
+
+                        li.pm_sort_list_item
+                            .drag_handle
+                                +icon('drag')
+                            .pm_sort_list_icon
+                                +icon('webmoney')
+                            .pm_sort_list_name WebMoney
+                            .pm_sort_list_visibility
+                                +icon('eye_close')
+
+                        li.pm_sort_list_item
+                            .drag_handle
+                                +icon('drag')
+                            .pm_sort_list_icon
+                                +icon('credit-card')
+                            .pm_sort_list_name Банковская карта
+                            .pm_sort_list_visibility
+                                +icon('eye_open')
+
+                        li.pm_sort_list_item
+                            .drag_handle
+                                +icon('drag')
+                            .pm_sort_list_icon
+                                +icon('paypal-method')
+                            .pm_sort_list_name PayPal
+                            .pm_sort_list_visibility
+                                +icon('eye_open')
+
+                        li.pm_sort_list_item
+                            .drag_handle
+                                +icon('drag')
+                            .pm_sort_list_icon
+                                +icon('qiwi')
+                            .pm_sort_list_name QIWI
+                            .pm_sort_list_visibility
+                                +icon('eye_open')
+
+                        li.pm_sort_list_item
+                            .drag_handle
+                                +icon('drag')
+                            .pm_sort_list_icon
+                                +icon('yandex-money')
+                            .pm_sort_list_name Яндекс.Деньги
+                            .pm_sort_list_visibility
+                                +icon('eye_open')
+
+                        li.pm_sort_list_item
+                            .drag_handle
+                                +icon('drag')
+                            .pm_sort_list_icon
+                                +icon('mts')
+                            .pm_sort_list_name MTS
+                            .pm_sort_list_visibility
+                                +icon('eye_open')
+
+                        li.pm_sort_list_item
+                            .drag_handle
+                                +icon('drag')
+                            .pm_sort_list_icon
+                                +icon('beeline')
+                            .pm_sort_list_name Билайн
+                            .pm_sort_list_visibility
+                                +icon('eye_open')
+
+                        li.pm_sort_list_item
+                            .drag_handle
+                                +icon('drag')
+                            .pm_sort_list_icon
+                                +icon('megafon')
+                            .pm_sort_list_name Мегафон
+                            .pm_sort_list_visibility
+                                +icon('eye_open')
+
+                        li.pm_sort_list_item
+                            .drag_handle
+                                +icon('drag')
+                            .pm_sort_list_icon
+                                +icon('tele-2')
+                            .pm_sort_list_name TELE2
+                            .pm_sort_list_visibility
+                                +icon('eye_open')
+
+                        li.pm_sort_list_item
+                            .drag_handle
+                                +icon('drag')
+                            .pm_sort_list_icon
+                                +icon('terminal')
+                            .pm_sort_list_name Терминалы оплаты
+                            .pm_sort_list_visibility
+                                +icon('eye_open')
+
+                        li.pm_sort_list_item
+                            .drag_handle
+                                +icon('drag')
+                            .pm_sort_list_icon
+                                +icon('bank')
+                            .pm_sort_list_name Интернет банкинг
+                            .pm_sort_list_visibility
+                                +icon('eye_open')
+
+                        li.pm_sort_list_item
+                            .drag_handle
+                                +icon('drag')
+                            .pm_sort_list_icon
+                                +icon('russian-post')
+                            .pm_sort_list_name Почта России
+                            .pm_sort_list_visibility
+                                +icon('eye_open')
+
+                        li.pm_sort_list_item
+                            .drag_handle
+                                +icon('drag')
+                            .pm_sort_list_icon
+                                +icon('wm-card')
+                            .pm_sort_list_name WM-карты
+                            .pm_sort_list_visibility
+                                +icon('eye_open')
+
+                        li.pm_sort_list_item
+                            .drag_handle
+                                +icon('drag')
+                            .pm_sort_list_icon
+                                +icon('present-card')
+                            .pm_sort_list_name Подарочная карта
+                            .pm_sort_list_visibility
+                                +icon('eye_open')
+
+                        li.pm_sort_list_item
+                            .drag_handle
+                                +icon('drag')
+                            .pm_sort_list_icon
+                                +icon('payment-steamskin')
+                            .pm_sort_list_name Steam-скины
+                            .pm_sort_list_visibility
+                                +icon('eye_open')
+
+                        li.pm_sort_list_item
+                            .drag_handle
+                                +icon('drag')
+                            .pm_sort_list_icon
+                                +icon('alp')
+                            .pm_sort_list_name Alipay
+                            .pm_sort_list_visibility
+                                +icon('eye_open')
+                        
+                        li.pm_sort_list_item
+                            .drag_handle
+                                +icon('drag')
+                            .pm_sort_list_icon
+                                +icon('union')
+                            .pm_sort_list_name Unionpay
+                            .pm_sort_list_visibility
+                                +icon('eye_open')
+
+                        li.pm_sort_list_item
+                            .drag_handle
+                                +icon('drag')
+                            .pm_sort_list_icon
+                                +icon('payment_robokassa')
+                            .pm_sort_list_name Robokassa
+                            .pm_sort_list_visibility
+                                +icon('eye_open')
+
+                        li.pm_sort_list_item
+                            .drag_handle
+                                +icon('drag')
+                            .pm_sort_list_icon
+                                +icon('payment_ya')
+                            .pm_sort_list_name ЮKasssa (Яндекс.Касса)
+                            .pm_sort_list_visibility
+                                +icon('eye_open')
+
+                        li.pm_sort_list_item
+                            .drag_handle
+                                +icon('drag')
+                            .pm_sort_list_icon
+                                +icon('payment_paymaster')
+                            .pm_sort_list_name PayMaster
+                            .pm_sort_list_visibility
+                                +icon('eye_open')
+
+                        li.pm_sort_list_item
+                            .drag_handle
+                                +icon('drag')
+                            .pm_sort_list_icon
+                                +icon('payment_sber')
+                            .pm_sort_list_name Сбербанк Онлайн
+                            .pm_sort_list_visibility
+                                +icon('eye_open')
+
+                        li.pm_sort_list_item
+                            .drag_handle
+                                +icon('drag')
+                            .pm_sort_list_icon
+                                +icon('payment_turkey')
+                            .pm_sort_list_name Turkey Bank Card
+                            .pm_sort_list_visibility
+                                +icon('eye_open')

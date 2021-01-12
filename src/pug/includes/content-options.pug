@@ -1,0 +1,353 @@
+main
+    .box
+        .content_box
+            .page_nav
+                ul.breadcrumbs_list
+                    li.breadcrumb_item
+                        a.main_link(href="#" data-placement="top" data-toggle="tooltip" title="список моих товаров") Мои товары
+                    li.breadcrumb_item
+                        .breadcrumb_item_name Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена 
+                        a(href="#" data-placement="top" data-toggle="tooltip" title="открыть страницу с описанием товара")
+                            +icon('good_link')
+                        .breadcrumb_item_price 14895 
+                            span RUB
+                .page_nav_item
+                    .prev 
+                        a.main_link(href="#") предыдущий товар
+                    .next 
+                        a.main_link(href="#") следующий товар
+            
+            
+        +tab-list(['Basic', 'Parameters', 'Gallery', ['Content', 10], 'Payment', 'Sales', 'Discount', 'HTML_code', 'Notifications'], 1)
+            +tab('Parameters', 'active')
+                .content_box
+                    .options
+                        .params_list
+                            +fieldset('Параметры')
+                                .hint параметры не добавлены
+                                ul.params_list
+                                    li test param1
+                                    li test param2 test param2 test param2 test param2 test param2 test param2 test param2 
+                                    li.active test param3
+                            
+                            .params_btn_group
+                                .params_btn_group_item
+                                    button.btn.btn_gray добавить
+                                    button.btn.btn_gray удалить
+                                .params_btn_group_item
+                                    button.btn.btn_gray выше
+                                    button.btn.btn_gray(disabled) ниже
+                                .params_btn_group_item
+                                    button.btn.btn_gray(data-toggle="modal" data-target="#params_import") импортировать параметры
+                                .params_btn_group_item
+                                    button.btn.btn_gray(data-toggle="modal" data-target="#additional_settings") дополнительные настройки
+                        .params_funcs
+                            // нет параметров, начинаем добавлять первый
+                            .alert_box.info Вы можете добавить к товару дополнительные параметры, которые покупатель должен будет выбрать/заполнить перед оплатой.
+                                | Данные, которые он укажет, будут доступны вам на странице с информацией о покупке. У параметров с типом "Список", "Радио-кнопки" и "Флажки" 
+                                |предлагается опция динамического изменения (увеличения/уменьшения) цены. Просьба не добавлять в качестве дополнительного параметра email покупателя,
+                                | т.к. он уже существует и является обязательным для заполнения.
+
+                            .form_data_block 
+                                .form_data_block_item
+                                    .form_data_block_title Название :<br> (не более 100 символов)
+                                    .form_data_block_content 
+                                        .form_element
+                                            input(type="text")
+                                .form_data_block_item
+                                    .form_data_block_title Название :<br> (не более 100 символов)
+                                    .form_data_block_content.vertical
+                                        .form_element
+                                            input(type="text")
+                                            span.lang(data-placement="right" data-toggle="tooltip" title="The field must contain the name of the parameter in Russian")
+                                                +icon('rus')
+                                        .form_element
+                                            input(type="text")
+                                            span.lang(data-placement="right" data-toggle="tooltip" title="The field must contain the name of the parameter in English")
+                                                +icon('eng')
+                                .form_data_block_item
+                                    .form_data_block_title ID параметра:
+                                    .form_data_block_content 
+                                        .form_element
+                                            input(type="text" disabled value="12345")
+                                
+                                .form_data_block_item
+                                    .form_data_block_title Тип параметра:
+                                    .form_data_block_content 
+                                        .form_element
+                                            select
+                                                option(value="0") Выпадающий список
+                                                option(value="1") Радио-кнопки
+                                                option(value="2") Чекбоксы
+                                                option(value="3") Текстовое поле
+                                                option(value="4") Многострочное текстовое поле 
+                            .form_element
+                                label.for_check
+                                    input(type="checkbox")
+                                    span.text параметр является обязательным
+
+                            .form_block_submit
+                                button.btn.btn_gray добавить новый параметр
+
+                            // добавили выпадающий список
+                            .form_data_block 
+                                .form_data_block_item
+                                    .form_data_block_title Название:
+                                    .form_data_block_content 
+                                        .form_element
+                                            input(type="text")
+                                .form_data_block_item
+                                    .form_data_block_title Тип параметра:
+                                    .form_data_block_content 
+                                        .form_element
+                                            select
+                                                option(value="0") Выпадающий список
+                                                option(value="1") Радио-кнопки
+                                                option(value="2") Чекбоксы
+                                                option(value="3") Текстовое поле
+                                                option(value="4") Многострочное текстовое поле
+                            .form_group
+                                .form_element
+                                    label.for_check.disabled
+                                        input(type="checkbox" disabled)
+                                        span.text параметр является обязательным
+                                .form_element
+                                    label.for_check
+                                        input(type="checkbox")
+                                        span.text у параметра отсутствует значение по умолчанию
+
+                            table.equal_cells
+                                colgroup
+                                    col(style="width: 240px")
+                                    col
+                                    col(style="width: 100px")
+                                    col(style="width: 40px")
+                                thead
+                                    tr
+                                        th Название варианта
+                                        th.align_center Модификатор цены
+                                        th.align_center По умолчанию	
+                                        th.align_right
+                                tbody
+                                    tr
+                                        td
+                                            .form_element
+                                                input(type="text")
+                                        td.align_center
+                                            .mod_box
+                                                span.currency.usd 5 USD
+                                                .form_element
+                                                    select
+                                                        option(value="0") +
+                                                        option(value="1") -
+                                                    input(type="text")
+                                                    select
+                                                        option(value="0") USD
+                                                        option(value="1") %
+                                        td.align_center
+                                            .default_param
+                                                .form_element
+                                                    label.for_radio
+                                                        input(type="radio" name="mod")
+                                                        span.text
+                                        td.align_right
+                                            button.btn.btn_gray
+                                                span
+                                                    +icon('plus_button')
+                                    tr
+                                        td
+                                            .form_element
+                                                input(type="text")
+                                        td.align_center
+                                            .mod_box
+                                                span.currency.usd 5 USD
+                                                .form_element
+                                                    select
+                                                        option(value="0") +
+                                                        option(value="1") -
+                                                    input(type="text")
+                                                    select
+                                                        option(value="0") USD
+                                                        option(value="1") %
+                                        td.align_center
+                                            .default_param
+                                                .form_element
+                                                    label.for_radio
+                                                        input(type="radio" name="mod")
+                                                        span.text
+                                        td.align_right
+                                            button.btn.btn_gray
+                                                span.minus
+                                                    
+                                    // переключились на английский язык
+                                    tr
+                                        td
+                                            .form_element
+                                                input(type="text")
+                                                span.lang(data-placement="right" data-toggle="tooltip" title="The field must contain the name of the parameter in Russian")
+                                                    +icon('rus')
+                                            .form_element
+                                                input(type="text")
+                                                span.lang(data-placement="right" data-toggle="tooltip" title="The field must contain the name of the parameter in English")
+                                                    +icon('eng')
+                                        td.align_center
+                                            .mod_box
+                                                span.currency.usd 5 USD
+                                                .form_element
+                                                    select
+                                                        option(value="0") +
+                                                        option(value="1") -
+                                                    input(type="text")
+                                                    select
+                                                        option(value="0") USD
+                                                        option(value="1") %
+                                        td.align_center
+                                            .default_param
+                                                .form_element
+                                                    label.for_radio
+                                                        input(type="radio" name="mod")
+                                                        span.text
+                                        td.align_right
+                                            button.btn.btn_gray
+                                                span
+                                                    +icon('plus_button')
+
+                            .params_funcs_comment
+                                .form_element.vertical
+                                    .title Комментарий:
+                                    textarea(placeholder="Здесь вы можете ввести комментарий, который будет показываться при наведении мыши на иконку с вопросом справа от названия параметра.")
+                            button.btn.btn_blue сохранить
+                        .params_preview 
+                            .params_preview_content
+                                .params_preview_header
+                                    +icon('preview')
+                                    | Превью формы оплаты
+                                .params_preview_form
+                                    .params_preview_form_item.inactive
+                                        .form_element.vertical
+                                            .title Оплата через:
+                                            select(disabled)
+                                                option(value="0") WebMoney
+                                                option(value="1") Что-то еще
+                                    
+                                    .params_preview_form_item
+                                        .form_element.vertical
+                                            .title Выпадающий список:
+                                            select
+                                                option(value="0") Какой-то атрибут параметра
+                                                option(value="1") Какой-то атрибут параметраКакой-то атрибут параметраКакой-то атрибут параметраКакой-то атрибут параметраКакой-то атрибут параметра
+
+                                    .params_preview_form_item.active
+                                        .form_element.vertical
+                                            .title Радио-кнопки Радио-кнопки Радио-кнопки Радио-кнопки Радио-кнопки Радио-кнопки Радио-кнопки Радио-кнопки :
+                                                
+                                            label.for_radio
+                                                input(type="radio" name="attribut")
+                                                span.text Какой то атрибут параметра Какой то атрибут параметра Какой то атрибут параметра 
+                                            label.for_radio
+                                                input(type="radio" name="attribut")
+                                                span.text 123
+
+                                    .params_preview_form_item
+                                        .form_element.vertical
+                                            .title Чекбоксы:
+                                                span.comment_preview(data-placement="top" data-toggle="tooltip" title="тут комментарий") ?
+                                            label.for_check
+                                                input(type="checkbox")
+                                                span.text Какой то атрибут
+                                            label.for_check
+                                                input(type="checkbox")
+                                                span.text 123
+
+                                    .params_preview_form_item
+                                        .form_element.vertical
+                                            .title Текстовое поле:
+                                            input(type="text")
+                                    
+                                    .params_preview_form_item
+                                        .form_element.vertical
+                                            .title Текстовое поле:
+                                            textarea
+
+                                    .params_preview_form_item.inactive
+                                        button купить
+
+
+.modal.fade(id="params_import" tabindex="-1" aria-labelledby="params_import" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered
+        .modal-content
+            .modal-header
+                .modal-title Импорт параметров
+                span.close(data-dismiss="modal" aria-label="Close")
+                    +icon('modal_close')
+            .modal-body
+                .params_goods
+                    .title Выберите товар, из которого хотите скопировать параметры:
+                    .form_element
+                        select
+                            option(value="0") Товар 1
+                            option(value="1") Товар 2
+                            option(value="2") Товар 3
+                    .choose_all_params
+                        .form_element
+                            // если это чекнули, то выделяются все элементы
+                            // на .params_import_list навешивается класс .active
+                            label.for_check
+                                input(type="checkbox")
+                                span.text название параметра
+                ul.params_import_list
+                    li
+                        .form_element
+                            label.for_check
+                                input(type="checkbox")
+                                span.text param 1
+                    li 
+                        .form_element
+                            label.for_check
+                                input(type="checkbox")
+                                span.text param 2
+
+            .modal-footer
+                button.btn.btn_gray(data-dismiss="modal" aria-label="Close") импортировать параметры
+
+
+.modal.fade(id="additional_settings" tabindex="-1" aria-labelledby="additional_settings" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered.modal-md
+        .modal-content
+            .modal-header
+                .modal-title Дополнительные настройки
+                span.close(data-dismiss="modal" aria-label="Close")
+                    +icon('modal_close')
+            .modal-body
+                .params_to_server
+                    .form_element
+                            label.for_check
+                                input(type="checkbox")
+                                span.text перед оплатой отправлять параметры на мой сервер для проверки 
+                                a.main_link(href="#") API
+                                |:
+                .params_to_server_address
+                    .form_element
+                        input(type="text" placeholder="http://" disabled)
+                
+                .params_to_server_condition
+                    .title Если страница моего сервера недоступна (http response <> 200):
+                    .form_group.vertical
+                        .form_element
+                            label.for_radio
+                                input(type="radio", name="server_condition" checked)
+                                span.text разрешать продолжать оплату
+                        .form_element
+                            label.for_radio
+                                input(type="radio", name="server_condition")
+                                span.text запрещать продолжать оплату
+
+                .params_id_interface
+                    .form_element
+                        label.for_check
+                            input(type="checkbox")
+                            span.text отобразить в интерфейсе id параметров и их вариантов
+                    .hint Данная информация нужна только для использования 
+                        a.main_link(href="#") API
+            .modal-footer
+                button.btn.btn_gray(data-dismiss="modal" aria-label="Close") сохранить настройки

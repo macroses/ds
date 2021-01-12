@@ -1,0 +1,67 @@
+.good_link {
+    display: flex;
+
+    .title_block {
+        display: inline-block;
+    }
+}
+
+.good_link_params {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.good_link_params_content {
+    margin-top: 10px;
+}
+
+.good_link_options {
+    padding-left: 16px;
+    margin-bottom: 20px;
+    select {
+        margin: 0 5px;
+    }
+    
+    .form_element:not(:first-child) {
+        margin-bottom: 8px;
+    }
+}
+
+.good_link_code {
+    padding-left: 16px;
+
+    .good_html_code {
+        height: 110px;
+    }
+
+    .hint {
+        font-size: 11px;
+        margin-top: 5px;
+        .star {
+            font-size: 11px;
+        }
+    }
+
+    .title_block {
+        margin-top: 20px;
+    }
+}
+
+.clipboard {
+    font: 600 12px Lato;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 5px;
+    &:hover {
+        color: $main_links_color;
+        svg {
+            fill: $main_links_color;
+        }
+    }
+}
+
+.pic-copy {
+    @include box(16px);
+    margin-right: 5px;
+}

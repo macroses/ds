@@ -1,0 +1,42 @@
+footer {
+    background: $footer_bg;
+    padding: 35px 0;
+}
+
+.footer_nav {
+    display: flex;
+    font: 700 14px Lato;
+    a {
+        color: $footer_link_color;
+        text-decoration: underline;
+        margin-right: 25px;
+        &:hover { 
+            text-decoration: none;
+        }
+    }
+}
+
+.footer_logo {
+    margin-left: auto;
+}
+
+.pic-googleplay {
+    @include box(135px, 40px)
+}
+
+.footer_content {
+    display: flex;
+    align-items: center;
+}
+
+.copy {
+    color: $footer_text_color;
+    margin-right: 40px;
+    a {
+        color: $footer_text_color;
+        text-decoration: underline;
+        &:hover { 
+            text-decoration: none;
+        }
+    }
+}

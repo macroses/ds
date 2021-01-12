@@ -1,0 +1,27 @@
+.alert_box {
+    border-radius: $border-rad;
+    font-size: 13px;
+    padding: 7px 10px 8px;
+    display: flex;
+    align-items: center;
+    border: 1px solid;
+    display: inline-block;
+    width: 100%;
+    .bold {
+        font-weight: bold;
+    }
+
+    & + .alert_box {
+        margin-top: 10px;
+    }
+
+    &.before_content {
+        margin-bottom: 10px;
+    }
+}
+
+.pic-chat_android,
+.pic-chat_apple {
+    @include box(24px);
+    margin-right: 5px;
+}

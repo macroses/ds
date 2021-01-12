@@ -1,0 +1,230 @@
+.reklama_color {
+    color: #F78000;
+}
+
+.reklama_background {
+    padding: 0px 1px 1px 1px;
+    background-color: #FED6BC;
+    border: 1px solid #F7A247;
+}
+
+.my_reklama {
+    display: flex;
+    margin-top: 20px;
+}
+
+.my_reklama_form {
+    flex: 3;
+    margin-right: 20px;
+
+    .form_data_block_title {
+        flex-basis: 150px;
+    }
+
+    .form_data_block_content {
+        .form_element {
+            margin-right: 0;
+
+            input[type="text"] {
+                width: auto;
+                margin-right: 5px;
+                
+            }
+        }
+
+        .date {
+            margin-right: 10px;
+        }
+
+        &.money {
+            flex-direction: column;
+            input[type="text"] {
+                width: 100px;
+                margin-right: 5px;
+            }
+
+            span {
+                margin-right: 5px;
+            }
+        }
+    }
+
+    select {
+        flex: 1;
+    }
+    
+    label + select {
+        margin-left: 5px;
+    }
+
+    .btn {
+        margin-left: auto;
+    }
+
+    .form_data_block_item {
+        &.active {
+            background: #FED6BC;
+        }
+    }
+}
+
+.my_reklama_info {
+    flex: 5;
+}
+
+.my_reklama_money {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+
+    .form_element {
+        width: auto;
+    }
+
+    .desc {
+        font-size: 12px;
+        font-weight: bold;
+        color: #9aacb5;
+    }
+}
+
+.my_reklama_money_equal {
+    font-size: 12px;
+}
+
+.my_reklama_table {
+    margin-top: 30px;
+    table {
+        text-align: center;
+        color: #b2b2b2;
+        a {
+            color: $main_links_color;
+        }
+
+        td {
+            .bold {
+                color: #000;
+            }
+        }
+    }
+
+    .title {
+        color: $headers_color;
+    }
+
+    .desc_cell {
+        background: #f3f3f3;
+    }
+
+    .desc_box {
+        color: #898989;
+        
+    }
+
+    .arrow_row {
+        td {
+            padding: 0;
+            overflow: visible;
+        }
+    }
+
+    .arrow {
+        position: relative;
+        background: #f3f3f3;
+        display: block;
+        margin-bottom: -1px;
+        z-index: 2;
+        &:after,
+        &:before {
+            top: 100%;
+            left: 44%;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+        }
+
+        &:before {
+            border-color: rgba(236, 239, 241, 0);
+            border-top-color: #eceff1;
+            border-width: 6px;
+            margin-left: -6px;
+        }
+
+        &:after {
+            border-color: rgba(243, 243, 243, 0);
+            border-top-color: #f3f3f3;
+            border-width: 5px;
+            margin-left: -5px;
+        }
+    }
+}
+
+.current_server_time {
+    padding: 20px;
+    border-radius: $border-rad;
+    box-shadow: 0px 4px 4px 0 rgba(0,0,0,0.26);
+    background: #fff;
+    margin-bottom: 10px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+// day
+.day_reklama {
+    width: 50%;
+    margin-top: 0;
+    margin-bottom: 30px;
+
+    .counter_down {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: flex-start;
+        .alert_box {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            margin: 0 10px 0 0;
+        }
+    }
+
+    .hint {
+        margin-top: 0;
+    }
+
+    .time {
+        font-weight: bold;
+    }
+
+    .form_data_block_title {
+        flex-basis: 200px;
+    }
+
+    .form_element {
+        margin-bottom: 0;
+    }
+}
+
+.view_type_box {
+    .form_element {
+        margin-bottom: 10px;
+    }
+}
+
+.day_reklama_table {
+    margin-top: 30px;
+
+    .breadcrumbs_list {
+        margin: 40px 0 10px;
+    }
+
+    img {
+        margin-right: 10px;
+    }
+}

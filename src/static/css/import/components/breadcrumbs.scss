@@ -1,0 +1,97 @@
+.breadcrumbs_list {
+    display: flex;
+}
+
+.breadcrumb_item {
+    padding-right: 28px;
+    display: flex;
+    align-items: center;
+    &:not(:last-child) {
+        position: relative;
+        &:after {
+            left: calc(100% - 14px);
+            top: 50%;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+            border-color: rgba(178, 193, 201, 0);
+            border-left-color: #b2c1c9;
+            border-width: 5px;
+            margin-top: -5px;
+        }
+    }
+
+    &.current {
+        color: #78909c;
+    }
+}
+
+.breadcrumb_item_name {
+    max-width: 320px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.breadcrumb_item_price {
+    color: #e85607;
+    font-weight: normal;
+    span {
+        font-weight: bold;
+        color: #364851;
+    }
+}
+
+.page_nav {
+    display: flex;
+
+    &_item {
+        display: flex;
+        margin-left: auto;
+        margin-right: 15px;
+    }
+
+    .prev {
+        margin-right: 20px;
+        position: relative;
+        &:after {
+            content: '';
+            position: absolute;
+            right: -10px;
+            bottom: 0;
+            width: 1px;
+            height: 15px;
+            background: lightgray;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-top: 3px solid lightgray;
+            border-left: 3px solid lightgray;
+            bottom: 2px;
+            left: -15px;
+            transform: rotate(-45deg);
+        }
+    }
+
+    .next {
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-top: 3px solid lightgray;
+            border-left: 3px solid lightgray;
+            bottom: 2px;
+            right: -15px;
+            transform: rotate(135deg);
+        }
+    }
+}

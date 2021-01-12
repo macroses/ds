@@ -1,0 +1,19 @@
+include ../includes/mixins.pug
+doctype html
+block vars
+html(lang="ru-RU")
+    head
+        meta(charset="UTF-8")
+        meta(name="color-scheme" content="dark light")
+        //- meta(name="viewport" , content="width=device-width, initial-scale=1")
+        //- meta(name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1")
+        title #{title}
+        include ../includes/links.pug
+    body
+        button#change_scheme поменять цвет
+        .wrapper
+            block header
+
+            block content
+
+            block footer

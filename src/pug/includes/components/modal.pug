@@ -1,0 +1,11 @@
+button(data-toggle="modal" data-target="#exampleModal") launch modal
+    .modal.fade(id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true")
+        .modal-dialog.modal-dialog-centered
+            .modal-content
+                .modal-header
+                    .modal-title title
+                    button.btn-close(data-dismiss="modal" aria-label="Close")
+                .modal-body
+                    |modal body
+                .modal-footer
+                    button(data-dismiss="modal") Отмена

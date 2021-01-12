@@ -1,0 +1,272 @@
+main
+    .box
+        +tab-list(['Basic', 'Parameters', 'Gallery', 'Content', 'Payment', 'Sales', 'Discount', 'HTML_code', 'Notifications'], 0)
+            +tab('Basic', 'acitve')
+                .content_box
+                    .alert_box.info
+                        .flags_info
+                            |Из предложенного списка определитесь с типом товара и выберите то, что вы разместите в качестве товара. Именно это будет передано покупателю сразу после оплаты. <br>
+                            |В процессе выбора типа товара обратите внимание на сопутствующую характеристику товара:<br>
+                            span.flag.unique Уникальный 
+                            |— товар, каждый экземпляр которого продается только один раз, без возможности повторной продажи: ПИН-код, пароль, реквизиты доступа к чему-либо и т.д. Чтобы продать 100 пин-кодов активации игры, вам понадобится загрузить все 100 кодов, и каждый покупатель получит свой уникальный код.<br>
+                            span.flag.universal Универсальный 
+                            |— загружается в одном экземпляре, а продается бесконечное число раз. Примеры универсальных товаров: программа, электронная книга, база данных. Так, чтобы продать электронную книгу 100 раз, достаточно загрузить ее в DigiSeller единожды.<br>
+                            span.flag.form Форма 
+                            | — иногда возникает необходимость продавать программное обеспечение только после получения от покупателя определенных регистрационных данных. В этом случае, вместо того чтобы загружать содержимое товара, вы настроите поля регистрационной формы и способ получения введенных покупателем данных. Покупатель после оплаты заполнит заданную вами форму.
+
+                    .select_goods_box
+                        a.btn.btn_blue(href="#")
+                            |вопросы и ответы по выбору типа товара в Digiseller
+                            span
+                                +icon('question_mark')
+                        .select_goods_item
+                            .select_goods_item_title Тип товара:
+                            .select_goods_item_content(id="select_goods_collapse")
+                                .select_goods_item_content_item
+                                    a.main_link.collapse_toggle(id="uniq_fix" href="#" data-toggle="collapse" data-target="#uniq_fix_content" aria-expanded="true" aria-controls="uniq_fix_content")
+                                        span.collapse_btn
+                                        | Уникальный товар с фиксированной ценой
+                                    .collapse(id="uniq_fix_content" aria-labelledby="uniq_fix_content" data-parent="#select_goods_collapse")
+                                        .hint после оплаты покупатель получит:
+                                        ul.select_goods_list
+                                            li.select_goods_list_item
+                                                .form_element
+                                                    label.for_radio
+                                                        input(type="radio" name="radio_elem")
+                                                        span.text уникальный текст 
+                                                            span.bold (вы загружаете сами) 
+                                                        span.flag.unique Уникальное содержимое
+                                                .hint
+                                                    span.bold Что продавать: 
+                                                    |коды активации, реквизиты доступа к чему-либо (логин пароль), уникальные текстовые ключи и т.п.<br>
+                                                    span.bold Особенности: 
+                                                    |после создания карточки товара вам будет предложено загрузить необходимое количество кодов, в дальнейшем вы сможете пополнить их число. Товар продается по правилу: один код в одни руки.
+                                                .form_element.model
+                                                    label.for_check.disabled
+                                                        input(type="checkbox" disabled)
+                                                        span.text модель "Предзаказ" недоступна (минимальный рейтинг продавца: 5)
+
+                                            li.select_goods_list_item
+                                                .form_element
+                                                    label.for_radio
+                                                        input(type="radio" name="radio_elem")
+                                                        span.text уникальный файл 
+                                                            span.bold (вы загружаете сами) 
+                                                        span.flag.unique Уникальное содержимое
+                                                .hint
+                                                    span.bold Что продавать: 
+                                                    |сканы изображений карт или ключей, текстовые файлы с реквизитами доступа, архивы, содержащие уникальную информацию и т.п.<br>
+                                                    span.bold Особенности: 
+                                                    |после указания названия, описания и цены товара вам будет предложено загрузить необходимое количество файлов, которое в дальнейшем вы сможете пополнить или сократить. Товар продается по правилу: один файл в одни руки.
+                                                .form_element.model
+                                                    label.for_check.disabled
+                                                        input(type="checkbox" disabled)
+                                                        span.text модель "Предзаказ" недоступна (минимальный рейтинг продавца: 5)
+
+                                            li.select_goods_list_item
+                                                .form_element
+                                                    label.for_radio
+                                                        input(type="radio" name="radio_elem")
+                                                        span.text уникальный код 
+                                                            span.bold (создается системой Digiseller автоматически) 
+                                                        span.flag.unique Уникальное содержимое
+                                                .hint
+                                                    span.bold Что продавать: 
+                                                    |товары (или услуги), предполагающие передачу товара (оказание услуги) на стороннем сайте; а так же товары, требующие дополнительной связи продавца и покупателя после оплаты.<br>
+                                                    span.bold Особенности: 
+                                                    |после оплаты покупатель получает уникальный 16-значный код. Передача этого кода от покупателя к продавцу может осуществляться как вручную самим покупателем, так и путем автоматического перенаправления на вашу веб-страницу с дополнительным(и) параметрами в адресе запроса. Проверить код вы сможете вручную с помощью поиска через форму поиска вверху или программно, используя API-метод. Выбор и настройку подходящего вам варианта (от ручного до полностью автоматизированного) вы сможете сделать на одном из следующих этапов.
+
+                                .select_goods_item_content_item
+                                    a.main_link.collapse_toggle(id="uniq_unfix" href="#" data-toggle="collapse" data-target="#uniq_unfix_content" aria-expanded="false" aria-controls="uniq_unfix_content")
+                                        span.collapse_btn
+                                        | Уникальный товар с нефиксированной ценой
+                                    .collapse(id="uniq_unfix_content" aria-labelledby="uniq_unfix_content" data-parent="#select_goods_collapse")
+                                        .hint после оплаты покупатель получит:
+                                        ul.select_goods_list
+                                            li.select_goods_list_item
+                                                .form_element
+                                                    label.for_radio
+                                                        input(type="radio" name="radio_elem")
+                                                        span.text уникальный код 
+                                                            span.bold (создается системой Digiseller автоматически) 
+                                                        span.flag.unique Уникальное содержимое
+                                                .hint
+                                                    span.bold Что продавать: 
+                                                    |игровую валюту, условные единицы для пополнения внутреннего счета на вашем ресурсе и т.п.<br>
+                                                    span.bold Особенности: 
+                                                    |вы определяете название и стоимость одной единицы товара (""шт."", ""кк"", ""GOLD"" и т.п.), можете установить скидки в зависимости от количества приобретаемых единиц. При покупке покупатель сам задает сумму платежа в зависимости от количества приобретаемых единиц вашего товара. После оплаты покупатель получает уникальный код Digiseller, который сообщит вам вручную или путем принудительного уведомления c передачей дополнительной информации, а вы, в свою очередь, с помощью основной формы поиска личного кабинета (наверху) или 
+                                                    a.main_link(href="#") API-метода 
+                                                    |проверите его подлинность, узнаете сумму платежа и количество оплаченных единиц. При желании все это можно автоматизировать.
+
+                                .select_goods_item_content_item
+                                    a.main_link.collapse_toggle(id="soft" href="#" data-toggle="collapse" data-target="#soft_content" aria-expanded="false" aria-controls="soft_content")
+                                        span.collapse_btn
+                                        | Программное обеспечение (ПО)
+                                    .collapse(id="soft_content" aria-labelledby="soft_content" data-parent="#select_goods_collapse")
+                                        .hint после оплаты покупатель получит:
+                                        ul.select_goods_list
+                                            li.select_goods_list_item
+                                                .form_element
+                                                    label.for_radio
+                                                        input(type="radio" name="radio_elem")
+                                                        span.text файл (архив) с инсталляцией
+                                                        span.flag.universal Универсальный
+                                                .hint
+                                                    span.bold Что продавать: 
+                                                    |программное обеспечение в виде файла-архива (или файла инсталляции), не требующего ввода какого-либо регистрационного кода (ключа) для работы.<br>
+                                                    span.bold Особенности: 
+                                                    |после создания карточки товара, вам будет предложено загрузить файл (архив) к нам на сервер. Именно он будет передан покупателю после оплаты.
+                                            
+                                            li.select_goods_list_item
+                                                .form_element
+                                                    label.for_radio
+                                                        input(type="radio" name="radio_elem")
+                                                        span.text текстовую ссылку (URL) на файл с инсталляцией
+                                                        span.flag.universal Универсальный
+                                                .hint
+                                                    span.bold Что продавать: 
+                                                    |программное обеспечение в виде внешней ссылки на архив / инсталляцию, размещенную на внешнем хостинге или облачном сервисе.<br>
+                                                    span.bold Особенности: 
+                                                    |после создания карточки товара, вам будет предложено указать ссылку (URL). Именно эта ссылка будет передана покупателю после оплаты. 
+                                            
+                                            li.select_goods_list_item
+                                                .form_element
+                                                    label.for_radio
+                                                        input(type="radio" name="radio_elem")
+                                                        span.text регистрационный код 
+                                                            span.bold (вы загружаете сами)
+                                                        span.flag.unique Уникальное содержимое
+                                                .hint
+                                                    span.bold Что продавать: 
+                                                    |программное обеспечение, которым можно полноценно воспользоваться только после ввода кода активации (ключа).<br>
+                                                    span.bold Особенности: 
+                                                    |после создания карточки товара, вам будет предложено загрузить необходимое количество регистрационных кодов для продажи. В дальнейшем вы сможете пополнить или сократить их количество. Непосредственно архив / инсталляцию / trial-версию программы мы рекомендуем разместить на любом стороннем сайте (облачном хранилище), а ссылку на него добавить в описание товара. Продается по правилу: один код в одни руки.
+
+                                            li.select_goods_list_item
+                                                .form_element
+                                                    label.for_radio
+                                                        input(type="radio" name="radio_elem")
+                                                        span.text данные, полученные от вашего сервера
+                                                        span.flag.form Форма
+                                                .hint
+                                                    span.bold Что продавать: 
+                                                    |программное обеспечение, которое для полноценной работы требует от покупателя передачи регистрационных данных продавцу.<br>
+                                                    span.bold Особенности: 
+                                                    |сразу после оплаты покупателю будет предложено заполнить форму, состоящую из полей, которые вы заранее определите. Эти данные будут автоматически отправлены вам по email или HTTP-методом POST с XML в теле запроса. Предусмотрена возможность автоответа (HTTP RESPONSE) покупателю сообщением, содержащим код для запуска данной конкретной копии ПО.
+
+                                .select_goods_item_content_item
+                                    a.main_link.collapse_toggle(id="book" href="#" data-toggle="collapse" data-target="#book_content" aria-expanded="false" aria-controls="book_content")
+                                        span.collapse_btn
+                                        | Электронная книга (ЭК)
+                                    .collapse(id="book_content" aria-labelledby="book_content" data-parent="#select_goods_collapse")
+                                        .hint после оплаты покупатель получит:
+                                        ul.select_goods_list
+                                            li.select_goods_list_item
+                                                .form_element
+                                                    label.for_radio
+                                                        input(type="radio" name="radio_elem")
+                                                        span.text файл
+                                                        span.flag.universal Универсальный
+                                                .hint
+                                                    span.bold Что продавать: 
+                                                    |ЭК в виде файла, не требующего ввода какого-либо регистрационного кода (ключа) для использования.<br>
+                                                    span.bold Особенности: 
+                                                    |после указания названия, описания и цены ЭК, вам будет предложено загрузить файл к нам на сервер. Именно он будет передан покупателю после оплаты.
+                                            
+                                            li.select_goods_list_item
+                                                .form_element
+                                                    label.for_radio
+                                                        input(type="radio" name="radio_elem")
+                                                        span.text текстовую ссылку (URL) на файл с инсталляцией
+                                                        span.flag.universal Универсальный
+                                                .hint
+                                                    span.bold Что продавать: 
+                                                    |ЭК в виде ссылки на файл, который размещен на стороннем сайте(хостинге) или файлообменном сервисе.<br>
+                                                    span.bold Особенности: 
+                                                    |после указания названия, описания и цены ЭК вам будет предложено указать эту ссылку (URL). Именно она будет передана покупателю после оплаты. 
+                                            
+                                            li.select_goods_list_item
+                                                .form_element
+                                                    label.for_radio
+                                                        input(type="radio" name="radio_elem")
+                                                        span.text регистрационный код 
+                                                            span.bold (вы загружаете сами, не ограничен)
+                                                        span.flag.unique Уникальное содержимое
+                                                .hint
+                                                    span.bold Что продавать: 
+                                                    |ЭК, которой можно воспользоваться только после ввода регистрационного кода (ключа).<br>
+                                                    span.bold Особенности: 
+                                                    |после указания названия, описания и цены ЭК, вам будет предложено загрузить необходимое количество регистрационных кодов к нам на сервер. В дальнейшем вы сможете пополнить или сократить их количество. Непосредственно файл ЭК мы рекомендуем разместить на любом стороннем сайте (хостинге), а ссылку на него добавить в описание. Товар продается по правилу: один код в одни руки.
+
+                                            li.select_goods_list_item
+                                                .form_element
+                                                    label.for_radio
+                                                        input(type="radio" name="radio_elem")
+                                                        span.text данные, полученные от вашего сервера
+                                                        span.flag.form Форма
+                                                .hint
+                                                    span.bold Что продавать: 
+                                                    |ЭК, которая перед открытием требует от покупателя передачи регистрационных данных продавцу.<br>
+                                                    span.bold Особенности: 
+                                                    |после оплаты покупателю будет предложено заполнить форму, состоящую из полей, которые вы заранее определили. Данные покупателя будут автоматически отправлены вам по email или HTTP-методом POST с XML в теле запроса. Предусмотрена возможность автоматического ответа покупателю в виде регистрационного кода для открытия данной копии ЭК.
+
+                                .select_goods_item_content_item
+                                    a.main_link.collapse_toggle(id="random_product" href="#" data-toggle="collapse" data-target="#random_product_content" aria-expanded="false" aria-controls="random_product_content")
+                                        span.collapse_btn
+                                        | Произвольный цифровой товар
+                                    .collapse(id="random_product_content" aria-labelledby="random_product_content" data-parent="#select_goods_collapse")
+                                        .hint после оплаты покупатель получит:
+                                        ul.select_goods_list
+                                            li.select_goods_list_item
+                                                .form_element
+                                                    label.for_radio
+                                                        input(type="radio" name="radio_elem")
+                                                        span.text файл (архив)
+                                                        span.flag.universal Универсальный
+                                                .hint
+                                                    span.bold Что продавать: 
+                                                    |произвольный файл (архив).<br>
+                                                    span.bold Особенности: 
+                                                    |после указания названия, описания и цены ЦТ, вам будет предложено загрузить файл к нам на сервер. Именно он будет передан покупателю после оплаты.
+                                                .form_element.model
+                                                    label.for_check
+                                                        input(type="checkbox")
+                                                        span.text модель "Плати сколько хочешь" - стоимость товара указывает покупатель
+
+                                            li.select_goods_list_item
+                                                .form_element
+                                                    label.for_radio
+                                                        input(type="radio" name="radio_elem")
+                                                        span.text текст
+                                                        span.flag.universal Универсальный
+                                                .hint
+                                                    span.bold Что продавать: 
+                                                    |произвольный текст с ограничением до 2 тыс. символов.<br>
+                                                    span.bold Особенности: 
+                                                    |после указания названия, описания и цены ЦТ, вам будет предложено ввести (загрузить) этот текст. Именно он будет передан покупателю после оплаты.
+                                                .form_element.model
+                                                    label.for_check
+                                                        input(type="checkbox")
+                                                        span.text модель "Плати сколько хочешь" - стоимость товара указывает покупатель
+
+                                            li.select_goods_list_item
+                                                .form_element
+                                                    label.for_radio
+                                                        input(type="radio" name="radio_elem")
+                                                        span.text данные, полученные от вашего сервера
+                                                        span.flag.form Форма
+                                                .hint
+                                                    span.bold Что продавать: 
+                                                    |цифровой товар, который требует от покупателя передачи регистрационных данных продавцу.<br>
+                                                    span.bold Особенности: 
+                                                    |после оплаты покупателю будет предложено заполнить форму, состоящую из полей, которые вы заранее определили. Данные покупателя будут автоматически отправлены вам по email или HTTP-методом POST с XML в теле запроса. Предусмотрена возможность автоматического ответа покупателю (RESPONSE) в виде произвольного текста длиной до 255 символов.
+                                                .form_element.model
+                                                    label.for_check
+                                                        input(type="checkbox")
+                                                        span.text модель "Плати сколько хочешь" - стоимость товара указывает покупатель
+
+                        .select_goods_item
+                            .select_goods_item_title
+                            .select_goods_item_content
+                                input.btn.btn_blue(type="submit" value="продолжить")
+                                .alert_box.warning Выберите тип товара

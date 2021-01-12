@@ -1,0 +1,87 @@
+main
+    .box
+        .content_box
+            .alert_box.info Перенос статистики продаж, возвратов и отзывов с одного товара на другой осуществляется путем оформления заявки администратору торговой площадки. 
+                |В случае положительного решения по заявке, товар, с которого была перенесена статистика, автоматически удаляется без возможности восстановления. 
+                span.bold Перенос статистики возможен только для одинаковых товаров с целью изменения типа содержимого товара 
+                |(например, раньше после оплаты покупатель получал код активации в виде текста, а вы создали новый товар, в котором содержимое теперь представляет 
+                |отсканированное изображение кода активации).
+            .stat_move
+                .stat_move_item
+                    .title 
+                        span.bold 1. 
+                        |Выберите товар, 
+                        span.bold на который 
+                        |вы хотите перенести статистику:
+                    .form_element
+                        select
+                            option(value="0") Выберите товар из списка
+                            option(value="0") Товар2 Товар2 Товар2 Товар2 Товар2 Товар2 
+
+                .stat_move_item
+                    .title 
+                        span.bold 2. 
+                        |Выберите товар(ы), 
+                        span.bold с которого(ых) 
+                        |вы хотите перенести статистику:
+                
+                    table.equal_cells
+                        colgroup
+                            col(style="width: 540px")
+                            col
+                            col
+                            col
+                            col
+                            col
+                        thead
+                            tr
+                                th Название товара
+                                th.align_center Магазин
+                                th.align_center Продаж
+                                th.align_center Возвратов
+                                th.align_center Положит. отзывов
+                                th.align_center Отриц. отзывов
+                        tbody
+                            tr
+                                td
+                                    .form_element
+                                        label.for_check
+                                            input(type="checkbox")
+                                            span.text Тестовый товар
+                                td.align_center Plati.Market
+                                td.align_center 0
+                                td.align_center 0
+                                td.align_center 0
+                                td.align_center 0
+                            tr
+                                td
+                                    .form_element
+                                        label.for_check
+                                            input(type="checkbox")
+                                            span.text Тестовый товарТестовый товарТестовый товарТестовый товарТестовый товарТестовый товарТестовый товарТестовый товарТестовый товарТестовый товар
+                                td.align_center Plati.Market
+                                td.align_center 0
+                                td.align_center 0
+                                td.align_center 0
+                                td.align_center 0
+
+                    .approve_stat_move
+                        input.btn.btn_blue(type="submit", value="оформить заявку" data-toggle="modal" data-target="#approve_modal")
+                        .form_element
+                            label.for_check
+                                input(type="checkbox")
+                                span.text 
+                                    span.bold я согласен(а) 
+                                    |с тем, что после переноса статистики с выбранных товаров они будут автоматически удалены без возможности восстановления
+                    
+.modal.fade(id="approve_modal" tabindex="-1" aria-labelledby="approve_modal" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered.modal-sm
+        .modal-content
+            .modal-header
+                .modal-title ВНИМАНИЕ!
+                span.close(data-dismiss="modal" aria-label="Close")
+                    +icon('modal_close')
+            .modal-body
+                |Вам необходимо подтвердить, что вы предупреждены об удалении товаров, с которых будет перенесена статистика!
+            .modal-footer
+                button.btn.btn_gray(data-dismiss="modal") ОК

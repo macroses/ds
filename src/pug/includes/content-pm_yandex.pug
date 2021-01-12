@@ -1,0 +1,142 @@
+main
+    .box
+        +tab-list(['General_rules', 'Digiseller', 'WM_Merchant', 'PayPal', 'PayMaster', 'Robokassa', 'Yandex', 'Settings'], 6)
+            +tab('Yandex', 'active')
+                .content_box
+                    .pm
+                        .pm_settings
+                            .alert_box.info Прием платежей через 
+                                a.main_link(href="#") ЮKassa
+                                |  осуществляется напрямую на счет в системе ЮMoney.
+                                br
+                                br
+                                |При продаже товаров через ЮKassa комиссия взимается с вашего 
+                                a.main_link(href="#") личного счета
+                                |  в сервисе Digiseller. При отсутствии доступных средств на личном счете, через некоторое время этот шлюз оплаты автоматически блокируется. Рекомендуем заблаговременно 
+                                a.main_link(href="#") пополнить
+                                |  свой счет в Digiseller.
+
+                            .pm_purses_settings
+                                .title_top
+                                    .title.bold Ваши учетные данные в ЮKassa:
+                                ul.pm_purses_settings_list
+                                    li.pm_purses_settings_list_item
+                                        .title Идентификатор магазина:
+                                        .form_element
+                                            input(type="text")
+                                        .configure
+                                            .text
+                                                +icon('file_accept')
+                                                |проверено
+                                    li.pm_purses_settings_list_item
+                                        .title Секретный ключ:
+                                        .form_element
+                                            input(type="text")
+                                        .configure
+                                    li.pm_purses_settings_list_item.btns
+                                        .title
+                                        .form_element
+                                            .btn_group
+                                                button.btn.btn_gray(disabled) сохранить
+                                                button.btn.btn_gray проверить
+                                        .configure
+
+                            .pm_purses_settings
+                                .title_top
+                                    .title.bold Дополнительные настройки:
+
+                                ul.pm_purses_settings_list
+                                    li.pm_purses_settings_list_item
+                                        .title 
+                                            span.star *
+                                            |Онлайн-касса:
+                                            a(href="#"): +icon('question_table')
+                                        .form_element
+                                            select
+                                                option(value="0" selected) включена
+                                                option(value="1") выключена
+                                        .configure
+                                    li.pm_purses_settings_list_item
+                                        .title Ставка НДС для формирования электронного чека:
+                                        .form_element
+                                            select
+                                                option(value="0" selected) берется из настроек товара
+                                                option(value="1") расчётная ставка 20%‍
+                                                option(value="1") расчётная ставка 10%‍‍
+                                                option(value="1") расчётная ставка 20/120‍‍
+                                                option(value="1") расчётная ставка 10/110‍‍
+                                                option(value="1") расчётная ставка 0%‍
+                                                option(value="1") НДС не накладывается
+                                        .configure
+
+                                .alert_box.warning 
+                                    span.star *
+                                    |Если на самом деле 
+                                    a.main_link(href="#") онлайн-касса
+                                    |  не подключена к Яндекс Кассе, то при попытке оплатить ваши товары возникнет ошибка!
+
+                        .pm_description
+                            +fieldset('Регистрация и настройка ЮKassa')
+                                .fieldset_text
+                                    .content
+                                        span.bold 1
+                                        |. 
+                                        a.main_link(href="#") Зарегистрируйте аккаунт в Яндекс
+                                        |, если у вас его еще нет. Этот аккаунт будет основным в вашем личном кабинете — его владелец сможет управлять настройками платежей и видеть операции.
+                                        |  Поэтому лучше использовать аккаунт руководителя или создать новый — специально для работы с Кассой.
+
+                                    .content
+                                        span.bold 2
+                                        |. Зарегистрируйтесь в 
+                                        a.main_link(href="#") Яндекс.Кассе
+                                        |, авторизовавшись аккаунтом Яндекс, как юрлицо, ИП или самозанятый:
+
+                                    a.fieldset_img_toggle(href="#" data-toggle="modal" data-target="#img_one"): img(src="img/pm_yandex.png", alt="")
+
+                                    .content После завершения регистрации у вас появится личный кабинет и персональный менеджер, который будет помогать во время подключения и в дальнейшем.
+                                    .content
+                                        span.bold 3
+                                        |. В 
+                                        a.main_link(href="#") личном кабинете в Яндекс.Кассы
+                                        |  заполните анкету об организации, загрузите требуемые документы и подпишите договор. Ваш персональный менеджер поможет вам добавить необходимые способы оплаты.
+
+                                    .content
+                                        span.bold 4
+                                        |. После того как будет проверена ваша анкета и Яндекс.Касса подпишет договор (это занимает от 1 до 3 рабочих дней), выберите в личном кабинете 
+                                        |нужный магазин (в переключателе сверху) и перейдите в раздел <span class="bold">Интеграция → Ключи API</span>. Выпустите секретный ключ, при необходимости воспользуйтесь 
+                                        a.main_link(href="#") инструкцией
+                                        |. Скопируйте секретный ключ, идентификатор магазина и вставьте в соответствующую форму на данной странице.
+
+                                    .content
+                                        span.bold 5
+                                        |. Перейдите в раздел <span class="bold">Интеграция → HTTP-уведомления</span> и в качестве URL для уведомлений укажите 
+                                        |<span class="bold">https://www.digiseller.market/asp2/pay_ya_notify.asp</span> Если данный функционал уже занят другим интегратором, 
+                                        |оставьте все без изменений. Это не обязательная опция.
+
+.modal.fade(id="img_one" tabindex="-1" aria-labelledby="img_one" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered.modal-lg.modal-preview
+        .modal-content
+            .modal-body
+                // добавляем/удаляем data-interval="false" родительскому тегу карусели, чтобы стопнуть автоплей слайдов
+                .carousel.slide(id="carouselExampleFade" data-ride="carousel" data-interval="false")
+                    .carousel-inner
+                        .carousel-item.active
+                            img(src="img/pm_yandex.png", alt="")
+                    a.carousel-control-prev(href="#carouselExampleFade" role="button" data-slide="prev")
+                        span.carousel-control-prev-icon(aria-hidden="true")
+                    a.carousel-control-next(href="#carouselExampleFade" role="button" data-slide="next")
+                        span.carousel-control-next-icon(aria-hidden="true")
+            .modal-footer
+                .carousel_control
+                    .carousel_control_box
+                        // на плей надо будет добавлять контейнеру карусели data-interval
+                        button.btn.btn_gray
+                            +icon('control_play')
+                        a.btn.btn_gray(href="#carouselExampleFade" role="button" data-slide="prev")
+                            +icon('control_left')
+                        span.slides_counter 1/10
+                        a.btn.btn_gray(href="#carouselExampleFade" role="button" data-slide="next")
+                            +icon('control_right')
+                    .carousel_control_close
+                        button.btn.btn_gray(data-dismiss="modal" aria-label="Close")
+                            +icon('control_close')

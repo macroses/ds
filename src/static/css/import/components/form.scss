@@ -1,0 +1,463 @@
+select {
+    option {
+        font: -moz-pull-down-menu;
+    }
+}
+
+.form_element {
+    display: flex;
+    align-items: center;
+    // white-space: nowrap;
+    position: relative;
+
+    select,
+    input[type=text],
+    input[type=number],
+    textarea {
+        &.focused {
+            border-color: #2c97de;
+            box-shadow: 0px 0px 0px 1px #2c97de;
+        }
+
+        &[disabled] {
+            background-color: #f6f8f9;
+            pointer-events: none;
+            opacity: .5;
+        }
+
+        &[readonly] {
+            background: #f6f8f9;
+            opacity: .5;
+        }
+    }
+    
+
+    &.vertical {
+        flex-direction: column;
+        align-items: flex-start;
+        label {
+            margin-bottom: 5px;
+        }
+    }
+
+    &.inline {
+        align-items: center;
+        label {
+            margin-right: 5px;
+        }
+        input[type=text] + *,
+        input[type=number] + *,
+        select + * {
+            margin-left: 5px;
+        }
+
+        .hint {
+            margin-left: 10px;
+            margin-top: 0;
+        }
+    }
+    select {
+        max-height: 34px;
+        max-width: 100%;
+        border-radius: $border-rad;
+        border: solid 1px #cfd8dc;
+        padding: 9px 20px 10px 10px;
+        appearance: none;
+        background-repeat: no-repeat;
+        background-position: right 7px center, left center;
+        font: 700 12px "Roboto";
+        cursor: pointer;
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 4px 0 $main_links_color;
+            border: solid 1px $main_links_color;
+        }
+    }
+
+    textarea {
+        border-radius: $border-rad;
+        font-size: 14px;
+        width: 100%;
+        padding: 9px 32px 9px 12px;
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 4px 0 $main_links_color;
+            border: solid 1px $main_links_color;
+        }
+    }
+
+    input[type=checkbox],
+    input[type=radio] {
+        display: none;
+    }
+// Для чекбоксов
+    .for_check {
+        cursor: pointer;
+        .text {
+            position: relative;
+            padding-left: 25px;
+            color: #546e7a;
+            &:before {
+                content: '';
+                position: absolute;
+                @include box(18px);
+                left: 0;
+                top: calc(50% - 9px);
+                border: solid 1px #aab5ba;
+                border-radius: 2px;
+                background: #fff;
+            }
+        }
+    }
+
+    .for_check {
+        &.disabled {
+            pointer-events: none;
+            cursor: default;
+            .text {
+                color: $footer_link_color;
+            }
+        }
+    }
+
+    input[type=checkbox]:checked + .text:before {
+        border: 1px solid rgba(0,0,0,0);
+        background: url(../img/checkbox-checked.svg) no-repeat;
+        background-size: 18px;
+    }
+
+    input[type=checkbox]:checked + .text span {
+        font-weight: 600;
+    }
+
+    input[type=checkbox]:disabled + .text:before {
+        background: #e8e8e8;
+    }
+
+    input[type=checkbox]:checked:disabled + .text:before {
+        border: 1px solid rgba(0,0,0,0);
+        background: url(../img/checkbox-checked-disabled.svg) no-repeat;
+        background-size: 18px;
+    }
+
+// для радиокнопок
+    .for_radio {
+        cursor: pointer;
+        .text {
+            position: relative;
+            padding-left: 25px;
+            color: #546e7a;
+            &:before {
+                content: '';
+                position: absolute;
+                @include box(18px);
+                left: 0;
+                top: calc(50% - 9px);
+                border: solid 1px #aab5ba;
+                border-radius: 50%;
+                background: #fff;
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                @include box(10px);
+                left: 4px;
+                top: calc(50% - 5px);
+                background: rgba(0,0,0,0);
+                border-radius: 50%;
+            }
+        }
+
+        &.disabled {
+            pointer-events: none;
+            .text {
+                color: #b0bec5;
+                &:before {
+                    background: #e8e8e8;
+                }
+            }
+
+
+        }
+    }
+
+    input[type=radio]:checked:disabled + .text:before {
+        background: #fff;
+    }
+    input[type=radio]:checked:disabled + .text:after {
+        background: lightgray;
+    }
+
+    input[type=radio]:checked + .text:after {
+        background: #2c97de;
+    }
+
+// текстовый инпут
+    input[type=text],
+    input[type=number] {
+        padding: 0 10px;
+        border-radius: $border-rad;
+        border: solid 1px #cfd8dc;
+        font-size: 14px;
+        @include box(100%, 34px);
+
+        &::-ms-clear {
+            display: none;
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 4px 0 $main_links_color;
+            border: solid 1px $main_links_color;
+        }
+
+        &.focused {
+            padding-right: 22px;
+        }
+    }
+
+    .remove {
+        cursor: pointer;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 22px;
+        @include flex-center;
+    }
+
+    .pic-remove_input_data {
+        @include box(8px);
+    }
+
+    input::-webkit-input-placeholder {color:$additional_info_color}
+    input::-moz-placeholder          {color:$additional_info_color}
+    input:-moz-placeholder           {color:$additional_info_color}
+    input:-ms-input-placeholder      {color:$additional_info_color}
+
+    textarea::-webkit-input-placeholder {color:$additional_info_color}
+    textarea::-moz-placeholder          {color:$additional_info_color}
+    textarea:-moz-placeholder           {color:$additional_info_color}
+    textarea:-ms-input-placeholder      {color:$additional_info_color}
+}
+
+.form_group_label {
+    width: 100%;
+    margin-bottom: 10px;
+    font: bold 12px Roboto;
+}
+
+.form_group {
+    .form_element {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 10px;
+    }
+
+    .hint {
+        margin-top: 5px;
+    }
+}
+
+.form_element {
+    input[type=text] + .lang {
+        position: absolute;
+        top: 9px;
+        right: 5px;
+    }
+
+    input[type=text].err,
+    input[type=number].err {
+        background: #FDE3DA;
+    }
+}
+
+// switcher
+.switcher {
+    display: flex;
+    input {
+        display: none;
+    }
+    label {
+        width: 46px;
+        height: 18px;
+        position: relative;
+        cursor: pointer;
+    }
+    .plate {
+        position: relative;
+        overflow: hidden;
+        border-radius: 20px;
+        display: inline-block;
+        width: 46px;
+        height: 18px;
+        text-transform: uppercase;
+        font: 700 9px Lato;
+        &:before {
+            content: 'on';
+            position: absolute;
+            display: flex;
+            align-items: center;
+            width: 46px;
+            height: 20px;
+            left: -48px;
+            background: #7ed321;
+            color: #fff;
+            padding: 0 0 1px 8px;
+            box-shadow: inset 0 1px 3px 0 #455a64;
+            transition: .3s;
+        }
+        &:after {
+            content: 'off';
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            width: 46px;
+            height: 20px;
+            left: 0px;
+            background: #e65118;
+            color: #fff;
+            padding: 0 8px 1px 0;
+            box-shadow: inset 0 1px 3px 0 #455a64;
+            transition: .3s;
+        }
+    }
+
+    .circle {
+        position: absolute;
+        @include box(20px);
+        background-color: #fff;
+        border: 1px solid #cfd8dc;
+        left: -2px;
+        top: -1.5px;
+        border-radius: 50%;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5);
+        transition: .3s;
+    }
+
+    input:checked + .switcher_box .plate:before {
+        left: 0;
+    }
+    input:checked + .switcher_box .plate:after {
+        left: 48px;
+    }
+
+    input:checked + .switcher_box .circle {
+        left: 28px;
+    }
+
+    &.disabled {
+        .plate {
+            &:before {
+                background: #cfd8dc;
+                color: #37474f;
+            }
+        }
+
+        .circle {
+            background-image: url(../img/lock.svg);
+            background-repeat: no-repeat;
+            background-size: 8px;
+            background-position: center;
+        }
+    }
+}
+
+.search_result_box {
+    position: relative;
+}
+
+.search_result_list {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    max-height: 200px;
+    overflow: auto;
+    background: #fff;
+    border: 1px solid #cfd8dc;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    z-index: 1;
+
+    display: none;
+    li {
+        padding: 6px;
+        border-bottom: solid 1px #eceff1;
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+}
+
+.activated_already {
+    display: flex;
+    li {
+        cursor: pointer;
+        margin-right: 5px;
+        display: flex;
+        align-items: center;
+        height: 34px;
+    }
+
+    .activated_already_item {
+        cursor: pointer;
+        color: #fff;
+        background: #2c97de;
+        border-radius: 4px;
+        padding: 5px;
+    }
+}
+
+.fieldset {
+    position: relative;
+    border: solid 1px $default_tab_bg_color;
+    border-radius: 4px;
+    padding-top: 15px;
+    // min-height: 340px;
+}
+
+.fieldset + .fieldset {
+    margin-top: 20px;
+}
+
+.legend {
+    position: absolute;
+    display: inline-block;
+    background: #fff;
+    top: -16px;
+    left: 10px;
+    padding: 7px;
+    font-weight: bold;
+    color: $active_tab_link_color;
+
+    font: 500 14px Roboto;
+}
+
+.fieldset_img_toggle {
+    display: flex;
+    justify-content: center;
+    &:not(:last-of-type) {
+        margin-bottom: 15px;
+    }
+
+    &:last-of-type + .content {
+        margin-top: 15px;
+    }
+    
+    img {
+        width: 300px;
+        height: auto;
+        border: 1px solid #EEEEEE;
+    }
+}
+
+.input_err {
+    color: red;
+}
+
+.pic-filter {
+    @include box(16px);
+}

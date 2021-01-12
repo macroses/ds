@@ -1,0 +1,212 @@
+main
+    .box
+        .content_box
+            .stat_links
+                a.main_link(href="#") API
+                a.main_link(href="#") Excel-отчет
+                a.main_link(href="#") График
+            .good_select
+                .title товары
+                .good_select_area
+                    select#defaultSelect(multiple)
+                        option(value="0") 321🔥
+                        option(value="1" selected) Lorem ipsum dolor sit amet.
+                        option(value="2") 321🔥
+                        option(value="3") SLDKFLSKDJFLKSJDFLKJSLDKFJLSKDJFLJKSDF
+                        option(value="4") Lorem ipsum dolor sit amet.
+                        option(value="1") Lorem ipsum dolor sit amet.
+                        option(value="2") Lorem ipsum dolor sit amet.
+                        option(value="3") Lorem ipsum dolor sit amet.
+                        option(value="4") Lorem ipsum dolor sit amet.
+            .table_detail_filters
+                .table_detail_filters_section.payment
+                    .table_detail_filters_item
+                        .form_element.vertical
+                            label оплата:
+                            select 
+                                option(value="0" selected) все способы
+                                option(value="Bank Card") Bank Card
+                                option(value="WebMoney") WebMoney
+                                option(value="QIWI") QIWI
+                                option(value="Sberbank Online") Sberbank Online
+                                option(value="Yandex.Money") Yandex.Money
+                                option(value="Alipay") Alipay
+                                option(value="MTS") MTS
+                                option(value="PayPal") PayPal
+                                option(value="TELE2") TELE2
+                                option(value="Steam Skin") Steam Skin
+                                option(value="Gift Card") Gift Card
+                                option(value="Beeline") Beeline
+                                option(value="Bitcoin") Bitcoin
+                                option(value="Turkey Bank Card") Turkey Bank Card
+                                option(value="Unionpay") Unionpay
+                    .table_detail_filters_item
+                        .form_element.vertical
+                            label площадки:
+                            select 
+                                option(value="0" selected) все
+                                option(value="1") Мой магазин
+                                option(value="2") Plati.Market
+                    .table_detail_filters_item
+                        .form_element.vertical
+                            select 
+                                option(value="0" selected) включить возвраты
+                                option(value="1") исключить возвраты
+                                option(value="2") только возвраты
+                    .table_detail_filters_item
+                        .form_element.vertical
+                            select 
+                                option(value="0" selected) включить партнерские продажи
+                                option(value="1") исключить партнерские продажи
+                                option(value="2") только партнерские продажи
+                .table_detail_filters_section.date
+                    // dates
+                    .table_detail_filters_item
+                        .form_element.vertical
+                            label период с
+                            input(type="text")
+                    .table_detail_filters_item
+                        .form_element.vertical
+                            label по
+                            input(type="text")
+                    .table_detail_filters_item.full
+                        .filter_btn_group
+                            button.btn.btn_gray
+                                small сегодня
+                            button.btn.btn_gray.active 7 
+                                small дней
+                            button.btn.btn_gray 30 
+                                small дней
+                            button.btn.btn_gray 90 
+                                small дней
+
+                .table_detail_filters_section.group
+                    .table_detail_filters_item
+                        .form_element.vertical
+                            label ID агента
+                            input(type="text")
+                    .table_detail_filters_item
+                        .form_element.vertical
+                            label покупатель
+                            input(type="text")
+                    .table_detail_filters_item
+                        .form_element.vertical
+                            label.for_check
+                                input(type="checkbox")
+                                span.text группировать по товарам
+
+            .items_counters
+                |количество позиций: 
+                span.bold 7
+            
+            table.equal_cells
+                colgroup
+                    col(style="width:75px")
+                    col(style="width:400px")
+                    col(style="width:100px")
+                    col(style="width:150px")
+                    col(style="width:150px")
+                    col(style="width:120px")
+                    col
+                    col
+                    col
+                thead
+                    tr
+                        th ID товара
+                        th Название
+                        th.align_center Площадка
+                        th.align_center Дата
+                        th Покупатель
+                        th.align_center Способ оплаты
+                        th.align_center Оплачено
+                        th.align_center Зачислено
+                        th.align_center Партнеру
+                tbody
+                    tr
+                        td 1234567
+                        td
+                            a.main_link(href="#") Какой-то текст
+                        td.align_center Мой магазин
+                        td.align_center 24.11.2020 17:03:18
+                        td 
+                            a.main_link(href="#") somethingmail@gmail.com
+                        td.align_center Bank Card
+                        td.align_center 0.04 
+                            small WMZ	
+                        td.align_center 0.03 
+                            small WMZ
+                        td.align_center 0.00 
+                            small WMZ
+                    tr
+                        td 1234567
+                        td
+                            a.main_link(href="#") Какой-то текстКакой-то текстКакой-то текстКакой-то текстКакой-то текстКакой-то текстКакой-то текст
+                        td.align_center Мой магазин
+                        td.align_center 24.11.2020 17:03:18
+                        td 
+                            a.main_link(href="#") somethingmail@gmail.com
+                        td.align_center Turkey Bank Card
+                        td.align_center 9999.04 
+                            small WMZ	
+                        td.align_center 9999.03 
+                            small WMZ
+                        td.align_center 9999.00 
+                            small WMZ
+                    tr
+                        td 1234567
+                        td
+                            a.main_link(href="#") Какой-то текстКакой-то текстКакой-то текстКакой-то текстКакой-то текстКакой-то текстКакой-то текст
+                        td.align_center Мой магазин
+                        td.align_center 24.11.2020 17:03:18
+                        td 
+                            a.main_link(href="#") somethingmail@gmail.com
+                        td.align_center Turkey Bank Card
+                        td.align_center 9999.04 
+                            small WMZ	
+                        td.align_center 9999.03 
+                            small WMZ
+                        td.align_center 9999.00 
+                            small WMZ
+
+            // таблица с группировкой по товарам
+            table.equal_cells
+                colgroup
+                    col(style="width:75px")
+                    col(style="width:400px")
+                    col
+                    col
+                    col
+                    col
+                    col
+                thead
+                    tr
+                        th ID товара
+                        th Название
+                        th.align_center Продано
+                        th.align_center На сумму
+                        th.align_center Возвраты
+                        th.align_center Положит. отзывов
+                        th.align_center Отриц. отзывов
+                tbody
+                    tr
+                        td 1234567
+                        td
+                            a.main_link(href="#") Какой-то текст
+                        td.align_center 12345
+                        td.align_center 9999.04 
+                            small WMZ
+                        
+                        td.align_center 123
+                        td.align_center 123
+                        td.align_center 123
+                    tr
+                        td 1234567
+                        td
+                            a.main_link(href="#") Какой-то текстКакой-то текстКакой-то текстКакой-то текстКакой-то текстКакой-то текстКакой-то текстКакой-то текстКакой-то текст
+                        td.align_center 12345
+                        td.align_center 9999.04 
+                            small WMZ
+                        
+                        td.align_center 123
+                        td.align_center 123
+                        td.align_center 123

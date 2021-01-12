@@ -1,0 +1,64 @@
+main
+    .box
+        .content_box
+            .page_nav
+                ul.breadcrumbs_list
+                    li.breadcrumb_item
+                        a.main_link(href="#" data-placement="top" data-toggle="tooltip" title="список моих товаров") Мои товары
+                    li.breadcrumb_item
+                        .breadcrumb_item_name Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена 
+                        a(href="#" data-placement="top" data-toggle="tooltip" title="открыть страницу с описанием товара")
+                            +icon('good_link')
+                        .breadcrumb_item_price 14895 
+                            span RUB
+                .page_nav_item
+                    .prev 
+                        a.main_link(href="#") предыдущий товар
+                    .next 
+                        a.main_link(href="#") следующий товар
+
+        +tab-list(['Basic', 'Parameters', 'Gallery', ['Content', 10], 'Payment', 'Sales', 'Discount', 'HTML_code', 'Notifications'], 6)
+            +tab('Discount', 'active')
+                .content_box
+                    .discount_good
+                        .form_element
+                            label.for_radio
+                                input(type="radio" name="discount_good")
+                                span.text скидки на товар не предоставляются
+                        .form_element
+                            label.for_radio.disabled
+                                input(type="radio" name="discount_good" disabled)
+                                span.text на товар предоставляются скидки из 
+                                    a.main_link(href="#") общего правила
+                                .hint для установки скидок из общего правила, его необходимо настроить
+                        .form_element
+                            label.for_radio
+                                input(type="radio" name="discount_good" checked)
+                                span.text на товар предоставляются индивидуальные скидки
+                        .buy_limit_form
+                            span если cумма покупок моих товаров больше 
+                            .form_element
+                                input(type="text" disabled value="5")
+                            span 
+                                span.bold USD 
+                                |— скидка составляет
+                            .form_element
+                                input(type="text" disabled value="15")
+                            span % 
+                            button.btn.btn_gray
+                                span.minus
+                        .buy_limit_form
+                            span если cумма покупок моих товаров больше 
+                            .form_element
+                                input(type="text")
+                            span 
+                                span.bold USD 
+                                |— скидка составляет
+                            .form_element
+                                input.err(type="text")
+                            span % 
+                            button.btn.btn_gray
+                                +icon('plus_button')
+                    
+                        .input_err Значение нижней границы (в USD) указано некорректно
+                        .input_err Значение процента скидки указано некорректно (необходимо указать целое число от 1 до 99)

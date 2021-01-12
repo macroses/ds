@@ -1,0 +1,48 @@
+.space_rent {
+    .progress {
+        width: 350px;
+        border-radius: 2px;
+        margin-bottom: 10px;
+    }
+    
+    p {
+        margin: 0;
+    }
+
+    .data {
+        font-weight: 900;
+    }
+
+    table {
+        margin-top: 20px;
+        width: 50%;
+    }
+}
+
+.space_rent_form {
+    display: flex;
+    margin: 20px 0;
+    .form_element {
+        display: flex;
+        align-items: center;
+        span {
+            white-space: nowrap;
+            margin-right: 5px;
+        }
+
+        select {
+            margin-right: 5px;
+        }
+    }
+}
+
+.auto_pay {
+    margin-top: 20px;
+}
+
+.space_rent_desc {
+    .alert_box {
+        margin-top: 20px;
+    }
+}
+

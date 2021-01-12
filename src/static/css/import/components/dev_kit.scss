@@ -1,0 +1,93 @@
+
+.dev_kit {
+    display: flex;
+    max-height: 90vh;
+    .navbar {
+        min-width: 300px;
+        align-items: flex-start;
+    }
+
+    .nav {
+        position: sticky;
+        top: 0;
+        .nav {
+            padding-left: 20px;
+        }
+        .nav-link {
+            padding-top: 0;
+            
+        }
+    }
+
+    .list {
+        padding: 0 30px;
+        overflow: auto;
+        
+    }
+
+    .content {
+        margin-bottom: 5px;
+        margin-top: 20px;
+    }
+
+    code {
+        padding: 5px;
+        background: #ececec;
+        margin-bottom: 20px;
+        margin-top: 10px;
+        &.block {
+            display: block;
+            width: 100%;
+        }
+    }
+
+    .item {
+        margin-bottom: 40px;
+    }
+}
+
+.structure_list {
+    background: #ececec;
+    color: #d63384;
+    padding: 20px;
+}
+
+.structure {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    span {
+        font-weight: normal;
+        color: #949292;
+    }
+    .structure {
+        padding-left: 20px;
+    }
+}
+
+.exercises_list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.exercise_item {
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    min-width: 20%;
+}
+
+.exercise_item_content {
+    margin-bottom: 5px;
+}
+
+.icon_list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    svg {
+        @include box(32px);
+    }
+}

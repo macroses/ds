@@ -1,0 +1,136 @@
+main
+    .box
+        .current_server_time
+            |Точное серверное время:  23.12.2020 22:59:56
+        .content_box
+
+            .my_reklama.day_reklama
+                .my_reklama_form
+                    .form_data_block
+                        .form_data_block_item
+                            .form_data_block_title Рекламируемые товары площадки:
+                            .form_data_block_content
+                                .form_element.date
+                                    select
+                                        option(value="0") Plati.Market
+                                        option(value="1") 22.11.20
+                                .form_element
+                                    label на
+                                    select
+                                        option(value="0") 22.11.20
+                                        option(value="1") 22.11.20
+
+                        .form_data_block_item
+                            .form_data_block_title
+                            .form_data_block_content
+                                .counter_down
+                                    .alert_box.info На 
+                                        span.bold 26.12.2020
+                                        |  ваших товаров нет среди рекламирумых.
+                                    button.btn.btn_blue оплатить рекламу
+                                    .counter_down_time
+                                        .hint До завершения торгов осталось: 
+                                        .time 1 дн. 23 час. 54 мин. 35 сек.
+
+                        .form_data_block_item
+                            .form_data_block_title Отображение товаров:
+                            .form_data_block_content
+                                .view_type_box
+                                    .form_element
+                                        label.for_radio
+                                            input(type="radio", name="view" checked)
+                                            span.text отображать рекомендуемые товары общим списком
+                                    .form_element
+                                        label.for_radio
+                                            input(type="radio", name="view")
+                                            span.text отображать рекомендуемые товары по разделам
+                                    .form_element.inside
+                                        label.for_check.disabled
+                                            input(type="checkbox" disabled)
+                                            span.text и только те, в которых присутствуют мои товары
+                                    .form_element.inside
+                                        label.for_check.disabled
+                                            input(type="checkbox" disabled)
+                                            span.text скрыть изображение первого товара
+
+            .day_reklama_table
+                table.equal_cells
+                    colgroup
+                        col(style="width: 40px")
+                        col
+                        col(style="width: 150px")
+                        col(style="width: 100px")
+                    thead
+                        tr
+                            th №
+                            th Название товара
+                            th Продавец
+                            th Оплачено $
+                    tbody
+                        tr
+                            td 1
+                            td Battlefield 3: Standard Edition (Origin/Region Free) 🔴
+                            td All for Gamers
+                            td 
+                                span.bold 0,51
+                        tr
+                            td 2
+                            td ⏩Звание Лем (без прайма)✔️С родной почтой+1000 ЧАСОВ
+                            td All for Gamers
+                            td 
+                                span.bold 0,51
+                // вид с картинками
+                ul.breadcrumbs_list
+                    li.breadcrumb_item Ключи и пин-коды
+                    li.breadcrumb_item Игры
+                    li.breadcrumb_item.current Battlefield 3
+
+                table.equal_cells
+                    colgroup
+                        col(style="width: 40px")
+                        col
+                        col(style="width: 150px")
+                        col(style="width: 100px")
+                    thead
+                        tr
+                            th №
+                            th Название товара
+                            th Продавец
+                            th Оплачено $
+                    tbody
+                        tr
+                            td 1
+                            td 
+                                img(src="//graph.digiseller.ru/img.ashx?maxlength=90&id_d=2814745", alt="")
+                                |Battlefield 3: Standard Edition (Origin/Region Free) 🔴
+                            td All for Gamers
+                            td 
+                                span.bold 0,51
+                        
+                    // вид с картинками
+                ul.breadcrumbs_list
+                    li.breadcrumb_item Ключи и пин-коды
+                    li.breadcrumb_item Игры
+                    li.breadcrumb_item.current Battlefield 3
+
+                table.equal_cells
+                    colgroup
+                        col(style="width: 40px")
+                        col
+                        col(style="width: 150px")
+                        col(style="width: 100px")
+                    thead
+                        tr
+                            th №
+                            th Название товара
+                            th Продавец
+                            th Оплачено $
+                    tbody
+                        tr
+                            td 1
+                            td 
+                                img(src="https://graph.digiseller.ru/img.ashx?maxlength=90&id_d=3047243", alt="")
+                                |Cyberpunk 2077 + 2 ИГРЫ 🔥 Xbox One/ Xbox series X|S 🔥
+                            td All for Gamers
+                            td 
+                                span.bold 0,51

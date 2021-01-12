@@ -1,0 +1,141 @@
+//- миксин иконок 
+mixin icon(name,mod,title)
+	- mod = mod || ''
+	if (!title) 
+		svg(class="pic-" + name + ' ' + mod)
+			use(xlink:href="img/svg/sprite.svg#" + name)
+	else
+		svg(class="pic-" + name + ' ' + mod, data-placement="top" data-toggle="tooltip" title=`${title}`)
+			use(xlink:href="img/svg/sprite.svg#" + name)
+//- ex.	+icon('filename') - простая иконка
+//- 	+icon('filename', 'модификатор доп. класса') - иконка с доп. классом
+//- 	+icon('filename', '', 'любой текст тултипа') - иконка с тултипом
+
+//- табы 
+//- Первый аргумент - название вкладки, оно идет в именование самой вкладки и контента
+//- второй аргумент - активная вкладка или нет
+//- если нужен лоадер, тогда ПОСЛЕДНИМ аргументом добавляем слово "load"
+mixin tab-list(tabs, active, load)
+	ul.nav.nav-tabs(role="tablist")
+		each item,index in tabs
+			if (index === active)
+				if (item.length == 2)
+					li
+						a(href="#tab" + item[0], role="tab",data-toggle="tab" class="nav-link active")= item[0]
+							.tab_nums= item[1]
+				else
+					li
+						a(href="#tab" + item, role="tab",data-toggle="tab" class="nav-link active")= item
+
+			else if (item.length == 2)
+				li
+					a(href="#tab" + item[0], role="tab",data-toggle="tab" class="nav-link")= item[0]
+						.tab_nums= item[1]
+
+			else if (item === "load")
+				li
+					.spinner-border.text-light(role="status")
+						span.visually-hidden Loading...
+
+			else 
+				li
+					a(href="#tab" + item, role="tab",data-toggle="tab" class="nav-link")= item
+	.tab-content
+		block
+
+//- первый аргумент итема должен совпадать с названием вкладки, так как является целью ссылки
+//- второй агрумент - какая из вкладок окнтента активная.
+mixin tab(item,active)
+	if (active)
+		.tab-pane.active(id="tab" + item)
+			block
+	else
+		.tab-pane(id="tab" + item)
+			block
+//- ex. +tab-list(['Sales', 'Views'], 0)
+//- 		+tab('Sales', 'acitve')
+//- 		+tab('View')
+//- ex. с числовым значением +tab(['Sales', ['View', 10]], 0)
+
+
+//- form element
+mixin select(options)
+	.form_element
+		select
+			each option, index in options
+				option(value=index) #{option}
+//- ex. +select(['one', 'two'])
+
+mixin section-content(type, title)
+	.section_content
+		.section_content_header
+			if (type === 'link')
+				a.main_link(href="#") #{title}
+			else
+				|#{title}
+		.section_content_main
+			.content_box
+				block
+//- ex. +section('link', 'Мой магазин')
+//- ex. +section('', 'Мой магазин')
+
+//- пагинация
+mixin pagination(titleName)
+	.pagination_box
+		.pagination_title Страницы:
+		ul.pagination_list
+			li
+				a.active(href="#") 1
+			li
+				a(href="#")  2
+			li
+				a(href="#")  3
+			li
+				a(href="#")  4
+			li
+				a(href="#")  5
+			li
+				a.sep(href="#")  ...
+			li
+				a(href="#")  1200
+		.pagination_sort
+			.pagination_title #{titleName}
+			.form_element
+				select
+					option(value="10") 10
+					option(value="20" selected) 20
+					option(value="30") 100
+//- +pagination('На странице') - аргумент передает название правой части пагинации, которая может меняться.
+
+//- switcher
+mixin switcher(checked)
+	
+	if (checked === "checked")
+		.switcher
+			label
+				input(type="checkbox" checked)
+				span.switcher_box
+					span.plate
+					span.circle
+	else if (checked === "disabled")
+		.switcher.disabled
+			label
+				input(type="checkbox" checked)
+				span.switcher_box
+					span.plate
+					span.circle
+	else
+		.switcher
+			label
+				input(type="checkbox")
+				span.switcher_box
+					span.plate
+					span.circle
+		
+//- ex. +switcher()
+
+mixin fieldset(legend)
+	.fieldset
+		.legend= legend
+		block
+

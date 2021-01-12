@@ -1,0 +1,249 @@
+main
+    .box
+        .content_box
+            .page_nav
+                ul.breadcrumbs_list
+                    li.breadcrumb_item  
+                        a.main_link(href="#") Сотрудники
+                    li.breadcrumb_item Новый сотрудник
+
+        +tab-list(['Basic', 'Permissions', 'Journal'], 0)
+            +tab('Basic', 'acitve')
+                .content_box
+                    .alert_box.additional_info Пожалуйста, укажите WMID сотрудника и его имя. На указанный WMID будет отправлено приглашение, содержащее одноразовую ссылку. Пользователю необходимо будет перейти по ссылке, тем самым подтвердив свое согласие стать вашим сотрудником.
+                    .alert_box.warning.before_content
+                        span.bold Внимание! 
+                        |Рассылка приглашения без предварительной договоренности с пользователем запрещена! Нарушение данного запрета может повлечь за собой отказ в обслуживании.
+                    .form_data_block
+                        .form_data_block_item
+                            .form_data_block_title
+                                span.star *
+                                |WMID сотрудника:
+                            .form_data_block_content
+                                .form_element
+                                    input(type="text" placeholder="12 цифр")
+                        .form_data_block_item
+                            .form_data_block_title
+                                span.star *
+                                |Имя сотрудника:
+                            .form_data_block_content
+                                .form_element
+                                    input(type="text")
+                        .form_data_block_item
+                            .form_data_block_title Комментарий:
+                            .form_data_block_content
+                                .form_element
+                                    textarea(placeholder="Видите только вы")
+                        .form_data_block_item
+                            .form_data_block_title Вход в аккаунт:
+                            .form_data_block_content
+                                .form_element
+                                    select.accept
+                                        option(value="0").accept разрешен
+                                        option(value="1").decline запрещен
+                        .form_data_block_item
+                            .form_data_block_title
+                            .form_data_block_content
+                                button.btn.btn_blue добавить
+            +tab('Permissions')
+                .content_box
+                    .form_data_block.permissions
+                        .form_data_block_item
+                            .form_data_block_title Товары:
+                            .form_data_block_content
+                                .form_element
+                                    label.for_check.disabled
+                                        input(type="checkbox" checked disabled)
+                                        span.text просматривать
+                                .form_element
+                                    label.for_check
+                                        input(type="checkbox")
+                                        span.text изменять
+                                .form_element
+                                    label.for_check
+                                        input(type="checkbox")
+                                        span.text добавлять
+                                .form_element
+                                    label.for_check
+                                        input(type="checkbox")
+                                        span.text удалять
+                                .form_element
+                                    label.for_check
+                                        input(type="checkbox")
+                                        span.text вкл/выкл оплату
+                                .form_element
+                                    label.for_check
+                                        input(type="checkbox")
+                                        span.text планировщик
+
+                        .form_data_block_item
+                            .form_data_block_title Содержимое товара:
+                            .form_data_block_content
+                                .form_element
+                                    label.for_check
+                                        input(type="checkbox")
+                                        span.text просматривать
+                                .form_element
+                                    label.for_check
+                                        input(type="checkbox")
+                                        span.text изменять
+                                            span.star *
+                                .form_element
+                                    label.for_check
+                                        input(type="checkbox")
+                                        span.text добавлять
+
+                        .form_data_block_item
+                            .form_data_block_title Сообщения от администрации:
+                            .form_data_block_content
+                                .form_element
+                                    label.for_check
+                                        input(type="checkbox")
+                                        span.text просматривать
+                                .form_element
+                                    label.for_check
+                                        input(type="checkbox")
+                                        span.text отвечать
+                        
+                        .form_data_block_item
+                            .form_data_block_title Сообщения от покупателей:
+                            .form_data_block_content
+                                .form_element
+                                    label.for_check
+                                        input(type="checkbox")
+                                        span.text просматривать
+                                .form_element
+                                    label.for_check
+                                        input(type="checkbox")
+                                        span.text отвечать
+
+                        .form_data_block_item
+                            .form_data_block_title Сообщения от партнеров:
+                            .form_data_block_content
+                                .form_element
+                                    label.for_check
+                                        input(type="checkbox")
+                                        span.text просматривать
+                                .form_element
+                                    label.for_check
+                                        input(type="checkbox")
+                                        span.text отвечать
+
+                        .form_data_block_item
+                            .form_data_block_title Отзывы:
+                            .form_data_block_content
+                                .form_element
+                                    label.for_check
+                                        input(type="checkbox")
+                                        span.text просматривать
+                                .form_element
+                                    label.for_check
+                                        input(type="checkbox")
+                                        span.text комментировать
+
+                        .form_data_block_item
+                            .form_data_block_title Продажи:
+                            .form_data_block_content
+                                .form_element
+                                    label.for_check
+                                        input(type="checkbox")
+                                        span.text просматривать
+                                .form_element
+                                    label.for_check
+                                        input(type="checkbox")
+                                        span.text возвращать
+                                .form_element
+                                    label.for_check
+                                        input(type="checkbox")
+                                        span.text статистика
+                        
+                        .form_data_block_item
+                            .form_data_block_title Рекоменуемые:
+                            .form_data_block_content
+                                .form_element
+                                    label.for_check
+                                        input(type="checkbox")
+                                        span.text просматривать
+                                .form_element
+                                    label.for_check
+                                        input(type="checkbox")
+                                        span.text оплачивать
+
+                        .form_data_block_item
+                            .form_data_block_title Состояние счета:
+                            .form_data_block_content
+                                .form_element
+                                    label.for_check
+                                        input(type="checkbox")
+                                        span.text Digiseller
+                                .form_element
+                                    label.for_check
+                                        input(type="checkbox")
+                                        span.text WM Merchant
+                                .form_element
+                                    label.for_check
+                                        input(type="checkbox")
+                                        span.text PayPal
+                                .form_element
+                                    label.for_check
+                                        input(type="checkbox")
+                                        span.text PayMaster
+                                .form_element
+                                    label.for_check
+                                        input(type="checkbox")
+                                        span.text Robokassa
+
+                        .form_data_block_item
+                            .form_data_block_title Скидки:
+                            .form_data_block_content
+                                .form_element
+                                    label.for_check
+                                        input(type="checkbox")
+                                        span.text общие правила
+                                .form_element
+                                    label.for_check
+                                        input(type="checkbox")
+                                        span.text персональные
+                                .form_element
+                                    label.for_check
+                                        input(type="checkbox")
+                                        span.text промо-коды
+
+                        .form_data_block_item
+                            .form_data_block_title Чаты:
+                            .form_data_block_content
+                                .form_element
+                                    label.for_check
+                                        input(type="checkbox")
+                                        span.text отвечать
+                    
+                        .hint
+                            span.star *
+                            |Разрешение «изменять» позволяет удалять содержимое товара.
+                        
+            +tab('Journal')
+                .content_box
+                    table.equal_cells
+                        colgroup
+                            col
+                            col
+                            col
+                            col
+                        thead
+                            tr
+                                th Дата
+                                th Страница
+                                th IP-адрес
+                                th Метод
+                        tbody
+                            tr
+                                td 03.11.2020 17:02:59
+                                td 
+                                    a.main_link(href="#") account.asp
+                                td 91.222.52.99
+                                td WMID:123456789
+                            tr
+                                td 03.11.2020 17:02:59
+                                td вход
+                                td 91.222.52.99
+                                td GET

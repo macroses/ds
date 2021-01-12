@@ -1,0 +1,910 @@
+@import "import/vars";
+
+body {
+    background: $main_bg_dark;
+}
+
+header {
+    background: #101314;
+}
+
+.header_top_nav-list .sep:before {
+    background: map-get($dark_bg, nav);
+}
+
+.notice_counter-item {
+    border: 1px solid rgba(0,0,0,0);
+    background: map-get($dark_bg, nav);
+}
+
+.nav_list_item-title {
+    color: #597380;
+}
+
+.main_nav_top {
+    background: map-get($dark_bg, dark_gray);
+    a {
+        color: map-get($dark_colors, main);
+        &.active {
+            color: #8b9da5;
+            background: map-get($dark_bg, nav);
+            &:hover {
+                background: map-get($dark_bg, nav);
+            }
+        }
+        &:hover {
+            background: lighten(map-get($dark_bg, dark_gray), 5%);
+        }
+    }
+}
+
+.main_nav_bottom {
+    background: map-get($dark_bg, nav);
+    color: $title_color;
+    a {
+        color: #8b9da5;
+        &.active {
+            background: #455a64;
+            color: #eceff1;
+        }
+    }
+}
+
+.nav-tabs {
+    .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+        color: $active_tab_link_color;
+        border-color: rgba(0,0,0,0);
+    }
+
+    .nav-link {
+        background: #1d2225;
+        color: $headers_color;
+        &:hover {
+            border-color: rgba(0,0,0,0);
+        }
+    }
+
+    .nav-link.active {
+        cursor: default;
+        background: map-get($dark_bg, dark_gray);
+        color: #8b9da5;
+        box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.26);
+    }
+} 
+
+.content_box {
+    background: map-get($dark_bg, dark_gray);
+}
+
+.form_element {
+    select {
+        background-image: url(../img/select_arrow.png), linear-gradient(to bottom, rgb(39, 47, 52), rgb(31, 38, 42));
+        background-color: map-get($dark_bg, dark_gray);
+        color: map-get($dark_colors, main);
+        border: solid 1px map-get($dark_colors, form);
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 4px 0 $main_links_color;
+            border: solid 1px $main_links_color;
+        }
+    }
+
+    option {
+        background: #292b2c;
+    }
+
+    textarea {
+        border: solid 1px #4a5053;
+        background: map-get($dark_bg, dark_gray);
+        color: map-get($dark_colors, main);
+    }
+
+    .for_radio {
+        .text {
+            color: map-get($dark_colors, main);
+            &:before {
+                border: solid 1px map-get($dark_bg, nav);
+                border-radius: 50%;
+                background: rgba(0,0,0,0);
+            }
+            &:after {
+                background: rgba(0,0,0,0);
+            }
+        }
+    }
+
+    input[type=text],
+    input[type=number] {
+        background: #161b1e;
+        border: solid 1px map-get($dark_colors, form);
+        color: map-get($dark_colors, main);
+
+        &[disabled] {
+            background-color: #f6f8f9;
+            pointer-events: none;
+            opacity: .5;
+            color: #000;
+        }
+
+        &[readonly] {
+            background: #f6f8f9;
+            opacity: .5;
+            color: #000;
+        }
+    }
+
+    .for_check {
+        .text {
+            color: map-get($dark_colors, main);
+        }
+    }
+}
+
+thead {
+    border-bottom: 1px solid map-get($dark_colors, border);
+}
+
+th {
+    color: map-get($dark_colors, main);
+}
+
+td {
+    color: #efefef;
+}
+
+tbody {
+    tr {
+        border-bottom: 1px solid map-get($dark_bg, nav);
+    }
+}
+
+.my_info_graph_canvas_title {
+    color: map-get($dark_colors, main);
+}
+
+.extra_stat {
+    color: #777;
+}
+
+.section_content_header {
+    background: map-get($dark_bg, section_header);
+    color: map-get($dark_colors, main);
+}
+
+.my_shop {
+    tr {
+        border-bottom: 1px solid map-get($dark_bg, nav);
+    }
+}
+
+.my_trading_floor {
+    tr {
+        border-bottom: 1px solid map-get($dark_bg, nav);
+    }
+}
+
+.my_rating_info_main {
+    border-right: 1px solid map-get($dark_bg, nav);
+}
+
+.personal_data_item-content {
+    color: map-get($dark_colors, main);
+}
+
+.news_item_text {
+    color: map-get($dark_colors, main);
+}
+
+.payment_list {
+    a {
+        border: solid 1px #354044;
+    }
+}
+
+table {
+    &.hovered_rows {
+        tbody {
+            tr {
+                &:hover {
+                    background: #323c43;
+                }
+            }
+        }
+    }
+}
+
+.table_promo_codes {
+    tr {
+        border-bottom: 1px solid map-get($dark_bg, nav);
+    }
+}
+
+.table_footer_box {
+    background: map-get($dark_bg, section_header);
+    color: map-get($dark_colors, main);
+}
+
+.table_agents {
+    tr {
+        border-bottom: 1px solid map-get($dark_bg, nav);
+    }
+}
+
+.notice_popup_box {
+    border-top-color: rgba(0,0,0,0);
+}
+
+.notice_popup_top {
+    background: map-get($dark_bg, dark_gray);
+    color: #000;
+    border-bottom: 1px solid rgba(0,0,0,0);
+}
+
+.notice_popup_top-title {
+    color: #74838a;
+}
+
+.notice_popup_box {
+    background: map-get($dark_bg, section_header);
+    border: solid 1px #212324;
+    box-shadow: 0 2px 4px 0 rgba(255, 255, 255, 0.13);
+}
+
+.notice_popup_list {
+    .notice_popup_list-item {
+        border-bottom: 1px solid map-get($dark_bg, nav);
+        &.unread_notice {
+            background: map-get($dark_bg, section_header);
+            animation: unread_notice 1s infinite alternate linear;
+        }
+    }
+}
+
+@keyframes unread_notice {
+    to {
+        background: #3b4346;
+    }
+}
+
+.item_top-title {
+    color: map-get($dark_colors, main);
+}
+
+.item_content_text {
+    color: #afc3cb;
+}
+
+button.btn, input[type="submit"].btn, a.btn {
+    &.btn_gray {
+        background: linear-gradient(to bottom, map-get($dark_bg, dark_gray), #1f262a);
+        color: map-get($dark_colors, main);
+        border: solid 1px map-get($dark_colors, form);
+        &:after {
+            background-image: linear-gradient(to bottom, lighten(map-get($dark_bg, dark_gray), 5%), #1f262a);
+        }
+    }
+    &[disabled] {
+        background-image: linear-gradient(to bottom, #333e45, #283339);
+        text-shadow: 1px 1px 0 map-get($dark_bg, nav);
+        color: map-get($dark_bg, dark_gray);
+    }
+
+    &.delete_btn {
+        border-color: map-get($dark_colors, border);
+    }
+}
+
+.notice_popup_wrap {
+    &:before {
+        border-bottom-color: map-get($dark_bg, dark_gray);
+    }
+    &:after {
+        border-bottom-color: map-get($dark_bg, dark_gray);
+    }
+}
+
+.header_logo {
+    width: 173px;
+    height: 36px;
+    background: url(../img/digiseller-logo-dark.svg);
+    background-size: cover;
+    margin-top: 8px;
+}
+
+.pic-digiseller-logo {
+    display: none;
+}
+
+.alert_box {
+    &.info {
+        background: #2f4650;
+        color: #607d8b;
+        border-color: #4a5b70;
+    }
+    &.warning {
+        background: #69222c;
+        color: #dcaeac;
+        border-color: #792b33;
+    }
+
+    &.additional_info {
+        background: #523f2f;
+        color: #cda794;
+        border-color: #6c5534;
+    }
+
+    &.rules {
+        background: #f3f3f3;
+        border: 0;
+        color: #777;
+    }
+}
+
+.messages_table {
+    tbody {
+        tr {
+            border-bottom: 1px solid map-get($dark_bg, nav);;
+            &:hover {
+                background: map-get($dark_bg, nav);
+            }
+        }
+    }
+}
+
+.purchases {
+    tbody tr {
+        &:hover {
+            background: map-get($dark_bg, nav);
+        }
+    }
+}
+
+.breadcrumb_item {
+    color: map-get($dark_colors, main);
+}
+
+.debates {
+    border: solid 1px #4a5053;
+}
+
+.debates_textarea {
+    background: #3f474c;
+
+    .button_group {
+        label {
+            border: solid 1px map-get($dark_colors, form);
+            background: linear-gradient(to bottom, map-get($dark_bg, dark_gray), #1f262a);
+        }
+    }
+}
+
+.my_message {
+    border: solid 1px #2c8ef0;
+    background: #006598;
+    color: #fff;
+}
+
+.answerer_name {
+    color: #fff;
+}
+
+.message_detail {
+    color: #b2c1c9;
+}
+
+.answerer_message {
+    border: 1px solid rgba(44, 151, 222, 0.23);
+    background: #2c414c;
+    color: #fff;
+}
+
+.attached_item {
+    background: #848282;
+}
+
+.attached_error {
+    .filename {
+        color: #d50000;
+    }
+}
+
+.filename {
+    color: #fff;
+}
+
+.pagination_box {
+    background: map-get($dark_bg, section_header);
+}
+
+.pagination_title {
+    color: $headers_color;
+}
+
+.pagination_list {
+    a {
+        background: map-get($dark_bg, dark_gray);
+        color: $headers_color;
+        border: 1px solid map-get($dark_bg, dark_gray);
+        &:hover {
+            background: lighten(map-get($dark_bg, dark_gray), 3%);
+        }
+
+        &.active {
+            background: #2c97de;
+            border-color: #2c97de;
+            color: #fff;
+        }
+    }
+}
+
+.news_item {
+    color: map-get($dark_colors, main);
+    &:not(:last-child):after {
+        background: map-get($dark_bg, nav);
+    }
+}
+
+.news_date {
+    color: #7e939e;
+    border: solid 1px map-get($dark_bg, nav);
+}
+
+.news_content {
+    &:before {
+        background: #2c97de;
+    }
+}
+
+.form_group_label {
+    color: map-get($dark_colors, main);
+}
+
+.title_block {
+    color: map-get($dark_colors, main);
+}
+
+.my_security_wm_auth {
+    color: map-get($dark_colors, main);
+}
+
+.trusted_phones_list li {
+    color: map-get($dark_colors, main);
+}
+
+.sms_push {
+    .title {
+        color: map-get($dark_colors, main);
+    }
+
+    .form_element {
+        span {
+            color: map-get($dark_colors, main);
+        }
+    }
+}
+
+
+.space_rent {
+    color: map-get($dark_colors, main);
+    .progress {
+        background: #cfd8dc;
+    }
+
+    .progress-bar {
+        background: #2c97de;
+    }
+}
+
+.cost_zone {
+    background: #161b1e;
+    border: solid 1px map-get($dark_colors, form);
+    color: map-get($dark_colors, main);
+}
+
+.new_info_content {
+    color: map-get($dark_colors, main);
+}
+
+.notify_settings_additional {
+    color: map-get($dark_colors, main);
+    border-color: map-get($dark_bg, nav);
+} 
+
+.get_telegram_code {
+    color: map-get($dark_colors, main);
+}
+
+.addurl_desc {
+    background: #161b1e;
+    color: #546e7a;
+}
+
+.notify_settings_addurl {
+    color: map-get($dark_colors, main);
+}
+
+.list_actions {
+    border-color: map-get($dark_bg, nav);
+}
+
+.mailings_info {
+    color: map-get($dark_colors, main);
+}
+
+.modal-content {
+    background: map-get($dark_bg, dark_gray);
+    box-shadow: 0 0 0px 2px rgba(255,255,255, .2);
+    .form_element {
+        color: map-get($dark_colors, main);
+    }
+}
+
+.mailing_current_filters {
+    color: map-get($dark_colors, main);
+}
+
+.added_recipients_counter {
+    background: #354653;
+    border-color: map-get($dark_colors, border);
+}
+
+.mailings_table_filters,
+.mailings_table_filters_setting {
+    border-color: map-get($dark_colors, border);
+}
+
+.mailings_email_title,
+.mailing_text_preview {
+    color: map-get($dark_colors, main);
+}
+
+// goods
+.goods_table {
+    tbody {
+        tr {
+            &:hover {
+                background: lighten(rgba(39, 47, 52, 1), 5%);
+            }
+        }
+    }
+}
+
+.product_name {
+    &_funcs {
+        background: linear-gradient(to right, rgba(39, 47, 52, .10) 0, lighten(rgba(39, 47, 52, 1), 5%) 26%, lighten(rgba(39, 47, 52, 1), 5%) 100%);
+    }
+}
+
+.chosen_cell {
+    background: #000;
+}
+
+.head_selection {
+    background: map-get($dark_bg, section_header);
+}
+
+.collapse_filter_content {
+    background: map-get($dark_bg, section_header);
+    border-top: 1px solid map-get($dark_bg, nav);
+}
+
+.collapse_btn {
+    border-top: 1px solid map-get($dark_bg, nav);
+    span {
+        background-color: map-get($dark_bg, section_header);
+        border: solid 1px map-get($dark_bg, nav);
+        border-top-color: map-get($dark_bg, section_header);
+        color: map-get($dark_colors, main);
+    }
+}
+
+.burger_menu_btn {
+    &:hover {
+        background: lighten(map-get($dark_bg, dark_gray), 5%);
+    }
+    .dot{
+        background: #fff;
+    }
+}
+
+.goods_menu {
+    &_link {
+        &:hover {
+            background: lighten(map-get($dark_bg, dark_gray), 5%);
+        }
+    }
+}
+
+.goods_burger_menu_list {
+    background: map-get($dark_bg, dark_gray);
+    border: 1px solid map-get($dark_bg, nav);
+    &:after {
+        border-bottom: 9px solid map-get($dark_bg, dark_gray);
+    }
+    &:before {
+        border-bottom: 10px solid map-get($dark_bg, nav);
+    }
+    a {
+        color: map-get($dark_colors, main);
+    }
+}
+
+.form_data_block_item {
+    border-color: map-get($dark_bg, nav);
+}
+
+.form_data_block_content {
+    color: map-get($dark_colors, main);
+}
+
+.params_preview {
+    background: #013854;
+}
+
+.params_preview_header {
+    color: map-get($dark_colors, main);
+}
+
+.pic-preview {
+    fill: map-get($dark_colors, main);
+}
+
+.fieldset {
+    border-color: #3c484d;
+}
+
+.legend {
+    background: map-get($dark_bg, dark_gray);
+    color: map-get($dark_colors, main);
+}
+
+.params_list li:hover {
+    background: #323c43;
+}
+
+.params_import_list li:after {
+    background: linear-gradient(to right, rgba(255,255,255,0) 5%, #272f34 95%);
+}
+
+.params_import_list,
+.params_to_server_condition {
+    border-color: map-get($dark_bg, nav);
+}
+
+.preview_box {
+    border: 1px solid #3c484d;
+}
+
+.preview_photo:after {
+    background: #3c484d;
+}
+
+.disk_info {
+    background: #2f4650;
+    color: #607d8b;
+    border-color: #4a5b70;
+}
+
+.buy_limit {
+    border: 1px solid #4a5b70;
+    background: rgba(0,0,0,0);
+}
+
+.buy_limit_form {
+    color: #e1f5fe;
+}
+
+.general_methods_item_content {
+    .main_link.err {
+        background: #69222c;
+    }
+}
+
+.payment_modal th {
+    background: #272f34;
+}
+
+.choices {
+    border-color: map-get($dark_bg, nav);
+}
+
+.report_options {
+    border-color: map-get($dark_bg, nav);
+}
+
+.filter_btn_group .btn.active {
+    background: #000;
+}
+
+.clipboard {
+    color: map-get($dark_colors, main);
+    svg {
+        fill: map-get($dark_colors, main);
+    }
+}
+
+.stat_move_item {
+    .title {
+        color: map-get($dark_colors, main);
+    }
+}
+
+.result {
+    color: map-get($dark_colors, main);
+}
+
+.clone_product {
+    label {
+        color: map-get($dark_colors, main);
+    }
+}
+
+.search_result_list {
+    background: #161b1e;
+    color: map-get($dark_colors, main);
+    border-color: map-get($dark_bg, nav);
+    li {
+        border-color: map-get($dark_bg, nav);
+    }
+}
+
+// pm
+.fieldset_text {
+    color: map-get($dark_colors, main);
+}
+
+.pm_title {
+    color: map-get($dark_colors, main);
+}
+
+.pm_list_item_check,
+.pm_list_item_content {
+    border-color: map-get($dark_bg, nav);
+}
+
+.pm_list_item_check {
+    background: #1d2225;
+}
+
+.pm_list_item_content.active {
+    background: #0f242b;
+}
+
+.fieldset_text .title {
+    color: map-get($dark_colors, main);
+}
+
+.pm_desr_list li {
+    color: map-get($dark_colors, main);
+}
+
+.user_agreement {
+    color: #fff;
+}
+
+.pm_table tbody tr:hover {
+    background: #323c43;
+}
+
+.pm_purses_settings .title {
+    color: map-get($dark_colors, main);
+}
+
+.pm_purses_settings_list_item {
+    border-color: map-get($dark_bg, nav);
+}
+
+.equation_text {
+    color: map-get($dark_colors, main);
+}
+
+.pm_pay_options_list {
+    color: map-get($dark_colors, main);
+}
+
+.pm_sort_list_name {
+    color: map-get($dark_colors, main);
+}
+
+.pm_sort_list_item,
+.pm_sort_list_icon {
+    border-color: map-get($dark_bg, nav);
+}
+
+.pm_sort_list_item:hover {
+    background: #323c43;
+}
+
+.blacklist_form {
+    background: #323c43;
+    border-color: map-get($dark_bg, nav);
+
+    .title {
+        color: map-get($dark_colors, main);
+    }
+}
+
+.my_reklama_table .desc_cell {
+    background: #3c484d;
+}
+
+.my_reklama_table .arrow {
+    background: #3c484d;
+}
+
+.my_reklama_table .arrow:before {
+    border-color: rgba(236,239,241,0);
+    border-top-color: #3c484d;
+}
+
+.my_reklama_table .arrow:after {
+    border-color: rgba(236,239,241,0);
+    border-top-color: #3c484d;
+}
+
+.my_reklama_table .title {
+    color: $headers_color;
+}
+
+.blacklist_form_options {
+    .group_block {
+        color: map-get($dark_colors, main);
+    }
+}
+
+.current_server_time {
+    background: #272f34;
+    color: map-get($dark_colors, main);
+}
+
+.my_reklama_table table td .bold {
+    color: map-get($dark_colors, main);
+}
+
+.discounts_goods_counter_item {
+    .result {
+        color: map-get($dark_colors, main);
+    }
+}
+
+.request_modal_content {
+    color: map-get($dark_colors, main);
+}
+
+.accept_msg {
+    color: map-get($dark_colors, main);
+}
+
+.promocodes_goods_form {
+    color: map-get($dark_colors, main);
+}
+
+.tabs_inner .nav-tabs {
+    border-color: map-get($dark_bg, nav);
+}
+
+.tabs_inner .nav-tabs .nav-link.active {
+    border-color: map-get($dark_bg, nav);
+}
+
+.tabs_inner .nav-tabs .nav-link {
+    border-color: map-get($dark_bg, nav);
+}
+
+.analytics {
+    .form_element {
+        color: map-get($dark_colors, main);
+    }
+}
+
+.task_history_box th {
+    background: #272f34;
+}
+
+.task_top_container .task_item_value {
+    color: map-get($dark_colors, main);
+}
+
+.task_status_descr li {
+    color: map-get($dark_colors, main);
+}

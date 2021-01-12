@@ -1,0 +1,51 @@
+main
+    .box
+        +tab-list(['GeneralRules', 'Personal', 'Promocodes', 'Sales'], 2)
+            +tab('Promocodes', 'acitve')
+                .content_box
+                    .promocodes_goods_form
+                        +select(['все выпуски', 'Выпуск #1'])
+                        span промо-код можно использовать однократно
+                        .form_element.date
+                            // date
+                            span с
+                            input(type="text" disabled)
+                            span по
+                            input.err(type="text")
+                            .err_msg время действия истекло
+                        button.btn.btn_blue сохранить
+
+                        .alert_box.warning Укажите размер скидки (%), которая будет предоставляться при использовании промо-кода этого выпуска
+
+                    .promocodes_goods_tabs.tabs_inner
+                        +tab-list(['Products', ['Promo_codes', 61], 'Reports'], 1)
+                            +tab('Promo_codes', 'acitve')
+                                .used_counter
+                                    .form_element
+                                        input(type="text")
+                                        button.btn.btn_blue изменить
+                                    |использован (раз): 5
+                                table.equal_cells.codes_table
+                                    colgroup
+                                        col(style="width: 160px")
+                                        col(style="width: 130px")
+                                        col
+                                    thead
+                                        tr
+                                            th Промо-код
+                                            th Состояние
+                                            th Мой комментарий
+                                    tbody
+                                        tr
+                                            td.bold.used 3D7AC5378F944A87	
+                                            td использован
+                                            td 
+                                                .form_element
+                                                    input(type="text" placeholder="здесь вы можете оставить для себя комментарий")
+                                        tr
+                                            td.bold.not_used 3D7AC5378F944A87	
+                                            td не использован
+                                            td 
+                                                .form_element
+                                                    input(type="text" placeholder="здесь вы можете оставить для себя комментарий")
+                                +pagination('Элементов на странице:')

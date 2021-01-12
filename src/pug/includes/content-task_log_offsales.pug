@@ -1,0 +1,57 @@
+main
+    .box
+        +tab-list(['Tasks','Journal'], 1)
+            +tab('Journal', 'active')
+                .content_box
+                    ul.breadcrumbs_list
+                        li.breadcrumb_item
+                            a.main_link(href="#" data-placement="top" data-toggle="tooltip" title="список моих товаров") Задачи
+                        li.breadcrumb_item Редактирование задачи
+                    .task_top_container
+                        .task_item
+                            .task_item_name Наименование задачи:
+                            .task_item_value Какое-то название задачи
+                        .task_item
+                            .task_item_name Дата выполнения:
+                            .task_item_value 16.12.2019 19:10
+                        table.equal_cells.hovered_rows
+                            colgroup
+                                col(style="width: 100px")
+                                col
+                                col(style="width: 255px")
+                            thead
+                                tr
+                                    th ID
+                                    th Название
+                                    th.align_center 
+                                        |Исходный
+                                        +icon('control_right')
+                                        |Итоговый статус
+                                tr.head_selection
+                                    th
+                                        .form_element
+                                            input.focused(type="text")
+                                            span.remove
+                                                +icon('remove_input_data')
+                                    th
+                                        .form_element
+                                            input.focused(type="text")
+                                            span.remove
+                                                +icon('remove_input_data')
+                                    th
+                            tbody
+                                tr
+                                    td 1234567
+                                    td
+                                        a.main_link(href="#") Название товара
+                                    td.align_center
+                                        .status_box
+                                            span.pos
+                                            +icon('control_right')
+                                            span.neg
+                                
+                        +pagination('Задач на странице:')
+                        ul.task_status_descr
+                            li.title Статусы:
+                            li.pos Запущены продажи
+                            li.neg Остановлены продажи

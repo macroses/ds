@@ -1,0 +1,50 @@
+main
+    .box
+        +tab-list(['GeneralRules', 'Personal', 'Promocodes', 'Sales'], 2)
+            +tab('Promocodes', 'acitve')
+                .content_box
+                    .promocodes_goods_form
+                        +select(['все выпуски', 'Выпуск #1'])
+                        span промо-код можно использовать однократно
+                        .form_element.date
+                            // date
+                            span с
+                            input(type="text" disabled)
+                            span по
+                            input.err(type="text")
+                            .err_msg время действия истекло
+                        button.btn.btn_blue сохранить
+
+                        .alert_box.warning Укажите размер скидки (%), которая будет предоставляться при использовании промо-кода этого выпуска
+
+                    .promocodes_goods_tabs.tabs_inner
+                        +tab-list(['Products', ['Promo_codes', 61], 'Reports'], 2)
+                            +tab('Reports', 'acitve')
+                                .reports
+                                    ul.pm_purses_settings_list
+                                        li.pm_purses_settings_list_item
+                                            .title Состояние промо-кода:
+                                            +select(['любой', 'использован', 'не использован'])
+                                        li.pm_purses_settings_list_item
+                                            .title В отчете показать:
+                                            .form_group
+                                                .form_element
+                                                    label.for_check.disabled
+                                                        input(type="checkbox" disabled checked)
+                                                        span.text промо-код
+                                                .form_element
+                                                    label.for_check
+                                                        input(type="checkbox")
+                                                        span.text остаток (раз)
+                                                .form_element
+                                                    label.for_check
+                                                        input(type="checkbox")
+                                                        span.text использован (раз)
+                                                .form_element
+                                                    label.for_check
+                                                        input(type="checkbox")
+                                                        span.text мой комментарий
+                                    button.btn.btn_blue сформировать excel-отчет
+                                    .hint Сформированный Excel отчёт:
+                                        +icon('excel') 
+                                        a.main_link(href="#" download) report.xls

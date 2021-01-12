@@ -1,0 +1,327 @@
+main
+    .box
+        +tab-list(['Administration', ['Users', 99], 'Buyers', 'Settings'], 0)
+            +tab('Administration', 'active')
+                .content_box
+                    table.messages_table.equal_cells
+                        colgroup
+                            col
+                            col
+                            col
+                        thead
+                            tr
+                                th Корреспондент
+                                th Сообщений всего/новых
+                                th Последнее сообщение
+                        tbody
+                            tr
+                                td
+                                    a.main_link(href="#" data-placement="top" data-toggle="tooltip" title="посмотреть переписку с корреспондентом") Plati.Market
+                                    .title администратор торговой площадки
+                                td 47 / 
+                                    span.empty_data 0
+                                td 05.06.2020 12:54:44
+                            tr
+                                td
+                                    a.main_link(href="#" data-placement="top" data-toggle="tooltip" title="посмотреть переписку с корреспондентом") Digiseller
+                                    .title техническая поддержка сервиса
+                                td 3098 / 
+                                    span.empty_data 0
+                                td 05.06.2020 12:54:44
+                    
+                    .alert_box.additional_info.my_message_alert
+                        +icon('chat_android')
+                        span Установив на свой телефон приложение для <a href="#" class="main_link">Android</a>, вы получите возможность оперативно отвечать на сообщения и получать оповещения о платежах и отзывах.
+
+                    .page_nav
+                        ul.breadcrumbs_list
+                            li.breadcrumb_item Переписка
+                            li.breadcrumb_item
+                                a.main_link(href="#") Администрация
+                            li.breadcrumb_item Plati.Market
+
+                    .debates
+                        .debates_content
+                            .my_message
+                                |Одна строка
+                                .message_detail 19.02.2015 16:21
+                                    +icon('read_check')
+                            .answerer_message
+                                |Одна строка
+                                .message_detail 19.02.2015 16:21
+                            .my_message
+                                |Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк 
+                                .message_detail 19.02.2015 16:21
+                                    +icon('read_check')
+                            .answerer_message
+                                |Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк 
+                                .message_detail 19.02.2015 16:21
+                            .my_message
+                                a.img_link(href="#" target="_blank")
+                                    img(src="https://i.pinimg.com/736x/e8/27/eb/e827eb3d61909aea0c45232183bb9e03.jpg", alt="")
+                                .message_detail 19.02.2015 16:21
+                                    +icon('read_check')
+                            .answerer_message
+                                a.img_link(href="#" target="_blank")
+                                    img(src="https://www.ejin.ru/wp-content/uploads/2018/11/fshshshshshshshsh-e1542184507336.jpg", alt="")
+                                .message_detail 19.02.2015 16:21
+                            .my_message
+                                |НепрерывнаястрокаНепрерывнаястрокаНепрерывнаястрокаНепрерывнаястрокаНепрерывнаястрокаНепрерывнаястрокаНепрерывнаястрокаНепрерывнаястрокаНепрерывнаястрокаНепрерывнаястрокаНепрерывнаястрока
+                                .message_detail 19.02.2015 16:21
+                            .answerer_message
+                                |НепрерывнаястрокаНепрерывнаястрокаНепрерывнаястрокаНепрерывнаястрокаНепрерывнаястрокаНепрерывнаястрокаНепрерывнаястрокаНепрерывнаястрокаНепрерывнаястрокаНепрерывнаястрокаНепрерывнаястрока
+                                .message_detail 19.02.2015 16:21
+                    .debates_textarea
+                        .form_element
+                            textarea(placeholder="Новое сообщение")
+                        .button_group
+                            label
+                                input(type="file", name="files")
+                                +icon('clip')
+                            button.btn.btn_blue Отправить
+                    ul.attached_list
+                        li
+                            .attached_item
+                                img(src="img/select_arrow.png", alt="")
+                                span.delete_attached_file
+                                    +icon('close_circle')
+                            .filename
+                                |select_arrow.png 
+                                span.filesize 20 КБ
+                        li
+                            .attached_item
+                                img(src="https://klike.net/uploads/posts/2018-06/1530090978_1.jpg", alt="")
+                                span.delete_attached_file
+                                    +icon('close_circle')
+                            .filename
+                                |123.png 
+                                span.filesize 20 КБ
+                        li
+                            .attached_item
+                                img(src="https://my.digiseller.com/attach/messages/12126/10954755/beautiful-swan-x.jpg", alt="")
+                                span.delete_attached_file
+                                    +icon('close_circle')
+                            .filename
+                                |dfgdfgdfgdfgdfgdfgdfgdfgdfgdfgdfgd.png 
+                                span.filesize 20 КБ
+                        li
+                            .attached_item
+                                img(src="img/select_arrow.png", alt="")
+                                span.delete_attached_file
+                                    +icon('close_circle')
+                            .filename
+                                |select_arrow.png 
+                                span.filesize 20 КБ
+                        li
+                            .attached_item
+                                img(src="https://klike.net/uploads/posts/2018-06/1530090978_1.jpg", alt="")
+                                span.delete_attached_file
+                                    +icon('close_circle')
+                            .filename
+                                |123.png 
+                                span.filesize 20 КБ
+                        li
+                            .attached_item
+                                img(src="https://my.digiseller.com/attach/messages/12126/10954755/beautiful-swan-x.jpg", alt="")
+                                span.delete_attached_file
+                                    +icon('close_circle')
+                            .filename
+                                |dfgdfgdfgdfgdfgdfgdfgdfgdfgdfgdfgd.png 
+                                span.filesize 20 КБ
+                        li
+                            .attached_item
+                                img(src="img/select_arrow.png", alt="")
+                                span.delete_attached_file
+                                    +icon('close_circle')
+                            .filename
+                                |select_arrow.png 
+                                span.filesize 20 КБ
+                        li
+                            .attached_item
+                                img(src="https://klike.net/uploads/posts/2018-06/1530090978_1.jpg", alt="")
+                                span.delete_attached_file
+                                    +icon('close_circle')
+                            .filename
+                                |123.png 
+                                span.filesize 20 КБ
+                        li
+                            .attached_item
+                                img(src="https://my.digiseller.com/attach/messages/12126/10954755/beautiful-swan-x.jpg", alt="")
+                                span.delete_attached_file
+                                    +icon('close_circle')
+                            .filename
+                                |dfgdfgdfgdfgdfgdfgdfgdfgdfgdfgdfgd.png 
+                                span.filesize 20 КБ
+                        li
+                            .attached_item
+                                img(src="img/select_arrow.png", alt="")
+                                span.delete_attached_file
+                                    +icon('close_circle')
+                            .filename
+                                |select_arrow.png 
+                                span.filesize 20 КБ
+                        li
+                            .attached_item
+                                img(src="https://klike.net/uploads/posts/2018-06/1530090978_1.jpg", alt="")
+                                span.delete_attached_file
+                                    +icon('close_circle')
+                            .filename
+                                |123.png 
+                                span.filesize 20 КБ
+                        li
+                            .attached_item
+                                img(src="https://my.digiseller.com/attach/messages/12126/10954755/beautiful-swan-x.jpg", alt="")
+                                span.delete_attached_file
+                                    +icon('close_circle')
+                            .filename
+                                |dfgdfgdfgdfgdfgdfgdfgdfgdfgdfgdfgd.png 
+                                span.filesize 20 КБ
+                    .attached_error
+                        .filename 
+                            |qweqwe.png 
+                            span - Размер файла превышает 1500 КБ.
+                            span.delete_attached_file
+                                +icon('close_circle')
+            +tab('Users')
+                .content_box
+                    .message_filter_box
+                        .form_element
+                            label.for_check 
+                                input(type="checkbox")
+                                span.text показывать 
+                                    span только новые сообщения
+                    table.messages_table.equal_cells
+                        colgroup
+                            col
+                            col
+                            col
+                        thead
+                            tr
+                                th Корреспондент
+                                th Сообщений всего/новых
+                                th Последнее сообщение
+                        tbody
+                            tr
+                                td
+                                    a.main_link(href="#" data-placement="top" data-toggle="tooltip" title="посмотреть переписку с корреспондентом") All Cheap Keys  
+                                td 47 / 
+                                    span.empty_data 0
+                                td 05.06.2020 12:54:44
+                            tr
+                                td
+                                    a.main_link(href="#" data-placement="top" data-toggle="tooltip" title="посмотреть переписку с корреспондентом") 123123123123123123123123123123123123123
+                                td 3098 / 
+                                    span.empty_data 0
+                                td 05.06.2020 12:54:44
+                            tr
+                                td
+                                    a.main_link(href="#" data-placement="top" data-toggle="tooltip" title="посмотреть переписку с корреспондентом") 123123123123123123123123123123123123123
+                                td
+                                    .mesage_count_data
+                                        |3098 /  
+                                        span.new_msg_count 9
+                                        span.new_msg_icon
+                                            +icon('mail')
+                                td 05.06.2020 12:54:44
+                    +pagination('На странице:')
+                    .alert_box.info.my_message_alert Не обнаружено непрочитанных сообщений от пользователей.
+                    .alert_box.additional_info.my_message_alert
+                        +icon('chat_android')
+                        span Установив на свой телефон приложение для <a href="#" class="main_link">Android</a>, вы получите возможность оперативно отвечать на сообщения и получать оповещения о платежах и отзывах.
+
+                    .answerer_message_options
+                        .answerer_name Zassik
+                        a.main_link(href="#") о продавце
+                        a.main_link(href="#") об агенте
+                        .form_element
+                            label.for_check 
+                                input(type="checkbox")
+                                span.text Запретить 
+                                    b Zassik 
+                                    |присылать мне сообщения
+                    .debates
+                        .debates_content
+                            .my_message
+                                |Одна строка
+                                .message_detail 19.02.2015 16:21
+                                    +icon('read_check')
+                            .answerer_message
+                                |Одна строка
+                                .message_detail 19.02.2015 16:21
+                    .debates_textarea
+                        .form_element
+                            textarea(placeholder="Новое сообщение")
+                        .button_group
+                            label
+                                input(type="file", name="files")
+                                +icon('clip')
+                            button.btn.btn_blue Отправить
+                    ul.attached_list
+                        li
+                            .attached_item
+                                img(src="img/select_arrow.png", alt="")
+                                span.delete_attached_file
+                                    +icon('close_circle')
+                            .filename
+                                |select_arrow.png 
+                                span.filesize 20 КБ
+            +tab('Buyers')
+                .content_box
+                    .message_filter_box
+                        .form_element
+                            label.for_check 
+                                input(type="checkbox")
+                                span.text показывать 
+                                    span только новые сообщения
+                    table.messages_table.equal_cells
+                        colgroup
+                            col(style="padding-right: 10px")
+                            col
+                            col
+                            col
+                        thead
+                            tr
+                                th Корреспондент
+                                th Товар
+                                th Сообщений всего/новых
+                                th Последнее сообщение
+                        tbody
+                            tr
+                                td.align_left
+                                    a.main_link(href="#" data-placement="top" data-toggle="tooltip" title="посмотреть переписку с корреспондентом") All Cheap Keys 
+                                td.align_left COLD Уникальный товар с нефиксированной ценой
+                                td.align_left 47 / 
+                                    span.empty_data 0
+                                td.align_left 05.06.2020 12:54:44
+                            tr
+                                td.align_left
+                                    a.main_link(href="#" data-placement="top" data-toggle="tooltip" title="посмотреть переписку с корреспондентом") 123123123123123123123123123123123123123 123123123123123123123123123123123123123
+                                td.align_left Название товара
+                                td.align_left 3098 / 
+                                    span.empty_data 0
+                                td.align_left 05.06.2020 12:54:44
+                            
+                    +pagination('На странице:')
+                    .alert_box.info.my_message_alert Не обнаружено непрочитанных сообщений от пользователей.
+                    .alert_box.additional_info.my_message_alert
+                        +icon('chat_android')
+                        span Установив на свой телефон приложение для <a href="#" class="main_link">Android</a>, вы получите возможность оперативно отвечать на сообщения и получать оповещения о платежах и отзывах.
+            +tab('Settings')
+                .content_box
+                    .form_group
+                        .form_element
+                            label.for_radio
+                                input(type="radio", name="receiveMessage" checked)
+                                span.text получать сообщения от всех пользователей 
+                                |(рекомендовано)
+                            .hint при необходимости вы можете ограничить список этих пользователей добавлением некоторых из них в черный список
+                        .form_element
+                            label.for_radio
+                                input(type="radio", name="receiveMessage")
+                                span.text получать сообщения только от авторизованных мной пользователей
+                            .hint исключение составляют администраторы площадок и техническая поддержка сервиса Digiseller
+                        .form_element
+                            label.for_radio
+                                input(type="radio", name="receiveMessage")
+                                span.text не получать сообщений
+                            .hint исключение составляют администраторы площадок и техническая поддержка сервиса Digiseller

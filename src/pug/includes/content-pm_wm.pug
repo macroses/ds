@@ -1,0 +1,341 @@
+main
+    .box
+        +tab-list(['General_rules', 'Digiseller', 'WM_Merchant', 'PayPal', 'PayMaster', 'Robokassa', 'Yandex_Checkout', 'Settings'], 2)
+            +tab('WM_Merchant', 'active')
+                .content_box
+                    .pm
+                        .pm_settings
+                            .alert_box.info Прием платежей через 
+                                a.main_link(href="#") WM Merchant
+                                |  осуществляется напрямую на ваши 
+                                a.main_link(href="#") WebMoney-кошельки
+                                |. Комиссия за продажу взимается с вашего WebMoney-кошелька при поступлении на него средств. Данный способ применим только для товаров, 
+                                |которые размещены в вашем собственном магазине и не применим для товаров, размещенных на торговых площадках 
+                                a.main_link(href="#") Plati.Market
+                                |, 
+                                a.main_link(href="#") GGSEL.com
+                                |, 
+                                a.main_link(href="#") WMCentre.net
+                                |.
+                            
+                            .pm_purses_settings
+                                .title.bold WM-кошельки:
+                                ul.pm_purses_settings_list
+                                    li.pm_purses_settings_list_item
+                                        .title WMZ-кошелек:
+                                        .form_element
+                                            input(type="text" value="Z618056041234" disabled)
+                                        .configure
+                                            button.btn.btn_gray настроить
+                                    li.pm_purses_settings_list_item
+                                        .title WMR-кошелек:
+                                        .form_element
+                                            input(type="text" value="Z618056041234" disabled)
+                                        .configure
+                                            button.btn.btn_gray configure
+                                    li.pm_purses_settings_list_item
+                                        .title WMX-кошелек:
+                                        .form_element
+                                            input(type="text" value="Z618056041234" disabled)
+                                        .configure
+                                    li.pm_purses_settings_list_item
+                                        .title WMX-кошелек:
+                                        .form_element
+                                            input(type="text" value="Z618056041234" disabled)
+                                        .configure
+                                            .text
+                                                +icon('file_accept')
+                                                |настроен
+                                    li.pm_purses_settings_list_item
+                                        .title WMX-кошелек:
+                                        .form_element
+                                            input(type="text" value="Z618056041234" disabled)
+                                        .configure
+                                            .text
+                                                .spinner-border
+
+                            table.equal_cells.pm_table
+                                colgroup
+                                    col
+                                    col(style="width: 90px")
+                                    col(style="width: 195px")
+                                    col
+                                thead
+                                    tr
+                                        th Способ оплаты
+                                        th.align_center Комиссия
+                                            sup
+                                                a.main_link(href="#") [1]
+                                        th Причина
+                                        th Рекомендации
+                                tbody
+                                    tr
+                                        td 
+                                            .pm_table_cell_name
+                                                span.pm_status.accessable
+                                                |WebNoney
+                                        td.align_center 10.84%
+                                        td
+                                            .pm_table_text
+                                                |не акцептованы правила приема средств посредствам банковских карт
+                                        td
+                                            .pm_table_text
+                                                a.main_link(href="#" data-toggle="modal" data-target="#request_modal") Подать заявку
+                                    tr
+                                        td
+                                            .pm_table_cell_name
+                                                span.pm_status.partly
+                                                |Bitcoin
+                                        td.align_center 10.84%
+                                        td
+                                            .pm_table_text
+                                                |не акцептованы правила приема средств посредствам банковских карт
+                                        td
+                                            .pm_table_text
+                                                a.main_link(href="#") акцептовать
+                                    tr
+                                        td 
+                                            .pm_table_cell_name
+                                                span.pm_status.unavailable
+                                                |Терминалы оплаты
+                                        td.align_center 0%
+                                        td
+                                            .pm_table_text
+                                                span.empty
+                                        td
+                                            .pm_table_text
+                                                |не акцептованы правила приема средств посредствам банковских карт
+                                    tr
+                                        td 
+                                            .pm_table_cell_name
+                                                span.pm_status.unavailable
+                                                |Сбербанк Онлайн
+                                        td.align_center 0%
+                                        td
+                                            .pm_table_text
+                                                |не акцептованы правила приема средств посредствам банковских карт
+                                        td
+                                            .pm_table_text
+                                                span.empty
+                                    tr
+                                        td 
+                                            .pm_table_cell_name
+                                                span.pm_status.unavailable
+                                                |QIWI
+                                        td.align_center 0%
+                                        td
+                                            .pm_table_text
+                                                span.empty
+                                        td
+                                            .pm_table_text
+                                                span.empty
+
+                                    tr
+                                        td 
+                                            .pm_table_cell_name
+                                                span.pm_status.unavailable
+                                                |Яндекс.Деньги
+                                        td.align_center 0%
+                                        td
+                                            .pm_table_text
+                                                span.empty
+                                        td
+                                            .pm_table_text
+                                                a.main_link(href="#") разрешить оплату банковскими картами другим товарам
+                                    tr
+                                        td 
+                                            .pm_table_cell_name
+                                                span.pm_status.unavailable
+                                                |МТС
+                                        td.align_center 0%
+                                        td
+                                            .pm_table_text
+                                                span.empty
+                                        td
+                                            .pm_table_text
+                                                span.empty
+                                    tr
+                                        td 
+                                            .pm_table_cell_name
+                                                span.pm_status.unavailable
+                                                |Билайн
+                                        td.align_center 0%
+                                        td
+                                            .pm_table_text
+                                                span.empty
+                                        td
+                                            .pm_table_text
+                                                span.empty
+                                    tr
+                                        td 
+                                            .pm_table_cell_name
+                                                span.pm_status.unavailable
+                                                |Мегафон
+                                        td.align_center 0%
+                                        td
+                                            .pm_table_text
+                                                span.empty
+                                        td
+                                            .pm_table_text
+                                                span.empty
+                                    tr
+                                        td 
+                                            .pm_table_cell_name
+                                                span.pm_status.unavailable
+                                                |Теле2
+                                        td.align_center 0%
+                                        td
+                                            .pm_table_text
+                                                span.empty
+                                        td
+                                            .pm_table_text
+                                                span.empty
+
+                            ul.pm_desr_list
+                                li
+                                    span.pm_status.accessable
+                                    |доступен
+                                li
+                                    span.pm_status.partly
+                                    |доступен частично
+                                li
+                                    span.pm_status.unavailable
+                                    |недоступен
+                            .alert_box.info 
+                                span.bold 1. 
+                                |Комиссию оплачивает покупатель, но вы можете компенсировать её в настройках товара в закладке 
+                                span.bold Оплата
+
+                        .pm_description
+                            +fieldset('Инструкция по настройке кошелька WebMoney')
+                                .fieldset_text
+                                    .content
+                                        span.bold 1.
+                                        |  Перейдя по нашей ссылке к настройке "вручную", обязательно проверьте правильность выбранного кошелька и установлены ли флаги доверия 
+                                        |на выписку счетов и выполнения переводов (без лимитов). После этого не забудьте нажать на кнопку 
+                                        span.bold Согласен
+                                        |.
+                                    a.fieldset_img_toggle(href="#" data-toggle="modal" data-target="#img_one"): img(src="img/pm_wm_1.png", alt="")
+                                        
+                                    .content
+                                        span.bold 2. 
+                                        |На скриншоте выделено поле 
+                                        span.bold Secret Key, 
+                                        |которое мы попросим вас заполнить, если не удастся завершить процесс настройки кошелька автоматически. Убедительная просьба 
+                                        span.bold не путать 
+                                        |с полем «Secret Key X20», которое находится ниже и должно оставаться пустым!
+
+                                    a.fieldset_img_toggle(href="#" data-toggle="modal" data-target="#img_one"): img(src="img/pm_wm_2.png", alt="")
+
+.modal.fade(id="img_one" tabindex="-1" aria-labelledby="img_one" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered.modal-lg.modal-preview
+        .modal-content
+            .modal-body
+                // добавляем/удаляем data-interval="false" родительскому тегу карусели, чтобы стопнуть автоплей слайдов
+                .carousel.slide(id="carouselExampleFade" data-ride="carousel" data-interval="false")
+                    .carousel-inner
+                        .carousel-item.active
+                            img(src="img/pm_wm_1.png", alt="")
+                        .carousel-item
+                            img(src="img/pm_wm_2.png", alt="")
+                    a.carousel-control-prev(href="#carouselExampleFade" role="button" data-slide="prev")
+                        span.carousel-control-prev-icon(aria-hidden="true")
+                    a.carousel-control-next(href="#carouselExampleFade" role="button" data-slide="next")
+                        span.carousel-control-next-icon(aria-hidden="true")
+            .modal-footer
+                .carousel_control
+                    .carousel_control_box
+                        // на плей надо будет добавлять контейнеру карусели data-interval
+                        button.btn.btn_gray
+                            +icon('control_play')
+                        a.btn.btn_gray(href="#carouselExampleFade" role="button" data-slide="prev")
+                            +icon('control_left')
+                        span.slides_counter 1/10
+                        a.btn.btn_gray(href="#carouselExampleFade" role="button" data-slide="next")
+                            +icon('control_right')
+                    .carousel_control_close
+                        button.btn.btn_gray(data-dismiss="modal" aria-label="Close")
+                            +icon('control_close')
+
+.modal.fade(id="request_modal" tabindex="-1" aria-labelledby="request_modal" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered.modal-dialog-scrollable.modal-md
+        .modal-content
+            .modal-header
+                .modal-title Заявка на подключение/отключение дополнительных способов оплаты
+                span.close(data-dismiss="modal" aria-label="Close")
+                    +icon('modal_close')
+            .modal-body
+                .request_modal_content
+                    |Прошу включить для моего сайта (магазина) 
+                    a.main_link.bolder(href="#") http://www.plati.ru
+                    span.star *
+                    |  следующие дополнительные способы оплаты:
+
+                    .form_group
+                        .form_element
+                            label.for_check
+                                input(type="checkbox")
+                                span.text Банковская карта;
+                        .form_element
+                            label.for_check
+                                input(type="checkbox")
+                                span.text Мобильная коммерция (МТС);
+                        .form_element
+                            label.for_check
+                                input(type="checkbox")
+                                span.text Мобильная коммерция (Билайн);
+                        .form_element
+                            label.for_check.disabled
+                                input(type="checkbox" disabled)
+                                span.text Терминалы по приёму наличных;
+
+                    |Интернет-банкинг:
+                    .form_group
+                        .form_element
+                            label.for_check
+                                input(type="checkbox")
+                                span.text Сбербанк Онлайн;
+                        .form_element
+                            label.for_check
+                                input(type="checkbox")
+                                span.text Альфа-Банк;
+                        .form_element
+                            label.for_check
+                                input(type="checkbox")
+                                span.text Банк Русский Стандарт;
+                        .form_element
+                            label.for_check
+                                input(type="checkbox")
+                                span.text Банк ВТБ24;
+                        .form_element
+                            label.for_check
+                                input(type="checkbox")
+                                span.text Промсвязьбанк;
+                        .form_element
+                            label.for_check
+                                input(type="checkbox")
+                                span.text Почта России;
+                        .form_element
+                            label.for_check.disabled
+                                input(type="checkbox" disabled checked)
+                                span.text WM-карты.
+
+                .hint
+                    span.star *
+                    |Если интернет-ресурс по адресу 
+                    a.main_link(href="#") http://www.plati.ru
+                    |  принадлежит не вам или на нем отсутствуют платные товары и услуги, вам необходимо перед отправкой заявки 
+                    a.main_link(href="#") изменить данный адрес
+                
+                .form_element.checkout
+                    label.for_check
+                        input(type="checkbox")
+                        span.text я проинформирован, что моя заявка будет вручную обработана представителем сервиса Merchant.WebMoney и, в случае отсутствия платных товаров или услуг на моем сайте (
+                            a.main_link(href="#") http://www.plati.ru)
+                            |  и/или размещения товаров, запрещенных к продаже за WM (
+                            a.main_link(href="#") см. Приложение 2
+                            |),она будет отклонена без возможности повторного обращения.
+
+            .modal-footer
+                .pm_method_modal_auto
+                    button.btn.btn_gray(disabled) отправить

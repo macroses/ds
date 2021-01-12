@@ -1,0 +1,294 @@
+table {
+    width: 100%;
+    &.equal_cells {
+        table-layout: fixed;
+    }
+
+    .form_element {
+        padding-left: 1px;
+        width: 100%;
+        select {
+            margin: 0 auto;
+            width: 100%;
+        }
+    }
+
+    .main_link {
+        display: inline;
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .filter_cell {
+        padding-top: 0;
+    }
+
+    .head_selection {
+        th {
+            padding-top: 10px;
+        }
+    }
+
+    &.hovered_rows {
+        tbody {
+            tr {
+                &:hover {
+                    background: #f5fafd;
+                }
+            }
+        }
+    }
+}
+
+thead {
+    font: bold 12px Roboto;
+}
+
+th {
+    padding-bottom: 10px;
+    padding-right: 8px;
+    
+    &:last-child {
+        padding-right: 0;
+    }
+}
+td{
+    padding: 8px 8px 8px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    &:last-child {
+        padding-right: 0;
+    }
+
+}
+
+th, td, tr {
+    vertical-align: middle;
+}
+
+.table_item {
+    display: flex;
+}
+
+tbody {
+    font: 13px Roboto;
+    tr {
+        border-bottom: 1px solid $default_tab_bg_color;
+    }
+
+    td {
+        max-height: 34px;
+    }
+}
+
+.my_shop {
+    .user_content {
+        max-width: 170px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        padding-right: 10px;
+    }
+
+    td {
+        padding: 8px 8px 8px 0;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+
+    tr {
+        border-bottom: 1px solid $default_tab_bg_color;
+    }
+
+    th {
+        padding-bottom: 10px;
+        padding-right: 8px;
+        
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+}
+
+.my_trading_floor {
+    .user_content {
+        max-width: 135px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        padding-right: 10px;
+    }
+
+    td {
+        padding: 8px 8px 8px 0;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+
+    tr {
+        border-bottom: 1px solid $default_tab_bg_color;
+    }
+
+    .reg_status {
+        color: #87C016;
+    }
+
+    th {
+        padding-bottom: 10px;
+        padding-right: 8px;
+        
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+}
+
+.my_rating_info {
+    display: flex;
+    justify-content: center;
+}
+
+.my_rating_info_by_time {
+    display: flex;
+    padding-left: 10px;
+    &-item {
+        padding: 0 3px;
+    }
+    .item_header {
+        color: $headers_color;
+        margin-bottom: 5px;
+        font: bold 12px Roboto;
+    }
+
+    .item_value {
+        color: $positive_color;
+        font-size: 11px;
+    }
+}
+
+.my_rating_info_main {
+    border-right: 1px solid $default_tab_bg_color;
+    padding-right: 5px;
+}
+
+.my_rating_pos {
+    font-size: 12px;
+    color: $additional_info_color;
+    margin-bottom: 5px;
+}
+
+.my_rating_value {
+    font-family: Roboto;
+    font-weight: bold;
+}
+
+.table_promo_codes {
+    margin-top: -10px;
+    tr {
+        border-bottom: 1px solid #eceff1;
+    }
+    td {
+        vertical-align: top;
+    }
+}
+
+.promo_codes_data {
+    display: flex;
+    justify-content: space-between;
+    &:not(:last-child) {
+        margin-bottom: 5px;
+    }
+}
+
+.table_footer_box {
+    font-size: 13px;
+    margin: 0 -20px -20px;
+    padding: 15px;
+    .date {
+        color: #D33232;
+        b {
+            font-weight: 900;
+        }
+    }
+}
+
+.table_agents {
+    margin-top: -10px;
+    tr {
+        border-bottom: 1px solid #eceff1;
+    }
+    td {
+        padding: 10px 0;
+    }
+}
+
+// messages tables
+.messages_table {
+    thead {
+        font-size: 13px;
+    }
+
+    .title {
+        font-size: 11px;
+    }
+}
+
+// table filters
+.collapse_btn {
+    text-align: center;
+    border-top: solid 1px #cfd8dc;
+    span {
+        cursor: pointer;
+        display: inline-block;
+        background-color: #f6f8f9;
+        
+        font: bold 10px Roboto;
+        border: solid 1px #cfd8dc;
+        border-top-color: #f6f8f9;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        text-transform: uppercase;
+        width: 135px;
+        text-align: center;
+        position: relative;
+        color: $headers_color;
+        padding: 2px 0;
+        transform: translateY(-2px);
+        &:after {
+            position: absolute;
+            content: '';
+            width: 10px;
+            height: 10px;
+            right: 20px;
+            top: 5px;
+            background-image: url(../img/select_arrow.png);
+            background-repeat: no-repeat;
+        }
+
+        &.active:after {
+            transform: rotate(180deg);
+            top: 0;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            @include box(8px);
+            background: #2c97de;
+            border-radius: 50%;
+            top: 4px;
+            left: 28px;
+        }
+    }
+}
+

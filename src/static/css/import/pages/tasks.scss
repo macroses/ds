@@ -1,0 +1,253 @@
+.tasks_box {
+    .switch_wrapper {
+        display: inline-block;
+    }
+}
+
+.editing_task {
+    display: flex;
+    margin-top: 30px;
+
+    .title_block {
+        margin-bottom: 20px;
+    }
+
+    &.create {
+        margin-top: 0;
+
+        .task_name_box.names_list .form_element {
+            margin-right: 10px;
+        }
+    }
+}
+
+.task_edit_box {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.task_history_box {
+    flex: 1;
+
+    table {
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            @include box(1px, 100%);
+            background: #d4dcdf;
+            top: 0;
+            left: -20px;
+        }
+    }
+
+    th {
+        position: sticky;
+        top: 0;
+        background: #fff;
+    }
+    
+    tbody {
+        background: rgba(216, 216, 216, 0.11);
+    }
+
+    .title_block{
+        padding-left: 20px;
+    }
+}
+
+.task_name_box {
+    display: flex;
+    margin-bottom: 20px;
+    &.names_list {
+        .form_element {
+            margin-right: 30px;
+        }
+
+        input[type=text] {
+            width: 300px;
+        }
+
+        .content {
+            margin-top: 7px;
+        }
+    }
+
+    .title {
+        color: $titles_color;
+        margin-bottom: 7px;
+    }
+
+    .content {
+        font-weight: bold;
+    }
+
+    &.dates {
+        align-items: flex-end;
+        margin-bottom: 30px;
+        input[type=text] {
+            width: 120px;
+            margin-right: 7px;
+        }
+    }
+
+    .colon {
+        margin: 0 7px;
+        color: $titles_color;
+    }
+
+    .close {
+        margin-left: 20px;
+        margin-bottom: 2px;
+    }
+
+    &.good_choose {
+        .good_select {
+            width: 100%;
+        }
+        select {
+            width: 100%;
+        }
+    }
+}
+
+.task_history_table {
+    max-height: 240px;
+    overflow: auto;
+    padding-left: 20px;
+    
+}
+
+.pic-close_thin {
+    @include box(16px);
+}
+
+.form_element {
+    &.start {
+        position: relative;
+        &:before {
+            position: absolute;
+            content: '';
+            background: #7ed321;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            left: 12px;
+            top: calc(50% - 5px);
+        }
+        select {
+            padding-left: 30px;
+        }
+    }
+
+    &.stop {
+        position: relative;
+        &:before {
+            position: absolute;
+            content: '';
+            background: red;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            left: 12px;
+            top: calc(50% - 5px);
+        }
+        select {
+            padding-left: 30px;
+        }
+    }
+}
+
+.editing_task_table {
+    label {
+        margin: 0 auto;
+    }
+}
+
+.task_done {
+    color: #7fac01;
+}
+
+.task_top_container {
+    .task_item {
+        display: flex;
+        margin-top: 20px;
+    }
+
+    .task_item_name {
+        min-width: 160px;
+        color: $titles_color;
+    }
+
+    .task_item_value {
+        font-weight: bold;
+    }
+
+    table {
+        margin-top: 30px;
+    }
+
+    .pic-control_right {
+        @include box(10px);
+        margin: 0 5px 2px;
+    }
+}
+
+.status_box {
+    .pos, .neg {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+    }
+
+    .pos {
+        background: #7ed321;
+    }
+    
+    .neg {
+        background: red;
+    }
+}
+
+.task_status_descr {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    li{
+        position: relative;
+        margin-left: 40px;
+        font: bold 13px Roboto;
+        color: $headers_color;
+    }
+
+    .title {
+        color: $additional_info_color;
+    }
+
+    .pos {
+        &:before {
+            content: '';
+            position: absolute;
+            top: 4px;
+            left: -15px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #7ed321;
+        }
+    }
+
+    .neg {
+        &:before {
+            content: '';
+            position: absolute;
+            top: 4px;
+            left: -15px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: red;
+        }
+    }
+}

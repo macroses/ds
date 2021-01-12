@@ -1,0 +1,169 @@
+main
+    .box
+        .content_box
+            .page_nav
+                ul.breadcrumbs_list
+                    li.breadcrumb_item
+                        a.main_link(href="#" data-placement="top" data-toggle="tooltip" title="список моих товаров") Мои товары
+                    li.breadcrumb_item
+                        .breadcrumb_item_name Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена 
+                        a(href="#" data-placement="top" data-toggle="tooltip" title="открыть страницу с описанием товара")
+                            +icon('good_link')
+                        .breadcrumb_item_price 14895 
+                            span RUB
+                .page_nav_item
+                    .prev 
+                        a.main_link(href="#") предыдущий товар
+                    .next 
+                        a.main_link(href="#") следующий товар
+
+        +tab-list(['Basic', 'Parameters', 'Gallery', ['Content', 10], 'Payment', 'Sales', 'Discount', 'HTML_code', 'Notifications'], 8)
+            +tab('Notifications', 'active')
+                .content_box
+                    .notify_goods
+                        .form_element
+                            label.for_radio
+                                input(type="radio", name="notify_goods" checked)
+                                span.text Использовать уведомления, исходя из 
+                                    a.main_link(href="#") общих правил
+                        .form_element
+                            label.for_radio
+                                input(type="radio", name="notify_goods")
+                                span.text Не использовать уведомления для данного товара
+                        .form_element
+                            label.for_radio
+                                input(type="radio", name="notify_goods" data-toggle="collapse" data-target="#notify_collapse" aria-expanded="false" aria-controls="notify_collapse")
+                                span.text Использовать для товара свои настройки уведомлений
+
+                        .collapse(id="notify_collapse")
+                            .notify_settings 
+                                .list_actions
+                                    .title - уведомлять меня при продаже товара с помощью:
+                                    .form_element
+                                        label.for_check
+                                            input(type="checkbox")
+                                            span.text Email на 
+                                                span.bold mail@gmail.com
+                                    .form_element
+                                        label.for_check
+                                            input(type="checkbox")
+                                            span.text SMS на 
+                                                span.bold 79999999
+                                    .form_element
+                                        label.for_check
+                                            input(type="checkbox")
+                                            span.text Сообщения на WMID
+                                    .form_element
+                                        label.for_check
+                                            input(type="checkbox")
+                                            span.text Push-нотификации
+                                    .form_element
+                                        label.for_check
+                                            input(type="checkbox")
+                                            span.text Telegram
+                                    .form_element
+                                        label.for_check
+                                            input(type="checkbox")
+                                            span.text URL
+
+                                .list_actions
+                                    .title - уведомлять меня, если товар заканчивается, с помощью:
+                                    .form_element
+                                        label.for_check
+                                            input(type="checkbox")
+                                            span.text Email на 
+                                                span.bold mail@gmail.com
+                                    .form_element
+                                        label.for_check
+                                            input(type="checkbox")
+                                            span.text SMS на 
+                                                span.bold 79999999
+                                    .form_element
+                                        label.for_check
+                                            input(type="checkbox")
+                                            span.text Сообщения на WMID
+                                    .form_element
+                                        label.for_check
+                                            input(type="checkbox")
+                                            span.text Push-нотификации
+                                    .form_element
+                                        label.for_check
+                                            input(type="checkbox")
+                                            span.text Telegram
+
+                                .list_actions
+                                    .title - уведомлять меня о начислении по партнерской программе с помощью:
+                                    .form_element
+                                        label.for_check
+                                            input(type="checkbox")
+                                            span.text Email на 
+                                                span.bold mail@gmail.com
+                                    .form_element
+                                        label.for_check
+                                            input(type="checkbox")
+                                            span.text SMS на 
+                                                span.bold 79999999
+                                    .form_element
+                                        label.for_check
+                                            input(type="checkbox")
+                                            span.text Сообщения на WMID
+                                    .form_element
+                                        label.for_check
+                                            input(type="checkbox")
+                                            span.text Push-нотификации
+                                    .form_element
+                                        label.for_check
+                                            input(type="checkbox")
+                                            span.text Telegram
+
+                                .list_actions
+                                    .title - уведомлять меня о новом отрицательном отзыве с помощью:
+                                    .form_element
+                                        label.for_check
+                                            input(type="checkbox")
+                                            span.text Email на 
+                                                span.bold mail@gmail.com
+                                    .form_element
+                                        label.for_check
+                                            input(type="checkbox")
+                                            span.text SMS на 
+                                                span.bold 79999999
+                                    .form_element
+                                        label.for_check
+                                            input(type="checkbox")
+                                            span.text Сообщения на WMID
+                                    .form_element
+                                        label.for_check
+                                            input(type="checkbox")
+                                            span.text Push-нотификации
+                                    .form_element
+                                        label.for_check
+                                            input(type="checkbox")
+                                            span.text Telegram
+
+                                .list_actions
+                                    .title - уведомлять меня о новом положительном отзыве с помощью:
+                                    .form_element
+                                        label.for_check
+                                            input(type="checkbox")
+                                            span.text Email на 
+                                                span.bold mail@gmail.com
+                                    .form_element
+                                        label.for_check
+                                            input(type="checkbox")
+                                            span.text SMS на 
+                                                span.bold 79999999
+                                    .form_element
+                                        label.for_check
+                                            input(type="checkbox")
+                                            span.text Сообщения на WMID
+                                    .form_element
+                                        label.for_check
+                                            input(type="checkbox")
+                                            span.text Push-нотификации
+                                    .form_element
+                                        label.for_check
+                                            input(type="checkbox")
+                                            span.text Telegram
+
+                        button.btn.btn_blue сохранить

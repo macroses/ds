@@ -1,0 +1,99 @@
+main
+    .box
+        +tab-list(['Tasks','Journal'], 0)
+            +tab('Tasks', 'active')
+                .content_box
+                    .editing_task.create
+                        .task_edit_box
+                            .title_block Создать задачу
+                            .task_name_box.names_list
+                                .form_element.vertical
+                                    .title Наименование задачи
+                                    input(type="text")
+                                .form_element.vertical
+                                    .title Тип задачи
+                                    select
+                                        option(value="0") Приостановка продаж
+                                        option(value="1") Изменение цены
+
+                            .task_name_box.dates
+                                .form_element.vertical
+                                    .title Дата начала
+                                    // dates
+                                    input(type="text")
+                                .form_element.vertical
+                                    .title Часы
+                                    .content 
+                                        .form_element
+                                            select
+                                                - var hour = 0;
+                                                while hour < 24
+                                                    option(value=`${hour}`)= hour++
+                                            span.colon :
+                                .form_element.vertical 
+                                    .title Мин
+                                    .content
+                                        .form_element
+                                            select
+                                                - var min = 0;
+                                                while min < 60
+                                                    option(value=`${min}`)= min++
+                                            span.colon &#8212;
+
+                                .form_element.vertical
+                                    .title Дата окончания
+                                    // dates
+                                    input(type="text")
+                                .form_element.vertical
+                                    .title Часы
+                                    .content 
+                                        .form_element
+                                            select
+                                                - var hour = 0;
+                                                while hour < 24
+                                                    option(value=`${hour}`)= hour++
+                                            span.colon :
+                                .form_element.vertical 
+                                    .title Мин
+                                    .content
+                                        .form_element
+                                            select
+                                                - var min = 0;
+                                                while min < 60
+                                                    option(value=`${min}`)= min++
+                                .form_element.vertical 
+                                    .title
+                                    .content
+                                        span.close
+                                            +icon('close_thin')
+
+                            .task_name_box.dates
+                                .form_element.vertical
+                                    .title Дата начала
+                                    // dates
+                                    input(type="text")
+                                .form_element.vertical
+                                    .title Часы
+                                    .content 
+                                        .form_element
+                                            select
+                                                - var hour = 0;
+                                                while hour < 24
+                                                    option(value=`${hour}`)= hour++
+                                            span.colon :
+                                .form_element.vertical 
+                                    .title Мин
+                                    .content
+                                        .form_element
+                                            select
+                                                - var min = 0;
+                                                while min < 60
+                                                    option(value=`${min}`)= min++
+                                            span.colon &#8212;
+
+                                .form_element.vertical
+                                    .title 
+                                    button.btn.btn_gray указать дату окончания
+
+                    button.btn.btn_blue создать задачу
+                    button.btn.btn_gray отмена

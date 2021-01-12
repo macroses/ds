@@ -1,0 +1,40 @@
+.news_item {
+    display: flex;
+    margin-bottom: 40px;
+    position: relative;
+    font-size: 13px;
+    &:not(:last-child):after {
+        content: "";
+        width: 1px;
+        position: absolute;
+        display: block;
+        top: 27px;
+        bottom: -40px;
+        left: 50px;
+    }
+}
+
+.news_date {
+    border-radius: 100px;
+    margin-right: 40px;
+    padding: 5px 15px;
+    align-self: flex-start;
+}
+
+.news_content {
+    line-height: 26px;
+    position: relative;
+    padding-left: 20px;
+    &:before {
+        content: "";
+        width: 6px;
+        height: 100%;
+        border-radius: 100px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    img {
+        margin-right: 10px;
+    }
+}

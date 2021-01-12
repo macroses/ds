@@ -1,0 +1,107 @@
+// определение ширины и высоты одной строкой
+@mixin box($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+// повторяемый кусок кода для псевдоэлементов
+@mixin pseudo(
+  $width: 100%,
+  $height: 100%,
+  $display: inline-block,
+  $pos: absolute,
+  $content: ""
+) {
+  content: $content;
+  display: $display;
+  position: $pos;
+  @include box($width, $height);
+}
+// example: &:after {@include pseudo(100px, 100px);}
+
+
+// плейсхолдеры
+@mixin input-placeholder {
+    &.placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
+}
+
+// медиавыражения
+$breakpoints: (
+    "phone":        400px,
+    "phone-wide":   480px,
+    "phablet":      560px,
+    "tablet-small": 640px,
+    "tablet":       768px,
+    "tablet-wide":  1024px,
+    "desktop":      1248px,
+    "desktop-wide": 1440px
+);
+
+@mixin mq($width, $type: min) {
+    @if map_has_key($breakpoints, $width) {
+        $width: map_get($breakpoints, $width);
+        @if $type == max {
+            $width: $width - 1px;
+        }
+        @media only screen and (#{$type}-width: $width) {
+            @content;
+        }
+    }
+}
+
+// обрезание текста для коротких блоков
+@mixin truncate($truncation-boundary) {
+    max-width: $truncation-boundary;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+// центровка флексов
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// подключение шрифтов
+@mixin font-face($font-name, $path, $weight: normal, $style: normal) {
+    @font-face {
+        font-family: quote($font-name);
+        src: url($path+".ttf") format("truetype");
+        font-weight: $weight;
+        font-style: $style;
+    }
+}
+// @include font-face(Roboto, "./assets/Roboto", normal, normal); пример подключения шрифта
+
+// позиционирование
+@mixin position($position, $args) {
+    @each $o in top right bottom left {
+        $i: index($args, $o);
+        @if $i and $i + 1 <= length($args) and type-of(nth($args, $i + 1)) == number {
+            #{$o}: nth($args, $i + 1);
+        }
+    }
+    position: $position;
+}
+
+// Positioning helpers
+@mixin absolute($args: '') {
+    @include position(absolute, $args);
+}
+
+@mixin fixed($args: '') {
+    @include position(fixed, $args);
+}
+
+@mixin relative($args: '') {
+    @include position(relative, $args);
+}
+// exapmle: @include absolute(top 100% left 0);
+
+

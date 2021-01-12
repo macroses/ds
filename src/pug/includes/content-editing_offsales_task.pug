@@ -1,0 +1,260 @@
+main
+    .box
+        +tab-list(['Tasks','Journal'], 0)
+            +tab('Tasks', 'active')
+                .content_box
+                    ul.breadcrumbs_list
+                        li.breadcrumb_item
+                            a.main_link(href="#" data-placement="top" data-toggle="tooltip" title="список моих товаров") Задачи
+                        li.breadcrumb_item Редактирование задачи
+                    .editing_task
+                        .task_edit_box
+                            .title_block Редактирование задачи
+                            .task_name_box.names_list
+                                .form_element.vertical
+                                    .title Наименование задачи
+                                    input(type="text")
+                                .form_element.vertical
+                                    .title Тип задачи
+                                    .content 
+                                        |Приостановка продаж
+                                .form_element.vertical
+                                    .title Активность
+                                    .content
+                                        +switcher()
+
+                            .task_name_box.dates
+                                .form_element.vertical
+                                    .title Дата начала
+                                    // dates
+                                    input(type="text")
+                                .form_element.vertical
+                                    .title Часы
+                                    .content 
+                                        .form_element
+                                            select
+                                                - var hour = 0;
+                                                while hour < 24
+                                                    option(value=`${hour}`)= hour++
+                                            span.colon :
+                                .form_element.vertical 
+                                    .title Мин
+                                    .content
+                                        .form_element
+                                            select
+                                                - var min = 0;
+                                                while min < 60
+                                                    option(value=`${min}`)= min++
+                                            span.colon &#8212;
+
+                                .form_element.vertical
+                                    .title Дата окончания
+                                    // dates
+                                    input(type="text")
+                                .form_element.vertical
+                                    .title Часы
+                                    .content 
+                                        .form_element
+                                            select
+                                                - var hour = 0;
+                                                while hour < 24
+                                                    option(value=`${hour}`)= hour++
+                                            span.colon :
+                                .form_element.vertical 
+                                    .title Мин
+                                    .content
+                                        .form_element
+                                            select
+                                                - var min = 0;
+                                                while min < 60
+                                                    option(value=`${min}`)= min++
+                                .form_element.vertical 
+                                    .title
+                                    .content
+                                        span.close
+                                            +icon('close_thin')
+
+                            .task_name_box.dates
+                                .form_element.vertical
+                                    .title Дата начала
+                                    // dates
+                                    input(type="text")
+                                .form_element.vertical
+                                    .title Часы
+                                    .content 
+                                        .form_element
+                                            select
+                                                - var hour = 0;
+                                                while hour < 24
+                                                    option(value=`${hour}`)= hour++
+                                            span.colon :
+                                .form_element.vertical 
+                                    .title Мин
+                                    .content
+                                        .form_element
+                                            select
+                                                - var min = 0;
+                                                while min < 60
+                                                    option(value=`${min}`)= min++
+                                            span.colon &#8212;
+
+                                .form_element.vertical
+                                    .title 
+                                    button.btn.btn_gray указать дату окончания
+
+                            .title_block Выберите товары
+                            .task_name_box.good_choose
+                                .good_select
+                                    .good_select_area
+                                        select#defaultSelect(multiple)
+                                            option(value="0") 321🔥
+                                            option(value="1") Lorem ipsum dolor sit amet.
+
+                            
+                            
+
+                        .task_history_box
+                            .title_block Журнал действия с товарами
+                            .task_history_table
+                                table.equal_cells
+                                    colgroup
+                                        col(style="width: 80px")
+                                        col
+                                        col(style="width: 120px")
+                                        col(style="width: 110px")
+                                    thead
+                                        tr
+                                            th ID
+                                            th Название
+                                            th.align_center Действие
+                                            th.align_center Дата
+                                    tbody
+                                        tr
+                                            td 1234567
+                                            td
+                                                a.main_link(href="#") Название товара Название товара Название товара Название товара Название товара 
+                                            td.align_center добавление
+                                            td.align_center 11.01.2021 12:27
+                                        tr
+                                            td 1234567
+                                            td
+                                                a.main_link(href="#") Название товара 
+                                            td.align_center удаление
+                                            td.align_center 11.01.2021 12:27
+                                        tr
+                                            td 1234567
+                                            td
+                                                a.main_link(href="#") Название товара Название товара Название товара Название товара Название товара 
+                                            td.align_center добавление
+                                            td.align_center 11.01.2021 12:27
+                                        tr
+                                            td 1234567
+                                            td
+                                                a.main_link(href="#") Название товара 
+                                            td.align_center удаление
+                                            td.align_center 11.01.2021 12:27
+                                        tr
+                                            td 1234567
+                                            td
+                                                a.main_link(href="#") Название товара Название товара Название товара Название товара Название товара 
+                                            td.align_center добавление
+                                            td.align_center 11.01.2021 12:27
+                                        tr
+                                            td 1234567
+                                            td
+                                                a.main_link(href="#") Название товара 
+                                            td.align_center удаление
+                                            td.align_center 11.01.2021 12:27
+                                        tr
+                                            td 1234567
+                                            td
+                                                a.main_link(href="#") Название товара Название товара Название товара Название товара Название товара 
+                                            td.align_center добавление
+                                            td.align_center 11.01.2021 12:27
+                                        tr
+                                            td 1234567
+                                            td
+                                                a.main_link(href="#") Название товара 
+                                            td.align_center удаление
+                                            td.align_center 11.01.2021 12:27
+                                        tr
+                                            td 1234567
+                                            td
+                                                a.main_link(href="#") Название товара Название товара Название товара Название товара Название товара 
+                                            td.align_center добавление
+                                            td.align_center 11.01.2021 12:27
+                                        tr
+                                            td 1234567
+                                            td
+                                                a.main_link(href="#") Название товара 
+                                            td.align_center удаление
+                                            td.align_center 11.01.2021 12:27
+                                        tr
+                                            td 1234567
+                                            td
+                                                a.main_link(href="#") Название товара Название товара Название товара Название товара Название товара 
+                                            td.align_center добавление
+                                            td.align_center 11.01.2021 12:27
+                                        tr
+                                            td 1234567
+                                            td
+                                                a.main_link(href="#") Название товара 
+                                            td.align_center удаление
+                                            td.align_center 11.01.2021 12:27
+
+                    .editing_task_table
+                        table.equal_cells
+                            colgroup
+                                col(style="width: 100px")
+                                col
+                                col(style="width: 200px")
+                                col(style="width: 40px")
+                            thead
+                                tr
+                                    th ID
+                                    th Название товара
+                                    th.align_center Оплата
+                                    th 
+                                        button.btn.btn_gray
+                                            +icon('delete-btn')
+                                tr.head_selection
+                                    th 
+                                        .form_element
+                                            input.focused(type="text")
+                                            span.remove
+                                                +icon('remove_input_data')
+                                    th
+                                        .form_element
+                                            input(type="text")
+                                    th
+                                    th
+                            tbody
+                                tr
+                                    td 1234567
+                                    td 
+                                        a.main_link(href="#") Название товара
+                                    td 
+                                        .form_element.start
+                                            select
+                                                option(value="0") Запустить продажи
+                                                option(value="1") Остановить продажи
+                                    td
+                                        .form_element
+                                            label.for_check
+                                                input(type="checkbox")
+                                                span.text
+                                tr
+                                    td 1234567
+                                    td 
+                                        a.main_link(href="#") Название товара
+                                    td 
+                                        .form_element.stop
+                                            select
+                                                option(value="0") Запустить продажи
+                                                option(value="1" selected) Остановить продажи
+                                    td
+                                        .form_element
+                                            label.for_check
+                                                input(type="checkbox")
+                                                span.text
+                    +pagination('Товаров на странице')

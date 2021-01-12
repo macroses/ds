@@ -1,0 +1,64 @@
+.main_nav {
+    margin-bottom: 11px;
+}
+
+.main_nav_top {
+    ul {
+        display: flex;
+        justify-content: space-between;
+    }
+    li{
+        &:first-child{
+            a {
+                margin-left: 0;
+            }
+        }
+    }
+    a {
+        font: 700 14px Lato;
+        display: inline-block;
+        border-top-left-radius: $border-rad;
+        border-top-right-radius: $border-rad;
+        margin: 6px 5px 0 5px;
+        padding: 7px 15px 11px;
+        &.question_mark {
+            height: 30px;
+            padding: 0;
+            &:hover {
+                background: rgba(0,0,0,0);
+            }
+        }
+
+        &.active {
+            pointer-events: none;
+        }
+    }
+
+    .pic-question_mark  {
+        @include box(30px);
+    }
+}
+
+.main_nav_bottom {
+    box-shadow: $shadow_popup;
+    ul {
+        display: flex;
+    }
+    li{
+        &:first-child{
+            a {
+                margin-left: 0;
+            }
+        }
+    }
+    a {
+        font: 700 14px Lato;
+        margin: 6px 15px;
+        padding: 5px 10px;
+        display: inline-block;
+        border-radius: $border-rad;
+        &.active {
+            pointer-events: none;
+        }
+    }
+}

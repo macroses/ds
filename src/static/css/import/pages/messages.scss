@@ -1,0 +1,224 @@
+.debates {
+    width: 50%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 490px;
+    margin-top: 20px;
+}
+
+.debates_content {
+    border-radius: 4px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.my_message, .answerer_message {
+    display: flex;
+    flex-wrap: wrap;
+    word-break: break-word;
+    margin: 15px 0;
+    max-width: 410px;
+    padding: 11px 15px 10px;
+    border-radius: 8px;
+
+    .img_link {
+        height: 90px;
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+    img {
+        width: auto;
+        max-height: 100%;
+    }
+}
+
+.message_detail {
+    justify-self: flex-end;
+    align-self: flex-end;
+    font: 700 11px "Lato";
+    margin-left: auto;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+
+    margin-top: 6px;
+    transform: translateY(-3px);
+}
+
+.my_message {
+    align-self: flex-end;
+}
+
+.answerer_message {
+    align-self: flex-start;
+}
+
+.pic-read_check {
+    @include box(13px, 10px);
+    margin-left: 5px;
+}
+
+.debates_textarea {
+    width: 50%;
+    padding: 15px;
+    display: flex;
+    align-items: flex-start;
+    .form_element {
+        width: 460px;
+    }
+    textarea {
+        height: 100px;
+    }
+
+    .button_group {
+        display: flex;
+        flex: 1;
+        input[type=file] {
+            display: none;
+        }
+        label {
+            cursor: pointer;
+            @include box(34px);
+            @include flex-center;
+            margin: 0 10px;
+            border-radius: $border-rad;
+            
+        }
+    }
+
+    .btn {
+        margin-left: auto;
+    }
+}
+
+.pic-clip {
+    @include box(17px, 19px);
+}
+
+.attached_list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    li {
+        margin-right: 20px;
+    }
+}
+
+.attached_item {
+    @include box(160px, 90px);
+    position: relative;
+    background: #eee;
+    border: 1px solid #c8c8c8;
+
+    @include flex-center;
+
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+.attached_error {
+    font-weight: 700;
+    .filename {
+        color: #d50000;
+        display: inline-block;
+        max-width: 100%;
+        overflow: visible;
+        position: relative;
+        margin: 10px 0 0;
+    }
+    
+    .delete_attached_file {
+        right: -20px;
+        top: 1px;
+    }
+}
+
+.filename {
+    color: $headers_color;
+    margin: 10px 0;
+    text-align: center;
+    max-width: 160px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.delete_attached_file {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    @include flex-center;
+    @include box(15px);
+    cursor: pointer;
+    opacity: .3;
+    border: 1px solid rgba(255,255,255,.7);
+    border-radius: 50%;
+    &:hover {
+        opacity: .5;
+    }
+}
+
+
+
+.pic-close_circle {
+    @include box(15px);
+}
+
+.message_filter_box {
+    margin-bottom: 20px;
+}
+
+.answerer_message_options {
+    display: flex;
+    .main_link {
+        margin-right: 15px;
+    }
+}
+
+.answerer_name {
+    font-weight: 700;
+    margin-right: 15px;
+}
+
+.my_message_alert {
+    margin-top: 20px;
+}
+
+.hint {
+    font-size: 13px;
+    color: #90a4ae;
+}
+
+.mesage_count_data {
+    display: flex;
+    align-items: center;
+}
+
+.new_msg_count {
+    color: red;
+    font-weight: bold;
+}
+
+.new_msg_icon {
+    margin-left: auto;
+    margin-right: 10px;
+    animation: msg 1s infinite alternate ease-in-out;
+}
+
+@keyframes msg {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.pic-mail {
+    @include box(21px, 21px);
+}

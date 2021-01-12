@@ -1,0 +1,151 @@
+main
+    .box
+        .content_box
+            .alert_box.warning
+                |Ваш WM-идентификатор 
+                span.bold 775027065906 
+                |не соответствует зарегистрированному 
+                span.bold 248168142389
+                |! Если вы утратили управление (потеряли, украли ключи, сгорел, утонул компьютер и т.д. и т.п.) WM-идентификатором 
+                span.bold 248168142389
+                |, действуйте согласно 
+                a.main_link(href="#") регламенту 
+                |восстановления контроля над WM-идентификатором.
+
+        ul.nav.nav-tabs(role="tablist")
+            li
+                a(href="#tab-block" role="tab",data-toggle="tab" class="nav-link active") Блокировка по IP
+                    span(data-placement="top" data-toggle="tooltip" title="Блокировка по IP ВЫКЛЮЧЕНА")
+                        +icon('notice-popup-important')
+            li
+                a(href="#tab-wm-auth" role="tab",data-toggle="tab" class="nav-link") WM-авторизация
+                    span(data-placement="top" data-toggle="tooltip" title="WM-авторизация ВЫКЛЮЧЕНА")
+                        +icon('notice-popup-important')
+            li
+                a(href="#tab-phone" role="tab",data-toggle="tab" class="nav-link") Доверенные телефоны
+        .tab-content
+            .tab-pane.active(id="tab-block")
+                .content_box
+                    .alert_box.info Блокировка по IP адресам ограничивает вход в ваш личный кабинет только с 
+                        |разрешенных (добавленных) вами IP адресов. В случае если ваш IP адрес изменится, вам предложат 
+                        |пройти WM-авторизацию с помощью WMID, который сейчас указан в ваших 
+                        a.main_link(href="#") реквизитах 
+                        |и добавить новый IP адрес в список разрешенных.
+                    
+                    .my_security_box
+                        .fraction
+                            .title_block Ваши последние входы (максимум 30) :
+                            table.equal_cells
+                                colgroup
+                                    col
+                                    col
+                                thead
+                                    tr
+                                        th Дата
+                                        th IP-адрес
+                                tbody
+                                    tr
+                                        td 21.10.2020 0:02:02
+                                        td 
+                                            a.main_link(href="#") 109.252.5.26
+                                    tr
+                                        td 21.10.2020 0:02:02
+                                        td 
+                                            a.main_link(href="#") 109.252.5.26
+                                    tr
+                                        td 21.10.2020 0:02:02
+                                        td 
+                                            a.main_link(href="#") 109.252.5.26
+                                    tr
+                                        td 21.10.2020 0:02:02
+                                        td 
+                                            a.main_link(href="#") 109.252.5.26
+                        .fraction
+                            .title_block
+                                span Блокировка по IP адресам (выключена) 
+                                +switcher("checked")
+                            .my_security_ip
+                                .form_group_label IP-адрес:
+                                .form_element
+                                    input(type="text" maxlength="3")
+                                .form_element
+                                    input(type="text" maxlength="3")
+                                .form_element
+                                    input(type="text" maxlength="3")
+                                .form_element
+                                    input(type="text" maxlength="3")
+                            .my_security_ip
+                                .form_group_label Маска подсети *:
+                                .form_element
+                                    input(type="text" value="255" maxlength="3")
+                                .form_element
+                                    input(type="text" value="255" maxlength="3")
+                                .form_element
+                                    input(type="text" value="255" maxlength="3")
+                                .form_element
+                                    input(type="text" value="255" maxlength="3")
+                            .my_security_ip
+                                .form_group_label Текстовый комментарий *:
+                                .form_element.comment
+                                    input(type="text")
+                            .my_security_ip
+                                button.btn.btn_blue добавить
+                            .my_security_ip
+                                .hint * Если вы хотите добавить единичный IP адрес из вашей подсети, то в качестве маски укажите 255.255.255.255 Более подробно смотрите 
+                                    a.main_link(href="#") здесь.
+                            .my_security_ip
+                                .current_ip Ваш текущий IP адрес: 109.252.5.26
+                            .my_security_ip
+                                .invalid_ip
+                                    span Ошибка: 
+                                    |неверный формат IP-адреса
+
+            .tab-pane(id="tab-wm-auth")
+                .content_box
+                    .my_security_wm_auth
+                        a.main_link(href="#") WM-авторизация 
+                        span (выключена)
+                    .form_group
+                        .form_element
+                            label.for_radio
+                                input(type="radio", name="CheckAuthorize" checked)
+                                span.text не требуется;
+                        .form_element
+                            label.for_radio
+                                input(type="radio", name="CheckAuthorize")
+                                span.text требуется только для работы с содержимым и описанием товаров, просмотра деталей покупок и настройки скидок;
+                        .form_element
+                            label.for_radio
+                                input(type="radio", name="CheckAuthorize")
+                                span.text всегда требуется при входе в личный кабинет.
+            .tab-pane(id="tab-phone")
+                .content_box
+                    .alert_box.info Вы можете добавить номера телефонов, с которых разрешаете осуществлять финансовые операции из мобильного приложения Digiseller 
+                        a(href="#" data-placement="top" data-toggle="tooltip" title="Приложение в Google Play")
+                            +icon('chat_android')
+                        a(href="#" data-placement="top" data-toggle="tooltip" title="Приложение в App Store")
+                            +icon('chat_apple')
+
+                    .trusted_phones
+                        .title_block Проверенные номера телефонов:
+                        ul.trusted_phones_list
+                            li 7999887766
+                                span(data-toggle="tooltip" title="Номер из WebMoney-аттестата")
+                                    +icon('attestat')
+                            li 7999887766
+                                span(data-toggle="tooltip" title="Номер из WebMoney-аттестата")
+                                    +icon('attestat')
+                            li У вас нет проверенных номеров
+                        .add_new_info
+                            .form_element
+                                input(type="text")
+                            button.btn.btn_gray
+                                +icon('plus_button')
+                        .hint *Номер телефона вводится в международном формате, например: 79261234567
+                        .sms_push
+                            .title Вам отправлено SMS-сообщение с кодом, введите его для подтверждения.
+                            .form_element
+                                span Код:
+                                input(type="text")
+                            button.btn.btn_blue готово
+                            button.btn.btn_gray отмена

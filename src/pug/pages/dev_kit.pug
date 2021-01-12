@@ -1,0 +1,534 @@
+include ../includes/mixins.pug
+doctype html
+block vars
+html(lang="ru-RU")
+    head
+        meta(charset="UTF-8")
+        meta(name="color-scheme" content="dark light")
+        title #{title}
+        include ../includes/links.pug
+        style.
+            body {
+                position: relative;
+            }
+    body(data-spy="scroll" data-target="#navbar-example")
+        .wrapper.dev
+            .box
+                .content_box
+                    .dev_kit
+                        .navbar.navbar-light.bg-light
+                            nav.nav.nav-pills.flex-column
+                                a(class="nav-link" href="#item-1") Установка и старт
+                                a(class="nav-link" href="#item-2") Структура проекта
+                                a(class="nav-link" href="#item-3") Создание новой страницы
+                                a(class="nav-link" href="#item-4") Правила именования элементов
+                                a(class="nav-link" href="#item-5") Компоненты и примеры их использования
+                                nav.nav.nav-pills.flex-column
+                                    a(class="nav-link" href="#item-5-1") Кнопки и ссылки
+                                    a(class="nav-link" href="#item-5-2") Элементы формы
+                                    a(class="nav-link" href="#item-5-3") Табы
+                                    a(class="nav-link" href="#item-5-4") Иконки (все возможные варианты)
+                                    a(class="nav-link" href="#item-5-5") Контейнеры
+                                    a(class="nav-link" href="#item-5-6") Таблицы
+                                a(class="nav-link" href="#item-5") Темная тема    
+                        .list(data-spy="scroll" data-target="#navbar-example3" data-offset="0")
+                            .item
+                                h2(id="item-1") Установка и старт
+                                .content Скачайте репозиторий 
+                                    a.main_link(href="#") http://
+                                .content В корне проекта 
+                                code
+                                    |npm install
+                                .content Для запуска 
+                                code
+                                    |gulp
+                                .content Для сборки
+                                code
+                                    |gulp build
+                            
+                            
+                            .item
+                                h4(id="item-2") Структура проекта
+                                .structure_list
+                                    .structure build <span>// собранный проект</span>
+                                    .structure src
+                                        .structure pug
+                                            .structure includes <span>// основные контентные шаблоны всех страниц, шапка, футер, и т. д.</span>
+                                                .structure components <span>// шаблоны для встраивания в каждую страницу</span>
+                                            .structure layout <span>// основной шаблон любой страницы, который является родительским для всех страниц</span>
+                                            .structure pages <span>// все страницы проекта. Наследуют структуру из layout</span>
+
+                                        .structure static <span>// </span>
+                                            .structure css <span>// в корне лежат файлы цветовых тем, файл импорта всех стилей и файл импорта css библиотек </span>
+                                            .structure fonts
+                                            .structure img
+                                            .structure js
+                                            .structure libs
+
+                            .item
+                                h4(id="item-3") Создание новой страницы
+                                .content Создание новой страницы подразумевает создание нескольких файлов и написание некоторых зависимостей
+                                .content 1. в папке 
+                                    code pug/pages 
+                                    | создать новый файл и назвать его соответственно тех. заданию. (например page.pug). Скопировать шаблон вида (или из любой рядом лежащей страницы)
+                                code.block.
+                                    extends ../layout/layout.pug<br>
+                                    block vars<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;- var title = 'Digiseller';<br>
+                                    block header<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;include ../includes/header.pug<br>
+                                    block content<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;include ../includes/content-file_name.pug<br>
+                                    block footer<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;include ../includes/footer.pug <br>
+                                .content в папке <code>includes</code> создать контентную часть страницы, которая должна иметь название вида <code>content-file_name.pug</code>
+                                .content 2. Файл стилей для контентной части страницы создается в папке <code>static/import/pages/page.scss</code>
+                                .content Если необходимо создание стилей компонента, тогда создается файл в  <code>static/import/components/component.scss</code>
+                                .content В файле <code>main.scss</code> произвести импорт необходимого файла соответственно категории (компонент, страница, шаблон)
+
+                            .item
+                                h4(id="item-4") Правила именования элементов
+                                .content Все кастомные классы, написанные верстальщиком записаны через нижнее подчеркивание. Для удобства выделения этих классов программистами.
+                                    |В проекте не используется BEM или любая другая методология названия классов и структуры.
+                                .content Названия идентификаторов - есть отображение их сущности (seller_name_block, purchase_title, etc). Кроме случаев абстракции компонентов, которые будут повторяться.
+                                    |В случае когда компонент не отображает содержимого (напрпимер кнопки различного содержания, но одинакового вида: сохранить, отменить, submit), допустимо использовать название цвета.
+
+                            .item
+                                h2(id="item-5") Компоненты и примеры их использования
+                            .item
+                                h4(id="item-5-1") Кнопки и ссылки
+                                .exercises_list
+                                    .exercise_item
+                                        .exercise_item_content
+                                            button.btn.btn_gray button
+                                        .exercise_code
+                                            code button.btn.btn_gray
+                                    .exercise_item
+                                        .exercise_item_content
+                                            button.btn.btn_blue button
+                                        .exercise_code
+                                            code button.btn.btn_blue
+                                    .exercise_item
+                                        .exercise_item_content
+                                            button.btn.btn_blue(disabled) button
+                                        .exercise_code
+                                            code button.btn.btn_blue(disabled)   
+                                    .exercise_item
+                                        .exercise_item_content
+                                            a.main_link(href="#") пример ссылки
+                                        .exercise_code
+                                            code a.main_link(href="#")
+
+                            .item
+                                h4(id="item-5-2") Элементы формы
+                                .exercises_list
+                                    .exercise_item
+                                        .exercise_item_content
+                                            .form_element
+                                                label.for_radio
+                                                    input(type="radio", name="chck" checked)
+                                                    span.text радио
+                                        .exercise_code
+                                            code.block.
+                                                .form_element<br>
+                                                    &nbsp;&nbsp;label.for_radio<br>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;input(type="radio", name="ex" checked)<br>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;span.text радио выбран
+                                    .exercise_item
+                                        .exercise_item_content
+                                            .form_element
+                                                label.for_radio
+                                                    input(type="radio", name="ex1")
+                                                    span.text радио
+                                        .exercise_code
+                                            code.block.
+                                                .form_element<br>
+                                                    &nbsp;&nbsp;label.for_radio<br>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;input(type="radio", name="ex1")<br>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;span.text радио выбран
+                                    .exercise_item
+                                        .exercise_item_content
+                                            .form_element
+                                                label.for_radio.disabled
+                                                    input(type="radio", name="ex" checked disabled)
+                                                    span.text радио выбран disabled
+                                        .exercise_code
+                                            code.block.
+                                                .form_element<br>
+                                                    &nbsp;&nbsp;label.for_radio.disabled<br>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;input(type="radio", name="" checked disabled)<br>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;span.text радио выбран disabled
+                                    .exercise_item
+                                        .exercise_item_content
+                                            .form_element
+                                                label.for_radio.disabled
+                                                    input(type="radio", name="ex" disabled)
+                                                    span.text радио disabled
+                                        .exercise_code
+                                            code.block.
+                                                .form_element<br>
+                                                    &nbsp;&nbsp;label.for_radio.disabled<br>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;input(type="radio", name="" disabled)<br>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;span.text радио disabled
+
+                                    .exercise_item
+                                        .exercise_item_content
+                                            .form_element
+                                                label.for_check
+                                                    input(type="checkbox" checked)
+                                                    span.text чекбокс
+                                        .exercise_code
+                                            code.block.
+                                                .form_element<br>
+                                                    &nbsp;&nbsp;label.for_check<br>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;input(type="checkbox" checked)<br>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;span.text чекбокс
+                                    
+                                    .exercise_item
+                                        .exercise_item_content
+                                            .form_element
+                                                label.for_check
+                                                    input(type="checkbox")
+                                                    span.text чекбокс
+                                        .exercise_code
+                                            code.block.
+                                                .form_element<br>
+                                                    &nbsp;&nbsp;label.for_check<br>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;input(type="checkbox")<br>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;span.text чекбокс
+
+                                    .exercise_item
+                                        .exercise_item_content
+                                            .form_element
+                                                label.for_check.disabled
+                                                    input(type="checkbox" disabled)
+                                                    span.text чекбокс disabled
+                                        .exercise_code
+                                            code.block.
+                                                .form_element<br>
+                                                    &nbsp;&nbsp;label.for_check<br>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;input(type="checkbox" disabled)<br>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;span.text чекбокс disabled
+
+                                    .exercise_item
+                                        .exercise_item_content
+                                            .form_element
+                                                label.for_check.disabled
+                                                    input(type="checkbox" disabled checked)
+                                                    span.text чекбокс disabled checked
+                                        .exercise_code
+                                            code.block.
+                                                .form_element<br>
+                                                    &nbsp;&nbsp;label.for_check<br>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;input(type="checkbox" disabled checked)<br>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;span.text чекбокс disabled checked
+
+                                    .exercise_item
+                                        .exercise_item_content
+                                            .form_element
+                                                label
+                                                    input(type="text" placeholder="текстовый инпут")
+                                        .exercise_code
+                                            code.block.
+                                                .form_element<br>
+                                                    &nbsp;&nbsp;label<br>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;input(type="checkbox")<br>
+
+                                    .exercise_item
+                                        .exercise_item_content
+                                            .form_element
+                                                label
+                                                    input(type="text" disabled placeholder="disabled")
+                                        .exercise_code
+                                            code.block.
+                                                .form_element<br>
+                                                    &nbsp;&nbsp;label<br>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;input(type="checkbox" disabled)<br>
+
+                                    .exercise_item
+                                        .exercise_item_content
+                                            .form_element
+                                                select
+                                                    option(value="0") select
+                                        .exercise_code
+                                            code.block.
+                                                .form_element<br>
+                                                    &nbsp;&nbsp;select<br>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;option(value="0") select<br>
+                                    
+                                    .exercise_item
+                                        .exercise_item_content
+                                            .form_element
+                                                select(disabled)
+                                                    option(value="0") select
+                                        .exercise_code
+                                            code.block.
+                                                .form_element<br>
+                                                    &nbsp;&nbsp;select(disabled)<br>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;option(value="0") select disabled<br>
+
+                                    .exercise_item
+                                        .exercise_item_content
+                                            .form_element
+                                                textarea
+                                        .exercise_code
+                                            code.block.
+                                                .form_element<br>
+                                                    &nbsp;&nbsp;textarea
+
+                                    .exercise_item
+                                        .exercise_item_content
+                                            .form_element
+                                                textarea(disabled)
+                                        .exercise_code
+                                            code.block.
+                                                .form_element<br>
+                                                    &nbsp;&nbsp;textarea(disabled)
+
+
+                            .item
+                                h4(id="item-5-3") Табы
+                                .content Для создания собственных табов необходимо ознакомиться с файлом 
+                                    code mixins.pug
+                                    | и узнать как в целом пишутся миксины в pug + базовые знания JS
+                                .content В функции 
+                                    code +tab()
+                                    | первый аргумент - массив названий вкладок, второй - числовое значение активной вкладки (начиная с нуля)
+                                    
+                                .content Для создания вкладки с числовым значением, в массиве названий должен быть многомерный массив, состоящий из строки и числа
+                                    code +tab-list(['Tab1', ['Tab2', 192]], 0)
+
+                                .exercises_list
+                                    .exercise_item
+                                        .exercise_item_content
+                                            +tab-list(['Tab1', 'Tab2'], 0)
+                                                +tab('Tab1', 'acitve')
+                                                    .content_box one 
+                                                +tab('Tab2')
+                                                    .content_box two
+                                        .exercise_code
+                                            code.block.
+                                                +tab-list([['Tab1', 'Tab2'], 0)<br>
+                                                    &nbsp;&nbsp;+tab('Tab1', 'acitve')<br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;.content_box one<br>
+                                                    &nbsp;&nbsp;+tab('Tab2')<br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;.content_box two
+
+                                    .exercise_item
+                                        .exercise_item_content
+                                            +tab-list(['Tab3', ['Tab4', 192]], 0)
+                                                +tab('Tab3', 'acitve')
+                                                    .content_box one
+                                                +tab('Tab4')
+                                                    .content_box two
+                                        .exercise_code
+                                            code.block.
+                                                +tab-list(['Tab3', ['Tab4', 192]], 0)<br>
+                                                    &nbsp;&nbsp;+tab('Tab3', 'acitve')<br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;.content_box one<br>
+                                                    &nbsp;&nbsp;+tab('Tab4')<br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;.content_box two
+                            .item
+                                h4(id="item-5-4") Иконки
+                                .content Для вставки иконок используем миксин 
+                                    code +icon('')
+                                    |где аргументом является название файла svg, например
+                                    code +icon('webmoney')
+                                    | с миксином для иконок также можно ознакомиться в файле 
+                                    code mixins.pug
+                                .content Все новые иконки добавляются в папку 
+                                    code svg
+                                    |, после чего необходимо произвести сборку проекта, чтобы сформировался спрайт.
+                                .icon_list
+                                    .item
+                                        +icon('alp')
+                                    .item
+                                        +icon('attestat')
+                                    .item
+                                        +icon('bank')
+                                    .item
+                                        +icon('beeline')
+                                    .item
+                                        +icon('bitcoin')
+                                    .item
+                                        +icon('chat_android')
+                                    .item
+                                        +icon('chat_apple')
+                                    .item
+                                        +icon('chats')
+                                    .item
+                                        +icon('clip')
+                                    .item
+                                        +icon('close_circle')
+                                    .item
+                                        +icon('control_close')
+                                    .item
+                                        +icon('control_left')
+                                    .item
+                                        +icon('control_play')
+                                    .item
+                                        +icon('control_right')
+                                    .item
+                                        +icon('copy')
+                                    .item
+                                        +icon('credit-card')
+                                    .item
+                                        +icon('delete-btn')
+                                    .item
+                                        +icon('digiseller-logo')
+                                    .item
+                                        +icon('down')
+                                    .item
+                                        +icon('eng')
+                                    .item
+                                        +icon('file_accept')
+                                    .item
+                                        +icon('file_denied')
+                                    .item
+                                        +icon('good_link')
+                                    .item
+                                        +icon('good')
+                                    .item
+                                        +icon('googleplay')
+                                    .item
+                                        +icon('green_check')
+                                    .item
+                                        +icon('invoice')
+                                    .item
+                                        +icon('logout')
+                                    .item
+                                        +icon('megafon')
+                                    .item
+                                        +icon('messages')
+                                    .item
+                                        +icon('modal_close')
+                                    .item
+                                        +icon('mts')
+                                    .item
+                                        +icon('notice-popup-important')
+                                    .item
+                                        +icon('notice-popup')
+                                    .item
+                                        +icon('notice')
+                                    .item
+                                        +icon('offer')
+                                    .item
+                                        +icon('payment_ds')
+                                    .item
+                                        +icon('payment_paymaster')
+                                    .item
+                                        +icon('payment_paypal')
+                                    .item
+                                        +icon('payment_robokassa')
+                                    .item
+                                        +icon('payment_ya')
+                                    .item
+                                        +icon('payment-steamskin')
+                                    .item
+                                        +icon('paypal-method')
+                                    .item
+                                        +icon('plus_button')
+                                    .item
+                                        +icon('popup-settings')
+                                    .item
+                                        +icon('present-card')
+                                    .item
+                                        +icon('preview')
+                                    .item
+                                        +icon('qiwi')
+                                    .item(style="background: lightgray")
+                                        +icon('question_mark')
+                                    .item
+                                        +icon('read_check')
+                                    .item
+                                        +icon('red-close')
+                                    .item
+                                        +icon('remove_input_data')
+                                    .item
+                                        +icon('responses')
+                                    .item
+                                        +icon('rus')
+                                    .item
+                                        +icon('russian-post')
+                                    .item
+                                        +icon('search-res-customer')
+                                    .item
+                                        +icon('security')
+                                    .item
+                                        +icon('shop_play')
+                                    .item
+                                        +icon('shop_play_b')
+                                    .item
+                                        +icon('smile-bad')
+                                    .item
+                                        +icon('smile-good')
+                                    .item
+                                        +icon('square-blue')
+                                    .item
+                                        +icon('square-sea')
+                                    .item
+                                        +icon('stat')
+                                    .item(style="background: lightgray")
+                                        +icon('target_new_white')
+                                    .item
+                                        +icon('tele-2')
+                                    .item
+                                        +icon('terminal')
+                                    .item
+                                        +icon('union')
+                                    .item
+                                        +icon('up')
+                                    .item
+                                        +icon('webmoney')
+                                    .item
+                                        +icon('wm-card')
+                                    .item
+                                        +icon('yandex-money')
+                                    .item
+                                        +icon('youtube_play')
+
+                            .item
+                                h4(id="item-5-5") Контейнеры
+                                .content 
+                                    code .box
+                                    | - контейнер определяющий размеры страницы (1348px по дизайну)
+                                .content 
+                                    code .content_box
+                                    | - стилизованный контейнер, определяющий отступы во всех крупных блоках и секцияx
+
+                            .item
+                                h4(id="item-5-6") Таблицы
+                                .content Таблицы в проекте - это одна из основ. В них хранится большинство данных, которые получает пользователь. Особенно важно сделать их одинаковыми 
+                                    | настолько, насколько это возможно. Не только визуально, но и структурно, с точки зрения верстки.
+                                .content Все таблицы получают размеры из шаблона, которые определяется тегами
+                                    code colgroup
+                                    |и 
+                                    code col
+                                    |. Где количество колонок должно совпадать с количеством колонок таблицы. 
+                                code.block.
+                                    colgroup<br>
+                                    &nbsp;&nbsp;col<br>
+                                    &nbsp;&nbsp;col<br>
+                                    thead<br>
+                                    &nbsp;&nbsp;tr<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;th ID<br>
+                                    &nbsp;&nbsp;tr<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;th название<br>
+                                    tbody<br>
+                                    &nbsp;&nbsp;tr<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;td 1234567<br>
+                                    &nbsp;&nbsp;tr<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;td Продукт 1<br>
+                                .content Учитывая огромное количество таблиц в проекте и их неоднозначную ширину от страницы к странице - использование шаблона колонок позволит избавиться
+                                    | от инлайновых стилей в каждой из колонок, когда потребуется задать фиксированную ширину одной из колонок.
+                                    | Ширина колонки задается стандартным образом 
+
+                                code.block.
+                                    colgroup<br>
+                                    &nbsp;&nbsp;col(style="width: 100px")<br>
+                                    &nbsp;&nbsp;col(style="width: 34px")<br>
+                                
+                                .content По умолчанию все колонки таблицы делят ширину таблицы поровну. Если одна из колонок получает фиксированную ширину, то остальные колонки 
+                                    |будут делить оставшееся место поровну.
+
+            include ../includes/footer.pug   

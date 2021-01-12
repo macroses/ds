@@ -1,0 +1,518 @@
+main
+    .box
+        .my_info_content
+            .my_info_content-left
+                +tab-list(['Sales', 'Views', 'load'], 0)
+                    +tab('Sales', 'acitve')
+                        .content_box
+                            .my_info_graph
+                                .my_info_graph_canvas
+                                    .my_info_graph_canvas_header
+                                        .my_info_graph_canvas_title Валюта
+                                        +select(['USD', 'RUB', 'EUR', 'UAH'])
+                                    canvas
+                                .my_info_graph_stat
+                                    table
+                                        colgroup
+                                            col(style="width: 80px")
+                                            col
+                                            col
+                                            col
+                                        thead
+                                            tr
+                                                th
+                                                    +select(['День', 'Неделя', 'Месяц'])
+                                                th.align_right
+                                                    +icon('square-blue')
+                                                    | Всего продаж
+                                                th.align_right 
+                                                    +icon('square-sea')
+                                                    |Через партнеров
+                                                th.align_right Сумма
+                                        tbody
+                                            tr
+                                                td 
+                                                    a.main_link(href="#") 28.09-04.10
+                                                td.align_right.empty_data 0
+                                                td.align_right 1
+                                                td.align_right 99999.99
+                                            tr
+                                                td 
+                                                    a.main_link(href="#") 28.09-04.10
+                                                td.align_right.empty_data 0
+                                                td.align_right.empty_data 0
+                                                td.align_right.empty_data 0
+                                            tr
+                                                td 
+                                                    a.main_link(href="#") 28.09-04.10
+                                                td.align_right.empty_data 0
+                                                td.align_right.empty_data 0
+                                                td.align_right.empty_data 0
+                                            tr
+                                                td 
+                                                    a.main_link(href="#") 28.09-04.10
+                                                td.align_right.empty_data 0
+                                                td.align_right.empty_data 0
+                                                td.align_right.empty_data 0
+                                            tr
+                                                td 
+                                                    a.main_link(href="#") 28.09-04.10
+                                                td.align_right.empty_data 0
+                                                td.align_right.empty_data 0
+                                                td.align_right.empty_data 0
+                                            tr
+                                                td 
+                                                    a.main_link(href="#") 28.09-04.10
+                                                td.align_right.empty_data 0
+                                                td.align_right.empty_data 0
+                                                td.align_right.empty_data 0
+                                            tr
+                                                td 
+                                                    a.main_link(href="#") 28.09-04.10
+                                                td.align_right.empty_data 0
+                                                td.align_right.empty_data 0
+                                                td.align_right.empty_data 0
+                                            tr
+                                                td 
+                                                    a.main_link(href="#") 28.09-04.10
+                                                td.align_right.empty_data 0
+                                                td.align_right.empty_data 0
+                                                td.align_right.empty_data 0
+                                            tr
+                                                td 
+                                                    a.main_link(href="#") 28.09-04.10
+                                                td.align_right.empty_data 0
+                                                td.align_right.empty_data 0
+                                                td.align_right.empty_data 0
+                                    .extra_stat
+                                        a.main_link(href="#") Подробная статистика
+                                                
+                    +tab('Views')
+                        .content_box
+                            .my_info_graph
+                                .my_info_graph_canvas
+                                    .my_info_graph_canvas_header
+                                        .my_info_graph_canvas_title
+                                    canvas
+                                .my_info_graph_stat
+                                    table
+                                        colgroup
+                                            col
+                                            col
+                                        thead
+                                            tr
+                                                th
+                                                    +select(['День', 'Неделя', 'Месяц'])
+                                                th.align_right
+                                                    +icon('square-blue')
+                                                    | Уникальных показов
+                                        tbody
+                                            tr
+                                                td 28.09-04.10
+                                                td.align_right.empty_data 0
+                                            tr
+                                                td 28.09-04.10
+                                                td.align_right.empty_data 0
+                                            tr
+                                                td 28.09-04.10
+                                                td.align_right.empty_data 0
+                                            tr
+                                                td 28.09-04.10
+                                                td.align_right.empty_data 0
+                                            tr
+                                                td 28.09-04.10
+                                                td.align_right.empty_data 0
+                                            tr
+                                                td 28.09-04.10
+                                                td.align_right.empty_data 0
+                                    .extra_stat
+                                        |Статистика показов товаров ведется только для товаров, размещённых на торговых площадках.
+
+                +section-content('', 'Мой магазин')
+                    table.my_shop
+                        colgroup
+                            col(style="width: 170px")
+                            col
+                            col
+                            col
+                            col(style="width: 45px")
+                            col(style="width: 45px")
+                            col
+                            col
+                            col
+                        thead
+                            tr
+                                th адрес магазина
+                                th.align_center товаров
+                                th.align_center продаж
+                                th.align_center возвратов
+                                th.align_center(data-placement="top" data-toggle="tooltip" title="положит. отзывов")
+                                    +icon('smile-good')
+                                th.align_center(data-placement="top" data-toggle="tooltip" title="отриц. отзывов")
+                                    +icon('smile-bad')
+                                th.align_center зачисление на
+                                th.align_center 
+                                    |рейтинг
+                                    
+                                    span(data-placement="right" data-toggle="tooltip" data-html="true" title="<p class='tipsed_header'>Как расчитывается рейтинг?</p><ul class='tipsed_list'><li>1. Положительный отзыв покупателя увеличивает рейтинг на величину (цена товара / 100).</li><li>2. Отрицательный отзыв уменьшает рейтинг на величину (цена товара / 10).</li><li>3. Продажа без отзыва увеличивает рейтинг на величину (цена товара / 500).</li></ul><p class='tipsted_text'>Цена товара рассчитывается в USD по курсу на момент покупки. При расчете рейтинга учитываются продажи только за последние 12 месяцев.</p>")
+                                        +icon('question_table')
+                                th.align_right тех. подержка
+                        tbody
+                            tr
+                                td.user_content
+                                    a.main_link(href="#" target="_blank") https://s12126.exaccess.com/https://s12126.exaccess.com/https://s12126.exaccess.com/
+                                td.align_center
+                                    a.main_link(href="#") 43
+                                    | /
+                                    span 39
+                                td.align_center
+                                    a.main_link(href="#") 43
+                                td.align_center 9
+                                td.align_center 
+                                    a.main_link(href="#") 2
+                                td.align_center
+                                    a.main_link(href="#") 99
+                                td.align_center
+                                    a.main_link(href="#") личный счет
+                                td.align_center
+                                    .bold 0,0048
+                                td.align_right
+                                    a.main_link(href="#") задать вопрос
+                            tr
+                                td.user_content
+                                    a.main_link(href="#" target="_blank") shop.com
+                                td.align_center
+                                    a.main_link(href="#") 2
+                                    | /
+                                    span.empty_data 0
+                                td.align_center
+                                    a.main_link(href="#") 43
+                                td.align_center 9
+                                td.align_center 
+                                    a.main_link(href="#") 2
+                                td.align_center
+                                    a.main_link(href="#") 99
+                                td.align_center
+                                    a.main_link(href="#") личный счет
+                                td.align_center.bold
+                                    .rating_info
+                                td.align_right
+                                    a.main_link(href="#") задать вопрос
+
+                +section-content('', 'Моя площадка')
+                    table.my_trading_floor
+                        colgroup
+                            col(style="width: 135px")
+                            col
+                            col
+                            col
+                            col(style="width: 45px")
+                            col(style="width: 45px")
+                            col
+                            col(style="width: 200px")
+                            col(style="width: 130px")
+                        thead
+                            tr
+                                th площадка
+                                th.align_center товаров
+                                th.align_center продаж
+                                th.align_center возвратов
+                                th.align_center(data-placement="top" data-toggle="tooltip" title="положит. отзывов")
+                                    +icon('smile-good')
+                                th.align_center(data-placement="top" data-toggle="tooltip" title="отриц. отзывов")
+                                    +icon('smile-bad')
+                                th.align_center зачисление на
+                                th.align_center 
+                                    |рейтинг
+                                    span(data-placement="right" data-toggle="tooltip" data-html="true" title="<p class='tipsed_header'>Как расчитывается рейтинг?</p><ul class='tipsed_list'><li>1. Положительный отзыв покупателя увеличивает рейтинг на величину (цена товара / 100).</li><li>2. Отрицательный отзыв уменьшает рейтинг на величину (цена товара / 10).</li><li>3. Продажа без отзыва увеличивает рейтинг на величину (цена товара / 500).</li></ul><p class='tipsted_text'>Цена товара рассчитывается в USD по курсу на момент покупки. При расчете рейтинга учитываются продажи только за последние 12 месяцев.</p>")
+                                        +icon('question_table')
+                                th.align_right администратор
+                        tbody
+                            tr
+                                td.user_content
+                                    a.main_link(href="#" target="_blank")
+                                        +icon('shop_play')
+                                        | Plati.Market
+                                    .reg_status зарегистрирован
+                                    
+                                td.align_center
+                                    a.main_link(href="#") 43
+                                    | /
+                                    span 39
+                                td.align_center
+                                    a.main_link(href="#") 43
+                                td.align_center 9
+                                td.align_center 
+                                    a.main_link(href="#") 2
+                                td.align_center
+                                    a.main_link(href="#") 99
+                                td.align_center
+                                    a.main_link(href="#") личный счет
+                                td.align_center
+                                    .my_rating_info
+                                        .my_rating_info_main
+                                            .my_rating_pos 66
+                                            .my_rating_value 200,0034
+                                        .my_rating_info_by_time
+                                            .my_rating_info_by_time-item
+                                                .item_header(data-placement="top" data-toggle="tooltip" title="прирост за неделю") Н
+                                                .item_value +100%
+                                            .my_rating_info_by_time-item
+                                                .item_header(data-placement="top" data-toggle="tooltip" title="прирост за месяц") М
+                                                .item_value +100%
+                                            .my_rating_info_by_time-item
+                                                .item_header(data-placement="top" data-toggle="tooltip" title="прирост за три месяца") 3М
+                                                .item_value +100%
+
+                                td.align_right
+                                    a.main_link(href="#") задать вопрос
+
+                            tr
+                                td.user_content
+                                    a.main_link(href="#" target="_blank")
+                                        +icon('shop_play')
+                                        | Mestkom.Ru
+                                    .reg_status зарегистрирован
+                                td.align_center -
+                                td.align_center -
+                                td.align_center -
+                                td.align_center -
+                                td.align_center -
+                                td.align_center -
+                                td.align_center -
+                                td.align_right
+                                    a.main_link(href="#") зарегистрироваться
+
+                .section_content
+                    .section_content_header
+                        .title Обсуждение
+                        .links_group
+                            a.main_link(href="#") Правила
+                            a.main_link(href="#") Telegram-группа
+                            a.main_link(href="#") Telegram-группа Купи-продай
+                            +switcher()
+
+            .my_info_content-right
+                +tab-list(['Contacts', 'Purses', 'load'], 0)
+                    +tab('Contacts', 'acitve')
+                        .content_box
+                            ul.personal_data_list
+                                li.personal_data_item
+                                    .personal_data_item-title Продавец (никнейм):
+                                    .personal_data_item-content WYSIWYGWYSIWYGWYSIWYGWYSIWYGWYSIWYG
+                                li.personal_data_item
+                                    .personal_data_item-title Идентификатор:
+                                    .personal_data_item-content 12345
+                                li.personal_data_item
+                                    .personal_data_item-title Полное имя:
+                                    .personal_data_item-content Частное лицо
+                                li.personal_data_item
+                                    .personal_data_item-title Телефон:
+                                    .personal_data_item-content +7925557788
+                                li.personal_data_item
+                                    .personal_data_item-title Телеграм:
+                                    .personal_data_item-content Mishutka
+                                li.personal_data_item
+                                    .personal_data_item-title WhatsApp:
+                                    .personal_data_item-content.empty_data не указан
+                                li.personal_data_item
+                                    .personal_data_item-title Skype:
+                                    .personal_data_item-content Mishutka
+                                li.personal_data_item
+                                    .personal_data_item-title Email:
+                                    .personal_data_item-content Mishutka@gmail.com
+                                li.personal_data_item
+                                    .personal_data_item-title Пароль:
+                                    .personal_data_item-content ✳✳✳✳✳✳✳✳✳✳
+                            .personal_data_btns
+                                .btn_group
+                                    button.btn.btn_blue изменить
+                                    button.btn.btn_gray удалить аккаунт
+                            ul.personal_data_list
+                                li.personal_data_item
+                                    .personal_data_item-title Чат:
+                                    .personal_data_item-content
+                                        a.main_link(href="#") включенвключенвключенвключенвключенвключен
+                                li.personal_data_item
+                                    .personal_data_item-title Персональная страница:
+                                    .personal_data_item-content
+                                        a.main_link(href="#") не определена
+                                li.personal_data_item
+                                    .personal_data_item-title Официальный статус:
+                                    .personal_data_item-content
+                                        a.main_link(href="#") не подтвержден
+                    +tab('Purses')
+                        .content_box
+                            ul.personal_data_list
+                                li.personal_data_item
+                                    .personal_data_item-title WM-идентификатор::
+                                    .personal_data_item-content 605197088190
+                                li.personal_data_item
+                                    .personal_data_item-title Тип аттестата:
+                                    .personal_data_item-content
+                                        a.main_link(href="#") аттестат продавца
+                            .btn_group
+                                button.btn.btn_blue изменить
+                                button.btn.btn_gray удалить
+                    
+
+                +section-content('link', 'Новости')
+                    ul.preview_news_list
+                        li.preview_news_item
+                            .news_item_date 21.08.2020
+                            .news_item_text 
+                                |В Digiseller появилась возможность принимать платежи через 
+                                a.main_link(href="#") Яндекс Кассу 
+                                |В Digiseller появилась возможность принимать платежи через 
+                                a.main_link(href="#") подробнее...
+                        li.preview_news_item
+                            .news_item_date 21.08.2020
+                            .news_item_text 
+                                |В Digiseller появилась возможность принимать платежи через 
+                                a.main_link(href="#") Яндекс Кассу 
+                        li.preview_news_item
+                            .news_item_date 21.08.2020
+                            .news_item_text 
+                                |В Digiseller появилась возможность принимать платежи через 
+                                a.main_link(href="#") Яндекс Кассу 
+                                |В Digiseller появилась возможность принимать платежи через 
+                                a.main_link(href="#") подробнее...
+                +section-content('link', 'Способы оплаты')
+                    ul.payment_list
+                        li
+                            a(href="#" data-placement="top" data-toggle="tooltip" title="webmoney")
+                                +icon('webmoney')
+                        li
+                            a(href="#" data-placement="top" data-toggle="tooltip" title="Bitcoin")
+                                +icon('bitcoin')
+                        li
+                            a(href="#" data-placement="top" data-toggle="tooltip" title="PayPal")
+                                +icon('paypal-method')
+                        li
+                            a(href="#" data-placement="top" data-toggle="tooltip" title="Банковская карта")
+                                +icon('credit-card')
+                        li
+                            a(href="#" data-placement="top" data-toggle="tooltip" title="QIWI")
+                                +icon('qiwi')
+                        li
+                            a(href="#" data-placement="top" data-toggle="tooltip" title="Яндекс.Деньги")
+                                +icon('yandex-money')
+                        li
+                            a(href="#" data-placement="top" data-toggle="tooltip" title="МТС")
+                                +icon('mts')
+                        li
+                            a(href="#" data-placement="top" data-toggle="tooltip" title="Билайн")
+                                +icon('beeline')
+                        li
+                            a(href="#" data-placement="top" data-toggle="tooltip" title="Мегафон")
+                                +icon('megafon')
+                        li
+                            a(href="#" data-placement="top" data-toggle="tooltip" title="TELE2")
+                                +icon('tele-2')
+                        li
+                            a(href="#" data-placement="top" data-toggle="tooltip" title="Терминалы оплаты")
+                                +icon('terminal')
+                        li
+                            a(href="#" data-placement="top" data-toggle="tooltip" title="Интернет банкинг")
+                                +icon('bank')
+                        li
+                            a(href="#" data-placement="top" data-toggle="tooltip" title="Почта России")
+                                +icon('russian-post')
+                        li
+                            a(href="#" data-placement="top" data-toggle="tooltip" title="WM-карты")
+                                +icon('wm-card')
+                        li
+                            a(href="#" data-placement="top" data-toggle="tooltip" title="Подарочная карта")
+                                +icon('present-card')
+                        li
+                            a(href="#" data-placement="top" data-toggle="tooltip" title="Steam-скины")
+                                +icon('payment-steamskin')
+                        li
+                            a(href="#" data-placement="top" data-toggle="tooltip" title="Alipay")
+                                +icon('alp')
+                        li
+                            a(href="#" data-placement="top" data-toggle="tooltip" title="Unionpay") 
+                                +icon('union')
+                +section-content('link', 'Промо-коды')
+                    table.table_promo_codes
+                        colgroup
+                            col(style="width: 50%")
+                            col(style="width: 50%")
+                        thead
+                            tr
+                                th Выпуск
+                                th Время действия
+                        tbody
+                            tr
+                                td
+                                    a.main_link(href="#") Выпуск #5
+                                td
+                                    .promo_codes_data
+                                        span.title с
+                                        span.data 10.01.2019
+                                    .promo_codes_data
+                                        span.title по
+                                        span.data 11.01.2019
+                            tr
+                                td
+                                    a.main_link(href="#") Выпуск #4
+                                td
+                                    .promo_codes_data
+                                        span.title с
+                                        span.data 10.01.2019
+                                    .promo_codes_data
+                                        span.title по
+                                        span.data 11.01.2019
+                            tr
+                                td
+                                    a.main_link(href="#") Все выпуски
+                                td
+                    .table_footer_box
+                        |Последняя продажа с промо-кодом: 
+                        span.empty_data не зафиксирована
+                +section-content('link', 'Избранные агенты')
+                    table.table_agents
+                        colgroup
+                            col(style="width: 50%")
+                            col(style="width: 50%")
+                        thead
+                            tr
+                                th партнер
+                                th продаж
+                        tbody
+                            tr
+                                td
+                                    a.main_link(href="#") Mistand
+                                td  1
+                            tr
+                                td
+                                    a.main_link(href="#") Воевода
+                                td  15
+                            tr
+                                td
+                                    a.main_link(href="#") Контрапуцель
+                                td  9999
+                    .table_footer_box
+                        |Последняя продажа с промо-кодом: 
+                        span.date 
+                            b 3 мес. назад 
+                            |(28.07.2020)
+                +section-content('link', 'Безопасность')
+                    .security_status.positive
+                        span.status_desc
+                            +icon('green_check')
+                            | включена
+                        .status_text авторизация по WMID
+                    .security_status.negative
+                        span.status_desc
+                            +icon('red-close')
+                            | выключено
+                        .status_text ограничение на вход по IP
+                    .security_status.recomendation
+                        +icon('security')
+                        .recomendation_content
+                            |Сохранность товаров может быть под угрозой! Рекомендуем 
+                            a(href="#") ограничить вход 
+                            |в личный кабинет по IP-адресам и(или) 
+                            a(href="#") установить функцию 
+                            |дополнительной защиты.

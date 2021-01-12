@@ -1,0 +1,103 @@
+main
+    .box
+        +tab-list(['GeneralRules', 'Personal', 'Promocodes', 'Sales'], 2)
+            +tab('Promocodes', 'acitve')
+                .content_box
+                    .promocodes_goods_form
+                        +select(['все выпуски', 'Выпуск #1'])
+                        span промо-код можно использовать однократно
+                        .form_element.date
+                            // date
+                            span с
+                            input(type="text" disabled)
+                            span по
+                            input.err(type="text")
+                            .err_msg время действия истекло
+                        button.btn.btn_blue сохранить
+
+                        .alert_box.warning Укажите размер скидки (%), которая будет предоставляться при использовании промо-кода этого выпуска
+
+                    .promocodes_goods_tabs.tabs_inner
+                        +tab-list(['Products', ['Promocodes', 61], 'Reports'], 0)
+                            +tab('Products', 'acitve')
+                                table.equal_cells
+                                    colgroup
+                                        col(style="width: 90px")
+                                        col(style="width: 500px")
+                                        col(style="width: 160px")
+                                        col
+                                        col(style="width: 60px")
+                                        col(style="width: 60px")
+                                        col(style="width: 60px")
+                                        col(style="width: 150px")
+                                    thead
+                                        tr
+                                            th ID товара
+                                            th Название товара
+                                            th.align_center Цена
+                                            th Площадка
+                                            th.align_center(colspan="3") Продаж за последние
+                                            th.align_center Скидка %
+                                        tr.head_selection
+                                            th
+                                                .form_element
+                                                    input.focused(type="text")
+                                                    span.remove
+                                                        +icon('remove_input_data')
+                                            th
+                                                .form_element
+                                                    input(type="text")
+                                            th
+                                            th
+                                                +select(['Все магазины', 'Собственный магазин', 'Plati.Market'])
+                                            th.align_center 1 мес.
+                                            th.align_center 6 мес.
+                                            th.align_center 12 мес.
+                                            th 
+                                        tr
+                                            th.filter_cell(colspan="8")
+                                                .collapse(id="promocodes_filter" )
+                                                    .collapse_filter_content.promo
+                                                        .title Показывать только товары:
+                                                        .form_element
+                                                            label.for_check
+                                                                input(type="checkbox")
+                                                                span.text доступные для оплаты
+                                                .collapse_btn
+                                                    span.active(data-toggle="collapse" data-target="#promocodes_filter" aria-expanded="false" aria-controls="promocodes_filter" tabindex="-1") фильтры
+                                    
+                                    tbody
+                                        tr
+                                            td 1234567
+                                            td 
+                                                a.main_link(href="#") тестовый товар
+                                            td.align_center 1.27 USD
+                                            td Plati.Market
+                                            td.align_center 0
+                                            td.align_center 0
+                                            td.align_center 0
+                                            td.align_center 
+                                                .form_element
+                                                    input(type="text")
+                                        tr
+                                            td 1234567
+                                            td 
+                                                a.main_link(href="#") тестовый товар тестовый товар тестовый товар тестовый товар тестовый товар тестовый товар тестовый товар тестовый товар 
+                                            td.align_center 1.27 USD
+                                            td Plati.Market
+                                            td.align_center 0
+                                            td.align_center 0
+                                            td.align_center 0
+                                            td.align_center 
+                                                .form_element
+                                                    input(type="text" disabled value="55")
+
+                                +pagination('Товаров на странице:')
+                                .promocodes_goods_form.all_goods_promo
+                                    .form_element
+                                        label.for_check
+                                            input(type="checkbox")
+                                            span.text Установить на все товары скидку
+                                    .form_element
+                                        input(type="text")
+                                button.btn.btn_blue сохранить

@@ -1,0 +1,50 @@
+.discounts_goods_counter {
+    width: 50%;
+    margin: 30px 0;
+}
+
+.discounts_goods_counter_item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    &:not(:last-child) {
+        border-bottom: 1px solid $default_tab_bg_color;
+    }
+
+    .title {
+        color: $additional_info_color;
+    }
+
+    .result {
+        color: $active_tab_link_color;
+        font-weight: bold;
+    }
+}
+
+.discounts_personal {
+    width: 50%;
+    margin-top: 20px;
+    sup {
+        color: red;
+    }
+
+    .desc {
+        font-size: 13px;
+        color: #777;
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid #cfd8dc;
+    }
+
+    .desc_item {
+        margin-bottom: 5px;
+    }
+}
+
+.personal_mod {
+    text-align: center;
+    input[type="number"] {
+        width: 70px;
+        margin-right: 5px;
+    }
+}

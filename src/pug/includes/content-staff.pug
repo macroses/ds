@@ -1,0 +1,44 @@
+main
+    .box
+        .content_box
+            table.equal_cells
+                colgroup
+                    col
+                    col
+                    col
+                    col
+                    col(style="width: 45px")
+                thead
+                    tr
+                        th Имя сотрудника
+                        th WMID сотрудника
+                        th Вход
+                        th Комментарий
+                        th.align_right
+                            button.btn.btn_gray(data-placement="top" data-toggle="tooltip" title="удалить выбранные товары")
+                                +icon('delete-btn')
+                tbody
+                    tr
+                        td 
+                            a.main_link(href="#") Zubastik
+                        td 123456789
+                        td разрешен
+                        td test test test test test test test test test test test test test test test test test test test test 
+                        td.align_right
+                            .form_element
+                                label.for_check
+                                    input(type="checkbox")
+                                    span.text
+                    tr.chosen_cell
+                        td 
+                            a.main_link(href="#") Zubastik
+                        td 123456789
+                        td разрешен
+                        td test test test test test test test test test test test test test test test test test test test test 
+                        td.align_right
+                            .form_element
+                                label.for_check
+                                    input(type="checkbox")
+                                    span.text
+            .add_coworker
+                a.btn.btn_blue(href="staff_new.html") добавить

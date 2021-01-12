@@ -1,0 +1,206 @@
+.pic-stat {
+    @include box(14px);
+}
+
+.goods_table {
+    .switcher {
+        margin-left: 2px;
+    }
+
+    .switch_wrapper {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    thead {
+        border: 0;
+    }
+}
+
+.product_name {
+    position: relative;
+
+    &:hover {
+        .product_name_funcs {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    &_funcs {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        position: absolute;
+        right: 10px;
+        top: 0;
+        height: 100%;
+        width: 90px;
+        z-index: 1;
+        font: 400 10px Roboto;
+        text-transform: uppercase;
+        visibility: hidden;
+        opacity: 0;
+        transition: .2s;
+        a {
+            margin-left: 5px;
+            display: inline-block;
+            background: #2c97de;
+            color: #fff;
+            border-radius: 2px;
+            padding: 2px 4px;
+        }
+    }
+
+    .empty_good_value {
+        color: #b2b2b2;
+    }
+}
+
+.pic-target_new_white {
+    @include box(11px, 9px);
+}
+
+.table_goods_content_cell {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 15px;
+    background: rgba(185, 229, 255, 0.15);
+    .negative {
+        color: red;
+        pointer-events: none;
+        text-decoration: none;
+    }
+}
+
+.collapse_filter_content {
+    display: flex;
+    align-items: center;
+    border-top: solid 1px #cfd8dc;
+    padding: 10px 15px;
+    .form_element {
+        width: auto;
+    }
+
+    .sep {
+        margin-left: 20px;
+        margin-right: 5px;
+    }
+
+    &.promo {
+        flex-direction: column;
+        align-items: flex-start;
+        .title {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.pic-shop_play_b {
+    @include box(16px);
+    margin-right: 5px;
+}
+
+.goods_menu {
+    display: flex;
+    margin-bottom: 20px;
+    &_sort {
+        margin-left: auto;
+        .form_element {
+            span {
+                margin-right: 5px;
+                color: $titles_color;
+            }
+        }
+    }
+
+    &_list {
+        display: flex;
+    }
+
+    &_link {
+        font: bold 14px Lato;
+        display: inline-block;
+        color: $main_links_color;
+        padding: 8px 10px;
+        background: rgba(0,0,0,0);
+        border-radius: $border-rad;
+        margin-right: 10px;
+        transition: .2s;
+        &:hover {
+            color: $main_links_color;
+            background: #f3f7f9;
+        }
+    }
+}
+
+.burger_menu_btn {
+    position: relative;
+    @include box(32px);
+    @include flex-center;
+    flex-direction: column;
+    border-radius: $border-rad;
+    border: 0;
+    background: rgba(0,0,0,0);
+    transition: .2s;
+    &:hover {
+        background: #f3f7f9;
+    }
+
+    &:focus {
+        outline: 0;
+    }
+    .dot {
+        display: inline-block;
+        @include box(4px);
+        background: #000;
+        border-radius: 50%;
+        margin-bottom: 2px;
+    }
+}
+
+.goods_burger_menu_list {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: -7px;
+    text-align: left;
+    background: #fff;
+    border: 1px solid #cfd8dc;
+    border-radius: 2px;
+    padding: 3px;
+    z-index: 1;
+    display: none;
+    &:before {
+        position: absolute;
+        content: '';
+        @include box(10px);
+        border: 12px solid transparent;
+        border-bottom: 10px solid #cfd8dc;
+        bottom: 100%;
+        left: 10px;
+    }
+
+    &:after {
+        position: absolute;
+        content: '';
+        @include box(10px);
+        border: 12px solid transparent;
+        border-bottom: 9px solid white;
+        bottom: calc(100% - 1px);
+        left: 10px;
+    }
+
+    a {
+        display: inline-block;
+        color: #455a65;
+        font: bold 14px Lato;
+        padding: 9px 10px 9px;
+        white-space: nowrap;
+        margin-left: 0;
+        transition: .2s;
+        &:hover {
+            color: $main_links_color;
+        }
+    }
+}
+

@@ -1,0 +1,67 @@
+main
+    .box
+        +tab-list(['Tasks','Journal'], 0)
+            +tab('Tasks', 'active')
+                .content_box
+                    button.btn.btn_blue создать задачу
+                    .tasks_box
+                        table.equal_cells
+                            colgroup
+                                col(style="width: 85px")
+                                col(style="width: 100px")
+                                col
+                                col(style="width: 200px")
+                                col(style="width: 200px")
+                                col(style="width: 40px")
+                            thead
+                                tr
+                                    th Активность
+                                    th ID задачи
+                                    th Наименование задачи
+                                    th.align_center Тип задачи
+                                    th.align_center Последнее выполнение
+                                    th 
+                                        button.btn.btn_gray
+                                            +icon('delete-btn')
+                                tr.head_selection
+                                    th 
+                                    th
+                                        .form_element
+                                            input.focused(type="text")
+                                            span.remove
+                                                +icon('remove_input_data')
+                                    th
+                                        .form_element
+                                            input(type="text")
+                                    th
+                                    th
+                                    th
+                            tbody
+                                tr
+                                    td.align_center
+                                        .switch_wrapper
+                                            +switcher()
+                                    td 1234567
+                                    td 
+                                        a.main_link(href="#") Тестовая задача Тестовая задача Тестовая задача Тестовая задача Тестовая задача Тестовая задача Тестовая задача 
+                                    td.align_center Приостановка продаж Приостановка продаж Приостановка продаж
+                                    td.align_center 06.01.2021 19:00:01
+                                    td.align_right
+                                        .form_element
+                                            label.for_check
+                                                input(type="checkbox")
+                                                span.text
+                                tr
+                                    td.align_center
+                                        .switch_wrapper
+                                            +switcher()
+                                    td 1234567
+                                    td 
+                                        a.main_link(href="#") Тестовая задача 
+                                    td.align_center Приостановка продаж
+                                    td.align_center 06.01.2021 19:00:01
+                                    td.align_right
+                                        .form_element
+                                            label.for_check
+                                                input(type="checkbox")
+                                                span.text

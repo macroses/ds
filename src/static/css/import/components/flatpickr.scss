@@ -1,0 +1,32 @@
+.flatpickr-calendar {
+    width: 250px;
+    font-size: 12px;
+}
+
+.flatpickr-day {
+    max-width: 32px;
+    height: 32px;
+    line-height: 28px;
+}
+
+.flatpickr-days {
+    width: 100%;
+}
+
+.flatpickr-rContainer {
+    max-width: 250px;
+}
+
+.dayContainer {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+}
+
+.flatpickr-current-month input.cur-year {
+    height: auto!important;
+}
+
+.flatpickr-months .flatpickr-month {
+    height: 28px;
+}

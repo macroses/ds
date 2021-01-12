@@ -1,0 +1,36 @@
+.view_toggler {
+    .btn.btn_gray {
+        width: 100%;
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            bottom: 9px;
+            right: 15px;
+            width: 10px;
+            height: 10px;
+            background: url(../img/select_arrow.png) no-repeat;
+        }
+
+        &.active:before {
+            transform: rotate(180deg);
+            bottom: 14px;
+        }
+    }
+}
+
+.report_options {
+    padding: 15px 15px 0px 15px;
+    border: solid 1px #cfd8dc;
+    border-radius: 4px;
+    display: flex;
+    flex-wrap: wrap;
+    .form_element {
+        width: 25%;
+        margin-bottom: 15px;
+    }
+}
+
+.submit_report {
+    margin-top: 10px;
+}

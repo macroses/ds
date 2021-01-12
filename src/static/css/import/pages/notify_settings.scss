@@ -1,0 +1,107 @@
+.list_actions {
+    padding: 20px 0;
+    border-top: 1px solid #dddddd;
+    .form_element:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+
+.notify_settings {
+    &.empty_desc {
+        .list_actions {
+            &:first-child {
+                border: 0;
+                padding-top: 0;
+            }
+
+            &:last-child {
+                padding-bottom: 0;
+            }
+        }
+    }
+}
+
+.separation {
+    margin-bottom: 20px;
+}
+
+.notify_settings_additional {
+    border-top: 1px solid #dddddd;
+    padding-top: 20px;
+    .form_element {
+        span {
+            margin-right: 5px;
+        }
+        select {
+            width: 150px;
+        }
+    }
+}
+
+.form_element {
+    &.inside {
+        padding-left: 25px;
+    }
+}
+
+.get_telegram_code {
+    .alert_box {
+        margin-bottom: 10px;
+    }
+    p {
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+}
+
+.notify_settings_addurl {
+    display: flex;
+    margin-bottom: 20px;
+    .form_element {
+        margin-right: 5px;
+        &:first-child {
+            flex: 1;
+        }
+        span {
+            white-space: nowrap;
+            margin-right: 5px;
+        }
+    }
+}
+
+.addurl_desc {
+    margin-top: 20px;
+    background: #efefef;
+    font-size: 13px;
+    padding: 10px 20px;
+    p {
+        margin-bottom: 10px;
+    }
+
+    .tech_info {
+        margin-bottom: 20px;
+    }
+}
+
+.tech_list {
+    li {
+        margin-bottom: 5px;
+    }
+}
+
+.notify_goods {
+    .form_element {
+        margin-bottom: 10px;
+    }
+
+    .notify_settings {
+        padding-left: 25px;
+    }
+
+    .list_actions {
+        .title {
+            margin-bottom: 20px;
+            color: #546e7a;
+        }
+    }
+}

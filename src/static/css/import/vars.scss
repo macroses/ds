@@ -1,0 +1,45 @@
+// colors, grounds, etc
+
+$main_bg: #b2c1c9;
+
+$headers_color: #455a64;
+$title_color: #607d8b;
+$main_text_color: #607d8b;
+$main_links_color: #2c97de;
+$additional_info_color: #90a4ae;
+$separation_color: #d7d7d7;
+$active_tab_link_color: #37474f;
+$default_tab_bg_color: #eceff1;
+$titles_color: #90a4ae;
+$table_border_header_color: #cfd8dc;
+$table_color: #7e939e;
+
+$positive_color: #7ed321;
+
+$footer_bg: #546e7a;
+$footer_text_color: #869aa4;
+$footer_link_color: #b0bec5;
+
+// dark scheme colors
+$main_bg_dark: #131415;
+
+$dark_bg: (
+    main: #131415,
+    dark_gray: #272f34,
+    nav: #3c484d,
+    section_header: #191e20
+);
+
+$dark_colors: (
+    main: #e1f5fe,
+    form: #313d42,
+    border: #516168
+);
+
+// fonts
+
+
+// sizes, radius etc
+$border-rad: 4px;
+$shadow_popup: 0 2px 4px 0 rgba(0, 0, 0, 0.26);
+

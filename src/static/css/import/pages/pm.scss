@@ -1,0 +1,511 @@
+.pm {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pm_settings {
+    flex: 1;
+    margin-right: 20px;
+
+
+}
+
+.pm_description {
+    flex: 1;
+    .fieldset {
+        padding: 20px;
+    }
+
+    .icon_list {
+        margin-left: 5px;
+    }
+}
+
+.fieldset_text {
+    font-size: 13px;
+    line-height: 18px;
+    color: $active_tab_link_color;
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    .title {
+        font-weight: 900;
+        color: $active_tab_link_color;
+        margin-bottom: 15px;
+    }
+
+    .content {
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+        &.attention {
+            color: red;
+        }
+
+        ul {
+            margin: 15px 0;
+        }
+    }
+}
+
+.pm_list {
+    margin-top: 20px;
+}
+
+.pm_list_item {
+    display: flex;
+    margin-bottom: 20px;
+
+}
+
+.pm_logo {
+    margin-right: 20px;
+    svg {
+        @include box(42px);
+    }
+}
+
+.pm_list_item_content {
+    border: 1px solid #dedede;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    flex: 1;
+
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+
+    padding: 20px;
+
+    .form_element {
+        margin-right: 15px;
+    }
+
+    &.active {
+        background: #fbfeff;
+    }
+}
+
+.pm_list_item_check {
+    background-color: #f4f9f9;
+    padding: 0 15px;
+    border: solid 1px #dedede;
+    border-right: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.pm_title {
+    display: flex;
+    font-size: 21px;
+    font-weight: bold;
+    margin-bottom: 5px;
+
+    .icon_list {
+        display: flex;
+        span {
+            font-size: 12px;
+            margin-right: 5px;
+            color: #546e7a;
+            font-weight: normal;
+        }
+    }
+
+    svg {
+        @include box(21px);
+        
+    }
+}
+
+.pm_links {
+    .main_link {
+        margin-right: 10px;
+    }
+}
+
+.pm_alert_msg {
+    color: #d2000d;
+    font-size: 9px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.pm_list_item_settings {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.pm_list_item_wrap {
+    flex: 1;
+    .pm_list_item_content {
+
+        &:first-child {
+            border-bottom: 0;
+            border-bottom-right-radius: 0;
+        }
+        &:last-child {
+            border-top-right-radius: 0;
+        }
+    }
+}
+
+.pm_table {
+    margin-top: 20px;
+    tbody {
+        tr {
+            &:hover {
+                background: #e9e9e9;
+            }
+        }
+    }
+}
+
+.pm_table_cell_name {
+    display: flex;
+    align-items: center;
+}
+
+.pm_status {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 10px;
+
+    &.accessable {
+        background-color: #90d211;
+    }
+
+    &.partly {
+        background: linear-gradient(to right, #90d211 50%, #ed2f47 50%);
+    }
+
+    &.unavailable {
+        background: #ed2f47;
+    }
+}
+
+.pm_table_text {
+    white-space: normal;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+
+    .empty {
+        display: inline-block;
+        width: 50px;
+        height: 1px;
+        background: gray;
+    }
+}
+
+.pm_desr_list {
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    li {
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+    }
+}
+
+.user_agreement {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    svg {
+        margin-right: 5px;
+        @include box(12px);
+    }
+}
+
+// pm_wm
+
+.pm_purses_settings {
+    margin: 10px 0 30px;
+
+    .form_element {
+        margin-bottom: 0;
+    }
+}
+
+.title_top {
+    display: flex;
+    .title {
+        width: 260px;
+    }
+}
+
+.pm_purses_settings_list {
+    margin-top: 10px;
+}
+
+.pm_purses_settings_list_item {
+    display: flex;
+    border-bottom: 1px solid #eceff1;
+    padding: 7px 0;
+    .title {
+        flex-basis: 260px;
+        color: $additional_info_color;
+        
+    }
+
+    .form_element {
+        flex: 1;
+
+
+        select {
+            width: 100%;
+        }
+    }
+
+    .configure {
+        margin-left: 10px;
+        flex-basis: 120px;
+        font-size: 12px;
+        @include flex-center;
+        .btn {
+            width: 100%;
+        }
+
+        .text {
+            color: #7ED321;
+            &.err {
+                color: #D0021B;
+            }
+        }
+
+        svg {
+            margin-right: 5px;
+        }
+    }
+
+    .btn_group {
+        display: flex;
+        width: 100%;
+        .btn {
+            flex: 1;
+        }
+    }
+
+    &.btns {
+        border-bottom: 0;
+    }
+}
+
+.equation_box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #000;
+    margin-top: 15px;
+    svg {
+        @include box(30px, 20px);
+    }
+
+    input[type=text] {
+        width: 50px;
+    }
+
+    .money {
+        input[type=text] {
+            width: 70px;
+        }
+    }
+}
+
+.equation_text {
+    max-width: 120px;
+    &.align_center {
+        max-width: 70px;
+    }
+}
+
+.pm_day_limit {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    .form_element {
+        margin-right: 10px;
+        &:first-of-type {
+            width: 300px;
+        }
+    }
+
+    input[type=text] {
+        margin-right: 5px;
+        width: 80px;
+    }
+
+    .btn {
+        margin-left: auto;
+    }
+}
+
+.after_pay {
+    
+    .form_element {
+        margin-top: 10px;
+
+        .text {
+            display: inline-block;
+            &:before {
+                top: 0;
+            }
+            &:after {
+                top: 4px;
+            }
+        }
+    }
+
+    .hint {
+        margin-top: 5px;
+        margin-left: 25px;
+    }
+    
+    .link_view {
+        color: blue;
+        
+    }
+    .red {
+        color: red;
+    }
+}
+
+.pm_paypal_email_table {
+    padding-left: 25px;
+    table {
+        margin-top: 10px;
+    }
+
+    .tip {
+        margin-left: 5px;
+    }
+}
+
+.pm_pay_options_list {
+    margin: 10px 0 0 0;
+    padding: 0;
+    & > li {
+        margin-bottom: 10px;
+    }
+    ul {
+        margin-left: 15px;
+    }
+}
+
+// settings
+.pm_sort_list {
+    width: 320px;
+    margin-top: 15px;
+}
+
+.pm_sort_list_item {
+    display: flex;
+    align-items: center;
+    padding: 5px 0 5px 5px;
+    border-bottom: 1px solid #e9e9e9;
+    font-weight: bold;
+    &:hover {
+        background: #e9e9e9;
+        .pm_sort_list_visibility {
+            .pic-eye_open {
+                visibility: visible;
+            }
+        }
+    }
+}
+
+.drag_handle {
+    margin-right: 10px;
+    cursor: move;
+}
+
+.pic-drag {
+    @include box(18px);
+}
+
+.pm_sort_list_icon {
+    margin-right: 10px;
+    border: solid 1px #b0bec5;
+    border-radius: 4px;
+    @include box(34px);
+    @include flex-center;
+    svg {
+        @include box(26px);
+    }
+}
+
+.pm_sort_list_visibility {
+    margin-left: auto;
+    @include box(34px);
+    @include flex-center;
+    cursor: pointer;
+    .pic-eye_open {
+        @include box(16px, 12px);
+        visibility: hidden;
+    }
+    .pic-eye_close {
+        @include box(16px, 12px);
+    }
+}
+
+.pm_method_modal {
+    .goods_menu_sort {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .filter_icon {
+        position: absolute;
+        right: 5px;
+        top: 8px;
+        cursor: pointer;
+    }
+
+    .from {
+        color: #b2b2b2;
+    }
+}
+
+.pm_method_modal_auto {
+    width: 100%;
+}
+
+.pm_method_modal_table {
+    max-height: 400px;
+    margin-top: 20px;
+    overflow: auto;
+}
+
+.request_modal_content {
+    border-bottom: 1px solid $default_tab_bg_color;
+    margin-bottom: 10px;
+    .form_group {
+        margin: 10px 0 20px;
+    }
+    .form_element {
+        margin-bottom: 10px;
+    }
+}
+
+.form_element {
+    // margin-bottom: 10px;
+    &.checkout {
+        margin-top: 20px;
+
+        .for_check {
+            .text {
+                display: inline-block;
+                &:before {
+                    top: 0;
+                }
+            }
+        }
+    }
+}

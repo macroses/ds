@@ -1,0 +1,49 @@
+main
+    .box
+        //- +backlink('к списку товаров')
+        .content_box
+            .page_nav
+                ul.breadcrumbs_list
+                    li.breadcrumb_item
+                        a.main_link.back_link(href="#") к списку товаров
+
+        .content_box
+            .purchases
+                .form_element
+                    label.for_radio
+                        input(type="radio" name="date" checked)
+                        span.text за весь период (с 01.01.2006г.)
+                .purchases_dates
+                    .form_element
+                        label.for_radio
+                            input(type="radio" name="date")
+                            span.text
+                    .form_element
+                        span с
+                        input(type="text" placeholder="01.01.2020")
+                    .form_element
+                        span по
+                        input(type="text" placeholder="31.01.2020")
+                    button.btn.btn_gray показать
+                    a.main_link(href="#") Excel-отчет
+                    a.main_link(href="#") График
+
+                table.equal_cells
+                    colgroup
+                        col(style="width: 75px")
+                        col
+                        col(style="width: 70px")
+                    thead
+                        tr
+                            th ID
+                            th Название товара (рекламного места)
+                            th.align_center Продано
+                    tbody
+                        tr
+                            td 2203410
+                            td Корзина - универсальный файл + параметры Корзина - универсальный файл + параметры Корзина - универсальный файл + параметры Корзина - универсальный файл + параметры Корзина - универсальный файл + параметры
+                            td.align_center 12345
+                        tr
+                            td 2203410
+                            td Корзина - универсальный файл + параметры
+                            td.align_center 12345

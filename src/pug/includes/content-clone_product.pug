@@ -1,0 +1,43 @@
+main
+    .box
+        .content_box
+            .title_block Клонирование товара
+            .alert_box.info Копирование описания и настроек товара в новый товар. Содержимое товара и статистика продаж не копируются.
+            .clone_product
+                .form_element
+                    label Выберите товар: 
+                    .search_result_box
+                        input(type="text" placeholder="Наименование" ) 
+                        ul.search_result_list
+                            li 1
+                            li 2
+                            li 3
+                .result Вы выбрали товар: ттттт, ID: 3038320
+                .form_group
+                    .form_element
+                        label.for_check
+                            input(type="checkbox" checked)
+                            span.text Категории
+                    .form_element
+                        label.for_check
+                            input(type="checkbox" checked)
+                            span.text Уведомления
+                    .form_element
+                        label.for_check
+                            input(type="checkbox" checked)
+                            span.text Скидки
+                    .form_element
+                        label.for_check
+                            input(type="checkbox" checked)
+                            span.text Комиссия
+                    .form_element
+                        label.for_check
+                            input(type="checkbox" checked)
+                            span.text Изображения и видео
+                    .form_element
+                        label.for_check
+                            input(type="checkbox" checked)
+                            span.text Дополнительные параметры
+
+                button.btn.btn_gray клонировать товар
+                button.btn.btn_gray отмена

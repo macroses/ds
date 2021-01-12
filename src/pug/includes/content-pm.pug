@@ -1,0 +1,188 @@
+main
+    .box
+        +tab-list(['General_rules', 'Digiseller', 'WM_Merchant', 'PayPal', 'PayMaster', 'Robokassa', 'Yandex_Checkout', 'Settings'], 0)
+            +tab('General_rules', 'active')
+                .content_box
+                    .pm
+                        .pm_settings
+                            .alert_box.info
+                                |Выберите способы оплаты (платежных интеграторов), которые будут использоваться для оплаты ваших товаров. Обращаем ваше внимание, 
+                                |что прием платежей через 
+                                a.main_link(href="#") Digiseller 
+                                |не может работать одновременно с приемом платежей через 
+                                a.main_link(href="#") WM Merchant
+                                |. Кроме того, если товар размещен на торговой площадке (например, Plati.Market), прием платежей может быть осуществлен только через Digiseller. 
+                                |Оплата через WM Merchant для таких товаров недоступна.
+
+                            ul.pm_list
+                                li.pm_list_item
+                                    .pm_list_item_check
+                                        +switcher()
+                                    .pm_list_item_wrap
+                                        .pm_list_item_content.active
+                                            .form_element
+                                                label.for_radio
+                                                    input(type="radio", name="methods" checked)
+                                                    span.text
+                                            
+                                            .pm_logo
+                                                +icon('payment_ds')
+                                            .pm_description
+                                                .pm_title Digiseller
+                                                    .icon_list
+                                                        span(data-placement="top" data-toggle="tooltip" title="доступно индивидуальным предпринимателям")
+                                                            +icon('pm_ip')
+                                                        span(data-placement="top" data-toggle="tooltip" title="доступно юридическим лицам")
+                                                            +icon('pm_ul')
+                                                        span(data-placement="top" data-toggle="tooltip" title="доступно самозанятым")
+                                                            +icon('pm_sz')
+                                                        span(data-placement="top" data-toggle="tooltip" title="доступно физическим лицам")
+                                                            +icon('pm_fl')
+                                                .pm_links
+                                                    a.main_link(href="#") Способы оплаты
+                                                    a.main_link(href="#") WM-валюты
+                                            .pm_list_item_settings
+                                                a.btn.btn_gray(href="#") настроить
+                                        
+                                        .pm_list_item_content.active
+                                            .form_element
+                                                label.for_radio
+                                                    input(type="radio", name="methods")
+                                                    span.text
+                                            
+                                            .pm_logo
+                                                +icon('webmoney')
+                                            .pm_description
+                                                .pm_title WM Merchant
+                                                .pm_links
+                                                    a.main_link(href="#") Способы оплаты
+                                                    a.main_link(href="#") WM-валюты
+                                            .pm_list_item_settings
+                                                a.btn.btn_gray(href="#") настроить
+                                                .pm_alert_msg ТРЕБУЕТСЯ НАСТРОЙКА
+
+                                li.pm_list_item
+                                    .pm_list_item_check
+                                        +switcher()
+                                    .pm_list_item_content
+                                        
+                                        .pm_logo
+                                            +icon('paypal-method')
+                                        .pm_description
+                                            .pm_title PayPal
+                                            .pm_links
+                                                a.main_link(href="#") Тарифы
+                                        .pm_list_item_settings
+                                            a.btn.btn_gray(href="#") настроить
+                                            .pm_alert_msg ТРЕБУЕТСЯ НАСТРОЙКА
+
+                                li.pm_list_item
+                                    .pm_list_item_check
+                                        +switcher()
+                                    .pm_list_item_content
+                                        
+                                        .pm_logo
+                                            +icon('payment_paymaster')
+                                        .pm_description
+                                            .pm_title PayMaster
+                                            .pm_links
+                                                a.main_link(href="#") Тарифы
+                                                a.main_link(href="#") Способы оплаты
+                                        .pm_list_item_settings
+                                            a.btn.btn_gray(href="#") настроить
+                                            .pm_alert_msg ТРЕБУЕТСЯ НАСТРОЙКА
+
+                                li.pm_list_item
+                                    .pm_list_item_check
+                                        +switcher()
+                                    .pm_list_item_content
+                                        
+                                        .pm_logo
+                                            +icon('payment_robokassa')
+                                        .pm_description
+                                            .pm_title Robokassa
+                                            .pm_links
+                                                a.main_link(href="#") Тарифы и условия
+                                        .pm_list_item_settings
+                                            a.btn.btn_gray(href="#") настроить
+                                            .pm_alert_msg ТРЕБУЕТСЯ НАСТРОЙКА
+
+                                li.pm_list_item
+                                    .pm_list_item_check
+                                        +switcher()
+                                    .pm_list_item_content
+                                        .pm_logo
+                                            +icon('payment_ya')
+                                        .pm_description
+                                            .pm_title Яндекс Касса
+                                            .pm_links
+                                                a.main_link(href="#") Тарифы и условия
+                                        .pm_list_item_settings
+                                            a.btn.btn_gray(href="#") настроить
+                                            .pm_alert_msg ТРЕБУЕТСЯ НАСТРОЙКА
+
+                                li.pm_list_item
+                                    .pm_list_item_check
+                                        +switcher()
+                                    .pm_list_item_content
+                                        .pm_logo
+                                            +icon('interkassa-method')
+                                        .pm_description
+                                            .pm_title Interkassa
+                                            .pm_links
+                                                a.main_link(href="#") Тарифы и условия
+                                        .pm_list_item_settings
+                                            a.btn.btn_gray(href="#") настроить
+                                            .pm_alert_msg ТРЕБУЕТСЯ НАСТРОЙКА
+
+                            
+
+                        .pm_description
+                            +fieldset('Общие положения')
+                                .fieldset_text
+                                    |Товары, добавленные в Digiseller, можно выставить как на торговой площадке (например, Plati.Market), так и в собственном 
+                                    a.main_link(href="#") магазине 
+                                    |на базе 
+                                    a.main_link(href="#") виджета 
+                                    |или 
+                                    a.main_link(href="#") бесплатного сайта
+                                    |. Средства от продажи товаров могут поступать на 
+                                    a.main_link(href="#") личный счет 
+                                    |Digiseller, на ваши WebMoney-кошельки (при оплате через 
+                                    a.main_link(href="#") WM Merchant
+                                    |), либо напрямую на ваш счет в 
+                                    a.main_link(href="#") PayPal
+                                    |, 
+                                    a.main_link(href="#") PayMaster
+                                    |, 
+                                    a.main_link(href="#") Robokassa 
+                                    |(если оплата была осуществлена через эти платежные шлюзы).
+
+                                .fieldset_text
+                                    |При продаже товаров сервис удерживает комиссию в размере 1.5% от суммы платежа с округлением в большую сторону с точностью до 0.01, 
+                                    |но не менее 0.01 WM. Если продажа была осуществлена через торговую площадку, удерживается дополнительная комиссия, установленная площадкой. 
+                                    |Вне зависимости от способа оплаты, комиссия списывается с вашего 
+                                    a.main_link(href="#") личного счета 
+                                    |в Digiseller. Исключение составляют только платежи через WM Merchant, 
+                                    |для которых комиссия списывается непосредственно с вашего WebMoney-кошелька сразу при поступлении на него средств от продажи.
+
+                                .fieldset_text
+                                    |При продаже товаров по партнерской программе, список доступных методов оплаты определяется настройками продавца (владельца) товара. 
+                                    |Комиссия от продажи партнерских товаров всегда зачисляется на 
+                                    a.main_link(href="#") личный счет 
+                                    |в сервисе Digiseller, независимо от способа их оплаты.
+
+                        .pm_title
+                                .icon_list
+                                    span
+                                        +icon('pm_ip')
+                                        |  -  индивидуальный предприниматель
+                                    span
+                                        +icon('pm_ul')
+                                        |  - юридическое лицо
+                                    span
+                                        +icon('pm_sz')
+                                        |  - самозанятый
+                                    span
+                                        +icon('pm_fl')
+                                        |  - физическое лицо

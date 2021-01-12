@@ -1,0 +1,50 @@
+.pagination_box {
+    display: flex;
+    align-items: center;
+    padding: 7px 15px;
+    font-family: "Roboto";
+}
+
+.pagination_list {
+    display: flex;
+    align-items: center;
+    li {
+        margin-right: 7px;
+    }
+
+    a {
+        @include flex-center;
+        min-width: 32px;
+        @include box(auto, 32px);
+        padding: 0 5px;
+        font-weight: 700;
+        font-size: 13px;
+        border-radius: 3px;
+        transition: .2s;
+        &.active {
+            pointer-events: none;
+            border: 0;
+        }
+
+        &.sep {
+            pointer-events: none;
+        }
+    }
+}
+
+.pagination_sort {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+    .form_element {
+        margin-bottom: 0;
+    }
+}
+
+.pagination_title {
+    margin-right: 5px;
+    font-weight: bold;
+    font-size: 13px;
+    font: bold 13px Lato;
+    color: $headers_color;
+}

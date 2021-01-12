@@ -1,0 +1,146 @@
+.flags_info {
+    line-height: 20px;
+}
+
+.flag {
+    display: inline-block;
+    width: 115px;
+    text-align: center;
+    font-size: 12px;
+    padding: 0px 14px 0 12px;
+    color: #fff;
+    margin-right: 5px;
+    border-radius: $border-rad;
+    &.unique {
+        background: #fec211;
+    }
+    &.universal {
+        background: $main_links_color;
+    }
+    &.form {
+        background: #7ed321;
+    }
+}
+
+.select_goods_box {
+    margin-top: 10px;
+    position: relative;
+
+    a.btn {
+        position: absolute;
+        right: 0;
+        top: 10px;
+        display: flex;
+        align-items: center;
+        .pic-question_mark {
+            @include box(16px);
+            margin-left: 5px;
+            margin-top: -3px; 
+        }
+    }
+}
+
+.select_goods_item {
+    display: flex;
+    padding-top: 10px;
+    &_title {
+        width: 200px;
+        color: $additional_info_color;
+    }
+
+    &:not(:last-child) {
+        border-bottom: 1px solid #cfd8dc;
+    }
+}
+
+.select_goods_item_content {
+    flex: 1;
+    .hint {
+        margin: 0px 0 10px;
+    }
+
+    .main_link.collapse_toggle{
+        padding-bottom: 10px;
+        display: flex;
+        .collapse_btn {
+            background: $main_links_color;
+            border-radius: 4px;
+            display: inline-block;
+            @include box(18px);
+            margin-right: 5px;
+            margin-bottom: -4px;
+            position: relative;
+
+            &:after {
+                content: '+';
+                font-size: 14px;
+                color: #fff;
+                font-weight: bold;
+            }
+        }
+
+        &.collapsed {
+            .collapse_btn:after {
+                content: '-';
+                font-size: 14px;
+                color: #fff;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .alert_box {
+        margin-top: 10px;
+    }
+}
+
+
+.select_goods_list_item {
+    padding: 10px;
+    background: rgba(236, 239, 241, 0.53);
+    border-radius: 4px;
+    margin-bottom: 10px;
+
+    .flag {
+        font-weight: bold;
+        width: auto;
+        line-height: 20px;
+        position: relative;
+        margin-left: 15px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        &:after {
+            content: '';
+            right: 100%;
+            top: 50%;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            border-color: rgba(44, 151, 222, 0);
+            border-right-color: #2c97de;
+            border-width: 10px;
+            margin-top: -10px;
+        }
+
+        &.unique:after {
+            border-right-color: #fec211;
+        }
+        &.universal:after {
+            border-right-color: $main_links_color;
+        }
+        &.form:after {
+            border-right-color: #7ed321;
+        }
+    }
+
+    .hint {
+        margin: 5px 0 0 25px;
+    }
+
+    .model {
+        margin-left: 25px;
+        margin-top: 10px;
+    }
+}

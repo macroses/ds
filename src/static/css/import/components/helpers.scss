@@ -1,0 +1,280 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font: 400 14px "Lato",sans-serif;
+    display: table;
+    @include box(100%);
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex: 0 0 auto;
+}
+
+.box {
+    width: 1350px;
+    min-width: 1350px;
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.section_title {
+    background: #eceff1;
+    font-weight: bold;
+    color: $title_color;
+    padding: 15px;
+}
+
+.content_box {
+    position: relative;
+    border-radius: $border-rad;
+    background-color: #fff;
+    box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.26);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.tab-pane {
+    .content_box {
+        border-top-left-radius: 0;
+    }
+}
+
+.empty_data {
+    color: $titles_color;
+}
+
+.align_left {
+    text-align: left;
+    padding-right: 15px;
+}
+
+.align_right {
+    text-align: right;
+    * {
+        margin-left: auto;
+    }
+}
+
+.align_center { 
+    text-align: center;
+}
+
+.bold {
+    font-weight: 900;
+}
+
+.bolder {
+    font-weight: bold;
+}
+
+.tooltip > .tooltip-inner {
+    background: $main_links_color;
+    max-width: 360px;
+    font-size: 12px;
+    font-family: Lato;
+    padding: 5px 10px;
+}
+
+.tooltip {
+    transition: all .00001s;
+}
+
+.tooltip.show {
+    opacity: 1;
+}
+
+.bs-tooltip-right .tooltip-arrow::before,
+.bs-tooltip-auto[x-placement^="right"] .tooltip-arrow::before {
+    border-right-color: $main_links_color;
+}
+.bs-tooltip-top .tooltip-arrow::before,
+.bs-tooltip-auto[x-placement^="top"] .tooltip-arrow::before {
+    border-top-color: $main_links_color;
+}
+
+.tipsed_header {
+    font: bold 13px Lato;
+    margin: 0;
+    width: 360px;
+    text-align: left;
+}
+
+.tipsed_list {
+    text-align: left;
+    margin-top: 5px;
+    margin-left: 20px;
+    li {
+        margin-bottom: 5px;
+    }
+}
+
+.tipsted_text {
+    text-align: left;
+    margin: 0;
+}
+
+.pic-square-blue,
+.pic-square-sea {
+    @include box(15px);
+    margin-right: 5px;
+    margin-top: -1px;
+}
+
+.pic-shop_play {
+    @include box(16px);
+    margin-right: 3px;
+    margin-top: -1px;
+}
+
+.fraction {
+    flex: 1;
+    &:not(:last-child) {
+        margin-right: 20px;
+    }
+}
+
+.title_block {
+    color: #3a4a52;
+    font: bold 16px Lato;
+    margin: 0 0 15px;
+    display: flex;
+    align-items: flex-start;
+    .switcher {
+        margin-left: 10px;
+    }
+}
+
+.modal-open {
+    overflow: auto;
+}
+
+.tech_info {
+    font-family: monospace;
+    font-style: oblique;
+}
+
+.pic-delete-btn {
+    @include box(15px, 20px);
+}
+
+
+span[data-toggle="tooltip"] {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.loader {
+    &:hover {
+        background: rgba(0,0,0,0);
+    }
+}
+
+// убираем скачок при появлении контента
+@media screen and (min-width: 1350px) {
+    html {
+        overflow-x: hidden;
+        margin-right: calc(-1 * (100vw - 100%));
+    }
+}
+
+// кнопка смены цвета
+#change_scheme {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 999;
+    background: red;
+    color: white;
+}
+
+// валюты
+.rub, .usd {
+    font: bold 13px Roboto;
+    span {
+        font-weight: normal;
+    }
+}
+
+.rub {
+    color: #a52a2a;
+}
+
+.usd {
+    color: #78b437;
+}
+
+.star {
+    color: red;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.accept {
+    color: green;
+}
+
+.decline {
+    color: red;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.minus {
+    position: relative;
+    // bottom: 3px;
+    margin-bottom: 3px;
+    display: inline-block;
+    width: 16px;
+    height: 2px;
+    background: #455a64;
+}
+
+small {
+    font-size: 80%;
+}
+
+.back_link {
+    position: relative;
+    padding-left: 15px;
+    font-weight: bold;
+    &:before {
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 5px;
+        @include box(8px);
+        border-left: 3px solid $main_links_color;
+        border-top: 3px solid $main_links_color;
+        transform: rotate(-45deg);
+    }
+}

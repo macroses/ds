@@ -1,0 +1,48 @@
+.cost_zone {
+    display: inline-block;
+    width: auto;
+    padding: 10px;
+    border-radius: $border-rad;
+}
+
+.cost_zone_price {
+    display: flex;
+    .form_element {
+        margin-right: 5px;
+        span {
+            white-space: nowrap;
+            margin-right: 5px;
+        }
+    }
+}
+
+.cost_zone_data {
+    display: flex;
+    font-size: 13px;
+    margin-top: 20px;
+    align-items: center;
+    &_list {
+        display: flex;
+    }
+
+    li {
+        margin-right: 20px;
+        position: relative;
+        &:after {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 1px;
+            top: 0;
+            right: -10px;
+            background: #a5a5a5;
+        }
+        &.active {
+            font-weight: 900;
+        }
+    }
+
+    &-title {
+        margin-right: 5px;
+    }
+}

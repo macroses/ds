@@ -1,0 +1,204 @@
+.good_content {
+    margin-top: 10px;
+    .form_data_block_title {
+        .hint {
+            margin-top: 0;
+        }
+    }
+    .form_data_block_content {
+        flex-wrap: wrap;
+
+        .space_rent {
+            margin-left: auto;
+        }
+    }
+
+    .hint {
+        width: 100%;
+        margin-top: 5px;
+        .at_top {
+            margin: 0;
+        }
+    }
+
+    .dropzone { 
+        margin-top: 0;
+        flex: 1;
+        margin-right: 10px;
+        .hint {
+            width: auto;
+        }
+
+        .progress {
+            margin-top: 5px;
+            height: 10px;
+            background: rgba(0,0,0,0);
+            border-radius: 2px;
+        }
+        .progress-bar {
+            background: #B2C1C7;
+        }
+    }
+
+    .form_element {
+        margin: 0;
+        textarea {
+            width: 100%;
+            height: 280px;
+        }
+    }
+
+    .form_group {
+        display: flex;
+        .form_element {
+            margin-right: 20px;
+            width: auto;
+        }
+    }
+}
+
+.disk_info {
+    padding: 18px;
+    flex-basis: 400px;
+    background: #e1f5fe;
+    border: 1px solid #b3e5fc;
+    font-size: 12px;
+    border-radius: 4px;
+}
+
+.space_rent {
+    .disk_info {
+        .progress {
+            width: auto;
+        }
+        p {
+            max-width: 360px;
+            &:first-of-type {
+                margin-bottom: 10px
+            }
+        }
+    }
+}
+
+.good_files_list {
+    margin: 5px 0 0 0;
+    padding: 0;
+    color: $additional_info_color;
+    li {
+        margin-bottom: 10px;
+    }
+}
+
+.file_box {
+    .file_size {
+        margin-left: 10px;
+    }
+
+    .file_name {
+        margin-bottom: 10px;
+    }
+
+    .dropzone {
+        margin-bottom: 10px;
+        max-width: 640px;
+    }
+}
+
+.form_data_block_content {
+    .pagination_list {
+        margin-bottom: 10px;
+    }
+    .button_group {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+.buy_limit {
+    padding: 18px;
+    background: #e9f4fc;
+    border: 1px solid #e9f4fc;
+    width: 50%;
+    margin-top: 20px;
+    &.page {
+        margin-top: 0;
+    }
+    .title_block {
+        margin-bottom: 10px;
+    }
+
+    .form_element {
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.buy_limit {
+    .buy_limit_form {
+        display: flex;
+        align-items: center;
+        .form_element {
+            margin-bottom: 0;
+        }
+    }
+
+    input[type=number] {
+        width: 60px;
+        margin: 0 5px;
+    }
+
+    select {
+        width: 100%;
+        margin: 0 5px;
+    }
+}
+
+.create_mailing {
+    margin: 10px 0;
+    .alert_box {
+        margin: 10px 0 0;
+        width: auto;
+    }
+}
+
+.discount_good {
+    .form_element {
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        &.auto {
+            margin-top: 10px;
+        }
+    }
+
+    .buy_limit_form {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        .form_element {
+            margin-bottom: 0;
+        }
+
+        .btn {
+            margin-left: 15px;
+        }
+    }
+
+    input[type=text] {
+        width: 60px;
+        margin: 0 5px;
+    }
+
+    .hint {
+        margin-top: 5px;
+        
+    }
+
+    .input_err {
+        margin-top: 10px;
+    }
+}
+
+

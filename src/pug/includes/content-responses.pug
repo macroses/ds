@@ -1,0 +1,85 @@
+main
+    .box
+        +tab-list(['List', 'BlackList'], 0)
+            +tab('List', 'acitve')
+                .content_box
+                    .form_element
+                        label.for_check
+                            input(type="checkbox")
+                            span.text показывать только новые (непрочитанные) отзывы или сообщения
+                    .responses
+                        table.equal_cells
+                            colgroup
+                                col(style="width: 90px")
+                                col(style="width: 90px")
+                                col(style="width: 150px")
+                                col(style="width: 470px")
+                                col(style="width: 250px")
+                                col(style="width: 90px")
+                                col(style="width: 140px")
+                            thead
+                                tr
+                                    th Счет №
+                                    th Дата
+                                    th Площадка
+                                    th Отзыв покупателя
+                                    th Ваш комментарий
+                                    th Рейтинг
+                                    th.align_center Новых сообщений
+                                tr.head_selection
+                                    th
+                                    th
+                                    th
+                                        .form_element
+                                            select
+                                                option(value="0" selected) Мой магазин
+                                                option(value="1") Plati.Market
+                                                option(value="1") показать все
+                                    th
+                                        .form_element
+                                            select
+                                                option(value="0" selected) Все
+                                                option(value="1") Положительные
+                                                option(value="2") Отрицательные
+                                    th
+                                    th
+                                    th
+                                    th
+                            tbody
+                                tr
+                                    td 
+                                        a.main_link(href="#") 118800864
+                                    td 18.10.2020
+                                    td Plati.Market
+                                    td 
+                                        +icon('smile-good')
+                                        |Отзыв Отзыв Отзыв Отзыв Отзыв Отзыв Отзыв Отзыв Отзыв Отзыв Отзыв Отзыв Отзыв Отзыв Отзыв Отзыв Отзыв Отзыв 
+                                    td 
+                                        span.deleted Отзыв удален
+                                    td 0.0001
+                                    td.align_center 0
+                                tr
+                                    td 
+                                        a.main_link(href="#") 118800864
+                                    td 18.10.2020
+                                    td Plati.Market
+                                    td 
+                                        +icon('smile-bad')
+                                        span.bolder Отзыв
+                                    td Чики-пики!
+                                    td 0.0001
+                                    td.align_center 0
+                                tr
+                                    td 
+                                        a.main_link(href="#") 118800864
+                                    td 18.10.2020
+                                    td Plati.Market
+                                    td 
+                                        +icon('smile-bad')
+                                        span.bolder Отзыв
+                                    td 
+                                        span.absent Отсутствует
+                                    td 0.0001
+                                    td.align_center 0
+
+                        +pagination('Отзывов на странице')

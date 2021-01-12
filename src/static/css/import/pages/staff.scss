@@ -1,0 +1,74 @@
+.add_coworker {
+    margin-top: 10px;
+}
+
+.form_data_block {
+    .hint {
+        margin-top: 10px;
+    }
+
+    &.permissions {
+        .form_element {
+            width: auto;
+        }
+    }
+}
+
+.form_data_block_item {
+    display: flex;
+    padding: 7px 0;
+    border-bottom: 1px solid #eceff1;
+    &:last-child {
+        border: 0;
+        padding-bottom: 0;
+    }
+
+    &:first-child {
+        padding-top: 0;
+    }
+}
+
+.form_data_block_title {
+    flex-basis: 230px;
+    color: $additional_info_color;
+}
+
+.form_data_block_content {
+    display: flex;
+    flex: 1;
+    &.vertical {
+        flex-direction: column;
+
+        .form_element + .form_element {
+            margin-top: 5px;
+        }
+    }
+    textarea {
+        resize: vertical;
+        height: 150px;
+    }
+    .form_element {
+        margin-right: 15px;
+        width: 100%;
+
+        input[type=text],
+        textarea {
+            width: 400px;
+        }
+
+        input[type=number] {
+            width: 80px;
+        }
+
+        &.counter_box {
+            align-items: stretch;
+            margin-bottom: 10px;
+            input[type=text] {
+                width: 520px;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+        }
+    }
+}
+

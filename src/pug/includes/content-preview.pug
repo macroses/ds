@@ -1,0 +1,181 @@
+main
+    .box
+        .content_box
+            .page_nav
+                ul.breadcrumbs_list
+                    li.breadcrumb_item
+                        a.main_link(href="#" data-placement="top" data-toggle="tooltip" title="список моих товаров") Мои товары
+                    li.breadcrumb_item
+                        .breadcrumb_item_name Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена 
+                        a(href="#" data-placement="top" data-toggle="tooltip" title="открыть страницу с описанием товара")
+                            +icon('good_link')
+                        .breadcrumb_item_price 14895 
+                            span RUB
+                .page_nav_item
+                    .prev 
+                        a.main_link(href="#") предыдущий товар
+                    .next 
+                        a.main_link(href="#") следующий товар
+            
+            
+        +tab-list(['Basic', 'Parameters', 'Gallery', ['Content', 10], 'Payment', 'Sales', 'Discount', 'HTML_code', 'Notifications'], 2)
+            +tab('Gallery', 'active')
+                .content_box
+                    .alert_box.info Запрещается размещение изображений и видео, содержащих рекламную информацию или ссылки на сторонние ресурсы.
+                    .preview
+                        .preview_photo
+                            .title_block Изображения
+                            .preview_list_row
+                                .preview_list_item
+                                    a(href="#" data-toggle="modal" data-target="#preview_modal").preview_box
+                                        img(src="https://via.placeholder.com/1070x780", alt="")
+                                    .preview_list_item_controls
+                                        +switcher('checked')
+                                        button.btn.btn_gray
+                                            +icon('delete-btn')
+                                        button.btn.btn_gray
+                                            +icon('up')
+                                        button.btn.btn_gray
+                                            +icon('down')
+
+                                .preview_list_item
+                                    a(href="#").preview_box
+                                        img(src="https://via.placeholder.com/1070x780", alt="")
+                                    .preview_list_item_controls
+                                        +switcher('checked')
+                                        button.btn.btn_gray
+                                            +icon('delete-btn')
+                                        button.btn.btn_gray
+                                            +icon('up')
+                                .preview_list_item
+                                    a(href="#").preview_box
+                                        img(src="https://via.placeholder.com/1070x780", alt="")
+                                    .preview_list_item_controls
+                                        +switcher('checked')
+                                        button.btn.btn_gray
+                                            +icon('delete-btn')
+                                        button.btn.btn_gray
+                                            +icon('up')
+                                .preview_list_item
+                                    a(href="#").preview_box
+                                        img(src="https://via.placeholder.com/1070x780", alt="")
+                                    .preview_list_item_controls
+                                        +switcher('checked')
+                                        button.btn.btn_gray
+                                            +icon('delete-btn')
+                                        button.btn.btn_gray
+                                            +icon('up')
+                                        button.btn.btn_gray
+                                            +icon('down')
+                                .preview_list_item
+                                    a(href="#").preview_box
+                                        img(src="https://via.placeholder.com/20x50", alt="")
+                                    .preview_list_item_controls
+                                        +switcher('checked')
+                                        button.btn.btn_gray
+                                            +icon('delete-btn')
+                                        button.btn.btn_gray
+                                            +icon('up')
+                                        button.btn.btn_gray
+                                            +icon('down')
+                            .dropzone
+                                label
+                                    input(type="file")
+                                    button.btn.btn_gray выберите файлы
+                                    .hint или перетащите их сюда из папки
+
+                            .preview_info
+                                .preview_info_item
+                                    .title Размер файла:
+                                    .content до 500 КБ
+                                .preview_info_item
+                                    .title Допустимые форматы:
+                                    .content jpeg | png | gif
+                                .preview_info_item
+                                    .title Максимальное количество:
+                                    .content 12 изображений
+                            
+                            ul.files_status_list
+                                li.files_status_list_item
+                                    +icon('file_accept')
+                                    .file_name
+                                        span.text 1. НазваниеФайла.jpg
+                                        .hint Файл успешно загружен 9 Кб
+                                li.files_status_list_item
+                                    +icon('file_denied')
+                                    .file_name
+                                        span.text 2. НазваниеФайла.jpg
+                                        .hint Допустимые форматы : jpeg, gif, png
+                                
+                        .preview_video
+                            .title_block Видео-ролики
+                            .preview_list_row
+                                .preview_list_item
+                                    a(href="#").preview_box.disabled
+                                        img(src="https://img.youtube.com/vi/s49CT4DTAkw/1.jpg", alt="")
+                                        span.play_btn
+                                            +icon('youtube_play')
+                                    .preview_list_item_controls
+                                        +switcher()
+                                        button.btn.btn_gray
+                                            +icon('delete-btn')
+                                .preview_list_item
+                                    a(href="#").preview_box
+                                        // пример картинки с ролика ютуба https://img.youtube.com/vi/s49CT4DTAkw/1.jpg
+                                        img(src="https://img.youtube.com/vi/s49CT4DTAkw/2.jpg", alt="")
+                                        span.play_btn
+                                            +icon('youtube_play')
+                                    .preview_list_item_controls
+                                        +switcher('checked')
+                                        button.btn.btn_gray
+                                            +icon('delete-btn')
+                            
+                            .preview_video_link
+                                .form_element
+                                    input(type="text" placeholder="ссылка на страницу с роликом")
+                                button.btn.btn_gray добавить
+                            .hint Например, <br> http://www.youtube.com/watch?v=6NcIJXTlugc или http://vimeo.com/39871515
+
+                            .preview_info
+                                .preview_info_item
+                                    .title Допустимые форматы ccылок:
+                                    .content YouTube, Vimeo
+                                .preview_info_item
+                                    .title Максимальное количество:
+                                    .content 12 ссылок
+.modal.fade(id="preview_modal" tabindex="-1" aria-labelledby="preview_modal" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered.modal-lg.modal-preview
+        .modal-content
+            .modal-body
+                // добавляем/удаляем data-interval="false" родительскому тегу карусели, чтобы стопнуть автоплей слайдов
+                .carousel.slide(id="carouselExampleFade" data-ride="carousel" data-interval="false")
+                    .carousel-inner
+                        .carousel-item.active
+                            img(src="https://via.placeholder.com/1070x780", alt="")
+                        .carousel-item
+                            img(src="https://via.placeholder.com/1070x280", alt="")
+                        .carousel-item
+                            // если выбрали айфрейм, тогда скрываем боковые стрелки управления слайдера
+                            // при вставке айфрейма в консоль какие то ворнинги лезут
+                            // <iframe width="100%" height="315" src="https://www.youtube.com/embed/YbPZnbeDN_Q" frameborder="no"></iframe>
+                            img(src="https://via.placeholder.com/280x1070", alt="")
+                        .carousel-item
+                            img(src="https://via.placeholder.com/20x50", alt="")
+                    a.carousel-control-prev(href="#carouselExampleFade" role="button" data-slide="prev")
+                        span.carousel-control-prev-icon(aria-hidden="true")
+                    a.carousel-control-next(href="#carouselExampleFade" role="button" data-slide="next")
+                        span.carousel-control-next-icon(aria-hidden="true")
+            .modal-footer
+                .carousel_control
+                    .carousel_control_box
+                        // на плей надо будет добавлять контейнеру карусели data-interval
+                        button.btn.btn_gray
+                            +icon('control_play')
+                        a.btn.btn_gray(href="#carouselExampleFade" role="button" data-slide="prev")
+                            +icon('control_left')
+                        span.slides_counter 1/10
+                        a.btn.btn_gray(href="#carouselExampleFade" role="button" data-slide="next")
+                            +icon('control_right')
+                    .carousel_control_close
+                        button.btn.btn_gray(data-dismiss="modal" aria-label="Close")
+                            +icon('control_close')

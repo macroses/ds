@@ -1,0 +1,29 @@
+main
+    .box
+        +tab-list(['Tasks','Journal'], 1)
+            +tab('Journal', 'active')
+                .content_box
+                    table.equal_cells.hovered_rows
+                        colgroup
+                            col
+                            col(style="width: 255px")
+                            col(style="width: 255px")
+                        thead
+                            tr
+                                th Наименование
+                                th.align_center Статус
+                                th.align_center Дата выполнения
+                        tbody
+                            tr
+                                td
+                                    a.main_link(href="#") Наименование задачи 
+                                td.align_center 
+                                    span.task_done выполнено
+                                td.align_center 06.01.2021 19:00:01
+                            tr
+                                td
+                                    a.main_link(href="#") Наименование задачи Наименование задачи Наименование задачи Наименование задачи Наименование задачи Наименование задачи Наименование задачи Наиме
+                                td.align_center 
+                                    span.task_done выполнено
+                                td.align_center 06.01.2021 19:00:01
+                    +pagination('Задач на странице:')

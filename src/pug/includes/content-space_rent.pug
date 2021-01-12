@@ -1,0 +1,70 @@
+main
+    .box
+        .content_box
+            .space_rent
+                .progress
+                    .progress-bar( role="progressbar" style="width: 27%;" aria-valuenow="27" aria-valuemin="0" aria-valuemax="100") 27%
+
+                .space_rent_desc
+                    p Дисковое хранилище: <span class="data">100</span> МБ, свободно: <span class="data">69.93</span> МБ.
+                    .alert_box.info
+                        p На диске хранятся все непроданные уникальные товары-файлы и универсальные товары-файлы.  Максимальный размер загружаемого файла — <span class="data">10</span> МБ. Для снятия ограничения следует приобрести дополнительное дисковое пространство.
+                        p Аренда 200 МБ дискового пространства составляет 1 $ в месяц.
+                
+                table.equal_cells
+                    colgroup
+                        col
+                        col
+                        col
+                        col
+                    thead
+                        tr
+                            th Дата
+                            th Оплачено
+                            th Товаров
+                            th Окончание аренды
+                    tbody
+                        tr
+                            td 20.12.2017 13:05:26
+                            td 1 WMZ
+                            td 100
+                            td 20.12.2017 13:05:26
+
+                .space_rent_form
+                    .form_element
+                        span Арендовать дополнительно
+                        select
+                            option(value="" selected) -
+                            option(value="200") 200
+                            option(value="400") 400
+                            option(value="600") 600
+                            option(value="800") 800
+                            option(value="1000") 1000
+                            option(value="1200") 1200
+                            option(value="1400") 1400
+                            option(value="1600") 1600
+                            option(value="1800") 1800
+                            option(value="2000") 2000
+                    .form_element
+                        span Мб дискового хранилища на срок
+                        select
+                            option(value="" selected) -
+                            option(value="1") 1
+                            option(value="2") 2
+                            option(value="3") 3
+                            option(value="4") 4
+                            option(value="5") 5
+                            option(value="6") 6
+                            option(value="7") 7
+                            option(value="8") 8
+                            option(value="9") 9
+                            option(value="10") 10
+                            option(value="11") 11
+                            option(value="12") 12
+
+                include components/cost-zone.pug
+                .auto_pay
+                    .form_element
+                        label.for_check 
+                            input(type="checkbox")
+                            span.text Автоматически платить минимальную требуемую сумму по завершении периода оплаты

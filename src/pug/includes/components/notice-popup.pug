@@ -1,0 +1,57 @@
+.notice_popup_wrap#notice_popup
+    .notice_popup_box
+        .triangle
+        .notice_popup_top
+            .notice_popup_top-title Список уведомлений
+            .notice_popup-top_chck
+                label
+                    input(type="checkbox")
+                    span только важные
+        ul.notice_popup_list
+            // loader
+            li.notice_popup_list-item
+                .spinner-border(role="status")
+                    span.visually-hidden Loading...
+            
+            // важные
+            li.notice_popup_list-item
+                .item_top
+                    .item_top-title
+                        +icon('notice-popup-important')
+                        |Digiseller
+                    .item_top-additional
+                        .item_top-date 28.07.2020 14:56
+                        .item_top-settings
+                            a(href="/" title="настройка уведомлений")
+                                +icon('popup-settings')
+                .item_content
+                    .item_content_text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo veritatis impedit iste assumenda non ipsum officia cum similique, ipsa repellat. 
+                        a(href="/") Lorem ipsum dolor sit amet.
+                    .item_content_details
+                        a(href="#") Подробнее
+            // неважные
+            li.notice_popup_list-item
+                .item_top
+                    .item_top-title
+                        +icon('notice-popup')
+                        |Партнерская программа
+                    .item_top-additional
+                        .item_top-date 28.07.2020 14:56
+                .item_content
+                    .item_content_text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo veritatis impedit iste assumenda non ipsum officia cum similique, ipsa repellat. 
+                        a(href="/") Lorem ipsum dolor sit amet.
+                    .item_content_details
+                        a(href="#") Подробнее
+            // непрочитанные
+            li.notice_popup_list-item.unread_notice
+                .item_top
+                    .item_top-title
+                        +icon('notice-popup')
+                        |Партнерская программа
+                    .item_top-additional
+                        .item_top-date 28.07.2020 14:56
+                .item_content
+                    .item_content_text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo veritatis impedit iste assumenda non ipsum officia cum similique, ipsa repellat. 
+                        a(href="/") Lorem ipsum dolor sit amet.
+                    .item_content_details
+                        a(href="#") Подробнее
