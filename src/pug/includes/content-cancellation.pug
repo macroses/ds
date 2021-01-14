@@ -1,0 +1,30 @@
+main
+    .box
+        .content_box
+            .cancellation
+                .title_block Удаление регистрационной записи
+                .alert_box.info DigiSeller удалит из своей базы все ваши персональные данные, однако сохранит отдельные хеш-строки адреса email, псевдонима, WM-идентификатора, WM-кошельков. 
+                    span.bold Это не позволит вам произвести повторную регистрацию с такими данными никогда и ни при каких условиях.
+                .cancellation_form
+                    .form_element
+                        label.for_check
+                            input(type="checkbox")
+                            span.text я подтверждаю намерение удалить свою учетную запись в сервисе Digiseller
+                    .form_element
+                        label.for_check
+                            input(type="checkbox")
+                            span.text я согласен с тем, что никогда в дальнейшем не смогу пользоваться услугами сервиса Digiseller
+                    .form_element
+                        label.for_check
+                            input(type="checkbox")
+                            span.text я предупрежден, что после удаления учетной записи ни я, ни кто-либо другой не сможет зарегистрироваться в сервисе Digiseller с текущими 
+                                a.main_link(href="#") контактными
+                                |  (псевдоним, email) и 
+                                a.main_link(href="#") платежными
+                                |  (WMID, кошельки) реквизитами
+                    .form_element
+                        label.for_check
+                            input(type="checkbox")
+                            span.text я предупрежден, что восстановление учетной записи после удаления невозможно
+
+                    button.btn.btn_blue удалить регистрационную запись

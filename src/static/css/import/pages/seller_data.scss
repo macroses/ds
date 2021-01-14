@@ -13,6 +13,9 @@
     display: flex;
     align-items: center;
     color: $additional_info_color;
+    img {
+        margin-right: 5px;
+    }
 }
 
 .user_form_item_value {
@@ -93,5 +96,27 @@
 .modal {
     .auth {
         margin: 0 auto;
+    }
+}
+
+.cancellation {
+    .title_block {
+        color: #e65100;
+        font: bold 18px Lato;
+    }
+}
+
+.cancellation_form {
+    margin-top: 20px;
+    .form_element {
+        margin-bottom: 15px;
+        .text {
+            display: inline-block;
+
+        }
+    }
+
+    .form_element .for_check .text:before {
+        top: 0;
     }
 }
