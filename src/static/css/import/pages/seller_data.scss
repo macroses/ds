@@ -1,0 +1,97 @@
+.user_form_item {
+    display: flex;
+    border-bottom: 1px solid $default_tab_bg_color;
+    padding: 5px 0;
+
+    &.last {
+        border: 0;
+    }
+}
+
+.user_form_item_title {
+    width: 250px;
+    display: flex;
+    align-items: center;
+    color: $additional_info_color;
+}
+
+.user_form_item_value {
+    width: 300px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    .form_element {
+        width: 100%;
+    }
+}
+
+.user_form_item_check {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.user_form {
+    margin-top: 20px;
+    .separator {
+        height: 4px;
+        width: 100%;
+        background: $default_tab_bg_color;
+        margin: 10px 0;
+    }
+}
+
+.seller_data_wm {
+    .title {
+        font: 500 14px Roboto;
+        margin-bottom: 10px;
+    }
+
+    .form_element {
+        width: 160px;
+    }
+
+    select {
+        width: 100%;
+    }
+
+    .user_form_item_title {
+        width: 160px;
+    }
+
+    .user_form_item_value {
+        width: auto;
+        .btn {
+            margin-left: 10px;
+        }
+    }
+
+    .user_form_item {
+        &:last-of-type {
+            border: 0;
+            padding-bottom: 0;
+        }
+    }
+}
+
+.change_wmid {
+    margin: 10px 0;
+    li {
+        margin-bottom: 5px;
+    }
+}
+
+.modal_text {
+    padding: 10px;
+    color: $main_text_color;
+    .alert_msg {
+        color: #c11313;
+        text-align: justify;
+    }
+}
+
+.modal {
+    .auth {
+        margin: 0 auto;
+    }
+}

@@ -194,7 +194,8 @@ select {
 
 // текстовый инпут
     input[type=text],
-    input[type=number] {
+    input[type=number],
+    input[type=password] {
         padding: 0 10px;
         border-radius: $border-rad;
         border: solid 1px #cfd8dc;

@@ -1,0 +1,93 @@
+main
+    .box
+        +tab-list(['ContactDetails ','Purses'], 1)
+            +tab('Purses', 'active')
+                .content_box
+                    .alert_box.info При оплате через 
+                        a.main_link(href="#") Digiseller
+                        |  средства автоматически конвертируются в WebMoney и поступают на ваш 
+                        a.main_link(href="#") личный счет
+                        |  на сервисе, с возможностью вывода на кошельки в системе 
+                        a.main_link(href="#") WebMoney Transfer
+                        |. Digiseller не предоставляет возможность вывода средств ни на какую иную платежную систему кроме WebMoney. Прием платежей через 
+                        a.main_link(href="#") WM Merchant
+                        |  осуществляется напрямую на ваши WebMoney-кошельки.
+                    .seller_data_wm
+                        .user_form
+                            .title Ваш WM-идентификатор:
+                                a(href="#")
+                                    +icon('question_table')
+                            .user_form_item
+                                .user_form_item_title WMID:
+                                .user_form_item_value
+                                    .form_element
+                                        input(type="text" disabled value="775027065906")
+                                    button.btn.btn_gray(data-toggle="modal" data-target="#modal_err") изменить WMID
+
+                            .user_form_item
+                                .user_form_item_title Тип WM-аттестата:
+                                .user_form_item_value
+                                    a.main_link(href="#") персональный аттестат
+                                        |  
+                                        +icon('question_table')
+
+                        .user_form
+                            .title Ваши WM-кошельки:
+                                a(href="#")
+                                    +icon('question_table')
+                            .user_form_item
+                                .user_form_item_title WMZ-кошелек:	
+                                .user_form_item_value
+                                    .form_element
+                                        +select(['', '775027065906'])
+                            
+                            .user_form_item
+                                .user_form_item_title WMP-кошелек:	
+                                .user_form_item_value
+                                    .form_element
+                                        +select(['', '775027065906'])
+
+                            .user_form_item
+                                .user_form_item_title WMR-кошелек:	
+                                .user_form_item_value
+                                    .form_element
+                                        +select(['', '775027065906'])
+
+                            .user_form_item
+                                .user_form_item_title WME-кошелек:	
+                                .user_form_item_value
+                                    .form_element
+                                        +select(['', '775027065906'])
+                            
+                            .user_form_item
+                                .user_form_item_title WMX-кошелек:	
+                                .user_form_item_value
+                                    .form_element
+                                        +select(['', '775027065906'])
+
+.modal.fade(id="modal_err" tabindex="-1" aria-labelledby="modal_err" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered.modal-md
+        .modal-content
+            .modal-header
+                .modal-title Замена WMID 775027065906
+                span.close(data-dismiss="modal" aria-label="Close")
+                    +icon('modal_close')
+            .modal-body
+                .modal_text
+                    |Для изменения текущего WMID вам необходимо:
+                    ul.change_wmid
+                        li 1. Произвести авторизацию WMID 775027065906;
+                        li 2. Нажать кнопку «заменить WMID» (она появится после выполнения вами п.1) и произвести авторизацию 
+                            span.bold новым 
+                            |WMID, который вы хотите зарегистрировать;
+                        li 3. Проверить номер нового WMID и нажать кнопку «сохранить WMID».
+                    
+                    .alert_msg
+                        span.bold Внимание!
+                        |  Никто кроме вас не имеет доступа к изменению ваших платежных реквизитов. Текущий 
+                        span.bold WMID 775027065906 нельзя открепить, перенести, отвязать, удалить, стереть и т.д.
+                        |  Его можно только заменить другим WMID, причем сделать это вы должны самостоятельно. Убедительная просьба не обращаться по данному вопросу в тех. поддержу сервиса. Если вы не можете управлять WMID 775027065906, независимо от причин (потерял/украли ключи, сгорел/утонул компьютер, вирус удалил все файлы и т.д. и т.п.), вам необходимо пройти 
+                        a.main_link(href="#") процедуру восстановления
+                        |. Каких-либо других вариантов изменения ваших платежных реквизитов не предполагается!
+            .modal-footer
+                a.btn.btn_gray.auth(href="#" data-dismiss="modal" aria-label="Close") Авторизоваться WMID 775027065906

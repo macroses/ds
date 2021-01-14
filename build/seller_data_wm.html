@@ -5,6 +5,7 @@
     <meta name="color-scheme" content="dark light">
     <title>Digiseller</title>
     <link rel="stylesheet" href="libs/normalize/normalize.css">
+    <link rel="stylesheet" href="css/libs.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/light-theme.css" id="color_scheme"><script>window.MSInputMethodContext && document.documentMode && document.write('<link rel="stylesheet" href="libs/bootstrap-ie11.min.css"><script src="static/js/ie11-customProperty.js"><\/script><script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js"><\/script><script>!function () { var e, t; ((e = document.createEvent("CustomEvent")).initEvent("Bootstrap", !0, !0), e.preventDefault(), e.defaultPrevented) || (t = Event.prototype.preventDefault, Event.prototype.preventDefault = function () { this.cancelable && (t.call(this), Object.defineProperty(this, "defaultPrevented", { get: function () { return !0 }, configurable: !0 })) }) }();<\/script>');</script>
     <script src="https://cdn.tiny.cloud/1/sqoo5ez8oy5x8bram4focqll8rz90rodp0tusw0e7cytsx6y/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
@@ -85,18 +86,9 @@
                         </div>
                       </div>
                       <ul class="notice_popup_list">
-                        <!-- скелетон-->
+                        <!-- loader-->
                         <li class="notice_popup_list-item">
-                          <div class="item_top">
-                            <div class="item_top-title"></div>
-                            <div class="item_top-additional">
-                              <div class="item_top-date"></div>
-                            </div>
-                          </div>
-                          <div class="item_content">
-                            <div class="item_content_text"></div>
-                            <div class="item_content_details"></div>
-                          </div>
+                          <div class="spinner-border" role="status"><span class="visually-hidden">Loading...</span></div>
                         </li>
                         <!-- важные-->
                         <li class="notice_popup_list-item">
@@ -240,6 +232,140 @@
           </div>
         </div>
       </nav>
+      <main>
+        <div class="box">
+          <ul class="nav nav-tabs" role="tablist">
+            <li><a class="nav-link" href="#tabContactDetails " role="tab" data-toggle="tab">ContactDetails </a></li>
+            <li><a class="nav-link active" href="#tabPurses" role="tab" data-toggle="tab">Purses</a></li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane active" id="tabPurses">
+              <div class="content_box">
+                <div class="alert_box info">При оплате через <a class="main_link" href="#">Digiseller</a> средства автоматически конвертируются в WebMoney и поступают на ваш <a class="main_link" href="#">личный счет</a> на сервисе, с возможностью вывода на кошельки в системе <a class="main_link" href="#">WebMoney Transfer</a>. Digiseller не предоставляет возможность вывода средств ни на какую иную платежную систему кроме WebMoney. Прием платежей через <a class="main_link" href="#">WM Merchant</a> осуществляется напрямую на ваши WebMoney-кошельки.</div>
+                <div class="seller_data_wm">
+                  <div class="user_form">
+                    <div class="title">Ваш WM-идентификатор:<a href="#">
+                        <svg class="pic-question_table ">
+                          <use xlink:href="img/svg/sprite.svg#question_table"></use>
+                        </svg></a></div>
+                    <div class="user_form_item">
+                      <div class="user_form_item_title">WMID:</div>
+                      <div class="user_form_item_value">
+                        <div class="form_element">
+                          <input type="text" disabled value="775027065906">
+                        </div>
+                        <button class="btn btn_gray" data-toggle="modal" data-target="#modal_err">изменить WMID</button>
+                      </div>
+                    </div>
+                    <div class="user_form_item">
+                      <div class="user_form_item_title">Тип WM-аттестата:</div>
+                      <div class="user_form_item_value"><a class="main_link" href="#">
+                          персональный аттестат 
+                          <svg class="pic-question_table ">
+                            <use xlink:href="img/svg/sprite.svg#question_table"></use>
+                          </svg></a></div>
+                    </div>
+                  </div>
+                  <div class="user_form">
+                    <div class="title">Ваши WM-кошельки:<a href="#">
+                        <svg class="pic-question_table ">
+                          <use xlink:href="img/svg/sprite.svg#question_table"></use>
+                        </svg></a></div>
+                    <div class="user_form_item">
+                      <div class="user_form_item_title">WMZ-кошелек:	</div>
+                      <div class="user_form_item_value">
+                        <div class="form_element">
+                          <div class="form_element">
+                            <select>
+                              <option value="0"></option>
+                              <option value="1">775027065906</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="user_form_item">
+                      <div class="user_form_item_title">WMP-кошелек:	</div>
+                      <div class="user_form_item_value">
+                        <div class="form_element">
+                          <div class="form_element">
+                            <select>
+                              <option value="0"></option>
+                              <option value="1">775027065906</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="user_form_item">
+                      <div class="user_form_item_title">WMR-кошелек:	</div>
+                      <div class="user_form_item_value">
+                        <div class="form_element">
+                          <div class="form_element">
+                            <select>
+                              <option value="0"></option>
+                              <option value="1">775027065906</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="user_form_item">
+                      <div class="user_form_item_title">WME-кошелек:	</div>
+                      <div class="user_form_item_value">
+                        <div class="form_element">
+                          <div class="form_element">
+                            <select>
+                              <option value="0"></option>
+                              <option value="1">775027065906</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="user_form_item">
+                      <div class="user_form_item_title">WMX-кошелек:	</div>
+                      <div class="user_form_item_value">
+                        <div class="form_element">
+                          <div class="form_element">
+                            <select>
+                              <option value="0"></option>
+                              <option value="1">775027065906</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <div class="modal fade" id="modal_err" tabindex="-1" aria-labelledby="modal_err" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-md">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="modal-title">Замена WMID 775027065906</div><span class="close" data-dismiss="modal" aria-label="Close">
+                <svg class="pic-modal_close ">
+                  <use xlink:href="img/svg/sprite.svg#modal_close"></use>
+                </svg></span>
+            </div>
+            <div class="modal-body">
+              <div class="modal_text">Для изменения текущего WMID вам необходимо:
+                <ul class="change_wmid">
+                  <li>1. Произвести авторизацию WMID 775027065906;</li>
+                  <li>2. Нажать кнопку «заменить WMID» (она появится после выполнения вами п.1) и произвести авторизацию <span class="bold">новым </span>WMID, который вы хотите зарегистрировать;</li>
+                  <li>3. Проверить номер нового WMID и нажать кнопку «сохранить WMID».</li>
+                </ul>
+                <div class="alert_msg"><span class="bold">Внимание!</span> Никто кроме вас не имеет доступа к изменению ваших платежных реквизитов. Текущий <span class="bold">WMID 775027065906 нельзя открепить, перенести, отвязать, удалить, стереть и т.д.</span> Его можно только заменить другим WMID, причем сделать это вы должны самостоятельно. Убедительная просьба не обращаться по данному вопросу в тех. поддержу сервиса. Если вы не можете управлять WMID 775027065906, независимо от причин (потерял/украли ключи, сгорел/утонул компьютер, вирус удалил все файлы и т.д. и т.п.), вам необходимо пройти <a class="main_link" href="#">процедуру восстановления</a>. Каких-либо других вариантов изменения ваших платежных реквизитов не предполагается!</div>
+              </div>
+            </div>
+            <div class="modal-footer"><a class="btn btn_gray auth" href="#" data-dismiss="modal" aria-label="Close">Авторизоваться WMID 775027065906</a></div>
+          </div>
+        </div>
+      </div>
       <footer>
         <div class="box">
           <div class="footer_content">
@@ -253,6 +379,7 @@
       </footer>
       <script src="static/js/libs.min.js"></script>
       <script src="static/js/svgxuse.min.js" defer></script>
+      <script src="https://cdn.polyfill.io/v3/polyfill.min.js?features=Array.from%2Ces5%2Ces6%2CSymbol%2CSymbol.iterator%2CDOMTokenList%2CObject.assign%2CCustomEvent%2CElement.prototype.classList%2CElement.prototype.closest%2CElement.prototype.dataset%2CArray.prototype.find%2CArray.prototype.includes"></script>
       <script src="js/common.js"></script>
     </div>
   </body>

@@ -1,0 +1,158 @@
+main
+    .box
+        +tab-list(['ContactDetails ','Purses'], 0)
+            +tab('ContactDetails', 'active')
+                .content_box
+                    .alert_box.info Мы рекомендуем серьёзно подойти к вопросу заполнения своих контактных реквизитов. Их актуальность является залогом ваших успешных продаж. У покупателей нет возможности перед покупкой "пощупать" товар, поэтому чтобы хоть как-то обезопасить себя, они зачастую связываются перед оплатой с продавцом для уяснения возникших вопросов.
+                    .alert_box.warning Особое внимание следует обратить на поле "Псевдоним (никнейм)", т.к. именно оно фигурирует во всех списках напротив названия ваших товаров. После совершения Вами трех и более продаж изменить свой псевдоним Вы уже не сможете.
+                    .user_form
+                        .user_form_item
+                            .user_form_item_title Псевдоним (никнейм):
+                            .user_form_item_value
+                                |NickName
+
+                        .user_form_item
+                            .user_form_item_title Адрес вашего сайта (URL):
+                            .user_form_item_value
+                                .form_element
+                                    input.err(type="text" placeholder="http://")
+                        
+                        .user_form_item
+                            .user_form_item_title Полное имя:
+                            .user_form_item_value
+                                .form_element
+                                    input(type="text" placeholder="обязательно к заполнению")
+
+                        .user_form_item
+                            .user_form_item_title Телефон:
+                            .user_form_item_value
+                                .form_element
+                                    input(type="text")
+                            .user_form_item_check
+                                .form_element
+                                    label.for_check
+                                        input(type="checkbox")
+                                        span.text не показывать
+                            
+                        .user_form_item
+                            .user_form_item_title WhatsApp:
+                            .user_form_item_value
+                                .form_element
+                                    input(type="text" placeholder="номер WhatsApp")
+                            .user_form_item_check
+                                .form_element
+                                    label.for_check
+                                        input(type="checkbox")
+                                        span.text строго для покупателя после покупки
+
+                        .user_form_item
+                            .user_form_item_title Telegram:
+                            .user_form_item_value
+                                .form_element
+                                    input(type="text" placeholder="название аккаунта в Telegram")
+                            .user_form_item_check
+                                .form_element
+                                    label.for_check
+                                        input(type="checkbox")
+                                        span.text строго для покупателя после покупки
+
+                        .user_form_item
+                            .user_form_item_title Skype:
+                            .user_form_item_value
+                                .form_element
+                                    input(type="text" placeholder="логин Skype")
+                            .user_form_item_check
+                                .form_element
+                                    label.for_check
+                                        input(type="checkbox")
+                                        span.text строго для покупателя после покупки
+
+                        .user_form_item
+                            .user_form_item_title Discord User ID:
+                            .user_form_item_value
+                                .form_element
+                                    input(type="text" placeholder="userName#2878")
+                            .user_form_item_check
+                                .form_element
+                                    label.for_check
+                                        input(type="checkbox")
+                                        span.text строго для покупателя после покупки
+
+                        .user_form_item
+                            .user_form_item_title Discord Server ID:
+                            .user_form_item_value
+                                .form_element
+                                    input(type="text" placeholder="https://discord.gg/uUbaryT")
+                            .user_form_item_check
+                                .form_element
+                                    label.for_check
+                                        input(type="checkbox")
+                                        span.text строго для покупателя после покупки
+
+                        .user_form_item
+                            .user_form_item_title E-mail:
+                            .user_form_item_value
+                                .form_element
+                                    input(type="text" placeholder="Обязательно к заполнению")
+                            .user_form_item_check
+                                .form_element
+                                    label.for_check
+                                        input(type="checkbox")
+                                        span.text строго для покупателя после покупки
+
+                        .user_form_item
+                            .user_form_item_title Страница в Facebook:
+                            .user_form_item_value
+                                .form_element
+                                    input(type="text" placeholder="https://")
+                            .user_form_item_check
+                                .form_element
+                                    label.for_check
+                                        input(type="checkbox")
+                                        span.text строго для покупателя после покупки
+
+                        .user_form_item.last
+                            .user_form_item_title Страница в VKontakte:
+                            .user_form_item_value
+                                .form_element
+                                    input(type="text" placeholder="https://")
+                            .user_form_item_check
+                                .form_element
+                                    label.for_check
+                                        input(type="checkbox")
+                                        span.text строго для покупателя после покупки
+
+                        .separator
+
+                        .user_form_item
+                            .user_form_item_title Логин:
+                            .user_form_item_value
+                                .form_element
+                                    input(type="text")
+
+                        .user_form_item
+                            .user_form_item_title Новый пароль:
+                            .user_form_item_value
+                                .form_element
+                                    input(type="password" placeholder="заполнять не обязательно")
+
+                        .user_form_item.last
+                            .user_form_item_title Новый пароль повторно:
+                            .user_form_item_value
+                                .form_element
+                                    input(type="password" placeholder="заполнять не обязательно")
+
+                        button.btn.btn_blue сохранить
+                        button.btn.btn_blue(data-toggle="modal" data-target="#modal_err") error modal
+
+.modal.fade(id="modal_err" tabindex="-1" aria-labelledby="modal_err" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered.err
+        .modal-content
+            .modal-header
+                .modal-title Ошибка
+                span.close(data-dismiss="modal" aria-label="Close")
+                    +icon('modal_close')
+            .modal-body
+                .modal_text Повторно введённое значение пароля не совпадает с предыдущим.
+            .modal-footer
+                button.btn.btn_gray(data-dismiss="modal" aria-label="Close") закрыть

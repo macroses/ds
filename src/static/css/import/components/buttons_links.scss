@@ -86,6 +86,10 @@ button.btn, input[type="submit"].btn, a.btn {
         text-decoration: none;
         color: $main_links_color;
     }
+
+    &.empty {
+        color: red;
+    }
 }
 
 .personal_data_btns {
