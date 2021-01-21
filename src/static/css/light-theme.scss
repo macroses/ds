@@ -226,6 +226,11 @@ th {
             background: #78909C;
             color: #fff;
         }
+
+        &.sep {
+            border: 0;
+            background: rgba(0,0,0,0);
+        }
     }
 }
 
@@ -272,6 +277,11 @@ th {
 }
 
 .product_name {
+    &_funcs {
+        background: linear-gradient(to right, rgba(255, 255, 255, 0.13) 0, #f5fafd 26%, #f5fafd 100%);
+    }
+}
+.seller_name {
     &_funcs {
         background: linear-gradient(to right, rgba(255, 255, 255, 0.13) 0, #f5fafd 26%, #f5fafd 100%);
     }

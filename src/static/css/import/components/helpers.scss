@@ -197,6 +197,35 @@ span[data-toggle="tooltip"] {
     }
 }
 
+.table_loader {
+    display: table;
+
+    .loader_content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &::after {
+            content: '';
+            z-index: 3;
+
+            display: inline-block;
+            width: 2rem;
+            height: 2rem;
+            vertical-align: text-bottom;
+            border: .25em solid $main_links_color;
+            border-right-color: transparent;
+            border-radius: 50%;
+            animation: .75s linear infinite spinner-border;
+        }
+    }
+}
+
 // убираем скачок при появлении контента
 @media screen and (min-width: 1350px) {
     html {
@@ -220,6 +249,8 @@ span[data-toggle="tooltip"] {
     font: bold 13px Roboto;
     span {
         font-weight: normal;
+        text-transform: uppercase;
+        font-size: 11px;
     }
 }
 
@@ -276,5 +307,16 @@ small {
         border-left: 3px solid $main_links_color;
         border-top: 3px solid $main_links_color;
         transform: rotate(-45deg);
+    }
+}
+
+.tip_icon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 5px 0;
+    img {
+        width: 20px;
+        margin-right: 5px;
     }
 }

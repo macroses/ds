@@ -460,5 +460,7 @@ select {
 }
 
 .pic-filter {
-    @include box(16px);
+    @include box(12px);
+    fill: $main_links_color;
+    
 }

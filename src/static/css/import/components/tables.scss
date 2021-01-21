@@ -1,5 +1,7 @@
 table {
     width: 100%;
+    overflow: hidden;
+    position: relative;
     &.equal_cells {
         table-layout: fixed;
     }
@@ -271,7 +273,7 @@ tbody {
             height: 10px;
             right: 20px;
             top: 5px;
-            background-image: url(../img/select_arrow.png);
+            background-image: url(../img/select_arrow.svg);
             background-repeat: no-repeat;
         }
 
@@ -291,4 +293,3 @@ tbody {
         }
     }
 }
-

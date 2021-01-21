@@ -63,6 +63,10 @@ tinymce.init({
 
 // drag
 dragula([document.querySelector('.pm_sort_list')]);
+dragula([document.querySelector('.myshop_table tbody')]);
+
+// для вложенных списков
+dragula([].slice.apply(document.querySelectorAll('.catalog_list')));
 
 // календарь
 flatpickr.localize(flatpickr.l10ns.ru);
@@ -70,3 +74,9 @@ flatpickr("#mailingsDate", {
 // static: true только с этим работает в модальных окнах в ie
     static: true
 });
+
+// пример прелоадера на отдельно взятой таблице
+// var tableHeight = document.querySelector('.myshop_table').clientHeight;
+// var theadHeight = document.querySelector('.myshop_table thead').clientHeight;
+
+// document.querySelector('.loader_content').style.height = (tableHeight - theadHeight) + 'px';

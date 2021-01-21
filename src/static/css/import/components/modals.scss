@@ -74,10 +74,14 @@ span.close {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
+    .title {
+        margin-right: 5px;
+    }
 }
 
 .added_recipients_counter {
     display: flex;
+    height: 34px;
     align-items: center;
     background: #E9F5FE;
     border: 1px solid #c5d1d9;
@@ -261,4 +265,18 @@ span.close {
         margin: 1.75rem auto;
     }
 
+}
+
+.popup {
+    .modal-body {
+        padding: 20px;
+    }
+}
+
+.modal_btn_group_centered {
+    display: flex;
+    margin-top: 20px;
+    .btn {
+        flex: 1;
+    }
 }

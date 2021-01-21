@@ -221,4 +221,6 @@
 
 .pic-mail {
     @include box(21px, 21px);
+    stroke: #607d8b;
+    stroke-width: 7px;
 }
