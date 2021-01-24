@@ -1,0 +1,259 @@
+main
+    .box
+        .content_box
+            .alert_box.info Магазин Digiseller устанавливается на вашем сайте. Для его работы необходимо 
+                a.main_link(href="#") создать категории и добавить в них товары
+                |, 
+                a.main_link(href="#") произвести настройки
+                |  и вставить 
+                a.main_link(href="#") код виджета
+                |  на страницу вашего сайта.
+
+            .myshop_box
+                .catalog
+                    +fieldset('Каталог')
+                        ul.catalog_list
+                            li.main_page.active
+                                .catalog_list_item
+                                    .catalog_list_item_icons
+                                        span.icon_item
+                                            +icon('catalog_lock')
+                                        span.icon_item
+                                            +icon('catalog_star')
+                                    .catalog_list_item_text 
+                                        a(href="#") Главная страница
+                                            span.item_counter (12)
+
+                            li
+                                .catalog_list_item
+                                    .catalog_list_item_icons
+                                        span.icon_item.drag
+                                            +icon('drag')
+                                        span.icon_item.minus
+                                            +icon('catalog_minus')
+                                    .catalog_list_item_text 
+                                        a(href="#") Минус активный
+                                            span.item_counter (12)
+                                    span.hide_category.open(data-placement="top" data-toggle="tooltip" title="скрыть категорию")
+                                        +icon('eye_open')
+
+                            li.active
+                                .catalog_list_item
+                                    .catalog_list_item_icons
+                                        span.icon_item.drag
+                                            +icon('drag')
+                                        span.icon_item.minus
+                                            +icon('catalog_minus')
+                                    .catalog_list_item_text 
+                                        a(href="#") Минус активный выделен
+                                            span.item_counter (12)
+                                    span.hide_category.open(data-placement="top" data-toggle="tooltip" title="скрыть категорию")
+                                        +icon('eye_open')
+
+                            li
+                                .catalog_list_item
+                                    .catalog_list_item_icons
+                                        span.icon_item.drag
+                                            +icon('drag')
+                                        span.icon_item.minus.empty
+                                            +icon('catalog_minus')
+                                    .catalog_list_item_text 
+                                        a(href="#") Минус неактивный
+                                            span.item_counter (12)
+                                    span.hide_category(data-placement="top" data-toggle="tooltip" title="скрыть категорию")
+                                        +icon('eye_close')
+                                        
+                            li.active
+                                .catalog_list_item
+                                    .catalog_list_item_icons
+                                        span.icon_item.drag
+                                            +icon('drag')
+                                        span.icon_item.minus.empty
+                                            +icon('catalog_minus')
+                                    .catalog_list_item_text 
+                                        a(href="#") Минус неактивный выделен
+                                            span.item_counter (12)
+                                    span.hide_category(data-placement="top" data-toggle="tooltip" title="скрыть категорию")
+                                        +icon('eye_close')
+
+                            li
+                                .catalog_list_item
+                                    .catalog_list_item_icons
+                                        span.icon_item.drag
+                                            +icon('drag')
+                                        span.icon_item.plus
+                                            +icon('catalog_plus')
+                                    .catalog_list_item_text 
+                                        a(href="#") Плюс неактивный
+                                            span.item_counter (12)
+                                    span.hide_category.open(data-placement="top" data-toggle="tooltip" title="скрыть категорию")
+                                        +icon('eye_open')
+
+                            li.active
+                                .catalog_list_item
+                                    .catalog_list_item_icons
+                                        span.icon_item.drag
+                                            +icon('drag')
+                                        span.icon_item.plus
+                                            +icon('catalog_plus')
+                                    .catalog_list_item_text 
+                                        a(href="#") Плюс активный
+                                            span.item_counter (12)
+                                    span.hide_category.open(data-placement="top" data-toggle="tooltip" title="скрыть категорию")
+                                        +icon('eye_open')
+
+                            li.hidden_item
+                                .catalog_list_item
+                                    .catalog_list_item_icons
+                                        span.icon_item.drag
+                                            +icon('drag')
+                                        span.icon_item.plus
+                                            +icon('catalog_plus')
+                                    .catalog_list_item_text 
+                                        a(href="#") Скрытая категория
+                                            span.item_counter (12)
+                                    span.hide_category(data-placement="top" data-toggle="tooltip" title="скрыть категорию")
+                                        +icon('eye_close')
+
+                            li
+                                .catalog_list_item
+                                    .catalog_list_item_icons
+                                        span.icon_item.drag
+                                            +icon('drag')
+                                        span.icon_item.plus
+                                            +icon('catalog_plus')
+                                    .catalog_list_item_text 
+                                        a(href="#") Вложение ур. 0
+                                            span.item_counter (12)
+                                    span.hide_category.open(data-placement="top" data-toggle="tooltip" title="скрыть категорию")
+                                        +icon('eye_open')
+                                // вложение 1
+                                ul.catalog_list
+                                    li
+                                        .catalog_list_item
+                                            .catalog_list_item_icons
+                                                span.icon_item.drag
+                                                    +icon('drag')
+                                                span.icon_item.plus
+                                                    +icon('catalog_plus')
+                                            .catalog_list_item_text 
+                                                a(href="#") Вложение ур. 1
+                                                    span.item_counter (12)
+                                            span.hide_category.open(data-placement="top" data-toggle="tooltip" title="скрыть категорию")
+                                                +icon('eye_open')
+                                        // вложение 2
+                                        ul.catalog_list
+                                            li
+                                                .catalog_list_item
+                                                    .catalog_list_item_icons
+                                                        span.icon_item.drag
+                                                            +icon('drag')
+                                                        span.icon_item.plus
+                                                            +icon('catalog_plus')
+                                                    .catalog_list_item_text 
+                                                        a(href="#") Вложение ур. 2
+                                                            span.item_counter (12)
+                                                    span.hide_category.open(data-placement="top" data-toggle="tooltip" title="скрыть категорию")
+                                                        +icon('eye_open')
+                                                // вложение 3
+                                                ul.catalog_list
+                                                    li
+                                                        .catalog_list_item
+                                                            .catalog_list_item_icons
+                                                                span.icon_item.drag
+                                                                    +icon('drag')
+                                                                span.icon_item.plus
+                                                                    +icon('catalog_plus')
+                                                            .catalog_list_item_text 
+                                                                a(href="#") Вложение ур. 3
+                                                                    span.item_counter (12)
+                                                            span.hide_category.open(data-placement="top" data-toggle="tooltip" title="скрыть категорию")
+                                                                +icon('eye_open')
+
+
+                                li
+                                    .catalog_list_item
+                                        .catalog_list_item_icons
+                                            span.icon_item.drag
+                                                +icon('drag')
+                                            span.icon_item.plus
+                                                +icon('catalog_plus')
+                                        .catalog_list_item_text 
+                                            a(href="#") Переполнение Переполнение Переполнение Переполнение Переполнение 
+                                                span.item_counter (12)
+                                        span.hide_category.open(data-placement="top" data-toggle="tooltip" title="скрыть категорию")
+                                            +icon('eye_open')
+                    .params_btn_group
+                        .params_btn_group_item
+                            button.btn.btn_gray добавить корневую категорию
+                        .params_btn_group_item
+                            button.btn.btn_gray добавить подкатегорию
+                        .params_btn_group_item
+                            button.btn.btn_gray(data-toggle="modal" data-target="#delete_category_popup") удалить корневую категорию
+
+                    .hint.sort_descr Сортируйте товары перетаскиванием
+                        +icon('drag')
+
+                .myshop_content
+                    .category_name
+                        .title Название категории:
+                        .form_element.with_hint
+                            input(type="text" placeholder="Главная страница")
+                            span.lang(data-placement="right" data-toggle="tooltip" title="The field must contain the name of the parameter in Russian")
+                                +icon('rus')
+                            .hint укажите название корневой категории в каталоге
+                        .form_element
+                            input(type="text" placeholder="Главная страница")
+                            span.lang(data-placement="right" data-toggle="tooltip" title="The field must contain the name of the parameter in Russian")
+                                +icon('eng')
+                        button.btn.btn_blue сохранить
+                        button.btn.btn_gray отменить
+                    .myshop_tabs.tabs_inner
+                        +tab-list([['Products', 23], 'Image', 'Widget'], 1)
+                            +tab('Image', 'acitve')
+                                .good_img
+                                    .preview_box
+                                        +icon('good')
+                                        //можно сюда img вставить, стили подхватятся.
+                                    .file_upload_box
+                                        label.btn.btn_gray заменить файл
+                                            input(type="file")
+                                        button.btn.btn_gray удалить файл
+                                    ul.files_status_list
+                                        li.files_status_list_item
+                                            +icon('file_accept')
+                                            .file_name
+                                                span.text 1. НазваниеФайла.jpg
+                                                .hint Файл успешно загружен 9 Кб
+                                        li.files_status_list_item
+                                            +icon('file_denied')
+                                            .file_name
+                                                span.text 2. НазваниеФайла.jpg
+                                                .hint Допустимые форматы : jpeg, gif, png
+
+                                
+
+
+
+.modal.fade(id="delete_category_popup" tabindex="-1" aria-labelledby="delete_category_popup" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered.popup.modal-sm
+        .modal-content
+            .modal-header
+                .modal-title Подтвердите действие
+                span.close(data-dismiss="modal" aria-label="Close")
+                    +icon('modal_close')
+            .modal-body
+                |Вы действительно хотите удалить категорию «лорпл»?
+                .modal_btn_group_centered
+                    button.btn.btn_gray(data-dismiss="modal" aria-label="Close") подтвердить
+                    button.btn.btn_gray(data-dismiss="modal" aria-label="Close") отменить
+
+.modal.fade(id="add_goods_popup" tabindex="-1" aria-labelledby="add_goods_popup" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered.popup
+        .modal-content
+            .modal-body
+                |Кроме своих товаров, вы можете разместить в магазине партнерские товары. При продаже партнерских товаров вам начисляется вознаграждение, которое определил владелец товара.
+                .modal_btn_group_centered
+                    button.btn.btn_gray(data-toggle="modal" data-target="#add_my_goods" data-dismiss="modal" aria-label="Close") добавить мои товары
+                    button.btn.btn_gray(data-toggle="modal" data-target="#add_partner_goods" data-dismiss="modal" aria-label="Close") добавить партнерские товары
+

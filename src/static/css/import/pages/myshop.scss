@@ -245,9 +245,16 @@
 }
 
 .myshop_tabs {
-    margin-top: 20px;
+    margin-top: 30px;
     .alert_box {
         margin: 10px 0;
+    }
+
+    .good_img {
+        margin: 10px 0 20px;
+        .preview_box {
+            @include box(200px);
+        }
     }
 }
 
@@ -362,7 +369,6 @@
 .not_available_good {
     .main_link {
         color: #b2b2b2;
-
     }
 
     .hint {
@@ -397,7 +403,7 @@
         right: 10px;
         top: 0;
         height: 100%;
-        width: 90px;
+        width: 65px;
         z-index: 1;
         font: 400 10px Roboto;
         text-transform: uppercase;
@@ -450,5 +456,49 @@
 .mailing_current_filters {
     .sep {
         margin-left: 5px;
+    }
+}
+
+.form_element.with_hint {
+    .hint {
+        position: absolute;
+        top: calc(100% + 1px);
+        left: 0;
+        font-size: 11px;
+    }
+}
+
+.file_upload_box {
+    margin: 20px 0;
+    input[type=file] {
+        display: none;
+    }
+}
+
+.myhop_widget {
+    margin: 10px 0;
+    .title_block {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    textarea {
+        height: 150px;
+    }
+}
+
+.myshop_hint_mobile {
+    font-size: 13px;
+    margin-top: 30px;
+}
+
+.meta_desc {
+    font-size: 14px;
+    margin: 15px 0;
+    padding: 10px;
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+    span {
+        margin-right: 3px;
     }
 }

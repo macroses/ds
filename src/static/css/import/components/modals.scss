@@ -264,8 +264,18 @@ span.close {
         max-width: 600px;
         margin: 1.75rem auto;
     }
-
 }
+
+@media screen and (min-width: 40px) {
+    .partner_goods_modal {
+        min-width: 1140px;
+        position: absolute;
+        .modal-dialog {
+            max-width: 1140px;
+        }
+    }
+}
+
 
 .popup {
     .modal-body {
@@ -279,4 +289,9 @@ span.close {
     .btn {
         flex: 1;
     }
+}
+
+.modal-dialog.partner_goods_modal {
+    // width: 1140px;
+    // min-width: 1140px;
 }

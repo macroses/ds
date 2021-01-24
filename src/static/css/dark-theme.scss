@@ -275,7 +275,7 @@ table {
     color: #afc3cb;
 }
 
-button.btn, input[type="submit"].btn, a.btn {
+button.btn, input[type="submit"].btn, a.btn, label.btn {
     &.btn_gray {
         background: linear-gradient(to bottom, map-get($dark_bg, dark_gray), #1f262a);
         color: map-get($dark_colors, main);
@@ -920,4 +920,43 @@ button.btn, input[type="submit"].btn, a.btn {
 
 .seller_data_wm .title {
     color: map-get($dark_colors, main);
+}
+
+.not_available_good {
+    .hint {
+        color: map-get($dark_colors, main);
+    }
+}
+
+.popup {
+    .modal-body {
+        color: map-get($dark_colors, main);
+    }
+}
+
+.goods_partner_count {
+    color: map-get($dark_colors, main);
+}
+
+.seller_name_funcs {
+    background: linear-gradient(to right, rgba(39, 47, 52, .10) 0, lighten(rgba(39, 47, 52, 1), 5%) 26%, lighten(rgba(39, 47, 52, 1), 5%) 100%);
+}
+
+.tip_item {
+    color: map-get($dark_colors, main);
+}
+
+.files_status_list_item {
+    color: map-get($dark_colors, main);
+}
+
+
+.catalog_list li a {
+    color: map-get($dark_colors, main);
+}
+
+.catalog_list_item {
+    &:hover {
+        background: #323c43;
+    }
 }

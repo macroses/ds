@@ -197,10 +197,11 @@ main
                 .myshop_content
                     .category_name
                         .title Название категории:
-                        .form_element
+                        .form_element.with_hint
                             input(type="text" placeholder="Главная страница")
                             span.lang(data-placement="right" data-toggle="tooltip" title="The field must contain the name of the parameter in Russian")
                                 +icon('rus')
+                            .hint укажите название корневой категории в каталоге
                         .form_element
                             input(type="text" placeholder="Главная страница")
                             span.lang(data-placement="right" data-toggle="tooltip" title="The field must contain the name of the parameter in Russian")
