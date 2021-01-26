@@ -1,0 +1,73 @@
+.myshop_settings {
+    margin-top: 20px;
+    display: flex;
+    .hint {
+        font-size: 12px;
+        margin-top: 5px;
+    }
+}
+
+.myshop_settings_l {
+    flex: 1;
+    margin-right: 30px;
+}
+
+.myshop_settings_r {
+    flex: 1;
+}
+
+.myshop_settings_option {
+    display: flex;
+    padding: 5px 0;
+    border-bottom: 1px solid #f1f1f1;
+    &.address {
+        border: 0;
+    }
+    .option_item {
+        width: 470px;
+        margin-right: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .form_element {
+            width: 100%;
+        }
+
+        &.img {
+            .form_element {
+                width: 80px;
+                input[type=text] {
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+
+    .option_control {
+        flex: 1 1 auto;
+        .btn {
+            width: 100%;
+        }
+    }
+}
+
+.myshop_settings_item {
+    &:not(:first-of-type) {
+        margin-top: 20px;
+    }
+
+    select {
+        width: 100%;
+    }
+}
+
+.myshop_logo {
+    margin-top: 20px;
+}
+
+.myshop_logo_img {
+    img {
+        max-height: 100px;
+    }
+}

@@ -1,0 +1,35 @@
+main
+    .box
+        +tab-list(['GeneralSettings ', 'Logo', 'CSS', 'Payment'], 1)
+            +tab('Logo', 'acitve')
+                .content_box
+                    .alert_box.info Магазин Digiseller устанавливается на вашем сайте. Для его работы необходимо 
+                        a.main_link(href="#") создать категории и добавить в них товары
+                        |, 
+                        a.main_link(href="#") произвести настройки
+                        |  и вставить 
+                        a.main_link(href="#") код виджета
+                        |  на страницу вашего сайта.
+
+                    .myshop_logo
+                        .title_block Логотип магазина
+                        .myshop_logo_img
+                            img(src="img/logo_shop.png", alt="")
+                        .file_upload_box
+                            label.btn.btn_gray заменить файл
+                                input(type="file")
+                            button.btn.btn_gray удалить файл
+                            .hint Рекомендуемый размер: 250 x 250 px (не более 1 Мб)
+                                br
+                                |Допустимые форматы: jpeg, gif, png
+                        ul.files_status_list
+                            li.files_status_list_item
+                                +icon('file_accept')
+                                .file_name
+                                    span.text НазваниеФайла.jpg
+                                    .hint Файл успешно загружен 9 Кб
+                            li.files_status_list_item
+                                +icon('file_denied')
+                                .file_name
+                                    span.text НазваниеФайла.jpg
+                                    .hint Допустимые форматы : jpeg, gif, png

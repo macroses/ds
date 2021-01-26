@@ -365,6 +365,15 @@ select {
     }
 }
 
+// для страницы myshop, где в модальном окне есть вариант уже добавленных товаров в другой категории
+.form_element.already_added {
+    input[type=checkbox]:checked + .text:before {
+        border: solid 1px #aab5ba;
+        background: url(../img/checkbox-checked_added.svg) no-repeat;
+        background-size: 18px;
+    }
+}
+
 .search_result_box {
     position: relative;
 }

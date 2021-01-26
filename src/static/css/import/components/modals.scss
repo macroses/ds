@@ -171,7 +171,20 @@ span.close {
         // переопределение высоты плагина для textarea
         height: 400px!important;
     }
+
+    .myshop_settings_modal {
+        textarea {
+            height: 266px;
+        }
+
+        .tox-tinymce {
+            // переопределение высоты плагина для textarea
+            height: 266px!important;
+        }
+    }
 }
+
+
 
 .mailings_email_title {
     margin-bottom: 10px;
@@ -291,7 +304,3 @@ span.close {
     }
 }
 
-.modal-dialog.partner_goods_modal {
-    // width: 1140px;
-    // min-width: 1140px;
-}

@@ -61,6 +61,18 @@ tinymce.init({
     // content_css: "dark" // темную тему можно подключить
 });
 
+tinymce.init({
+    selector: '#myshop_settings_area_ru',
+    skin: "oxide-dark",
+    content_css: "dark" // темную тему можно подключить
+});
+
+tinymce.init({
+    selector: '#myshop_settings_area_en',
+    skin: "oxide-dark",
+    content_css: "dark" // темную тему можно подключить
+});
+
 // drag
 dragula([document.querySelector('.pm_sort_list')]);
 dragula([document.querySelector('.myshop_table tbody')]);

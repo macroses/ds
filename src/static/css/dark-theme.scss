@@ -960,3 +960,19 @@ button.btn, input[type="submit"].btn, a.btn, label.btn {
         background: #323c43;
     }
 }
+
+.percents {
+    &.not_partner {
+        .percents_value {
+            color: map-get($dark_colors, main);
+        }
+    }
+}
+
+.myshop_settings_option .option_item {
+    color: map-get($dark_colors, main);
+}
+
+.myshop_settings_option {
+    border-color: map-get($dark_bg, nav);
+}

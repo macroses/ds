@@ -355,8 +355,8 @@ main
                     
                 +pagination('Товаров на странице:')
 
-.modal.fade(id="add_partner_goods" tabindex="-1" aria-labelledby="add_partner_goods" aria-hidden="true")
-    .modal-dialog.modal-dialog-centered.modal-xl
+.modal.partner_goods_modal.fade(id="add_partner_goods" tabindex="-1" aria-labelledby="add_partner_goods" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered
         .modal-content
             .modal-header
                 .modal-title Товары
@@ -369,6 +369,7 @@ main
                         select
                             option(value="0") всех магазинов
                             option(value="1") Plati.Market
+                    .sep
                     span.title в категорию
                     .form_element
                         select
@@ -396,6 +397,14 @@ main
                                 option(value="12") количество просмотров ↓
                                 option(value="13") дата последней продажи ↓
                                 option(value="14") дате последней продажи ↑
+
+                .goods_partner_count
+                    |Партнерских товаров в магазине: 
+                    span.bold 1
+                    |  из 
+                    span.bold 100 
+                    a.main_link(href="#") увеличить лимит
+
                 table.equal_cells.goods_table_modal.hovered_rows
                     colgroup
                         col(style="width: 30px")
@@ -467,9 +476,9 @@ main
                     tbody
                         tr
                             td 
-                                .form_element
+                                .form_element.already_added
                                     label.for_check
-                                        input(type="checkbox")
+                                        input(type="checkbox" checked)
                                         span.text
                             td 1234567
                             td 

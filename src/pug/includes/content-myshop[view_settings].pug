@@ -1,0 +1,197 @@
+main
+    .box
+        +tab-list(['GeneralSettings ', 'Logo', 'CSS', 'Payment'], 0)
+            +tab('GeneralSettings', 'acitve')
+                .content_box
+                    .alert_box.info Магазин Digiseller устанавливается на вашем сайте. Для его работы необходимо 
+                        a.main_link(href="#") создать категории и добавить в них товары
+                        |, 
+                        a.main_link(href="#") произвести настройки
+                        |  и вставить 
+                        a.main_link(href="#") код виджета
+                        |  на страницу вашего сайта.
+
+                    .myshop_settings
+                        .myshop_settings_l
+                            .myshop_settings_item
+                                .title_block Адрес магазина
+                                .myshop_settings_option.address
+                                    .option_item
+                                        .form_element
+                                            input(type="text" placeholder="http://")
+                                    .option_control
+                                        button.btn.btn_gray сохранить
+                                .hint Укажите адрес главной страницы вашего магазина. Это может быть адрес страницы, на которой вы разместили 
+                                    a.main_link(href="#") HTML-код
+                                    |, адрес магазина, созданного вами с использованием 
+                                    a.main_link(href="#") API
+                                    |, или адрес 
+                                    a.main_link(href="#") бесплатного сайта
+                                    |, который вы выбрали. При возникновении вопросов свяжитесь со 
+                                    a.main_link(href="#") службой поддержки
+                                    |.
+
+                            .myshop_settings_item
+                                .title_block Адрес страницы описания товара
+                                .myshop_settings_option.address
+                                    .option_item
+                                        .form_element
+                                            input(type="text" placeholder="http://")
+                                    .option_control
+                                        button.btn.btn_gray сохранить
+                                .hint Укажите адрес страницы с описанием любого товара из вашего магазина. В адресе должен присутствовать id вашего товара, или чужого товара, добавленного в ваш магазин. При возникновении вопросов свяжитесь 
+                                    a.main_link(href="#") службой поддержки
+                                    |.
+
+                            .myshop_settings_item
+                                .title_block Общие настройки
+                                .myshop_settings_option
+                                    .option_item
+                                        |Условия предоставления сервиса
+                                        button.btn.btn_gray(data-toggle="modal" data-target="#myshop_settings" data-dismiss="modal" aria-label="Close") редактировать
+                                    .option_control
+                                        +select(['скрывать', 'отображать'])
+                                .myshop_settings_option
+                                    .option_item
+                                        |Товары, которые закончились
+                                    .option_control
+                                        +select(['скрывать', 'отображать'])
+                                .myshop_settings_option
+                                    .option_item
+                                        |Категории товаров на главной странице
+                                    .option_control
+                                        +select(['скрывать', 'отображать'])
+                                .myshop_settings_option
+                                    .option_item
+                                        |Оплачивать товар
+                                    .option_control
+                                        +select(['в текущем окне', 'в новом окне'])
+                                .myshop_settings_option
+                                    .option_item
+                                        |Онлайн чат
+                                    .option_control
+                                        +select(['включен', 'выключен'])
+
+                            .myshop_settings_item
+                                .title_block Параметры отображения по умолчанию
+                                .myshop_settings_option
+                                    .option_item
+                                        |Язык отображения
+                                    .option_control
+                                        +select(['auto', 'RU', 'EN'])
+                                .myshop_settings_option
+                                    .option_item
+                                        |Вид отображения товаров на главной странице
+                                    .option_control
+                                        +select(['список', 'плитки', 'таблица'])
+                                .myshop_settings_option
+                                    .option_item
+                                        |Вид отображения товаров в категории
+                                    .option_control
+                                        +select(['список', 'плитки', 'таблица'])
+                                .myshop_settings_option
+                                    .option_item
+                                        |Сортировка товаров
+                                    .option_control
+                                        +select(['определена мной', 'названию А - Я', 'названию Я - А', 'цене - убыванию', 'цене - возрастанию'])
+                                .myshop_settings_option
+                                    .option_item
+                                        |Валюта товаров
+                                    .option_control
+                                        +select(['USD', 'RUR', 'EUR', 'UAH'])
+                                .myshop_settings_option
+                                    .option_item
+                                        |Количество товаров на странице категории
+                                    .option_control
+                                        +select(['10', '20', '50', '100'])
+
+                        .myshop_settings_r 
+                            .myshop_settings_item
+                                .title_block Нижнее меню
+                                .myshop_settings_option
+                                    .option_item
+                                        |Отзывы покупателей
+                                    .option_control
+                                        +select(['скрывать', 'отображать'])
+                                .myshop_settings_option
+                                    .option_item
+                                        |O магазине
+                                        button.btn.btn_gray редактировать
+                                    .option_control
+                                        +select(['скрывать', 'отображать'])
+                                .myshop_settings_option
+                                    .option_item
+                                        |Контактные данные
+                                        button.btn.btn_gray редактировать
+                                    .option_control
+                                        +select(['скрывать', 'отображать'])
+                                .myshop_settings_option
+                                    .option_item
+                                        |Гарантия
+                                        button.btn.btn_gray редактировать
+                                    .option_control
+                                        +select(['скрывать', 'отображать'])
+                                .myshop_settings_option
+                                    .option_item
+                                        |Доставка и оплата
+                                        button.btn.btn_gray редактировать
+                                    .option_control
+                                        +select(['скрывать', 'отображать'])
+                                .myshop_settings_option
+                                    .option_item
+                                        |Условия возврата
+                                        button.btn.btn_gray редактировать
+                                    .option_control
+                                        +select(['скрывать', 'отображать'])
+
+                            .myshop_settings_item
+                                .title_block Размер изображения
+                                .myshop_settings_option
+                                    .option_item.img
+                                        |Категории на главной странице
+                                        .form_element
+                                            input(type="text")
+                                            |px
+                                    .option_control
+                                        button.btn.btn_gray сохранить
+
+                                .myshop_settings_option
+                                    .option_item.img
+                                        |Товара на главной странице
+                                        .form_element
+                                            input(type="text")
+                                            |px
+                                    .option_control
+                                        button.btn.btn_gray сохранить
+                                
+                                .myshop_settings_option
+                                    .option_item.img
+                                        |Товара в категории
+                                        .form_element
+                                            input(type="text")
+                                            |px
+                                    .option_control
+                                        button.btn.btn_gray сохранить
+                                
+                                .myshop_settings_option
+                                    .option_item.img
+                                        |Товара на странице описания
+                                        .form_element
+                                            input(type="text")
+                                            |px
+                                    .option_control
+                                        button.btn.btn_gray сохранить
+
+.modal.fade(id="myshop_settings" tabindex="-1" aria-labelledby="myshop_settings" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered.modal-lg.modal-tinymce
+        .modal-content
+            .modal-header
+                .modal-title Условия предоставления сервиса
+                span.close(data-dismiss="modal" aria-label="Close")
+                    +icon('modal_close')
+            .modal-body
+                .myshop_settings_modal
+                    textarea#myshop_settings_area_ru
+                    textarea#myshop_settings_area_en
+            .modal-footer
+                button.btn.btn_blue(data-toggle="modal" data-target="#mailings_step3" data-dismiss="modal" aria-label="Close") сохранить

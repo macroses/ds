@@ -697,8 +697,8 @@
           </div>
         </div>
       </div>
-      <div class="modal fade" id="add_partner_goods" tabindex="-1" aria-labelledby="add_partner_goods" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal partner_goods_modal fade" id="add_partner_goods" tabindex="-1" aria-labelledby="add_partner_goods" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
               <div class="modal-title">Товары</div><span class="close" data-dismiss="modal" aria-label="Close">
@@ -713,7 +713,8 @@
                     <option value="0">всех магазинов</option>
                     <option value="1">Plati.Market</option>
                   </select>
-                </div><span class="title">в категорию</span>
+                </div>
+                <div class="sep"></div><span class="title">в категорию</span>
                 <div class="form_element">
                   <select>
                     <option value="0">Главная страница</option>
@@ -743,6 +744,7 @@
                   </div>
                 </div>
               </div>
+              <div class="goods_partner_count">Партнерских товаров в магазине: <span class="bold">1</span> из <span class="bold">100 </span><a class="main_link" href="#">увеличить лимит</a></div>
               <table class="equal_cells goods_table_modal hovered_rows">
                 <colgroup>
                   <col style="width: 30px">
@@ -837,9 +839,9 @@
                 <tbody>
                   <tr>
                     <td> 
-                      <div class="form_element">
+                      <div class="form_element already_added">
                         <label class="for_check">
-                          <input type="checkbox"><span class="text"></span>
+                          <input type="checkbox" checked><span class="text"></span>
                         </label>
                       </div>
                     </td>
