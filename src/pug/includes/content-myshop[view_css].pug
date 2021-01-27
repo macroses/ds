@@ -11,4 +11,40 @@ main
                         a.main_link(href="#") код виджета
                         |  на страницу вашего сайта.
 
-                    
+                    .myshop_css
+                        .title_block CSS темы
+                        .myshop_css_tabs
+                            a.active(href="#")
+                                span.myshop_css_tabs_name
+                                    span.icon 
+                                        +icon('read_check')
+                                    |Базовая
+                                span.hint только для чтения
+                            a(href="#")
+                                span.myshop_css_tabs_name
+                                    span.icon 
+                                    |Коричневая
+                                span.hint только для чтения
+                            a(href="#")
+                                span.myshop_css_tabs_name
+                                    span.icon 
+                                    |Зеленая
+                                span.hint только для чтения
+                            a(href="#")
+                                span.myshop_css_tabs_name
+                                    span.icon.chosen
+                                        +icon('read_check')
+                                    |Индивидуальная
+                                span.hint доступно изменение
+
+                        .myshop_css_tabs_content
+                            .myshop_css_tabs_content_top
+                                .title Этот набор CSS используется в HTML-версии магазина. Для изменения стилей дополните 
+                                    a.main_link(href="#") индивидуальный
+                                    |  CSS и активируйте его.
+                                .form_element
+                                    select
+                                        option(value="gray") неактивный
+                                        option(value="green") активный
+                            .form_element
+                                textarea

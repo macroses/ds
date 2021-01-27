@@ -976,3 +976,26 @@ button.btn, input[type="submit"].btn, a.btn, label.btn {
 .myshop_settings_option {
     border-color: map-get($dark_bg, nav);
 }
+
+.myshop_css_tabs_content_top {
+    .title {
+        color: map-get($dark_colors, main);
+    }
+}
+
+.myshop_css_tabs {
+    a {
+        background: #1d2225;
+        border-color: #1d2225;
+
+        &.active {
+            border-color: map-get($dark_bg, nav);
+            background: #272f34;
+            border-right-color: #272f34;
+        }
+    }
+}
+
+.myshop_css_tabs_content {
+    border-color: map-get($dark_bg, nav);
+}
