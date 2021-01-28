@@ -140,7 +140,7 @@
             &.active {
                 box-shadow: none;
                 border: 1px solid #b2c1c9;
-                border-bottom: 0;
+                border-bottom-color: rgba(0,0,0,0);
             }
         }
     }

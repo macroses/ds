@@ -886,6 +886,7 @@ button.btn, input[type="submit"].btn, a.btn, label.btn {
 
 .tabs_inner .nav-tabs .nav-link.active {
     border-color: map-get($dark_bg, nav);
+    border-bottom-color: rgba(0,0,0,0);
 }
 
 .tabs_inner .nav-tabs .nav-link {
@@ -998,4 +999,14 @@ button.btn, input[type="submit"].btn, a.btn, label.btn {
 
 .myshop_css_tabs_content {
     border-color: map-get($dark_bg, nav);
+}
+
+.export_catalog_result {
+    color: map-get($dark_colors, main);
+}
+
+.export_catalog_item {
+    .title {
+        color: map-get($dark_colors, main);
+    }
 }

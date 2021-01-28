@@ -34,3 +34,42 @@
 .submit_report {
     margin-top: 10px;
 }
+
+
+.export_catalog {
+    margin-top: 20px;
+
+    .loader {
+        color: $additional_info_color;
+    }
+}
+
+.export_catalog_item {
+    display: flex;
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    .title {
+        font-weight: bold;
+        align-items: center;
+        display: flex;
+    }
+
+    .btn {
+        margin-left: 10px;
+    }
+
+    a {
+        margin-left: 20px;
+    }
+}
+
+.export_catalog_result {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    a {
+        margin-left: 5px;
+    }
+}

@@ -1,0 +1,33 @@
+main
+    .box
+        .content_box
+            .alert_box.info Магазин Digiseller устанавливается на вашем сайте. Для его работы необходимо 
+                a.main_link(href="#") создать категории и добавить в них товары
+                |, 
+                a.main_link(href="#") произвести настройки
+                |  и вставить 
+                a.main_link(href="#") код виджета
+                |  на страницу вашего сайта.
+
+            .export_catalog
+                .title_block Экспорт каталога
+                .export_catalog_item
+                    .title в формате
+                    button.btn.btn_gray XLSX
+                    button.btn.btn_gray CSV (win-1251)
+
+                .export_catalog_item
+                    .title или прямые ссылки для скачиваний:
+                    a.main_link(href="#") YML
+                    a.main_link(href="#") XLSX
+                    a.main_link(href="#") XLSX расширенный
+                    a.main_link(href="#") CSV (win-1251)
+                    a.main_link(href="#") CSV (utf-8)
+
+                .export_catalog_result
+                    +icon('excel')
+                    |Сформированный файл: 
+                    a.main_link(href="#") catalog_18728_5d5a414f03904b2ab19801af14182867_2021-01-29_00-08-57.xlsx
+                    .loader
+                        span.spinner-border.spinner-border-sm
+                        |  постановка в очередь...

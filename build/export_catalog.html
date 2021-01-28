@@ -236,157 +236,21 @@
         <div class="box">
           <div class="content_box">
             <div class="alert_box info">Магазин Digiseller устанавливается на вашем сайте. Для его работы необходимо <a class="main_link" href="#">создать категории и добавить в них товары</a>, <a class="main_link" href="#">произвести настройки</a> и вставить <a class="main_link" href="#">код виджета</a> на страницу вашего сайта.</div>
-            <div class="myshop_html">
-              <div class="myshop_html_options"> 
-                <div class="title_block">1. Выберите, что отображать на сайте:</div>
-                <ul class="myshop_html_options_list">
-                  <li>
-                    <div class="form_element">
-                      <label class="for_check">
-                        <input type="checkbox" checked><span class="text">Логотип</span>
-                      </label>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="form_element">
-                      <label class="for_check">
-                        <input type="checkbox" checked><span class="text">Поиск</span>
-                      </label>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="form_element">
-                      <label class="for_check">
-                        <input type="checkbox" checked><span class="text">Корзина<span class="star">**</span></span>
-                      </label>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="form_element">
-                      <label class="for_check">
-                        <input type="checkbox" checked><span class="text">Мои покупки</span>
-                      </label>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="form_element">
-                      <label class="for_check">
-                        <input type="checkbox" checked><span class="text">Переключатель языка</span>
-                      </label>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="form_element">
-                      <label class="for_check">
-                        <input type="checkbox" checked><span class="text">Категории</span>
-                      </label>
-                    </div>
-                    <div class="inside">
-                      <div class="form_element">
-                        <label class="for_radio">
-                          <input type="radio" name="position"><span class="text">горизонтальное расположение</span>
-                        </label>
-                      </div>
-                      <div class="form_element">
-                        <label class="for_radio">
-                          <input type="radio" name="position" checked><span class="text">вертикальное расположение</span>
-                        </label>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="form_element">
-                      <label class="for_check disabled">
-                        <input type="checkbox" disabled checked><span class="text">Основная область</span>
-                      </label>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="form_element">
-                      <label class="for_check">
-                        <input type="checkbox" checked><span class="text">Нижнее меню<span class="star">*</span></span>
-                      </label>
-                    </div>
-                  </li>
-                </ul>
-                <div class="hint"><span class="star">*</span>Cостав горизонтального меню меняется в <a class="main_link" href="#">настройках</a></div>
-                <div class="hint"><span class="star">**</span>В корзину можно добавить только ваши (не партнерские) товары</div>
+            <div class="export_catalog">
+              <div class="title_block">Экспорт каталога</div>
+              <div class="export_catalog_item">
+                <div class="title">в формате</div>
+                <button class="btn btn_gray">XLSX</button>
+                <button class="btn btn_gray">CSV (win-1251)</button>
               </div>
-              <div class="myshop_html_preview"> 
-                <div class="myshop_preview_box">
-                  <div class="myshop_preview_top">
-                    <div class="circles"><span> </span><span></span><span></span></div>
-                  </div>
-                  <div class="myshop_preview_header">
-                    <div class="myshop_preview_header_logo hovered"><img src="img/logo_shop.png" alt=""></div>
-                    <div class="myshop_preview_header_funcs">
-                      <div class="myshop_preview_header_search">
-                        <input type="text"><span>
-                          <svg class="pic-loupe ">
-                            <use xlink:href="img/svg/sprite.svg#loupe"></use>
-                          </svg></span>
-                      </div>
-                      <div class="myshop_preview_header_btns"><span class="hovered">
-                          <svg class="pic-cart ">
-                            <use xlink:href="img/svg/sprite.svg#cart"></use>
-                          </svg></span><span>
-                          <svg class="pic-purchases ">
-                            <use xlink:href="img/svg/sprite.svg#purchases"></use>
-                          </svg></span><span>
-                          <svg class="pic-langs ">
-                            <use xlink:href="img/svg/sprite.svg#langs"></use>
-                          </svg></span></div>
-                    </div>
-                  </div>
-                  <!-- vertical тогглим, чтобы категории стали вертикальными/горизонтальными-->
-                  <div class="myshop_preview_body vertical">
-                    <div class="myshop_preview_body_nav">
-                      <ul>
-                        <li><a href="#">книги</a></li>
-                        <li><a class="bold" href="#">игры</a></li>
-                        <li><a href="#">музыка</a></li>
-                        <li><a href="#">софт</a></li>
-                        <li><a href="#">ключи</a></li>
-                      </ul>
-                    </div>
-                    <div class="myshop_preview_good_item for_hide"><span class="myshop_preview_img first"></span>Asassin Creed</div>
-                    <div class="myshop_preview_good_item"><span class="myshop_preview_img second"></span>Gear of War</div>
-                    <div class="myshop_preview_good_item"><span class="myshop_preview_img third"></span>Rise Guardians</div>
-                    <div class="myshop_preview_good_item"><span class="myshop_preview_img fourth"></span>Crysis</div>
-                  </div>
-                  <div class="myshop_preview_footer">
-                    <ul>
-                      <li><span>Оплата</span></li>
-                      <li><span>O магазине</span></li>
-                      <li><span>Контактные данные</span></li>
-                      <li><span>Гарантия</span></li>
-                      <li><span>Доставка и оплата</span></li>
-                    </ul>
-                  </div>
-                </div>
+              <div class="export_catalog_item">
+                <div class="title">или прямые ссылки для скачиваний:</div><a class="main_link" href="#">YML</a><a class="main_link" href="#">XLSX</a><a class="main_link" href="#">XLSX расширенный</a><a class="main_link" href="#">CSV (win-1251)</a><a class="main_link" href="#">CSV (utf-8)</a>
               </div>
-            </div>
-            <div class="myshop_html_code">
-              <div class="title_block">2. Скопируйте код виджета магазина и вставьте его на нужную страницу вашего сайта:</div>
-              <div class="form_element">
-                <textarea></textarea>
-              </div>
-              <div class="myshop_hint_mobile">
-                <div class="text">Если вы хотите, чтобы страница вашего магазина корректно отображалась на мобильных устройствах, добавьте в ее заголовок (&#60;head&#62;) следующий meta-тег:</div>
-                <div class="meta_desc"><span style="color: #008000; font-weight: bold;">&#60;meta</span><span style="color: #7D9029">name=</span><span style="color: #BA2121">"viewport"</span><span style="color: #7D9029">content=</span><span style="color: #BA2121">"width=device-width, initial-scale=1"</span><span style="color: #008000; font-weight: bold;">/&#62;</span></div>
-              </div>
-              <div class="alert_box additional_info">Если вы хотите предложить партнеру разместить у себя на сайте целиком ваш магазин, а не отдельные товары, необходимо чтобы партнер в коде виджета магазина в атрибуте <span class="bold">data-partner-id</span> указал свой идентификатор партнера (ID партнера). По умолчанию это значение пустое.</div>
-              <div class="alert_box additional_info">При желании можно разместить на отдельной странице товары одной категории. Для этого достаточно добавить параметр data-category-id="" с id нужной категории. Чтобы сделать подкатегории видимыми, нужно добавить параметр data-category-allow-child="1". На одной странице может быть размещен только один код виджета.</div>
-              <div class="alert_box additional_info">Чтобы скрыть дополнительную информацию на странице товара необходимо добавить параметр data-addinfo="0".</div>
-              <div class="myshop_html_plugins">
-                <div class="title_block">Плагины</div>
-                <div class="plugin_links"><a href="#">
-                    <svg class="pic-WordPress_logo ">
-                      <use xlink:href="img/svg/sprite.svg#WordPress_logo"></use>
-                    </svg>описание</a><a href="#">
-                    <svg class="pic-Joomla-Logo ">
-                      <use xlink:href="img/svg/sprite.svg#Joomla-Logo"></use>
-                    </svg>описание</a></div>
+              <div class="export_catalog_result">
+                <svg class="pic-excel ">
+                  <use xlink:href="img/svg/sprite.svg#excel"></use>
+                </svg>Сформированный файл: <a class="main_link" href="#">catalog_18728_5d5a414f03904b2ab19801af14182867_2021-01-29_00-08-57.xlsx</a>
+                <div class="loader"><span class="spinner-border spinner-border-sm"></span> постановка в очередь...</div>
               </div>
             </div>
           </div>

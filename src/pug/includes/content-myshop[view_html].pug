@@ -1,14 +1,170 @@
 main
     .box
-        +tab-list(['GeneralSettings ', 'Logo', 'CSS', 'Payment'], 2)
-            +tab('CSS', 'acitve')
-                .content_box
-                    .alert_box.info Магазин Digiseller устанавливается на вашем сайте. Для его работы необходимо 
-                        a.main_link(href="#") создать категории и добавить в них товары
-                        |, 
-                        a.main_link(href="#") произвести настройки
-                        |  и вставить 
-                        a.main_link(href="#") код виджета
-                        |  на страницу вашего сайта.
+        .content_box
+            .alert_box.info Магазин Digiseller устанавливается на вашем сайте. Для его работы необходимо 
+                a.main_link(href="#") создать категории и добавить в них товары
+                |, 
+                a.main_link(href="#") произвести настройки
+                |  и вставить 
+                a.main_link(href="#") код виджета
+                |  на страницу вашего сайта.
 
-                    
+            .myshop_html
+                .myshop_html_options 
+                    .title_block 1. Выберите, что отображать на сайте:
+                    ul.myshop_html_options_list
+                        li
+                            .form_element
+                                label.for_check
+                                    input(type="checkbox" checked)
+                                    span.text Логотип
+                        li
+                            .form_element
+                                label.for_check
+                                    input(type="checkbox" checked)
+                                    span.text Поиск
+                        li
+                            .form_element
+                                label.for_check
+                                    input(type="checkbox" checked)
+                                    span.text Корзина
+                                        span.star **
+                        li
+                            .form_element
+                                label.for_check
+                                    input(type="checkbox" checked)
+                                    span.text Мои покупки
+                        li
+                            .form_element
+                                label.for_check
+                                    input(type="checkbox" checked)
+                                    span.text Переключатель языка
+                        li
+                            .form_element
+                                label.for_check
+                                    input(type="checkbox" checked)
+                                    span.text Категории
+
+                            .inside
+                                .form_element
+                                    label.for_radio
+                                        input(type="radio" name="position")
+                                        span.text горизонтальное расположение
+                                .form_element
+                                    label.for_radio
+                                        input(type="radio" name="position" checked)
+                                        span.text вертикальное расположение
+
+                        li
+                            .form_element
+                                label.for_check.disabled
+                                    input(type="checkbox" disabled checked)
+                                    span.text Основная область
+                                        
+
+                        li
+                            .form_element
+                                label.for_check
+                                    input(type="checkbox" checked)
+                                    span.text Нижнее меню
+                                        span.star *
+                    .hint
+                        span.star *
+                        |Cостав горизонтального меню меняется в 
+                        a.main_link(href="#") настройках
+                    .hint
+                        span.star **
+                        |В корзину можно добавить только ваши (не партнерские) товары
+
+                .myshop_html_preview 
+                    .myshop_preview_box
+                        .myshop_preview_top
+                            .circles
+                                span 
+                                span
+                                span
+                        .myshop_preview_header
+                            .myshop_preview_header_logo.hovered
+                                img(src="img/logo_shop.png", alt="")
+                            .myshop_preview_header_funcs
+                                .myshop_preview_header_search
+                                    input(type="text")
+                                    span
+                                        +icon('loupe')
+                                .myshop_preview_header_btns
+                                    span.hovered
+                                        +icon('cart')
+                                    span
+                                        +icon('purchases')
+                                    span
+                                        +icon('langs')
+                        
+                        // vertical тогглим, чтобы категории стали вертикальными/горизонтальными
+                        .myshop_preview_body.vertical
+                            .myshop_preview_body_nav
+                                ul
+                                    li
+                                        a(href="#") книги
+                                    li
+                                        a.bold(href="#") игры
+                                    li
+                                        a(href="#") музыка
+                                    li
+                                        a(href="#") софт
+                                    li
+                                        a(href="#") ключи
+
+                            .myshop_preview_good_item.for_hide
+                                span.myshop_preview_img.first
+                                |Asassin Creed
+                            .myshop_preview_good_item
+                                span.myshop_preview_img.second
+                                |Gear of War
+                            .myshop_preview_good_item
+                                span.myshop_preview_img.third
+                                |Rise Guardians
+                            .myshop_preview_good_item
+                                span.myshop_preview_img.fourth
+                                |Crysis
+
+                        .myshop_preview_footer
+                            ul
+                                li
+                                    span Оплата
+                                li
+                                    span O магазине
+                                li
+                                    span Контактные данные
+                                li
+                                    span Гарантия
+                                li
+                                    span Доставка и оплата
+
+            .myshop_html_code
+                .title_block 2. Скопируйте код виджета магазина и вставьте его на нужную страницу вашего сайта:
+                .form_element
+                    textarea
+                .myshop_hint_mobile
+                    .text Если вы хотите, чтобы страница вашего магазина корректно отображалась на мобильных устройствах, добавьте в ее заголовок (&#60;head&#62;) следующий meta-тег:
+                    .meta_desc
+                        span(style="color: #008000; font-weight: bold;") &#60;meta
+                        span(style="color: #7D9029") name=
+                        span(style="color: #BA2121") "viewport"
+                        span(style="color: #7D9029") content=
+                        span(style="color: #BA2121") "width=device-width, initial-scale=1"
+                        span(style="color: #008000; font-weight: bold;") /&#62;
+                .alert_box.additional_info Если вы хотите предложить партнеру разместить у себя на сайте целиком ваш магазин, а не отдельные товары, необходимо чтобы партнер в коде виджета магазина в атрибуте 
+                    span.bold data-partner-id
+                    |  указал свой идентификатор партнера (ID партнера). По умолчанию это значение пустое.
+                .alert_box.additional_info При желании можно разместить на отдельной странице товары одной категории. Для этого достаточно добавить параметр data-category-id="" с id нужной категории. Чтобы сделать подкатегории видимыми, нужно добавить параметр data-category-allow-child="1". На одной странице может быть размещен только один код виджета.
+                .alert_box.additional_info Чтобы скрыть дополнительную информацию на странице товара необходимо добавить параметр data-addinfo="0".
+            
+                .myshop_html_plugins
+                    .title_block Плагины
+                    .plugin_links
+                        a(href="#")
+                            +icon('WordPress_logo')
+                            |описание
+                        a(href="#")
+                            +icon('Joomla-Logo')
+                            |описание
