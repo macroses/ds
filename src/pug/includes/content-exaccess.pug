@@ -1,0 +1,76 @@
+main
+    .box
+        +tab-list(['ShopAddress', 'Settings', 'Favicon'], 0)
+            +tab('ShopAddress', 'active')
+                .content_box
+                    .exaccess
+                        .form_data_block
+                            .form_data_block_item
+                                .form_data_block_title Бесплатный домен:
+                                .form_data_block_content
+                                    .form_element
+                                        input(type="text" placeholder="http://")
+                                        |.exaccess.com
+                                        button.btn.btn_gray сохранить
+
+                                        label.for_check
+                                            input(type="checkbox")
+                                            span.text перенаправить на свой домен
+                                    
+                            .form_data_block_item
+                                .form_data_block_title Свой домен:
+                                .form_data_block_content
+                                    .form_element
+                                        input(type="text" placeholder="http://")
+                                        button.btn.btn_gray(data-toggle="modal" data-target="#domen_activation") активировать
+                            .form_data_block_item
+                                .form_data_block_title Бесплатный домен:
+                                .form_data_block_content
+                                    a.main_link(href="#") kakoi-to.site.com
+                                    button.btn.btn_gray(data-toggle="modal" data-target="#delete_website") удалить привязку
+                                    span.activation идет активация ...
+                            .form_data_block_item
+                                .form_data_block_title Почта для домена:
+                                .form_data_block_content
+                                    +select(['', 'Yandex Connect', 'Mail.ru', 'Gmail G Suite'])
+                            .form_data_block_item
+                                .form_data_block_title Код подтверждения:
+                                .form_data_block_content.approve
+                                    .form_element
+                                        input(type="text" placeholder="если еще не подтвержден")
+                            .form_data_block_item
+                                .form_data_block_title DKIM:
+                                .form_data_block_content.approve
+                                    .form_element
+                                        input(type="text" placeholder="не обязательно")
+                            .form_data_block_item
+                                .form_data_block_title
+                                .form_data_block_content.approve
+                                    button.btn.btn_gray подключить
+
+
+.modal.fade(id="delete_website" tabindex="-1" aria-labelledby="delete_website" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered.popup.modal-sm
+        .modal-content
+            .modal-header
+                .modal-title Подтвердите действие
+                span.close(data-dismiss="modal" aria-label="Close")
+                    +icon('modal_close')
+            .modal-body
+                |Вы уверены что хотите удалить привязку к бесплатному домену?
+                .modal_btn_group_centered
+                    button.btn.btn_gray(data-dismiss="modal" aria-label="Close") подтвердить
+                    button.btn.btn_gray(data-dismiss="modal" aria-label="Close") отменить
+
+.modal.fade(id="domen_activation" tabindex="-1" aria-labelledby="domen_activation" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered.popup.modal-sm
+        .modal-content
+            .modal-header
+                .modal-title Активация домена
+                span.close(data-dismiss="modal" aria-label="Close")
+                    +icon('modal_close')
+            .modal-body
+                |Для подключения домена вам необходимо в настройках домена указать NS сервера ns1.yep.com. и ns2.yep.com. Обычно сайт заработает в течении 1-2 часов после активации.
+                .modal_btn_group_centered
+                    button.btn.btn_gray(data-dismiss="modal" aria-label="Close") ОК
+                    button.btn.btn_gray(data-dismiss="modal" aria-label="Close") отменить

@@ -1,0 +1,38 @@
+.exaccess {
+    
+
+    .form_data_block_content {
+        color: $additional_info_color;
+        align-items: center;
+
+        &.approve {
+            .form_element {
+                input[type=text] {
+                    width: 400px;
+                }
+            }
+
+            .btn {
+                margin: 0;
+            }
+        }
+
+        .form_element {
+            input[type=text] {
+                width: 200px;
+            }
+        }
+
+        label {
+            margin-left: 10px;
+        }
+
+        .btn {
+            margin-left: 10px;
+        }
+    }
+
+    .activation {
+        margin-left: 10px;
+    }
+}
