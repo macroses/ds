@@ -235,76 +235,132 @@
       <main>
         <div class="box">
           <ul class="nav nav-tabs" role="tablist">
-            <li><a class="nav-link active" href="#tabShopAddress" role="tab" data-toggle="tab">ShopAddress</a></li>
-            <li><a class="nav-link" href="#tabSettings" role="tab" data-toggle="tab">Settings</a></li>
+            <li><a class="nav-link" href="#tabShopAddress" role="tab" data-toggle="tab">ShopAddress</a></li>
+            <li><a class="nav-link active" href="#tabSettings" role="tab" data-toggle="tab">Settings</a></li>
             <li><a class="nav-link" href="#tabFavicon" role="tab" data-toggle="tab">Favicon</a></li>
           </ul>
           <div class="tab-content">
-            <div class="tab-pane active" id="tabShopAddress">
+            <div class="tab-pane active" id="tabSettings">
               <div class="content_box">
-                <div class="exaccess">
+                <div class="exaccess settings">
                   <div class="form_data_block">
                     <div class="form_data_block_item">
-                      <div class="form_data_block_title">Бесплатный домен:</div>
+                      <div class="form_data_block_title">Заголовок (title):</div>
                       <div class="form_data_block_content">
-                        <div class="form_element">
-                          <input type="text" placeholder="http://">.exaccess.com
-                          <button class="btn btn_gray">сохранить</button>
-                          <label class="for_check">
-                            <input type="checkbox"><span class="text">перенаправить на свой домен</span>
-                          </label>
+                        <div class="exaccess_option">
+                          <div class="form_element">
+                            <input type="text">
+                          </div>
                         </div>
                       </div>
                     </div>
                     <div class="form_data_block_item">
-                      <div class="form_data_block_title">Свой домен:</div>
+                      <div class="form_data_block_title">Описание (meta description):</div>
                       <div class="form_data_block_content">
-                        <div class="form_element">
-                          <input type="text" placeholder="http://">
-                          <button class="btn btn_gray" data-toggle="modal" data-target="#domen_activation">активировать</button>
+                        <div class="exaccess_option">
+                          <div class="form_element">
+                            <input type="text">
+                          </div>
                         </div>
-                        <div class="alert_box warning">Ошибка активации домена. Для подключения домена вам необходимо в настройках домена указать NS сервера ns1.yep.com. и ns2.yep.com.</div>
                       </div>
                     </div>
                     <div class="form_data_block_item">
-                      <div class="form_data_block_title">Бесплатный домен:</div>
-                      <div class="form_data_block_content"><a class="main_link" href="#">kakoi-to.site.com</a>
-                        <button class="btn btn_gray" data-toggle="modal" data-target="#delete_website">удалить привязку</button><span class="activation">идет активация ...</span>
-                      </div>
-                    </div>
-                    <div class="form_data_block_item">
-                      <div class="form_data_block_title">Почта для домена:</div>
+                      <div class="form_data_block_title">Ключевые слова:</div>
                       <div class="form_data_block_content">
-                        <div class="form_element">
-                          <select>
-                            <option value="0"></option>
-                            <option value="1">Yandex Connect</option>
-                            <option value="2">Mail.ru</option>
-                            <option value="3">Gmail G Suite</option>
-                          </select>
+                        <div class="exaccess_option">
+                          <div class="form_element">
+                            <input type="text">
+                          </div>
+                          <div class="sep">разделитель - запятая</div>
                         </div>
                       </div>
                     </div>
                     <div class="form_data_block_item">
-                      <div class="form_data_block_title">Код подтверждения:</div>
-                      <div class="form_data_block_content approve">
-                        <div class="form_element">
-                          <input type="text" placeholder="если еще не подтвержден">
+                      <div class="form_data_block_title">Закрыть витрину:</div>
+                      <div class="form_data_block_content">
+                        <div class="exaccess_option">
+                          <div class="form_element">
+                            <label class="for_check">
+                              <input type="checkbox"><span class="text">от покупателей</span>
+                            </label>
+                          </div>
                         </div>
                       </div>
                     </div>
                     <div class="form_data_block_item">
-                      <div class="form_data_block_title">DKIM:</div>
-                      <div class="form_data_block_content approve">
-                        <div class="form_element">
-                          <input type="text" placeholder="не обязательно">
+                      <div class="form_data_block_title">Всегда открыт для IP адресов:</div>
+                      <div class="form_data_block_content">
+                        <div class="exaccess_option ip">
+                          <div class="form_element">
+                            <input type="text">
+                          </div>
+                          <div class="sep">разделитель - запятая ваш текущий IP: 109.252.60.138</div>
                         </div>
                       </div>
                     </div>
                     <div class="form_data_block_item">
-                      <div class="form_data_block_title"></div>
-                      <div class="form_data_block_content approve">
-                        <button class="btn btn_gray">подключить</button>
+                      <div class="form_data_block_title">Счетчики:</div>
+                      <div class="form_data_block_content">
+                        <div class="counters">
+                          <div class="counter_item">
+                            <label>Google Analytics Id:</label><a class="main_link" href="#">указать</a>
+                          </div>
+                          <div class="counter_item">
+                            <label>Yandex Metrika Id:</label>
+                            <div class="form_element">
+                              <input type="text">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form_data_block_item">
+                      <div class="form_data_block_title">Мета-теги проверки принадлежности сайта:</div>
+                      <div class="form_data_block_content tags">
+                        <div class="counters">
+                          <div class="counter_item">
+                            <label>Google</label>
+                            <div class="form_element">
+                              <input type="text">
+                            </div>
+                          </div>
+                          <div class="counter_item">
+                            <label>Yandex</label>
+                            <div class="form_element">
+                              <input type="text">
+                            </div>
+                          </div>
+                          <div class="counter_item">
+                            <label>Mail.ru</label>
+                            <div class="form_element">
+                              <input type="text">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="counters">
+                          <div class="counter_item">
+                            <label>WebMoney.Passport</label>
+                            <div class="form_element">
+                              <input type="text">
+                            </div>
+                          </div>
+                          <div class="counter_item">
+                            <label>Interkassa-verification</label>
+                            <div class="form_element">
+                              <input type="text">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form_data_block_item">
+                      <div class="form_data_block_title">Дополнительные настройки:</div>
+                      <div class="form_data_block_content"><a class="main_link" href="#">подробнее</a></div>
+                    </div>
+                    <div class="form_data_block_item">
+                      <div class="form_data_block_title"> </div>
+                      <div class="form_data_block_content">
+                        <button class="btn btn_blue">сохранить</button>
                       </div>
                     </div>
                   </div>
@@ -314,42 +370,6 @@
           </div>
         </div>
       </main>
-      <div class="modal fade" id="delete_website" tabindex="-1" aria-labelledby="delete_website" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered popup modal-sm">
-          <div class="modal-content">
-            <div class="modal-header">
-              <div class="modal-title">Подтвердите действие</div><span class="close" data-dismiss="modal" aria-label="Close">
-                <svg class="pic-modal_close ">
-                  <use xlink:href="img/svg/sprite.svg#modal_close"></use>
-                </svg></span>
-            </div>
-            <div class="modal-body">Вы уверены что хотите удалить привязку к бесплатному домену?
-              <div class="modal_btn_group_centered">
-                <button class="btn btn_gray" data-dismiss="modal" aria-label="Close">подтвердить</button>
-                <button class="btn btn_gray" data-dismiss="modal" aria-label="Close">отменить</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="modal fade" id="domen_activation" tabindex="-1" aria-labelledby="domen_activation" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered popup modal-sm">
-          <div class="modal-content">
-            <div class="modal-header">
-              <div class="modal-title">Активация домена</div><span class="close" data-dismiss="modal" aria-label="Close">
-                <svg class="pic-modal_close ">
-                  <use xlink:href="img/svg/sprite.svg#modal_close"></use>
-                </svg></span>
-            </div>
-            <div class="modal-body">Для подключения домена вам необходимо в настройках домена указать NS сервера ns1.yep.com. и ns2.yep.com. Обычно сайт заработает в течении 1-2 часов после активации.
-              <div class="modal_btn_group_centered">
-                <button class="btn btn_gray" data-dismiss="modal" aria-label="Close">ОК</button>
-                <button class="btn btn_gray" data-dismiss="modal" aria-label="Close">отменить</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       <footer>
         <div class="box">
           <div class="footer_content">

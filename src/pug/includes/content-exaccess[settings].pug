@@ -1,0 +1,91 @@
+main
+    .box
+        +tab-list(['ShopAddress', 'Settings', 'Favicon'], 1)
+            +tab('Settings', 'active')
+                .content_box
+                    .exaccess.settings
+                        .form_data_block
+                            .form_data_block_item
+                                .form_data_block_title Заголовок (title):
+                                .form_data_block_content
+                                    .exaccess_option
+                                        .form_element
+                                            input(type="text")
+                            .form_data_block_item
+                                .form_data_block_title Описание (meta description):
+                                .form_data_block_content
+                                    .exaccess_option
+                                        .form_element
+                                            input(type="text")
+                            .form_data_block_item
+                                .form_data_block_title Ключевые слова:
+                                .form_data_block_content
+                                    .exaccess_option
+                                        .form_element
+                                            input(type="text")
+                                        .sep разделитель - запятая
+                            .form_data_block_item
+                                .form_data_block_title Закрыть витрину:
+                                .form_data_block_content
+                                    .exaccess_option
+                                        .form_element
+                                            label.for_check
+                                                input(type="checkbox")
+                                                span.text от покупателей
+
+                            .form_data_block_item
+                                .form_data_block_title Всегда открыт для IP адресов:
+                                .form_data_block_content
+                                    .exaccess_option.ip
+                                        .form_element
+                                            input(type="text")
+                                        .sep разделитель - запятая ваш текущий IP: 109.252.60.138
+
+                            .form_data_block_item
+                                .form_data_block_title Счетчики:
+                                .form_data_block_content
+                                    .counters
+                                        .counter_item
+                                            label Google Analytics Id:
+                                            a.main_link(href="#") указать
+                                        .counter_item
+                                            label Yandex Metrika Id:
+                                            .form_element
+                                                input(type="text")
+
+                            .form_data_block_item
+                                .form_data_block_title Мета-теги проверки принадлежности сайта:
+                                .form_data_block_content.tags
+                                    .counters
+                                        .counter_item
+                                            label Google
+                                            .form_element
+                                                input(type="text")
+                                        .counter_item
+                                            label Yandex
+                                            .form_element
+                                                input(type="text")
+                                        .counter_item
+                                            label Mail.ru
+                                            .form_element
+                                                input(type="text")
+
+                                    .counters
+                                        .counter_item
+                                            label WebMoney.Passport
+                                            .form_element
+                                                input(type="text")
+                                        .counter_item
+                                            label Interkassa-verification
+                                            .form_element
+                                                input(type="text")
+
+                            .form_data_block_item
+                                .form_data_block_title Дополнительные настройки:
+                                .form_data_block_content
+                                    a.main_link(href="#") подробнее
+
+                            .form_data_block_item
+                                .form_data_block_title 
+                                .form_data_block_content
+                                    button.btn.btn_blue сохранить

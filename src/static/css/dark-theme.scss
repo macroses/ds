@@ -1010,3 +1010,8 @@ button.btn, input[type="submit"].btn, a.btn, label.btn {
         color: map-get($dark_colors, main);
     }
 }
+
+.exaccess.settings .sep {
+    background: #2e2e2e;
+    border-color: map-get($dark_bg, nav);
+}
