@@ -3,4 +3,33 @@ main
         +tab-list(['ShopAddress', 'Settings', 'Favicon'], 2)
             +tab('Favicon', 'active')
                 .content_box
-                    
+                    .exaccess_favicon
+                        .favicon_loaded
+                            img(src="img/default_favicon.ico", alt="")
+                            span.del_icon
+                                +icon('close_circle')
+                        .favicon_dropzone
+                            .file_upload_box
+                                label.btn.btn_gray загрузить PNG | SVG
+                                    input(type="file")
+                                .file_dropbox или перетащите файл сюда
+                        .favicon_preview
+                            .favicon_preview_title
+                                img(src="img/default_favicon.ico", alt="")
+                                |test title test title test title test title test title test title 
+                            .favicon_preview_address
+                                |http://testaddress.comhttp://testaddress.comhttp://testaddress.comhttp://testaddress.com
+
+                    .hint рекомендуемые размеры изображения: не менее 32x32
+
+                    ul.files_status_list
+                        li.files_status_list_item
+                            +icon('file_accept')
+                            .file_name
+                                span.text НазваниеФайла.jpg
+                                .hint Файл успешно загружен 9 Кб
+                        li.files_status_list_item 
+                            +icon('file_denied')
+                            .file_name
+                                span.text НазваниеФайла.jpg
+                                .hint Допустимые форматы : jpeg, gif, png

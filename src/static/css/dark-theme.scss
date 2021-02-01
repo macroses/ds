@@ -1015,3 +1015,8 @@ button.btn, input[type="submit"].btn, a.btn, label.btn {
     background: #2e2e2e;
     border-color: map-get($dark_bg, nav);
 }
+
+.favicon_loaded {
+    background: rgba(0,0,0,0);
+    border-color: map-get($dark_bg, nav);
+}

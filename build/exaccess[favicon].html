@@ -241,7 +241,45 @@
           </ul>
           <div class="tab-content">
             <div class="tab-pane active" id="tabFavicon">
-              <div class="content_box"></div>
+              <div class="content_box">
+                <div class="exaccess_favicon">
+                  <div class="favicon_loaded"><img src="img/default_favicon.ico" alt=""><span class="del_icon">
+                      <svg class="pic-close_circle ">
+                        <use xlink:href="img/svg/sprite.svg#close_circle"></use>
+                      </svg></span></div>
+                  <div class="favicon_dropzone">
+                    <div class="file_upload_box">
+                      <label class="btn btn_gray">загрузить PNG | SVG
+                        <input type="file">
+                      </label>
+                      <div class="file_dropbox">или перетащите файл сюда</div>
+                    </div>
+                  </div>
+                  <div class="favicon_preview">
+                    <div class="favicon_preview_title"><img src="img/default_favicon.ico" alt="">test title test title test title test title test title test title </div>
+                    <div class="favicon_preview_address">http://testaddress.comhttp://testaddress.comhttp://testaddress.comhttp://testaddress.com</div>
+                  </div>
+                </div>
+                <div class="hint">рекомендуемые размеры изображения: не менее 32x32</div>
+                <ul class="files_status_list">
+                  <li class="files_status_list_item">
+                    <svg class="pic-file_accept ">
+                      <use xlink:href="img/svg/sprite.svg#file_accept"></use>
+                    </svg>
+                    <div class="file_name"><span class="text">НазваниеФайла.jpg</span>
+                      <div class="hint">Файл успешно загружен 9 Кб</div>
+                    </div>
+                  </li>
+                  <li class="files_status_list_item"> 
+                    <svg class="pic-file_denied ">
+                      <use xlink:href="img/svg/sprite.svg#file_denied"></use>
+                    </svg>
+                    <div class="file_name"><span class="text">НазваниеФайла.jpg</span>
+                      <div class="hint">Допустимые форматы : jpeg, gif, png</div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>

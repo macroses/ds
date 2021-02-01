@@ -128,3 +128,102 @@
     }
 }
 
+
+.exaccess_favicon {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.favicon_loaded {
+    width: 45px;
+    border: solid 1px #d9e0e4;
+    background: #f8fbfd;
+    position: relative;
+    border-radius: 2px;
+    margin-right: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    img {
+        max-width: 32px;
+        max-height: 32px;
+    }
+
+    .del_icon {
+        position: absolute;
+        right: 1px;
+        top: 1px;
+        opacity: .5;
+        cursor: pointer;
+
+        border-radius: 50%;
+        width: 15px;
+        height: 15px;
+        display: flex;
+        background: #fff;
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+.favicon_dropzone {
+    width: 300px;
+    margin-right: 7px;
+    .file_upload_box {
+        margin: 0;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .file_dropbox {
+        border: 1px dashed #78909c;
+        margin-top: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 0;
+        width: 100%;
+        color: $additional_info_color;
+        font-size: 13px;
+        border-radius: 4px;
+    }
+}
+
+.favicon_preview {
+    width: 430px;
+    background: url(../img/favicon_bg.svg) no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.favicon_preview_title {
+    // display: inline-flex;
+    // align-items: center;
+    position: absolute;
+    top: 19px;
+    left: 132px;
+    max-width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    img {
+        margin-right: 8px;
+        width: 16px;
+        height: 16px;
+    }
+}
+
+.favicon_preview_address {
+    position: absolute;
+    top: 58px;
+    left: 162px;
+    max-width: 250px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
