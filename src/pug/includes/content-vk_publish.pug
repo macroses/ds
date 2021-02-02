@@ -1,0 +1,84 @@
+main
+    .box
+        +tab-list(['GroupMenu', 'BuiltinApplication'], 1)
+            +tab('BuiltinApplication', 'active')
+                .content_box
+                    .title_block Публикация каталога в ВКонтакте добавлением приложения Digiseller
+                    .vk_publish
+                        .vk_publish_widget
+                            .alert_box.info Для публикации каталога у вас должна быть группа во ВКонтакте
+                            ul.vk_steps_list
+                                li.vk_steps_item.done
+                                    .vk_steps_item_num 1
+                                    .vk_steps_item_title Авторизация
+                                li.vk_steps_item.active
+                                    .vk_steps_item_num 2
+                                    .vk_steps_item_title Настройка
+                                li.vk_steps_item
+                                    .vk_steps_item_num 3
+                                    .vk_steps_item_title Загрузка
+                                li.vk_steps_item
+                                    .vk_steps_item_num 4
+                                    .vk_steps_item_title Установка
+
+                            .auth_vk
+                                +icon('vk')
+                                .auth_vk_btn
+                                    .title Для публикации авторизуйтесь в ВКонтакте
+                                    button.btn.btn_gray вход
+
+                            .post_settings
+                                .title_block Настройка поста
+                                .title Выберите группу:
+                                .post_settings_content
+                                    +select(['test', 'TEST DS'])
+                                    button.btn.btn_gray 
+                                        +icon('reload')
+                                        |  обновить список
+                            
+                                .btn_group
+                                    button.btn.btn_gray назад
+                                    button.btn.btn_blue публиковать
+
+                            .vk_install_ds
+                                .vk_install_ds_bg
+                                .title Приложение создано, вам осталось добавить его
+                                a.main_link(href="#") Перейти в установку приложение в группу
+
+                        .vk_publish_preview
+                            .vk_publish_preview_bg
+                        .vk_publish_history
+                            .title_block История публикаций
+                            table.equal_cells
+                                colgroup
+                                    col(style="width: 130px")
+                                    col
+                                thead
+                                    tr
+                                        th Дата
+                                        th Группа ВКонтакте
+                                tbody
+                                    tr
+                                        td 31.07.2019 10:58
+                                        td 
+                                            a.main_link(href="#") test test test test test test test test test test test test test test test test test test test test test test test test test test test test 
+                                    tr
+                                        td 31.07.2019 10:58
+                                        td 
+                                            a.main_link(href="#") test test test test test test test test test test test test test test test test test test test test test test test test test test test test 
+                                    tr
+                                        td 31.07.2019 10:58
+                                        td 
+                                            a.main_link(href="#") test test test test test test test test test test test test test test test test test test test test test test test test test test test test 
+                                    tr
+                                        td 31.07.2019 10:58
+                                        td 
+                                            a.main_link(href="#") test test test test test test test test test test test test test test test test test test test test test test test test test test test test 
+                                    tr
+                                        td 31.07.2019 10:58
+                                        td 
+                                            a.main_link(href="#") test test test test test test test test test test test test test test test test test test test test test test test test test test test test 
+                                    tr
+                                        td 31.07.2019 10:58
+                                        td 
+                                            a.main_link(href="#") test test test test test test test test test test test test test test test test test test test test test test test test test test test test 

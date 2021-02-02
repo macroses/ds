@@ -1020,3 +1020,29 @@ button.btn, input[type="submit"].btn, a.btn, label.btn {
     background: rgba(0,0,0,0);
     border-color: map-get($dark_bg, nav);
 }
+
+.auth_vk {
+    border-color: map-get($dark_bg, nav);
+    .title {
+        color: map-get($dark_colors, main);
+    }
+}
+
+.pic-reload {
+    fill: map-get($dark_colors, main);
+}
+
+.post_settings .title {
+    color: map-get($dark_colors, main);
+}
+
+.vk_install_ds {
+    border-color: map-get($dark_bg, nav);
+    .title {
+        color: map-get($dark_colors, main);
+    }
+}
+
+.vk_steps_item.active .vk_steps_item_title {
+    color: map-get($dark_colors, main);
+}
