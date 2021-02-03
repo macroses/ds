@@ -1,0 +1,123 @@
+main
+    .box
+        +tab-list(['GroupMenu', 'BuiltinApplication'], 0)
+            +tab('GroupMenu', 'active')
+                .content_box
+                    .title_block Публикация каталога в ВКонтакте через создание меню группы
+                    .vk_publish.wiki
+                        .vk_publish_widget
+                            .alert_box.info Для публикации каталога у вас должна быть группа во ВКонтакте
+                            ul.vk_steps_list
+                                li.vk_steps_item.done
+                                    .vk_steps_item_num 1
+                                    .vk_steps_item_title Авторизация
+                                li.vk_steps_item.active
+                                    .vk_steps_item_num 2
+                                    .vk_steps_item_title Настройка
+                                li.vk_steps_item
+                                    .vk_steps_item_num 3
+                                    .vk_steps_item_title Загрузка
+                                li.vk_steps_item
+                                    .vk_steps_item_num 4
+                                    .vk_steps_item_title Установка
+
+                            .post_settings
+                                .title_block Настройка поста
+                                .title Выберите группу:
+                                .post_settings_content
+                                    +select(['test', 'TEST DS'])
+                                    button.btn.btn_gray 
+                                        +icon('reload')
+                                        |  обновить список
+                                
+                                .title Выберите валюту отображения цены:
+                                .post_settings_content
+                                    +select(['RUB', 'USD', 'EUR', 'UAH'])
+
+
+                                .tabs_inner
+                                    +tab-list(['readymadeButtons', 'Showcase'], 0)
+                                        +tab('readymadeButtons', 'acitve')
+                                            .colors_list
+                                                .title Цвета:
+                                                label.yellow
+                                                    input(type="radio", name="color" checked)
+                                                    span
+                                                label.blue
+                                                    input(type="radio", name="color")
+                                                    span
+                                                label.red
+                                                    input(type="radio", name="color")
+                                                    span
+                                                label.green
+                                                    input(type="radio", name="color")
+                                                    span
+                                            .button_settings
+                                                .button_settings_item
+                                                    .title Текст кнопки:
+                                                    .post_settings_content
+                                                        +select(['Магазин', 'Каталог', 'Товары', 'Витрина', 'Купить'])
+                                                .button_settings_item
+                                                    .title Дизайн кнопки:
+                                                    .post_settings_content
+                                                        +select(['Вариант 1', 'Вариант 2', 'Вариант 3', 'Вариант 4'])
+                                        +tab('Showcase')
+                                            .file_upload_box
+                                                label.btn.btn_gray выбрать файл
+                                                    input(type="file")
+                                                .hint Допустимые форматы: jpeg, png, gif
+                                                .hint размер до: 510 x 510px
+                                            .progress
+                                                .progress-bar(role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100")
+                                            ul.files_status_list
+                                                li.files_status_list_item
+                                                    +icon('file_accept')
+                                                    .file_name
+                                                        span.text НазваниеФайла.jpg
+                                                        .hint Файл успешно загружен 9 Кб
+                                                li.files_status_list_item 
+                                                    +icon('file_denied')
+                                                    .file_name
+                                                        span.text НазваниеФайла.jpg
+                                                        .hint Допустимые форматы : jpeg, gif, png
+
+                                .btn_group
+                                    button.btn.btn_gray назад
+                                    button.btn.btn_blue публиковать
+
+                        .vk_publish_preview
+                            .vk_publish_preview_bg
+                                // yellow, red, blue, green
+                                // var_one, var_two, var_three, var_four
+                                button.preview_btn.red.var_four Магазин
+
+                                // если вместо кнопки картинка, кнопку скрываем, картинку раскомментируем
+                                //- img(src="https://wonder-day.com/wp-content/uploads/2020/10/wonder-day-among-us-png-51.png", alt="")
+                        .vk_publish_history
+                            .title_block История публикаций
+                            table.equal_cells
+                                colgroup
+                                    col(style="width: 130px")
+                                    col
+                                    col(style="width: 85px")
+                                thead
+                                    tr
+                                        th Дата
+                                        th Группа ВКонтакте
+                                        th Кнопка
+                                tbody
+                                    tr
+                                        td 31.07.2019 10:58
+                                        td 
+                                            a.main_link(href="#") test test test test test test test test test test test test test test test test test test test test test test test test test test test test 
+                                        td Магазин
+                                    tr
+                                        td 31.07.2019 10:58
+                                        td 
+                                            a.main_link(href="#") test test test test test test test test test test test test test test test test test test test test test test test test test test test test 
+                                        td Магазин
+                                    tr
+                                        td 31.07.2019 10:58
+                                        td 
+                                            a.main_link(href="#") test test test test test test test test test test test test test test test test test test test test test test test test test test test test 
+                                        td Магазин

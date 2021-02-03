@@ -146,6 +146,16 @@
     select {
         width: 100%;
     }
+
+    .progress {
+        margin-top: 5px;
+        height: 10px;
+        background: rgba(0,0,0,0);
+        border-radius: 2px;
+    }
+    .progress-bar {
+        background: #B2C1C7;
+    }
 }
 
 .post_settings_content {
@@ -183,4 +193,196 @@
     background: url(../img/vk_install_ds.png) no-repeat;
     background-size: contain;
     margin-bottom: 20px;
+}
+
+
+.colors_list {
+    margin: 20px 0;
+    input {
+        display: none;
+    }
+
+    .title {
+        margin-bottom: 10px;
+    }
+
+    label {
+        margin-right: 10px;
+        span {
+            display: inline-block;
+            @include box(24px);
+            cursor: pointer;
+            border-radius: $border-rad;
+        }
+        &.yellow {
+            span {
+                background: #fbcf1e;
+            }
+
+            input[type=radio]:checked + span {
+                box-shadow: inset 0 0 0 1px #fbcf1e, inset 0 0 0 2px #ffffff, inset 0 0 0 24px #fbcf1e;
+            }
+        }
+        &.blue {
+            span {
+                background: #1f6cbf;
+            }
+
+            input[type=radio]:checked + span {
+                box-shadow: inset 0 0 0 1px #1f6cbf, inset 0 0 0 2px #ffffff, inset 0 0 0 24px #1f6cbf;
+            }
+        }
+        &.red {
+            span {
+                background: #e53a33;
+            }
+
+            input[type=radio]:checked + span {
+                box-shadow: inset 0 0 0 1px #e53a33, inset 0 0 0 2px #ffffff, inset 0 0 0 24px #e53a33;
+            }
+        }
+        &.green {
+            span {
+                background: #6aa139;
+            }
+
+            input[type=radio]:checked + span {
+                box-shadow: inset 0 0 0 1px #6aa139, inset 0 0 0 2px #ffffff, inset 0 0 0 24px #6aa139;
+            }
+        }
+    }
+}
+
+
+.button_settings {
+    display: flex;
+}
+
+.button_settings_item {
+    &:not(:last-child) {
+        margin-right: 10px;
+    }
+    flex: 1;
+
+    .post_settings_content {
+        margin-bottom: 0;
+    }
+}
+
+.vk_publish.wiki {
+    .post_settings_content {
+        border-bottom: 0;
+    }
+
+    .tab-pane {
+        margin-bottom: 10px;
+        border-bottom: solid 1px #e9e9e9;
+    }
+
+    .vk_publish_widget {
+        flex: auto;
+    }
+
+    .vk_publish_history {
+        flex: 4;
+    }
+
+
+    .vk_publish_preview_bg {
+        width: 350px;
+        height: 400px;
+        background: url(../img/vk_bg.png) no-repeat;
+        background-size: contain;
+
+        @include flex-center;
+
+        img {
+            max-width: 100%;
+            height: 150px;
+        }
+    }
+}
+
+.preview_btn {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-family: Roboto;
+    font-weight: bold;
+    width: 70%;
+    padding: 12px 0;
+    outline: 0!important;
+    cursor: default!important;
+    position: relative;
+    z-index: 2;
+    &.yellow {
+        background: linear-gradient(to bottom, #ffdd3e, #f7c304);
+        border: 2px solid #fbd021;
+    }
+
+    &.blue {
+        color: #fff;
+        background: linear-gradient(to bottom, #1a75cf, #2360ab);
+        border: 2px solid #2360ab;
+    }
+
+    &.red {
+        background: #e93c33;
+        color: #fff;
+        border: 2px solid #d1061e;
+    }
+
+    &.green {
+        background: linear-gradient(to bottom, #7ab141, #578d30);
+        color: #fff;
+        border: 2px solid #69954b;
+    }
+
+    &.var_one {
+        border-radius: 4px;
+    }
+
+    &.var_two {
+        border-radius: 25px;
+    }
+
+    &.var_three {
+        border-radius: 0;
+    }
+
+    &.var_four {
+        background: rgba(0,0,0,0);
+        border: 0;
+        &:after {
+            content: '';
+            position: absolute;
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);;
+            top: -2px;
+            left: -2px;
+            transform: skew(-25deg);
+            background: #000;
+            z-index: -1;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
+    }
+
+    &.yellow.var_four:after {
+        background: linear-gradient(to bottom, #ffdd3e, #f7c304);
+        border: 2px solid #fbd021;
+    }
+    &.blue.var_four:after {
+        background: linear-gradient(to bottom, #1a75cf, #2360ab);
+        border: 2px solid #2360ab;
+    }
+    &.red.var_four:after {
+        background: #e93c33;
+        border: 2px solid #d1061e;
+    }
+    &.green.var_four:after {
+        background: linear-gradient(to bottom, #7ab141, #578d30);
+        border: 2px solid #69954b;
+    }
 }

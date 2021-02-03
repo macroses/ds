@@ -234,195 +234,23 @@
       </nav>
       <main>
         <div class="box">
-          <ul class="nav nav-tabs" role="tablist">
-            <li><a class="nav-link active" href="#tabGroupMenu" role="tab" data-toggle="tab">GroupMenu</a></li>
-            <li><a class="nav-link" href="#tabBuiltinApplication" role="tab" data-toggle="tab">BuiltinApplication</a></li>
-          </ul>
-          <div class="tab-content">
-            <div class="tab-pane active" id="tabGroupMenu">
-              <div class="content_box">
-                <div class="title_block">Публикация каталога в ВКонтакте через создание меню группы</div>
-                <div class="vk_publish wiki">
-                  <div class="vk_publish_widget">
-                    <div class="alert_box info">Для публикации каталога у вас должна быть группа во ВКонтакте</div>
-                    <ul class="vk_steps_list">
-                      <li class="vk_steps_item done">
-                        <div class="vk_steps_item_num">1</div>
-                        <div class="vk_steps_item_title">Авторизация</div>
-                      </li>
-                      <li class="vk_steps_item active">
-                        <div class="vk_steps_item_num">2</div>
-                        <div class="vk_steps_item_title">Настройка</div>
-                      </li>
-                      <li class="vk_steps_item">
-                        <div class="vk_steps_item_num">3</div>
-                        <div class="vk_steps_item_title">Загрузка</div>
-                      </li>
-                      <li class="vk_steps_item">
-                        <div class="vk_steps_item_num">4</div>
-                        <div class="vk_steps_item_title">Установка</div>
-                      </li>
-                    </ul>
-                    <div class="post_settings">
-                      <div class="title_block">Настройка поста</div>
-                      <div class="title">Выберите группу:</div>
-                      <div class="post_settings_content">
-                        <div class="form_element">
-                          <select>
-                            <option value="0">test</option>
-                            <option value="1">TEST DS</option>
-                          </select>
-                        </div>
-                        <button class="btn btn_gray"> 
-                          <svg class="pic-reload ">
-                            <use xlink:href="img/svg/sprite.svg#reload"></use>
-                          </svg> обновить список
-                        </button>
-                      </div>
-                      <div class="title">Выберите валюту отображения цены:</div>
-                      <div class="post_settings_content">
-                        <div class="form_element">
-                          <select>
-                            <option value="0">RUB</option>
-                            <option value="1">USD</option>
-                            <option value="2">EUR</option>
-                            <option value="3">UAH</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="tabs_inner">
-                        <ul class="nav nav-tabs" role="tablist">
-                          <li><a class="nav-link active" href="#tabreadymadeButtons" role="tab" data-toggle="tab">readymadeButtons</a></li>
-                          <li><a class="nav-link" href="#tabShowcase" role="tab" data-toggle="tab">Showcase</a></li>
-                        </ul>
-                        <div class="tab-content">
-                          <div class="tab-pane active" id="tabreadymadeButtons">
-                            <div class="colors_list">
-                              <div class="title">Цвета:</div>
-                              <label class="yellow">
-                                <input type="radio" name="color" checked><span></span>
-                              </label>
-                              <label class="blue">
-                                <input type="radio" name="color"><span></span>
-                              </label>
-                              <label class="red">
-                                <input type="radio" name="color"><span></span>
-                              </label>
-                              <label class="green">
-                                <input type="radio" name="color"><span></span>
-                              </label>
-                            </div>
-                            <div class="button_settings">
-                              <div class="button_settings_item">
-                                <div class="title">Текст кнопки:</div>
-                                <div class="post_settings_content">
-                                  <div class="form_element">
-                                    <select>
-                                      <option value="0">Магазин</option>
-                                      <option value="1">Каталог</option>
-                                      <option value="2">Товары</option>
-                                      <option value="3">Витрина</option>
-                                      <option value="4">Купить</option>
-                                    </select>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="button_settings_item">
-                                <div class="title">Дизайн кнопки:</div>
-                                <div class="post_settings_content">
-                                  <div class="form_element">
-                                    <select>
-                                      <option value="0">Вариант 1</option>
-                                      <option value="1">Вариант 2</option>
-                                      <option value="2">Вариант 3</option>
-                                      <option value="3">Вариант 4</option>
-                                    </select>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="tab-pane" id="tabShowcase">
-                            <div class="file_upload_box">
-                              <label class="btn btn_gray">выбрать файл
-                                <input type="file">
-                              </label>
-                              <div class="hint">Допустимые форматы: jpeg, png, gif</div>
-                              <div class="hint">размер до: 510 x 510px</div>
-                            </div>
-                            <div class="progress">
-                              <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <ul class="files_status_list">
-                              <li class="files_status_list_item">
-                                <svg class="pic-file_accept ">
-                                  <use xlink:href="img/svg/sprite.svg#file_accept"></use>
-                                </svg>
-                                <div class="file_name"><span class="text">НазваниеФайла.jpg</span>
-                                  <div class="hint">Файл успешно загружен 9 Кб</div>
-                                </div>
-                              </li>
-                              <li class="files_status_list_item"> 
-                                <svg class="pic-file_denied ">
-                                  <use xlink:href="img/svg/sprite.svg#file_denied"></use>
-                                </svg>
-                                <div class="file_name"><span class="text">НазваниеФайла.jpg</span>
-                                  <div class="hint">Допустимые форматы : jpeg, gif, png</div>
-                                </div>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="btn_group">
-                        <button class="btn btn_gray">назад</button>
-                        <button class="btn btn_blue">публиковать</button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="vk_publish_preview">
-                    <div class="vk_publish_preview_bg">
-                      <!-- yellow, red, blue, green-->
-                      <!-- var_one, var_two, var_three, var_four-->
-                      <button class="preview_btn red var_four">Магазин</button>
-                      <!-- если вместо кнопки картинка, кнопку скрываем, картинку раскомментируем-->
-                    </div>
-                  </div>
-                  <div class="vk_publish_history">
-                    <div class="title_block">История публикаций</div>
-                    <table class="equal_cells">
-                      <colgroup>
-                        <col style="width: 130px">
-                        <col>
-                        <col style="width: 85px">
-                      </colgroup>
-                      <thead>
-                        <tr>
-                          <th>Дата</th>
-                          <th>Группа ВКонтакте</th>
-                          <th>Кнопка</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>31.07.2019 10:58</td>
-                          <td> <a class="main_link" href="#">test test test test test test test test test test test test test test test test test test test test test test test test test test test test </a></td>
-                          <td>Магазин</td>
-                        </tr>
-                        <tr>
-                          <td>31.07.2019 10:58</td>
-                          <td> <a class="main_link" href="#">test test test test test test test test test test test test test test test test test test test test test test test test test test test test </a></td>
-                          <td>Магазин</td>
-                        </tr>
-                        <tr>
-                          <td>31.07.2019 10:58</td>
-                          <td> <a class="main_link" href="#">test test test test test test test test test test test test test test test test test test test test test test test test test test test test </a></td>
-                          <td>Магазин</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
+          <div class="content_box">
+            <div class="analytics">
+              <div class="title_block">Google Analytics</div>
+              <div class="alert_box info">
+                <ul class="analytics_list">
+                  <li>1. Войдите в <a class="main_link" href="#">аккаунт Google Analytics.</a></li>
+                  <li>2. Нажмите <a class="main_link" href="#">Администратор</a> в левой нижней части страницы, под списком отчетов на панели навигации. На странице Администратор есть 3 колонки: <span class="bolder">Аккаунт</span>, <span class="bolder">Ресурс</span> и <span class="bolder">Представление</span>.</li>
+                  <li>3. Создайте или выберите <span class="bolder">Аккаунт</span> и <a class="main_link" href="#">Ресурс</a> для вашего сайта.</li>
+                  <li>4. <a class="main_link" href="#">Найдите идентификатор отслеживания</a>. В колонке <span class="bolder">Ресурс</span> выберите <span class="bolder">Отслеживание</span> > <span class="bolder">Код отслеживания</span>. <a class="main_link" href="#">Идентификатор отслеживания</a> будет представлен в верхней части страницы.</li>
+                  <li>5. Скопируйте и вставьте <span class="bolder">идентификатор отслеживания</span> в поле <i>Идентификатор отслеживания Google Analytics</i> ниже на этой странице. Сохраните изменения.</li>
+                  <li>6. <a class="main_link" href="#">Включите функцию "Расширенная электронная торговля"</a>. В столбце <span class="bolder">Представление</span> нажмите <span class="bolder">Настройки электронной торговли</span>. В разделе <i>Включите электронную торговлю </i>установите переключатель в положение <span class="bolder">ВКЛ</span>. В разделе <span class="bolder">Настройки расширенной электронной торговли </span>установите переключатель в положение <span class="bolder">ВКЛ</span>.</li>
+                  <li>7. Чтобы убедиться, что код отслеживания работает, зайдите на ваш сайт и проверьте, было ли это посещение зарегистрировано в <a class="main_link" href="#">отчетах в режиме реального времени</a>.</li>
+                </ul>
+              </div>
+              <div class="form_element"><span>Идентификатор отслеживания Google Analytics</span>
+                <input class="err" type="text" placeholder="UA-000000000-0">
+                <button class="btn btn_blue">сохранить</button>
               </div>
             </div>
           </div>
