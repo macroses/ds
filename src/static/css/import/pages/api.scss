@@ -1,0 +1,49 @@
+.api_box {
+    display: flex;
+}
+
+.api_contents {
+    flex: 1;
+    .title_block {
+        margin-bottom: 5px;
+    }
+
+    .info_list {
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+
+    .main_link {
+        font: 400 14px Roboto;
+    }
+}
+
+.api_partners {
+    flex: 1; 
+
+    .title_block {
+        margin-bottom: 5px;
+    }
+
+    .hint {
+        background: #eceff1;
+        font-size: 12px;
+        padding: 15px;
+        border-radius: 4px;
+    }
+}
+
+.api_partners_item {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+    color: #78909c;
+    svg {
+        @include box(160px, 50px);
+    }
+}
+
+.api_partners_item_logo {
+    margin-right: 50px;
+}
