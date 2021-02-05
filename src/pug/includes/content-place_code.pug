@@ -1,0 +1,132 @@
+main
+    .box
+        .content_box
+            .page_nav
+                ul.breadcrumbs_list
+                    li.breadcrumb_item
+                        a.main_link.back_link(href="#") к списку рекламных мест
+            
+        .content_box
+            .place_code
+                .place_code_title
+                    a.main_link(href="#") Тест Тест Тест Тест Тест 
+                    .place_code_title_counts
+                        a.main_link(href="#") виджет
+                        span.sep |
+                        a.main_link(href="#") продано
+                        |: 0
+                        span.sep |
+                        a.main_link(href="#") оплачено
+                        |: 0
+                        span.sep |
+                        a.main_link(href="#") настройки
+
+                .place_code_item
+                    .form_data_block
+                        .form_data_block_item
+                            .form_data_block_title URL-страницы:
+                            .form_data_block_content
+                                a.main_link(href="#") http://google.com
+
+                        .form_data_block_item
+                            .form_data_block_title Размер:
+                            .form_data_block_content 468 X 60 pixels
+
+                        .form_data_block_item
+                            .form_data_block_title Место размещения:
+                            .form_data_block_content http://google.com
+                        
+                        .form_data_block_item
+                            .form_data_block_title Состояние:
+                            .form_data_block_content 
+                                .place_code_item_status
+                                    span.waiting ожидается размещение html-кода...
+                                    button.btn.btn_gray я разместил html-код
+                        
+                        .form_data_block_item
+                            .form_data_block_title Виджет:
+                            .form_data_block_content
+                                .good_link_code
+                                    span.clipboard 
+                                        +icon('copy')
+                                        |скопировать в буфер
+                                    .form_element
+                                        textarea
+                                    .hint
+                                        |Для выставления рекламного места на продажу, разместите приведённый выше html-код на странице 
+                                        i https://digiseller.ru
+                                        |  и нажмите кнопку "я разместил html-код".
+
+                .banners_code
+                    .alert_box.info Мы рекомендуем вам разместить одну из следующих ссылок в непосредственной близости от продаваемого вами рекламного места. Нажав на любую из ссылок, посетитель вашего сайта попадет на страницу биржы Mestkom.Ru где продается данное рекламное место.
+                    
+                    .banner_choice_list 
+                        .form_element 
+                            label.for_radio
+                                input(type="radio", name="banner")
+                                span.text 
+                                    img(src="img/mestkom/blue_right.gif", alt="")
+                        .form_element 
+                            label.for_radio
+                                input(type="radio", name="banner")
+                                span.text
+                                    img(src="img/mestkom/blue_left.gif", alt="")
+                        .form_element 
+                            label.for_radio
+                                input(type="radio", name="banner")
+                                span.text
+                                    img(src="img/mestkom/blue_down.gif", alt="")
+                        .form_element 
+                            label.for_radio
+                                input(type="radio", name="banner")
+                                span.text
+                                    img(src="img/mestkom/blue_up.gif", alt="")
+                    .banner_choice_list 
+                        .form_element 
+                            label.for_radio
+                                input(type="radio", name="banner")
+                                span.text
+                                    img(src="img/mestkom/grey_right.gif", alt="")
+                        .form_element 
+                            label.for_radio
+                                input(type="radio", name="banner")
+                                span.text 
+                                    img(src="img/mestkom/grey_left.gif", alt="")
+                        .form_element 
+                            label.for_radio
+                                input(type="radio", name="banner")
+                                span.text 
+                                    img(src="img/mestkom/grey_down.gif", alt="")
+                        .form_element 
+                            label.for_radio
+                                input(type="radio", name="banner")
+                                span.text
+                                    img(src="img/mestkom/grey_up.gif", alt="")
+                    .banner_choice_list 
+                        .form_element 
+                            label.for_radio
+                                input(type="radio", name="banner")
+                                span.text
+                                    img(src="img/mestkom/orange_right.gif", alt="")
+                        .form_element 
+                            label.for_radio
+                                input(type="radio", name="banner")
+                                span.text
+                                    img(src="img/mestkom/orange_left.gif", alt="")
+                        .form_element 
+                            label.for_radio
+                                input(type="radio", name="banner")
+                                span.text
+                                    img(src="img/mestkom/orange_down.gif", alt="")
+                        .form_element 
+                            label.for_radio
+                                input(type="radio", name="banner")
+                                span.text
+                                    img(src="img/mestkom/orange_up.gif", alt="")
+
+                    .good_link_code
+                        span.clipboard 
+                            +icon('copy')
+                            |скопировать в буфер
+                        .form_element
+                            textarea

@@ -1,0 +1,45 @@
+main
+    .box
+        .content_box
+            .page_nav
+                ul.breadcrumbs_list
+                    li.breadcrumb_item
+                        a.main_link.back_link(href="#") к списку рекламных мест
+            
+        .content_box
+            .place_code
+                .place_code_title
+                    a.main_link(href="#") Тест Тест Тест Тест Тест 
+                    .place_code_title_counts
+                        a.main_link(href="#") виджет
+                        span.sep |
+                        a.main_link(href="#") продано
+                        |: 0
+                        span.sep |
+                        a.main_link(href="#") оплачено
+                        |: 0
+                        span.sep |
+                        a.main_link(href="#") настройки
+
+            .place_code_table
+                table.equal_cells.hovered_rows
+                    colgroup
+                        col
+                        col(style="width: 200px")
+                        col(style="width: 200px")
+                    thead
+                        tr
+                            th Покупатель
+                            th Сумма
+                            th Дата
+                    tbody
+                        tr
+                            td testmail@gmail.com
+                            td 1785,97 
+                                span.rub RUB
+                            td 21.08.2013 0:00:26
+                        tr
+                            td testmail@gmail.com
+                            td 1785,97 
+                                span.rub RUB
+                            td 21.08.2013 0:00:26

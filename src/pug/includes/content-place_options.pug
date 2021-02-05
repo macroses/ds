@@ -1,0 +1,86 @@
+main
+    .box
+        .content_box
+            .page_nav
+                ul.breadcrumbs_list
+                    li.breadcrumb_item
+                        a.main_link.back_link(href="#") к списку рекламных мест
+            
+        .content_box
+            .place_code
+                .place_code_title
+                    a.main_link(href="#") Тест Тест Тест Тест Тест 
+                    .place_code_title_counts
+                        a.main_link(href="#") виджет
+                        span.sep |
+                        a.main_link(href="#") продано
+                        |: 0
+                        span.sep |
+                        a.main_link(href="#") оплачено
+                        |: 0
+                        span.sep |
+                        a.main_link(href="#") настройки
+
+                .place_settings
+                    .form_data_block
+                        .form_data_block_item
+                            .form_data_block_title Рекламное место
+                            .form_data_block_content
+                                |Test
+                        .form_data_block_item
+                            .form_data_block_title Настройки баннера по
+                                br
+                                |  умолчанию:
+                            .form_data_block_content.vertical
+                                .form_element
+                                    label.for_check
+                                        input(type="checkbox" checked)
+                                        span.text показывать статистику
+                                .statistics 
+                                    .form_element
+                                        label.for_radio
+                                            input(type="radio" name="stats")
+                                            span.text вчерашнего дня
+                                    .form_element
+                                        label.for_radio
+                                            input(type="radio" name="stats" checked)
+                                            span.text сегодняшнего дня
+                        .form_data_block_item
+                            .form_data_block_title Ограничение на размер баннера:
+                            .form_data_block_content.vertical
+                                .showing_counts
+                                    .form_element 
+                                        span.title Пороговый размер баннера
+                                        input(type="text")
+                                    |килобайт
+                                .showing_counts
+                                    .form_element 
+                                        span.title Свыше порогового размера
+                                        input(type="text")
+                                    |% от стоимости пакета за каждый лишний килобайт
+                                .showing_counts
+                                    .form_element 
+                                        span.title Максимальный размер банера 
+                                        input(type="text")
+                                    |килобайт
+                        .form_data_block_item
+                            .form_data_block_title Модерация при выкупе:
+                            .form_data_block_content.vertical
+                                .form_element
+                                    label.for_radio
+                                        input(type="radio" name="stats")
+                                        span.text нет
+                                .showing_counts
+                                    .form_element
+                                        label.for_radio
+                                            input(type="radio" name="stats" checked)
+                                            span.text Да - время принятия решения
+                                    .form_element
+                                        input(type="text")
+                                    |дней
+                        .form_data_block_item
+                            .form_data_block_title Основные опции:
+                            .form_data_block_content
+                                a.main_link(href="#") подробнее
+                    .btn_group 
+                        button.btn.btn_blue сохранить

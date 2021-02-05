@@ -1,0 +1,156 @@
+.places {
+    table {
+        margin: 20px 0 10px;
+
+        .main_link {
+            margin-right: 10px;
+        }
+    }
+
+    .additional_text {
+        background: #fff;
+        display: inline-block;
+        border-radius: 4px;
+        color: #b2b2b2;
+        padding: 2px 5px;
+    }
+}
+
+.place_name {
+    color: #b2b2b2;
+    margin-right: 10px;
+    display: inline-block;
+    max-width: 70%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.place_name_box {
+    display: flex;
+    align-items: center;
+}
+
+.place_code_title {
+    display: flex;
+    justify-content: space-between;
+
+    .sep {
+        margin: 0 7px;
+    }
+}
+
+.place_code_item {
+    margin-top: 40px;
+
+    .good_link_code {
+        padding-left: 0;
+        width: 100%;
+        textarea {
+            width: 100%;
+            height: 110px;
+        }
+    }
+}
+
+.place_code_item_status {
+    .waiting {
+        color: red;
+    }
+}
+
+.place_settings {
+    margin-top: 40px;
+
+    .form_element{
+        &.full {
+            input[type=text] {
+                width: 100%;
+            }
+        }
+
+        .hint {
+            margin: 0 0 0px 5px;
+        }
+    }
+
+    .type {
+        span {
+            color: $additional_info_color;
+            margin-left: 5px;
+        }
+    }
+
+    .showing_counts {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        .form_element {
+            width: auto;
+            margin-right: 5px;
+            & + .form_element {
+                margin-top: 0;
+            }
+    
+            input[type=text] {
+                width: 100px;
+            }
+        }
+
+        .title {
+            margin-right: 5px;
+        }
+    }
+
+    .btn_group {
+        margin-top: 20px;
+    }
+
+    .statistics {
+        margin-left: 25px;
+        margin-top: 10px;
+    }
+}
+
+.adaptive_code {
+    margin: 10px 0 0px 25px;
+    .btn {
+        margin-top: 10px;
+    }
+
+    .form_element {
+        textarea {
+            width: 100%;
+        }
+    }
+}
+
+.placing {
+    width: 100%;
+    .form_element {
+        width: 100%;
+        textarea {
+            width: 100%;
+            height: 110px;
+        }
+    }
+}
+
+.banner_choice_list {
+    display: flex;
+    margin-top: 10px;
+    .form_element {
+        margin-right: 20px;
+    }
+}
+
+.banners_code {
+    margin-top: 20px;
+    .good_link_code {
+        padding-left: 0;
+        margin-top: 20px;
+    }
+}
+
+.place_code_table {
+    margin-top: 40px;
+}

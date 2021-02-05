@@ -1,0 +1,147 @@
+main
+    .box
+        .content_box
+            .page_nav
+                ul.breadcrumbs_list
+                    li.breadcrumb_item
+                        a.main_link.back_link(href="#") к списку рекламных мест
+            
+        .content_box
+            .place_code
+                .place_code_title
+                    a.main_link(href="#") Тест Тест Тест Тест Тест 
+                    .place_code_title_counts
+                        a.main_link(href="#") виджет
+                        span.sep |
+                        a.main_link(href="#") продано
+                        |: 0
+                        span.sep |
+                        a.main_link(href="#") оплачено
+                        |: 0
+                        span.sep |
+                        a.main_link(href="#") настройки
+
+                .place_settings
+                    .form_data_block
+                        .form_data_block_item
+                            .form_data_block_title Название страницы:
+                            .form_data_block_content
+                                .form_element.full
+                                    input(type="text")
+                        .form_data_block_item
+                            .form_data_block_title URL-сайта:
+                            .form_data_block_content
+                                .form_element.full
+                                    input(type="text")
+                        .form_data_block_item
+                            .form_data_block_title URL-страницы:
+                            .form_data_block_content
+                                .form_element.full
+                                    input(type="text")
+                        .form_data_block_item
+                            .form_data_block_title Раздел:
+                            .form_data_block_content
+                                +select(['IT-ресурсы', 'Webmoney-ресурсы'])
+                        .form_data_block_item
+                            .form_data_block_title URL-страницы:
+                            .form_data_block_content.vertical
+                                .form_element
+                                    label.for_check
+                                        input(type="checkbox" checked)
+                                        span.text Баннер
+                                .form_element
+                                    label.for_check
+                                        input(type="checkbox" checked)
+                                        span.text Виджет
+                                .form_element
+                                    label.for_check
+                                        input(type="checkbox" checked)
+                                        span.text Текст
+                        .form_data_block_item
+                            .form_data_block_title Размер:
+                            .form_data_block_content
+                                .form_element
+                                    select
+                                        option(value="0") 468 x 60
+                                        option(value="1") 100 x 100
+                                        option(value="2") 240 x 400
+                                        option(value="3") 160 x 120
+                                        option(value="4") 250 x 15
+                                    .hint (ширина х высота)
+                        .form_data_block_item
+                            .form_data_block_title Показывать по умолчанию:
+                            .form_data_block_content.vertical
+                                .form_element
+                                    label.for_radio
+                                        input(type="radio" name="default")
+                                        span.text местком-заглушка "РЕКЛАМНОЕ МЕСТО СДАЁТСЯ"
+                                .form_element
+                                    label.for_radio
+                                        input(type="radio" name="default" checked)
+                                        span.text мой HTML-код:
+                                .adaptive_code
+                                    .form_element
+                                        textarea
+                                    button.btn.btn_gray адаптировать код
+
+                        .form_data_block_item
+                            .form_data_block_title Тип размещения:
+                            .form_data_block_content
+                                .type Динамический
+                                    span изменить тип нельзя, можно создать новое рекламное место
+
+                        .form_data_block_item
+                            .form_data_block_title Участие в ротации:
+                            .form_data_block_content.vertical
+                                .form_element
+                                    label.for_check
+                                        input(type="checkbox" checked)
+                                        span.text зарабатывать в свободные от выкупа показы
+                                .form_element
+                                    label.for_check
+                                        input(type="checkbox" checked)
+                                        span.text мой сайт разрешает показы баннеров эротического содержания
+
+                        .form_data_block_item
+                            .form_data_block_title Условия выкупа:
+                            .form_data_block_content.vertical
+                                .showing_counts
+                                    .form_element
+                                        label.for_check
+                                            input(type="checkbox" checked)
+                                            span.text продавать пакеты из
+                                    .form_element 
+                                        input(type="text")
+                                    |показов (уникальных в течение суток) 
+                                .showing_counts
+                                    .form_element 
+                                        span.title стоимость одного пакета
+                                        input(type="text")
+                                    span.usd USD
+                                .showing_counts
+                                    .form_element 
+                                        span.title Максимальное продаваемое число пакетов
+                                        input(type="text")
+                                    |(не обязательно)
+
+                        .form_data_block_item
+                            .form_data_block_title Место размещения:
+                            .form_data_block_content
+                                .placing
+                                    .form_element 
+                                        textarea
+                        .form_data_block_item
+                            .form_data_block_title Ограничения на размещение:
+                            .form_data_block_content
+                                .placing
+                                    .form_element 
+                                        textarea
+                        .form_data_block_item
+                            .form_data_block_title Дополнительные опции:
+                            .form_data_block_content
+                                a.main_link(href="#") Подробнее
+
+                    .btn_group 
+                        button.btn.btn_blue сохранить
+                        button.btn.btn_gray удалить
+

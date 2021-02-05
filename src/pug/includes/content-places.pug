@@ -1,0 +1,44 @@
+main
+    .box
+        .content_box
+            button.btn.btn_gray добавить новое рекламное место
+            .places
+                table.equal_cells.hovered_rows
+                    colgroup
+                        col(style="width: 80px")
+                        col(style="width: 300px")
+                        col
+                        col
+                        col
+                        col(style="width: 250px")
+                        col(style="width: 250px")
+                    thead
+                        tr
+                            th ID
+                            th Рекламное место
+                            th Продано
+                            th Оплачено
+                            th Виджет
+                            th Настройки
+                            th Функции
+                    tbody
+                        tr
+                            td 1234567
+                            td 
+                                .place_name_box
+                                    span.place_name тест тест тест тест тест тест тест тест тест тест тест тест 
+                                    a.main_link(href="#") выставить
+                            td 0
+                            td 0
+                            td 
+                                a.main_link(href="#") получить
+                            td
+                                a.main_link(href="#") основные
+                                a.main_link(href="#") дополнительные
+                            td
+                                a.main_link(href="#") остановить
+                                a.main_link(href="#") удалить
+
+                .alert_box.info
+                    .additional_text СЕРЫМ ЦВЕТОМ
+                    |  выделены рекламные места, недоступные для покупки либо по причине отсутсвия html-кода настранице,либо Вы забыли нажать кнопку "Выставить на продажу". Все соответствующие изменения вы можете произвести, воспользовавшись ссылкой "выставить".

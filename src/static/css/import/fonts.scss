@@ -1,16 +1,3 @@
-// @include font-face(Lato, "../fonts/Lato-Thin", 100, normal);
-// @include font-face(Lato, "../fonts/Lato-ThinItalic", 100, italic);
-// @include font-face(Lato, "../fonts/Lato-Light", 300, normal);
-// @include font-face(Lato, "../fonts/Lato-LightItalic", 300, italic);
-// @include font-face(Lato, "../fonts/Lato-Regular", 400, normal);
-// @include font-face(Lato, "../fonts/Lato-Italic", 400, italic);
-// @include font-face(Lato, "../fonts/Lato-Medium", 500, normal);
-// @include font-face(Lato, "../fonts/Lato-MediumItalic", 400, italic);
-// @include font-face(Lato, "../fonts/Lato-Bold", 700, normal);
-// @include font-face(Lato, "../fonts/Lato-BoldItalic", 700, italic);
-// @include font-face(Lato, "../fonts/Lato-Black", 900, normal);
-// @include font-face(Lato, "../fonts/Lato-BlackItalic", 900, italic);
-
 @font-face {
     font-family: 'Lato';
     src: url(../fonts/Lato-Thin.eot),
@@ -61,7 +48,6 @@ src: url(../fonts/Lato-Italic.eot),
 font-weight: 400;
 font-style: italic;
 }
-// url(../fonts/Lato-Bold.ttf)
 @font-face {
 font-family: 'Lato';
 src: url(../fonts/Lato-Bold.eot),
