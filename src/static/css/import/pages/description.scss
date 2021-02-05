@@ -66,6 +66,7 @@
 }
 
 .form_data_block_content {
+    overflow: hidden;
     .text_block {
         width: 100%;
         textarea {
@@ -101,6 +102,14 @@
         input[type=text] {
             width: 100%;
         }
+    }
+
+    .main_link {
+        max-width: 100%;
+        display: inline-block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 }
 

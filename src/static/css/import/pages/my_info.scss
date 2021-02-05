@@ -267,3 +267,13 @@
     color: $additional_info_color;
     margin-left: 20px;
 }
+
+// checkticket
+.checkticket {
+    .title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: red;
+    }
+}
