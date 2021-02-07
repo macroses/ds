@@ -1050,3 +1050,15 @@ button.btn, input[type="submit"].btn, a.btn, label.btn {
 .place_name {
     color: map-get($dark_colors, main);
 }
+
+.place_new_text {
+    color: map-get($dark_colors, main);
+}
+
+.place_code_title .sep {
+    color: map-get($dark_colors, main);
+}
+
+.place_code_title_counts {
+    color: map-get($dark_colors, main);
+}
