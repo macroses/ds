@@ -228,3 +228,38 @@
         margin-right: 10px;
     }
 }
+
+// my reklama adv
+
+.decorated {
+    text-decoration: underline;
+}
+
+.my_reklama_adv {
+    margin-top: 20px;
+    label + select {
+        margin-left: 5px;
+    }
+
+    .form_element {
+        &.date {
+            width: auto;
+
+            input[type=text] {
+                width: 100px;
+                margin-right: 5px;
+                margin-left: 2px;
+            }
+        }
+    }
+
+    .btn_group {
+        margin-top: 10px;
+    }
+}
+
+.my_reklama_table {
+    .place_name {
+        max-width: 100%;
+    }
+}

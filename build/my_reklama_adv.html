@@ -233,47 +233,129 @@
         </div>
       </nav>
       <main>
-        <div class="box">
-          <div class="content_box">
-            <button class="btn btn_gray">добавить новое рекламное место</button>
-            <div class="places">
-              <table class="equal_cells hovered_rows">
+        <div class="box"> 
+          <div class="content_box"> 
+            <div class="alert_box info">Размещение ссылки на ваше рекламное место в разделе "РЕКОМЕНДУЕМЫЕ" является платной услугой,причем <span class="decorated">чем больше эта сумма, тем выше ваше рекламное место будет стоять в общем списке</span> (для просмотра общего спискакликните на интересующую вас дату). Кроме того, рекомендуемые рекламные места размещаются на странице "Рекомендуемые рекламные места" сервиса "Местком.Ру", а такжевыделяются полужирным в поисковом каталоге "Местком.Ру".В случае блокировки вашего аккаунта администрацией или снятия рекламного места с продажи, оплата за размещение товара в разделе "РЕКОМЕНДУЕМЫЕ" не возвращается.<br><br>Выберите рекламное место и дату, нажав на [+]. Затем введите требуемую сумму и нажмите кнопку "оплатить". Указаннаясумма автоматически снимается с вашего <a class="main_link" href="#">личного счета</a>. В случае нулевого остатка на нем вам необходимо <a class="main_link" href="#">пополнить</a> его. Принеобходимости вы можете увеличить оплаченную сумму повторив операцию.</div>
+            <div class="alert_box warning"> <span class="bold">Внимание!</span> Минимальная стоимость данной услуги в <span class="bold">Mestkom.Ru</span> составляет <span class="bold">0,1</span> WMZ</div>
+            <div class="my_reklama_adv"> 
+              <div class="form_data_block">
+                <div class="form_data_block_item">
+                  <div class="form_data_block_title">Рекламное место:</div>
+                  <div class="form_data_block_content">Непознанное, обучающее, развитие человека (AL1o)</div>
+                </div>
+                <div class="form_data_block_item">
+                  <div class="form_data_block_title">Дата(ы) размещения:</div>
+                  <div class="form_data_block_content">
+                    <div class="form_element date">
+                      <label>c</label>
+                      <select>
+                        <option value="0">22.11.20</option>
+                        <option value="1">22.11.20</option>
+                      </select>
+                    </div>
+                    <div class="form_element">
+                      <label>по</label>
+                      <select>
+                        <option value="0">22.11.20</option>
+                        <option value="1">22.11.20</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="form_data_block_item">
+                  <div class="form_data_block_title">Cумма (за сутки):</div>
+                  <div class="form_data_block_content">
+                    <div class="form_element date">
+                      <input type="text">WMZ
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="btn_group"> 
+                <button class="btn btn_blue">оплатить</button>
+                <button class="btn btn_gray">отказаться</button>
+              </div>
+            </div>
+            <div class="my_reklama_table">
+              <table class="equal_cells">
                 <colgroup>
-                  <col style="width: 80px">
-                  <col style="width: 300px">
+                  <col style="width: 600px">
                   <col>
                   <col>
                   <col>
-                  <col style="width: 250px">
-                  <col style="width: 250px">
+                  <col>
+                  <col>
+                  <col>
+                  <col>
+                  <col>
+                  <col>
+                  <col>
                 </colgroup>
-                <thead>
-                  <tr>
-                    <th>ID</th>
-                    <th>Рекламное место</th>
-                    <th>Продано</th>
-                    <th>Оплачено</th>
-                    <th>Виджет</th>
-                    <th>Настройки</th>
-                    <th>Функции</th>
-                  </tr>
-                </thead>
                 <tbody>
                   <tr>
-                    <td>1234567</td>
-                    <td> 
-                      <div class="place_name_box"><span class="place_name empty">тест тест тест тест тест тест тест тест тест тест тест тест </span><a class="main_link" href="#">выставить</a></div>
+                    <td class="align_left">
+                      <div class="title"><span class="bolder">рекламное место </span>\ <span class="bolder">дата</span></div>
                     </td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td> <a class="main_link" href="#">получить</a></td>
-                    <td><a class="main_link" href="#">основные</a><a class="main_link" href="#">дополнительные</a></td>
-                    <td><a class="main_link" href="#">остановить</a><a class="main_link" href="#">удалить</a></td>
+                    <td><a class="main_link bolder" href="#">24.12</a></td>
+                    <td><a class="main_link bolder" href="#">24.12</a></td>
+                    <td><a class="main_link bolder" href="#">24.12</a></td>
+                    <td><a class="main_link bolder" href="#">24.12</a></td>
+                    <td><a class="main_link bolder" href="#">24.12</a></td>
+                    <td><a class="main_link bolder" href="#">24.12</a></td>
+                    <td><a class="main_link bolder" href="#">24.12</a></td>
+                    <td><a class="main_link bolder" href="#">24.12</a></td>
+                    <td><a class="main_link bolder" href="#">24.12</a></td>
+                    <td><a class="main_link bolder" href="#">24.12</a></td>
+                  </tr>
+                  <tr>
+                    <td class="align_left"> <span class="place_name empty">test</span></td>
+                    <td>0,00 <a href="#">[+]</a></td>
+                    <td>0,00 <a href="#">[+]</a></td>
+                    <td>0,00 <a href="#">[+]</a></td>
+                    <td>0,00 <a href="#">[+]</a></td>
+                    <td> <span class="bold">0,05 </span><a href="#">[+]</a></td>
+                    <td>0,00 <a href="#">[+]</a></td>
+                    <td>0,00 <a href="#">[+]</a></td>
+                    <td>0,00 <a href="#">[+]</a></td>
+                    <td>0,00 <a href="#">[+]</a></td>
+                    <td>0,00 <a href="#">[+]</a></td>
+                  </tr>
+                  <tr>
+                    <td class="align_left"> <span class="place_name">Название товара Название товара Название товара Название товара Название товара</span></td>
+                    <td>0,00 <a href="#">[+]</a></td>
+                    <td>0,00 <a href="#">[+]</a></td>
+                    <td>0,00 <a href="#">[+]</a></td>
+                    <td>0,00 <a href="#">[+]</a></td>
+                    <td>0,00 <a href="#">[+]</a></td>
+                    <td>0,00 <a href="#">[+]</a></td>
+                    <td>0,00 <a href="#">[+]</a></td>
+                    <td>0,00 <a href="#">[+]</a></td>
+                    <td>0,00 <a href="#">[+]</a></td>
+                    <td>0,00 <a href="#">[+]</a></td>
                   </tr>
                 </tbody>
               </table>
-              <div class="alert_box info">
-                <div class="additional_text">СЕРЫМ ЦВЕТОМ</div> выделены рекламные места, недоступные для покупки либо по причине отсутсвия html-кода настранице,либо Вы забыли нажать кнопку "Выставить на продажу". Все соответствующие изменения вы можете произвести, воспользовавшись ссылкой "выставить".
+              <div class="pagination_box">
+                <div class="pagination_title">Страницы:</div>
+                <ul class="pagination_list">
+                  <li><a class="active" href="#">1</a></li>
+                  <li><a href="#"> 2</a></li>
+                  <li><a href="#"> 3</a></li>
+                  <li><a href="#"> 4</a></li>
+                  <li><a href="#"> 5</a></li>
+                  <li><a class="sep" href="#"> ...</a></li>
+                  <li><a href="#"> 1200</a></li>
+                </ul>
+                <div class="pagination_sort">
+                  <div class="pagination_title">Товаров на странице:</div>
+                  <div class="form_element">
+                    <select>
+                      <option value="10">10</option>
+                      <option value="20" selected="selected">20</option>
+                      <option value="30">100</option>
+                    </select>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

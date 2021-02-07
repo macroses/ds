@@ -1046,3 +1046,7 @@ button.btn, input[type="submit"].btn, a.btn, label.btn {
 .vk_steps_item.active .vk_steps_item_title {
     color: map-get($dark_colors, main);
 }
+
+.place_name {
+    color: map-get($dark_colors, main);
+}

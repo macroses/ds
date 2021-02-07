@@ -17,12 +17,15 @@
 }
 
 .place_name {
-    color: #b2b2b2;
+    color: #000;
     margin-right: 10px;
     display: inline-block;
     max-width: 70%;
     overflow: hidden;
     text-overflow: ellipsis;
+    &.empty {
+        color: #b2b2b2;
+    }
 }
 
 .place_name_box {
