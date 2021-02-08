@@ -37,6 +37,14 @@
             margin-bottom: 10px;
         }
     }
+
+    .active {
+        
+        &.collapsed {
+            background: #fff;
+            border-top-color: rgba(0,0,0,0);
+        }
+    }
 }
 
 .form_filter_list {

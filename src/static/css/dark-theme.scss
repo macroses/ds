@@ -1092,8 +1092,16 @@ button.btn, input[type="submit"].btn, a.btn, label.btn {
         }
 
         .choices__list--dropdown {
-            // border-bottom-color: map-get($dark_bg, nav);
             background-color: #161b1e;
+        }
+    }
+}
+
+.account {
+    .active {
+        &.collapsed {
+            background: #272f34;
+            border-top-color: rgba(0,0,0,0);
         }
     }
 }

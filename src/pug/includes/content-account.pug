@@ -62,9 +62,9 @@ main
                                                         .form_filter_title Валюта операции:
                                                         +select(['Все', 'WMZ', 'WMR', 'WME', 'WMU', 'WMX'])
                                         .collapse_btn
-                                            span.active(data-toggle="collapse" data-target="#goodsFilter" aria-expanded="false" aria-controls="goodsFilter" tabindex="-1") фильтры
+                                            span.active.collapsed(data-toggle="collapse" data-target="#goodsFilter" aria-expanded="false" aria-controls="goodsFilter" tabindex="-1") фильтры
                             tbody 
-                                tr
+                                tr.no_results
                                     td(colspan="7")
                                         .alert_box.warning.align_center С учетом выбранных фильтров операции не найдены
                                 tr
@@ -188,7 +188,7 @@ main
                         table.equal_cells.payment
                             colgroup 
                                 col(style="width: 155px")
-                                col(style="width: 200px")
+                                col(style="width: 135px")
                                 col
                             thead
                                 tr
