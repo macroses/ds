@@ -53,6 +53,10 @@
             height: 110px;
         }
     }
+
+    .form_data_block_content {
+        overflow: hidden;
+    }
 }
 
 .place_code_item_status {
@@ -160,4 +164,20 @@
 
 .place_new_text{
     margin: 20px 0;
+}
+
+// fillup
+.fillup {
+    margin-top: 20px;
+
+    .form_element {
+        width: auto;
+        input[type=text] {
+            width: 100px;
+        }
+    }
+
+    .form_data_block {
+        margin-bottom: 10px;
+    }
 }

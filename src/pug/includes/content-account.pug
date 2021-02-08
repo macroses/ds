@@ -1,0 +1,251 @@
+main 
+    .box 
+        +tab-list(['Digiseller', 'WmMerchant', 'PayPal', 'PayMaster', 'Robokassa', 'YandexKassa', 'Interkassa'], 0)
+            +tab('Digiseller', 'acitve')
+                .content_box
+                    .alert_box.info Здесь отображаются все приходные и расходные операции с вашим счетом в сервисе Digiseller.
+
+                    .account 
+                        table.equal_cells.hovered_rows 
+                            colgroup 
+                                col(style="width: 200px")
+                                col
+                                col(style="width: 150px")
+                                col(style="width: 110px")
+                                col(style="width: 80px")
+                                col(style="width: 110px")
+                                col(style="width: 180px")
+                            thead
+                                tr
+                                    th Тип операции
+                                    th Название
+                                    th Дата
+                                    th Сумма
+                                    th.align_center Комиссия
+                                    th.align_center На счет
+                                    th.align_center Доступны после
+                                        span.star *
+                                tr
+                                    th.filter_cell(colspan="7")
+                                        .collapse(id="goodsFilter" )
+                                            
+                                            .collapse_filter_content
+                                                //- ul.activated_already
+                                                //-     li
+                                                //-         .activated_already_item только предзаказы
+                                                //-             +icon('modal_close')
+                                                //-     li 
+                                                //-         .activated_already_item только предзаказы
+                                                //-             +icon('modal_close')
+                                                // мультиселект в коллапсе вызывает прыжки по высоте
+                                                // необходимо показывать choices_list только при открытом коллапсе.
+                                                .form_filter_list
+                                                    .form_filter_item 
+                                                        .form_filter_title Тип операции:
+                                                        .selects.filter
+                                                            select#defaultSelect(multiple)
+                                                                option(value="0") продажа товаров
+                                                                option(value="1") партнерские начисления
+                                                                option(value="2") пополнение л/с
+                                                                option(value="3") обмен средств
+                                                                option(value="4") комиссия с продажи
+                                                                option(value="5") возврат средств
+                                                                option(value="6") размещение в рекомендуемых
+                                                                option(value="7") комиссия при оплате через PayPal
+                                                    .form_filter_item 
+                                                        .form_filter_title Операции, ожидающие проверки кода:
+                                                        +select(['Включить', 'Исключить', 'Показать только такие операции'])
+                                                    .form_filter_item 
+                                                        .form_filter_title Операции недоступные для вывода:
+                                                        +select(['Включить', 'Исключить', 'Показать только такие операции'])
+                                                    .form_filter_item 
+                                                        .form_filter_title Валюта операции:
+                                                        +select(['Все', 'WMZ', 'WMR', 'WME', 'WMU', 'WMX'])
+                                        .collapse_btn
+                                            span.active(data-toggle="collapse" data-target="#goodsFilter" aria-expanded="false" aria-controls="goodsFilter" tabindex="-1") фильтры
+                            tbody 
+                                tr
+                                    td(colspan="7")
+                                        .alert_box.warning.align_center С учетом выбранных фильтров операции не найдены
+                                tr
+                                    td перевод на кошелек
+                                    td Товар для Interkassa
+                                    td 18.01.2021 23:09:32
+                                    td 
+                                        span.rub 1.00 
+                                            small WMR
+                                    td.align_center 0%
+                                    td.align_center 
+                                        span.rub -1 
+                                            small WMR 
+                                    td проверки уникального кода
+                                tr
+                                    td перевод на кошелек
+                                    td 
+                                        a.main_link(href="#") API внешнего поставщика (2) API внешнего поставщика (2) API внешнего поставщика (2) API внешнего поставщика (2) API внешнего поставщика (2) 
+                                    td 18.01.2021 23:09:32
+                                    td 
+                                        span.usd 123456.99 
+                                            small WMZ
+                                    td.align_center 0%
+                                    td.align_center 
+                                        span.usd + 654321.21 
+                                            small WMZ 
+                                    td проверки уникального кода
+
+                        +pagination('Операций на странице:')
+
+                        table.equal_cells.payment
+                            colgroup 
+                                col(style="width: 155px")
+                                col(style="width: 200px")
+                                col
+                                col
+                            thead
+                                tr
+                                    th Всего на счету
+                                    th Пополнено с ограничением
+                                    th Доступно для снятие
+                                    th 
+                            tbody 
+                                tr
+                                    td 
+                                        .usd 7.81 WMZ
+                                    td 
+                                        .usd 1.17 WMZ
+                                    td 
+                                        .form_element 
+                                            input(type="text")
+                                            |WMZ
+                                    td.align_right
+                                        .transfer_to_wallet
+                                            button.btn.btn_gray перевести на кошелек
+                                tr
+                                    td 
+                                        .rub 7.81 WMR
+                                    td 
+                                        .rub 1.17 WMR
+                                    td 
+                                        .form_element 
+                                            input(type="text")
+                                            |WMR
+                                    td.align_right
+                                        .transfer_to_wallet
+                                            button.btn.btn_gray перевести на кошелек
+                                            .form_group 
+                                                .form_element 
+                                                    label.for_radio
+                                                        input(type="radio", name="purse")
+                                                        span.text WMP
+                                                .form_element 
+                                                    label.for_radio
+                                                        input(type="radio", name="purse" checked)
+                                                        span.text WMR
+                                tr
+                                    td 
+                                        .eur 0 WME
+                                    td 
+                                        .eur 0 WME
+                                    td 
+                                        .form_element 
+                                            input(type="text" disabled)
+                                            |WME
+                                    td.align_right
+                                        .transfer_to_wallet
+                                            button.btn.btn_gray(disabled) перевести на кошелек
+                                tr
+                                    td 
+                                        .uah 14.00 WMU
+                                    td 
+                                        .uah 0 WMU
+                                    td 
+                                        .form_element 
+                                            input(type="text")
+                                            |WMU
+                                    td.align_right
+                                        .transfer_to_wallet
+                                            button.btn.btn_gray перевести на кошелек
+                                tr
+                                    td 
+                                        .bitcoin 0 WMX
+                                    td 
+                                        .bitcoin 0 WMX
+                                    td 
+                                        .form_element 
+                                            input(type="text" disabled)
+                                            |WMX
+                                    td.align_right
+                                        .transfer_to_wallet
+                                            button.btn.btn_gray(disabled) перевести на кошелек
+
+                        .exchanger_text Обменять WMZ, WMR и WME между собой можно в разделе 
+                            a.main_link(href="#") WM-обмен
+                            |  или на 
+                            a.main_link(href="#") WM.Exchanger
+
+
+                        // вариант с тремя колонками
+                        table.equal_cells.payment
+                            colgroup 
+                                col(style="width: 155px")
+                                col(style="width: 200px")
+                                col
+                            thead
+                                tr
+                                    th Всего на счету
+                                    th Доступно для снятие
+                                    th 
+                            tbody 
+                                tr
+                                    td 
+                                        .usd 7.81 WMZ
+                                    td 
+                                        .form_element 
+                                            input(type="text")
+                                            |WMZ
+                                    td.align_right
+                                        .transfer_to_wallet
+                                            button.btn.btn_gray перевести на кошелек
+                                tr
+                                    td 
+                                        .rub 7.81 WMR
+                                    td 
+                                        .form_element 
+                                            input(type="text")
+                                            |WMR
+                                    td.align_right
+                                        .transfer_to_wallet
+                                            button.btn.btn_gray перевести на кошелек
+                                            .form_group 
+                                                .form_element 
+                                                    label.for_radio
+                                                        input(type="radio", name="purse_short")
+                                                        span.text WMP
+                                                .form_element 
+                                                    label.for_radio
+                                                        input(type="radio", name="purse_short" checked)
+                                                        span.text WMR
+                        .exchanger_text Обменять WMZ, WMR и WME между собой можно в разделе 
+                            a.main_link(href="#") WM-обмен
+                            |  или на 
+                            a.main_link(href="#") WM.Exchanger
+
+                        .alert_box.warning 
+                            .title 
+                                span.star *
+                                span.bold недоступны для вывода:
+                            |средства от продажи товара, со времени которой не прошло 3 суток (если администратором торговой площадки не установлен более длительный срок резервирования);
+                            br
+                            |начисление партнерского вознаграждения от продажи товара, со времени которой не прошло 3 суток или более (если администратором торговой площадки установлен более длительный срок резервирования);
+                            br
+                            |средства от продажи товара путем SMS-оплаты или оплаты с личного счета сотового оператора (МТС, Билайн, Мегафон, ТЕЛЕ2) — блокируются на срок от 10 до 15 суток;
+                            br
+                            |средства от продажи товара путем оплаты с банковской карты — блокируются на срок от 10 до 15 суток;
+                            br
+                            |начисление партнерских от продажи рекламного места, показы (клики) по которому еще не закончились;
+                            br
+                            |средства от продажи товара, на который покупатель оставил отрицательный отзыв, приведший к временной блокировке;
+                            br
+                            |средства от продажи товаров, заблокированные администратором торговой площадки;
+                            br
+                            |средства, пополненные с банковской карты или со счета мобильного телефона.

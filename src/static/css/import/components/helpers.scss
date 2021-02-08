@@ -245,7 +245,7 @@ span[data-toggle="tooltip"] {
 }
 
 // валюты
-.rub, .usd {
+.rub, .usd, .uah, .eur, .bitcoin {
     font: bold 13px Roboto;
     span {
         font-weight: normal;
@@ -260,6 +260,18 @@ span[data-toggle="tooltip"] {
 
 .usd {
     color: #78b437;
+}
+
+.uah {
+    color: orange;
+}
+
+.eur {
+    color: #b2b2b2;
+}
+
+.bitcoin {
+    color: #000;
 }
 
 .star {

@@ -39,3 +39,29 @@
 
 }
 
+// selects
+
+.selects {
+    width: 350px;
+    &.filter {
+        .choices__inner {
+            background: #fff;
+        }
+
+        .choices__item {
+            font-weight: normal;
+            margin-top: 2px;
+            margin-bottom: 2px;
+            font-size: 13px;
+        }
+
+        .choices__list--dropdown .choices__item {
+            padding: 6px;
+        }
+
+        .choices__list--dropdown .choices__item--selectable.is-highlighted {
+            background: #5897fb;
+            color: #fff;
+        }
+    }
+}

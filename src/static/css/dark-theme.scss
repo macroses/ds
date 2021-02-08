@@ -1062,3 +1062,38 @@ button.btn, input[type="submit"].btn, a.btn, label.btn {
 .place_code_title_counts {
     color: map-get($dark_colors, main);
 }
+
+
+.selects {
+    &.filter {
+        .choices__inner {
+            background: #161b1e;
+        }
+
+        .choices__item {
+            font-weight: normal;
+            margin-top: 2px;
+            margin-bottom: 2px;
+            font-size: 13px;
+        }
+
+        .choices__list--dropdown .choices__item {
+            padding: 6px;
+        }
+
+        .choices__list--dropdown .choices__item--selectable {
+            background: #161b1e;
+            
+        }
+
+        .choices__list--dropdown .choices__item--selectable.is-highlighted {
+            background: #5897fb;
+            color: #fff;
+        }
+
+        .choices__list--dropdown {
+            // border-bottom-color: map-get($dark_bg, nav);
+            background-color: #161b1e;
+        }
+    }
+}

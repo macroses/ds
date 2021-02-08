@@ -1,0 +1,62 @@
+.account {
+    table {
+        margin-top: 20px;
+        overflow: visible;
+
+        &.payment {
+            width: auto;
+            .form_element {
+                margin-bottom: 0;
+            }
+
+            input[type=text] {
+                width: 90px;
+                margin-right: 5px;
+            }
+
+            td {
+                overflow: visible;
+            }
+
+            .form_group {
+                position: absolute;
+                left: calc(100% + 5px);
+                top: 0;
+                .form_element {
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+    thead {
+        border-bottom: 0;
+    }
+
+    .alert_box {
+        .title {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.form_filter_list {
+    display: flex;
+}
+
+.form_filter_title {
+    margin-bottom: 5px;
+}
+
+.form_filter_item {
+    margin-right: 20px;
+}
+
+.transfer_to_wallet {
+    position: relative;
+}
+
+.exchanger_text {
+    font: bold 14px Lato;
+    color: $headers_color;
+    margin: 10px 0 40px;
+}
