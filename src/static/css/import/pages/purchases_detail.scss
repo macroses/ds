@@ -127,3 +127,46 @@
         font: bold 14px Lato;
     }
 }
+
+// purchase_inv_detail
+.purchase_inv_detail {
+    .user_detail {
+        .alert_box {
+            .main_link {
+                display: inline;
+            }
+        }
+    }
+
+    .form_data_block_content {
+        overflow: hidden;
+    }
+}
+
+.user_detail_item {
+    display: flex;
+    margin-bottom: 10px;
+    .title {
+        width: 80px;
+        font-weight: bold;
+    }
+
+    svg {
+        margin-left: 7px;
+    }
+
+    .pic-messages {
+        @include box(18px);
+        fill: #000;
+    }
+}
+
+.payment_ticket_status {
+    font-weight: bold;
+    &.done {
+        color: #00972A;
+    }
+    &.undone {
+        color: red;
+    }
+}
