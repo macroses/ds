@@ -1,0 +1,34 @@
+main 
+    .box 
+        +tab-list(['Digiseller', 'WmMerchant', 'PayPal', 'PayMaster', 'Robokassa', 'YandexKassa', 'Interkassa'], 1)
+            +tab('WmMerchant', 'acitve')
+                .content_box
+                    .alert_box.info Здесь отображаются продажи ваших товаров из собственного магазина, средства от оплаты которых были зачислены сразу на ваши 
+                        a.main_link(href="#") WM-кошельки
+                        |  за последние 12 месяцев.
+                    .account_payment
+                        table.equal_cells.hovered_rows 
+                            colgroup
+                                col(style="width: 300px")
+                                col(style="width: 400px")
+                                col
+                                col
+                                col
+                            thead 
+                                tr
+                                    th Тип операции
+                                    th Название
+                                    th Дата
+                                    th Сумма
+                                    th Комиссия
+                            tbody
+                                tr
+                                    td продажа товара
+                                    td Название товара
+                                    td 04.06.2020 19:23:33
+                                    td 
+                                        .usd 12345.98 
+                                            small USD
+                                    td 
+                                        .usd 12345.98 
+                                            small USD

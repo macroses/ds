@@ -68,3 +68,42 @@
     color: $headers_color;
     margin: 10px 0 40px;
 }
+
+.account_payment {
+    table {
+        margin-top: 20px;
+    }
+
+    .inner_row {
+        td:first-child {
+            padding-left: 27px;
+        }
+    }
+
+    .text {
+        margin-top: 10px;
+    }
+}
+
+.nested_table {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    .pic-catalog_plus,
+    .pic-catalog_minus {
+        fill: #fff;
+        @include box(8px);
+    }
+
+    .icon_item {
+        @include flex-center;
+        height: 18px;
+        width: 18px;
+        margin-right: 7px;
+        border-radius: 3px;
+        &.plus,
+        &.minus {
+            background: $main_links_color;
+        }
+    }
+}

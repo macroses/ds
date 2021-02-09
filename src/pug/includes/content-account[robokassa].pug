@@ -1,0 +1,79 @@
+main 
+    .box 
+        +tab-list(['Digiseller', 'WmMerchant', 'PayPal', 'PayMaster', 'Robokassa', 'YandexKassa', 'Interkassa'], 4)
+            +tab('Robokassa', 'acitve')
+                .content_box
+                    .alert_box.info Здесь отображаются продажи ваших товаров, с зачислением средств на 
+                        a.main_link(href="#") ваш счет в Robokassa
+                        |  за последние 12 месяцев.
+                    .account_payment
+                        table.equal_cells.hovered_rows 
+                            colgroup
+                                col(style="width: 400px")
+                                col
+                                col
+                                col
+                                col
+                            thead
+                                tr
+                                    td Название
+                                    td Дата
+                                    td Оплачено
+                                    td Комиссия(площадки)
+                                    td Статус платежа
+                            tbody
+                                tr
+                                    td Тест товар для робокасса
+                                    td 04.06.2020 19:23:33
+                                    td 
+                                        .rub 2.25 
+                                            small RUB
+                                    td 
+                                        .rub 0.03 
+                                            small WMR
+                                    td COMPLETE
+                                tr
+                                    td 
+                                        .nested_table
+                                            span.icon_item.plus
+                                                +icon('catalog_plus')
+                                            |Тест товар для робокасса
+                                    td 04.06.2020 19:23:33
+                                    td 
+                                        .rub 2.25 
+                                            small RUB
+                                    td 
+                                        .rub 0.03 
+                                            small WMR
+                                    td COMPLETE
+                                tr
+                                    td 
+                                        .nested_table
+                                            span.icon_item.minus
+                                                +icon('catalog_minus')
+                                            |Тест товар для робокасса
+                                    td 04.06.2020 19:23:33
+                                    td 
+                                        .rub 2.25 
+                                            small RUB
+                                    td 
+                                        .rub 0.03 
+                                            small WMR
+                                    td COMPLETE
+                                tr.inner_row
+                                    td Вложенный товар раз два
+                                    td 
+                                    td 
+                                    td 
+                                        .rub 0.02
+                                            small WMR
+                                    td
+                                tr.inner_row
+                                    td Вложенный товар раз два
+                                    td 
+                                    td 
+                                    td 
+                                        .rub 0.02
+                                            small WMR
+                                    td 123123 
+                        +pagination('Операций на странице:')

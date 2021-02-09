@@ -1,0 +1,11 @@
+main 
+    .box 
+        +tab-list(['Digiseller', 'WmMerchant', 'PayPal', 'PayMaster', 'Robokassa', 'YandexKassa', 'Interkassa'], 2)
+            +tab('PayPal', 'acitve')
+                .content_box
+                    .alert_box.info ЗЗдесь отображаются продажи ваших товаров, с зачислением средств на 
+                        a.main_link(href="#") ваш счет в PayPal
+                        |  за последние 12 месяцев.
+                    .account_payment 
+                        .text
+                            |Платежей на ваш счет в PayPal не зарегистрировано.

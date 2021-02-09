@@ -435,6 +435,11 @@ button.btn, input[type="submit"].btn, a.btn, label.btn {
             border-color: #2c97de;
             color: #fff;
         }
+
+        &.sep {
+            background: none;
+            border: 0;
+        }
     }
 }
 
