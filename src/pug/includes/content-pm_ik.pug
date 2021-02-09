@@ -1,0 +1,171 @@
+main
+    .box
+        +tab-list(['General_rules', 'Digiseller', 'WM_Merchant', 'PayPal', 'PayMaster', 'Robokassa', 'Yandex', 'Interkassa', 'Settings'], 7)
+            +tab('Interkassa', 'active')
+                .content_box
+                    .pm
+                        .pm_settings
+                            .alert_box.info Прием платежей через 
+                                a.main_link(href="#") Interkassa
+                                |  осуществляется напрямую на счет в системе Interkassa. Если вы еще не зарегистрированы в Interkassa, воспользуйтесь инструкцией справа на странице.
+                                br
+                                br
+                                |При продаже товаров через Interkassa комиссия взимается с вашего 
+                                a.main_link(href="#") личного счета
+                                |  в сервисе Digiseller. При отсутствии доступных средств на личном счете, через некоторое время этот шлюз оплаты автоматически блокируется. Рекомендуем заблаговременно 
+                                a.main_link(href="#") пополнить
+                                |  свой счет в Digiseller.
+
+                            .pm_purses_settings
+                                .title_top
+                                    .title.bold Ваши учетные данные в Interkassa:
+                                ul.pm_purses_settings_list
+                                    li.pm_purses_settings_list_item
+                                        .title Id пользователя:
+                                        .form_element
+                                            input(type="text")
+                                        .configure
+                                            .text
+                                                +icon('file_accept')
+                                                |проверено
+                                    li.pm_purses_settings_list_item
+                                        .title Ключ:
+                                        .form_element
+                                            input(type="text")
+                                        .configure
+                                    li.pm_purses_settings_list_item.btns
+                                        .title
+                                        .form_element
+                                            .btn_group
+                                                button.btn.btn_gray(disabled) сохранить
+                                                button.btn.btn_gray проверить
+                                        .configure
+
+                            .pm_purses_settings
+                                .title_top
+                                    .title.bold Дополнительные настройки:
+
+                                ul.pm_purses_settings_list
+                                    li.pm_purses_settings_list_item
+                                        .title
+                                            |ID кассы:
+                                        .form_element
+                                            select
+                                                option(value="0" selected) 123123123123123123123
+                                                option(value="1") вапвапвапвапвапвапвап
+                                        .configure
+                            
+                            .pm_purses_settings
+                                .title_top
+                                    .title.bold Доступные способы оплаты:
+                                    span нет
+                                    
+
+                                .alert_box.warning 
+                                    |В доступных способах оплаты присутствует «Тестовая платежная система». Оплатить товар данным способом невозможно. Пожалуйста зайдите в настройки кассы и выключите его.
+
+                        .pm_description
+                            +fieldset('Регистрация и настройка кассы в Interkassa')
+                                .fieldset_text
+                                    .content
+                                        span.bold 1
+                                        |. Для начала осуществите 
+                                        a.main_link(href="#") регистрацию
+                                        |  на сайте Interkassa. На email, указанный при регистрации, вы получите инструкцию по созданию кассы.
+
+                                    .content
+                                        span.bold 2
+                                        |. Зайдите в 
+                                        a.main_link(href="#") личный кабинет
+                                        |  и cоздайте кассу, через которую будете принимать платежи. В качестве адреса сайта укажите адрес вашего интернет-магазина. Если у вас нет своего сайта, рекомендуем 
+                                        a.main_link(href="#") получить бесплатный сайта
+                                        |  от Digiseller.Обращаем ваше внимание, что менеджер клиентской поддержки Interkassa в обязательном порядке ознакомится с содержимым вашего сайта, перечнем представленных на нем товаров и только после этого примет решение о предоставлении вам услуг по приему платежей. Рекомендуем заранее ознакомиться с 
+                                        a.main_link(href="#") требованиями к сайту
+                                        |.
+
+                                    a.fieldset_img_toggle(href="#" data-toggle="modal" data-target="#img_one"): img(src="img/pm_ik_1.png", alt="")
+
+                                    .content После завершения регистрации у вас появится личный кабинет и персональный менеджер, который будет помогать во время подключения и в дальнейшем.
+                                    .content
+                                        span.bold 3
+                                        |.  После создания кассы, на email, указанный при регистрации, вы получите инструкцию по активации кассы и платежных методов. Подтвердите владение кассой с помощью файла, который необходимо разместить в корне вашего сайта, или с помощью мета-тега, который следует разместить в секции head главной страницы вашего сайта. Если в качестве адреса магазина вы указали адрес бесплатного сайта, поместите значение 
+                                        span.bold content 
+                                        |  в поле
+                                        span.bold Interkassa-verification 
+                                        |  в разделе 
+                                        a.main_link(href="#") Настройки
+
+                                    a.fieldset_img_toggle(href="#" data-toggle="modal" data-target="#img_one"): img(src="img/pm_ik_2.png", alt="")
+
+                                    .content
+                                        span.bold 4
+                                        |. Пока ваш сайт проходит проверку, зайдите в настройки личного кабинета.
+
+                                    a.fieldset_img_toggle(href="#" data-toggle="modal" data-target="#img_one"): img(src="img/pm_ik_3.png", alt="")
+
+                                    .content
+                                        span.bold 5
+                                        |. Перейдите в меню "API", включите и создайте новый ключ. В качестве разрешенных IP-адресов через запятую укажите 
+                                        span.bold 91.227.52.20
+                                        |, 
+                                        span.bold 91.200.28.20 
+                                        |  и нажмите кнопку "Сохранить". Скопируйте 
+                                        span.bold Id пользователя
+                                        |, секретный 
+                                        span.bold ключ 
+                                        |  и вставьте в соответствующую форму на данной странице.
+
+                                    a.fieldset_img_toggle(href="#" data-toggle="modal" data-target="#img_one"): img(src="img/pm_ik_4.png", alt="")
+
+                                    .content
+                                        span.bold 6
+                                        |.  Вернитесь в режим касс и зайдите в настройки кассы. Перейдите в меню "Настройки платежей". Включите 
+                                        span.bold разрешить переопределять в запросе
+                                    
+                                    a.fieldset_img_toggle(href="#" data-toggle="modal" data-target="#img_one"): img(src="img/pm_ik_5.png", alt="")
+
+                                    .content 
+                                        span.bold 7
+                                        |. Перейдите в меню "Интерфейс", включите 
+                                        span.bold разрешить переопределять в запросе 
+                                        |  для всех URL и нажмите кнопку "Сохранить".
+
+                                    a.fieldset_img_toggle(href="#" data-toggle="modal" data-target="#img_one"): img(src="img/pm_ik_6.png", alt="")
+
+.modal.fade(id="img_one" tabindex="-1" aria-labelledby="img_one" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered.modal-lg.modal-preview
+        .modal-content
+            .modal-body
+                // добавляем/удаляем data-interval="false" родительскому тегу карусели, чтобы стопнуть автоплей слайдов
+                .carousel.slide(id="carouselExampleFade" data-ride="carousel" data-interval="false")
+                    .carousel-inner
+                        .carousel-item.active
+                            img(src="img/pm_ik_1.png", alt="")
+                        .carousel-item
+                            img(src="img/pm_ik_2.png", alt="")
+                        .carousel-item
+                            img(src="img/pm_ik_3.png", alt="")
+                        .carousel-item
+                            img(src="img/pm_ik_4.png", alt="")
+                        .carousel-item
+                            img(src="img/pm_ik_5.png", alt="")
+                        .carousel-item
+                            img(src="img/pm_ik_6.png", alt="")
+                    a.carousel-control-prev(href="#carouselExampleFade" role="button" data-slide="prev")
+                        span.carousel-control-prev-icon(aria-hidden="true")
+                    a.carousel-control-next(href="#carouselExampleFade" role="button" data-slide="next")
+                        span.carousel-control-next-icon(aria-hidden="true")
+            .modal-footer
+                .carousel_control
+                    .carousel_control_box
+                        // на плей надо будет добавлять контейнеру карусели data-interval
+                        button.btn.btn_gray
+                            +icon('control_play')
+                        a.btn.btn_gray(href="#carouselExampleFade" role="button" data-slide="prev")
+                            +icon('control_left')
+                        span.slides_counter 1/10
+                        a.btn.btn_gray(href="#carouselExampleFade" role="button" data-slide="next")
+                            +icon('control_right')
+                    .carousel_control_close
+                        button.btn.btn_gray(data-dismiss="modal" aria-label="Close")
+                            +icon('control_close')
