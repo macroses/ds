@@ -834,6 +834,13 @@ button.btn, input[type="submit"].btn, a.btn, label.btn {
     background: #3c484d;
 }
 
+.my_reklama_table {
+    .pic-eye_open,
+    .pic-eye_close {
+        fill: map-get($dark_colors, main);
+    }
+}
+
 .my_reklama_table .arrow {
     background: #3c484d;
 }
@@ -1109,4 +1116,9 @@ button.btn, input[type="submit"].btn, a.btn, label.btn {
             border-top-color: rgba(0,0,0,0);
         }
     }
+}
+
+.search_input_results {
+    background-color: #161b1e;
+    border-color: map-get($dark_bg, nav);
 }

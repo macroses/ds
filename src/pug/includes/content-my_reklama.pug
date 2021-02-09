@@ -23,10 +23,28 @@ main
                         .form_data_block_item
                             .form_data_block_title Товар:
                             .form_data_block_content
-                                .form_element
-                                    select
-                                        option(value="0") Товар 1
-                                        option(value="1") Товар 2
+                                .form_element.search
+                                    input(type="text" placeholder="ID Товара или его название")
+                                    ul.search_input_results
+                                        li 
+                                            span.id_num 1234567
+                                            span.name test test test test test test test test test test test test 
+                                        li 
+                                            span.id_num 1234567
+                                            span.name test test test test test test test test test test test test 
+                        
+                        .form_data_block_item
+                            .form_data_block_title Товар:
+                            .form_data_block_content
+                                .chosen_result 
+                                    .chosen_result_name test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test 
+                                    span.main_link изменить
+                        .form_data_block_item
+                            .form_data_block_title Товар:
+                            .form_data_block_content
+                                .chosen_result 
+                                    .chosen_result_name test 
+                                    span.main_link изменить
 
                         .form_data_block_item
                             .form_data_block_title Размещение:
@@ -122,7 +140,7 @@ main
             .my_reklama_table
                 table.equal_cells
                     colgroup
-                        col(style="width: 600px")
+                        col(style="width: 490px")
                         col
                         col
                         col
@@ -189,7 +207,9 @@ main
                                 a(href="#") [+]
                             td 0,00 
                                 a(href="#") [+]
-                            td 0,00 
+                            td 
+                                +icon('eye_open')
+                                |125,00 
                                 a(href="#") [+]
                             td 
                                 span.bold 0,05 
@@ -207,7 +227,9 @@ main
                         tr
                             td.align_left 
                                 a.main_link(href="#") Название товара Название товара Название товара Название товара Название товара Название товара Название товара Название товара Название товара 
-                            td 0,00 
+                            td 
+                                +icon('eye_close')
+                                |0,00 
                                 a(href="#") [+]
                             td 0,00 
                                 a(href="#") [+]
