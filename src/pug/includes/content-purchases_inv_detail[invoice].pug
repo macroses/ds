@@ -12,6 +12,12 @@ main
                         .breadcrumb_item_price 14895 
                             span RUB
                 .page_nav_item
+                    .goods_counters 
+                        a.main_link продано
+                        .count : 25
+                        span.sep |
+                        span в наличии
+                        .count : 1
                     .prev 
                         a.main_link(href="#") предыдущий товар
                     .next 
@@ -40,6 +46,7 @@ main
                                                 +icon('messages')
                                             a(href="#") 
                                                 +icon('copy')
+                                            a.main_link(href="#") все покупки
                                         .user_detail_item
                                             .title WMID: 
                                             a.main_link(href="#") 1234567890
@@ -65,4 +72,33 @@ main
                                     a.main_link(href="#") Digiseller 
                                     span.arrow » 
                                     |  WebMoney
-                                    
+                            .form_data_block_item
+                                .form_data_block_title Оплата подтверждена:	
+                                .form_data_block_content 22.12.2020 9:59:01
+                            .form_data_block_item
+                                .form_data_block_title Площадка:
+                                .form_data_block_content Мой магазин
+                            .form_data_block_item
+                                .form_data_block_title Оплачено:
+                                .form_data_block_content 0.14 WMZ
+                            .form_data_block_item
+                                .form_data_block_title Зачислено на счет:
+                                .form_data_block_content 
+                                    .money_back 0.13 WMZ
+                                        .btn_group 
+                                            button.btn.btn_gray вернуть средства покупателю 
+                                                sup 1
+                                            button.btn.btn_gray
+                                                span.partly частичный возврат 
+                                                    sup 2
+                                        .hint
+                                            sup 1
+                                            |  Полностью компенсировать покупателю оплаченные им средства 0,13 WMZ с учетом комиссии WebMoney 0,01 WMZ. Комиссия за продажу в размере 0,01 WMZ будет удержана с вашего счета.
+                                        .hint.partly
+                                            sup 2
+                                            |  Только с согласия покупателя! Частичный возврат не включает комиссии, вернуть 0,12 WMZ покупателю.
+                            .form_data_block_item
+                                .form_data_block_title Товар:
+                                .form_data_block_content
+                                    .good_param 19-1234567890
+                                        .hint загружен: 04.06.2020 17:22:12

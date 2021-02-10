@@ -1122,3 +1122,10 @@ button.btn, input[type="submit"].btn, a.btn, label.btn {
     background-color: #161b1e;
     border-color: map-get($dark_bg, nav);
 }
+
+.user_detail_item {
+    .pic-messages,
+    .pic-copy {
+        fill: map-get($dark_colors, main);
+    }
+}

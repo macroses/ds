@@ -141,7 +141,29 @@
     .form_data_block_content {
         overflow: hidden;
     }
+
+    .arrow {
+        margin: -5px 5px 0;
+        font-size: 20px;
+    }
+
+    .money_back {
+        margin-top: 10px;
+        .btn_group {
+            margin-top: 10px;
+        }
+    }
+    .partly {
+        color: #e65100;
+    }
+
+    .hint {
+        font-size: 11px;
+        margin-top: 10px;
+    }
 }
+
+
 
 .user_detail_item {
     display: flex;
