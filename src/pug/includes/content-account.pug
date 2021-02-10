@@ -10,6 +10,7 @@ main
                             colgroup 
                                 col(style="width: 200px")
                                 col
+                                col(style="width: 45px")
                                 col(style="width: 150px")
                                 col(style="width: 110px")
                                 col(style="width: 80px")
@@ -19,6 +20,7 @@ main
                                 tr
                                     th Тип операции
                                     th Название
+                                    th
                                     th Дата
                                     th Сумма
                                     th.align_center Комиссия
@@ -26,7 +28,7 @@ main
                                     th.align_center Доступны после
                                         span.star *
                                 tr
-                                    th.filter_cell(colspan="7")
+                                    th.filter_cell(colspan="8")
                                         .collapse(id="goodsFilter" )
                                             
                                             .collapse_filter_content
@@ -65,11 +67,14 @@ main
                                             span.active.collapsed(data-toggle="collapse" data-target="#goodsFilter" aria-expanded="false" aria-controls="goodsFilter" tabindex="-1") фильтры
                             tbody 
                                 tr.no_results
-                                    td(colspan="7")
+                                    td(colspan="8")
                                         .alert_box.warning.align_center С учетом выбранных фильтров операции не найдены
                                 tr
                                     td перевод на кошелек
                                     td Товар для Interkassa
+                                    td 
+                                        +icon('read_check')
+                                        +icon('smile-good')
                                     td 18.01.2021 23:09:32
                                     td 
                                         span.rub 1.00 
@@ -80,9 +85,12 @@ main
                                             small WMR 
                                     td.align_center проверки уникального кода
                                 tr
-                                    td перевод на кошелек
+                                    td комиссия партнеру (PayPal)
                                     td 
                                         a.main_link(href="#") API внешнего поставщика (2) API внешнего поставщика (2) API внешнего поставщика (2) API внешнего поставщика (2) API внешнего поставщика (2) 
+                                    td 
+                                        +icon('read_check')
+                                        +icon('smile-bad')
                                     td 18.01.2021 23:09:32
                                     td 
                                         span.usd 123456.99 

@@ -45,6 +45,11 @@
             border-top-color: rgba(0,0,0,0);
         }
     }
+
+    .pic-read_check {
+        fill: $main_links_color;
+        @include box(10px);
+    }
 }
 
 .form_filter_list {

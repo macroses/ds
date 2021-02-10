@@ -17,7 +17,7 @@ main
                         .count : 25
                         span.sep |
                         span в наличии
-                        .count : 1
+                        .count.empty : 0
                     .prev 
                         a.main_link(href="#") предыдущий товар
                     .next 
@@ -25,80 +25,146 @@ main
             
         
         .purchase_inv_detail
-            +tab-list(['TransactionInfo', 'Feedback', 'Messages'], 0)
-                +tab('TransactionInfo', 'active')
-                    .content_box
-                        .form_data_block
-                            .form_data_block_item
-                                .form_data_block_title Номер счета:
-                                .form_data_block_content 1234567890
-                            .form_data_block_item
-                                .form_data_block_title Счет выписан:
-                                .form_data_block_content 22.12.2020 9:59:01
-                            .form_data_block_item
-                                .form_data_block_title Покупатель:
-                                .form_data_block_content 
-                                    .user_detail 
-                                        .user_detail_item
-                                            .title Email: 
-                                            a.main_link(href="#") testmail@gmail.com
-                                            a(href="#") 
-                                                +icon('messages')
-                                            a(href="#") 
-                                                +icon('copy')
-                                            a.main_link(href="#") все покупки
-                                        .user_detail_item
-                                            .title WMID: 
-                                            a.main_link(href="#") 1234567890
-                                        .user_detail_item
-                                            .title IP-адрес: 
-                                            a.main_link(href="#") 123.123.123.123
-                                        .alert_box.info
-                                            |Запретить покупателю совершать покупки — 
-                                            a.main_link(href="#") добавить
-                                            |  в черный список 
-                            .form_data_block_item
-                                .form_data_block_title HTTP referer:
-                                .form_data_block_content
-                                    a.main_link(href="#") google.com google.com google.com google.com google.com google.com google.com google.com google.com google.com google.com google.com google.com google.com google.com google.com google.com 
-                            .form_data_block_item
-                                .form_data_block_title Состояние оплаты:
-                                .form_data_block_content
-                                    .payment_ticket_status.done счет оплачен
-                                    .payment_ticket_status.undone счет не оплачен
-                            .form_data_block_item
-                                .form_data_block_title Способ оплаты:
-                                .form_data_block_content
-                                    a.main_link(href="#") Digiseller 
-                                    span.arrow » 
-                                    |  WebMoney
-                            .form_data_block_item
-                                .form_data_block_title Оплата подтверждена:	
-                                .form_data_block_content 22.12.2020 9:59:01
-                            .form_data_block_item
-                                .form_data_block_title Площадка:
-                                .form_data_block_content Мой магазин
-                            .form_data_block_item
-                                .form_data_block_title Оплачено:
-                                .form_data_block_content 0.14 WMZ
-                            .form_data_block_item
-                                .form_data_block_title Зачислено на счет:
-                                .form_data_block_content 
-                                    .money_back 0.13 WMZ
-                                        .btn_group 
-                                            button.btn.btn_gray вернуть средства покупателю 
-                                                sup 1
-                                            button.btn.btn_gray
-                                                span.partly частичный возврат 
-                                                    sup 2
-                                        .hint
+            ul.nav.nav-tabs(role="tablist")
+                li
+                    a(href="#tab-block" role="tab",data-toggle="tab" class="nav-link active") Информация о сделке
+                li
+                    a(href="#tab-wm-auth" role="tab",data-toggle="tab" class="nav-link" title="отзыв покупателя о товаре") Отзыв о товаре
+                        span(title="отрицательный")
+                            +icon('smile-bad')
+                li
+                    a(href="#tab-phone" role="tab",data-toggle="tab" class="nav-link") Переписка
+                        span(title="положительный")
+                            +icon('smile-good')
+            
+            +tab('TransactionInfo', 'active')
+                .content_box
+                    .form_data_block
+                        .form_data_block_item
+                            .form_data_block_title Номер счета:
+                            .form_data_block_content 1234567890
+                        .form_data_block_item
+                            .form_data_block_title Счет выписан:
+                            .form_data_block_content 22.12.2020 9:59:01
+                        .form_data_block_item
+                            .form_data_block_title Покупатель:
+                            .form_data_block_content 
+                                .user_detail 
+                                    .user_detail_item
+                                        .title Email: 
+                                        a.main_link(href="#") testmail@gmail.com
+                                        a(href="#" title="отправить письмо на Email") 
+                                            +icon('messages')
+                                        a(href="#" title="скопировать в буфер") 
+                                            +icon('copy')
+                                        a.main_link(href="#" title="покзаать все покупки этого покупателя") все покупки
+                                    .user_detail_item
+                                        .title WMID: 
+                                        a.main_link(href="#"  title="покзаать все покупки этого WMID") 1234567890
+                                        a.main_link(href="#") WM-паспорт 
+                                    .user_detail_item
+                                        .title IP-адрес: 
+                                        a.main_link(href="#") 123.123.123.123
+                                    .alert_box.info
+                                        |Запретить покупателю совершать покупки — 
+                                        a.main_link(href="#") добавить
+                                        |  в черный список 
+                        .form_data_block_item
+                            .form_data_block_title HTTP referer:
+                            .form_data_block_content
+                                a.main_link(href="#") google.com google.com google.com google.com google.com google.com google.com google.com google.com google.com google.com google.com google.com google.com google.com google.com google.com 
+                        .form_data_block_item
+                            .form_data_block_title Состояние оплаты:
+                            .form_data_block_content
+                                .payment_ticket_status.done счет оплачен
+                                .payment_ticket_status.undone счет не оплачен
+                        .form_data_block_item
+                            .form_data_block_title Способ оплаты:
+                            .form_data_block_content
+                                a.main_link(href="#") Digiseller 
+                                span.arrow » 
+                                |  WebMoney
+                        .form_data_block_item
+                            .form_data_block_title Оплата подтверждена:	
+                            .form_data_block_content 22.12.2020 9:59:01
+                        .form_data_block_item
+                            .form_data_block_title Площадка:
+                            .form_data_block_content Мой магазин
+                        .form_data_block_item
+                            .form_data_block_title Оплачено:
+                            .form_data_block_content 0.14 WMZ
+                        .form_data_block_item
+                            .form_data_block_title Комиссия партнеру:
+                            .form_data_block_content 0.14 WMZ 
+                                button.btn.btn_gray.favorite добавить партнера в избранные
+                        .form_data_block_item
+                            .form_data_block_title Зачислено на счет:
+                            .form_data_block_content 
+                                .money_back 0.13 WMZ
+                                    .btn_group 
+                                        button.btn.btn_gray вернуть средства покупателю 
                                             sup 1
-                                            |  Полностью компенсировать покупателю оплаченные им средства 0,13 WMZ с учетом комиссии WebMoney 0,01 WMZ. Комиссия за продажу в размере 0,01 WMZ будет удержана с вашего счета.
-                                        .hint.partly
-                                            sup 2
-                                            |  Только с согласия покупателя! Частичный возврат не включает комиссии, вернуть 0,12 WMZ покупателю.
-                            .form_data_block_item
-                                .form_data_block_title Товар:
-                                .form_data_block_content
-                                    .good_param 19-1234567890
-                                        .hint загружен: 04.06.2020 17:22:12
+                                        button.btn.btn_gray
+                                            span.partly частичный возврат 
+                                                sup 2
+                                    .hint
+                                        sup 1
+                                        |  Полностью компенсировать покупателю оплаченные им средства 0,13 WMZ с учетом комиссии WebMoney 0,01 WMZ. Комиссия за продажу в размере 0,01 WMZ будет удержана с вашего счета.
+                                    .hint.partly
+                                        sup 2
+                                        |  Только с согласия покупателя! Частичный возврат не включает комиссии, вернуть 0,12 WMZ покупателю.
+                        .form_data_block_item
+                            .form_data_block_title Товар:
+                            .form_data_block_content
+                                .good_param 19-1234567890 19-1234567890 19-1234567890 19-1234567890 19-1234567890 19-1234567890 19-1234567890 19-1234567890 19-1234567890 19-1234567890 19-1234567890 19-1234567890 19-1234567890 19-1234567890 19-1234567890 
+                                    .hint загружен: 04.06.2020 17:22:12
+                        .form_data_block_item
+                            .form_data_block_title GET-параметры:
+                            .form_data_block_content seller_id=18728&_dga=GA1.2.1348052713.1501009486:1590402785
+                        .form_data_block_item
+                            .form_data_block_title Уникальный код:
+                            .form_data_block_content.vertical
+                                .item
+                                    |*************************** код не получен от покупателя или не проверен 
+                                    a.main_link(href="#") проверить 
+                                .alert_box.additional_info Напоминаем вам, что до тех пор, пока 
+                                    span.bold уникальный код 
+                                    |  не получен и не проверен, покупатель может произвести возврат оплаченных им средств. Оплаченные покупателем средства станут доступны для вывода только после проверки вами 
+                                    span.bold уникального кода
+                                    |. Повторно получить 
+                                    span.bold уникальный код 
+                                    |  покупатель может на странице описания покупки сервиса 
+                                    a.main_link(href="#") Oplata.Info
+                                    br
+                                    br
+                                    |Если 
+                                    span.bold уникальный код 
+                                    |  не будет получен и проверен вами в течение 6-ти месяцев с момента покупки, покупателю будет произведен автоматический возврат оплаченных им средств. 
+                        .form_data_block_item
+                            .form_data_block_title Состояние сделки:
+                            .form_data_block_content.vertical 
+                                .item Уникальный код не получен от покупателя или не проверен
+                                .alert_box.info C момента оплаты товара прошло 
+                                    span.bold 1020328
+                                    |  мин. Мы рекомендуем вам самостоятельно связаться с покупателем и получить от него уникальный код для проверки его подлинности и доставки оплаченного товара. Проверить уникальный код следует с помощью поиска, для этого в строке поиска укажите код, который сообщил вам покупатель.
+                                .item.list
+                                    |1. В Digiseller ведется учет времени прошедшего 
+                                    span.bold с момента проверки
+                                    |  кода 
+                                    span.bold до момента доставки 
+                                    |  товара покупателю. Посетителям магазина выводится среднее значение времени доставки по 
+                                    span.bold трем 
+                                    |  с учетом трех последних завершенных сделок.
+                                    br
+                                    |2. Товар считается доставленным после того как либо продавец, либо покупатель на странице описания купленного товара нажмут на кнопку «товар доставлен».
+                                    br
+                                    |3. После нажатия продавцом на кнопку "товар доставлен" покупатель получает оповещение с просьбой подтвердить или опровергнуть сигнал о доставке товара. Опровержение приводит к автоматической публикации отрицательного отзыва.
+                                    br
+                                    |4. При выявлении фактов фиктивных продаж с целью изменения среднего значения времени доставки, к продавцу могут быть применены штрафные санкции вплоть до блокировки всех товаров, выставленных им на продажу.
+                                .item 
+                                    .form_element 
+                                        label.for_check.disabled
+                                            input(type="checkbox" disabled)
+                                            span.text я ознакомился и соглашаюсь с выше изложенным
+                                .item
+                                    button.btn.btn_gray товар доставлен покупателю

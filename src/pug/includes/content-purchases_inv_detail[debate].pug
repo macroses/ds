@@ -1,0 +1,120 @@
+main
+    .box
+        .content_box
+            .page_nav
+                ul.breadcrumbs_list
+                    li.breadcrumb_item
+                        a.main_link(href="#" data-placement="top" data-toggle="tooltip" title="список моих товаров") Мои товары
+                    li.breadcrumb_item
+                        .breadcrumb_item_name Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена 
+                        a(href="#" data-placement="top" data-toggle="tooltip" title="открыть страницу с описанием товара")
+                            +icon('good_link')
+                        .breadcrumb_item_price 14895 
+                            span RUB
+                .page_nav_item
+                    .goods_counters 
+                        a.main_link продано: 
+                        .count 25
+                        span.sep |
+                        span в наличии: 
+                        .count.empty 0
+                    .prev 
+                        a.main_link(href="#") предыдущий товар
+                    .next 
+                        a.main_link(href="#") следующий товар
+            
+        
+        .purchase_inv_detail
+            ul.nav.nav-tabs(role="tablist")
+                li
+                    a(href="#tab-block" role="tab",data-toggle="tab" class="nav-link") Информация о сделке
+                li
+                    a(href="#tab-wm-auth" role="tab",data-toggle="tab" class="nav-link" title="отзыв покупателя о товаре") Отзыв о товаре
+                        span(title="отрицательный")
+                            +icon('smile-bad')
+                li
+                    a(href="#tab-phone" role="tab",data-toggle="tab" class="nav-link active") Переписка
+                        span(title="положительный")
+                            +icon('smile-good')
+            
+            +tab('TransactionInfo', 'active')
+                .content_box
+                    .spinner-border 
+                    .debates
+                        .debates_content
+                            .debates_content_header Покупатель Seller123@gmail.com
+                            .muted_message Сообщений не обнаружено
+                            .spinner-border.spinner-border-sm
+                            .my_message
+                                |Одна строка
+                                .message_detail 19.02.2015 16:21
+                                .read_date 
+                                    +icon('read_check')
+                                    | 20.05.2015 20:57
+                            .answerer_message
+                                |Одна строка
+                                .message_detail 
+                                    .debate_translate 
+                                        +icon('translate')
+                                        a.main_link(href="#") перевести 
+
+                                    .answer_date 19.02.2015 16:21
+                            .my_message
+                                |Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк 
+                                .message_detail 19.02.2015 16:21
+                                .read_date 
+                                    +icon('read_check')
+                                    | 20.05.2015 20:57
+                            .answerer_message
+                                |Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк 
+                                .message_detail
+                                    .debate_translate 
+                                        +icon('translate')
+                                        a.main_link(href="#") перевести 
+
+                                    .answer_date 19.02.2015 16:21
+                            .answerer_message
+                                |Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк 
+                                .message_detail 
+                                    .answer_date 19.02.2015 16:21
+                            .my_message
+                                a.img_link(href="#" target="_blank")
+                                    img(src="https://i.pinimg.com/736x/e8/27/eb/e827eb3d61909aea0c45232183bb9e03.jpg", alt="")
+                                .message_detail 19.02.2015 16:21
+                            .answerer_message
+                                a.img_link(href="#" target="_blank")
+                                    img(src="https://www.ejin.ru/wp-content/uploads/2018/11/fshshshshshshshsh-e1542184507336.jpg", alt="")
+                                .message_detail 
+                                    .answer_date 19.02.2015 16:21
+                            .my_message
+                                |НепрерывнаястрокаНепрерывнаястрокаНепрерывнаястрокаНепрерывнаястрокаНепрерывнаястрокаНепрерывнаястрокаНепрерывнаястрокаНепрерывнаястрокаНепрерывнаястрокаНепрерывнаястрокаНепрерывнаястрока
+                                .message_detail 19.02.2015 16:21
+                            .answerer_message
+                                a.main_link(href="#") cfd8dccfd8dccfd8dccfd8dccfd8dccfd8dccfd8dccfd8dccfd8dccfd8dccfd8dccfd8dccfd8dccfd8dccfd8dccfd8dccfd8dccfd8dccfd8dccfd8dccfd8dccfd8dccfd8dccfd8dc 
+                                .message_detail 
+                                    .answer_date 19.02.2015 16:21
+                            .answerer_typing 
+                                +icon('pen')
+                                |Вам пишет собеседник
+
+                    .debates_textarea
+                        .form_element
+                            textarea(placeholder="Новое сообщение")
+                            a(href="#")
+                                +icon('translate') 
+                        .button_group
+                            label
+                                input(type="file", name="files")
+                                //- +icon('clip')
+                                .spinner-border.spinner-border-sm
+                            button.btn.btn_blue отправить
+
+                    ul.attached_list
+                        li
+                            .attached_item
+                                img(src="img/select_arrow.svg", alt="")
+                                span.delete_attached_file
+                                    +icon('close_circle')
+                            .filename
+                                |select_arrow.png 
+                                span.filesize 20 КБ

@@ -247,9 +247,9 @@
                 </li>
               </ul>
               <div class="page_nav_item">
-                <div class="goods_counters"> <a class="main_link">продано</a>
-                  <div class="count">: 25</div><span class="sep">|</span><span>в наличии</span>
-                  <div class="count empty">: 0</div>
+                <div class="goods_counters"> <a class="main_link">продано: </a>
+                  <div class="count">25</div><span class="sep">|</span><span>в наличии: </span>
+                  <div class="count empty">0</div>
                 </div>
                 <div class="prev"> <a class="main_link" href="#">предыдущий товар</a></div>
                 <div class="next"> <a class="main_link" href="#">следующий товар</a></div>
@@ -258,134 +258,112 @@
           </div>
           <div class="purchase_inv_detail">
             <ul class="nav nav-tabs" role="tablist">
-              <li><a class="nav-link active" href="#tab-block" role="tab" data-toggle="tab">Информация о сделке</a></li>
+              <li><a class="nav-link" href="#tab-block" role="tab" data-toggle="tab">Информация о сделке</a></li>
               <li><a class="nav-link" href="#tab-wm-auth" role="tab" data-toggle="tab" title="отзыв покупателя о товаре">Отзыв о товаре<span title="отрицательный">
                     <svg class="pic-smile-bad ">
                       <use xlink:href="img/svg/sprite.svg#smile-bad"></use>
                     </svg></span></a></li>
-              <li><a class="nav-link" href="#tab-phone" role="tab" data-toggle="tab">Переписка<span title="положительный">
+              <li><a class="nav-link active" href="#tab-phone" role="tab" data-toggle="tab">Переписка<span title="положительный">
                     <svg class="pic-smile-good ">
                       <use xlink:href="img/svg/sprite.svg#smile-good"></use>
                     </svg></span></a></li>
             </ul>
             <div class="tab-pane active" id="tabTransactionInfo">
               <div class="content_box">
-                <div class="form_data_block">
-                  <div class="form_data_block_item">
-                    <div class="form_data_block_title">Номер счета:</div>
-                    <div class="form_data_block_content">1234567890</div>
-                  </div>
-                  <div class="form_data_block_item">
-                    <div class="form_data_block_title">Счет выписан:</div>
-                    <div class="form_data_block_content">22.12.2020 9:59:01</div>
-                  </div>
-                  <div class="form_data_block_item">
-                    <div class="form_data_block_title">Покупатель:</div>
-                    <div class="form_data_block_content"> 
-                      <div class="user_detail"> 
-                        <div class="user_detail_item">
-                          <div class="title">Email: </div><a class="main_link" href="#">testmail@gmail.com</a><a href="#" title="отправить письмо на Email"> 
-                            <svg class="pic-messages ">
-                              <use xlink:href="img/svg/sprite.svg#messages"></use>
-                            </svg></a><a href="#" title="скопировать в буфер"> 
-                            <svg class="pic-copy ">
-                              <use xlink:href="img/svg/sprite.svg#copy"></use>
-                            </svg></a><a class="main_link" href="#" title="покзаать все покупки этого покупателя">все покупки</a>
-                        </div>
-                        <div class="user_detail_item">
-                          <div class="title">WMID: </div><a class="main_link" href="#" title="покзаать все покупки этого WMID">1234567890</a><a class="main_link" href="#">WM-паспорт </a>
-                        </div>
-                        <div class="user_detail_item">
-                          <div class="title">IP-адрес: </div><a class="main_link" href="#">123.123.123.123</a>
-                        </div>
-                        <div class="alert_box info">Запретить покупателю совершать покупки — <a class="main_link" href="#">добавить</a> в черный список </div>
+                <div class="spinner-border"> </div>
+                <div class="debates">
+                  <div class="debates_content">
+                    <div class="debates_content_header">Покупатель Seller123@gmail.com</div>
+                    <div class="muted_message">Сообщений не обнаружено</div>
+                    <div class="spinner-border spinner-border-sm"></div>
+                    <div class="my_message">Одна строка
+                      <div class="message_detail">19.02.2015 16:21</div>
+                      <div class="read_date"> 
+                        <svg class="pic-read_check ">
+                          <use xlink:href="img/svg/sprite.svg#read_check"></use>
+                        </svg>20.05.2015 20:57
                       </div>
                     </div>
-                  </div>
-                  <div class="form_data_block_item">
-                    <div class="form_data_block_title">HTTP referer:</div>
-                    <div class="form_data_block_content"><a class="main_link" href="#">google.com google.com google.com google.com google.com google.com google.com google.com google.com google.com google.com google.com google.com google.com google.com google.com google.com </a></div>
-                  </div>
-                  <div class="form_data_block_item">
-                    <div class="form_data_block_title">Состояние оплаты:</div>
-                    <div class="form_data_block_content">
-                      <div class="payment_ticket_status done">счет оплачен</div>
-                      <div class="payment_ticket_status undone">счет не оплачен</div>
-                    </div>
-                  </div>
-                  <div class="form_data_block_item">
-                    <div class="form_data_block_title">Способ оплаты:</div>
-                    <div class="form_data_block_content"><a class="main_link" href="#">Digiseller </a><span class="arrow">» </span> WebMoney</div>
-                  </div>
-                  <div class="form_data_block_item">
-                    <div class="form_data_block_title">Оплата подтверждена:	</div>
-                    <div class="form_data_block_content">22.12.2020 9:59:01</div>
-                  </div>
-                  <div class="form_data_block_item">
-                    <div class="form_data_block_title">Площадка:</div>
-                    <div class="form_data_block_content">Мой магазин</div>
-                  </div>
-                  <div class="form_data_block_item">
-                    <div class="form_data_block_title">Оплачено:</div>
-                    <div class="form_data_block_content">0.14 WMZ</div>
-                  </div>
-                  <div class="form_data_block_item">
-                    <div class="form_data_block_title">Комиссия партнеру:</div>
-                    <div class="form_data_block_content">0.14 WMZ 
-                      <button class="btn btn_gray favorite">добавить партнера в избранные</button>
-                    </div>
-                  </div>
-                  <div class="form_data_block_item">
-                    <div class="form_data_block_title">Зачислено на счет:</div>
-                    <div class="form_data_block_content"> 
-                      <div class="money_back">0.13 WMZ
-                        <div class="btn_group"> 
-                          <button class="btn btn_gray">вернуть средства покупателю <sup>1</sup></button>
-                          <button class="btn btn_gray"><span class="partly">частичный возврат <sup>2</sup></span></button>
+                    <div class="answerer_message">Одна строка
+                      <div class="message_detail"> 
+                        <div class="debate_translate"> 
+                          <svg class="pic-translate ">
+                            <use xlink:href="img/svg/sprite.svg#translate"></use>
+                          </svg><a class="main_link" href="#">перевести </a>
                         </div>
-                        <div class="hint"><sup>1</sup> Полностью компенсировать покупателю оплаченные им средства 0,13 WMZ с учетом комиссии WebMoney 0,01 WMZ. Комиссия за продажу в размере 0,01 WMZ будет удержана с вашего счета.</div>
-                        <div class="hint partly"><sup>2</sup> Только с согласия покупателя! Частичный возврат не включает комиссии, вернуть 0,12 WMZ покупателю.</div>
+                        <div class="answer_date">19.02.2015 16:21</div>
                       </div>
                     </div>
-                  </div>
-                  <div class="form_data_block_item">
-                    <div class="form_data_block_title">Товар:</div>
-                    <div class="form_data_block_content">
-                      <div class="good_param">19-1234567890 19-1234567890 19-1234567890 19-1234567890 19-1234567890 19-1234567890 19-1234567890 19-1234567890 19-1234567890 19-1234567890 19-1234567890 19-1234567890 19-1234567890 19-1234567890 19-1234567890 
-                        <div class="hint">загружен: 04.06.2020 17:22:12</div>
+                    <div class="my_message">Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк 
+                      <div class="message_detail">19.02.2015 16:21</div>
+                      <div class="read_date"> 
+                        <svg class="pic-read_check ">
+                          <use xlink:href="img/svg/sprite.svg#read_check"></use>
+                        </svg>20.05.2015 20:57
                       </div>
                     </div>
-                  </div>
-                  <div class="form_data_block_item">
-                    <div class="form_data_block_title">GET-параметры:</div>
-                    <div class="form_data_block_content">seller_id=18728&_dga=GA1.2.1348052713.1501009486:1590402785</div>
-                  </div>
-                  <div class="form_data_block_item">
-                    <div class="form_data_block_title">Уникальный код:</div>
-                    <div class="form_data_block_content vertical">
-                      <div class="item">*************************** код не получен от покупателя или не проверен <a class="main_link" href="#">проверить </a></div>
-                      <div class="alert_box additional_info">Напоминаем вам, что до тех пор, пока <span class="bold">уникальный код </span> не получен и не проверен, покупатель может произвести возврат оплаченных им средств. Оплаченные покупателем средства станут доступны для вывода только после проверки вами <span class="bold">уникального кода</span>. Повторно получить <span class="bold">уникальный код </span> покупатель может на странице описания покупки сервиса <a class="main_link" href="#">Oplata.Info</a><br><br>Если <span class="bold">уникальный код </span> не будет получен и проверен вами в течение 6-ти месяцев с момента покупки, покупателю будет произведен автоматический возврат оплаченных им средств. </div>
-                    </div>
-                  </div>
-                  <div class="form_data_block_item">
-                    <div class="form_data_block_title">Состояние сделки:</div>
-                    <div class="form_data_block_content vertical"> 
-                      <div class="item">Уникальный код не получен от покупателя или не проверен</div>
-                      <div class="alert_box info">C момента оплаты товара прошло <span class="bold">1020328</span> мин. Мы рекомендуем вам самостоятельно связаться с покупателем и получить от него уникальный код для проверки его подлинности и доставки оплаченного товара. Проверить уникальный код следует с помощью поиска, для этого в строке поиска укажите код, который сообщил вам покупатель.</div>
-                      <div class="item list">1. В Digiseller ведется учет времени прошедшего <span class="bold">с момента проверки</span> кода <span class="bold">до момента доставки </span> товара покупателю. Посетителям магазина выводится среднее значение времени доставки по <span class="bold">трем </span> с учетом трех последних завершенных сделок.<br>2. Товар считается доставленным после того как либо продавец, либо покупатель на странице описания купленного товара нажмут на кнопку «товар доставлен».<br>3. После нажатия продавцом на кнопку "товар доставлен" покупатель получает оповещение с просьбой подтвердить или опровергнуть сигнал о доставке товара. Опровержение приводит к автоматической публикации отрицательного отзыва.<br>4. При выявлении фактов фиктивных продаж с целью изменения среднего значения времени доставки, к продавцу могут быть применены штрафные санкции вплоть до блокировки всех товаров, выставленных им на продажу.</div>
-                      <div class="item"> 
-                        <div class="form_element"> 
-                          <label class="for_check disabled">
-                            <input type="checkbox" disabled><span class="text">я ознакомился и соглашаюсь с выше изложенным</span>
-                          </label>
+                    <div class="answerer_message">Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк 
+                      <div class="message_detail">
+                        <div class="debate_translate"> 
+                          <svg class="pic-translate ">
+                            <use xlink:href="img/svg/sprite.svg#translate"></use>
+                          </svg><a class="main_link" href="#">перевести </a>
                         </div>
+                        <div class="answer_date">19.02.2015 16:21</div>
                       </div>
-                      <div class="item">
-                        <button class="btn btn_gray">товар доставлен покупателю</button>
+                    </div>
+                    <div class="answerer_message">Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк 
+                      <div class="message_detail"> 
+                        <div class="answer_date">19.02.2015 16:21</div>
                       </div>
+                    </div>
+                    <div class="my_message"><a class="img_link" href="#" target="_blank"><img src="https://i.pinimg.com/736x/e8/27/eb/e827eb3d61909aea0c45232183bb9e03.jpg" alt=""></a>
+                      <div class="message_detail">19.02.2015 16:21</div>
+                    </div>
+                    <div class="answerer_message"><a class="img_link" href="#" target="_blank"><img src="https://www.ejin.ru/wp-content/uploads/2018/11/fshshshshshshshsh-e1542184507336.jpg" alt=""></a>
+                      <div class="message_detail"> 
+                        <div class="answer_date">19.02.2015 16:21</div>
+                      </div>
+                    </div>
+                    <div class="my_message">НепрерывнаястрокаНепрерывнаястрокаНепрерывнаястрокаНепрерывнаястрокаНепрерывнаястрокаНепрерывнаястрокаНепрерывнаястрокаНепрерывнаястрокаНепрерывнаястрокаНепрерывнаястрокаНепрерывнаястрока
+                      <div class="message_detail">19.02.2015 16:21</div>
+                    </div>
+                    <div class="answerer_message"><a class="main_link" href="#">cfd8dccfd8dccfd8dccfd8dccfd8dccfd8dccfd8dccfd8dccfd8dccfd8dccfd8dccfd8dccfd8dccfd8dccfd8dccfd8dccfd8dccfd8dccfd8dccfd8dccfd8dccfd8dccfd8dccfd8dc </a>
+                      <div class="message_detail"> 
+                        <div class="answer_date">19.02.2015 16:21</div>
+                      </div>
+                    </div>
+                    <div class="answerer_typing"> 
+                      <svg class="pic-pen ">
+                        <use xlink:href="img/svg/sprite.svg#pen"></use>
+                      </svg>Вам пишет собеседник
                     </div>
                   </div>
                 </div>
+                <div class="debates_textarea">
+                  <div class="form_element">
+                    <textarea placeholder="Новое сообщение"></textarea><a href="#">
+                      <svg class="pic-translate ">
+                        <use xlink:href="img/svg/sprite.svg#translate"></use>
+                      </svg></a>
+                  </div>
+                  <div class="button_group">
+                    <label>
+                      <input type="file" name="files">
+                      <div class="spinner-border spinner-border-sm"></div>
+                    </label>
+                    <button class="btn btn_blue">отправить</button>
+                  </div>
+                </div>
+                <ul class="attached_list">
+                  <li>
+                    <div class="attached_item"><img src="img/select_arrow.svg" alt=""><span class="delete_attached_file">
+                        <svg class="pic-close_circle ">
+                          <use xlink:href="img/svg/sprite.svg#close_circle"></use>
+                        </svg></span></div>
+                    <div class="filename">select_arrow.png <span class="filesize">20 КБ</span></div>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>

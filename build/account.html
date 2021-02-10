@@ -252,6 +252,7 @@
                     <colgroup> 
                       <col style="width: 200px">
                       <col>
+                      <col style="width: 45px">
                       <col style="width: 150px">
                       <col style="width: 110px">
                       <col style="width: 80px">
@@ -262,6 +263,7 @@
                       <tr>
                         <th>Тип операции</th>
                         <th>Название</th>
+                        <th></th>
                         <th>Дата</th>
                         <th>Сумма</th>
                         <th class="align_center">Комиссия</th>
@@ -269,7 +271,7 @@
                         <th class="align_center">Доступны после<span class="star">*</span></th>
                       </tr>
                       <tr>
-                        <th class="filter_cell" colspan="7">
+                        <th class="filter_cell" colspan="8">
                           <div class="collapse" id="goodsFilter">
                             <div class="collapse_filter_content">
                               <!-- мультиселект в коллапсе вызывает прыжки по высоте-->
@@ -332,13 +334,21 @@
                     </thead>
                     <tbody> 
                       <tr class="no_results">
-                        <td colspan="7">
+                        <td colspan="8">
                           <div class="alert_box warning align_center">С учетом выбранных фильтров операции не найдены</div>
                         </td>
                       </tr>
                       <tr>
                         <td>перевод на кошелек</td>
                         <td>Товар для Interkassa</td>
+                        <td> 
+                          <svg class="pic-read_check ">
+                            <use xlink:href="img/svg/sprite.svg#read_check"></use>
+                          </svg>
+                          <svg class="pic-smile-good ">
+                            <use xlink:href="img/svg/sprite.svg#smile-good"></use>
+                          </svg>
+                        </td>
                         <td>18.01.2021 23:09:32</td>
                         <td> <span class="rub">1.00 <small>WMR</small></span></td>
                         <td class="align_center">0%</td>
@@ -346,8 +356,16 @@
                         <td class="align_center">проверки уникального кода</td>
                       </tr>
                       <tr>
-                        <td>перевод на кошелек</td>
+                        <td>комиссия партнеру (PayPal)</td>
                         <td> <a class="main_link" href="#">API внешнего поставщика (2) API внешнего поставщика (2) API внешнего поставщика (2) API внешнего поставщика (2) API внешнего поставщика (2) </a></td>
+                        <td> 
+                          <svg class="pic-read_check ">
+                            <use xlink:href="img/svg/sprite.svg#read_check"></use>
+                          </svg>
+                          <svg class="pic-smile-bad ">
+                            <use xlink:href="img/svg/sprite.svg#smile-bad"></use>
+                          </svg>
+                        </td>
                         <td>18.01.2021 23:09:32</td>
                         <td> <span class="usd">123456.99 <small>WMZ</small></span></td>
                         <td class="align_center">0%</td>

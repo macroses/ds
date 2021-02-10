@@ -1129,3 +1129,14 @@ button.btn, input[type="submit"].btn, a.btn, label.btn {
         fill: map-get($dark_colors, main);
     }
 }
+
+.answerer_typing {
+    color: map-get($dark_colors, main);
+    .pic-pen {
+        fill: map-get($dark_colors, main);
+    }
+}
+
+.page_nav .goods_counters {
+    color: map-get($dark_colors, main);
+}

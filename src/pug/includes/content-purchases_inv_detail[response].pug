@@ -1,0 +1,87 @@
+main
+    .box
+        .content_box
+            .page_nav
+                ul.breadcrumbs_list
+                    li.breadcrumb_item
+                        a.main_link(href="#" data-placement="top" data-toggle="tooltip" title="список моих товаров") Мои товары
+                    li.breadcrumb_item
+                        .breadcrumb_item_name Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена 
+                        a(href="#" data-placement="top" data-toggle="tooltip" title="открыть страницу с описанием товара")
+                            +icon('good_link')
+                        .breadcrumb_item_price 14895 
+                            span RUB
+                .page_nav_item
+                    .goods_counters 
+                        a.main_link продано
+                        .count : 25
+                        span.sep |
+                        span в наличии
+                        .count.empty : 0
+                    .prev 
+                        a.main_link(href="#") предыдущий товар
+                    .next 
+                        a.main_link(href="#") следующий товар
+            
+        
+        .purchase_inv_detail
+            ul.nav.nav-tabs(role="tablist")
+                li
+                    a(href="#tab-block" role="tab",data-toggle="tab" class="nav-link") Информация о сделке
+                li
+                    a(href="#tab-wm-auth" role="tab",data-toggle="tab" class="nav-link active" title="отзыв покупателя о товаре") Отзыв о товаре
+                        span(title="отрицательный")
+                            +icon('smile-bad')
+                li
+                    a(href="#tab-phone" role="tab",data-toggle="tab" class="nav-link") Переписка
+                        span(title="положительный")
+                            +icon('smile-good')
+            
+            +tab('TransactionInfo', 'active')
+                .content_box
+                    .form_data_block
+                        .form_data_block_item
+                            .form_data_block_title Отзыв покупателя:
+                            .form_data_block_content.vertical
+                                .feedback.positive  
+                                    .feedback_data
+                                        |отзыв оставлен: 12.02.2015 13:13:31
+                                        br
+                                        |изменен: 12.02.2015 13:13:31
+                                    |test text 
+                                .feedback.negative  
+                                    .feedback_data
+                                        |отзыв оставлен: 12.02.2015 13:13:31
+                                        br
+                                        |изменен: 12.02.2015 13:13:31
+                                    |test text 
+                        .form_data_block_item
+                            .form_data_block_title Ваш комментарий:
+                            .form_data_block_content.vertical
+                                .feedback_seller_answer
+                                    .form_element 
+                                        textarea(disabled)
+                                    .hint Отзыв покупателя и ваш комментарий являются публичной информацией и доступны при просмотре описания товара.
+                                    button.btn.btn_gray сохранить
+                        .form_data_block_item
+                            .form_data_block_title
+                            .form_data_block_content.vertical
+                                .item
+                                    span.bold Покупатель остался недоволен покупкой и оставил отрицательный отзыв. 
+                                    |  Вы можете:
+                                    br
+                                    |1. 
+                                    a.main_link(href="#") Связаться с покупателем 
+                                    |  и попробовать урегулировать данный конфликт, добившись от него изменения отзыва;
+                                    br
+                                    |2. Самостоятельно вернуть покупателю средства, поступившие на ваш электронный кошелёк, не забыв компенсировать комиссию, потраченную покупателем;
+                                .alert_box.info Всю переписку с покупателем по данной покупке вам необходимо вести в соседней вкладке 
+                                    a.main_link(href="#") переписка с покупателем
+                                    |. Обсуждение контролируется администратором торговой площадки и на основании него принимается решение в том случае, если диспут зайдет в тупик.
+                                    br
+                                    |Напоминаем, что по "
+                                    a.main_link(href="#") Соглашению о продаже online-товаров через торговую площадку Plati
+                                    |", если в течение трех дней от вас не поступит ответ (комментарий) на адресованное вам сообщение, то это может быть расценено администратором как отказ от урегулирования конфликта с последующим возвратом средств покупателю. В отдельных случаях срок ожидания ответа на отзыв или комментарий по отзыву может быть продлен до 7 дней.
+                
+                    
+        

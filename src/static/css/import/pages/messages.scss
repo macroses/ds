@@ -4,13 +4,38 @@
     overflow-x: hidden;
     max-height: 490px;
     margin-top: 20px;
+    border-radius: 4px;
+
+    .spinner-border {
+        margin-top: 15px;
+    }
 }
 
 .debates_content {
     border-radius: 4px;
-    padding: 15px;
+    padding: 15px 15px 40px;
     display: flex;
     flex-direction: column;
+    position: relative;
+}
+
+.answerer_typing {
+    color: $footer_bg;
+    font-size: 14px;
+    padding: 5px 10px;
+    background: rgba(207, 216, 220, .4);
+    width: auto;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%);
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    .pic-pen {
+        @include box(11px);
+        margin-right: 5px;
+        fill: $footer_bg;
+    }
 }
 
 .my_message, .answerer_message {
@@ -21,6 +46,7 @@
     max-width: 410px;
     padding: 11px 15px 10px;
     border-radius: 8px;
+    line-height: 18px;
 
     .img_link {
         height: 90px;
@@ -46,10 +72,32 @@
 
     margin-top: 6px;
     transform: translateY(-3px);
+
+    .pic-read_check {
+        fill: $main_links_color;
+    }
 }
 
 .my_message {
     align-self: flex-end;
+    position: relative;
+    
+}
+
+.read_date {
+    position: absolute;
+    bottom: -18px;
+    right: 15px;
+    color: $main_links_color;
+    font-size: 11px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    .pic-read_check {
+        fill: $main_links_color;
+        @include box(12px, 9px);
+        margin-right: 5px;
+    }
 }
 
 .answerer_message {
@@ -66,6 +114,7 @@
     padding: 15px;
     display: flex;
     align-items: flex-start;
+    position: relative;
     .form_element {
         width: 460px;
     }
@@ -91,6 +140,16 @@
 
     .btn {
         margin-left: auto;
+    }
+
+    a {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        .pic-translate {
+            @include box(19px, 16px);
+            margin-left: 0px;
+        }
     }
 }
 
@@ -224,3 +283,46 @@
     stroke: #607d8b;
     stroke-width: 7px;
 }
+
+.debates_content_header {
+    background: #f6f8f9;
+    border-bottom: solid 1px #e7ebee;
+    padding: 8px 15px;
+    margin: -15px -15px 0px;
+}
+
+.debate_translate {
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+    .pic-translate {
+        @include box(16px);
+        margin-right: 5px;
+    }
+}
+
+.purchase_inv_detail {
+    .answerer_message {
+        .message_detail {
+            width: 100%;
+            justify-content: space-between;
+            padding-left: 0;
+            align-items: center;
+        }
+    }
+
+    .debates {
+        margin-top: 0;
+    }
+}
+
+.answer_date {
+    width: auto;
+    margin-left: auto;
+}
+
+.muted_message {
+    color: $headers_color;
+    padding: 30px 15px 15px;
+}
+
