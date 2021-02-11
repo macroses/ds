@@ -1132,6 +1132,7 @@ button.btn, input[type="submit"].btn, a.btn, label.btn {
 
 .answerer_typing {
     color: map-get($dark_colors, main);
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 5%, #272f34 50%);
     .pic-pen {
         fill: map-get($dark_colors, main);
     }
@@ -1139,4 +1140,24 @@ button.btn, input[type="submit"].btn, a.btn, label.btn {
 
 .page_nav .goods_counters {
     color: map-get($dark_colors, main);
+}
+
+.typing_view_box {
+    background: #3f474c;
+}
+
+.debates_content_header {
+    background: #3f474c;
+    border: 0;
+    color: map-get($dark_colors, main);
+}
+
+.curr_rates_item {
+    .title {
+        color: map-get($dark_colors, main);
+    }
+}
+
+.currency_list_item {
+    border-color: map-get($dark_bg, nav);
 }

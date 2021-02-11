@@ -1,0 +1,61 @@
+.curr_rates {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.curr_rates_item {
+    flex: 1;
+    &:nth-child(odd) {
+        margin-right: 30px;
+    }
+
+    .title {
+        margin-bottom: 10px;
+    }
+
+    .hint {
+        margin-top: 5px;
+    }
+}
+
+.currency_list_item {
+    display: flex;
+    align-items: center;
+    color: $additional_info_color;
+    border-bottom: 1px solid #efefef;
+    padding: 4px 0;
+    a {
+        font-weight: bold;
+        color: $main_links_color;
+    }
+
+    .btn {
+        margin-left: auto;
+        width: 110px;
+    }
+}
+
+.currency_name {
+    width: 42px;
+}
+
+.currency_text {
+    width: 200px;
+
+    option[value=no] {
+        font-weight: bold;
+        color: #d0011b;
+    }
+}
+
+.exchange_rate {
+    display: flex;
+    align-items: center;
+    .form_element {
+        margin: 0 3px;
+        input {
+            width: 70px;
+        }
+    }
+}

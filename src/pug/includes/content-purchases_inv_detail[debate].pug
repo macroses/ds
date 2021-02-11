@@ -41,8 +41,8 @@ main
                 .content_box
                     .spinner-border 
                     .debates
+                        .debates_content_header Покупатель Seller123@gmail.com
                         .debates_content
-                            .debates_content_header Покупатель Seller123@gmail.com
                             .muted_message Сообщений не обнаружено
                             .spinner-border.spinner-border-sm
                             .my_message
@@ -97,8 +97,9 @@ main
 
                     .debates_textarea
                         .answerer_typing 
-                            +icon('pen')
-                            |Вам пишет собеседник
+                            span.typing_view_box
+                                +icon('pen')
+                                |Вам пишет собеседник
                         .form_element
                             textarea(placeholder="Новое сообщение")
                             a(href="#")

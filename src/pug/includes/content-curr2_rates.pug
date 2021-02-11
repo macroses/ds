@@ -1,0 +1,262 @@
+main 
+    .box 
+        .content_box 
+            .alert_box.info Средства от продажи товаров могут поступать на ваш 
+                a.main_link(href="#") личный счет Digiseller
+                |  в виде расчетных единиц системы WebMoney Transfer: 
+                a.main_link(href="#") WMZ 
+                |  (эквивалент доллара США), 
+                a.main_link(href="#") WMR
+                |  (эквивалент российского рубля), 
+                a.main_link(href="#") WME
+                |  (эквивалент евро), 
+                a.main_link(href="#") WMU
+                |  (эквивалент украинской гривны) и WMX (эквивалент 0,001 BTC). Здесь вы можете настроить курсы приема этих валют. Можно привязаться к актуальным курсы ЦБ РФ, НБУ, шлюза wmx.wmtransfer.com или установить свой собственный курс приема.
+                br
+                |Если вы не хотите принимать какую-либо из WebMoney-валют, нажмите кнопку "изменить" и в выпадающем списке выберите "не принимать", затем нажмите "сохранить".
+            .curr_rates 
+                .curr_rates_item
+                    .title Если цена моего товара указана в 
+                        span.bold USD
+                        |, то рассчитывать его стоимость в:
+                    ul.currency_list
+                        li.currency_list_item 
+                            .currency_name 
+                                a(href="#") WMZ 
+                            .currency_text по курсу 
+                                a(href="#") ЦБ РФ
+                                |:
+                            .exchange_rate 
+                                .exchange_rate_text
+                                    span.bold 1 
+                                    small USD 
+                                    |  = 
+                                    span.bold 1 
+                                    small WMZ
+                            button.btn.btn_gray(disabled) изменить
+                        li.currency_list_item 
+                            .currency_name 
+                                a(href="#") WMR
+                            .currency_text по средн. курсу  
+                                a(href="#") бирж
+                                |:
+                            .exchange_rate
+                                .exchange_rate_text 
+                                    span.bold 1 
+                                    small USD 
+                                    |  = 
+                                    span.bold 27,751616  
+                                    small WMR
+                            button.btn.btn_gray сохранить
+                        li.currency_list_item 
+                            .currency_name 
+                                a(href="#") WMR
+                            .currency_text 
+                                .form_element 
+                                    select
+                                        option(value="1") по курсу ЦБ РФ
+                                        option(value="2") по курсу НБУ
+                                        option(value="3") по моему курсу
+                                        // стилизация работает через атрибут value, не менять.
+                                        option(value="no") не принимать
+                            .exchange_rate 
+                                .exchange_rate_text
+                                    span.bold 1 
+                                    small USD 
+                                    |  = 
+                                    span.bold 27,751616  
+                                    | +
+                                .form_element 
+                                    input(type="text")
+                                .exchange_rate_text
+                                    |  % 
+                                    small WMR
+                            button.btn.btn_gray сохранить
+                    
+                    .hint Число товаров, цена у которых указана в USD: 
+                        span.bold 23
+
+                .curr_rates_item
+                    .title Если цена моего товара указана в 
+                        span.bold RUB
+                        |, то рассчитывать его стоимость в:
+                    ul.currency_list
+                        li.currency_list_item 
+                            .currency_name 
+                                a(href="#") WMZ 
+                            .currency_text по курсу 
+                                a(href="#") ЦБ РФ
+                                |:
+                            .exchange_rate 
+                                .exchange_rate_text
+                                    span.bold 1 
+                                    small USD 
+                                    |  = 
+                                    span.bold 1 
+                                    small WMZ
+                            button.btn.btn_gray(disabled) изменить
+                        li.currency_list_item 
+                            .currency_name 
+                                a(href="#") WMR
+                            .currency_text по средн. курсу  
+                                a(href="#") бирж
+                                |:
+                            .exchange_rate
+                                .exchange_rate_text 
+                                    span.bold 1 
+                                    small USD 
+                                    |  = 
+                                    span.bold 27,751616  
+                                    small WMR
+                            button.btn.btn_gray сохранить
+                        li.currency_list_item 
+                            .currency_name 
+                                a(href="#") WMR
+                            .currency_text 
+                                .form_element 
+                                    select
+                                        option(value="1") по курсу ЦБ РФ
+                                        option(value="2") по курсу НБУ
+                                        option(value="3") по моему курсу
+                                        // стилизация работает через атрибут value, не менять.
+                                        option(value="no") не принимать
+                            .exchange_rate 
+                                .exchange_rate_text
+                                    span.bold 1 
+                                    small USD 
+                                    |  = 
+                                    span.bold 27,751616  
+                                    | +
+                                .form_element 
+                                    input(type="text")
+                                .exchange_rate_text
+                                    |  % 
+                                    small WMR
+                            button.btn.btn_gray сохранить
+                    
+                    .hint Число товаров, цена у которых указана в USD: 
+                        span.bold 23
+
+            .curr_rates 
+                .curr_rates_item
+                    .title Если цена моего товара указана в 
+                        span.bold USD
+                        |, то рассчитывать его стоимость в:
+                    ul.currency_list
+                        li.currency_list_item 
+                            .currency_name 
+                                a(href="#") WMZ 
+                            .currency_text по курсу 
+                                a(href="#") ЦБ РФ
+                                |:
+                            .exchange_rate 
+                                .exchange_rate_text
+                                    span.bold 1 
+                                    small USD 
+                                    |  = 
+                                    span.bold 1 
+                                    small WMZ
+                            button.btn.btn_gray(disabled) изменить
+                        li.currency_list_item 
+                            .currency_name 
+                                a(href="#") WMR
+                            .currency_text по средн. курсу  
+                                a(href="#") бирж
+                                |:
+                            .exchange_rate
+                                .exchange_rate_text 
+                                    span.bold 1 
+                                    small USD 
+                                    |  = 
+                                    span.bold 27,751616  
+                                    small WMR
+                            button.btn.btn_gray сохранить
+                        li.currency_list_item 
+                            .currency_name 
+                                a(href="#") WMR
+                            .currency_text 
+                                .form_element 
+                                    select
+                                        option(value="1") по курсу ЦБ РФ
+                                        option(value="2") по курсу НБУ
+                                        option(value="3") по моему курсу
+                                        // стилизация работает через атрибут value, не менять.
+                                        option(value="no") не принимать
+                            .exchange_rate 
+                                .exchange_rate_text
+                                    span.bold 1 
+                                    small USD 
+                                    |  = 
+                                    span.bold 27,751616  
+                                    | +
+                                .form_element 
+                                    input(type="text")
+                                .exchange_rate_text
+                                    |  % 
+                                    small WMR
+                            button.btn.btn_gray сохранить
+                    
+                    .hint Число товаров, цена у которых указана в USD: 
+                        span.bold 23
+
+                .curr_rates_item
+                    .title Если цена моего товара указана в 
+                        span.bold RUB
+                        |, то рассчитывать его стоимость в:
+                    ul.currency_list
+                        li.currency_list_item 
+                            .currency_name 
+                                a(href="#") WMZ 
+                            .currency_text по курсу 
+                                a(href="#") ЦБ РФ
+                                |:
+                            .exchange_rate 
+                                .exchange_rate_text
+                                    span.bold 1 
+                                    small USD 
+                                    |  = 
+                                    span.bold 1 
+                                    small WMZ
+                            button.btn.btn_gray(disabled) изменить
+                        li.currency_list_item 
+                            .currency_name 
+                                a(href="#") WMR
+                            .currency_text по средн. курсу  
+                                a(href="#") бирж
+                                |:
+                            .exchange_rate
+                                .exchange_rate_text 
+                                    span.bold 1 
+                                    small USD 
+                                    |  = 
+                                    span.bold 27,751616  
+                                    small WMR
+                            button.btn.btn_gray сохранить
+                        li.currency_list_item 
+                            .currency_name 
+                                a(href="#") WMR
+                            .currency_text 
+                                .form_element 
+                                    select
+                                        option(value="1") по курсу ЦБ РФ
+                                        option(value="2") по курсу НБУ
+                                        option(value="3") по моему курсу
+                                        // стилизация работает через атрибут value, не менять.
+                                        option(value="no") не принимать
+                            .exchange_rate 
+                                .exchange_rate_text
+                                    span.bold 1 
+                                    small USD 
+                                    |  = 
+                                    span.bold 27,751616  
+                                    | +
+                                .form_element 
+                                    input(type="text")
+                                .exchange_rate_text
+                                    |  % 
+                                    small WMR
+                            button.btn.btn_gray сохранить
+                    
+                    .hint Число товаров, цена у которых указана в USD: 
+                        span.bold 23
+

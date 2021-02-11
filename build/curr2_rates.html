@@ -232,137 +232,188 @@
           </div>
         </div>
       </nav>
-      <main>
-        <div class="box">
-          <div class="content_box">
-            <div class="page_nav">
-              <ul class="breadcrumbs_list">
-                <li class="breadcrumb_item"><a class="main_link" href="#" data-placement="top" data-toggle="tooltip" title="список моих товаров">Мои товары</a></li>
-                <li class="breadcrumb_item">
-                  <div class="breadcrumb_item_name">Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена </div><a href="#" data-placement="top" data-toggle="tooltip" title="открыть страницу с описанием товара">
-                    <svg class="pic-good_link ">
-                      <use xlink:href="img/svg/sprite.svg#good_link"></use>
-                    </svg></a>
-                  <div class="breadcrumb_item_price">14895 <span>RUB</span></div>
-                </li>
-              </ul>
-              <div class="page_nav_item">
-                <div class="goods_counters"> <a class="main_link">продано: </a>
-                  <div class="count">25</div><span class="sep">|</span><span>в наличии: </span>
-                  <div class="count empty">0</div>
-                </div>
-                <div class="prev"> <a class="main_link" href="#">предыдущий товар</a></div>
-                <div class="next"> <a class="main_link" href="#">следующий товар</a></div>
-              </div>
-            </div>
-          </div>
-          <div class="purchase_inv_detail">
-            <ul class="nav nav-tabs" role="tablist">
-              <li><a class="nav-link" href="#tab-block" role="tab" data-toggle="tab">Информация о сделке</a></li>
-              <li><a class="nav-link" href="#tab-wm-auth" role="tab" data-toggle="tab" title="отзыв покупателя о товаре">Отзыв о товаре<span title="отрицательный">
-                    <svg class="pic-smile-bad ">
-                      <use xlink:href="img/svg/sprite.svg#smile-bad"></use>
-                    </svg></span></a></li>
-              <li><a class="nav-link active" href="#tab-phone" role="tab" data-toggle="tab">Переписка<span title="положительный">
-                    <svg class="pic-smile-good ">
-                      <use xlink:href="img/svg/sprite.svg#smile-good"></use>
-                    </svg></span></a></li>
-            </ul>
-            <div class="tab-pane active" id="tabTransactionInfo">
-              <div class="content_box">
-                <div class="spinner-border"> </div>
-                <div class="debates">
-                  <div class="debates_content_header">Покупатель Seller123@gmail.com</div>
-                  <div class="debates_content">
-                    <div class="muted_message">Сообщений не обнаружено</div>
-                    <div class="spinner-border spinner-border-sm"></div>
-                    <div class="my_message">Одна строка
-                      <div class="message_detail">19.02.2015 16:21</div>
-                      <div class="read_date"> 
-                        <svg class="pic-read_check ">
-                          <use xlink:href="img/svg/sprite.svg#read_check"></use>
-                        </svg>20.05.2015 20:57
+      <main> 
+        <div class="box"> 
+          <div class="content_box"> 
+            <div class="alert_box info">Средства от продажи товаров могут поступать на ваш <a class="main_link" href="#">личный счет Digiseller</a> в виде расчетных единиц системы WebMoney Transfer: <a class="main_link" href="#">WMZ </a> (эквивалент доллара США), <a class="main_link" href="#">WMR</a> (эквивалент российского рубля), <a class="main_link" href="#">WME</a> (эквивалент евро), <a class="main_link" href="#">WMU</a> (эквивалент украинской гривны) и WMX (эквивалент 0,001 BTC). Здесь вы можете настроить курсы приема этих валют. Можно привязаться к актуальным курсы ЦБ РФ, НБУ, шлюза wmx.wmtransfer.com или установить свой собственный курс приема.<br>Если вы не хотите принимать какую-либо из WebMoney-валют, нажмите кнопку "изменить" и в выпадающем списке выберите "не принимать", затем нажмите "сохранить".</div>
+            <div class="curr_rates"> 
+              <div class="curr_rates_item">
+                <div class="title">Если цена моего товара указана в <span class="bold">USD</span>, то рассчитывать его стоимость в:</div>
+                <ul class="currency_list">
+                  <li class="currency_list_item"> 
+                    <div class="currency_name"> <a href="#">WMZ </a></div>
+                    <div class="currency_text">по курсу <a href="#">ЦБ РФ</a>:</div>
+                    <div class="exchange_rate"> 
+                      <div class="exchange_rate_text"><span class="bold">1 </span><small>USD </small> = <span class="bold">1 </span><small>WMZ</small></div>
+                    </div>
+                    <button class="btn btn_gray" disabled>изменить</button>
+                  </li>
+                  <li class="currency_list_item"> 
+                    <div class="currency_name"> <a href="#">WMR</a></div>
+                    <div class="currency_text">по средн. курсу  <a href="#">бирж</a>:</div>
+                    <div class="exchange_rate">
+                      <div class="exchange_rate_text"> <span class="bold">1 </span><small>USD </small> = <span class="bold">27,751616  </span><small>WMR</small></div>
+                    </div>
+                    <button class="btn btn_gray">сохранить</button>
+                  </li>
+                  <li class="currency_list_item"> 
+                    <div class="currency_name"> <a href="#">WMR</a></div>
+                    <div class="currency_text"> 
+                      <div class="form_element"> 
+                        <select>
+                          <option value="1">по курсу ЦБ РФ</option>
+                          <option value="2">по курсу НБУ</option>
+                          <option value="3">по моему курсу</option>
+                          <!-- стилизация работает через атрибут value, не менять.-->
+                          <option value="no">не принимать</option>
+                        </select>
                       </div>
                     </div>
-                    <div class="answerer_message">Одна строка
-                      <div class="message_detail"> 
-                        <div class="debate_translate"> 
-                          <svg class="pic-translate ">
-                            <use xlink:href="img/svg/sprite.svg#translate"></use>
-                          </svg><a class="main_link" href="#">перевести </a>
-                        </div>
-                        <div class="answer_date">19.02.2015 16:21</div>
+                    <div class="exchange_rate"> 
+                      <div class="exchange_rate_text"><span class="bold">1 </span><small>USD </small> = <span class="bold">27,751616  </span>+</div>
+                      <div class="form_element"> 
+                        <input type="text">
                       </div>
+                      <div class="exchange_rate_text"> % <small>WMR</small></div>
                     </div>
-                    <div class="my_message">Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк 
-                      <div class="message_detail">19.02.2015 16:21</div>
-                      <div class="read_date"> 
-                        <svg class="pic-read_check ">
-                          <use xlink:href="img/svg/sprite.svg#read_check"></use>
-                        </svg>20.05.2015 20:57
-                      </div>
-                    </div>
-                    <div class="answerer_message">Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк 
-                      <div class="message_detail">
-                        <div class="debate_translate"> 
-                          <svg class="pic-translate ">
-                            <use xlink:href="img/svg/sprite.svg#translate"></use>
-                          </svg><a class="main_link" href="#">перевести </a>
-                        </div>
-                        <div class="answer_date">19.02.2015 16:21</div>
-                      </div>
-                    </div>
-                    <div class="answerer_message">Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк Много строк 
-                      <div class="message_detail"> 
-                        <div class="answer_date">19.02.2015 16:21</div>
-                      </div>
-                    </div>
-                    <div class="my_message"><a class="img_link" href="#" target="_blank"><img src="https://i.pinimg.com/736x/e8/27/eb/e827eb3d61909aea0c45232183bb9e03.jpg" alt=""></a>
-                      <div class="message_detail">19.02.2015 16:21</div>
-                    </div>
-                    <div class="answerer_message"><a class="img_link" href="#" target="_blank"><img src="https://www.ejin.ru/wp-content/uploads/2018/11/fshshshshshshshsh-e1542184507336.jpg" alt=""></a>
-                      <div class="message_detail"> 
-                        <div class="answer_date">19.02.2015 16:21</div>
-                      </div>
-                    </div>
-                    <div class="my_message">НепрерывнаястрокаНепрерывнаястрокаНепрерывнаястрокаНепрерывнаястрокаНепрерывнаястрокаНепрерывнаястрокаНепрерывнаястрокаНепрерывнаястрокаНепрерывнаястрокаНепрерывнаястрокаНепрерывнаястрока
-                      <div class="message_detail">19.02.2015 16:21</div>
-                    </div>
-                    <div class="answerer_message"><a class="main_link" href="#">cfd8dccfd8dccfd8dccfd8dccfd8dccfd8dccfd8dccfd8dccfd8dccfd8dccfd8dccfd8dccfd8dccfd8dccfd8dccfd8dccfd8dccfd8dccfd8dccfd8dccfd8dccfd8dccfd8dccfd8dc </a>
-                      <div class="message_detail"> 
-                        <div class="answer_date">19.02.2015 16:21</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="debates_textarea">
-                  <div class="answerer_typing"> <span class="typing_view_box">
-                      <svg class="pic-pen ">
-                        <use xlink:href="img/svg/sprite.svg#pen"></use>
-                      </svg>Вам пишет собеседник</span></div>
-                  <div class="form_element">
-                    <textarea placeholder="Новое сообщение"></textarea><a href="#">
-                      <svg class="pic-translate ">
-                        <use xlink:href="img/svg/sprite.svg#translate"></use>
-                      </svg></a>
-                  </div>
-                  <div class="button_group">
-                    <label>
-                      <input type="file" name="files">
-                      <div class="spinner-border spinner-border-sm"></div>
-                    </label>
-                    <button class="btn btn_blue">отправить</button>
-                  </div>
-                </div>
-                <ul class="attached_list">
-                  <li>
-                    <div class="attached_item"><img src="img/select_arrow.svg" alt=""><span class="delete_attached_file">
-                        <svg class="pic-close_circle ">
-                          <use xlink:href="img/svg/sprite.svg#close_circle"></use>
-                        </svg></span></div>
-                    <div class="filename">select_arrow.png <span class="filesize">20 КБ</span></div>
+                    <button class="btn btn_gray">сохранить</button>
                   </li>
                 </ul>
+                <div class="hint">Число товаров, цена у которых указана в USD: <span class="bold">23</span></div>
+              </div>
+              <div class="curr_rates_item">
+                <div class="title">Если цена моего товара указана в <span class="bold">RUB</span>, то рассчитывать его стоимость в:</div>
+                <ul class="currency_list">
+                  <li class="currency_list_item"> 
+                    <div class="currency_name"> <a href="#">WMZ </a></div>
+                    <div class="currency_text">по курсу <a href="#">ЦБ РФ</a>:</div>
+                    <div class="exchange_rate"> 
+                      <div class="exchange_rate_text"><span class="bold">1 </span><small>USD </small> = <span class="bold">1 </span><small>WMZ</small></div>
+                    </div>
+                    <button class="btn btn_gray" disabled>изменить</button>
+                  </li>
+                  <li class="currency_list_item"> 
+                    <div class="currency_name"> <a href="#">WMR</a></div>
+                    <div class="currency_text">по средн. курсу  <a href="#">бирж</a>:</div>
+                    <div class="exchange_rate">
+                      <div class="exchange_rate_text"> <span class="bold">1 </span><small>USD </small> = <span class="bold">27,751616  </span><small>WMR</small></div>
+                    </div>
+                    <button class="btn btn_gray">сохранить</button>
+                  </li>
+                  <li class="currency_list_item"> 
+                    <div class="currency_name"> <a href="#">WMR</a></div>
+                    <div class="currency_text"> 
+                      <div class="form_element"> 
+                        <select>
+                          <option value="1">по курсу ЦБ РФ</option>
+                          <option value="2">по курсу НБУ</option>
+                          <option value="3">по моему курсу</option>
+                          <!-- стилизация работает через атрибут value, не менять.-->
+                          <option value="no">не принимать</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="exchange_rate"> 
+                      <div class="exchange_rate_text"><span class="bold">1 </span><small>USD </small> = <span class="bold">27,751616  </span>+</div>
+                      <div class="form_element"> 
+                        <input type="text">
+                      </div>
+                      <div class="exchange_rate_text"> % <small>WMR</small></div>
+                    </div>
+                    <button class="btn btn_gray">сохранить</button>
+                  </li>
+                </ul>
+                <div class="hint">Число товаров, цена у которых указана в USD: <span class="bold">23</span></div>
+              </div>
+            </div>
+            <div class="curr_rates"> 
+              <div class="curr_rates_item">
+                <div class="title">Если цена моего товара указана в <span class="bold">USD</span>, то рассчитывать его стоимость в:</div>
+                <ul class="currency_list">
+                  <li class="currency_list_item"> 
+                    <div class="currency_name"> <a href="#">WMZ </a></div>
+                    <div class="currency_text">по курсу <a href="#">ЦБ РФ</a>:</div>
+                    <div class="exchange_rate"> 
+                      <div class="exchange_rate_text"><span class="bold">1 </span><small>USD </small> = <span class="bold">1 </span><small>WMZ</small></div>
+                    </div>
+                    <button class="btn btn_gray" disabled>изменить</button>
+                  </li>
+                  <li class="currency_list_item"> 
+                    <div class="currency_name"> <a href="#">WMR</a></div>
+                    <div class="currency_text">по средн. курсу  <a href="#">бирж</a>:</div>
+                    <div class="exchange_rate">
+                      <div class="exchange_rate_text"> <span class="bold">1 </span><small>USD </small> = <span class="bold">27,751616  </span><small>WMR</small></div>
+                    </div>
+                    <button class="btn btn_gray">сохранить</button>
+                  </li>
+                  <li class="currency_list_item"> 
+                    <div class="currency_name"> <a href="#">WMR</a></div>
+                    <div class="currency_text"> 
+                      <div class="form_element"> 
+                        <select>
+                          <option value="1">по курсу ЦБ РФ</option>
+                          <option value="2">по курсу НБУ</option>
+                          <option value="3">по моему курсу</option>
+                          <!-- стилизация работает через атрибут value, не менять.-->
+                          <option value="no">не принимать</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="exchange_rate"> 
+                      <div class="exchange_rate_text"><span class="bold">1 </span><small>USD </small> = <span class="bold">27,751616  </span>+</div>
+                      <div class="form_element"> 
+                        <input type="text">
+                      </div>
+                      <div class="exchange_rate_text"> % <small>WMR</small></div>
+                    </div>
+                    <button class="btn btn_gray">сохранить</button>
+                  </li>
+                </ul>
+                <div class="hint">Число товаров, цена у которых указана в USD: <span class="bold">23</span></div>
+              </div>
+              <div class="curr_rates_item">
+                <div class="title">Если цена моего товара указана в <span class="bold">RUB</span>, то рассчитывать его стоимость в:</div>
+                <ul class="currency_list">
+                  <li class="currency_list_item"> 
+                    <div class="currency_name"> <a href="#">WMZ </a></div>
+                    <div class="currency_text">по курсу <a href="#">ЦБ РФ</a>:</div>
+                    <div class="exchange_rate"> 
+                      <div class="exchange_rate_text"><span class="bold">1 </span><small>USD </small> = <span class="bold">1 </span><small>WMZ</small></div>
+                    </div>
+                    <button class="btn btn_gray" disabled>изменить</button>
+                  </li>
+                  <li class="currency_list_item"> 
+                    <div class="currency_name"> <a href="#">WMR</a></div>
+                    <div class="currency_text">по средн. курсу  <a href="#">бирж</a>:</div>
+                    <div class="exchange_rate">
+                      <div class="exchange_rate_text"> <span class="bold">1 </span><small>USD </small> = <span class="bold">27,751616  </span><small>WMR</small></div>
+                    </div>
+                    <button class="btn btn_gray">сохранить</button>
+                  </li>
+                  <li class="currency_list_item"> 
+                    <div class="currency_name"> <a href="#">WMR</a></div>
+                    <div class="currency_text"> 
+                      <div class="form_element"> 
+                        <select>
+                          <option value="1">по курсу ЦБ РФ</option>
+                          <option value="2">по курсу НБУ</option>
+                          <option value="3">по моему курсу</option>
+                          <!-- стилизация работает через атрибут value, не менять.-->
+                          <option value="no">не принимать</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="exchange_rate"> 
+                      <div class="exchange_rate_text"><span class="bold">1 </span><small>USD </small> = <span class="bold">27,751616  </span>+</div>
+                      <div class="form_element"> 
+                        <input type="text">
+                      </div>
+                      <div class="exchange_rate_text"> % <small>WMR</small></div>
+                    </div>
+                    <button class="btn btn_gray">сохранить</button>
+                  </li>
+                </ul>
+                <div class="hint">Число товаров, цена у которых указана в USD: <span class="bold">23</span></div>
               </div>
             </div>
           </div>
