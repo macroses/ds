@@ -1,0 +1,54 @@
+.exchange {
+    table {
+        margin-bottom: 30px;
+    }
+
+    tbody {
+        span {
+            font-weight: normal;
+        }
+    }
+    .arr {
+        margin: 0 5px;
+    }
+
+    small {
+        font-size: 80%;
+        font-weight: normal;
+    }
+}
+
+.exchange_live_rates {
+    display: inline-flex;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 14px;
+    box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.26);
+    width: auto;
+    .title {
+        background: #78909c;
+        color: #fff;
+        padding: 15px;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+    }
+
+    .results {
+        color: $headers_color;
+        background: #fff;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+        padding: 15px;
+        display: flex;
+    }
+
+
+    .currency {
+        margin-right: 30px;
+        
+    }
+
+    .rub, .eur, .usd {
+        font: bold 14px Lato;
+    }
+}

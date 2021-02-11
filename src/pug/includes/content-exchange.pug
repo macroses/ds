@@ -1,0 +1,78 @@
+main 
+    .box 
+        .exchange_live_rates 
+            .title Банк России (11.02.2021)
+            .results
+                .currency
+                    |Курс ЦБ РФ 
+                    span.rub RUB 
+                    |  / 
+                    span.usd USD 
+                    |: 73.8526
+                .currency
+                    |Курс ЦБ РФ 
+                    span.rub RUB 
+                    |  / 
+                    span.usd USD 
+                    |: 73.8526
+                .currency
+                    |Курс ЦБ РФ 
+                    span.rub RUB 
+                    |  / 
+                    span.usd USD 
+                    |: 73.8526
+
+        .content_box 
+            .title_block Все заявки
+            .exchange 
+                table.equal_cells.govered_rows 
+                    colgroup
+                        col
+                        col
+                        col
+                        col
+                        col
+                        col
+                        col(style="width: 100px")
+                    thead
+                        tr
+                            th Направление обмена
+                            th Заявок
+                            th Продается
+                            th Покупается
+                            th Курс обмена
+                            th Разница с курсом ЦБ
+                            th 
+                    tbody
+                        tr
+                            td 
+                                span.usd WMZ
+                                span.arr &#10132;
+                                span.eur WME
+                            td 125
+                            td 1234567.99 
+                                small.usd WMZ
+                            td 1234567.99 
+                                small.rub WMZ
+                            td 89.2722
+                            td -0.32%
+                            td.align_right
+                                a.main_link(href="#") подробнее
+                        tr
+                            td 
+                                span.usd WMZ
+                                span.arr &#10132;
+                                span.rub WMR
+                            td 125
+                            td 1234567.99 
+                                small.usd WMZ
+                            td 1234567.99 
+                                small.rub WMZ
+                            td 89.2722
+                            td -0.32%
+                            td.align_right
+                                a.main_link(href="#") подробнее
+            .title_block Мои заявки
+            .hint заявок на обмен не найдено
+            .new_exchange 
+                .title Я хочу разместить новую заявку
