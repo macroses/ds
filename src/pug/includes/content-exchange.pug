@@ -7,25 +7,25 @@ main
                     |Курс ЦБ РФ 
                     span.rub RUB 
                     |  / 
-                    span.usd USD 
+                    span.usd USD
                     |: 73.8526
                 .currency
                     |Курс ЦБ РФ 
                     span.rub RUB 
                     |  / 
-                    span.usd USD 
+                    span.eur EUR
                     |: 73.8526
                 .currency
                     |Курс ЦБ РФ 
-                    span.rub RUB 
-                    |  / 
                     span.usd USD 
+                    |  / 
+                    span.eur EUR
                     |: 73.8526
 
         .content_box 
             .title_block Все заявки
             .exchange 
-                table.equal_cells.govered_rows 
+                table.equal_cells.hovered_rows 
                     colgroup
                         col
                         col
@@ -72,7 +72,107 @@ main
                             td -0.32%
                             td.align_right
                                 a.main_link(href="#") подробнее
-            .title_block Мои заявки
-            .hint заявок на обмен не найдено
-            .new_exchange 
-                .title Я хочу разместить новую заявку
+                .title_block Мои заявки
+                .hint заявок на обмен не найдено
+
+                table.equal_cells.hovered_rows 
+                    colgroup
+                        col
+                        col
+                        col
+                        col
+                        col
+                        col
+                    thead
+                        tr
+                            th Направление
+                            th Продается
+                            th Продано
+                            th По курсу
+                            th Разница с курсом ЦБ
+                            th 
+                    tbody 
+                        tr
+                            td 
+                                span.usd WMZ
+                                span.arr &#10132;
+                                span.eur WME
+                            td 1234567.99 
+                                small.usd WMZ
+                            td 1234567.99 
+                                small.usd WMZ
+                            td 78.9876
+                            td +5.6%
+                            td.align_right
+                                a.main_link(href="#") снять заявку
+
+            .exchange_bid 
+                .title_block Я хочу разместить новую заявку
+                .exchange_bid_item 
+                    .exchange_bid_item_box 
+                        span у меня есть
+                        .form_element 
+                            input(type="text" disabled)
+                        .usd WMZ
+                    .exchange_bid_item_box 
+                        span нужно
+                        .form_element 
+                            select(disabled)
+                                option(value="0") WMZ
+                                option(value="1") WMR
+                                option(value="2") WME
+                    .exchange_bid_item_box 
+                        span по курсу
+                            span.star *
+                        .form_element 
+                            input(type="text" disabled)
+                    .exchange_bid_item_box 
+                        .btn_group 
+                            button.btn.btn_gray(disabled) рассчитать
+                            button.btn.btn_gray(disabled) разместить
+
+                .exchange_bid_item 
+                    .exchange_bid_item_box 
+                        span у меня есть
+                        .form_element 
+                            input(type="text")
+                        .rub WMR
+                    .exchange_bid_item_box 
+                        span нужно
+                        .form_element 
+                            select
+                                option(value="0") WMZ
+                                option(value="1") WMR
+                                option(value="2") WME
+                    .exchange_bid_item_box 
+                        span по курсу 
+                            span.empty
+                        .form_element 
+                            input(type="text")
+                    .exchange_bid_item_box 
+                        .btn_group 
+                            button.btn.btn_gray рассчитать
+                            button.btn.btn_gray разместить
+                        
+                .exchange_bid_item 
+                    .exchange_bid_item_box 
+                        span у меня есть
+                        .form_element 
+                            input(type="text")
+                        .eur WME
+                    .exchange_bid_item_box 
+                        span нужно
+                        .form_element 
+                            select
+                                option(value="0") WMZ
+                                option(value="1") WMR
+                                option(value="2") WME
+                    .exchange_bid_item_box 
+                        span по курсу
+                            span.star *
+                        .form_element 
+                            input(type="text")
+                    .exchange_bid_item_box 
+                        .btn_group 
+                            button.btn.btn_gray рассчитать
+                            button.btn.btn_gray разместить

@@ -1,0 +1,88 @@
+main 
+    .box 
+        .exchange_live_rates 
+            .title Банк России (11.02.2021)
+            .results
+                .currency
+                    |Курс ЦБ РФ 
+                    span.rub RUB 
+                    |  / 
+                    span.usd USD
+                    |: 73.8526
+                .currency
+                    |Курс ЦБ РФ 
+                    span.rub RUB 
+                    |  / 
+                    span.eur EUR
+                    |: 73.8526
+                .currency
+                    |Курс ЦБ РФ 
+                    span.usd USD 
+                    |  / 
+                    span.eur EUR
+                    |: 73.8526
+
+        .exchange_detail
+            .content_box 
+                .title_block Направление заявок
+                    .form_element 
+                        select
+                            option(value="0") WMZ &#10132; WME
+                            option(value="1") WMZ &#10132; WMR
+                            option(value="2") WME &#10132; WMR
+
+                .exchange_info 
+                    .exchange_info_item
+                        span.bold Всего 14 заявок
+                    .exchange_info_item
+                        |на сумму: 3725,95 
+                        small.usd WMZ
+                    .exchange_info_item
+                        |нужна сумма: 3559,57 
+                        small.eur WME
+                    .exchange_info_item
+                        |курс обмена: 1,0467
+                    .exchange_info_item
+                        |разница с курсом ЦБ: -13,7%
+                    a.main_link(href="#") обменять
+
+                .title_block Заявки
+                table.equal_cells.hovered_rows
+                    colgroup
+                        col
+                        col
+                        col
+                        col
+                        col
+                    thead
+                        tr
+                            th Есть сумма 
+                                small (
+                                    span.usd WMZ
+                                    |)
+                            th Нужна сумма 
+                                small (
+                                    span.eur WME
+                                    |)
+                            th Курс обмена
+                            th Разница с курсом ЦБ
+                            th 
+                    tbody
+                        tr
+                            td 12345
+                            td 4321
+                            td 1.1111
+                            td -8.22%
+                            td.align_right 
+                                a.main_link(href="#") обменять
+                        tr
+                            td 12345
+                            td 4321
+                            td 1.1111
+                            td -8.22%
+                            td.align_right 
+                                span.bolder моя заявка > 
+                                a.main_link(href="#") обменять
+
+                .exchange_detail_my_bid
+                    .title_block Моя заявка

@@ -237,15 +237,15 @@
           <div class="exchange_live_rates"> 
             <div class="title">Банк России (11.02.2021)</div>
             <div class="results">
-              <div class="currency">Курс ЦБ РФ <span class="rub">RUB </span> / <span class="usd">USD </span>: 73.8526</div>
-              <div class="currency">Курс ЦБ РФ <span class="rub">RUB </span> / <span class="usd">USD </span>: 73.8526</div>
-              <div class="currency">Курс ЦБ РФ <span class="rub">RUB </span> / <span class="usd">USD </span>: 73.8526</div>
+              <div class="currency">Курс ЦБ РФ <span class="rub">RUB </span> / <span class="usd">USD</span>: 73.8526</div>
+              <div class="currency">Курс ЦБ РФ <span class="rub">RUB </span> / <span class="eur">EUR</span>: 73.8526</div>
+              <div class="currency">Курс ЦБ РФ <span class="usd">USD </span> / <span class="eur">EUR</span>: 73.8526</div>
             </div>
           </div>
           <div class="content_box"> 
             <div class="title_block">Все заявки</div>
             <div class="exchange"> 
-              <table class="equal_cells govered_rows"> 
+              <table class="equal_cells hovered_rows"> 
                 <colgroup>
                   <col>
                   <col>
@@ -287,11 +287,125 @@
                   </tr>
                 </tbody>
               </table>
+              <div class="title_block">Мои заявки</div>
+              <div class="hint">заявок на обмен не найдено</div>
+              <table class="equal_cells hovered_rows"> 
+                <colgroup>
+                  <col>
+                  <col>
+                  <col>
+                  <col>
+                  <col>
+                  <col>
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>Направление</th>
+                    <th>Продается</th>
+                    <th>Продано</th>
+                    <th>По курсу</th>
+                    <th>Разница с курсом ЦБ</th>
+                    <th> </th>
+                  </tr>
+                </thead>
+                <tbody> 
+                  <tr>
+                    <td> <span class="usd">WMZ</span><span class="arr">&#10132;</span><span class="eur">WME</span></td>
+                    <td>1234567.99 <small class="usd">WMZ</small></td>
+                    <td>1234567.99 <small class="usd">WMZ</small></td>
+                    <td>78.9876</td>
+                    <td>+5.6%</td>
+                    <td class="align_right"><a class="main_link" href="#">снять заявку</a></td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-            <div class="title_block">Мои заявки</div>
-            <div class="hint">заявок на обмен не найдено</div>
-            <div class="new_exchange"> 
-              <div class="title">Я хочу разместить новую заявку</div>
+            <div class="exchange_bid"> 
+              <div class="title_block">Я хочу разместить новую заявку</div>
+              <div class="exchange_bid_item"> 
+                <div class="exchange_bid_item_box"> <span>у меня есть</span>
+                  <div class="form_element"> 
+                    <input type="text" disabled>
+                  </div>
+                  <div class="usd">WMZ</div>
+                </div>
+                <div class="exchange_bid_item_box"> <span>нужно</span>
+                  <div class="form_element"> 
+                    <select disabled>
+                      <option value="0">WMZ</option>
+                      <option value="1">WMR</option>
+                      <option value="2">WME</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="exchange_bid_item_box"> <span>по курсу<span class="star">*</span></span>
+                  <div class="form_element"> 
+                    <input type="text" disabled>
+                  </div>
+                </div>
+                <div class="exchange_bid_item_box"> 
+                  <div class="btn_group"> 
+                    <button class="btn btn_gray" disabled>рассчитать</button>
+                    <button class="btn btn_gray" disabled>разместить</button>
+                  </div>
+                </div>
+              </div>
+              <div class="exchange_bid_item"> 
+                <div class="exchange_bid_item_box"> <span>у меня есть</span>
+                  <div class="form_element"> 
+                    <input type="text">
+                  </div>
+                  <div class="rub">WMR</div>
+                </div>
+                <div class="exchange_bid_item_box"> <span>нужно</span>
+                  <div class="form_element"> 
+                    <select>
+                      <option value="0">WMZ</option>
+                      <option value="1">WMR</option>
+                      <option value="2">WME</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="exchange_bid_item_box"> <span>по курсу <span class="empty"></span></span>
+                  <div class="form_element"> 
+                    <input type="text">
+                  </div>
+                </div>
+                <div class="exchange_bid_item_box"> 
+                  <div class="btn_group"> 
+                    <button class="btn btn_gray">рассчитать</button>
+                    <button class="btn btn_gray">разместить</button>
+                  </div>
+                </div>
+              </div>
+              <div class="exchange_bid_item"> 
+                <div class="exchange_bid_item_box"> <span>у меня есть</span>
+                  <div class="form_element"> 
+                    <input type="text">
+                  </div>
+                  <div class="eur">WME</div>
+                </div>
+                <div class="exchange_bid_item_box"> <span>нужно</span>
+                  <div class="form_element"> 
+                    <select>
+                      <option value="0">WMZ</option>
+                      <option value="1">WMR</option>
+                      <option value="2">WME</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="exchange_bid_item_box"> <span>по курсу<span class="star">*</span></span>
+                  <div class="form_element"> 
+                    <input type="text">
+                  </div>
+                </div>
+                <div class="exchange_bid_item_box"> 
+                  <div class="btn_group"> 
+                    <button class="btn btn_gray">рассчитать</button>
+                    <button class="btn btn_gray">разместить</button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

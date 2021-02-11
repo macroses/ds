@@ -12,10 +12,7 @@
         margin: 0 5px;
     }
 
-    small {
-        font-size: 80%;
-        font-weight: normal;
-    }
+    
 }
 
 .exchange_live_rates {
@@ -25,6 +22,8 @@
     font-size: 14px;
     box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.26);
     width: auto;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
     .title {
         background: #78909c;
         color: #fff;
@@ -51,4 +50,70 @@
     .rub, .eur, .usd {
         font: bold 14px Lato;
     }
+}
+
+.exchange_bid_item {
+    display: inline-flex;
+    padding: 8px 0;
+    border-bottom: 1px solid #eceff1;
+    flex: 1;
+}
+
+.exchange_bid_item_box {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    & > * {
+        margin-right: 5px;
+    }
+
+    &:last-child {
+        margin: 0;
+    }
+    
+    .form_element {
+        input {
+            width: 100px;
+        }
+    }
+
+    .btn_group {
+        margin-left: 40px;
+    }
+
+    .empty {
+        margin-right: 5px;
+    }
+}
+
+.exchange_detail {
+    .title_block {
+        display: flex;
+        align-items: center;
+        .form_element {
+            margin-left: 10px;
+        }
+    }
+
+    small {
+        span {
+            font-size: 100%;
+        }
+    }
+}
+
+.exchange_info {
+    display: flex;
+    margin: 20px 0;
+    border-bottom: 1px solid #eceff1;
+    padding: 8px 0;
+    font-size: 13px;
+    .main_link {
+        margin-left: auto;
+    }
+}
+
+.exchange_info_item {
+    margin-right: 20px;
+    
 }

@@ -1165,3 +1165,16 @@ button.btn, input[type="submit"].btn, a.btn, label.btn {
 .transfers_detail {
     color: map-get($dark_colors, main);
 }
+
+.exchange_live_rates .results {
+    color: map-get($dark_colors, main);
+    background: #272f34;
+}
+
+.exchange_bid_item {
+    border-color: map-get($dark_bg, nav);
+}
+
+.exchange_bid_item_box {
+    color: map-get($dark_colors, main);
+}
