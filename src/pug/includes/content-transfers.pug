@@ -1,0 +1,43 @@
+main 
+    .box 
+        .content_box 
+            .alert_box.info Здесь отображаются переводы средств с личного счета Digiseller на WebMoney-кошельки за последние 6 месяцев. Переводы, осуществленные ранее, перенесены в архив без возможности просмотра.
+            .transfers
+                table.equal_cells.hovered_rows
+                    colgroup
+                        col
+                        col
+                        col
+                        col
+                    thead
+                        tr
+                            th Дата перевода
+                            th Сумма
+                            th Тип валюты
+                            th Состояние
+                    tbody 
+                        tr
+                            td 01.02.2021 16:41
+                            td 6479.12
+                            td 
+                                .usd WMZ
+                            td перевод завершен
+                        tr
+                            td 01.02.2021 16:41
+                            td 6479.12
+                            td 
+                                .rub WMR
+                            td перевод завершен
+                        tr
+                            td 01.02.2021 16:41
+                            td 6479.12
+                            td 
+                                .eur WME
+                            td перевод завершен
+                        tr
+                            td 01.02.2021 16:41
+                            td 6479.12
+                            td 
+                                .uah WMU
+                            td перевод завершен
+                +pagination('Операций на странице:')

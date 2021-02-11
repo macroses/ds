@@ -59,3 +59,25 @@
         }
     }
 }
+
+.transfers {
+    table {
+        margin-top: 20px;
+    }
+}
+
+.transfers_detail_item {
+    display: flex;
+    margin-bottom: 15px;
+    font: bold 13px Roboto;
+    .title {
+        min-width: 200px;
+        margin-right: 10px;
+        
+    }
+
+    .value {
+        font-size: 13px;
+        font-weight: normal;
+    }
+}

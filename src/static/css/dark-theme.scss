@@ -1161,3 +1161,7 @@ button.btn, input[type="submit"].btn, a.btn, label.btn {
 .currency_list_item {
     border-color: map-get($dark_bg, nav);
 }
+
+.transfers_detail {
+    color: map-get($dark_colors, main);
+}
