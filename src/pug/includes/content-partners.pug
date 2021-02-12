@@ -1,0 +1,13 @@
+main 
+    .box 
+        +tab-list(['Statistics', 'AllAgents', 'SelectedAgents', ['AreAlreadySelling', 10], 'AgentID', 'GeneralSettings', 'ComissionTemplates'], 0)
+            +tab('Statistics', 'active')
+                .content_box
+                    .partners 
+                        .partners_stat
+                            .partners_stat_top
+                                .partners_aside 
+                                    |Выберите период:
+                                    +select(['1 месяц', '6 месяцев', '12 месяцев'])
+                                .form_element 
+                                    input(type="text" placeholder="Название товара")
