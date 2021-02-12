@@ -86,3 +86,25 @@ main
 
                 .exchange_detail_my_bid
                     .title_block Моя заявка
+                    .exchange_bid_item 
+                        .exchange_bid_item_box 
+                            span у меня есть
+                            .form_element 
+                                input(type="text" disabled)
+                            .usd WMZ
+                        .exchange_bid_item_box 
+                            span у меня есть
+                            .form_element 
+                                input(type="text")
+                            .rub WMR
+                        .exchange_bid_item_box 
+                            span по курсу
+                            .form_element 
+                                input(type="text")
+                        .exchange_bid_item_box 
+                            span разница с курсом ЦБ
+                            span.bold +13.8627%
+                        .exchange_bid_item_box 
+                            .btn_group 
+                                button.btn.btn_gray рассчитать
+                                button.btn.btn_gray(disabled) разместить

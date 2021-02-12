@@ -1,0 +1,46 @@
+main 
+    .box 
+        .content_box 
+            .search_page 
+                .search_page_top 
+                    |Что искать:
+                    +select(['Уникальный код', 'Email'])
+                    .form_element 
+                        input(type="text")
+                    button.btn.btn_blue искать
+                
+                .search_page_result 
+                    .item Покупатель: 
+                        span.bolder user@gmail.com 
+                        a.main_link(href="#") посмотреть сумму покупок
+                    .item Найдено: 
+                        span.bold 4 
+
+                    table.equal_cells.hovered_rows 
+                        colgroup
+                            col
+                            col
+                            col
+                            col(style="width: 150px")
+                        thead
+                            tr
+                                th Название товара
+                                th Стоимость товара
+                                th Дата оплаты
+                                th.align_center Состояние оплаты
+                        tbody
+                            tr
+                                td 
+                                    a.main_link(href="#") test test test test test test test test test test test test test test test test test test test test test 
+                                td 2 
+                                    small WMR
+                                td 28.07.2020 14:56:29
+                                td.align_center иконка
+                            tr
+                                td 
+                                    a.main_link(href="#") test 
+                                td 2 
+                                    small WMR
+                                td 28.07.2020 14:56:29
+                                td.align_center иконка
+

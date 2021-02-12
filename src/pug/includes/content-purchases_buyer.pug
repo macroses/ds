@@ -1,0 +1,48 @@
+main
+    .box
+        .content_box
+            .page_nav
+                ul.breadcrumbs_list
+                    li.breadcrumb_item
+                        a.main_link.back_link(href="#") к поиску
+
+        .content_box
+            .puchases_buyer 
+                .item Покупатель 
+                    span.bolder user@gmail.com 
+                    a(href="#") 
+                        +icon('messages')
+                    a(href="#") 
+                        +icon('copy')
+                .item Сумма покупок: 
+                    span.bolder 0.06
+                    |  $ 
+            |количество покупок: 
+            span.bold 2
+
+            .puchases_buyer_table 
+                table.equal_cells
+                    colgroup
+                        col
+                        col(style="width: 200px")
+                        col(style="width: 200px")
+                    thead
+                        tr
+                            th Название товара
+                            th Оплачено
+                            th Дата покупки
+                    tbody
+                        tr
+                            td 
+                                a.main_link(href="#") test 
+                            td 2
+                                small WMR
+                            td 16.09.2020 11:35:16
+                        tr
+                            td 
+                                a.main_link(href="#") test 
+                            td 2
+                                small WMR
+                            td 16.09.2020 11:35:16
+                +pagination('Товаров на странице:')
+                

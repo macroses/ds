@@ -100,6 +100,10 @@
             font-size: 100%;
         }
     }
+
+    table {
+        margin-bottom: 30px;
+    }
 }
 
 .exchange_info {
@@ -116,4 +120,83 @@
 .exchange_info_item {
     margin-right: 20px;
     
+}
+
+.exchange_detail_my_bid {
+    margin-top: 20px;
+
+    .exchange_bid_item {
+        border-bottom: 0;
+        padding: 0;
+    }
+}
+
+.exchange_answer {
+    margin-top: 20px;
+    .form_data_block_item.err {
+        color: red;
+        .form_data_block_title {
+            color: red;
+            font-weight: bold;
+        }
+    }
+    .form_data_block_content {
+        align-items: center;
+        
+        .form_element {
+            input {
+                width: 100px;
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
+// search page
+.search_page_top {
+    display: flex;
+    align-items: center;
+
+    .form_element {
+        margin: 0 5px;
+        input {
+            width: 250px;
+        }
+    }
+
+    .btn {
+        margin-left: 5px;
+    }
+}
+
+.search_page_result {
+    margin-top: 30px;
+    table {
+        margin-top: 30px;
+    }
+
+    .item {
+        margin-bottom: 10px;
+    }
+}
+
+.puchases_buyer {
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #000;
+    svg {
+        fill: #000;
+        @include box(18px);
+    }
+
+    .item {
+        margin-bottom: 10px;
+        a {
+            margin-left: 5px;
+        }
+    }
+}
+
+.puchases_buyer_table {
+    margin-top: 30px;
 }

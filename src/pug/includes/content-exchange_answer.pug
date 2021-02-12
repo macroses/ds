@@ -1,0 +1,49 @@
+main
+    .box
+        .content_box
+            .page_nav
+                ul.breadcrumbs_list
+                    li.breadcrumb_item
+                        a.main_link.back_link(href="#") выбрать другую заявку
+
+        .content_box
+            .title_block Выбранная заявка
+            .alert_box.warning
+                spab.bold Ошибка
+                |:  сумма для обмена превышает остаток средств на WMR-счёте
+
+            .exchange_answer 
+                .form_data_block
+                    .form_data_block_item
+                        .form_data_block_title Направление обмена:
+                        .form_data_block_content WMZ &#10132; WME
+                    .form_data_block_item
+                        .form_data_block_title Есть сумма:
+                        .form_data_block_content 12345.67 WME
+                    .form_data_block_item
+                        .form_data_block_title Нужна сумма:
+                        .form_data_block_content 312.34 WMR 
+                    .form_data_block_item.err
+                        .form_data_block_title Сейчас у вас на счету:
+                        .form_data_block_content 0 WMR 
+                    .form_data_block_item
+                        .form_data_block_title Максимальная сумма обмена по заявке:
+                        .form_data_block_content 1402.59 WMR 
+                    .form_data_block_item
+                        .form_data_block_title Я готов заплатить:
+                        .form_data_block_content
+                            .form_element 
+                                input(type="text")
+                                |WMR
+                    .form_data_block_item
+                        .form_data_block_title При этом я получу:
+                        .form_data_block_content
+                            .form_element 
+                                input(type="text")
+                                |WMR
+                    .form_data_block_item
+                        .form_data_block_title
+                        .form_data_block_content
+                            .btn_group 
+                                button.btn.btn_gray рассчитать
+                                button.btn.btn_gray разместить

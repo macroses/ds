@@ -1178,3 +1178,40 @@ button.btn, input[type="submit"].btn, a.btn, label.btn {
 .exchange_bid_item_box {
     color: map-get($dark_colors, main);
 }
+
+.exchange_info {
+    color: map-get($dark_colors, main);
+    border-color: map-get($dark_bg, nav);
+}
+
+.exchange_answer {
+    .form_data_block_item.err {
+        color: red;
+        .form_data_block_title {
+            color: red;
+            font-weight: bold;
+        }
+
+        .form_data_block_content {
+            color: red;
+        }
+    }
+}
+
+.search_page_top {
+    color: map-get($dark_colors, main);
+}
+
+.search_page_result {
+    .item {
+        color: map-get($dark_colors, main);
+    }
+}
+
+.puchases_buyer {
+    border-color: #fff;
+    color: map-get($dark_colors, main); 
+    svg {
+        fill: map-get($dark_colors, main);
+    }
+}

@@ -232,94 +232,64 @@
           </div>
         </div>
       </nav>
-      <main> 
-        <div class="box"> 
-          <div class="exchange_live_rates"> 
-            <div class="title">Банк России (11.02.2021)</div>
-            <div class="results">
-              <div class="currency">Курс ЦБ РФ <span class="rub">RUB </span> / <span class="usd">USD</span>: 73.8526</div>
-              <div class="currency">Курс ЦБ РФ <span class="rub">RUB </span> / <span class="eur">EUR</span>: 73.8526</div>
-              <div class="currency">Курс ЦБ РФ <span class="usd">USD </span> / <span class="eur">EUR</span>: 73.8526</div>
+      <main>
+        <div class="box">
+          <div class="content_box">
+            <div class="page_nav">
+              <ul class="breadcrumbs_list">
+                <li class="breadcrumb_item"><a class="main_link back_link" href="#">выбрать другую заявку</a></li>
+              </ul>
             </div>
           </div>
-          <div class="exchange_detail">
-            <div class="content_box"> 
-              <div class="title_block">Направление заявок
-                <div class="form_element"> 
-                  <select>
-                    <option value="0">WMZ &#10132; WME</option>
-                    <option value="1">WMZ &#10132; WMR</option>
-                    <option value="2">WME &#10132; WMR</option>
-                  </select>
+          <div class="content_box">
+            <div class="title_block">Выбранная заявка</div>
+            <div class="alert_box warning">
+              <spab class="bold">Ошибка</spab>:  сумма для обмена превышает остаток средств на WMR-счёте
+            </div>
+            <div class="exchange_answer"> 
+              <div class="form_data_block">
+                <div class="form_data_block_item">
+                  <div class="form_data_block_title">Направление обмена:</div>
+                  <div class="form_data_block_content">WMZ &#10132; WME</div>
                 </div>
-              </div>
-              <div class="exchange_info"> 
-                <div class="exchange_info_item"><span class="bold">Всего 14 заявок</span></div>
-                <div class="exchange_info_item">на сумму: 3725,95 <small class="usd">WMZ</small></div>
-                <div class="exchange_info_item">нужна сумма: 3559,57 <small class="eur">WME</small></div>
-                <div class="exchange_info_item">курс обмена: 1,0467</div>
-                <div class="exchange_info_item">разница с курсом ЦБ: -13,7%</div><a class="main_link" href="#">обменять</a>
-              </div>
-              <div class="title_block">Заявки</div>
-              <table class="equal_cells hovered_rows">
-                <colgroup>
-                  <col>
-                  <col>
-                  <col>
-                  <col>
-                  <col>
-                </colgroup>
-                <thead>
-                  <tr>
-                    <th>Есть сумма <small>(<span class="usd">WMZ</span>)</small></th>
-                    <th>Нужна сумма <small>(<span class="eur">WME</span>)</small></th>
-                    <th>Курс обмена</th>
-                    <th>Разница с курсом ЦБ</th>
-                    <th> </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>12345</td>
-                    <td>4321</td>
-                    <td>1.1111</td>
-                    <td>-8.22%</td>
-                    <td class="align_right"> <a class="main_link" href="#">обменять</a></td>
-                  </tr>
-                  <tr>
-                    <td>12345</td>
-                    <td>4321</td>
-                    <td>1.1111</td>
-                    <td>-8.22%</td>
-                    <td class="align_right"> <span class="bolder">моя заявка > </span><a class="main_link" href="#">обменять</a></td>
-                  </tr>
-                </tbody>
-              </table>
-              <div class="exchange_detail_my_bid">
-                <div class="title_block">Моя заявка</div>
-                <div class="exchange_bid_item"> 
-                  <div class="exchange_bid_item_box"> <span>у меня есть</span>
+                <div class="form_data_block_item">
+                  <div class="form_data_block_title">Есть сумма:</div>
+                  <div class="form_data_block_content">12345.67 WME</div>
+                </div>
+                <div class="form_data_block_item">
+                  <div class="form_data_block_title">Нужна сумма:</div>
+                  <div class="form_data_block_content">312.34 WMR </div>
+                </div>
+                <div class="form_data_block_item err">
+                  <div class="form_data_block_title">Сейчас у вас на счету:</div>
+                  <div class="form_data_block_content">0 WMR </div>
+                </div>
+                <div class="form_data_block_item">
+                  <div class="form_data_block_title">Максимальная сумма обмена по заявке:</div>
+                  <div class="form_data_block_content">1402.59 WMR </div>
+                </div>
+                <div class="form_data_block_item">
+                  <div class="form_data_block_title">Я готов заплатить:</div>
+                  <div class="form_data_block_content">
                     <div class="form_element"> 
-                      <input type="text" disabled>
-                    </div>
-                    <div class="usd">WMZ</div>
-                  </div>
-                  <div class="exchange_bid_item_box"> <span>у меня есть</span>
-                    <div class="form_element"> 
-                      <input type="text">
-                    </div>
-                    <div class="rub">WMR</div>
-                  </div>
-                  <div class="exchange_bid_item_box"> <span>по курсу</span>
-                    <div class="form_element"> 
-                      <input type="text">
+                      <input type="text">WMR
                     </div>
                   </div>
-                  <div class="exchange_bid_item_box"> <span>разница с курсом ЦБ</span><span class="bold">+13.8627%</span></div>
-                  <div class="exchange_bid_item_box"> 
+                </div>
+                <div class="form_data_block_item">
+                  <div class="form_data_block_title">При этом я получу:</div>
+                  <div class="form_data_block_content">
+                    <div class="form_element"> 
+                      <input type="text">WMR
+                    </div>
+                  </div>
+                </div>
+                <div class="form_data_block_item">
+                  <div class="form_data_block_title"></div>
+                  <div class="form_data_block_content">
                     <div class="btn_group"> 
                       <button class="btn btn_gray">рассчитать</button>
-                      <button class="btn btn_gray" disabled>разместить</button>
+                      <button class="btn btn_gray">разместить</button>
                     </div>
                   </div>
                 </div>
