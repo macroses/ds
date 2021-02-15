@@ -1215,3 +1215,7 @@ button.btn, input[type="submit"].btn, a.btn, label.btn {
         fill: map-get($dark_colors, main);
     }
 }
+
+.partners_stat_top {
+    color: map-get($dark_colors, main); 
+}

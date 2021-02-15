@@ -2,13 +2,31 @@
     display: flex;
 }
 
-.partners_statistics {
+.partners_stat {
     width: 50%;
 }
 
 .partners_stat_top {
     display: flex;
-    .partners_aside {
-        width: 250px;
+
+    .form_element {
+        flex: auto;
+        select {
+            margin-left: 5px;
+        }
     }
+}
+
+.partners_aside {
+    width: 250px;
+}
+
+.partners_aside {
+    align-items: center;
+    display: flex;
+}
+
+.partners_stat_content {
+    display: flex;
+    margin-top: 40px;
 }
