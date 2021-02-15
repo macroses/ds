@@ -1,0 +1,76 @@
+main 
+    .box 
+        .content_box 
+            .page_nav
+                ul.breadcrumbs_list
+                    li.breadcrumb_item
+                        a.main_link(href="#" title="список моих товаров") все агенты
+                    li.breadcrumb_item
+                        .breadcrumb_item_name
+                            span(title="Агент добавлен в избранные")
+                                +icon('heart')
+                            |TestAgent
+
+        +tab-list(['AboutAgent', 'MyOffer'], 0)
+            +tab('AboutAgent', 'active')
+                .content_box
+                    .partner_box
+                        a.btn.btn_blue.agent_msg_link сообщение агенту
+                        .form_data_block
+                            .form_data_block_item
+                                .form_data_block_title Зарегистрирован:
+                                .form_data_block_content 07.12.2012
+                            .form_data_block_item
+                                .form_data_block_title Агентских продаж за последние:
+                                .form_data_block_content 
+                                    table.equal_cells
+                                        colgroup
+                                            col
+                                            col
+                                            col
+                                            col
+                                            col
+                                        thead
+                                            tr
+                                                th Сутки
+                                                th 7 Дн.
+                                                th 1 Мес
+                                                th 3 Мес
+                                                th 6 Мес
+                                        tbody
+                                            tr
+                                                td 12345
+                                                td 12345
+                                                td 12345
+                                                td 12345
+                                                td 12345
+                            .form_data_block_item
+                                .form_data_block_title С агентом уже сотрудничают:
+                                .form_data_block_content 
+                                    .item 
+                                        span.bold 13
+                                        |  продавцов
+                            .form_data_block_item
+                                .form_data_block_title Готов разместить ссылки:
+                                .form_data_block_content.vertical
+                                    .item на собственных веб-сайтах:
+                                    .item 
+                                        a.main_link(href="#") google.com 
+                            .form_data_block_item
+                                .form_data_block_title Комментарий агента:
+                                .form_data_block_content 
+                                    i Если ваши услуги в качестве агента не ограничиваются размещением партнерских ссылок, вы можете здесь их кратко описать.
+
+                        .added_to_favorite 
+                            +icon('heart')
+                            |  Агент добавлен в 
+                            a.main_link(href="#") избранные
+                            .form_element 
+                                label.for_check
+                                    input(type="checkbox")
+                                    span.text я хочу удалить агента из избранных, отказав ему в предоставлении индивидуальных отчислений
+                            button.btn.btn_gray(disabled) удалить агента из избранных
+                              
+                        .hint Для добавления агента в избранные, вам необходимо 
+                            a.main_link(href="#") установить для него индивидуальные агентские отчисления
+                            |.

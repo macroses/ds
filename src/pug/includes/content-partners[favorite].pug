@@ -1,0 +1,121 @@
+main 
+    .box 
+        +tab-list(['Statistics', 'AllAgents', 'SelectedAgents', ['AreAlreadySelling', 10], 'AgentID', 'GeneralSettings', 'ComissionTemplates'], 1)
+            +tab('AllAgents', 'active')
+                .content_box
+                    .alert_box.info У вас есть возможность установить для агентов индивидуальные комиссионные на свои товары, тем самым добавив их в избранные. Найти подходящего агента можно ознакомившись с его
+                        a.main_link(href="#") предложениями
+                        |   или поискав среди тех агентов, кто возможно уже заинтересовался вашими товарами и 
+                        a.main_link(href="#") уже их продает
+                        |. Можно воспользоваться поиском, если вы знаете 
+                        a.main_link(href="#") ID агента
+                        |. Перед добавлением агента в избранные,
+                        span.bold настоятельно рекомендуем ознакомиться 
+                        |  c 
+                        a.main_link(href="#") нашими рекомендациями
+                        |. В избранные можно добавить максимум 
+                        span.bold 500 
+                        |  агентов.
+                    .partner_favorite
+                        .partner_top 
+                            button.btn.btn_blue(data-toggle="modal" data-target="#use_template") применить шаблон
+                            .goods_menu_sort
+                                .form_element
+                                    span сортировка: 
+                                    select
+                                        option(value="0") id товара ↑
+                                        option(value="1") id товара ↓
+                                        option(value="2") название товара А - Я
+                                        option(value="3") название товара Я - A
+                                        option(value="4") торговая площадка А - Я
+                                        option(value="5") торговая площадки Я - А
+                                        option(value="6") цена ↑
+                                        option(value="7") цена ↓
+                                        option(value="8") количество продаж ↑
+                                        option(value="9") количество продаж ↓
+                                        option(value="10") в наличии ↑
+                                        option(value="11") в наличии ↓
+                                        option(value="12") количество просмотров ↓
+                                        option(value="13") дата последней продажи ↓
+                                        option(value="14") дате последней продажи ↑ 
+                        
+                        table.equal_cells
+                            colgroup
+                                col
+                                col(style="width: 200px")
+                                col(style="width: 90px")
+                                col(style="width: 90px")
+                                col(style="width: 90px")
+                                col(style="width: 90px")
+                                col(style="width: 90px")
+                                col(style="width: 150px")
+                                col(style="width: 45px")
+                            thead
+                                tr
+                                    th Агент
+                                    th Товаров
+                                        span(data-placement="right" data-toggle="tooltip" title="В этом поле указано количество ваших товаров с индивидуальными комиссионными, которые вы предложили агенту.")
+                                            +icon('question_table')
+                                    th.align_center(colspan="5") Продаж моих товаров за последние
+                                    th.align_center Изменено
+                                        span(data-placement="right" data-toggle="tooltip" title="В этом поле указана дата вашего последнего изменения в списоке товаров с индивидуальными партнерскими отчислениями для данного агента.")
+                                            +icon('question_table')
+                                    th.align_right
+                                        button.btn.btn_gray(title="удалить выбранных агентов из избранных")
+                                            +icon('delete-btn')
+                                tr.head_selection
+                                    th 
+                                    th 
+                                    th.align_center Сутки
+                                    th.align_center 7 Дн.
+                                    th.align_center 1 Мес.
+                                    th.align_center 3 Мес.
+                                    th.align_center 6 Мес.
+                                    th 
+                                    th 
+                                tr
+                                    th.filter_cell(colspan="9")
+                                        .collapse(id="goodsFilter" )
+                                            .collapse_filter_content 
+                                                .form_group
+                                                    .title Показать
+                                                    .form_element
+                                                        label.for_radio
+                                                            input(type="radio" name="agents")
+                                                            span.text все избранные агенты
+                                                    .form_element
+                                                        label.for_radio.gray_ball
+                                                            input(type="radio" name="agents")
+                                                            span.text агенты, которые ещё не ознакомились с моими предложениями
+                                                    .form_element
+                                                        label.for_radio.black_ball
+                                                            input(type="radio" name="agents")
+                                                            span.text агенты, которые ещё не ознакомились с моими последними изменениями
+                                                    .form_element
+                                                        label.for_radio.red_ball
+                                                            input(type="radio" name="agents")
+                                                            span.text агенты, которые отказались от моих предложений
+                                        .collapse_btn
+                                            span.active(data-toggle="collapse" data-target="#goodsFilter" aria-expanded="false" aria-controls="goodsFilter" tabindex="-1") фильтры
+                            tbody
+                                tr
+                                    td 
+                                        a.main_link(href="#") TESTAGENT 
+                                        span
+                                            +icon('heart') 
+                                    td 
+                                        a.main_link(href="#") 73 
+                                    td.align_center 5
+                                    td.align_center 4
+                                    td.align_center 3
+                                    td.align_center 2
+                                    td.align_center
+                                        span.empty_data 0
+                                    td.align_center 15.02.2021	
+                                    td.align_right
+                                        .form_element
+                                            label.for_check
+                                                input(type="checkbox")
+                                                span.text
+
+                        +pagination('Агентов на странице:')

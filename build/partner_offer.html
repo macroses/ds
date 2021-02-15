@@ -234,74 +234,231 @@
       </nav>
       <main> 
         <div class="box"> 
+          <div class="content_box"> 
+            <div class="page_nav">
+              <ul class="breadcrumbs_list">
+                <li class="breadcrumb_item"><a class="main_link" href="#" title="список моих товаров">все агенты </a><small>(44567)</small></li>
+                <li class="breadcrumb_item">
+                  <div class="breadcrumb_item_name"><span title="Агент добавлен в избранные">
+                      <svg class="pic-heart ">
+                        <use xlink:href="img/svg/sprite.svg#heart"></use>
+                      </svg></span>TestAgent</div>
+                </li>
+              </ul>
+            </div>
+          </div>
           <ul class="nav nav-tabs" role="tablist">
-            <li><a class="nav-link active" href="#tabStatistics" role="tab" data-toggle="tab">Statistics</a></li>
-            <li><a class="nav-link" href="#tabAllAgents" role="tab" data-toggle="tab">AllAgents</a></li>
-            <li><a class="nav-link" href="#tabSelectedAgents" role="tab" data-toggle="tab">SelectedAgents</a></li>
-            <li><a class="nav-link" href="#tabAreAlreadySelling" role="tab" data-toggle="tab">AreAlreadySelling
-                <div class="tab_nums">10</div></a></li>
-            <li><a class="nav-link" href="#tabAgentID" role="tab" data-toggle="tab">AgentID</a></li>
-            <li><a class="nav-link" href="#tabGeneralSettings" role="tab" data-toggle="tab">GeneralSettings</a></li>
-            <li><a class="nav-link" href="#tabComissionTemplates" role="tab" data-toggle="tab">ComissionTemplates</a></li>
+            <li><a class="nav-link" href="#tabAboutAgent" role="tab" data-toggle="tab">AboutAgent</a></li>
+            <li><a class="nav-link active" href="#tabMyOffer" role="tab" data-toggle="tab">MyOffer</a></li>
           </ul>
           <div class="tab-content">
-            <div class="tab-pane active" id="tabStatistics">
+            <div class="tab-pane active" id="tabMyOffer">
               <div class="content_box">
-                <div class="partners"> 
-                  <div class="partners_stat">
-                    <div class="partners_stat_top">
-                      <div class="partners_aside">
-                         Выберите период:
-                        <div class="form_element">
-                          <select>
-                            <option value="0">1 месяц</option>
-                            <option value="1">6 месяцев</option>
-                            <option value="2">12 месяцев</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="form_element"> 
-                        <input type="text" placeholder="Название товара">
-                      </div>
+                <div class="partner_box"><a class="btn btn_blue agent_msg_link">сообщение агенту</a></div>
+                <div class="partner_top"> 
+                  <button class="btn btn_blue" data-toggle="modal" data-target="#use_template">применить шаблон</button>
+                  <div class="goods_menu_sort">
+                    <div class="form_element"><span>сортировка: </span>
+                      <select>
+                        <option value="0">id товара ↑</option>
+                        <option value="1">id товара ↓</option>
+                        <option value="2">название товара А - Я</option>
+                        <option value="3">название товара Я - A</option>
+                        <option value="4">торговая площадка А - Я</option>
+                        <option value="5">торговая площадки Я - А</option>
+                        <option value="6">цена ↑</option>
+                        <option value="7">цена ↓</option>
+                        <option value="8">количество продаж ↑</option>
+                        <option value="9">количество продаж ↓</option>
+                        <option value="10">в наличии ↑</option>
+                        <option value="11">в наличии ↓</option>
+                        <option value="12">количество просмотров ↓</option>
+                        <option value="13">дата последней продажи ↓</option>
+                        <option value="14">дате последней продажи ↑ </option>
+                      </select>
                     </div>
-                    <div class="partners_stat_content"> 
-                      <div class="partners_aside">
-                        <canvas style="width: 100%"></canvas>
-                      </div>
-                      <div class="partners_stat_content_table">
-                        <table class="equal_cells">
-                          <colgroup>
-                            <col>
-                            <col style="width: 70px">
-                          </colgroup>
-                          <thead>
-                            <tr>
-                              <th>Агент</th>
-                              <th class="align_right">Продаж</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td> <a class="main_link" href="#">test test test test test test test test test test test test test test test test test test test test test </a></td>
-                              <td class="align_right">1234567</td>
-                            </tr>
-                            <tr>
-                              <td> <a class="main_link" href="#">test</a></td>
-                              <td class="align_right">1234567</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        <div class="extended_stat_link"><a href="#">Расширенная статистика </a></div>
-                      </div>
-                    </div>
-                    <div class="alert_box info">Здесь опубликована статистика продаж ваших товаров через агентов. Вполне возможно, что кто-то из агентов уже ими заинтересовался.</div>
                   </div>
+                </div>
+                <div class="partner_offer_content"> 
+                  <table class="equal_cells"> 
+                    <colgroup>
+                      <col style="width: 80px">
+                      <col>
+                      <col style="width: 120px">
+                      <col style="width: 100px">
+                      <col style="width: 110px">
+                      <col style="width: 120px">
+                      <col style="width: 130px">
+                      <col style="width: 65px">
+                      <col style="width: 65px">
+                      <col style="width: 65px">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>ID товара</th>
+                        <th>Название товара</th>
+                        <th>Площадка</th>
+                        <th>Цена</th>
+                        <th class="align_center" colspan="2">Комиссионные отчисления</th>
+                        <th>Вознаграждение</th>
+                        <th class="align_center" colspan="3">Продано агентом за последние</th>
+                      </tr>
+                      <tr class="head_selection">
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> 
+                          <div class="form_element">
+                            <select>
+                              <option value="0">RUB</option>
+                              <option value="1">USD</option>
+                              <option value="2">EUR</option>
+                              <option value="3">UAH</option>
+                            </select>
+                          </div>
+                        </th>
+                        <th class="align_center">На площадке</th>
+                        <th class="align_center">Индивидуальные</th>
+                        <th> </th>
+                        <th class="align_center">1 Мес.</th>
+                        <th class="align_center">3 Мес.</th>
+                        <th class="align_center">6 Мес.</th>
+                      </tr>
+                      <tr>
+                        <th class="filter_cell" colspan="10">
+                          <div class="collapse" id="goodsFilter">
+                            <div class="collapse_filter_content"> 
+                              <div class="form_group">
+                                <div class="title">показать только товары</div>
+                                <div class="form_element">
+                                  <label class="for_check">
+                                    <input type="checkbox"><span class="text">с индивидуальными комиссионными (4)</span>
+                                  </label>
+                                </div>
+                                <div class="form_element">
+                                  <label class="for_check">
+                                    <input type="checkbox"><span class="text">доступные для оплаты (31)</span>
+                                  </label>
+                                </div>
+                                <div class="form_element">
+                                  <label class="for_check">
+                                    <input type="checkbox"><span class="text">добавленные партнером в свой магазин (5)</span>
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="collapse_btn"><span class="active" data-toggle="collapse" data-target="#goodsFilter" aria-expanded="false" aria-controls="goodsFilter" tabindex="-1">фильтры</span></div>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1234567</td>
+                        <td> <a class="main_link" href="#"><img src="img/checkbox-checked.svg" alt="" title="товар добавлен в магазин партнера">test good test good test good test good test good test good test good test good test good test good test good test good test good  </a></td>
+                        <td>Мой магазин</td>
+                        <td>1234567.99</td>
+                        <td class="align_center positive">25%</td>
+                        <td class="align_center positive"> 
+                          <div class="form_element"> 
+                            <input type="text"> %
+                          </div>
+                        </td>
+                        <td class="align_center">12345.99 <small>RUB</small></td>
+                        <td class="align_center"> <span class="empty_data">0</span></td>
+                        <td class="align_center">123</td>
+                        <td class="align_center">234</td>
+                      </tr>
+                      <tr>
+                        <td>1234567</td>
+                        <td> <a class="main_link" href="#">test good  </a></td>
+                        <td>Мой магазин</td>
+                        <td>1234567.99</td>
+                        <td class="align_center negative">25%</td>
+                        <td class="align_center negative"> 
+                          <div class="form_element"> 
+                            <input type="text"> %
+                          </div>
+                        </td>
+                        <td class="align_center">12345.99 <small>RUB</small></td>
+                        <td class="align_center"> <span class="empty_data">0</span></td>
+                        <td class="align_center">123</td>
+                        <td class="align_center">234</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="pagination_box">
+                    <div class="pagination_title">Страницы:</div>
+                    <ul class="pagination_list">
+                      <li><a class="active" href="#">1</a></li>
+                      <li><a href="#"> 2</a></li>
+                      <li><a href="#"> 3</a></li>
+                      <li><a href="#"> 4</a></li>
+                      <li><a href="#"> 5</a></li>
+                      <li><a class="sep" href="#"> ...</a></li>
+                      <li><a href="#"> 1200</a></li>
+                    </ul>
+                    <div class="pagination_sort">
+                      <div class="pagination_title">Товаров на странице:</div>
+                      <div class="form_element">
+                        <select>
+                          <option value="10">10</option>
+                          <option value="20" selected="selected">20</option>
+                          <option value="30">100</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="partner_offer_bottom"> 
+                  <div class="partner_offer_bottom_group">
+                    <div class="form_element">
+                      <label class="for_check">
+                        <input type="checkbox"><span class="text">установить на все мои товары индивидуальные комиссионные отчисления в размере </span>
+                      </label>
+                    </div>
+                    <div class="form_element">
+                      <input type="text" disabled>%
+                    </div>
+                  </div>
+                  <div class="form_element">
+                    <label class="for_check">
+                      <input type="checkbox"><span class="text">заблокировать агента</span>
+                    </label>
+                  </div>
+                  <button class="btn btn_blue">сохранить</button>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </main>
+      <div class="modal fade" id="use_template" tabindex="-1" aria-labelledby="use_template" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered popup modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="modal-title">Подтвердите действие</div><span class="close" data-dismiss="modal" aria-label="Close">
+                <svg class="pic-modal_close ">
+                  <use xlink:href="img/svg/sprite.svg#modal_close"></use>
+                </svg></span>
+            </div>
+            <div class="modal-body">
+              <div class="use_template_modal">
+                <div class="form_element"> 
+                  <select>
+                    <option value="0">Выберите шаблон </option>
+                    <option value="1">Шаблон 1</option>
+                  </select>
+                </div>
+              </div>
+              <div class="modal_btn_group_centered">
+                <button class="btn btn_blue" data-dismiss="modal" aria-label="Close">применить</button>
+                <button class="btn btn_gray" data-dismiss="modal" aria-label="Close">отменить</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <footer>
         <div class="box">
           <div class="footer_content">

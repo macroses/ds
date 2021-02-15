@@ -1,0 +1,105 @@
+main 
+    .box 
+        +tab-list(['Statistics', 'AllAgents', 'SelectedAgents', ['AreAlreadySelling', 10], 'AgentID', 'GeneralSettings', 'ComissionTemplates'], 1)
+            +tab('AllAgents', 'active')
+                .content_box
+                    .alert_box.info Здесь опубликованы предложения от агентов, которые готовы взяться за распространение ваших товаров. Нажав "подробнее" вы узнаете где и как именно они предлагают это сделать. Перед добавлением агента в избранные 
+                        span.bold настоятельно рекомендуем ознакомиться 
+                        |  с 
+                        a.main_link(href="#") нашими рекомендациями 
+                    .partners 
+                        .partners_all
+                            .partners_all_sort
+                                .goods_menu_sort
+                                    .form_element
+                                        span сортировка: 
+                                        select
+                                            option(value="0") id товара ↑
+                                            option(value="1") id товара ↓
+                                            option(value="2") название товара А - Я
+                                            option(value="3") название товара Я - A
+                                            option(value="4") торговая площадка А - Я
+                                            option(value="5") торговая площадки Я - А
+                                            option(value="6") цена ↑
+                                            option(value="7") цена ↓
+                                            option(value="8") количество продаж ↑
+                                            option(value="9") количество продаж ↓
+                                            option(value="10") в наличии ↑
+                                            option(value="11") в наличии ↓
+                                            option(value="12") количество просмотров ↓
+                                            option(value="13") дата последней продажи ↓
+                                            option(value="14") дате последней продажи ↑ 
+
+                            table.equal_cells.hovered_rows
+                                colgroup
+                                    col
+                                    col(style="width: 200px")
+                                    col(style="width: 200px")
+                                    col(style="width: 200px")
+                                    col(style="width: 70px")
+                                    col(style="width: 70px")
+                                    col(style="width: 70px")
+                                thead
+                                    tr
+                                        th Агент
+                                        th Рейтинг
+                                            span(data-placement="right" data-toggle="tooltip" title="Как рассчитывается рейтинг агента? Продажа товара увеличивает рейтинг агента на величину (цена товара / 100). Цена товара рассчитывается в USD по курсу на момент покупки. При расчете рейтинга учитываются продажи только за последние 12 месяцев.")
+                                                +icon('question_table')
+                                        th Продавцов
+                                            span(data-placement="right" data-toggle="tooltip" title="Здесь опубликован список агентов, которые уже добавили ваши товары в свой магазин.")
+                                                +icon('question_table')
+                                        th Зарегистрирован
+                                        th.align_center(colspan="3") Продано товаров за последние
+                                    tr.head_selection
+                                        th 
+                                        th 
+                                        th 
+                                        th 
+                                        th.align_center  1 Мес.
+                                        th.align_center  3 Мес.
+                                        th.align_center  6 Мес.
+                                tbody
+                                    tr
+                                        td 
+                                            a.main_link(href="#") Тестовый продавец Тестовый продавец Тестовый продавец Тестовый продавец Тестовый продавец Тестовый продавец Тестовый продавец Тестовый продавец 
+                                        td 10581.232668
+                                        td 10522
+                                        td 24.04.2007
+                                        td.align_center 123456
+                                        td.align_center 123456
+                                        td.align_center 123456
+                                    tr.agent_info_row
+                                        td(colspan="7")
+                                            .agent_info
+                                                span.close 
+                                                    +icon('close_circle')
+                                                |Партнер 
+                                                span.bold TESTAGENT 
+                                                |  готов разместить партнерские ссылки на ваши товары на собственных веб-сайтах:
+                                                br
+                                                a.main_link(href="#") google.com 
+                                                br
+                                                br
+                                                |Дополнительная информация:
+                                                .add_info Размещаем ключи, акканты, софт, xbox и др. необходим опыт в продажах, не меньше 100 продаж за последние 3 месяца и хорошая репутация и отзывы по вашим товарам. 
+                                    tr
+                                        td 
+                                            a.main_link(href="#") Тестовый продавец 
+                                        td 10581.232668
+                                        td 10522
+                                        td 24.04.2007
+                                        td.align_center 123456
+                                        td.align_center 123456
+                                        td.align_center 123456
+                                    tr
+                                        td 
+                                            a.main_link(href="#") Тестовый продавец 
+                                        td 10581.232668
+                                        td 10522
+                                        td 24.04.2007
+                                        td.align_center 123456
+                                        td.align_center 123456
+                                        td.align_center 123456
+                            +pagination('Агентов на странице:')
+
+

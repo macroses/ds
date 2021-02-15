@@ -1,0 +1,164 @@
+main 
+    .box 
+        .content_box 
+            .page_nav
+                ul.breadcrumbs_list
+                    li.breadcrumb_item
+                        a.main_link(href="#" title="список моих товаров") все агенты 
+                        small (44567)
+                    li.breadcrumb_item
+                        .breadcrumb_item_name
+                            span(title="Агент добавлен в избранные")
+                                +icon('heart')
+                            |TestAgent
+
+        +tab-list(['AboutAgent', 'MyOffer'], 1)
+            +tab('MyOffer', 'active')
+                .content_box
+                    .partner_box
+                        a.btn.btn_blue.agent_msg_link сообщение агенту
+                    .partner_top 
+                        button.btn.btn_blue(data-toggle="modal" data-target="#use_template") применить шаблон
+                        .goods_menu_sort
+                            .form_element
+                                span сортировка: 
+                                select
+                                    option(value="0") id товара ↑
+                                    option(value="1") id товара ↓
+                                    option(value="2") название товара А - Я
+                                    option(value="3") название товара Я - A
+                                    option(value="4") торговая площадка А - Я
+                                    option(value="5") торговая площадки Я - А
+                                    option(value="6") цена ↑
+                                    option(value="7") цена ↓
+                                    option(value="8") количество продаж ↑
+                                    option(value="9") количество продаж ↓
+                                    option(value="10") в наличии ↑
+                                    option(value="11") в наличии ↓
+                                    option(value="12") количество просмотров ↓
+                                    option(value="13") дата последней продажи ↓
+                                    option(value="14") дате последней продажи ↑ 
+                    .partner_offer_content 
+                        table.equal_cells 
+                            colgroup
+                                col(style="width: 80px")
+                                col
+                                col(style="width: 120px")
+                                col(style="width: 100px")
+                                col(style="width: 110px")
+                                col(style="width: 120px")
+                                col(style="width: 130px")
+                                col(style="width: 65px")
+                                col(style="width: 65px")
+                                col(style="width: 65px")
+                            thead
+                                tr
+                                    th ID товара
+                                    th Название товара
+                                    th Площадка
+                                    th Цена
+                                    th.align_center(colspan="2") Комиссионные отчисления
+                                    th Вознаграждение
+                                    th.align_center(colspan="3") Продано агентом за последние
+                                tr.head_selection
+                                    th 
+                                    th 
+                                    th 
+                                    th 
+                                        +select(['RUB', 'USD', 'EUR', 'UAH'])
+                                    th.align_center На площадке
+                                    th.align_center Индивидуальные
+                                    th 
+                                    th.align_center 1 Мес.
+                                    th.align_center 3 Мес.
+                                    th.align_center 6 Мес.
+                                tr
+                                    th.filter_cell(colspan="10")
+                                        .collapse(id="goodsFilter" )
+                                            .collapse_filter_content 
+                                                .form_group
+                                                    .title показать только товары
+                                                    .form_element
+                                                        label.for_check
+                                                            input(type="checkbox")
+                                                            span.text с индивидуальными комиссионными (4)
+                                                    .form_element
+                                                        label.for_check
+                                                            input(type="checkbox")
+                                                            span.text доступные для оплаты (31)
+                                                    .form_element
+                                                        label.for_check
+                                                            input(type="checkbox")
+                                                            span.text добавленные партнером в свой магазин (5)
+                                        .collapse_btn
+                                            span.active(data-toggle="collapse" data-target="#goodsFilter" aria-expanded="false" aria-controls="goodsFilter" tabindex="-1") фильтры
+                            tbody
+                                tr
+                                    td 1234567
+                                    td 
+                                        a.main_link(href="#")
+                                            img(src="img/checkbox-checked.svg", alt="" title="товар добавлен в магазин партнера")
+                                            | test good test good test good test good test good test good test good test good test good test good test good test good test good  
+                                    td Мой магазин
+                                    td 1234567.99
+                                    td.align_center.positive 25%
+                                    td.align_center.positive 
+                                        .form_element 
+                                            input(type="text")
+                                            |  %
+                                    td.align_center 12345.99 
+                                        small RUB
+                                    td.align_center 
+                                        span.empty_data 0
+                                    td.align_center 123
+                                    td.align_center 234
+
+                                tr
+                                    td 1234567
+                                    td 
+                                        a.main_link(href="#") test good  
+                                    td Мой магазин
+                                    td 1234567.99
+                                    td.align_center.negative 25%
+                                    td.align_center.negative 
+                                        .form_element 
+                                            input(type="text")
+                                            |  %
+                                    td.align_center 12345.99 
+                                        small RUB
+                                    td.align_center 
+                                        span.empty_data 0
+                                    td.align_center 123
+                                    td.align_center 234
+                        +pagination('Товаров на странице:')
+                    .partner_offer_bottom 
+                        .partner_offer_bottom_group
+                            .form_element
+                                label.for_check
+                                    input(type="checkbox")
+                                    span.text установить на все мои товары индивидуальные комиссионные отчисления в размере 
+                            .form_element
+                                input(type="text" disabled)
+                                | %
+                        .form_element
+                            label.for_check
+                                input(type="checkbox")
+                                span.text заблокировать агента
+                        button.btn.btn_blue сохранить
+
+.modal.fade(id="use_template" tabindex="-1" aria-labelledby="use_template" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered.popup.modal-sm
+        .modal-content
+            .modal-header
+                .modal-title Подтвердите действие
+                span.close(data-dismiss="modal" aria-label="Close")
+                    +icon('modal_close')
+            .modal-body
+                .use_template_modal
+                    .form_element 
+                        select
+                            option(value="0") Выберите шаблон 
+                            option(value="1") Шаблон 1
+                .modal_btn_group_centered
+                    button.btn.btn_blue(data-dismiss="modal" aria-label="Close") применить
+                    button.btn.btn_gray(data-dismiss="modal" aria-label="Close") отменить

@@ -235,8 +235,8 @@
       <main> 
         <div class="box"> 
           <ul class="nav nav-tabs" role="tablist">
-            <li><a class="nav-link active" href="#tabStatistics" role="tab" data-toggle="tab">Statistics</a></li>
-            <li><a class="nav-link" href="#tabAllAgents" role="tab" data-toggle="tab">AllAgents</a></li>
+            <li><a class="nav-link" href="#tabStatistics" role="tab" data-toggle="tab">Statistics</a></li>
+            <li><a class="nav-link active" href="#tabAllAgents" role="tab" data-toggle="tab">AllAgents</a></li>
             <li><a class="nav-link" href="#tabSelectedAgents" role="tab" data-toggle="tab">SelectedAgents</a></li>
             <li><a class="nav-link" href="#tabAreAlreadySelling" role="tab" data-toggle="tab">AreAlreadySelling
                 <div class="tab_nums">10</div></a></li>
@@ -245,56 +245,130 @@
             <li><a class="nav-link" href="#tabComissionTemplates" role="tab" data-toggle="tab">ComissionTemplates</a></li>
           </ul>
           <div class="tab-content">
-            <div class="tab-pane active" id="tabStatistics">
+            <div class="tab-pane active" id="tabAllAgents">
               <div class="content_box">
+                <div class="alert_box info">Здесь опубликованы предложения от агентов, которые готовы взяться за распространение ваших товаров. Нажав "подробнее" вы узнаете где и как именно они предлагают это сделать. Перед добавлением агента в избранные <span class="bold">настоятельно рекомендуем ознакомиться </span> с <a class="main_link" href="#">нашими рекомендациями </a></div>
                 <div class="partners"> 
-                  <div class="partners_stat">
-                    <div class="partners_stat_top">
-                      <div class="partners_aside">
-                         Выберите период:
-                        <div class="form_element">
+                  <div class="partners_all">
+                    <div class="partners_all_sort">
+                      <div class="goods_menu_sort">
+                        <div class="form_element"><span>сортировка: </span>
                           <select>
-                            <option value="0">1 месяц</option>
-                            <option value="1">6 месяцев</option>
-                            <option value="2">12 месяцев</option>
+                            <option value="0">id товара ↑</option>
+                            <option value="1">id товара ↓</option>
+                            <option value="2">название товара А - Я</option>
+                            <option value="3">название товара Я - A</option>
+                            <option value="4">торговая площадка А - Я</option>
+                            <option value="5">торговая площадки Я - А</option>
+                            <option value="6">цена ↑</option>
+                            <option value="7">цена ↓</option>
+                            <option value="8">количество продаж ↑</option>
+                            <option value="9">количество продаж ↓</option>
+                            <option value="10">в наличии ↑</option>
+                            <option value="11">в наличии ↓</option>
+                            <option value="12">количество просмотров ↓</option>
+                            <option value="13">дата последней продажи ↓</option>
+                            <option value="14">дате последней продажи ↑ </option>
                           </select>
                         </div>
                       </div>
-                      <div class="form_element"> 
-                        <input type="text" placeholder="Название товара">
+                    </div>
+                    <table class="equal_cells hovered_rows">
+                      <colgroup>
+                        <col>
+                        <col style="width: 200px">
+                        <col style="width: 200px">
+                        <col style="width: 200px">
+                        <col style="width: 70px">
+                        <col style="width: 70px">
+                        <col style="width: 70px">
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th>Агент</th>
+                          <th>Рейтинг<span data-placement="right" data-toggle="tooltip" title="Как рассчитывается рейтинг агента? Продажа товара увеличивает рейтинг агента на величину (цена товара / 100). Цена товара рассчитывается в USD по курсу на момент покупки. При расчете рейтинга учитываются продажи только за последние 12 месяцев.">
+                              <svg class="pic-question_table ">
+                                <use xlink:href="img/svg/sprite.svg#question_table"></use>
+                              </svg></span></th>
+                          <th>Продавцов<span data-placement="right" data-toggle="tooltip" title="Здесь опубликован список агентов, которые уже добавили ваши товары в свой магазин.">
+                              <svg class="pic-question_table ">
+                                <use xlink:href="img/svg/sprite.svg#question_table"></use>
+                              </svg></span></th>
+                          <th>Зарегистрирован</th>
+                          <th class="align_center" colspan="3">Продано товаров за последние</th>
+                        </tr>
+                        <tr class="head_selection">
+                          <th> </th>
+                          <th> </th>
+                          <th> </th>
+                          <th> </th>
+                          <th class="align_center"> 1 Мес.</th>
+                          <th class="align_center"> 3 Мес.</th>
+                          <th class="align_center"> 6 Мес.</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td> <a class="main_link" href="#">Тестовый продавец Тестовый продавец Тестовый продавец Тестовый продавец Тестовый продавец Тестовый продавец Тестовый продавец Тестовый продавец </a></td>
+                          <td>10581.232668</td>
+                          <td>10522</td>
+                          <td>24.04.2007</td>
+                          <td class="align_center">123456</td>
+                          <td class="align_center">123456</td>
+                          <td class="align_center">123456</td>
+                        </tr>
+                        <tr class="agent_info_row">
+                          <td colspan="7">
+                            <div class="agent_info"><span class="close"> 
+                                <svg class="pic-close_circle ">
+                                  <use xlink:href="img/svg/sprite.svg#close_circle"></use>
+                                </svg></span>Партнер <span class="bold">TESTAGENT </span> готов разместить партнерские ссылки на ваши товары на собственных веб-сайтах:<br><a class="main_link" href="#">google.com </a><br><br>Дополнительная информация:
+                              <div class="add_info">Размещаем ключи, акканты, софт, xbox и др. необходим опыт в продажах, не меньше 100 продаж за последние 3 месяца и хорошая репутация и отзывы по вашим товарам. </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td> <a class="main_link" href="#">Тестовый продавец </a></td>
+                          <td>10581.232668</td>
+                          <td>10522</td>
+                          <td>24.04.2007</td>
+                          <td class="align_center">123456</td>
+                          <td class="align_center">123456</td>
+                          <td class="align_center">123456</td>
+                        </tr>
+                        <tr>
+                          <td> <a class="main_link" href="#">Тестовый продавец </a></td>
+                          <td>10581.232668</td>
+                          <td>10522</td>
+                          <td>24.04.2007</td>
+                          <td class="align_center">123456</td>
+                          <td class="align_center">123456</td>
+                          <td class="align_center">123456</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div class="pagination_box">
+                      <div class="pagination_title">Страницы:</div>
+                      <ul class="pagination_list">
+                        <li><a class="active" href="#">1</a></li>
+                        <li><a href="#"> 2</a></li>
+                        <li><a href="#"> 3</a></li>
+                        <li><a href="#"> 4</a></li>
+                        <li><a href="#"> 5</a></li>
+                        <li><a class="sep" href="#"> ...</a></li>
+                        <li><a href="#"> 1200</a></li>
+                      </ul>
+                      <div class="pagination_sort">
+                        <div class="pagination_title">Агентов на странице:</div>
+                        <div class="form_element">
+                          <select>
+                            <option value="10">10</option>
+                            <option value="20" selected="selected">20</option>
+                            <option value="30">100</option>
+                          </select>
+                        </div>
                       </div>
                     </div>
-                    <div class="partners_stat_content"> 
-                      <div class="partners_aside">
-                        <canvas style="width: 100%"></canvas>
-                      </div>
-                      <div class="partners_stat_content_table">
-                        <table class="equal_cells">
-                          <colgroup>
-                            <col>
-                            <col style="width: 70px">
-                          </colgroup>
-                          <thead>
-                            <tr>
-                              <th>Агент</th>
-                              <th class="align_right">Продаж</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td> <a class="main_link" href="#">test test test test test test test test test test test test test test test test test test test test test </a></td>
-                              <td class="align_right">1234567</td>
-                            </tr>
-                            <tr>
-                              <td> <a class="main_link" href="#">test</a></td>
-                              <td class="align_right">1234567</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        <div class="extended_stat_link"><a href="#">Расширенная статистика </a></div>
-                      </div>
-                    </div>
-                    <div class="alert_box info">Здесь опубликована статистика продаж ваших товаров через агентов. Вполне возможно, что кто-то из агентов уже ими заинтересовался.</div>
                   </div>
                 </div>
               </div>
