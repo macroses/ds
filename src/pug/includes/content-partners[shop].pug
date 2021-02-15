@@ -1,0 +1,87 @@
+main 
+    .box 
+        +tab-list(['Statistics', 'AllAgents', 'SelectedAgents', ['AreAlreadySelling', 10], 'AgentID', 'GeneralSettings', 'ComissionTemplates'], 3)
+            +tab('AreAlreadySelling', 'active')
+                .content_box
+                    
+                    .partners_shop 
+                        .alert_box.info Здесь опубликован список агентов, которые уже добавили ваши товары в свой магазин.
+                        .partners_all
+                            .partners_all_sort
+                                .goods_menu_sort
+                                    .form_element
+                                        span сортировка: 
+                                        select
+                                            option(value="0") id товара ↑
+                                            option(value="1") id товара ↓
+                                            option(value="2") название товара А - Я
+                                            option(value="3") название товара Я - A
+                                            option(value="4") торговая площадка А - Я
+                                            option(value="5") торговая площадки Я - А
+                                            option(value="6") цена ↑
+                                            option(value="7") цена ↓
+                                            option(value="8") количество продаж ↑
+                                            option(value="9") количество продаж ↓
+                                            option(value="10") в наличии ↑
+                                            option(value="11") в наличии ↓
+                                            option(value="12") количество просмотров ↓
+                                            option(value="13") дата последней продажи ↓
+                                            option(value="14") дате последней продажи ↑ 
+                        table.equal_cells
+                            colgroup
+                                col
+                                col(style="width: 80px")
+                                col(style="width: 60px")
+                                col(style="width: 60px")
+                                col(style="width: 60px")
+                                col(style="width: 60px")
+                                col(style="width: 60px")
+                            thead
+                                tr
+                                    th Агент
+                                    th Товаров
+                                        span(data-placement="right" data-toggle="tooltip" title="В этом поле указано количество ваших товаров, которые агент уже добавил в свой магазин.")
+                                            +icon('question_table')
+                                    th.align_center(colspan="5") Продаж моих товаров за последние
+                                tr.head_selection
+                                    th 
+                                    th 
+                                    th.align_center Сутки
+                                    th.align_center 7 Дн.
+                                    th.align_center 1 Мес.
+                                    th.align_center 3 Мес.
+                                    th.align_center 6 Мес.
+                                tr
+                                    th.filter_cell(colspan="7")
+                                        .collapse(id="goodsFilter" )
+                                            .collapse_filter_content 
+                                                .form_group
+                                                    .title Показать
+                                                    .form_element
+                                                        label.for_radio
+                                                            input(type="radio" name="agents")
+                                                            span.text все агенты
+                                                    .form_element
+                                                        label.for_radio
+                                                            input(type="radio" name="agents")
+                                                            span.text только избранные агенты
+                                                    .form_element
+                                                        label.for_radio
+                                                            input(type="radio" name="agents")
+                                                            span.text только не избранные агенты
+                                        .collapse_btn
+                                            span.active(data-toggle="collapse" data-target="#goodsFilter" aria-expanded="false" aria-controls="goodsFilter" tabindex="-1") фильтры
+                            tbody
+                                tr
+                                    td 
+                                        a.main_link(href="#" title="информация о партнере") TESTAGENT 
+                                    td 
+                                        a.main_link(href="#") 73 
+                                    td.align_center 5
+                                    td.align_center 4
+                                    td.align_center 3
+                                    td.align_center 2
+                                    td.align_center
+                                        span.empty_data 0
+
+                        +pagination('Агентов на странице:')

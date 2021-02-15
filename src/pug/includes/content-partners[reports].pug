@@ -1,0 +1,12 @@
+main 
+    .box 
+        +tab-list(['Statistics', 'AllAgents', 'SelectedAgents', ['AreAlreadySelling', 10], 'AgentID', 'GeneralSettings', 'ComissionTemplates'], 4)
+            +tab('AgentID', 'active')
+                .content_box
+                    .partners_reports 
+                        .alert_box.info Если вы знаете ID агента (его регистрационный номер), укажите его для добавления в «избранные».
+                        .partners_reports_content
+                            |Регистрационный номер (ID агента):
+                            .form_element 
+                                input(type="text")
+                            button.btn.btn_gray найти

@@ -1227,3 +1227,11 @@ button.btn, input[type="submit"].btn, a.btn, label.btn {
 .partner_offer_bottom_group {
     color: map-get($dark_colors, main);
 }
+
+.partner_favorite .item {
+    color: map-get($dark_colors, main);
+}
+
+.partners_reports_content {
+    color: map-get($dark_colors, main);
+}

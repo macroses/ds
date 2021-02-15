@@ -171,6 +171,10 @@
     display: flex;
     justify-content: flex-end;
     margin-top: 10px;
+
+    .goods_menu_sort {
+        margin-left: 0;
+    }
 }
 
 .agent_info {
@@ -211,33 +215,86 @@
 
         .for_radio {
             position: relative;
+            
         }
+    }
+
+    tbody {
+        .gray_ball,
+        .black_ball,
+        .red_ball {
+            margin-left: 0px;
+            margin-right: 5px;
+        }
+    }
+
+    .gray_ball,
+    .black_ball,
+    .red_ball {
+        margin-left: 5px;
+    }
+
+    .descr {
+        margin-top: 10px;
+    }
+
+    .item {
+        margin-top: 5px;
     }
 }
 
 .gray_ball,
 .black_ball,
 .red_ball {
-    &:after {
-        position: absolute;
-        content: '';
-        width: 8px;
-        height: 8px;
-        top: calc(50% - 4px);
-        left: calc(100% + 5px);
-        border-radius: 50%;
-        
-    }
+    width: 8px;
+    height: 8px;
+    top: calc(50% - 4px);
+    left: calc(100% + 5px);
+    border-radius: 50%;
+    display: inline-block;
 }
 
-.gray_ball:after {
+.gray_ball {
     background: #b2c1c9;
 }
 
-.black_ball:after {
+.black_ball {
     background: #000;
 }
 
-.red_ball:after {
+.red_ball {
     background: #d0021b;
+}
+
+.legend {
+    .item {
+        position: relative;
+    }
+}
+
+// partners shop
+.partners_shop {
+    width: 50%;
+
+    table {
+        margin-top: 20px;
+
+        .title {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.partners_reports {
+    width: 50%;
+}
+
+.partners_reports_content {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    .form_element {
+        margin: 0 5px;
+        flex: auto;
+    }
 }

@@ -1,7 +1,7 @@
 main 
     .box 
-        +tab-list(['Statistics', 'AllAgents', 'SelectedAgents', ['AreAlreadySelling', 10], 'AgentID', 'GeneralSettings', 'ComissionTemplates'], 1)
-            +tab('AllAgents', 'active')
+        +tab-list(['Statistics', 'AllAgents', 'SelectedAgents', ['AreAlreadySelling', 10], 'AgentID', 'GeneralSettings', 'ComissionTemplates'], 2)
+            +tab('SelectedAgents', 'active')
                 .content_box
                     .alert_box.info У вас есть возможность установить для агентов индивидуальные комиссионные на свои товары, тем самым добавив их в избранные. Найти подходящего агента можно ознакомившись с его
                         a.main_link(href="#") предложениями
@@ -58,7 +58,7 @@ main
                                             +icon('question_table')
                                     th.align_center(colspan="5") Продаж моих товаров за последние
                                     th.align_center Изменено
-                                        span(data-placement="right" data-toggle="tooltip" title="В этом поле указана дата вашего последнего изменения в списоке товаров с индивидуальными партнерскими отчислениями для данного агента.")
+                                        span(data-placement="top" data-toggle="tooltip" title="В этом поле указана дата вашего последнего изменения в списоке товаров с индивидуальными партнерскими отчислениями для данного агента.")
                                             +icon('question_table')
                                     th.align_right
                                         button.btn.btn_gray(title="удалить выбранных агентов из избранных")
@@ -84,23 +84,27 @@ main
                                                             input(type="radio" name="agents")
                                                             span.text все избранные агенты
                                                     .form_element
-                                                        label.for_radio.gray_ball
+                                                        label.for_radio
                                                             input(type="radio" name="agents")
                                                             span.text агенты, которые ещё не ознакомились с моими предложениями
+                                                            span.gray_ball
                                                     .form_element
-                                                        label.for_radio.black_ball
+                                                        label.for_radio
                                                             input(type="radio" name="agents")
                                                             span.text агенты, которые ещё не ознакомились с моими последними изменениями
+                                                            span.black_ball
                                                     .form_element
-                                                        label.for_radio.red_ball
+                                                        label.for_radio
                                                             input(type="radio" name="agents")
                                                             span.text агенты, которые отказались от моих предложений
+                                                            span.red_ball
                                         .collapse_btn
                                             span.active(data-toggle="collapse" data-target="#goodsFilter" aria-expanded="false" aria-controls="goodsFilter" tabindex="-1") фильтры
                             tbody
                                 tr
                                     td 
-                                        a.main_link(href="#") TESTAGENT 
+                                        span.red_ball
+                                        a.main_link(href="#" title="информация о партнере") TESTAGENT 
                                         span
                                             +icon('heart') 
                                     td 
@@ -119,3 +123,13 @@ main
                                                 span.text
 
                         +pagination('Агентов на странице:')
+                        .descr
+                            .item 
+                                span.gray_ball 
+                                |  - агенты, которые ещё не ознакомились с моими предложениями
+                            .item 
+                                span.black_ball 
+                                |  - агенты, которые ещё не ознакомились с моими предложениями
+                            .item 
+                                span.red_ball 
+                                |  - агенты, которые ещё не ознакомились с моими предложениями
