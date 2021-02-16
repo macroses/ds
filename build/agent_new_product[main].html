@@ -232,233 +232,150 @@
           </div>
         </div>
       </nav>
-      <main> 
-        <div class="box"> 
-          <div class="content_box"> 
+      <main>
+        <div class="box">
+          <div class="content_box">
             <div class="page_nav">
               <ul class="breadcrumbs_list">
-                <li class="breadcrumb_item"><a class="main_link" href="#" title="список моих товаров">все агенты </a><small>(44567)</small></li>
+                <li class="breadcrumb_item"><a class="main_link" href="#" data-placement="top" data-toggle="tooltip" title="список моих товаров">Мои товары</a></li>
                 <li class="breadcrumb_item">
-                  <div class="breadcrumb_item_name"><span title="Агент добавлен в избранные">
-                      <svg class="pic-heart ">
-                        <use xlink:href="img/svg/sprite.svg#heart"></use>
-                      </svg></span>TestAgent</div>
+                  <div class="breadcrumb_item_name">Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена </div><a href="#" title="открыть страницу с описанием товара">
+                    <svg class="pic-good_link ">
+                      <use xlink:href="img/svg/sprite.svg#good_link"></use>
+                    </svg></a>
                 </li>
               </ul>
             </div>
           </div>
           <ul class="nav nav-tabs" role="tablist">
-            <li><a class="nav-link" href="#tabAboutAgent" role="tab" data-toggle="tab">AboutAgent</a></li>
-            <li><a class="nav-link active" href="#tabMyOffer" role="tab" data-toggle="tab">MyOffer</a></li>
+            <li><a class="nav-link active" href="#tabBasic" role="tab" data-toggle="tab">Basic</a></li>
+            <li><a class="nav-link" href="#tabStatistics" role="tab" data-toggle="tab">Statistics</a></li>
+            <li><a class="nav-link" href="#tabWidget" role="tab" data-toggle="tab">Widget</a></li>
           </ul>
           <div class="tab-content">
-            <div class="tab-pane active" id="tabMyOffer">
+            <div class="tab-pane active" id="tabBasic">
               <div class="content_box">
-                <div class="partner_box"><a class="btn btn_blue agent_msg_link">сообщение агенту</a></div>
-                <div class="partner_offer_top"> 
-                  <button class="btn btn_blue" data-toggle="modal" data-target="#use_template">применить шаблон</button>
-                  <div class="goods_menu_sort">
-                    <div class="form_element"><span>сортировка: </span>
-                      <select>
-                        <option value="0">id товара ↑</option>
-                        <option value="1">id товара ↓</option>
-                        <option value="2">название товара А - Я</option>
-                        <option value="3">название товара Я - A</option>
-                        <option value="4">торговая площадка А - Я</option>
-                        <option value="5">торговая площадки Я - А</option>
-                        <option value="6">цена ↑</option>
-                        <option value="7">цена ↓</option>
-                        <option value="8">количество продаж ↑</option>
-                        <option value="9">количество продаж ↓</option>
-                        <option value="10">в наличии ↑</option>
-                        <option value="11">в наличии ↓</option>
-                        <option value="12">количество просмотров ↓</option>
-                        <option value="13">дата последней продажи ↓</option>
-                        <option value="14">дате последней продажи ↑ </option>
-                      </select>
+                <div class="partner_box"><a class="btn btn_blue agent_msg_link">сообщение агенту</a>
+                  <div class="form_data_block">
+                    <div class="form_data_block_item">
+                      <div class="form_data_block_title">ID товара:</div>
+                      <div class="form_data_block_content">1234567</div>
                     </div>
-                  </div>
-                </div>
-                <div class="partner_offer_content"> 
-                  <table class="equal_cells"> 
-                    <colgroup>
-                      <col style="width: 80px">
-                      <col>
-                      <col style="width: 120px">
-                      <col style="width: 100px">
-                      <col style="width: 110px">
-                      <col style="width: 120px">
-                      <col style="width: 130px">
-                      <col style="width: 65px">
-                      <col style="width: 65px">
-                      <col style="width: 65px">
-                    </colgroup>
-                    <thead>
-                      <tr>
-                        <th>ID товара</th>
-                        <th>Название товара</th>
-                        <th>Площадка</th>
-                        <th>Цена</th>
-                        <th class="align_center" colspan="2">Комиссионные отчисления</th>
-                        <th>Вознаграждение</th>
-                        <th class="align_center" colspan="3">Продано агентом за последние</th>
-                      </tr>
-                      <tr class="head_selection">
-                        <th> </th>
-                        <th> </th>
-                        <th> </th>
-                        <th> 
-                          <div class="form_element">
-                            <select>
-                              <option value="0">RUB</option>
-                              <option value="1">USD</option>
-                              <option value="2">EUR</option>
-                              <option value="3">UAH</option>
-                            </select>
+                    <div class="form_data_block_item">
+                      <div class="form_data_block_title">Цена:</div>
+                      <div class="form_data_block_content"> <span class="rub">600 RUB</span></div>
+                    </div>
+                    <div class="form_data_block_item">
+                      <div class="form_data_block_title">Комиссия партнеру:</div>
+                      <div class="form_data_block_content">1%</div>
+                    </div>
+                    <div class="form_data_block_item">
+                      <div class="form_data_block_title">Вознаграждение:</div>
+                      <div class="form_data_block_content"> <span class="usd">10 USD</span></div>
+                    </div>
+                    <div class="form_data_block_item">
+                      <div class="form_data_block_title">Способы оплаты:</div>
+                      <div class="form_data_block_content"> 
+                        <div class="general_methods_item_content">
+                          <div class="general_methods_item_collection">
+                            <ul class="payment_list">
+                              <li><a href="#" data-placement="top" data-toggle="tooltip" title="webmoney">
+                                  <svg class="pic-webmoney ">
+                                    <use xlink:href="img/svg/sprite.svg#webmoney"></use>
+                                  </svg></a></li>
+                              <li><a class="decline" href="#" data-placement="top" data-toggle="tooltip" title="Bitcoin">
+                                  <svg class="pic-bitcoin ">
+                                    <use xlink:href="img/svg/sprite.svg#bitcoin"></use>
+                                  </svg></a></li>
+                              <li><a class="decline" href="#" data-placement="top" data-toggle="tooltip" title="PayPal">
+                                  <svg class="pic-paypal-method ">
+                                    <use xlink:href="img/svg/sprite.svg#paypal-method"></use>
+                                  </svg></a></li>
+                              <li><a class="decline" href="#" data-placement="top" data-toggle="tooltip" title="Банковская карта">
+                                  <svg class="pic-credit-card ">
+                                    <use xlink:href="img/svg/sprite.svg#credit-card"></use>
+                                  </svg></a></li>
+                              <li><a href="#" data-placement="top" data-toggle="tooltip" title="QIWI">
+                                  <svg class="pic-qiwi ">
+                                    <use xlink:href="img/svg/sprite.svg#qiwi"></use>
+                                  </svg></a></li>
+                              <li><a href="#" data-placement="top" data-toggle="tooltip" title="Яндекс.Деньги">
+                                  <svg class="pic-yandex-money ">
+                                    <use xlink:href="img/svg/sprite.svg#yandex-money"></use>
+                                  </svg></a></li>
+                              <li><a href="#" data-placement="top" data-toggle="tooltip" title="МТС">
+                                  <svg class="pic-mts ">
+                                    <use xlink:href="img/svg/sprite.svg#mts"></use>
+                                  </svg></a></li>
+                              <li><a href="#" data-placement="top" data-toggle="tooltip" title="Билайн">
+                                  <svg class="pic-beeline ">
+                                    <use xlink:href="img/svg/sprite.svg#beeline"></use>
+                                  </svg></a></li>
+                              <li><a href="#" data-placement="top" data-toggle="tooltip" title="Мегафон">
+                                  <svg class="pic-megafon ">
+                                    <use xlink:href="img/svg/sprite.svg#megafon"></use>
+                                  </svg></a></li>
+                              <li><a href="#" data-placement="top" data-toggle="tooltip" title="TELE2">
+                                  <svg class="pic-tele-2 ">
+                                    <use xlink:href="img/svg/sprite.svg#tele-2"></use>
+                                  </svg></a></li>
+                              <li><a href="#" data-placement="top" data-toggle="tooltip" title="Терминалы оплаты">
+                                  <svg class="pic-terminal ">
+                                    <use xlink:href="img/svg/sprite.svg#terminal"></use>
+                                  </svg></a></li>
+                              <li><a href="#" data-placement="top" data-toggle="tooltip" title="Интернет банкинг">
+                                  <svg class="pic-bank ">
+                                    <use xlink:href="img/svg/sprite.svg#bank"></use>
+                                  </svg></a></li>
+                              <li><a href="#" data-placement="top" data-toggle="tooltip" title="Почта России">
+                                  <svg class="pic-russian-post ">
+                                    <use xlink:href="img/svg/sprite.svg#russian-post"></use>
+                                  </svg></a></li>
+                              <li><a href="#" data-placement="top" data-toggle="tooltip" title="WM-карты">
+                                  <svg class="pic-wm-card ">
+                                    <use xlink:href="img/svg/sprite.svg#wm-card"></use>
+                                  </svg></a></li>
+                              <li><a href="#" data-placement="top" data-toggle="tooltip" title="Подарочная карта">
+                                  <svg class="pic-present-card ">
+                                    <use xlink:href="img/svg/sprite.svg#present-card"></use>
+                                  </svg></a></li>
+                              <li><a href="#" data-placement="top" data-toggle="tooltip" title="Steam-скины">
+                                  <svg class="pic-payment-steamskin ">
+                                    <use xlink:href="img/svg/sprite.svg#payment-steamskin"></use>
+                                  </svg></a></li>
+                              <li><a href="#" data-placement="top" data-toggle="tooltip" title="Alipay">
+                                  <svg class="pic-alp ">
+                                    <use xlink:href="img/svg/sprite.svg#alp"></use>
+                                  </svg></a></li>
+                              <li><a href="#" data-placement="top" data-toggle="tooltip" title="Unionpay"> 
+                                  <svg class="pic-union ">
+                                    <use xlink:href="img/svg/sprite.svg#union"></use>
+                                  </svg></a></li>
+                            </ul>
                           </div>
-                        </th>
-                        <th class="align_center">На площадке</th>
-                        <th class="align_center">Индивидуальные</th>
-                        <th> </th>
-                        <th class="align_center">1 Мес.</th>
-                        <th class="align_center">3 Мес.</th>
-                        <th class="align_center">6 Мес.</th>
-                      </tr>
-                      <tr>
-                        <th class="filter_cell" colspan="10">
-                          <div class="collapse" id="goodsFilter">
-                            <div class="collapse_filter_content"> 
-                              <div class="form_group">
-                                <div class="title">показать только товары</div>
-                                <div class="form_element">
-                                  <label class="for_check">
-                                    <input type="checkbox"><span class="text">с индивидуальными комиссионными (4)</span>
-                                  </label>
-                                </div>
-                                <div class="form_element">
-                                  <label class="for_check">
-                                    <input type="checkbox"><span class="text">доступные для оплаты (31)</span>
-                                  </label>
-                                </div>
-                                <div class="form_element">
-                                  <label class="for_check">
-                                    <input type="checkbox"><span class="text">добавленные партнером в свой магазин (5)</span>
-                                  </label>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="collapse_btn"><span class="active" data-toggle="collapse" data-target="#goodsFilter" aria-expanded="false" aria-controls="goodsFilter" tabindex="-1">фильтры</span></div>
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1234567</td>
-                        <td> <a class="main_link" href="#"><img src="img/checkbox-checked.svg" alt="" title="товар добавлен в магазин партнера">test good test good test good test good test good test good test good test good test good test good test good test good test good  </a></td>
-                        <td>Мой магазин</td>
-                        <td>1234567.99</td>
-                        <td class="align_center positive">25%</td>
-                        <td class="align_center positive"> 
-                          <div class="form_element"> 
-                            <input type="text"> %
-                          </div>
-                        </td>
-                        <td class="align_center">12345.99 <small>RUB</small></td>
-                        <td class="align_center"> <span class="empty_data">0</span></td>
-                        <td class="align_center">123</td>
-                        <td class="align_center">234</td>
-                      </tr>
-                      <tr>
-                        <td>1234567</td>
-                        <td> <a class="main_link" href="#">test good  </a></td>
-                        <td>Мой магазин</td>
-                        <td>1234567.99</td>
-                        <td class="align_center negative">25%</td>
-                        <td class="align_center negative"> 
-                          <div class="form_element"> 
-                            <input type="text"> %
-                          </div>
-                        </td>
-                        <td class="align_center">12345.99 <small>RUB</small></td>
-                        <td class="align_center"> <span class="empty_data">0</span></td>
-                        <td class="align_center">123</td>
-                        <td class="align_center">234</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <div class="pagination_box">
-                    <div class="pagination_title">Страницы:</div>
-                    <ul class="pagination_list">
-                      <li><a class="active" href="#">1</a></li>
-                      <li><a href="#"> 2</a></li>
-                      <li><a href="#"> 3</a></li>
-                      <li><a href="#"> 4</a></li>
-                      <li><a href="#"> 5</a></li>
-                      <li><a class="sep" href="#"> ...</a></li>
-                      <li><a href="#"> 1200</a></li>
-                    </ul>
-                    <div class="pagination_sort">
-                      <div class="pagination_title">Товаров на странице:</div>
-                      <div class="form_element">
-                        <select>
-                          <option value="10">10</option>
-                          <option value="20" selected="selected">20</option>
-                          <option value="30">100</option>
-                        </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form_data_block_item">
+                      <div class="form_data_block_title">Размещение товара:</div>
+                      <div class="form_data_block_content"> <span class="usd">10 USD</span></div>
+                    </div>
+                    <div class="form_data_block_item">
+                      <div class="form_data_block_title">Описание товара:</div>
+                      <div class="form_data_block_content"> 
+                        <div class="about_good"> <img src="https://graph.digiseller.ru/img.ashx?id_d=2700177&amp;maxlength=150" alt="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A possimus aut alias cumque voluptatum enim asperiores iure labore! Deleniti provident recusandae accusamus est, facilis nobis. Neque, esse dignissimos. Quibusdam molestias soluta blanditiis, possimus architecto laboriosam doloremque sed magni inventore nam vero ipsa eaque tempore ullam delectus. Saepe laboriosam, laborum rem culpa alias aliquam animi harum tempore similique necessitatibus possimus laudantium aspernatur ab, nobis a voluptatem cum neque excepturi debitis est ut odio voluptatibus sapiente at? Dolor earum recusandae quam laboriosam accusamus officiis ipsa dicta, illum libero quisquam distinctio minima in quae enim consectetur reprehenderit dolore quas voluptate et veritatis adipisci.
+                          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis necessitatibus explicabo, iure harum reprehenderit, autem, laudantium esse cupiditate vero quibusdam libero at. Aliquam distinctio tempora culpa, numquam impedit laborum facere doloremque nostrum? Perferendis magnam doloremque ad optio iusto, ipsa sit voluptatum architecto natus, rem eos ut dolorum rerum officia totam? Vel cum repellendus pariatur, assumenda exercitationem dignissimos voluptate nostrum ipsum eaque ab culpa magni ex, nemo ducimus quisquam ratione debitis recusandae at! Facilis tenetur placeat enim blanditiis aut ipsum dignissimos adipisci dicta autem perferendis repudiandae dolore pariatur doloribus repellendus necessitatibus saepe, eligendi nobis, rerum, reiciendis quae. Incidunt debitis suscipit maiores.
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt delectus quisquam officia quod magnam ipsa fugit blanditiis cum error incidunt! Sapiente temporibus exercitationem dicta voluptates enim illo! Dolorum nisi error vel optio consequuntur dolore quibusdam, magnam tenetur iste porro nulla obcaecati sint, beatae accusantium odit veritatis vero incidunt doloribus placeat similique facere. Odit quisquam error dolorem dolore? Deleniti dolorum tenetur voluptas laboriosam libero at ducimus doloribus pariatur ullam atque rerum, reprehenderit sequi corrupti. Iste ipsa at reprehenderit dolorum? Eveniet ut qui commodi delectus aut eius cupiditate saepe sed ratione incidunt est veniam, ducimus illum ea eligendi dolorem iste similique voluptatibus maxime provident! Sint inventore cumque, cupiditate laborum eum quo voluptas itaque, quos quod quidem aliquid atque voluptatum sed sunt sit eligendi? Doloremque soluta sit est quis, non modi architecto aliquid nemo atque? Cumque veniam ad excepturi minus magni. Quis velit laudantium quos! Eligendi, voluptate! Quod officia illo, soluta earum laborum nam velit odit maxime et, aliquam nesciunt. Ducimus, repellendus? Mollitia ex repellendus maxime velit odit temporibus quos ipsa delectus aut. Id delectus pariatur perspiciatis ipsam cupiditate quasi, voluptatem deserunt expedita exercitationem molestiae consequatur perferendis, odio culpa molestias totam quae temporibus, quisquam cum beatae repudiandae et rem maiores! Facere suscipit culpa, earum perspiciatis dolore voluptates labore hic quis quo voluptas at repellendus deserunt ad aspernatur ea? Quia ab et, quas ipsum omnis ad obcaecati, minus repudiandae sit possimus qui quidem sunt voluptatem enim libero ratione distinctio eligendi saepe non. Officiis et quod porro eius autem laudantium cumque sint, a ad blanditiis.
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="partner_offer_bottom"> 
-                  <div class="partner_offer_bottom_group">
-                    <div class="form_element">
-                      <label class="for_check">
-                        <input type="checkbox"><span class="text">установить на все мои товары индивидуальные комиссионные отчисления в размере </span>
-                      </label>
-                    </div>
-                    <div class="form_element">
-                      <input type="text" disabled>%
-                    </div>
-                  </div>
-                  <div class="form_element">
-                    <label class="for_check">
-                      <input type="checkbox"><span class="text">заблокировать агента</span>
-                    </label>
-                  </div>
-                  <button class="btn btn_blue">сохранить</button>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </main>
-      <div class="modal fade" id="use_template" tabindex="-1" aria-labelledby="use_template" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered popup modal-sm">
-          <div class="modal-content">
-            <div class="modal-header">
-              <div class="modal-title">Подтвердите действие</div><span class="close" data-dismiss="modal" aria-label="Close">
-                <svg class="pic-modal_close ">
-                  <use xlink:href="img/svg/sprite.svg#modal_close"></use>
-                </svg></span>
-            </div>
-            <div class="modal-body">
-              <div class="use_template_modal">
-                <div class="form_element"> 
-                  <select>
-                    <option value="0">Выберите шаблон </option>
-                    <option value="1">Шаблон 1</option>
-                  </select>
-                </div>
-              </div>
-              <div class="modal_btn_group_centered">
-                <button class="btn btn_blue" data-dismiss="modal" aria-label="Close">применить</button>
-                <button class="btn btn_gray" data-dismiss="modal" aria-label="Close">отменить</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       <footer>
         <div class="box">
           <div class="footer_content">

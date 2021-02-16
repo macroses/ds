@@ -1,0 +1,127 @@
+main 
+    .box 
+        +tab-list(['Statistics', 'AllAgents', 'SelectedAgents', ['AreAlreadySelling', 10], 'AgentID', 'GeneralSettings', 'ComissionTemplates'], 6)
+            +tab('ComissionTemplates', 'active')
+                .content_box
+                    .comission_template_item
+                        // добавить класс active, чтобы показать инпут для редактирования названия шаблона 
+                        .page_nav 
+                            ul.breadcrumbs_list
+                                li.breadcrumb_item
+                                    a.main_link(href="#" title="список моих товаров") Все шаблоны
+                                li.breadcrumb_item
+                                    a.main_link(href="#" title="список моих товаров") Мой новый шаблон
+                                    .form_element 
+                                        input(type="text")
+                                    button.btn.btn_blue сохранить
+
+                        table.equal_cells
+                            colgroup
+                                col(style="width: 100px")
+                                col
+                                col(style="width: 150px")
+                                col(style="width: 90px")
+                                col(style="width: 150px")
+                                col(style="width: 120px")
+                                col(style="width: 130px")
+                                col(style="width: 150px")
+                            thead
+                                tr
+                                    th ID товара
+                                    th Название товара
+                                    th 
+                                        .head_inline_cell
+                                            |Цена
+                                            +select(['RUB', 'USD', 'EUR', 'UAH'])
+                                    th.align_center Комиссия
+                                    th.align_center Инд. комиссия
+                                    th Вознаграждение
+                                    th.align_center Площадка
+                                    th.align_center Последнее изменение
+                                tr.head_selection 
+                                    th 
+                                        .form_element
+                                            input.focused(type="text")
+                                            span.remove
+                                                +icon('remove_input_data')
+                                    th 
+                                        .form_element
+                                            input.focused(type="text")
+                                            span.remove
+                                                +icon('remove_input_data')
+                                    th 
+                                        .head_inline_cell
+                                            .form_element 
+                                                input(type="text" placeholder="от")
+                                            |  –  
+                                            .form_element 
+                                                input(type="text" placeholder="до")
+                                    th 
+                                    th 
+                                        .head_inline_cell
+                                            .form_element 
+                                                input(type="text" placeholder="от")
+                                            |  – 
+                                            .form_element 
+                                                input(type="text" placeholder="до")
+                                    th 
+                                    th 
+                                        +select(['Все магазины', 'Не все магазины'])
+                                    th 
+                                tr
+                                    th.filter_cell(colspan="8")
+                                        .collapse(id="goodsFilter" )
+                                            .collapse_filter_content 
+                                                .form_group
+                                                    .title Показывать только товары:
+                                                    .form_element
+                                                        label.for_check
+                                                            input(type="checkbox" name="agents")
+                                                            span.text доступные для оплаты
+                                        .collapse_btn
+                                            span.active(data-toggle="collapse" data-target="#goodsFilter" aria-expanded="false" aria-controls="goodsFilter" tabindex="-1") фильтры
+
+                            tbody
+                                tr
+                                    td 1234567
+                                    td 
+                                       a.main_link(href="#") Test Good Test Good Test Good Test Good Test Good Test Good Test Good Test Good Test Good Test Good Test Good Test Good Test Good Test Good Test Good  
+                                    td.align_center 93.3
+                                        small RUB
+                                    td.align_center.positive 0%
+                                    td.positive 
+                                        .form_element 
+                                            input(type="text")
+                                            |  %
+                                    td.align_center 93
+                                        small RUB
+                                    td.align_center Plati.Market
+                                    td.align_center 11.03.2019, 19:50:26
+                                tr
+                                    td 1234567
+                                    td 
+                                       a.main_link(href="#") Test  
+                                    td.align_center 93.3
+                                        small RUB
+                                    td.align_center.negative 0%
+                                    td.negative 
+                                        .form_element 
+                                            input(type="text")
+                                            |  %
+                                    td.align_center 93
+                                        small RUB
+                                    td.align_center Plati.Market
+                                    td.align_center 11.03.2019, 19:50:26
+
+                        +pagination('Шаблонов на странице:')
+
+                    .partner_offer_bottom 
+                        .partner_offer_bottom_group
+                            .form_element
+                                label.for_check
+                                    input(type="checkbox")
+                                    span.text Для всех выбранных товаров установить агентские отчисления 
+                            .form_element
+                                input(type="text" disabled)
+                                | %
+                        button.btn.btn_blue сохранить

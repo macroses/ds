@@ -1,0 +1,91 @@
+main
+    .box
+        .content_box
+            .stat_links
+                a.main_link(href="#") API
+                a.main_link(href="#") Excel-отчет
+            .good_select
+                .title товары
+                .good_select_area
+                    select#defaultSelect(multiple)
+                        option(value="0") 321🔥
+                        option(value="1") Lorem ipsum dolor sit amet.
+                        option(value="2") 321🔥
+                        option(value="3") SLDKFLSKDJFLKSJDFLKJSLDKFJLSKDJFLJKSDF
+                        option(value="4") Lorem ipsum dolor sit amet.
+                        option(value="1") Lorem ipsum dolor sit amet.
+                        option(value="2") Lorem ipsum dolor sit amet.
+                        option(value="3") Lorem ipsum dolor sit amet.
+                        option(value="4") Lorem ipsum dolor sit amet.
+
+            .table_detail_filters
+                .table_detail_filters_section.agent
+                    // dates
+                    .table_detail_filters_item
+                        .form_element.vertical
+                            label период с
+                            input(type="text")
+                    .table_detail_filters_item
+                        .form_element.vertical
+                            label по
+                            input(type="text")
+                    .table_detail_filters_item
+                        .filter_btn_group
+                            button.btn.btn_gray
+                                small сегодня
+                            button.btn.btn_gray.active 7 
+                                small дней
+                            button.btn.btn_gray 30 
+                                small дней
+                            button.btn.btn_gray 90 
+                                small дней
+                    .table_detail_filters_item
+                        +select(['включить возвраты', 'исключить возвраты', 'только возвраты'])
+
+            .items_counters
+                |продаж за период: 
+                span.bold 7
+
+            table.equal_cells.hovered_rows 
+                colgroup
+                    col(style="width: 75px")
+                    col
+                    col(style="width: 150px")
+                    col(style="width: 170px")
+                    col(style="width: 170px")
+                    col(style="width: 95px")
+                    col(style="width: 95px")
+                thead
+                    tr
+                        th ID товара
+                        th Название товара
+                        th Дата
+                        th Покупатель
+                        th Продавец
+                        th.align_right Оплачено
+                        th.align_right Зачислено
+                tbody
+                    tr
+                        td 1234567
+                        td test test test test test test test test test test test test test test test test test test test test test test test test test test test test 
+                        td 16.02.2021 15:00:23
+                        td juice80516@gmail.comjuice80516@gmail.comjuice80516@gmail.comjuice80516@gmail.comjuice80516@gmail.com
+                        td 
+                            a.main_link(href="#") sellerSellersellerSellersellerSellersellerSeller 
+                        td.align_right 999.99
+                            small WMZ
+                        td.align_right 999.99
+                            small WMZ
+                    tr
+                        td 1234567
+                        td STEAM KEY🔴🔴█▬█ █▀█🔴🔴ULTRA ELITE KEY RANDOM NEW YEAR
+                        td 16.02.2021 15:00:23
+                        td juice80516@gmail.com
+                        td 
+                            a.main_link(href="#") seller
+                        td.align_right 1.99
+                            small WMZ
+                        td.align_right 2.99
+                            small WMZ
+
+            +pagination('Продаж на странице:')

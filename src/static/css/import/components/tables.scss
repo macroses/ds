@@ -300,3 +300,13 @@ tbody {
         }
     }
 }
+
+
+.head_inline_cell {
+    display: flex;
+    align-items: center;
+
+    .form_element {
+        margin: 0 3px;
+    }
+}

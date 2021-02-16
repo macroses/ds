@@ -1,0 +1,81 @@
+main 
+    .box 
+        +tab-list(['Statistics', 'Items', 'Settings'], 0)
+            +tab('Statistics', 'active')
+                .content_box
+                    .statistics 
+                        .sales 
+                            .title_block Продажи
+                                a.main_link(href="#") подробнее 
+                            ul.timeline_list 
+                                li 
+                                    .title за месяц
+                                    .value 4504
+                                li 
+                                    .title за квартал
+                                    .value 4504
+                                li 
+                                    .title за год
+                                    .value 56032    
+                            canvas 
+                            table.equal_cells 
+                                colgroup
+                                    col(style="width: 80px")
+                                    col
+                                    col(style="width: 80px")
+                                thead
+                                    tr
+                                        th Дата
+                                        th.align_center Продаж
+                                        th.align_right Оборот
+                                    tr.head_selection 
+                                        th 
+                                            +select(['день', 'неделя', 'месяц'])
+                                        th 
+                                        th 
+                                            +select(['USD', 'RUB', 'EUR'])
+                                tbody
+                                    tr
+                                        td 
+                                            a.main_link(href="#") 16.02.2020 
+                                        td.align_center 728
+                                        td.align_right 130.43
+                            +pagination()
+                        .views
+                            .title_block Просмотры
+                                a.main_link(href="#") подробнее 
+                            ul.timeline_list 
+                                li 
+                                    .title за месяц
+                                    .value 4504
+                                li 
+                                    .title за квартал
+                                    .value 4504
+                                li 
+                                    .title за год
+                                    .value 56032  
+                            canvas 
+                            table.equal_cells 
+                                colgroup
+                                    col(style="width: 80px")
+                                    col
+                                    col(style="width: 80px")
+                                thead
+                                    tr
+                                        th Дата
+                                        th
+                                        th.align_right Оборот
+                                    tr.head_selection 
+                                        th 
+                                            +select(['день', 'неделя', 'месяц'])
+                                        th 
+                                        th 
+                                tbody
+                                    tr
+                                        td 
+                                            a.main_link(href="#") 16.02.2020 
+                                        td
+                                        td.align_right 130.43
+                            +pagination() 
+                             
+                                                                    

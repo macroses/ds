@@ -1,0 +1,68 @@
+.statistics {
+    display: flex;
+
+    .title_block {
+        font-size: 22px;
+        display: flex;
+        align-items: baseline;
+        .main_link {
+            margin-left: 30px;
+            font-size: 14px;
+            font-weight: normal;
+        }
+    }
+
+    table .form_element {
+        width: auto;
+    }
+
+    
+    table .form_element select {
+        width: auto;
+    }
+}
+
+.sales {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.views {
+    flex: 1;
+}
+
+.timeline_list {
+    display: flex;
+    li {
+        margin-right: 30px;
+    }
+
+    .title {
+        color: $additional_info_color;
+    }
+
+    .value {
+        font: bold 20px Lato;
+    }
+}
+
+.table_detail_filters_section.agent {
+    flex-wrap: nowrap;
+    flex-basis: auto;
+    align-items: flex-end;
+    margin-bottom: 20px;
+
+    .table_detail_filters_item {
+        margin-right: 10px;
+        flex-basis: auto;
+    }
+}
+
+.about_good {
+    img {
+        float: left;
+        margin: 0 20px 20px 0;
+        padding: 5px;
+        border: 1px solid #eee;
+    }
+}

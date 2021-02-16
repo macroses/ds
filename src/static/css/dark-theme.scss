@@ -1235,3 +1235,13 @@ button.btn, input[type="submit"].btn, a.btn, label.btn {
 .partners_reports_content {
     color: map-get($dark_colors, main);
 }
+
+.partners_settings {
+    .settings {
+        color: map-get($dark_colors, main);
+    }
+}
+
+.items_counters {
+    color: map-get($dark_colors, main);
+}

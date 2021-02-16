@@ -1,0 +1,31 @@
+main 
+    .box 
+        +tab-list(['Statistics', 'AllAgents', 'SelectedAgents', ['AreAlreadySelling', 10], 'AgentID', 'GeneralSettings', 'ComissionTemplates'], 6)
+            +tab('ComissionTemplates', 'active')
+                .content_box
+                    .comission_templates 
+                        button.btn.btn_blue создать шаблон
+                        table.equal_cells 
+                            colgroup
+                                col
+                                col(style="width: 170px")
+                                col(style="width: 45px")
+                            thead
+                                tr
+                                    th Наименование шаблона
+                                    th Последние изменения
+                                    th.align_right
+                                        button.btn.btn_gray(title="удалить выбранные товары")
+                                            +icon('delete-btn')
+                            tbody
+                                tr
+                                    td 
+                                        a.main_link(href="#") test temaplate 
+                                    td 24.11.2020, 12:09:52
+                                    td.align_right
+                                        .form_element
+                                            label.for_check
+                                                input(type="checkbox")
+                                                span.text
+
+                        +pagination('Шаблонов на странице:')

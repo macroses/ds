@@ -232,6 +232,75 @@
           </div>
         </div>
       </nav>
+      <main> 
+        <div class="box"> 
+          <ul class="nav nav-tabs" role="tablist">
+            <li><a class="nav-link" href="#tabStatistics" role="tab" data-toggle="tab">Statistics</a></li>
+            <li><a class="nav-link" href="#tabAllAgents" role="tab" data-toggle="tab">AllAgents</a></li>
+            <li><a class="nav-link" href="#tabSelectedAgents" role="tab" data-toggle="tab">SelectedAgents</a></li>
+            <li><a class="nav-link" href="#tabAreAlreadySelling" role="tab" data-toggle="tab">AreAlreadySelling
+                <div class="tab_nums">10</div></a></li>
+            <li><a class="nav-link" href="#tabAgentID" role="tab" data-toggle="tab">AgentID</a></li>
+            <li><a class="nav-link active" href="#tabGeneralSettings" role="tab" data-toggle="tab">GeneralSettings</a></li>
+            <li><a class="nav-link" href="#tabComissionTemplates" role="tab" data-toggle="tab">ComissionTemplates</a></li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane active" id="tabGeneralSettings">
+              <div class="content_box">
+                <div class="partners_settings">
+                  <div class="form_group"> 
+                    <div class="title_block">При продаже товара через агента:</div>
+                    <div class="form_element">
+                      <label class="for_radio">
+                        <input type="radio" name="agent_sell_push"><span class="text">оповещать меня о такой продаже</span>
+                      </label>
+                    </div>
+                    <div class="form_element">
+                      <label class="for_radio">
+                        <input type="radio" name="agent_sell_push"><span class="text">ничего не делать</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="form_group"> 
+                    <div class="title_block">При продаже товара через агента, не добавленного в избранные:</div>
+                    <div class="form_element">
+                      <label class="for_check disabled">
+                        <input type="checkbox" disabled><span class="text">оповещать меня о такой продаже</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="form_group settings"> 
+                    <div class="form_element">
+                      <label class="for_check">
+                        <input type="checkbox"><span class="text">автоматически добавлять агента в избранные и устанавливать для него индивидуальную комиссию на</span>
+                      </label>
+                    </div>
+                    <div class="form_element">
+                      <select>
+                        <option value="0">проданный товар</option>
+                        <option value="1">все мои товары</option>
+                      </select>
+                    </div>в размере<span class="bold">+ </span>
+                    <div class="form_element"> 
+                      <input type="text">
+                    </div><span class="bold">% </span> к текущему общему значению отчислений
+                  </div>
+                  <button class="btn btn_blue">сохранить</button>
+                  <div class="form_group settings">Для всех моих товаров, которые участвуют в партнерской программе установить размер партнерских отчислений из шаблона 
+                    <div class="form_element">
+                      <select>
+                        <option value="0">выберите шаблон</option>
+                        <option value="1">Шаблон 1</option>
+                      </select>
+                    </div>
+                    <button class="btn btn_blue">применить</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
       <footer>
         <div class="box">
           <div class="footer_content">

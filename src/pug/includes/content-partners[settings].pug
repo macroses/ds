@@ -1,0 +1,40 @@
+main 
+    .box 
+        +tab-list(['Statistics', 'AllAgents', 'SelectedAgents', ['AreAlreadySelling', 10], 'AgentID', 'GeneralSettings', 'ComissionTemplates'], 5)
+            +tab('GeneralSettings', 'active')
+                .content_box
+                    .partners_settings
+                        .form_group 
+                            .title_block При продаже товара через агента:
+                            .form_element
+                                label.for_radio
+                                    input(type="radio", name="agent_sell_push")
+                                    span.text оповещать меня о такой продаже
+                            .form_element
+                                label.for_radio
+                                    input(type="radio", name="agent_sell_push")
+                                    span.text ничего не делать
+                        .form_group 
+                            .title_block При продаже товара через агента, не добавленного в избранные:
+                            .form_element
+                                label.for_check.disabled
+                                    input(type="checkbox" disabled)
+                                    span.text оповещать меня о такой продаже
+                        .form_group.settings 
+                            .form_element
+                                label.for_check
+                                    input(type="checkbox")
+                                    span.text автоматически добавлять агента в избранные и устанавливать для него индивидуальную комиссию на
+                            +select(['проданный товар', 'все мои товары'])
+                            | в размере
+                            span.bold + 
+                            .form_element 
+                                input(type="text")
+                            span.bold % 
+                            |  к текущему общему значению отчислений
+                        button.btn.btn_blue сохранить
+                        .form_group.settings
+                            |Для всех моих товаров, которые участвуют в партнерской программе установить размер партнерских отчислений из шаблона 
+                            +select(['выберите шаблон', 'Шаблон 1'])
+                            button.btn.btn_blue применить
+                        

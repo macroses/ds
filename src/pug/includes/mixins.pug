@@ -81,30 +81,50 @@ mixin section-content(type, title)
 
 //- пагинация
 mixin pagination(titleName)
-	.pagination_box
-		.pagination_title Страницы:
-		ul.pagination_list
-			li
-				a.active(href="#") 1
-			li
-				a(href="#")  2
-			li
-				a(href="#")  3
-			li
-				a(href="#")  4
-			li
-				a(href="#")  5
-			li
-				a.sep(href="#")  ...
-			li
-				a(href="#")  1200
-		.pagination_sort
-			.pagination_title #{titleName}
-			.form_element
-				select
-					option(value="10") 10
-					option(value="20" selected) 20
-					option(value="30") 100
+
+	if (titleName)
+		.pagination_box
+			.pagination_title Страницы:
+			ul.pagination_list
+				li
+					a.active(href="#") 1
+				li
+					a(href="#")  2
+				li
+					a(href="#")  3
+				li
+					a(href="#")  4
+				li
+					a(href="#")  5
+				li
+					a.sep(href="#")  ...
+				li
+					a(href="#")  1200
+			.pagination_sort
+				.pagination_title #{titleName}
+				.form_element
+					select
+						option(value="10") 10
+						option(value="20" selected) 20
+						option(value="30") 100
+	else 
+		.pagination_box
+			.pagination_title Страницы:
+			ul.pagination_list
+				li
+					a.active(href="#") 1
+				li
+					a(href="#")  2
+				li
+					a(href="#")  3
+				li
+					a(href="#")  4
+				li
+					a(href="#")  5
+				li
+					a.sep(href="#")  ...
+				li
+					a(href="#")  1200
 //- +pagination('На странице') - аргумент передает название правой части пагинации, которая может меняться.
 
 //- switcher
