@@ -24,7 +24,7 @@
     margin-bottom: 20px;
     text-align: right;
     .main_link {
-        font: bold 14px Lato;
+        font: 600 14px Lato;
         margin-left: 15px;
     }
 }
@@ -124,7 +124,7 @@
 
     .main_link {
         margin-left: 20px;
-        font: bold 14px Lato;
+        font: 600 14px Lato;
     }
 }
 
@@ -196,7 +196,7 @@
     margin-bottom: 10px;
     .title {
         width: 80px;
-        font-weight: bold;
+        font-weight: 600;
     }
 
     svg {
@@ -214,7 +214,7 @@
 }
 
 .payment_ticket_status {
-    font-weight: bold;
+    font-weight: 600;
     &.done {
         color: #00972A;
     }

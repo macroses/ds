@@ -33,7 +33,7 @@
 }
 
 .general_methods_item_title {
-    font: bold 16px Lato;
+    font: 600 16px Lato;
     color: $footer_bg;
 }
 
@@ -55,7 +55,7 @@
     .main_link.err {
         background: #fcebee;
         padding: 5px 10px;
-        font-weight: bold;
+        font-weight: 600;
         font-size: 13px;
         border-radius: 2px;
     }
@@ -78,7 +78,7 @@
 
 .compensation_option_title {
     margin-right: 10px;
-    font-weight: bold;
+    font-weight: 600;
     background: #eceff1;
     padding: 5px 7px;
     font-size: 13px;

@@ -26,10 +26,32 @@ main
                             .form_data_block_item
                                 .form_data_block_title Комиссия партнеру:
                                 .form_data_block_content 1%
+                            .form_data_block_item.negative
+                                .form_data_block_title Комиссия партнеру:
+                                .form_data_block_content 
+                                    .item
+                                        span.comission_change
+                                            span.line_through 1%  
+                                            |  11% 
+                                        |Размер индивидуальных комиссионных, которые установил вам продавец, меньше комиссии установленной им для остальных партнеров! За разъяснениями обратитесь непосредственно к 
+                                        a.main_link(href="#") продавцу
+                                        |.
+                            .form_data_block_item.positive
+                                .form_data_block_title Комиссия партнеру:
+                                .form_data_block_content 
+                                    .item 
+                                        span.comission_change
+                                            span.line_through 1%  
+                                            |  11% 
+                                        |Продавец установил для вас индивидуальные комиссионные!
                             .form_data_block_item
                                 .form_data_block_title Вознаграждение:
                                 .form_data_block_content 
                                     span.usd 10 USD
+                            .form_data_block_item
+                                .form_data_block_title Способы оплаты:
+                                .form_data_block_content 
+                                    .alert_box.warning Товар отсутствует (закончился) c 06.06.2017 10:38:00
                             .form_data_block_item
                                 .form_data_block_title Способы оплаты:
                                 .form_data_block_content 
@@ -93,7 +115,32 @@ main
                             .form_data_block_item
                                 .form_data_block_title Размещение товара:
                                 .form_data_block_content 
-                                    span.usd 10 USD
+                                    .item_placement 
+                                        .title Партнерских товаров в магазине: 
+                                            span.bold 3 
+                                            |  из 
+                                            span.bold 100 
+                                            a.main_link(href="#") увеличить лимит
+                                        .warning товар не добавлен ни в одну из категорий вашего магазина
+                                        ul.added_category_list
+                                            li
+                                                a.main_link(href="#") Мои товары
+                                                a.main_link(href="#") Категория 1
+                                                button.btn.btn_gray 
+                                                    span.minus
+                                            li
+                                                a.main_link(href="#") Мои товары
+                                                a.main_link(href="#") Категория 1
+                                                button.btn.btn_gray 
+                                                    span.minus
+
+                                        .add_good_category 
+                                            .form_element
+                                                select
+                                                    option(value="0" disabled selected) Выберите категорию
+                                                    option(value="1") Категория 1
+                                                    option(value="2") Категория 2
+                                            button.btn.btn_blue добавить
                             .form_data_block_item
                                 .form_data_block_title Описание товара:
                                 .form_data_block_content 

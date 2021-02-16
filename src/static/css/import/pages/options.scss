@@ -88,7 +88,7 @@
         white-space: nowrap;
         padding: 10px 10px 10px 15px;
         cursor: pointer;
-        font: bold 14px Lato;
+        font: 600 14px Lato;
         color: $main_text_color;
         transition: .2s;
         &:hover {
@@ -145,7 +145,7 @@
 }
 
 .params_preview_header {
-    font: bold 18px Lato;
+    font: 600 18px Lato;
     display: flex;
     align-items: center;
     justify-content: center;

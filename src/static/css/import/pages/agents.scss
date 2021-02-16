@@ -22,6 +22,18 @@
     }
 }
 
+.comission_change {
+    border: 1px solid #c9c9c9;
+    border-radius: 4px; 
+    padding: 3px;
+    margin-right: 10px;
+    font-weight: 600;
+
+    span {
+        margin-right: 5px;
+    }
+}
+
 .sales {
     flex: 1;
     margin-right: 20px;
@@ -30,6 +42,8 @@
 .views {
     flex: 1;
 }
+
+
 
 .timeline_list {
     display: flex;
@@ -42,9 +56,35 @@
     }
 
     .value {
-        font: bold 20px Lato;
+        font: 600 20px Lato;
     }
 }
+
+.partner_box {
+    .positive {
+        background: #EDFFE2;
+        .main_link {
+            display: inline;
+        }
+
+        .form_data_block_content {
+            color: #000;
+        }
+    }
+
+    .negative {
+        background: #FFEAEA;
+        .main_link {
+            display: inline;
+        }
+
+        .form_data_block_content {
+            color: #000;
+        }
+    }
+}
+
+
 
 .table_detail_filters_section.agent {
     flex-wrap: nowrap;
@@ -65,4 +105,110 @@
         padding: 5px;
         border: 1px solid #eee;
     }
+}
+
+.item_placement {
+
+    .main_link {
+        margin-left: 10px;
+        display: inline;
+    }
+
+    .warning {
+        font-weight: 600;
+        color: red;
+        margin: 10px 0;
+    }
+}
+
+.add_good_category {
+    display: flex;
+
+    .form_element {
+        width: auto;
+        margin-right: 0;
+    }
+    .btn {
+        margin-left: 5px;
+    }
+}
+
+.added_category_list {
+    margin: 10px 0;
+    .main_link {
+        margin-left: 0;
+        margin-right: 15px;
+        overflow: visible;
+        &:not(:last-of-type) {
+            position: relative;
+            &:after {
+                left: calc(100% + 6px);
+                top: 50%;
+                border: solid transparent;
+                content: " ";
+                height: 0;
+                width: 0;
+                position: absolute;
+                pointer-events: none;
+                border-color: rgba(178, 193, 201, 0);
+                border-left-color: #b2c1c9;
+                border-width: 5px;
+                margin-top: -5px;
+            }
+        }
+    }
+
+    li {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 5px 0;
+        border-bottom: 1px solid #eceff1;
+    }
+
+    .btn {
+        margin-left: auto;
+    }
+}
+
+// views details
+.views_box {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.views_table {
+    flex: 2;
+
+    table {
+        margin-top: 20px;
+    }
+}
+
+.views_table_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .form_element {
+        select {
+            margin-left: 5px;
+        }
+    }
+
+    .title_block {
+        margin-bottom: 0;
+    }
+}
+
+// individual_offer_page
+.seller_box {
+    display: flex;
+}
+
+.seller_info {
+    flex: 1;
+}
+
+.individual_discounts {
+    flex: 2;
 }

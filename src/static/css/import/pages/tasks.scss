@@ -79,7 +79,7 @@
     }
 
     .content {
-        font-weight: bold;
+        font-weight: 600;
     }
 
     &.dates {
@@ -180,7 +180,7 @@
     }
 
     .task_item_value {
-        font-weight: bold;
+        font-weight: 600;
     }
 
     table {
@@ -217,7 +217,7 @@
     li{
         position: relative;
         margin-left: 40px;
-        font: bold 13px Roboto;
+        font: 600 13px Roboto;
         color: $headers_color;
     }
 

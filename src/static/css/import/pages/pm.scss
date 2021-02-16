@@ -101,7 +101,7 @@
 .pm_title {
     display: flex;
     font-size: 21px;
-    font-weight: bold;
+    font-weight: 600;
     margin-bottom: 5px;
 
     .icon_list {
@@ -130,7 +130,7 @@
     color: #d2000d;
     font-size: 9px;
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: 600;
     margin-top: 5px;
 }
 
@@ -215,7 +215,7 @@
 }
 
 .user_agreement {
-    font-weight: bold;
+    font-weight: 600;
     display: flex;
     align-items: center;
     svg {
@@ -414,7 +414,7 @@
     align-items: center;
     padding: 5px 0 5px 5px;
     border-bottom: 1px solid #e9e9e9;
-    font-weight: bold;
+    font-weight: 600;
     &:hover {
         background: #e9e9e9;
         .pm_sort_list_visibility {

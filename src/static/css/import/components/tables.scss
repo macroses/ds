@@ -51,7 +51,7 @@ table {
 }
 
 thead {
-    font: bold 12px Roboto;
+    font: 600 12px Roboto;
 }
 
 th {
@@ -176,7 +176,7 @@ tbody {
     .item_header {
         color: $headers_color;
         margin-bottom: 5px;
-        font: bold 12px Roboto;
+        font: 600 12px Roboto;
     }
 
     .item_value {
@@ -261,7 +261,7 @@ tbody {
         display: inline-block;
         background-color: #f6f8f9;
         
-        font: bold 10px Roboto;
+        font: 600 10px Roboto;
         border: solid 1px #cfd8dc;
         border-top-color: #f6f8f9;
         border-bottom-left-radius: 4px;

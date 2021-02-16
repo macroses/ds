@@ -26,7 +26,7 @@
     border-bottom: 1px solid #efefef;
     padding: 4px 0;
     a {
-        font-weight: bold;
+        font-weight: 600;
         color: $main_links_color;
     }
 
@@ -44,7 +44,7 @@
     width: 200px;
 
     option[value=no] {
-        font-weight: bold;
+        font-weight: 600;
         color: #d0011b;
     }
 }
@@ -69,7 +69,7 @@
 .transfers_detail_item {
     display: flex;
     margin-bottom: 15px;
-    font: bold 13px Roboto;
+    font: 600 13px Roboto;
     .title {
         min-width: 200px;
         margin-right: 10px;

@@ -1,0 +1,99 @@
+main 
+    .box 
+        +tab-list(['Statistics', 'Items', 'Settings'], 0)
+            +tab('Statistics', 'active')
+                .content_box
+                    .statistics 
+                        .views_box 
+                            .title_block Просмотры
+                            ul.timeline_list 
+                                li 
+                                    .title за месяц
+                                    .value 4504
+                                li 
+                                    .title за квартал
+                                    .value 4504
+                                li 
+                                    .title за год
+                                    .value 56032    
+                            canvas 
+                            table.equal_cells 
+                                colgroup
+                                    col(style="width: 80px")
+                                    col
+                                    col(style="width: 80px")
+                                thead
+                                    tr
+                                        th Дата
+                                        th
+                                        th.align_right Просмотры
+                                    tr.head_selection 
+                                        th 
+                                            +select(['день', 'неделя', 'месяц'])
+                                        th 
+                                        th
+                                tbody
+                                    tr
+                                        td 
+                                            a.main_link(href="#") 16.02.2020 
+                                        td
+                                        td.align_right 982
+                                    tr
+                                        td 
+                                            a.main_link(href="#") 16.02.2020 
+                                        td
+                                        td.align_right 982
+                                    tr
+                                        td 
+                                            a.main_link(href="#") 16.02.2020 
+                                        td
+                                        td.align_right 982
+                            +pagination()
+                        .views_table
+                            .views_table_header
+                                .title_block Детали 16.02.2021
+                                .form_element 
+                                    |Сортировка по:
+                                    select
+                                        option(value="0") времени - возрастанию
+                                        option(value="1") времени - убыванию
+                                        option(value="2") название товара А - Я
+                                        option(value="2") название товара Я - A
+                            table.equal_cells 
+                                colgroup
+                                    col(style="width: 90px")
+                                    col
+                                    col(style="width: 100px")
+                                    col(style="width: 150px")
+                                thead
+                                    tr
+                                        th Время
+                                        th Название товара
+                                        th.align_right Цена
+                                        th.align_right Ссылка
+                                tbody
+                                    tr
+                                        td 21:16:26
+                                        td 
+                                            a.main_link(href="#") Xbox Game Pass Ultimate 14 дней (Конвертация|Продление) Xbox Game Pass Ultimate 14 дней (Конвертация|Продление) 
+                                        td.align_right 3101.52
+                                            small WMZ
+                                        td.align_right
+                                            a.main_link(href="#") Plati.com
+                                    tr
+                                        td 21:16:26
+                                        td 
+                                            a.main_link(href="#") Xbox Game Pass Ultimate 14 дней (Конвертация|Продление) Xbox Game Pass Ultimate 14 дней (Конвертация|Продление) 
+                                        td.align_right 3101.52
+                                            small WMZ
+                                        td.align_right
+                                            a.main_link(href="#") Plati.com
+                                    tr
+                                        td 21:16:26
+                                        td 
+                                            a.main_link(href="#") Xbox Game
+                                        td.align_right 3101.52
+                                            small WMZ
+                                        td.align_right
+                                            a.main_link(href="#") Plati.com
+                            +pagination()

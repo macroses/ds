@@ -243,8 +243,8 @@
             <div class="tab-pane active" id="tabStatistics">
               <div class="content_box">
                 <div class="statistics"> 
-                  <div class="sales"> 
-                    <div class="title_block">Продажи<a class="main_link" href="#">подробнее </a></div>
+                  <div class="views_box"> 
+                    <div class="title_block">Просмотры</div>
                     <ul class="timeline_list"> 
                       <li> 
                         <div class="title">за месяц</div>
@@ -262,15 +262,15 @@
                     <canvas> </canvas>
                     <table class="equal_cells"> 
                       <colgroup>
-                        <col style="width: 90px">
+                        <col style="width: 80px">
                         <col>
-                        <col style="width: 90px">
+                        <col style="width: 80px">
                       </colgroup>
                       <thead>
                         <tr>
                           <th>Дата</th>
-                          <th class="align_center">Продаж</th>
-                          <th class="align_right">Оборот</th>
+                          <th></th>
+                          <th class="align_right">Просмотры</th>
                         </tr>
                         <tr class="head_selection"> 
                           <th> 
@@ -283,22 +283,24 @@
                             </div>
                           </th>
                           <th> </th>
-                          <th> 
-                            <div class="form_element">
-                              <select>
-                                <option value="0">USD</option>
-                                <option value="1">RUB</option>
-                                <option value="2">EUR</option>
-                              </select>
-                            </div>
-                          </th>
+                          <th></th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
                           <td> <a class="main_link" href="#">16.02.2020 </a></td>
-                          <td class="align_center">728</td>
-                          <td class="align_right">130.43</td>
+                          <td></td>
+                          <td class="align_right">982</td>
+                        </tr>
+                        <tr>
+                          <td> <a class="main_link" href="#">16.02.2020 </a></td>
+                          <td></td>
+                          <td class="align_right">982</td>
+                        </tr>
+                        <tr>
+                          <td> <a class="main_link" href="#">16.02.2020 </a></td>
+                          <td></td>
+                          <td class="align_right">982</td>
                         </tr>
                       </tbody>
                     </table>
@@ -315,54 +317,52 @@
                       </ul>
                     </div>
                   </div>
-                  <div class="views">
-                    <div class="title_block">Просмотры<a class="main_link" href="#">подробнее </a></div>
-                    <ul class="timeline_list"> 
-                      <li> 
-                        <div class="title">за месяц</div>
-                        <div class="value">4504</div>
-                      </li>
-                      <li> 
-                        <div class="title">за квартал</div>
-                        <div class="value">4504</div>
-                      </li>
-                      <li> 
-                        <div class="title">за год</div>
-                        <div class="value">56032  </div>
-                      </li>
-                    </ul>
-                    <canvas> </canvas>
+                  <div class="views_table">
+                    <div class="views_table_header">
+                      <div class="title_block">Детали 16.02.2021</div>
+                      <div class="form_element">
+                         Сортировка по:
+                        <select>
+                          <option value="0">времени - возрастанию</option>
+                          <option value="1">времени - убыванию</option>
+                          <option value="2">название товара А - Я</option>
+                          <option value="2">название товара Я - A</option>
+                        </select>
+                      </div>
+                    </div>
                     <table class="equal_cells"> 
                       <colgroup>
                         <col style="width: 90px">
                         <col>
-                        <col style="width: 90px">
+                        <col style="width: 100px">
+                        <col style="width: 150px">
                       </colgroup>
                       <thead>
                         <tr>
-                          <th>Дата</th>
-                          <th></th>
-                          <th class="align_right">Оборот</th>
-                        </tr>
-                        <tr class="head_selection"> 
-                          <th> 
-                            <div class="form_element">
-                              <select>
-                                <option value="0">день</option>
-                                <option value="1">неделя</option>
-                                <option value="2">месяц</option>
-                              </select>
-                            </div>
-                          </th>
-                          <th> </th>
-                          <th> </th>
+                          <th>Время</th>
+                          <th>Название товара</th>
+                          <th class="align_right">Цена</th>
+                          <th class="align_right">Ссылка</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
-                          <td> <a class="main_link" href="#">16.02.2020 </a></td>
-                          <td></td>
-                          <td class="align_right">130.43</td>
+                          <td>21:16:26</td>
+                          <td> <a class="main_link" href="#">Xbox Game Pass Ultimate 14 дней (Конвертация|Продление) Xbox Game Pass Ultimate 14 дней (Конвертация|Продление) </a></td>
+                          <td class="align_right">3101.52<small>WMZ</small></td>
+                          <td class="align_right"><a class="main_link" href="#">Plati.com</a></td>
+                        </tr>
+                        <tr>
+                          <td>21:16:26</td>
+                          <td> <a class="main_link" href="#">Xbox Game Pass Ultimate 14 дней (Конвертация|Продление) Xbox Game Pass Ultimate 14 дней (Конвертация|Продление) </a></td>
+                          <td class="align_right">3101.52<small>WMZ</small></td>
+                          <td class="align_right"><a class="main_link" href="#">Plati.com</a></td>
+                        </tr>
+                        <tr>
+                          <td>21:16:26</td>
+                          <td> <a class="main_link" href="#">Xbox Game</a></td>
+                          <td class="align_right">3101.52<small>WMZ</small></td>
+                          <td class="align_right"><a class="main_link" href="#">Plati.com</a></td>
                         </tr>
                       </tbody>
                     </table>

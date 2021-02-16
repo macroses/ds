@@ -46,7 +46,7 @@ a {
 
 .section_title {
     background: #eceff1;
-    font-weight: bold;
+    font-weight: 600;
     color: $title_color;
     padding: 15px;
 }
@@ -87,11 +87,11 @@ a {
 }
 
 .bold {
-    font-weight: 900;
+    font-weight: 600;
 }
 
 .bolder {
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .tooltip > .tooltip-inner {
@@ -120,7 +120,7 @@ a {
 }
 
 .tipsed_header {
-    font: bold 13px Lato;
+    font: 600 13px Lato;
     margin: 0;
     width: 360px;
     text-align: left;
@@ -162,7 +162,7 @@ a {
 
 .title_block {
     color: #3a4a52;
-    font: bold 16px Lato;
+    font: 600 16px Lato;
     margin: 0 0 15px;
     display: flex;
     align-items: flex-start;
@@ -226,6 +226,10 @@ span[data-toggle="tooltip"] {
     }
 }
 
+.line_through {
+    text-decoration: line-through;
+}
+
 // убираем скачок при появлении контента
 @media screen and (min-width: 1350px) {
     html {
@@ -246,7 +250,7 @@ span[data-toggle="tooltip"] {
 
 // валюты
 .rub, .usd, .uah, .eur, .bitcoin {
-    font: bold 13px Roboto;
+    font: 600 13px Roboto;
     span {
         font-weight: normal;
         text-transform: uppercase;
@@ -276,7 +280,7 @@ span[data-toggle="tooltip"] {
 
 .star {
     color: red;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .accept {
@@ -309,7 +313,7 @@ small {
 .back_link {
     position: relative;
     padding-left: 15px;
-    font-weight: bold;
+    font-weight: 600;
     &:before {
         position: absolute;
         content: '';

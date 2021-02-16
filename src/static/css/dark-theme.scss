@@ -1189,7 +1189,7 @@ button.btn, input[type="submit"].btn, a.btn, label.btn {
         color: red;
         .form_data_block_title {
             color: red;
-            font-weight: bold;
+            font-weight: 600;
         }
 
         .form_data_block_content {
@@ -1243,5 +1243,13 @@ button.btn, input[type="submit"].btn, a.btn, label.btn {
 }
 
 .items_counters {
+    color: map-get($dark_colors, main);
+}
+
+.added_category_list li{
+    border-color: map-get($dark_bg, nav);
+}
+
+.timeline_list .value {
     color: map-get($dark_colors, main);
 }
