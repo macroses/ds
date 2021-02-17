@@ -377,6 +377,10 @@
     display: flex;
     justify-content: flex-end;
     margin-top: 10px;
+
+    .goods_menu_sort {
+        margin-left: 0;
+    }
 }
 
 .agents_settings_tables {
@@ -404,4 +408,23 @@
     table {
         margin-top: 0;
     }
+}
+
+.comission_pos {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #05ce00;
+    // margin-bottom: 2px;
+    margin-right: 10px;
+}
+.comission_neg {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ff0000;
+    // margin-bottom: 2px;
+    margin-right: 10px;
 }

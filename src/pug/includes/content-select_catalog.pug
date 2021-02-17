@@ -1,0 +1,51 @@
+main
+    .box
+        .content_box
+            .page_nav
+                ul.breadcrumbs_list
+                    li.breadcrumb_item
+                        a.main_link(href="#" data-placement="top" data-toggle="tooltip" title="список моих товаров") Мои товары
+                    li.breadcrumb_item
+                        .breadcrumb_item_name Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена Акц - фикс цена 
+                        a(href="#" data-placement="top" data-toggle="tooltip" title="открыть страницу с описанием товара")
+                            +icon('good_link')
+                        .breadcrumb_item_price 14895 
+                            span RUB
+                .page_nav_item
+                    .prev 
+                        a.main_link(href="#") предыдущий товар
+                    .next 
+                        a.main_link(href="#") следующий товар
+
+        +tab-list(['Basic', 'Parameters', 'Gallery', ['Content', 10], 'Payment', 'Sales', 'Discount', 'HTML_code', 'Notifications', 'Catalog'], 9)
+            +tab('Catalog', 'active')
+                .content_box
+                    .select_catalog
+                        .catalog_collection
+                        .catalog_item_options
+                            .alert_box.info Digiseller вводит новый глобальный индекс-каталог по всем товарам сервиса, для удобства распространения среди агентов и более гибких возможностей поиска.
+                            .alert_box.additional_info Ваш товар еще не добавлен ни в одну из категорий.
+                            .catalog_crumbs
+                                ul.breadcrumbs_list
+                                    li.breadcrumb_item
+                                        a.main_link(href="#") Игры
+                                    li.breadcrumb_item
+                                        .breadcrumb_item_name 123123
+                                button.btn.btn_gray добавить в категорию
+                            .alert_box.info У данной категории отсутствуют атрибуты
+                            .catalog_item_table
+                                table.equal_cells 
+                                    colgroup
+                                        col
+                                        col
+                                    thead
+                                        tr
+                                            th 
+                                            th 
+                                    tbody
+                                        tr
+                                            td 
+                                            td 
+
+
+

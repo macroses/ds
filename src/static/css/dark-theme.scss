@@ -1253,3 +1253,12 @@ button.btn, input[type="submit"].btn, a.btn, label.btn {
 .timeline_list .value {
     color: map-get($dark_colors, main);
 }
+
+.agent_links_list .title,
+.sellers_blacklist .title {
+    color: map-get($dark_colors, main);
+}
+
+.agents_settings_tables {
+    border-color: map-get($dark_bg, nav);
+}

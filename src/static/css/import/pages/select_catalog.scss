@@ -1,0 +1,23 @@
+.select_catalog {
+    display: flex;
+}
+
+.catalog_collection {
+    width: 300px;
+    margin-right: 20px;
+}
+
+.catalog_item_options {
+    flex: 1;
+    .breadcrumbs_list {
+        .main_link {
+            text-decoration: none;
+        }
+    }
+}
+
+.catalog_crumbs {
+    display: flex;
+    align-items: center;
+    margin: 15px 0 30px;
+}
