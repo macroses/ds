@@ -403,7 +403,7 @@
         right: 10px;
         top: 0;
         height: 100%;
-        width: 65px;
+        width: 70px;
         z-index: 1;
         font: 400 10px Roboto;
         text-transform: uppercase;
@@ -415,7 +415,7 @@
             display: inline-block;
             color: #fff;
             border-radius: 2px;
-            padding: 2px 4px;
+            padding: 2px 0px;
         }
     }
 
@@ -433,6 +433,11 @@
 .pic-table_camera,
 .pic-table_picture {
     @include box(16px);
+}
+
+.pic-list {
+    @include box(14px);
+    fill: $main_links_color;
 }
 
 .pic-table_check {

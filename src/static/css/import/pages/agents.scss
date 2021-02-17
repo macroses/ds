@@ -207,8 +207,201 @@
 
 .seller_info {
     flex: 1;
+    display: flex;
+    height: 96px;
+}
+
+.seller_img {
+    margin-right: 35px;
+}
+
+.seller_text {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    .btn {
+        flex: 0 0 auto;
+        width: auto;
+    }
+}
+
+.seller_title {
+    color: $title_color;
+}
+
+.seller_username {
+    font: 600 16px Lato;
+    color: $active_tab_link_color;
+    flex: 1 0 auto;
+    max-width: 280px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
 }
 
 .individual_discounts {
     flex: 2;
+}
+
+.last_view_changes {
+    font-weight: 600;
+    color: $active_tab_link_color;
+    margin: 10px 0;
+    .main_link {
+        padding-right: 15px;
+        position: relative;
+        text-decoration: none;
+        &:after {
+            position: absolute;
+            content: '';
+            width: 10px;
+            height: 10px;
+            right: 0px;
+            bottom: 0px;
+            background: url(../img/select_arrow.svg) no-repeat;
+        }
+
+        &[aria-expanded=true]:after {
+            transform: rotate(180deg);
+            bottom: 5px;
+        }
+    }
+}
+
+.individual_discounts_list {
+    border: solid 1px #ebebeb;
+    background: #fcfcfc;
+    max-height: 140px;
+    overflow: auto;
+    border-radius: 4px;
+    padding: 15px;
+}
+
+.individual_discounts_item {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    .discount_date {
+        min-width: 150px;
+    }
+}
+
+.seller_box_table {
+    margin-top: 30px;
+
+    .positive {
+        background: #EDFFE2;
+        color: #000;
+    }
+
+    .negative {
+        background: #FFEAEA;
+        color: #000;
+    }
+}
+
+.agent_new_main {
+    .goods_menu {
+        justify-content: space-between;
+    }
+    .goods_menu_sort {
+        margin-left: 0;
+    }
+}
+
+// agent new settings
+.agent_new_settings {
+    display: flex;
+}
+
+.agents_links {
+    flex: 1;
+    margin-right: 15px;
+}
+
+.agents_settings_tables {
+    flex: 2;
+    padding-left: 15px;
+    border-left: 1px solid $default_tab_bg_color;
+}
+
+.public_view {
+    margin-top: 10px;
+    .form_element {
+        .text {
+            display: inline-block;
+            &:before {
+                top: 0;
+            }
+        }
+    }
+}
+
+.agent_links_list {
+    margin-top: 20px;
+    .title {
+        color: $headers_color;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    textarea {
+        height: 120px;
+        margin-bottom: 10px;
+    }
+}
+
+.agent_links_list_inner {
+    padding-left: 25px;
+}
+
+.agent_links_list_inner_item {
+    display: flex;
+    .form_element {
+        flex: auto;
+        margin-right: 5px;
+    }
+
+    .btn {
+        min-width: 110px;
+    }
+}
+
+.agents_settings_tables_top {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.agents_settings_tables {
+    table {
+        margin-top: 20px;
+    }
+}
+
+.sellers_blacklist {
+    margin-top: 20px;
+    .title {
+        font-weight: 600;
+        margin-bottom: 5px;
+    }
+
+    .form_group {
+        display: flex;
+        align-items: center;
+        input[type=text] {
+            width: 400px;
+            margin-right: 10px;
+        }
+    }
+
+    table {
+        margin-top: 0;
+    }
 }

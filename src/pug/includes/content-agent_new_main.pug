@@ -1,0 +1,170 @@
+main 
+    .box 
+        +tab-list(['Statistics', 'Items', 'Settings'], 1)
+            +tab('Items', 'active')
+                .content_box
+                    .agent_new_main 
+                        .goods_menu
+                            .goods_menu_sort
+                                .form_element
+                                    span Показать товары из: 
+                                    select
+                                        option(value="0") Всех магазинов
+                                        option(value="1") Plati.Market
+                                        option(value="2") WMCenter
+                                        option(value="3") GGSell.com
+
+                            .goods_menu_sort
+                                .form_element
+                                    span сортировка по: 
+                                    select
+                                        option(value="0") id товара ↑
+                                        option(value="1") id товара ↓
+                                        option(value="2") название товара А - Я
+                                        option(value="3") название товара Я - A
+                                        option(value="4") торговая площадка А - Я
+                                        option(value="5") торговая площадки Я - А
+                                        option(value="6") цена ↑
+                                        option(value="7") цена ↓
+                                        option(value="8") количество продаж ↑
+                                        option(value="9") количество продаж ↓
+                                        option(value="10") в наличии ↑
+                                        option(value="11") в наличии ↓
+                                        option(value="12") количество просмотров ↓
+                                        option(value="13") дата последней продажи ↓
+                                        option(value="14") дате последней продажи ↑
+
+                        table.equal_cells.goods_table_modal.hovered_rows
+                            colgroup
+                                col(style="width: 100px")
+                                col
+                                col(style="width: 30px")
+                                col(style="width: 30px")
+                                col(style="width: 140px")
+                                col(style="width: 80px")
+                                col(style="width: 75px")
+                                col(style="width: 120px")
+                                col(style="width: 62px")
+                                col(style="width: 62px")
+                                col(style="width: 62px")
+                            thead
+                                tr
+                                    th ID товара
+                                    th Название
+                                    th.align_center
+                                        span
+                                            +icon('table_camera')
+                                    th.align_center
+                                        span
+                                            +icon('table_picture')
+                                    th Продавец
+                                    th.align_center Цена
+                                    th.align_center %
+                                    th.align_center Вознаграждение
+                                    th.align_center(colspan="3") Продаж за последние
+                                tr.head_selection
+                                    th
+                                        .form_element
+                                            input.focused(type="text")
+                                            span.remove
+                                                +icon('remove_input_data')
+                                    th
+                                        .form_element
+                                            input(type="text")
+                                    th
+                                        .form_element
+                                            label.for_check
+                                                input(type="checkbox")
+                                                span.text
+                                    th
+                                        .form_element
+                                            label.for_check
+                                                input(type="checkbox")
+                                                span.text
+                                    th
+                                        .form_element
+                                            input(type="text")
+                                    th 
+                                        .form_element
+                                            select
+                                                option(value="1") USD
+                                                option(value="2") RUB
+                                                option(value="3") EUR
+                                                option(value="4") UAH
+                                    th(colspan="2")
+                                        .form_element
+                                            select
+                                                option(value="1") все комиссионные
+                                                option(value="2") только индивидуальные
+                                    th.align_center 1 мес.
+                                    th.align_center 3 мес.
+                                    th.align_center 6 мес.
+                            tbody
+                                tr
+                                    td 1234567
+                                    td.product_name
+                                        a.main_link(href="#") Название товара
+                                        .product_name_funcs
+                                            a(href="#" title="открыть страницу с описанием товара")
+                                                +icon('target_new_white')
+                                            a(href="#" title="получить прямую ссылку для оплаты товара") HTML
+                                    td.align_center
+                                        +icon('table_check')
+                                    td.align_center
+                                        +icon('table_check')
+                                    td.seller_name
+                                        a.main_link(href="#") Имя продавца
+                                        .seller_name_funcs
+                                            a(href="#" title="применить фильтр")
+                                                +icon('filter')
+                                            a(href="#" title="написать продавцу")
+                                                +icon('mail')
+                                            a(href="#" title="товары продавца")
+                                                +icon('list')
+                                    td.align_center
+                                        span.rub 0.04 
+                                            small RUB
+                                    td.positive.align_center 
+                                        span.line_through 23%
+                                        span 64%
+                                    td.align_center 
+                                        span.usd 0.04 
+                                            small USD
+                                    td.align_center 12345
+                                    td.align_center 54321
+                                    td.align_center 22334
+                                tr
+                                    td 1234567
+                                    td.product_name
+                                        a.main_link(href="#") Название товара Название товара Название товара Название товара Название товара Название товара 
+                                        .product_name_funcs
+                                            a(href="#" title="открыть страницу с описанием товара")
+                                                +icon('target_new_white')
+                                            a(href="#" title="получить прямую ссылку для оплаты товара") HTML
+                                    td.align_center
+                                        +icon('table_check')
+                                    td.align_center
+                                        +icon('table_check')
+                                    td.seller_name
+                                        a.main_link(href="#") Имя продавца
+                                        .seller_name_funcs
+                                            a(href="#" title="применить фильтр")
+                                                +icon('filter')
+                                            a(href="#" title="написать продавцу")
+                                                +icon('mail')
+                                            a(href="#" title="товары продавца")
+                                                +icon('list')
+                                    td.align_center
+                                        span.eur 0.04 
+                                            small EUR
+                                    td.align_center 99%
+                                    td.align_center 
+                                        span.uah 0.04 
+                                            small UAH
+                                    td.align_center 12345
+                                    td.align_center 54321
+                                    td.align_center 22334
+
+                        +pagination('Товаров на странице:')
+
+

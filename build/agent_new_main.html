@@ -234,139 +234,237 @@
       </nav>
       <main> 
         <div class="box"> 
-          <div class="content_box"> 
-            <div class="seller_box"> 
-              <div class="seller_info">
-                <div class="seller_img"> <img src="https://events.webmoney.ru/open/avatar.aspx?w=266444513494&amp;s=normal&amp;defaultavatar=2" alt=""></div>
-                <div class="seller_text"> 
-                  <div class="seller_title">Продавец</div>
-                  <div class="seller_username">SomeOneSeller</div><a class="btn btn_blue">написать продавцу</a>
-                </div>
-              </div>
-              <div class="individual_discounts">
-                <div class="alert_box info">Продавец установил для вас индивидуальные размеры партнерских отчислений на некоторые товары. При необходимости вы можете написать ему.</div>
-                <div class="last_view_changes">С момента вашего последнего просмотра, продавцом были внесены <a class="main_link" href="#" data-toggle="collapse" data-target="#individual_discounts" aria-expanded="false" aria-controls="individual_discounts" tabindex="-1">5 изменений </a></div>
-                <div class="collapse" id="individual_discounts">
-                  <ul class="individual_discounts_list">
-                    <li class="individual_discounts_item"> 
-                      <div class="discount_content">Добавлена индивидуальная скидка 35% на товар <a class="main_link" href="#">MINECRAFT PR MINECRAFT PR MINECRAFT PR MINECRAFT PR MINECRAFT PR MINECRAFT PR MINECRAFT PR MINECRAFT PR </a></div>
-                      <div class="discount_date">25.04.2020 15:36:26</div>
-                    </li>
-                    <li class="individual_discounts_item"> 
-                      <div class="discount_content">Добавлена индивидуальная скидка 35% на товар <a class="main_link" href="#">MINECRAFT PR</a></div>
-                      <div class="discount_date">25.04.2020 15:36:26</div>
-                    </li>
-                    <li class="individual_discounts_item"> 
-                      <div class="discount_content">Добавлена индивидуальная скидка 35% на товар <a class="main_link" href="#">MINECRAFT PR</a></div>
-                      <div class="discount_date">25.04.2020 15:36:26</div>
-                    </li>
-                    <li class="individual_discounts_item"> 
-                      <div class="discount_content">Добавлена индивидуальная скидка 35% на товар <a class="main_link" href="#">MINECRAFT PR</a></div>
-                      <div class="discount_date">25.04.2020 15:36:26</div>
-                    </li>
-                    <li class="individual_discounts_item"> 
-                      <div class="discount_content">Добавлена индивидуальная скидка 35% на товар <a class="main_link" href="#">MINECRAFT PR</a></div>
-                      <div class="discount_date">25.04.2020 15:36:26</div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="seller_box_table">
-              <table class="equal_cells"> 
-                <colgroup>
-                  <col style="width: 100px">
-                  <col>
-                  <col style="width: 130px">
-                  <col style="width: 100px">
-                  <col style="width: 185px">
-                  <col style="width: 120px">
-                  <col style="width: 140px">
-                </colgroup>
-                <thead>
-                  <tr>
-                    <th>ID товара</th>
-                    <th>Название</th>
-                    <th>Площадка</th>
-                    <th>Цена</th>
-                    <th>Комиссионные</th>
-                    <th class="align_center">Вознаграждение</th>
-                    <th>Последнее изменение</th>
-                  </tr>
-                  <tr class="head_selection"> 
-                    <th> 
-                      <div class="form_element" title="фильтр по ID товара">
-                        <input class="focused" type="text"><span class="remove">
-                          <svg class="pic-remove_input_data ">
-                            <use xlink:href="img/svg/sprite.svg#remove_input_data"></use>
-                          </svg></span>
-                      </div>
-                    </th>
-                    <th> 
-                      <div class="form_element" title="фильтр по ID товара">
-                        <input class="focused" type="text"><span class="remove">
-                          <svg class="pic-remove_input_data ">
-                            <use xlink:href="img/svg/sprite.svg#remove_input_data"></use>
-                          </svg></span>
-                      </div>
-                    </th>
-                    <th> 
-                      <div class="form_element">
-                        <select class="focused">
-                          <option value="0">Все магазины</option>
-                          <option value="1">Мой магазин</option>
-                          <option value="2">GGSEL.com</option>
-                        </select>
-                      </div>
-                    </th>
-                    <th> </th>
-                    <th> 
-                      <div class="form_element">
+          <ul class="nav nav-tabs" role="tablist">
+            <li><a class="nav-link" href="#tabStatistics" role="tab" data-toggle="tab">Statistics</a></li>
+            <li><a class="nav-link active" href="#tabItems" role="tab" data-toggle="tab">Items</a></li>
+            <li><a class="nav-link" href="#tabSettings" role="tab" data-toggle="tab">Settings</a></li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane active" id="tabItems">
+              <div class="content_box">
+                <div class="agent_new_main"> 
+                  <div class="goods_menu">
+                    <div class="goods_menu_sort">
+                      <div class="form_element"><span>Показать товары из: </span>
                         <select>
-                          <option value="0">Все</option>
-                          <option value="1">Только индивидуальные</option>
+                          <option value="0">Всех магазинов</option>
+                          <option value="1">Plati.Market</option>
+                          <option value="2">WMCenter</option>
+                          <option value="3">GGSell.com</option>
                         </select>
                       </div>
-                    </th>
-                    <th> </th>
-                    <th> </th>
-                  </tr>
-                  <tr>
-                    <th class="filter_cell" colspan="7">
-                      <div class="collapse" id="goodsFilter">
-                        <div class="collapse_filter_content"> 
+                    </div>
+                    <div class="goods_menu_sort">
+                      <div class="form_element"><span>сортировка по: </span>
+                        <select>
+                          <option value="0">id товара ↑</option>
+                          <option value="1">id товара ↓</option>
+                          <option value="2">название товара А - Я</option>
+                          <option value="3">название товара Я - A</option>
+                          <option value="4">торговая площадка А - Я</option>
+                          <option value="5">торговая площадки Я - А</option>
+                          <option value="6">цена ↑</option>
+                          <option value="7">цена ↓</option>
+                          <option value="8">количество продаж ↑</option>
+                          <option value="9">количество продаж ↓</option>
+                          <option value="10">в наличии ↑</option>
+                          <option value="11">в наличии ↓</option>
+                          <option value="12">количество просмотров ↓</option>
+                          <option value="13">дата последней продажи ↓</option>
+                          <option value="14">дате последней продажи ↑</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <table class="equal_cells goods_table_modal hovered_rows">
+                    <colgroup>
+                      <col style="width: 100px">
+                      <col>
+                      <col style="width: 30px">
+                      <col style="width: 30px">
+                      <col style="width: 140px">
+                      <col style="width: 80px">
+                      <col style="width: 75px">
+                      <col style="width: 120px">
+                      <col style="width: 62px">
+                      <col style="width: 62px">
+                      <col style="width: 62px">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>ID товара</th>
+                        <th>Название</th>
+                        <th class="align_center"><span>
+                            <svg class="pic-table_camera ">
+                              <use xlink:href="img/svg/sprite.svg#table_camera"></use>
+                            </svg></span></th>
+                        <th class="align_center"><span>
+                            <svg class="pic-table_picture ">
+                              <use xlink:href="img/svg/sprite.svg#table_picture"></use>
+                            </svg></span></th>
+                        <th>Продавец</th>
+                        <th class="align_center">Цена</th>
+                        <th class="align_center">%</th>
+                        <th class="align_center">Вознаграждение</th>
+                        <th class="align_center" colspan="3">Продаж за последние</th>
+                      </tr>
+                      <tr class="head_selection">
+                        <th>
+                          <div class="form_element">
+                            <input class="focused" type="text"><span class="remove">
+                              <svg class="pic-remove_input_data ">
+                                <use xlink:href="img/svg/sprite.svg#remove_input_data"></use>
+                              </svg></span>
+                          </div>
+                        </th>
+                        <th>
+                          <div class="form_element">
+                            <input type="text">
+                          </div>
+                        </th>
+                        <th>
                           <div class="form_element">
                             <label class="for_check">
-                              <input type="checkbox"><span class="text">только товары в наличии</span>
+                              <input type="checkbox"><span class="text"></span>
                             </label>
                           </div>
-                        </div>
+                        </th>
+                        <th>
+                          <div class="form_element">
+                            <label class="for_check">
+                              <input type="checkbox"><span class="text"></span>
+                            </label>
+                          </div>
+                        </th>
+                        <th>
+                          <div class="form_element">
+                            <input type="text">
+                          </div>
+                        </th>
+                        <th> 
+                          <div class="form_element">
+                            <select>
+                              <option value="1">USD</option>
+                              <option value="2">RUB</option>
+                              <option value="3">EUR</option>
+                              <option value="4">UAH</option>
+                            </select>
+                          </div>
+                        </th>
+                        <th colspan="2">
+                          <div class="form_element">
+                            <select>
+                              <option value="1">все комиссионные</option>
+                              <option value="2">только индивидуальные</option>
+                            </select>
+                          </div>
+                        </th>
+                        <th class="align_center">1 мес.</th>
+                        <th class="align_center">3 мес.</th>
+                        <th class="align_center">6 мес.</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1234567</td>
+                        <td class="product_name"><a class="main_link" href="#">Название товара</a>
+                          <div class="product_name_funcs"><a href="#" title="открыть страницу с описанием товара">
+                              <svg class="pic-target_new_white ">
+                                <use xlink:href="img/svg/sprite.svg#target_new_white"></use>
+                              </svg></a><a href="#" title="получить прямую ссылку для оплаты товара">HTML</a></div>
+                        </td>
+                        <td class="align_center">
+                          <svg class="pic-table_check ">
+                            <use xlink:href="img/svg/sprite.svg#table_check"></use>
+                          </svg>
+                        </td>
+                        <td class="align_center">
+                          <svg class="pic-table_check ">
+                            <use xlink:href="img/svg/sprite.svg#table_check"></use>
+                          </svg>
+                        </td>
+                        <td class="seller_name"><a class="main_link" href="#">Имя продавца</a>
+                          <div class="seller_name_funcs"><a href="#" title="применить фильтр">
+                              <svg class="pic-filter ">
+                                <use xlink:href="img/svg/sprite.svg#filter"></use>
+                              </svg></a><a href="#" title="написать продавцу">
+                              <svg class="pic-mail ">
+                                <use xlink:href="img/svg/sprite.svg#mail"></use>
+                              </svg></a><a href="#" title="товары продавца">
+                              <svg class="pic-list ">
+                                <use xlink:href="img/svg/sprite.svg#list"></use>
+                              </svg></a></div>
+                        </td>
+                        <td class="align_center"><span class="rub">0.04 <small>RUB</small></span></td>
+                        <td class="positive align_center"> <span class="line_through">23%</span><span>64%</span></td>
+                        <td class="align_center"> <span class="usd">0.04 <small>USD</small></span></td>
+                        <td class="align_center">12345</td>
+                        <td class="align_center">54321</td>
+                        <td class="align_center">22334</td>
+                      </tr>
+                      <tr>
+                        <td>1234567</td>
+                        <td class="product_name"><a class="main_link" href="#">Название товара Название товара Название товара Название товара Название товара Название товара </a>
+                          <div class="product_name_funcs"><a href="#" title="открыть страницу с описанием товара">
+                              <svg class="pic-target_new_white ">
+                                <use xlink:href="img/svg/sprite.svg#target_new_white"></use>
+                              </svg></a><a href="#" title="получить прямую ссылку для оплаты товара">HTML</a></div>
+                        </td>
+                        <td class="align_center">
+                          <svg class="pic-table_check ">
+                            <use xlink:href="img/svg/sprite.svg#table_check"></use>
+                          </svg>
+                        </td>
+                        <td class="align_center">
+                          <svg class="pic-table_check ">
+                            <use xlink:href="img/svg/sprite.svg#table_check"></use>
+                          </svg>
+                        </td>
+                        <td class="seller_name"><a class="main_link" href="#">Имя продавца</a>
+                          <div class="seller_name_funcs"><a href="#" title="применить фильтр">
+                              <svg class="pic-filter ">
+                                <use xlink:href="img/svg/sprite.svg#filter"></use>
+                              </svg></a><a href="#" title="написать продавцу">
+                              <svg class="pic-mail ">
+                                <use xlink:href="img/svg/sprite.svg#mail"></use>
+                              </svg></a><a href="#" title="товары продавца">
+                              <svg class="pic-list ">
+                                <use xlink:href="img/svg/sprite.svg#list"></use>
+                              </svg></a></div>
+                        </td>
+                        <td class="align_center"><span class="eur">0.04 <small>EUR</small></span></td>
+                        <td class="align_center">99%</td>
+                        <td class="align_center"> <span class="uah">0.04 <small>UAH</small></span></td>
+                        <td class="align_center">12345</td>
+                        <td class="align_center">54321</td>
+                        <td class="align_center">22334</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="pagination_box">
+                    <div class="pagination_title">Страницы:</div>
+                    <ul class="pagination_list">
+                      <li><a class="active" href="#">1</a></li>
+                      <li><a href="#"> 2</a></li>
+                      <li><a href="#"> 3</a></li>
+                      <li><a href="#"> 4</a></li>
+                      <li><a href="#"> 5</a></li>
+                      <li><a class="sep" href="#"> ...</a></li>
+                      <li><a href="#"> 1200</a></li>
+                    </ul>
+                    <div class="pagination_sort">
+                      <div class="pagination_title">Товаров на странице:</div>
+                      <div class="form_element">
+                        <select>
+                          <option value="10">10</option>
+                          <option value="20" selected="selected">20</option>
+                          <option value="30">100</option>
+                        </select>
                       </div>
-                      <div class="collapse_btn"><span class="active" data-toggle="collapse" data-target="#goodsFilter" aria-expanded="false" aria-controls="goodsFilter" tabindex="-1">фильтры</span></div>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1234567</td>
-                    <td> <a class="main_link" href="#">тестовый товар тестовый товар тестовый товар тестовый товар тестовый товар тестовый товар тестовый товар тестовый товар тестовый товар тестовый товар тестовый товар тестовый товар тестовый товар тестовый товар тестовый товар тестовый товар  </a></td>
-                    <td>Мой магазин</td>
-                    <td>11569.99<small>RUB </small></td>
-                    <td class="positive"><span class="line_through">11%</span> 5</td>
-                    <td class="align_center">11569.99<small>RUB </small></td>
-                    <td>01.08.2019 16:32:56</td>
-                  </tr>
-                  <tr>
-                    <td>1234567</td>
-                    <td> <a class="main_link" href="#">тестовый </a></td>
-                    <td>Мой магазин</td>
-                    <td>11569.99<small>RUB </small></td>
-                    <td>5%</td>
-                    <td class="align_center">11569.99<small>RUB </small></td>
-                    <td>01.08.2019 16:32:56</td>
-                  </tr>
-                </tbody>
-              </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

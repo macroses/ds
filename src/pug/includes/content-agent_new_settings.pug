@@ -1,0 +1,194 @@
+main 
+    .box 
+        +tab-list(['Statistics', 'Items', 'Settings'], 2)
+            +tab('Settings', 'active')
+                .content_box
+                    .agent_new_settings 
+                        .agents_links 
+                            .alert_box.info При установке флага ваши предложения по размещению партнерских ссылок будут доступны для просмотра продавцам и они смогут предложить вам индивидуальные комиссионные.
+                            .public_view
+                                .form_element 
+                                    label.for_check
+                                        input(type="checkbox")
+                                        span.text Я хочу рекламировать себя как агента и сделать информацию о моих услугах публичной для просмотра и предложений
+
+                            .agent_links_list 
+                                .title Я готов разместить агентские ссылки:
+                                .form_group 
+                                    .form_element 
+                                        label.for_check
+                                            input(type="checkbox")
+                                            span.text на собственных веб-сайтах
+                                    .agent_links_list_inner 
+                                        .agent_links_list_inner_item 
+                                            .form_element 
+                                                input(type="text" placeholder="http://" value="google.com" disabled)
+                                            button.btn.btn_gray удалить
+                                        .agent_links_list_inner_item 
+                                            .form_element 
+                                                input(type="text" placeholder="http://")
+                                            button.btn.btn_gray добавить
+                                    .form_element 
+                                        label.for_check
+                                            input(type="checkbox")
+                                            span.text на форумах и досках объявлений
+                                    .form_element 
+                                        label.for_check
+                                            input(type="checkbox")
+                                            span.text в социальных сетях
+                                    .form_element 
+                                        label.for_check
+                                            input(type="checkbox")
+                                            span.text в программах
+                                    .form_element 
+                                        label.for_check
+                                            input(type="checkbox")
+                                            span.text в рассылках по email
+
+                            .agent_links_list 
+                                .title Я готов разместить агентские ссылки:
+                                .form_element 
+                                    textarea(placeholder="Если ваши услуги в качестве агента не ограничиваются размещением партнерских ссылок, вы можете здесь их кратко описать.") 
+                            button.btn.btn_blue сохранить
+
+
+                        .agents_settings_tables
+                            .alert_box.info Некоторые продавцы установили для вас индивидуальные агентские отчисления. Можете ознакомиться с ними и начать рекламировать соответствующие товары. Напоминаем, что вы можете связаться с продавцом и обсудить дополнительные условия.
+                            .agents_settings_tables_top
+                                .goods_menu_sort
+                                    .form_element
+                                        span сортировка по: 
+                                        select
+                                            option(value="0") id товара ↑
+                                            option(value="1") id товара ↓
+                                            option(value="2") название товара А - Я
+                                            option(value="3") название товара Я - A
+                                            option(value="4") торговая площадка А - Я
+                                            option(value="5") торговая площадки Я - А
+                                            option(value="6") цена ↑
+                                            option(value="7") цена ↓
+                                            option(value="8") количество продаж ↑
+                                            option(value="9") количество продаж ↓
+                                            option(value="10") в наличии ↑
+                                            option(value="11") в наличии ↓
+                                            option(value="12") количество просмотров ↓
+                                            option(value="13") дата последней продажи ↓
+                                            option(value="14") дате последней продажи ↑
+
+                            table.equal_cells.hovered_rows 
+                                colgroup
+                                    col
+                                    col(style="width: 100px")
+                                    col(style="width: 75px")
+                                    col(style="width: 75px")
+                                    col(style="width: 75px")
+                                    col(style="width: 170px")
+                                    col(style="width: 45px")
+                                thead
+                                    tr
+                                        th Продавец
+                                        th Товаров
+                                        th(colspan="3") Продаж товаров за последние
+                                        th Последние изменения
+                                            span(data-placement="left" data-toggle="tooltip" title="В этом поле указана дата, когда продавец внес последнее изменение в список товаров с индивидуальными партнерскими отчислениями")
+                                                +icon('question_table')
+                                        th.align_right
+                                            button.btn.btn_gray(title="удалить выбранные товары")
+                                                +icon('delete-btn')
+                                    tr.head_selection
+                                        th 
+                                        th 
+                                        th 1 Мес.
+                                        th 3 Мес.
+                                        th 5 Мес.
+                                        th 
+                                        th 
+                                    th.filter_cell(colspan="7")
+                                        .collapse(id="goodsFilter" )
+                                            .collapse_filter_content 
+                                                |Показать:
+                                                .form_element
+                                                    select
+                                                        option(value="0") все
+                                                        option(value="1") олько непросмотренные
+                                                        option(value="2") только измененные
+                                                        option(value="3") удаленные
+                                        .collapse_btn
+                                            span.active(data-toggle="collapse" data-target="#goodsFilter" aria-expanded="false" aria-controls="goodsFilter" tabindex="-1") фильтры
+                                tbody
+                                    tr
+                                        td 
+                                            a.main_link(href="#") TestSellerTestSellerTestSellerTestSellerTestSeller  
+                                        td 456
+                                        td 123
+                                        td 234
+                                        td 345
+                                        td 17.02.2021 12:34:34
+                                        td.align_right
+                                            .form_element
+                                                label.for_check
+                                                    input(type="checkbox")
+                                                    span.text
+                                    tr
+                                        td 
+                                            a.main_link(href="#") Test 
+                                        td 456
+                                        td 123
+                                        td 234
+                                        td 345
+                                        td 17.02.2021 12:34:34
+                                        td.align_right
+                                            .form_element
+                                                label.for_check
+                                                    input(type="checkbox")
+                                                    span.text
+
+                            +pagination('Предложений на странице:')
+
+                            .sellers_blacklist 
+                                .title Блокировка продавцам
+                                .form_group
+                                    .form_element
+                                        input(type="text" placeholder="Псевдоним продавца или его ID")
+                                    .form_element
+                                        label.for_check
+                                            input(type="checkbox")
+                                            span.text заблокировать всех
+
+                                table.equal_cells.hovered_rows 
+                                    colgroup
+                                        col(style="width: 90px")
+                                        col
+                                        col(style="width: 150px")
+                                        col(style="width: 45px")
+                                    thead
+                                        tr
+                                            th ID
+                                            th Псевдоним (никнейм)
+                                            th Дата блокировки
+                                            th.align_right
+                                                button.btn.btn_gray(title="удалить выбранные товары")
+                                                    +icon('delete-btn')
+                                    tbody
+                                        tr
+                                            td 1234567
+                                            td 
+                                                a.main_link(href="#") TestSellerTestSellerTestSellerTestSellerTestSellerTestSellerTestSellerTestSellerTestSellerTestSeller
+                                            td 	08.06.2020 19:04:06
+                                            td.align_right
+                                                .form_element
+                                                    label.for_check
+                                                        input(type="checkbox")
+                                                        span.text
+                                        tr
+                                            td 1234567
+                                            td 
+                                                a.main_link(href="#") TestSeller
+                                            td 	08.06.2020 19:04:06
+                                            td.align_right
+                                                .form_element
+                                                    label.for_check
+                                                        input(type="checkbox")
+                                                        span.text
+
+                                +pagination('Продавцов на странице:')

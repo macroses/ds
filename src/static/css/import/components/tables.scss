@@ -48,6 +48,20 @@ table {
             }
         }
     }
+
+    .positive {
+        background: #EDFFE2;
+        color: #000;
+    }
+
+    .negative {
+        background: #FFEAEA;
+        color: #000;
+    }
+
+    .line_through {
+        margin-right: 5px;
+    }
 }
 
 thead {
