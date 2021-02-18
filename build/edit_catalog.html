@@ -232,69 +232,265 @@
           </div>
         </div>
       </nav>
-      <main> 
-        <div class="box"> 
-          <ul class="nav nav-tabs" role="tablist">
-            <li><a class="nav-link active" href="#tabStatistics" role="tab" data-toggle="tab">Statistics</a></li>
-            <li><a class="nav-link" href="#tabAllAgents" role="tab" data-toggle="tab">AllAgents</a></li>
-            <li><a class="nav-link" href="#tabSelectedAgents" role="tab" data-toggle="tab">SelectedAgents</a></li>
-            <li><a class="nav-link" href="#tabAreAlreadySelling" role="tab" data-toggle="tab">AreAlreadySelling
-                <div class="tab_nums">10</div></a></li>
-            <li><a class="nav-link" href="#tabAgentID" role="tab" data-toggle="tab">AgentID</a></li>
-            <li><a class="nav-link" href="#tabGeneralSettings" role="tab" data-toggle="tab">GeneralSettings</a></li>
-            <li><a class="nav-link" href="#tabComissionTemplates" role="tab" data-toggle="tab">ComissionTemplates</a></li>
-          </ul>
-          <div class="tab-content">
-            <div class="tab-pane active" id="tabStatistics">
-              <div class="content_box">
-                <div class="partners"> 
-                  <div class="partners_stat">
-                    <div class="partners_stat_top">
-                      <div class="partners_aside">
-                         Выберите период:
-                        <div class="form_element">
-                          <select>
-                            <option value="0">1 месяц</option>
-                            <option value="1">6 месяцев</option>
-                            <option value="2">12 месяцев</option>
-                          </select>
+      <main>
+        <div class="box">
+          <div class="content_box">
+            <div class="select_catalog">
+              <div class="catalog_collection">
+                <div class="form_element search">
+                  <input type="text" placeholder="Поиск категории">
+                  <ul class="search_input_results">
+                    <li> <span class="id_num">1234567</span><span class="name">test test test test test test test test test test test test </span></li>
+                    <li> <span class="id_num">1234567</span><span class="name">test test test test test test test test test test test test</span></li>
+                  </ul>
+                </div>
+                <div class="fieldset">
+                  <div class="legend">Каталог</div>
+                  <ul class="catalog_list parent"> 
+                    <li>
+                      <div class="catalog_list_item active">
+                        <div class="catalog_list_item_icons"><span class="icon_item minus">
+                            <svg class="pic-catalog_plus ">
+                              <use xlink:href="img/svg/sprite.svg#catalog_plus"></use>
+                            </svg></span></div>
+                        <div class="text_container attr_added">
+                          <div class="catalog_list_item_text"> <a href="#">Игры ИгрулиИгры ИгрулиИгры ИгрулиИгры ИгрулиИгры ИгрулиИгры ИгрулиИгры Игрули<span class="item_counter">(12)</span></a></div>
                         </div>
                       </div>
-                      <div class="form_element"> 
-                        <input type="text" placeholder="Название товара">
+                    </li>
+                    <li>
+                      <div class="catalog_list_item">
+                        <div class="catalog_list_item_icons"><span class="icon_item minus">
+                            <svg class="pic-catalog_minus ">
+                              <use xlink:href="img/svg/sprite.svg#catalog_minus"></use>
+                            </svg></span></div>
+                        <div class="text_container attr_added">
+                          <div class="catalog_list_item_text"><a href="#">Aion забугорный</a></div>
+                        </div>
                       </div>
-                    </div>
-                    <div class="partners_stat_content"> 
-                      <div class="partners_aside">
-                        <canvas style="width: 100%"></canvas>
+                    </li>
+                    <li>
+                      <div class="catalog_list_item active">
+                        <div class="catalog_list_item_icons"><span class="icon_item minus">
+                            <svg class="pic-catalog_plus ">
+                              <use xlink:href="img/svg/sprite.svg#catalog_plus"></use>
+                            </svg></span></div>
+                        <div class="text_container attr_added">
+                          <div class="catalog_list_item_text"> <a href="#">Плюс активный</a></div>
+                        </div>
                       </div>
-                      <div class="partners_stat_content_table">
-                        <table class="equal_cells">
-                          <colgroup>
-                            <col>
-                            <col style="width: 70px">
-                          </colgroup>
-                          <thead>
-                            <tr>
-                              <th>Агент</th>
-                              <th class="align_right">Продаж</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td> <a class="main_link" href="#">test test test test test test test test test test test test test test test test test test test test test </a></td>
-                              <td class="align_right">1234567</td>
-                            </tr>
-                            <tr>
-                              <td> <a class="main_link" href="#">test</a></td>
-                              <td class="align_right">1234567</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        <div class="extended_stat_link"><a href="#">Расширенная статистика </a></div>
-                      </div>
-                    </div>
-                    <div class="alert_box info">Здесь опубликована статистика продаж ваших товаров через агентов. Вполне возможно, что кто-то из агентов уже ими заинтересовался.</div>
+                      <ul class="catalog_list"> 
+                        <li>
+                          <div class="catalog_list_item">
+                            <div class="catalog_list_item_icons"><span class="icon_item minus">
+                                <svg class="pic-catalog_plus ">
+                                  <use xlink:href="img/svg/sprite.svg#catalog_plus"></use>
+                                </svg></span></div>
+                            <div class="text_container">
+                              <div class="catalog_list_item_text"> <a href="#">Вложено<span class="item_counter">(12)</span></a></div>
+                            </div>
+                          </div>
+                          <ul class="catalog_list"> 
+                            <li>
+                              <div class="catalog_list_item active">
+                                <div class="catalog_list_item_icons"><span class="icon_item minus">
+                                    <svg class="pic-catalog_minus ">
+                                      <use xlink:href="img/svg/sprite.svg#catalog_minus"></use>
+                                    </svg></span></div>
+                                <div class="text_container">
+                                  <div class="catalog_list_item_text"> <a href="#">Вложено<span class="item_counter">(12)</span></a></div>
+                                </div>
+                              </div>
+                              <ul class="catalog_list"> 
+                                <li>
+                                  <div class="catalog_list_item">
+                                    <div class="catalog_list_item_icons"><span class="icon_item minus">
+                                        <svg class="pic-catalog_minus ">
+                                          <use xlink:href="img/svg/sprite.svg#catalog_minus"></use>
+                                        </svg></span></div>
+                                    <div class="text_container">
+                                      <div class="catalog_list_item_text"> <a href="#">Вложено<span class="item_counter">(12)</span></a></div>
+                                    </div>
+                                  </div>
+                                </li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+                <div class="catalog_collection_funcs">
+                  <div class="form_element"> 
+                    <label class="for_check">
+                      <input type="checkbox"><span class="text">только в которые добавлен</span>
+                    </label>
+                  </div>
+                  <button class="btn btn_gray" disabled>добавить категорию</button>
+                  <button class="btn btn_gray">удалить</button>
+                </div>
+              </div>
+              <div class="catalog_item_options">
+                <div class="catalog_crumbs">
+                  <ul class="breadcrumbs_list">
+                    <li class="breadcrumb_item"><a class="main_link" href="#">Игры</a></li>
+                    <li class="breadcrumb_item">
+                      <div class="breadcrumb_item_name">123123</div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="catalog_item_name">
+                  <div class="title">Название категории</div>
+                  <div class="form_element">
+                    <input type="text" disabled><span class="lang">
+                      <svg class="pic-rus ">
+                        <use xlink:href="img/svg/sprite.svg#rus"></use>
+                      </svg></span>
+                  </div>
+                  <div class="form_element">
+                    <input type="text"><span class="lang">
+                      <svg class="pic-eng ">
+                        <use xlink:href="img/svg/sprite.svg#eng"></use>
+                      </svg></span>
+                  </div>
+                </div>
+                <div class="catalog_item_table">
+                  <table class="equal_cells"> 
+                    <colgroup>
+                      <col>
+                      <col style="width: 100px">
+                      <col style="width: 45px">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>Атрибут</th>
+                        <th class="align_center">Товаров</th>
+                        <th> </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td> 
+                          <div class="catalog_table_content"><span class="icon_item plus">
+                              <svg class="pic-catalog_plus ">
+                                <use xlink:href="img/svg/sprite.svg#catalog_plus"></use>
+                              </svg></span>
+                            <div class="form_element">
+                              <input type="text" disabled><span class="lang">
+                                <svg class="pic-rus ">
+                                  <use xlink:href="img/svg/sprite.svg#rus"></use>
+                                </svg></span>
+                            </div>
+                            <div class="form_element">
+                              <input type="text"><span class="lang">
+                                <svg class="pic-eng ">
+                                  <use xlink:href="img/svg/sprite.svg#eng"></use>
+                                </svg></span>
+                            </div>
+                            <div class="form_element">
+                              <select>
+                                <option value="0">Multiple select</option>
+                                <option value="1">Single select</option>
+                              </select>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="align_center">1234567</td>
+                        <td> 
+                          <button class="btn btn_gray"> <span class="minus"></span></button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td> 
+                          <div class="catalog_table_content inside">=
+                            <div class="form_element">
+                              <input type="text"><span class="lang">
+                                <svg class="pic-rus ">
+                                  <use xlink:href="img/svg/sprite.svg#rus"></use>
+                                </svg></span>
+                            </div>
+                            <div class="form_element">
+                              <input type="text"><span class="lang">
+                                <svg class="pic-eng ">
+                                  <use xlink:href="img/svg/sprite.svg#eng"></use>
+                                </svg></span>
+                            </div>
+                            <div class="form_element">
+                              <select>
+                                <option value="0">Multiple select</option>
+                                <option value="1">Single select</option>
+                              </select>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="align_center">1234567</td>
+                        <td> 
+                          <button class="btn btn_gray"> <span class="minus"></span></button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td> 
+                          <div class="catalog_table_content inside">=
+                            <div class="form_element">
+                              <input type="text"><span class="lang">
+                                <svg class="pic-rus ">
+                                  <use xlink:href="img/svg/sprite.svg#rus"></use>
+                                </svg></span>
+                            </div>
+                            <div class="form_element">
+                              <input type="text"><span class="lang">
+                                <svg class="pic-eng ">
+                                  <use xlink:href="img/svg/sprite.svg#eng"></use>
+                                </svg></span>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="align_center"><span class="empty_data">—</span></td>
+                        <td> 
+                          <button class="btn btn_gray"> 
+                            <svg class="pic-plus_button ">
+                              <use xlink:href="img/svg/sprite.svg#plus_button"></use>
+                            </svg>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td> 
+                          <div class="catalog_table_content"><span class="icon_item minus">
+                              <svg class="pic-catalog_minus ">
+                                <use xlink:href="img/svg/sprite.svg#catalog_minus"></use>
+                              </svg></span>
+                            <div class="form_element">
+                              <input type="text"><span class="lang">
+                                <svg class="pic-rus ">
+                                  <use xlink:href="img/svg/sprite.svg#rus"></use>
+                                </svg></span>
+                            </div>
+                            <div class="form_element">
+                              <input type="text"><span class="lang">
+                                <svg class="pic-eng ">
+                                  <use xlink:href="img/svg/sprite.svg#eng"></use>
+                                </svg></span>
+                            </div>
+                            <div class="form_element">
+                              <select>
+                                <option value="0">Multiple select</option>
+                                <option value="1">Single select</option>
+                              </select>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="align_center">1234567</td>
+                        <td> 
+                          <button class="btn btn_gray"> <span class="minus"></span></button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="btn_group"> 
+                    <button class="btn btn_blue">сохранить</button>
+                    <button class="btn btn_gray">удалить из категории</button>
                   </div>
                 </div>
               </div>

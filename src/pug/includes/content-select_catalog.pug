@@ -22,6 +22,79 @@ main
                 .content_box
                     .select_catalog
                         .catalog_collection
+                            .form_element.search
+                                input(type="text" placeholder="Поиск категории")
+                                ul.search_input_results
+                                    li 
+                                        span.id_num 1234567
+                                        span.name test test test test test test test test test test test test 
+                                    li 
+                                        span.id_num 1234567
+                                        span.name test test test test test test test test test test test test
+                            +fieldset('Каталог')
+                                ul.catalog_list.parent 
+                                    li
+                                        .catalog_list_item.active
+                                            .catalog_list_item_icons
+                                                span.icon_item.minus
+                                                    +icon('catalog_plus')
+                                            .text_container.attr_added
+                                                .catalog_list_item_text 
+                                                    a(href="#") Игры ИгрулиИгры ИгрулиИгры ИгрулиИгры ИгрулиИгры ИгрулиИгры ИгрулиИгры Игрули
+                                                        span.item_counter (12)
+                                    li
+                                        .catalog_list_item
+                                            .catalog_list_item_icons
+                                                span.icon_item.minus
+                                                    +icon('catalog_minus')
+                                            .text_container.attr_added
+                                                .catalog_list_item_text
+                                                    a(href="#") Aion забугорный
+                                    li
+                                        .catalog_list_item.active
+                                            .catalog_list_item_icons
+                                                span.icon_item.minus
+                                                    +icon('catalog_plus')
+                                            .text_container.attr_added
+                                                .catalog_list_item_text 
+                                                    a(href="#") Плюс активный
+                                        ul.catalog_list 
+                                            li
+                                                .catalog_list_item
+                                                    .catalog_list_item_icons
+                                                        span.icon_item.minus
+                                                            +icon('catalog_plus')
+                                                    .text_container
+                                                        .catalog_list_item_text 
+                                                            a(href="#") Вложено
+                                                                span.item_counter (12)
+                                                ul.catalog_list 
+                                                    li
+                                                        .catalog_list_item.active
+                                                            .catalog_list_item_icons
+                                                                span.icon_item.minus
+                                                                    +icon('catalog_minus')
+                                                            .text_container
+                                                                .catalog_list_item_text 
+                                                                    a(href="#") Вложено
+                                                                        span.item_counter (12)
+                                                        ul.catalog_list 
+                                                            li
+                                                                .catalog_list_item
+                                                                    .catalog_list_item_icons
+                                                                        span.icon_item.minus
+                                                                            +icon('catalog_minus')
+                                                                    .text_container
+                                                                        .catalog_list_item_text 
+                                                                            a(href="#") Вложено
+                                                                                span.item_counter (12)
+
+
+                            .catalog_collection_funcs
+                                .form_element 
+                                    label.for_check
+                                        input(type="checkbox")
+                                        span.text только в которые добавлен
                         .catalog_item_options
                             .alert_box.info Digiseller вводит новый глобальный индекс-каталог по всем товарам сервиса, для удобства распространения среди агентов и более гибких возможностей поиска.
                             .alert_box.additional_info Ваш товар еще не добавлен ни в одну из категорий.
@@ -32,20 +105,25 @@ main
                                     li.breadcrumb_item
                                         .breadcrumb_item_name 123123
                                 button.btn.btn_gray добавить в категорию
-                            .alert_box.info У данной категории отсутствуют атрибуты
+                            .alert_box.info.align_center У данной категории отсутствуют атрибуты
                             .catalog_item_table
                                 table.equal_cells 
                                     colgroup
-                                        col
+                                        col(style="width: 400px")
                                         col
                                     thead
                                         tr
-                                            th 
-                                            th 
+                                            th Атрибут
+                                            th Выбранные значения
                                     tbody
                                         tr
+                                            td тест
                                             td 
-                                            td 
+                                                .form_element 
+                                                    input(type="text")
+                                .btn_group 
+                                    button.btn.btn_blue сохранить
+                                    button.btn.btn_gray(disabled) удалить из категории
 
 
 

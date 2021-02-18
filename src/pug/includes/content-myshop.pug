@@ -13,8 +13,8 @@ main
                 .catalog
                     +fieldset('Каталог')
                         ul.catalog_list
-                            li.main_page.active
-                                .catalog_list_item
+                            li.main_page
+                                .catalog_list_item.active
                                     .catalog_list_item_icons
                                         span.icon_item
                                             +icon('catalog_lock')
@@ -31,14 +31,14 @@ main
                                             +icon('drag')
                                         span.icon_item.minus
                                             +icon('catalog_minus')
-                                    .catalog_list_item_text 
+                                    .catalog_list_item_text
                                         a(href="#") Минус активный
                                             span.item_counter (12)
                                     span.hide_category.open(data-placement="top" data-toggle="tooltip" title="скрыть категорию")
                                         +icon('eye_open')
 
-                            li.active
-                                .catalog_list_item
+                            li
+                                .catalog_list_item.active
                                     .catalog_list_item_icons
                                         span.icon_item.drag(title=" Сортируйте категории перетаскиванием значка ")
                                             +icon('drag')
@@ -63,8 +63,8 @@ main
                                     span.hide_category(data-placement="top" data-toggle="tooltip" title="скрыть категорию")
                                         +icon('eye_close')
                                         
-                            li.active
-                                .catalog_list_item
+                            li
+                                .catalog_list_item.active
                                     .catalog_list_item_icons
                                         span.icon_item.drag(title=" Сортируйте категории перетаскиванием значка ")
                                             +icon('drag')
@@ -89,8 +89,8 @@ main
                                     span.hide_category.open(data-placement="top" data-toggle="tooltip" title="скрыть категорию")
                                         +icon('eye_open')
 
-                            li.active
-                                .catalog_list_item
+                            li
+                                .catalog_list_item.active
                                     .catalog_list_item_icons
                                         span.icon_item.drag(title=" Сортируйте категории перетаскиванием значка ")
                                             +icon('drag')

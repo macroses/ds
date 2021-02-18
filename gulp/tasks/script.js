@@ -28,7 +28,7 @@ module.exports = function() {
     // });
     // Перенос файла common.js в папку build
     $.gulp.task('scripts', function() {
-        return $.gulp.src('src/static/js/common.js')
+        return $.gulp.src('src/static/js/**')
         .pipe($.gulp.dest('build/js/'))
         .pipe($.bs.reload({
             stream: true

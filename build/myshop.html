@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="color-scheme" content="dark light">
     <title>Digiseller</title>
-    <link rel="stylesheet" href="libs/normalize/normalize.css">
     <link rel="stylesheet" href="css/libs.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/light-theme.css" id="color_scheme"><script>window.MSInputMethodContext && document.documentMode && document.write('<link rel="stylesheet" href="libs/bootstrap-ie11.min.css"><script src="static/js/ie11-customProperty.js"><\/script><script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js"><\/script><script>!function () { var e, t; ((e = document.createEvent("CustomEvent")).initEvent("Bootstrap", !0, !0), e.preventDefault(), e.defaultPrevented) || (t = Event.prototype.preventDefault, Event.prototype.preventDefault = function () { this.cancelable && (t.call(this), Object.defineProperty(this, "defaultPrevented", { get: function () { return !0 }, configurable: !0 })) }) }();<\/script>');</script>
+    <link rel="stylesheet" href="css/light-theme.css">
+    <link rel="shortcut icon" href="img/favicon.ico"><script>window.MSInputMethodContext && document.documentMode && document.write('<link rel="stylesheet" href="css/bootstrap-ie11.min.css"><script src="static/js/ie11-customProperty.js"><\/script><script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js"><\/script><script>!function () { var e, t; ((e = document.createEvent("CustomEvent")).initEvent("Bootstrap", !0, !0), e.preventDefault(), e.defaultPrevented) || (t = Event.prototype.preventDefault, Event.prototype.preventDefault = function () { this.cancelable && (t.call(this), Object.defineProperty(this, "defaultPrevented", { get: function () { return !0 }, configurable: !0 })) }) }();<\/script>');</script>
     <script src="https://cdn.tiny.cloud/1/sqoo5ez8oy5x8bram4focqll8rz90rodp0tusw0e7cytsx6y/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
   </head>
   <body>
@@ -241,8 +241,8 @@
                 <div class="fieldset">
                   <div class="legend">Каталог</div>
                   <ul class="catalog_list">
-                    <li class="main_page active">
-                      <div class="catalog_list_item">
+                    <li class="main_page">
+                      <div class="catalog_list_item active">
                         <div class="catalog_list_item_icons"><span class="icon_item">
                             <svg class="pic-catalog_lock ">
                               <use xlink:href="img/svg/sprite.svg#catalog_lock"></use>
@@ -262,14 +262,14 @@
                             <svg class="pic-catalog_minus ">
                               <use xlink:href="img/svg/sprite.svg#catalog_minus"></use>
                             </svg></span></div>
-                        <div class="catalog_list_item_text"> <a href="#">Минус активный<span class="item_counter">(12)</span></a></div><span class="hide_category open" data-placement="top" data-toggle="tooltip" title="скрыть категорию">
+                        <div class="catalog_list_item_text"><a href="#">Минус активный<span class="item_counter">(12)</span></a></div><span class="hide_category open" data-placement="top" data-toggle="tooltip" title="скрыть категорию">
                           <svg class="pic-eye_open ">
                             <use xlink:href="img/svg/sprite.svg#eye_open"></use>
                           </svg></span>
                       </div>
                     </li>
-                    <li class="active">
-                      <div class="catalog_list_item">
+                    <li>
+                      <div class="catalog_list_item active">
                         <div class="catalog_list_item_icons"><span class="icon_item drag" title=" Сортируйте категории перетаскиванием значка ">
                             <svg class="pic-drag ">
                               <use xlink:href="img/svg/sprite.svg#drag"></use>
@@ -298,8 +298,8 @@
                           </svg></span>
                       </div>
                     </li>
-                    <li class="active">
-                      <div class="catalog_list_item">
+                    <li>
+                      <div class="catalog_list_item active">
                         <div class="catalog_list_item_icons"><span class="icon_item drag" title=" Сортируйте категории перетаскиванием значка ">
                             <svg class="pic-drag ">
                               <use xlink:href="img/svg/sprite.svg#drag"></use>
@@ -328,8 +328,8 @@
                           </svg></span>
                       </div>
                     </li>
-                    <li class="active">
-                      <div class="catalog_list_item">
+                    <li>
+                      <div class="catalog_list_item active">
                         <div class="catalog_list_item_icons"><span class="icon_item drag" title=" Сортируйте категории перетаскиванием значка ">
                             <svg class="pic-drag ">
                               <use xlink:href="img/svg/sprite.svg#drag"></use>
@@ -1262,7 +1262,7 @@
         </div>
       </footer>
       <script src="static/js/libs.min.js"></script>
-      <script src="static/js/svgxuse.min.js" defer></script>
+      <script src="js/svgxuse.min.js" defer></script>
       <script src="https://cdn.polyfill.io/v3/polyfill.min.js?features=Array.from%2Ces5%2Ces6%2CSymbol%2CSymbol.iterator%2CDOMTokenList%2CObject.assign%2CCustomEvent%2CElement.prototype.classList%2CElement.prototype.closest%2CElement.prototype.dataset%2CArray.prototype.find%2CArray.prototype.includes"></script>
       <script src="js/common.js"></script>
     </div>

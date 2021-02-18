@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="color-scheme" content="dark light">
     <title>Digiseller</title>
-    <link rel="stylesheet" href="libs/normalize/normalize.css">
     <link rel="stylesheet" href="css/libs.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/light-theme.css" id="color_scheme"><script>window.MSInputMethodContext && document.documentMode && document.write('<link rel="stylesheet" href="libs/bootstrap-ie11.min.css"><script src="static/js/ie11-customProperty.js"><\/script><script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js"><\/script><script>!function () { var e, t; ((e = document.createEvent("CustomEvent")).initEvent("Bootstrap", !0, !0), e.preventDefault(), e.defaultPrevented) || (t = Event.prototype.preventDefault, Event.prototype.preventDefault = function () { this.cancelable && (t.call(this), Object.defineProperty(this, "defaultPrevented", { get: function () { return !0 }, configurable: !0 })) }) }();<\/script>');</script>
+    <link rel="stylesheet" href="css/light-theme.css">
+    <link rel="shortcut icon" href="img/favicon.ico"><script>window.MSInputMethodContext && document.documentMode && document.write('<link rel="stylesheet" href="css/bootstrap-ie11.min.css"><script src="static/js/ie11-customProperty.js"><\/script><script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js"><\/script><script>!function () { var e, t; ((e = document.createEvent("CustomEvent")).initEvent("Bootstrap", !0, !0), e.preventDefault(), e.defaultPrevented) || (t = Event.prototype.preventDefault, Event.prototype.preventDefault = function () { this.cancelable && (t.call(this), Object.defineProperty(this, "defaultPrevented", { get: function () { return !0 }, configurable: !0 })) }) }();<\/script>');</script>
     <script src="https://cdn.tiny.cloud/1/sqoo5ez8oy5x8bram4focqll8rz90rodp0tusw0e7cytsx6y/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
   </head>
   <body>
@@ -269,7 +269,99 @@
             <div class="tab-pane active" id="tabCatalog">
               <div class="content_box">
                 <div class="select_catalog">
-                  <div class="catalog_collection"></div>
+                  <div class="catalog_collection">
+                    <div class="form_element search">
+                      <input type="text" placeholder="Поиск категории">
+                      <ul class="search_input_results">
+                        <li> <span class="id_num">1234567</span><span class="name">test test test test test test test test test test test test </span></li>
+                        <li> <span class="id_num">1234567</span><span class="name">test test test test test test test test test test test test</span></li>
+                      </ul>
+                    </div>
+                    <div class="fieldset">
+                      <div class="legend">Каталог</div>
+                      <ul class="catalog_list parent"> 
+                        <li>
+                          <div class="catalog_list_item active">
+                            <div class="catalog_list_item_icons"><span class="icon_item minus">
+                                <svg class="pic-catalog_plus ">
+                                  <use xlink:href="img/svg/sprite.svg#catalog_plus"></use>
+                                </svg></span></div>
+                            <div class="text_container attr_added">
+                              <div class="catalog_list_item_text"> <a href="#">Игры ИгрулиИгры ИгрулиИгры ИгрулиИгры ИгрулиИгры ИгрулиИгры ИгрулиИгры Игрули<span class="item_counter">(12)</span></a></div>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="catalog_list_item">
+                            <div class="catalog_list_item_icons"><span class="icon_item minus">
+                                <svg class="pic-catalog_minus ">
+                                  <use xlink:href="img/svg/sprite.svg#catalog_minus"></use>
+                                </svg></span></div>
+                            <div class="text_container attr_added">
+                              <div class="catalog_list_item_text"><a href="#">Aion забугорный</a></div>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="catalog_list_item active">
+                            <div class="catalog_list_item_icons"><span class="icon_item minus">
+                                <svg class="pic-catalog_plus ">
+                                  <use xlink:href="img/svg/sprite.svg#catalog_plus"></use>
+                                </svg></span></div>
+                            <div class="text_container attr_added">
+                              <div class="catalog_list_item_text"> <a href="#">Плюс активный</a></div>
+                            </div>
+                          </div>
+                          <ul class="catalog_list"> 
+                            <li>
+                              <div class="catalog_list_item">
+                                <div class="catalog_list_item_icons"><span class="icon_item minus">
+                                    <svg class="pic-catalog_plus ">
+                                      <use xlink:href="img/svg/sprite.svg#catalog_plus"></use>
+                                    </svg></span></div>
+                                <div class="text_container">
+                                  <div class="catalog_list_item_text"> <a href="#">Вложено<span class="item_counter">(12)</span></a></div>
+                                </div>
+                              </div>
+                              <ul class="catalog_list"> 
+                                <li>
+                                  <div class="catalog_list_item active">
+                                    <div class="catalog_list_item_icons"><span class="icon_item minus">
+                                        <svg class="pic-catalog_minus ">
+                                          <use xlink:href="img/svg/sprite.svg#catalog_minus"></use>
+                                        </svg></span></div>
+                                    <div class="text_container">
+                                      <div class="catalog_list_item_text"> <a href="#">Вложено<span class="item_counter">(12)</span></a></div>
+                                    </div>
+                                  </div>
+                                  <ul class="catalog_list"> 
+                                    <li>
+                                      <div class="catalog_list_item">
+                                        <div class="catalog_list_item_icons"><span class="icon_item minus">
+                                            <svg class="pic-catalog_minus ">
+                                              <use xlink:href="img/svg/sprite.svg#catalog_minus"></use>
+                                            </svg></span></div>
+                                        <div class="text_container">
+                                          <div class="catalog_list_item_text"> <a href="#">Вложено<span class="item_counter">(12)</span></a></div>
+                                        </div>
+                                      </div>
+                                    </li>
+                                  </ul>
+                                </li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="catalog_collection_funcs">
+                      <div class="form_element"> 
+                        <label class="for_check">
+                          <input type="checkbox"><span class="text">только в которые добавлен</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
                   <div class="catalog_item_options">
                     <div class="alert_box info">Digiseller вводит новый глобальный индекс-каталог по всем товарам сервиса, для удобства распространения среди агентов и более гибких возможностей поиска.</div>
                     <div class="alert_box additional_info">Ваш товар еще не добавлен ни в одну из категорий.</div>
@@ -282,26 +374,34 @@
                       </ul>
                       <button class="btn btn_gray">добавить в категорию</button>
                     </div>
-                    <div class="alert_box info">У данной категории отсутствуют атрибуты</div>
+                    <div class="alert_box info align_center">У данной категории отсутствуют атрибуты</div>
                     <div class="catalog_item_table">
                       <table class="equal_cells"> 
                         <colgroup>
-                          <col>
+                          <col style="width: 400px">
                           <col>
                         </colgroup>
                         <thead>
                           <tr>
-                            <th> </th>
-                            <th> </th>
+                            <th>Атрибут</th>
+                            <th>Выбранные значения</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
-                            <td> </td>
-                            <td> </td>
+                            <td>тест</td>
+                            <td> 
+                              <div class="form_element"> 
+                                <input type="text">
+                              </div>
+                            </td>
                           </tr>
                         </tbody>
                       </table>
+                      <div class="btn_group"> 
+                        <button class="btn btn_blue">сохранить</button>
+                        <button class="btn btn_gray" disabled>удалить из категории</button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -322,7 +422,7 @@
         </div>
       </footer>
       <script src="static/js/libs.min.js"></script>
-      <script src="static/js/svgxuse.min.js" defer></script>
+      <script src="js/svgxuse.min.js" defer></script>
       <script src="https://cdn.polyfill.io/v3/polyfill.min.js?features=Array.from%2Ces5%2Ces6%2CSymbol%2CSymbol.iterator%2CDOMTokenList%2CObject.assign%2CCustomEvent%2CElement.prototype.classList%2CElement.prototype.closest%2CElement.prototype.dataset%2CArray.prototype.find%2CArray.prototype.includes"></script>
       <script src="js/common.js"></script>
     </div>

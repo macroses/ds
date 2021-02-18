@@ -21,76 +21,8 @@
     li {
         cursor: pointer;
         
-
         &.main_page {
             font-weight: 600;
-        }
-
-        &.active {
-            background: $main_links_color;
-
-            .catalog_list_item_text {
-                color: #fff;
-            }
-
-            .catalog_list_item {
-                &:hover {
-                    background: $main_links_color;
-                }
-            }
-
-            a {
-                color: #fff;
-            }
-
-            .catalog_list_item_icons {
-                display: flex;
-                svg {
-                    fill: $main_links_color;
-                }
-                
-                .icon_item {
-                    background: #fff;
-                    border: 1px solid #fff;
-
-                    &.drag {
-                        background: transparent;
-                        border: 0;
-                    }
-
-                    &.empty {
-                        background: #cfd8dc;
-                        border: 0;
-                        svg {
-                            fill: #fff;
-                        }
-                    }
-                }
-
-                .pic-drag {
-                    fill: #fff;
-                }
-            }
-        }
-
-        &.hidden_item {
-            .catalog_list_item_text {
-                a {
-                    color: $additional_info_color;
-                }
-            }
-        }
-        a {
-            color: $footer_bg;
-        }
-    }
-}
-
-.catalog_list li {
-    &.active {
-        .pic-eye_open,
-        .pic-eye_close {
-            fill: #fff;
         }
     }
 }
@@ -123,6 +55,13 @@
     align-items: center;
     padding: 8px 20px;
     position: relative;
+    &.active {
+        .pic-eye_open,
+        .pic-eye_close {
+            fill: #fff;
+        }
+    }
+
     &:hover {
         background: #eceff1;
 
@@ -147,6 +86,66 @@
         &.open {
             visibility: hidden;
         }
+    }
+
+
+    // //////////
+    &.active {
+        background: $main_links_color;
+
+        .catalog_list_item_text {
+            color: #fff;
+        }
+
+        .catalog_list_item {
+            &:hover {
+                background: $main_links_color;
+            }
+        }
+
+        a {
+            color: #fff;
+        }
+
+        .catalog_list_item_icons {
+            display: flex;
+            svg {
+                fill: $main_links_color;
+            }
+            
+            .icon_item {
+                background: #fff;
+                border: 1px solid #fff;
+
+                &.drag {
+                    background: transparent;
+                    border: 0;
+                }
+
+                &.empty {
+                    background: #cfd8dc;
+                    border: 0;
+                    svg {
+                        fill: #fff;
+                    }
+                }
+            }
+
+            .pic-drag {
+                fill: #fff;
+            }
+        }
+    }
+
+    &.hidden_item {
+        .catalog_list_item_text {
+            a {
+                color: $additional_info_color;
+            }
+        }
+    }
+    a {
+        color: $footer_bg;
     }
 }
 
@@ -202,9 +201,7 @@
             background: $main_links_color;
             border: 0;
         }
-    }
-
-    
+    }    
 }
 
 .catalog_list_item_text {

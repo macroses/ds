@@ -1,6 +1,7 @@
 module.exports = function () {
     $.gulp.task('sass', function () {
         return $.gulp.src([
+            'src/static/css/bootstrap-ie11.min.css',
             'src/static/css/main.scss',
             'src/static/css/dark-theme.scss',
             'src/static/css/light-theme.scss',

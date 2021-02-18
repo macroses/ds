@@ -1,3 +1,5 @@
+@import "../libs/normalize/normalize";
+
 // libs
 @import "../../../node_modules/bootstrap/scss/bootstrap";
 // for selects
@@ -6,3 +8,4 @@
 @import "../../../node_modules/dragula/dist/dragula";
 // flatpickr
 @import "../../../node_modules/flatpickr/dist/flatpickr";
+

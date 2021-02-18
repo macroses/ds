@@ -1,0 +1,187 @@
+main
+    .box
+        .content_box
+            .select_catalog
+                .catalog_collection
+                    .form_element.search
+                        input(type="text" placeholder="Поиск категории")
+                        ul.search_input_results
+                            li 
+                                span.id_num 1234567
+                                span.name test test test test test test test test test test test test 
+                            li 
+                                span.id_num 1234567
+                                span.name test test test test test test test test test test test test
+                    +fieldset('Каталог')
+                        ul.catalog_list.parent 
+                            li
+                                .catalog_list_item.active
+                                    .catalog_list_item_icons
+                                        span.icon_item.minus
+                                            +icon('catalog_plus')
+                                    .text_container.attr_added
+                                        .catalog_list_item_text 
+                                            a(href="#") Игры ИгрулиИгры ИгрулиИгры ИгрулиИгры ИгрулиИгры ИгрулиИгры ИгрулиИгры Игрули
+                                                span.item_counter (12)
+                            li
+                                .catalog_list_item
+                                    .catalog_list_item_icons
+                                        span.icon_item.minus
+                                            +icon('catalog_minus')
+                                    .text_container.attr_added
+                                        .catalog_list_item_text
+                                            a(href="#") Aion забугорный
+                            li
+                                .catalog_list_item.active
+                                    .catalog_list_item_icons
+                                        span.icon_item.minus
+                                            +icon('catalog_plus')
+                                    .text_container.attr_added
+                                        .catalog_list_item_text 
+                                            a(href="#") Плюс активный
+                                ul.catalog_list 
+                                    li
+                                        .catalog_list_item
+                                            .catalog_list_item_icons
+                                                span.icon_item.minus
+                                                    +icon('catalog_plus')
+                                            .text_container
+                                                .catalog_list_item_text 
+                                                    a(href="#") Вложено
+                                                        span.item_counter (12)
+                                        ul.catalog_list 
+                                            li
+                                                .catalog_list_item.active
+                                                    .catalog_list_item_icons
+                                                        span.icon_item.minus
+                                                            +icon('catalog_minus')
+                                                    .text_container
+                                                        .catalog_list_item_text 
+                                                            a(href="#") Вложено
+                                                                span.item_counter (12)
+                                                ul.catalog_list 
+                                                    li
+                                                        .catalog_list_item
+                                                            .catalog_list_item_icons
+                                                                span.icon_item.minus
+                                                                    +icon('catalog_minus')
+                                                            .text_container
+                                                                .catalog_list_item_text 
+                                                                    a(href="#") Вложено
+                                                                        span.item_counter (12)
+
+                    .catalog_collection_funcs
+                        .form_element 
+                            label.for_check
+                                input(type="checkbox")
+                                span.text только в которые добавлен
+                        button.btn.btn_gray(disabled) добавить категорию
+                        button.btn.btn_gray удалить
+
+                .catalog_item_options
+                    .catalog_crumbs
+                        ul.breadcrumbs_list
+                            li.breadcrumb_item
+                                a.main_link(href="#") Игры
+                            li.breadcrumb_item
+                                .breadcrumb_item_name 123123
+                    
+                    .catalog_item_name
+                        .title Название категории
+                        .form_element
+                            input(type="text" disabled)
+                            span.lang
+                                +icon('rus')
+                        .form_element
+                            input(type="text")
+                            span.lang
+                                +icon('eng')
+
+                    .catalog_item_table
+                        table.equal_cells 
+                            colgroup
+                                col
+                                col(style="width: 100px")
+                                col(style="width: 45px")
+                            thead
+                                tr
+                                    th Атрибут
+                                    th.align_center Товаров
+                                    th 
+                            tbody
+                                tr
+                                    td 
+                                        .catalog_table_content
+                                            span.icon_item.plus
+                                                +icon('catalog_plus')
+                                            .form_element
+                                                input(type="text" disabled)
+                                                span.lang
+                                                    +icon('rus')
+                                            .form_element
+                                                input(type="text")
+                                                span.lang
+                                                    +icon('eng')
+                                            +select(['Multiple select', 'Single select'])
+                                    td.align_center 1234567
+                                    td 
+                                        button.btn.btn_gray 
+                                            span.minus
+                                tr
+                                    td 
+                                        .catalog_table_content.inside
+                                            |=
+                                            .form_element
+                                                input(type="text")
+                                                span.lang
+                                                    +icon('rus')
+                                            .form_element
+                                                input(type="text")
+                                                span.lang
+                                                    +icon('eng')
+                                            +select(['Multiple select', 'Single select'])
+                                    td.align_center 1234567
+                                    td 
+                                        button.btn.btn_gray 
+                                            span.minus
+                                tr
+                                    td 
+                                        .catalog_table_content.inside
+                                            |=
+                                            .form_element
+                                                input(type="text")
+                                                span.lang
+                                                    +icon('rus')
+                                            .form_element
+                                                input(type="text")
+                                                span.lang
+                                                    +icon('eng')
+                                    td.align_center
+                                        span.empty_data —
+                                    td 
+                                        button.btn.btn_gray 
+                                            +icon('plus_button')
+                                tr
+                                    td 
+                                        .catalog_table_content
+                                            span.icon_item.minus
+                                                +icon('catalog_minus')
+                                            .form_element
+                                                input(type="text")
+                                                span.lang
+                                                    +icon('rus')
+                                            .form_element
+                                                input(type="text")
+                                                span.lang
+                                                    +icon('eng')
+                                            +select(['Multiple select', 'Single select'])
+                                    td.align_center 1234567
+                                    td 
+                                        button.btn.btn_gray 
+                                            span.minus
+                        .btn_group 
+                            button.btn.btn_blue сохранить
+                            button.btn.btn_gray удалить из категории
+
+
+
