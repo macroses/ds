@@ -22,7 +22,7 @@
           <div class="dev_kit">
             <div class="navbar navbar-light bg-light">
               <nav class="nav nav-pills flex-column"><a class="nav-link" href="#item-1">Установка и старт</a><a class="nav-link" href="#item-2">Структура проекта</a><a class="nav-link" href="#item-3">Создание новой страницы</a><a class="nav-link" href="#item-4">Правила именования элементов</a><a class="nav-link big" href="#item-5">Компоненты</a>
-                <nav class="nav nav-pills flex-column"><a class="nav-link" href="#item-5-1">Кнопки и ссылки</a><a class="nav-link" href="#item-5-2">Элементы формы</a><a class="nav-link" href="#item-5-3">Табы</a><a class="nav-link" href="#item-5-4">Иконки (все возможные варианты)</a><a class="nav-link" href="#item-5-5">Контейнеры</a><a class="nav-link" href="#item-5-6">Таблицы</a></nav><a class="nav-link" href="#item-5">Темная тема    </a>
+                <nav class="nav nav-pills flex-column"><a class="nav-link" href="#item-5-1">Кнопки и ссылки</a><a class="nav-link" href="#item-5-2">Элементы формы</a><a class="nav-link" href="#item-5-3">Табы</a><a class="nav-link" href="#item-5-4">Иконки (все возможные варианты)</a><a class="nav-link" href="#item-5-5">Контейнеры</a><a class="nav-link" href="#item-5-6">Таблицы</a></nav><a class="nav-link" href="#item-6">Темная тема    </a>
               </nav>
             </div>
             <div class="list" data-spy="scroll" data-target="#navbar-example3" data-offset="0">
@@ -371,14 +371,55 @@
                 <h4 id="item-5-4">Иконки</h4>
                 <div class="content">Для вставки иконок используем миксин <code>+icon('')</code>где аргументом является название файла svg, например<code>+icon('webmoney')</code>с миксином для иконок также можно ознакомиться в файле <code>mixins.pug</code></div>
                 <div class="content">Все новые иконки добавляются в папку <code>svg</code>, после чего необходимо произвести сборку проекта, чтобы сформировался спрайт.</div>
-                <h6>Платежные </h6>
-                <div class="icon_list">
+                <h6>Иконки шапки</h6>
+                <div class="icon_list"> 
                   <div class="item">
-                    <svg class="pic-alp ">
-                      <use xlink:href="img/svg/sprite.svg#alp"></use>
+                    <svg class="pic-digiseller-logo ">
+                      <use xlink:href="img/svg/sprite.svg#digiseller-logo"></use>
+                    </svg>
+                  </div>
+                  <div class="item"> 
+                    <svg class="pic-chats ">
+                      <use xlink:href="img/svg/sprite.svg#chats"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-eng ">
+                      <use xlink:href="img/svg/sprite.svg#eng"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-logout ">
+                      <use xlink:href="img/svg/sprite.svg#logout"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-messages ">
+                      <use xlink:href="img/svg/sprite.svg#messages"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-notice ">
+                      <use xlink:href="img/svg/sprite.svg#notice"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-offer ">
+                      <use xlink:href="img/svg/sprite.svg#offer"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-responses ">
+                      <use xlink:href="img/svg/sprite.svg#responses"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-rus ">
+                      <use xlink:href="img/svg/sprite.svg#rus"></use>
                     </svg>
                   </div>
                 </div>
+                <h6>Платежные </h6>
                 <div class="icon_list">
                   <div class="item">
                     <svg class="pic-alp ">
@@ -406,118 +447,13 @@
                     </svg>
                   </div>
                   <div class="item">
-                    <svg class="pic-chat_android ">
-                      <use xlink:href="img/svg/sprite.svg#chat_android"></use>
-                    </svg>
-                  </div>
-                  <div class="item">
-                    <svg class="pic-chat_apple ">
-                      <use xlink:href="img/svg/sprite.svg#chat_apple"></use>
-                    </svg>
-                  </div>
-                  <div class="item">
-                    <svg class="pic-chats ">
-                      <use xlink:href="img/svg/sprite.svg#chats"></use>
-                    </svg>
-                  </div>
-                  <div class="item">
-                    <svg class="pic-clip ">
-                      <use xlink:href="img/svg/sprite.svg#clip"></use>
-                    </svg>
-                  </div>
-                  <div class="item">
-                    <svg class="pic-close_circle ">
-                      <use xlink:href="img/svg/sprite.svg#close_circle"></use>
-                    </svg>
-                  </div>
-                  <div class="item">
-                    <svg class="pic-control_close ">
-                      <use xlink:href="img/svg/sprite.svg#control_close"></use>
-                    </svg>
-                  </div>
-                  <div class="item">
-                    <svg class="pic-control_left ">
-                      <use xlink:href="img/svg/sprite.svg#control_left"></use>
-                    </svg>
-                  </div>
-                  <div class="item">
-                    <svg class="pic-control_play ">
-                      <use xlink:href="img/svg/sprite.svg#control_play"></use>
-                    </svg>
-                  </div>
-                  <div class="item">
-                    <svg class="pic-control_right ">
-                      <use xlink:href="img/svg/sprite.svg#control_right"></use>
-                    </svg>
-                  </div>
-                  <div class="item">
-                    <svg class="pic-copy ">
-                      <use xlink:href="img/svg/sprite.svg#copy"></use>
-                    </svg>
-                  </div>
-                  <div class="item">
                     <svg class="pic-credit-card ">
                       <use xlink:href="img/svg/sprite.svg#credit-card"></use>
                     </svg>
                   </div>
                   <div class="item">
-                    <svg class="pic-delete-btn ">
-                      <use xlink:href="img/svg/sprite.svg#delete-btn"></use>
-                    </svg>
-                  </div>
-                  <div class="item">
-                    <svg class="pic-digiseller-logo ">
-                      <use xlink:href="img/svg/sprite.svg#digiseller-logo"></use>
-                    </svg>
-                  </div>
-                  <div class="item">
-                    <svg class="pic-down ">
-                      <use xlink:href="img/svg/sprite.svg#down"></use>
-                    </svg>
-                  </div>
-                  <div class="item">
-                    <svg class="pic-eng ">
-                      <use xlink:href="img/svg/sprite.svg#eng"></use>
-                    </svg>
-                  </div>
-                  <div class="item">
-                    <svg class="pic-file_accept ">
-                      <use xlink:href="img/svg/sprite.svg#file_accept"></use>
-                    </svg>
-                  </div>
-                  <div class="item">
-                    <svg class="pic-file_denied ">
-                      <use xlink:href="img/svg/sprite.svg#file_denied"></use>
-                    </svg>
-                  </div>
-                  <div class="item">
-                    <svg class="pic-good_link ">
-                      <use xlink:href="img/svg/sprite.svg#good_link"></use>
-                    </svg>
-                  </div>
-                  <div class="item">
-                    <svg class="pic-good ">
-                      <use xlink:href="img/svg/sprite.svg#good"></use>
-                    </svg>
-                  </div>
-                  <div class="item">
-                    <svg class="pic-googleplay ">
-                      <use xlink:href="img/svg/sprite.svg#googleplay"></use>
-                    </svg>
-                  </div>
-                  <div class="item">
-                    <svg class="pic-green_check ">
-                      <use xlink:href="img/svg/sprite.svg#green_check"></use>
-                    </svg>
-                  </div>
-                  <div class="item">
-                    <svg class="pic-invoice ">
-                      <use xlink:href="img/svg/sprite.svg#invoice"></use>
-                    </svg>
-                  </div>
-                  <div class="item">
-                    <svg class="pic-logout ">
-                      <use xlink:href="img/svg/sprite.svg#logout"></use>
+                    <svg class="pic-interkassa-method ">
+                      <use xlink:href="img/svg/sprite.svg#interkassa-method"></use>
                     </svg>
                   </div>
                   <div class="item">
@@ -526,38 +462,8 @@
                     </svg>
                   </div>
                   <div class="item">
-                    <svg class="pic-messages ">
-                      <use xlink:href="img/svg/sprite.svg#messages"></use>
-                    </svg>
-                  </div>
-                  <div class="item">
-                    <svg class="pic-modal_close ">
-                      <use xlink:href="img/svg/sprite.svg#modal_close"></use>
-                    </svg>
-                  </div>
-                  <div class="item">
                     <svg class="pic-mts ">
                       <use xlink:href="img/svg/sprite.svg#mts"></use>
-                    </svg>
-                  </div>
-                  <div class="item">
-                    <svg class="pic-notice-popup-important ">
-                      <use xlink:href="img/svg/sprite.svg#notice-popup-important"></use>
-                    </svg>
-                  </div>
-                  <div class="item">
-                    <svg class="pic-notice-popup ">
-                      <use xlink:href="img/svg/sprite.svg#notice-popup"></use>
-                    </svg>
-                  </div>
-                  <div class="item">
-                    <svg class="pic-notice ">
-                      <use xlink:href="img/svg/sprite.svg#notice"></use>
-                    </svg>
-                  </div>
-                  <div class="item">
-                    <svg class="pic-offer ">
-                      <use xlink:href="img/svg/sprite.svg#offer"></use>
                     </svg>
                   </div>
                   <div class="item">
@@ -591,8 +497,266 @@
                     </svg>
                   </div>
                   <div class="item">
+                    <svg class="pic-payment_sber ">
+                      <use xlink:href="img/svg/sprite.svg#payment_sber"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-payment_turkey ">
+                      <use xlink:href="img/svg/sprite.svg#payment_turkey"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
                     <svg class="pic-paypal-method ">
                       <use xlink:href="img/svg/sprite.svg#paypal-method"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-pm_fl ">
+                      <use xlink:href="img/svg/sprite.svg#pm_fl"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-pm_ip ">
+                      <use xlink:href="img/svg/sprite.svg#pm_ip"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-pm_sz ">
+                      <use xlink:href="img/svg/sprite.svg#pm_sz"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-pm_ul ">
+                      <use xlink:href="img/svg/sprite.svg#pm_ul"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-present-card ">
+                      <use xlink:href="img/svg/sprite.svg#present-card"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-qiwi ">
+                      <use xlink:href="img/svg/sprite.svg#qiwi"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-russian-post ">
+                      <use xlink:href="img/svg/sprite.svg#russian-post"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-tele-2 ">
+                      <use xlink:href="img/svg/sprite.svg#tele-2"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-terminal ">
+                      <use xlink:href="img/svg/sprite.svg#terminal"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-union ">
+                      <use xlink:href="img/svg/sprite.svg#union"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-webmoney ">
+                      <use xlink:href="img/svg/sprite.svg#webmoney"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-wm-card ">
+                      <use xlink:href="img/svg/sprite.svg#wm-card"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-yandex-money ">
+                      <use xlink:href="img/svg/sprite.svg#yandex-money"></use>
+                    </svg>
+                  </div>
+                </div>
+                <h6>Навигация и функционал</h6>
+                <div class="icon_list">
+                  <div class="item">
+                    <svg class="pic-catalog_lock ">
+                      <use xlink:href="img/svg/sprite.svg#catalog_lock"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-catalog_minus ">
+                      <use xlink:href="img/svg/sprite.svg#catalog_minus"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-catalog_plus ">
+                      <use xlink:href="img/svg/sprite.svg#catalog_plus"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-catalog_star ">
+                      <use xlink:href="img/svg/sprite.svg#catalog_star"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-close_circle ">
+                      <use xlink:href="img/svg/sprite.svg#close_circle"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-close_thin ">
+                      <use xlink:href="img/svg/sprite.svg#close_thin"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-control_close ">
+                      <use xlink:href="img/svg/sprite.svg#control_close"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-control_left ">
+                      <use xlink:href="img/svg/sprite.svg#control_left"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-control_play ">
+                      <use xlink:href="img/svg/sprite.svg#control_play"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-control_right ">
+                      <use xlink:href="img/svg/sprite.svg#control_right"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-copy ">
+                      <use xlink:href="img/svg/sprite.svg#copy"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-delete-btn ">
+                      <use xlink:href="img/svg/sprite.svg#delete-btn"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-down ">
+                      <use xlink:href="img/svg/sprite.svg#down"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-drag ">
+                      <use xlink:href="img/svg/sprite.svg#drag"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-equal-plus ">
+                      <use xlink:href="img/svg/sprite.svg#equal-plus"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-equal ">
+                      <use xlink:href="img/svg/sprite.svg#equal"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-eye_close ">
+                      <use xlink:href="img/svg/sprite.svg#eye_close"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-eye_open ">
+                      <use xlink:href="img/svg/sprite.svg#eye_open"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-file_accept ">
+                      <use xlink:href="img/svg/sprite.svg#file_accept"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-file_denied ">
+                      <use xlink:href="img/svg/sprite.svg#file_denied"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-filter ">
+                      <use xlink:href="img/svg/sprite.svg#filter"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-good_link ">
+                      <use xlink:href="img/svg/sprite.svg#good_link"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-good ">
+                      <use xlink:href="img/svg/sprite.svg#good"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-green_check ">
+                      <use xlink:href="img/svg/sprite.svg#green_check"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-heart ">
+                      <use xlink:href="img/svg/sprite.svg#heart"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-invoice ">
+                      <use xlink:href="img/svg/sprite.svg#invoice"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-langs ">
+                      <use xlink:href="img/svg/sprite.svg#langs"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-list ">
+                      <use xlink:href="img/svg/sprite.svg#list"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-modal_close ">
+                      <use xlink:href="img/svg/sprite.svg#modal_close"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-myshop_copy ">
+                      <use xlink:href="img/svg/sprite.svg#myshop_copy"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-myshop_crown ">
+                      <use xlink:href="img/svg/sprite.svg#myshop_crown"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-myshop_star ">
+                      <use xlink:href="img/svg/sprite.svg#myshop_star"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-notice-popup-important ">
+                      <use xlink:href="img/svg/sprite.svg#notice-popup-important"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-notice-popup ">
+                      <use xlink:href="img/svg/sprite.svg#notice-popup"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-pen ">
+                      <use xlink:href="img/svg/sprite.svg#pen"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-percent ">
+                      <use xlink:href="img/svg/sprite.svg#percent"></use>
                     </svg>
                   </div>
                   <div class="item">
@@ -606,8 +770,96 @@
                     </svg>
                   </div>
                   <div class="item">
-                    <svg class="pic-present-card ">
-                      <use xlink:href="img/svg/sprite.svg#present-card"></use>
+                    <svg class="pic-question_table ">
+                      <use xlink:href="img/svg/sprite.svg#question_table"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-red-close ">
+                      <use xlink:href="img/svg/sprite.svg#red-close"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-remove_input_data ">
+                      <use xlink:href="img/svg/sprite.svg#remove_input_data"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-search-res-customer ">
+                      <use xlink:href="img/svg/sprite.svg#search-res-customer"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-table_camera ">
+                      <use xlink:href="img/svg/sprite.svg#table_camera"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-table_check ">
+                      <use xlink:href="img/svg/sprite.svg#table_check"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-table_picture ">
+                      <use xlink:href="img/svg/sprite.svg#table_picture"></use>
+                    </svg>
+                  </div>
+                  <div class="item" style="background: lightgray">
+                    <svg class="pic-target_new_white ">
+                      <use xlink:href="img/svg/sprite.svg#target_new_white"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-translate ">
+                      <use xlink:href="img/svg/sprite.svg#translate"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-up ">
+                      <use xlink:href="img/svg/sprite.svg#up"></use>
+                    </svg>
+                  </div>
+                </div>
+                <h6>Прочие</h6>
+                <div class="icon_list">
+                  <div class="item">
+                    <svg class="pic-chat_android ">
+                      <use xlink:href="img/svg/sprite.svg#chat_android"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-chat_apple ">
+                      <use xlink:href="img/svg/sprite.svg#chat_apple"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-cart ">
+                      <use xlink:href="img/svg/sprite.svg#cart"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-clip ">
+                      <use xlink:href="img/svg/sprite.svg#clip"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-excel ">
+                      <use xlink:href="img/svg/sprite.svg#excel"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-github ">
+                      <use xlink:href="img/svg/sprite.svg#github"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-googleplay ">
+                      <use xlink:href="img/svg/sprite.svg#googleplay"></use>
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <svg class="pic-Joomla-Logo ">
+                      <use xlink:href="img/svg/sprite.svg#Joomla-Logo"></use>
                     </svg>
                   </div>
                   <div class="item">
@@ -616,8 +868,8 @@
                     </svg>
                   </div>
                   <div class="item">
-                    <svg class="pic-qiwi ">
-                      <use xlink:href="img/svg/sprite.svg#qiwi"></use>
+                    <svg class="pic-purchases ">
+                      <use xlink:href="img/svg/sprite.svg#purchases"></use>
                     </svg>
                   </div>
                   <div class="item" style="background: lightgray">
@@ -636,28 +888,13 @@
                     </svg>
                   </div>
                   <div class="item">
-                    <svg class="pic-remove_input_data ">
-                      <use xlink:href="img/svg/sprite.svg#remove_input_data"></use>
+                    <svg class="pic-reload ">
+                      <use xlink:href="img/svg/sprite.svg#reload"></use>
                     </svg>
                   </div>
                   <div class="item">
-                    <svg class="pic-responses ">
-                      <use xlink:href="img/svg/sprite.svg#responses"></use>
-                    </svg>
-                  </div>
-                  <div class="item">
-                    <svg class="pic-rus ">
-                      <use xlink:href="img/svg/sprite.svg#rus"></use>
-                    </svg>
-                  </div>
-                  <div class="item">
-                    <svg class="pic-russian-post ">
-                      <use xlink:href="img/svg/sprite.svg#russian-post"></use>
-                    </svg>
-                  </div>
-                  <div class="item">
-                    <svg class="pic-search-res-customer ">
-                      <use xlink:href="img/svg/sprite.svg#search-res-customer"></use>
+                    <svg class="pic-scriptberry ">
+                      <use xlink:href="img/svg/sprite.svg#scriptberry"></use>
                     </svg>
                   </div>
                   <div class="item">
@@ -700,44 +937,14 @@
                       <use xlink:href="img/svg/sprite.svg#stat"></use>
                     </svg>
                   </div>
-                  <div class="item" style="background: lightgray">
-                    <svg class="pic-target_new_white ">
-                      <use xlink:href="img/svg/sprite.svg#target_new_white"></use>
+                  <div class="item">
+                    <svg class="pic-vk ">
+                      <use xlink:href="img/svg/sprite.svg#vk"></use>
                     </svg>
                   </div>
                   <div class="item">
-                    <svg class="pic-tele-2 ">
-                      <use xlink:href="img/svg/sprite.svg#tele-2"></use>
-                    </svg>
-                  </div>
-                  <div class="item">
-                    <svg class="pic-terminal ">
-                      <use xlink:href="img/svg/sprite.svg#terminal"></use>
-                    </svg>
-                  </div>
-                  <div class="item">
-                    <svg class="pic-union ">
-                      <use xlink:href="img/svg/sprite.svg#union"></use>
-                    </svg>
-                  </div>
-                  <div class="item">
-                    <svg class="pic-up ">
-                      <use xlink:href="img/svg/sprite.svg#up"></use>
-                    </svg>
-                  </div>
-                  <div class="item">
-                    <svg class="pic-webmoney ">
-                      <use xlink:href="img/svg/sprite.svg#webmoney"></use>
-                    </svg>
-                  </div>
-                  <div class="item">
-                    <svg class="pic-wm-card ">
-                      <use xlink:href="img/svg/sprite.svg#wm-card"></use>
-                    </svg>
-                  </div>
-                  <div class="item">
-                    <svg class="pic-yandex-money ">
-                      <use xlink:href="img/svg/sprite.svg#yandex-money"></use>
+                    <svg class="pic-WordPress_logo ">
+                      <use xlink:href="img/svg/sprite.svg#WordPress_logo"></use>
                     </svg>
                   </div>
                   <div class="item">
@@ -763,16 +970,17 @@
                   thead<br>
                   &nbsp;&nbsp;tr<br>
                   &nbsp;&nbsp;&nbsp;&nbsp;th ID<br>
-                  &nbsp;&nbsp;tr<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;th название<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;th Название<br>
                   tbody<br>
                   &nbsp;&nbsp;tr<br>
                   &nbsp;&nbsp;&nbsp;&nbsp;td 1234567<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;td Название товара<br>
                   &nbsp;&nbsp;tr<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;td Продукт 1<br></code>
+                  &nbsp;&nbsp;&nbsp;&nbsp;td 1234567<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;td Название товара<br></code>
                 <div class="content">
-                  Учитывая огромное количество таблиц в проекте и их неоднозначную ширину от страницы к странице - использование шаблона колонок позволит избавитьсяот инлайновых стилей в каждой из колонок, когда потребуется задать фиксированную ширину одной из колонок.
-                  Ширина колонки задается стандартным образом 
+                  Учитывая огромное количество таблиц в проекте и их неоднозначную ширину от страницы к странице - использование шаблона колонок позволит избавиться  от инлайновых стилей в каждой из колонок, когда потребуется задать фиксированную ширину одной из колонок.
+                   Ширина колонки задается стандартным образом 
                 </div><code class="block">
                   colgroup<br>
                   &nbsp;&nbsp;col(style="width: 100px")<br>
@@ -780,6 +988,10 @@
                   </code>
                 <div class="content">
                   По умолчанию все колонки таблицы делят ширину таблицы поровну. Если одна из колонок получает фиксированную ширину, то остальные колонки будут делить оставшееся место поровну.</div>
+              </div>
+              <div class="item">
+                <h4 id="item-6">Темная тема</h4>
+                <div class="content">Стили темной темы лежат в файле <code>dark_theme.scss</code>. В ней находятся <span class="bold">только</span> стили цветов</div>
               </div>
             </div>
           </div>

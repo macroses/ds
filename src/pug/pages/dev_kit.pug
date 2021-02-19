@@ -30,7 +30,7 @@ html(lang="ru-RU")
                                     a(class="nav-link" href="#item-5-4") Иконки (все возможные варианты)
                                     a(class="nav-link" href="#item-5-5") Контейнеры
                                     a(class="nav-link" href="#item-5-6") Таблицы
-                                a(class="nav-link" href="#item-5") Темная тема    
+                                a(class="nav-link" href="#item-6") Темная тема    
                         .list(data-spy="scroll" data-target="#navbar-example3" data-offset="0")
                             .item
                                 h2(id="item-1") Установка и старт
@@ -349,10 +349,29 @@ html(lang="ru-RU")
                                 .content Все новые иконки добавляются в папку 
                                     code svg
                                     |, после чего необходимо произвести сборку проекта, чтобы сформировался спрайт.
-                                h6 Платежные 
-                                .icon_list
+
+
+                                h6 Иконки шапки
+                                .icon_list 
                                     .item
-                                        +icon('alp')
+                                        +icon('digiseller-logo')
+                                    .item 
+                                        +icon('chats')
+                                    .item
+                                        +icon('eng')
+                                    .item
+                                        +icon('logout')
+                                    .item
+                                        +icon('messages')
+                                    .item
+                                        +icon('notice')
+                                    .item
+                                        +icon('offer')
+                                    .item
+                                        +icon('responses')
+                                    .item
+                                        +icon('rus')
+                                h6 Платежные 
                                 .icon_list
                                     .item
                                         +icon('alp')
@@ -365,67 +384,13 @@ html(lang="ru-RU")
                                     .item
                                         +icon('bitcoin')
                                     .item
-                                        +icon('chat_android')
-                                    .item
-                                        +icon('chat_apple')
-                                    .item
-                                        +icon('chats')
-                                    .item
-                                        +icon('clip')
-                                    .item
-                                        +icon('close_circle')
-                                    .item
-                                        +icon('control_close')
-                                    .item
-                                        +icon('control_left')
-                                    .item
-                                        +icon('control_play')
-                                    .item
-                                        +icon('control_right')
-                                    .item
-                                        +icon('copy')
-                                    .item
                                         +icon('credit-card')
                                     .item
-                                        +icon('delete-btn')
-                                    .item
-                                        +icon('digiseller-logo')
-                                    .item
-                                        +icon('down')
-                                    .item
-                                        +icon('eng')
-                                    .item
-                                        +icon('file_accept')
-                                    .item
-                                        +icon('file_denied')
-                                    .item
-                                        +icon('good_link')
-                                    .item
-                                        +icon('good')
-                                    .item
-                                        +icon('googleplay')
-                                    .item
-                                        +icon('green_check')
-                                    .item
-                                        +icon('invoice')
-                                    .item
-                                        +icon('logout')
+                                        +icon('interkassa-method')
                                     .item
                                         +icon('megafon')
                                     .item
-                                        +icon('messages')
-                                    .item
-                                        +icon('modal_close')
-                                    .item
                                         +icon('mts')
-                                    .item
-                                        +icon('notice-popup-important')
-                                    .item
-                                        +icon('notice-popup')
-                                    .item
-                                        +icon('notice')
-                                    .item
-                                        +icon('offer')
                                     .item
                                         +icon('payment_ds')
                                     .item
@@ -439,17 +404,157 @@ html(lang="ru-RU")
                                     .item
                                         +icon('payment-steamskin')
                                     .item
+                                        +icon('payment_sber')
+                                    .item
+                                        +icon('payment_turkey')
+                                    .item
                                         +icon('paypal-method')
+                                    .item
+                                        +icon('pm_fl')
+                                    .item
+                                        +icon('pm_ip')
+                                    .item
+                                        +icon('pm_sz')
+                                    .item
+                                        +icon('pm_ul')
+                                    .item
+                                        +icon('present-card')
+                                    .item
+                                        +icon('qiwi')
+                                    .item
+                                        +icon('russian-post')
+                                    .item
+                                        +icon('tele-2')
+                                    .item
+                                        +icon('terminal')
+                                    .item
+                                        +icon('union')
+                                    .item
+                                        +icon('webmoney')
+                                    .item
+                                        +icon('wm-card')
+                                    .item
+                                        +icon('yandex-money')
+                                h6 Навигация и функционал
+                                .icon_list
+                                    .item
+                                        +icon('catalog_lock')
+                                    .item
+                                        +icon('catalog_minus')
+                                    .item
+                                        +icon('catalog_plus')
+                                    .item
+                                        +icon('catalog_star')
+                                    .item
+                                        +icon('close_circle')
+                                    .item
+                                        +icon('close_thin')
+                                    .item
+                                        +icon('control_close')
+                                    .item
+                                        +icon('control_left')
+                                    .item
+                                        +icon('control_play')
+                                    .item
+                                        +icon('control_right')
+                                    .item
+                                        +icon('copy')
+                                    .item
+                                        +icon('delete-btn')
+                                    .item
+                                        +icon('down')
+                                    .item
+                                        +icon('drag')
+                                    .item
+                                        +icon('equal-plus')
+                                    .item
+                                        +icon('equal')
+                                    .item
+                                        +icon('eye_close')
+                                    .item
+                                        +icon('eye_open')
+                                    .item
+                                        +icon('file_accept')
+                                    .item
+                                        +icon('file_denied')
+                                    .item
+                                        +icon('filter')
+                                    .item
+                                        +icon('good_link')
+                                    .item
+                                        +icon('good')
+                                    .item
+                                        +icon('green_check')
+                                    .item
+                                        +icon('heart')
+                                    .item
+                                        +icon('invoice')
+                                    .item
+                                        +icon('langs')
+                                    .item
+                                        +icon('list')
+                                    .item
+                                        +icon('modal_close')
+                                    .item
+                                        +icon('myshop_copy')
+                                    .item
+                                        +icon('myshop_crown')
+                                    .item
+                                        +icon('myshop_star')
+                                    .item
+                                        +icon('notice-popup-important')
+                                    .item
+                                        +icon('notice-popup')
+                                    .item
+                                        +icon('pen')
+                                    .item
+                                        +icon('percent')
                                     .item
                                         +icon('plus_button')
                                     .item
                                         +icon('popup-settings')
                                     .item
-                                        +icon('present-card')
+                                        +icon('question_table')
+                                    .item
+                                        +icon('red-close')
+                                    .item
+                                        +icon('remove_input_data')
+                                    .item
+                                        +icon('search-res-customer')
+                                    .item
+                                        +icon('table_camera')
+                                    .item
+                                        +icon('table_check')
+                                    .item
+                                        +icon('table_picture')
+                                    .item(style="background: lightgray")
+                                        +icon('target_new_white')
+                                    .item
+                                        +icon('translate')
+                                    .item
+                                        +icon('up')
+                                h6 Прочие
+                                .icon_list
+                                    .item
+                                        +icon('chat_android')
+                                    .item
+                                        +icon('chat_apple')
+                                    .item
+                                        +icon('cart')
+                                    .item
+                                        +icon('clip')
+                                    .item
+                                        +icon('excel')
+                                    .item
+                                        +icon('github')
+                                    .item
+                                        +icon('googleplay')
+                                    .item
+                                        +icon('Joomla-Logo')
                                     .item
                                         +icon('preview')
                                     .item
-                                        +icon('qiwi')
+                                        +icon('purchases')
                                     .item(style="background: lightgray")
                                         +icon('question_mark')
                                     .item
@@ -457,15 +562,9 @@ html(lang="ru-RU")
                                     .item
                                         +icon('red-close')
                                     .item
-                                        +icon('remove_input_data')
+                                        +icon('reload')
                                     .item
-                                        +icon('responses')
-                                    .item
-                                        +icon('rus')
-                                    .item
-                                        +icon('russian-post')
-                                    .item
-                                        +icon('search-res-customer')
+                                        +icon('scriptberry')
                                     .item
                                         +icon('security')
                                     .item
@@ -482,25 +581,13 @@ html(lang="ru-RU")
                                         +icon('square-sea')
                                     .item
                                         +icon('stat')
-                                    .item(style="background: lightgray")
-                                        +icon('target_new_white')
                                     .item
-                                        +icon('tele-2')
+                                        +icon('vk')
                                     .item
-                                        +icon('terminal')
-                                    .item
-                                        +icon('union')
-                                    .item
-                                        +icon('up')
-                                    .item
-                                        +icon('webmoney')
-                                    .item
-                                        +icon('wm-card')
-                                    .item
-                                        +icon('yandex-money')
+                                        +icon('WordPress_logo')
                                     .item
                                         +icon('youtube_play')
-
+                                
                             .item
                                 h4(id="item-5-5") Контейнеры
                                 .content 
@@ -526,16 +613,17 @@ html(lang="ru-RU")
                                     thead<br>
                                     &nbsp;&nbsp;tr<br>
                                     &nbsp;&nbsp;&nbsp;&nbsp;th ID<br>
-                                    &nbsp;&nbsp;tr<br>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;th название<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;th Название<br>
                                     tbody<br>
                                     &nbsp;&nbsp;tr<br>
                                     &nbsp;&nbsp;&nbsp;&nbsp;td 1234567<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;td Название товара<br>
                                     &nbsp;&nbsp;tr<br>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;td Продукт 1<br>
-                                .content Учитывая огромное количество таблиц в проекте и их неоднозначную ширину от страницы к странице - использование шаблона колонок позволит избавиться
-                                    | от инлайновых стилей в каждой из колонок, когда потребуется задать фиксированную ширину одной из колонок.
-                                    | Ширина колонки задается стандартным образом 
+                                    &nbsp;&nbsp;&nbsp;&nbsp;td 1234567<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;td Название товара<br>
+                                .content Учитывая огромное количество таблиц в проекте и их неоднозначную ширину от страницы к странице - использование шаблона колонок позволит избавиться 
+                                    |  от инлайновых стилей в каждой из колонок, когда потребуется задать фиксированную ширину одной из колонок.
+                                    |  Ширина колонки задается стандартным образом 
 
                                 code.block.
                                     colgroup<br>
@@ -544,3 +632,11 @@ html(lang="ru-RU")
                                 
                                 .content По умолчанию все колонки таблицы делят ширину таблицы поровну. Если одна из колонок получает фиксированную ширину, то остальные колонки 
                                     |будут делить оставшееся место поровну.
+
+                            .item
+                                h4(id="item-6") Темная тема
+                                .content Стили темной темы лежат в файле 
+                                    code dark_theme.scss
+                                    |. В ней находятся 
+                                    span.bold только
+                                    |  стили цветов
