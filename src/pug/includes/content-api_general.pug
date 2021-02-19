@@ -1,0 +1,49 @@
+main 
+    .box 
+        .content_box 
+            .api_general 
+                .api_general_header 
+                    .title API 
+                    a.btn.btn_blue(href="#") назад
+                .api_methods
+                    .title Товары и категории
+                    ul.api_methods_list
+                        li.back_to_api_main: a.main_link(href="#") Вернуться к содержанию
+                        li: a.main_link(href="#") Регистрация партнеров на своем сайте
+                        li: a.main_link(href="#") Получение токена для api.digiseller.ru
+                        li: a.main_link(href="#") Поиск и проверка платежа по уникальному коду
+                        li: a.main_link(href="#") Получение информации о покупке по номеру счета
+                    
+                    .api_methods_item 
+                        h3 Получение токена для api.digiseller.ru
+                        h4 1. Заголовок поменьше
+                        .form_data_block
+                            .form_data_block_item
+                                .form_data_block_title URL и формат запроса:
+                                .form_data_block_content
+                                    .codepart https://api.digiseller.ru/api/apilogin
+                            .form_data_block_item
+                                .form_data_block_title Метод:
+                                .form_data_block_content
+                                    .codepart POST
+                            .form_data_block_item
+                                .form_data_block_title Заголовки запроса:
+                                .form_data_block_content
+                                    .codepart
+                                        |Content-Type: application/json
+                                        br
+                                        |Accept: application/json
+                            .form_data_block_item
+                                .form_data_block_title Формат запроса JSON:
+                                .form_data_block_content
+                                    .tab_format
+                                        .codeformat JSON
+                                        .codeformat.active XML
+                                    .codepart
+                                        |{
+                                        |	"retval":"0",
+                                        |	"retdesc":"",
+                                        |	"id_seller":"1",
+                                        |	"id_request":"993812",
+                                        |	"img_url":"//shop.digiseller.ru/asp/turing_num.asp?nocash=3021&id=993812"
+                                        |}
