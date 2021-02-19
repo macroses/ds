@@ -298,8 +298,19 @@
         margin: 40px 0 10px;
     }
 
+    .pic-eye_close {
+        fill: #000;
+        @include box(16px);
+        margin-right: 5px;
+        margin-left: 10px;
+    }
+
     img {
         margin-right: 10px;
+    }
+
+    .mixed_bid {
+        background: #cfd8dc;
     }
 }
 

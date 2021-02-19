@@ -15,7 +15,9 @@
         }
         .nav-link {
             padding-top: 0;
-            
+            &.big {
+                font-weight: bold;
+            }
         }
     }
 
@@ -43,6 +45,10 @@
 
     .item {
         margin-bottom: 40px;
+
+        h2,h3,h4,h5,h6 {
+            font-weight: 600;
+        }
     }
 }
 
@@ -86,8 +92,13 @@
 
 .icon_list {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(10, 1fr);
     svg {
-        @include box(32px);
+        @include box(25px);
+    }
+
+    .item {
+        display: flex;
+        justify-content: center;
     }
 }

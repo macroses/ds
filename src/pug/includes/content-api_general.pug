@@ -39,6 +39,8 @@ main
                                     .tab_format
                                         .codeformat JSON
                                         .codeformat.active XML
+                                    // тут в общем pug так всрато компилит, что оставляет все пробелы. Надо будет в html убрать все ненужные отступы
+                                    // при использовании xmp та же ситуация. Можно использовать оба варианта (просто .codepart или .codepart xmp)
                                     .codepart
                                         |{
                                         |	"retval":"0",
@@ -47,3 +49,131 @@ main
                                         |	"id_request":"993812",
                                         |	"img_url":"//shop.digiseller.ru/asp/turing_num.asp?nocash=3021&id=993812"
                                         |}
+                            .form_data_block_item
+                                .form_data_block_title Параметры запроса:
+                                .form_data_block_content
+                                    table.equal_cells.api_table
+                                        colgroup
+                                            col(style="width: 250px")
+                                            col(style="width: 250px")
+                                            col
+                                        thead
+                                            tr
+                                                th Название
+                                                th Назначение
+                                                th Примечание
+                                        tbody 
+                                            tr
+                                                td seller_id
+                                                td идентификатор продавца
+                                                td целое число
+                                            tr
+                                                td timestamp
+                                                td время запроса
+                                                td время запроса
+                                            tr
+                                                td sign	
+                                                td Подпись
+                                                td строка, формируется как SHA256 от строки, полученной конкатенацией следующих параметров:
+                                                    br
+                                                    |- API_GUID продавца (
+                                                    a.main_link(href="#") отправляется в WM-сообщении
+                                                    |)
+                                                    br
+                                                    |- timestamp (текущее время)
+                                                    br
+                                                    |sign=SHA256(API_GUID + timestamp)
+                            
+                    .api_methods_item 
+                        h3 Поиск и проверка платежа по уникальному коду
+                        h4 2. Заголовок поменьше
+                        .form_data_block
+                            .form_data_block_item
+                                .form_data_block_title
+                                .form_data_block_content
+                                    .tab_format
+                                        .codeformat JSON
+                                        .codeformat.active XML
+                            .form_data_block_item
+                                .form_data_block_title URL и формат запроса:
+                                .form_data_block_content
+                                    .codepart https://api.digiseller.ru/api/purchases/unique-code/{unique-code}?token={token} - основной адрес
+                                    .codepart https://oplata.info/api/purchases/unique-code/{unique-code}?token={token} - резервный адрес
+                            .form_data_block_item
+                                .form_data_block_title Метод:
+                                .form_data_block_content
+                                    .codepart GET
+                            .form_data_block_item
+                                .form_data_block_title Заголовки запроса:
+                                .form_data_block_content
+                                    .codepart Accept: text/xml
+                            .form_data_block_item
+                                .form_data_block_title Формат запроса JSON:
+                                    br
+                                    a.main_link(href="#") пример JSON-ответа
+                                .form_data_block_content
+                                    // тут в общем pug так всрато компилит, что оставляет все пробелы. Надо будет в html убрать все ненужные отступы
+                                    // при использовании xmp та же ситуация. Можно использовать оба варианта (просто .codepart или .codepart xmp)
+                                    .codepart
+                                        |{
+                                        |    "retval": 0,
+                                        |    "retdesc": "",
+                                        |    "inv": 0,
+                                        |    "id_goods": 0,
+                                        |    "amount": 0.0,
+                                        |    "type_curr": "",
+                                        |    "profit": "",
+                                        |    "amount_usd": 0.0,
+                                        |    "date_pay": "",
+                                        |    "email": "",
+                                        |    "agent_id": 0,
+                                        |    "agent_percent": 0,
+                                        |    "unit_goods": 0,
+                                        |    "cnt_goods": 0,
+                                        |    "promo_code": "",
+                                        |    "bonus_code": "",
+                                        |    "cart_uid": "",
+                                        |    "unique_code_state": {
+                                        |    "state": 0,
+                                        |    "date_check": "",
+                                        |    "date_delivery": "",
+                                        |    "date_confirmed": "",
+                                        |    "date_refuted": ""
+                                        |    },
+                                        |    "options":[
+                                        |       {"id": "0", "name": "", "value": ""},
+                                        |       {"id": "0", "name": "", "value": ""}
+                                        |       ...
+                                        |    ]
+                                        |}
+                                        
+                            .form_data_block_item
+                                .form_data_block_title Параметры запроса:
+                                .form_data_block_content
+                                    table.equal_cells.api_table
+                                        colgroup
+                                            col(style="width: 170px")
+                                            col
+                                            col
+                                        thead
+                                            tr
+                                                th Название
+                                                th Назначение
+                                                th Примечание
+                                        tbody 
+                                            tr
+                                                td retval
+                                                td код выполнения запроса
+                                                td 0 - запрос выполнен
+                                            tr
+                                                td timestamp
+                                                td base64-закодированная строка, содержащая набор параметров, дополнительно переданных с вашего сайта на страницу оплаты oplata.info. Параметры могут нести в себе User ID, значения для отслеживания конверсии оплаты и т.п. После base64_decode, строка будет выглядеть примерно так: "param1=value1&param2=value2&..."
+                                                    .api_table_warning настоятельно рекомендуем сохранять это значение в базе и каждый раз проверять его на уникальность, чтобы избежать двойных начислений
+                                                td пример:
+                                                    br
+                                                    |bWVtYmVyX2lkPTIzNDE2NTQ0JnNvdXJjZT1yZWd1bGFyJmxheW91dF9pZD0xNSZnYV9jbGllbnRfaWQ9MjI2ODYyNDMyLjE0NjY2Njg5ODkmZm9ybV9pZD03
+                                                    br
+                                                    br
+                                                    |После base64_decode:
+                                                    br
+                                                    |member_id=23416544&source=regular&layout_id=15&ga_client_id=226862432.1466668989&form_id=7

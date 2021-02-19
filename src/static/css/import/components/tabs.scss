@@ -42,4 +42,10 @@
         background: #fff;
         box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.26);
     }
+
+    .nav-link.disabled {
+        color: #ccc;
+        // pointer-events: none;
+        background: #eceff1;
+    }
 } 

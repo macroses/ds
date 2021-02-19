@@ -59,11 +59,18 @@ mixin tab(item,active)
 
 
 //- form element
-mixin select(options)
-	.form_element
-		select
-			each option, index in options
-				option(value=index) #{option}
+mixin select(options, sm)
+	if (sm === 'sm')
+		.form_element
+			select.sm_elem
+				each option, index in options
+					option(value=index) #{option}
+	else 
+		.form_element
+			select
+				each option, index in options
+					option(value=index) #{option}
+
 //- ex. +select(['one', 'two'])
 
 mixin section-content(type, title)

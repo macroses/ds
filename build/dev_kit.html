@@ -6,7 +6,7 @@
     <title></title>
     <link rel="stylesheet" href="css/libs.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/light-theme.css">
+    <link id="color_scheme" rel="stylesheet" href="css/light-theme.css">
     <link rel="shortcut icon" href="img/favicon.ico"><script>window.MSInputMethodContext && document.documentMode && document.write('<link rel="stylesheet" href="css/bootstrap-ie11.min.css"><script src="static/js/ie11-customProperty.js"><\/script><script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js"><\/script><script>!function () { var e, t; ((e = document.createEvent("CustomEvent")).initEvent("Bootstrap", !0, !0), e.preventDefault(), e.defaultPrevented) || (t = Event.prototype.preventDefault, Event.prototype.preventDefault = function () { this.cancelable && (t.call(this), Object.defineProperty(this, "defaultPrevented", { get: function () { return !0 }, configurable: !0 })) }) }();<\/script>');</script>
     <script src="https://cdn.tiny.cloud/1/sqoo5ez8oy5x8bram4focqll8rz90rodp0tusw0e7cytsx6y/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
     <style>
@@ -21,7 +21,7 @@
         <div class="content_box">
           <div class="dev_kit">
             <div class="navbar navbar-light bg-light">
-              <nav class="nav nav-pills flex-column"><a class="nav-link" href="#item-1">Установка и старт</a><a class="nav-link" href="#item-2">Структура проекта</a><a class="nav-link" href="#item-3">Создание новой страницы</a><a class="nav-link" href="#item-4">Правила именования элементов</a><a class="nav-link" href="#item-5">Компоненты и примеры их использования</a>
+              <nav class="nav nav-pills flex-column"><a class="nav-link" href="#item-1">Установка и старт</a><a class="nav-link" href="#item-2">Структура проекта</a><a class="nav-link" href="#item-3">Создание новой страницы</a><a class="nav-link" href="#item-4">Правила именования элементов</a><a class="nav-link big" href="#item-5">Компоненты</a>
                 <nav class="nav nav-pills flex-column"><a class="nav-link" href="#item-5-1">Кнопки и ссылки</a><a class="nav-link" href="#item-5-2">Элементы формы</a><a class="nav-link" href="#item-5-3">Табы</a><a class="nav-link" href="#item-5-4">Иконки (все возможные варианты)</a><a class="nav-link" href="#item-5-5">Контейнеры</a><a class="nav-link" href="#item-5-6">Таблицы</a></nav><a class="nav-link" href="#item-5">Темная тема    </a>
               </nav>
             </div>
@@ -57,8 +57,8 @@
               </div>
               <div class="item">
                 <h4 id="item-3">Создание новой страницы</h4>
-                <div class="content">Создание новой страницы подразумевает создание нескольких файлов и написание некоторых зависимостей</div>
-                <div class="content">1. в папке <code>pug/pages </code>создать новый файл и назвать его соответственно тех. заданию. (например page.pug). Скопировать шаблон вида (или из любой рядом лежащей страницы)</div><code class="block">
+                <div class="content">Создадим несколько файлов:</div>
+                <div class="content"> <span class="bold">1.</span> в папке <code>pug/pages </code>создать файл и назвать его соответственно тех. заданию. (из этого файла будет происходить компиляция). Скопировать шаблон вида (или из любой рядом лежащей страницы)</div><code class="block">
                   extends ../layout/layout.pug<br>
                   block vars<br>
                       &nbsp;&nbsp;&nbsp;&nbsp;- var title = 'Digiseller';<br>
@@ -68,17 +68,19 @@
                       &nbsp;&nbsp;&nbsp;&nbsp;include ../includes/content-file_name.pug<br>
                   block footer<br>
                       &nbsp;&nbsp;&nbsp;&nbsp;include ../includes/footer.pug <br></code>
-                <div class="content">в папке <code>includes</code> создать контентную часть страницы, которая должна иметь название вида <code>content-file_name.pug</code></div>
-                <div class="content">2. Файл стилей для контентной части страницы создается в папке <code>static/import/pages/page.scss</code></div>
+                <div class="content"><span class="bold">2.</span> в папке <code>includes</code> создать контентную часть страницы, которая должна иметь название вида <code>content-file_name.pug</code></div>
+                <div class="content"> <span class="bold">3. </span> Файл стилей для контентной части страницы создается в папке <code>static/import/pages/page.scss</code></div>
                 <div class="content">Если необходимо создание стилей компонента, тогда создается файл в  <code>static/import/components/component.scss</code></div>
                 <div class="content">В файле <code>main.scss</code> произвести импорт необходимого файла соответственно категории (компонент, страница, шаблон)</div>
               </div>
               <div class="item">
                 <h4 id="item-4">Правила именования элементов</h4>
-                <div class="content">
-                  Все кастомные классы, написанные верстальщиком записаны через нижнее подчеркивание. Для удобства выделения этих классов программистами.В проекте не используется BEM или любая другая методология названия классов и структуры.</div>
-                <div class="content">
-                  Названия идентификаторов - есть отображение их сущности (seller_name_block, purchase_title, etc). Кроме случаев абстракции компонентов, которые будут повторяться.В случае когда компонент не отображает содержимого (напрпимер кнопки различного содержания, но одинакового вида: сохранить, отменить, submit), допустимо использовать название цвета.</div>
+                <div class="content">Все кастомные классы, написанные верстальщиком записаны через <span class="bold">нижнее подчеркивание</span>. Для удобства выделения этих классов программистами.
+                  В проекте не используется BEM или любая другая сторонняя методология названия классов и структуры.
+                </div>
+                <div class="content"> <span class="bold">Названия идентификаторов - есть отображение их сущности </span>(seller_name_block, purchase_title, etc). Кроме случаев абстракции компонентов, которые будут повторяться.
+                  В случае когда компонент не отображает содержимого (напрпимер кнопки различного содержания, но одинакового вида: сохранить, отменить, submit), допустимо использовать название цвета.
+                </div>
               </div>
               <div class="item">
                 <h2 id="item-5">Компоненты и примеры их использования</h2>
@@ -210,7 +212,7 @@
                     </div>
                     <div class="exercise_code"><code class="block">
                         .form_element<br>
-                            &nbsp;&nbsp;label.for_check<br>
+                            &nbsp;&nbsp;label.for_check.disabled<br>
                                 &nbsp;&nbsp;&nbsp;&nbsp;input(type="checkbox" disabled)<br>
                                 &nbsp;&nbsp;&nbsp;&nbsp;span.text чекбокс disabled
                         </code></div>
@@ -225,7 +227,7 @@
                     </div>
                     <div class="exercise_code"><code class="block">
                         .form_element<br>
-                            &nbsp;&nbsp;label.for_check<br>
+                            &nbsp;&nbsp;label.for_check.disabled<br>
                                 &nbsp;&nbsp;&nbsp;&nbsp;input(type="checkbox" disabled checked)<br>
                                 &nbsp;&nbsp;&nbsp;&nbsp;span.text чекбокс disabled checked
                         </code></div>
@@ -313,7 +315,7 @@
               </div>
               <div class="item">
                 <h4 id="item-5-3">Табы</h4>
-                <div class="content">Для создания собственных табов необходимо ознакомиться с файлом <code>mixins.pug</code>и узнать как в целом пишутся миксины в pug + базовые знания JS</div>
+                <div class="content">Для создания табов необходимо ознакомиться с файлом <code>mixins.pug</code>и узнать как в целом пишутся миксины в pug + базовые знания JS</div>
                 <div class="content">В функции <code>+tab()</code>первый аргумент - массив названий вкладок, второй - числовое значение активной вкладки (начиная с нуля)</div>
                 <div class="content">Для создания вкладки с числовым значением, в массиве названий должен быть многомерный массив, состоящий из строки и числа<code>+tab-list(['Tab1', ['Tab2', 192]], 0)</code></div>
                 <div class="exercises_list">
@@ -369,6 +371,14 @@
                 <h4 id="item-5-4">Иконки</h4>
                 <div class="content">Для вставки иконок используем миксин <code>+icon('')</code>где аргументом является название файла svg, например<code>+icon('webmoney')</code>с миксином для иконок также можно ознакомиться в файле <code>mixins.pug</code></div>
                 <div class="content">Все новые иконки добавляются в папку <code>svg</code>, после чего необходимо произвести сборку проекта, чтобы сформировался спрайт.</div>
+                <h6>Платежные </h6>
+                <div class="icon_list">
+                  <div class="item">
+                    <svg class="pic-alp ">
+                      <use xlink:href="img/svg/sprite.svg#alp"></use>
+                    </svg>
+                  </div>
+                </div>
                 <div class="icon_list">
                   <div class="item">
                     <svg class="pic-alp ">
@@ -775,21 +785,6 @@
           </div>
         </div>
       </div>
-      <footer>
-        <div class="box">
-          <div class="footer_content">
-            <div class="copy">Copyright ©2020 Fincom Teh Ltd.<br>Designed by <a href="#">Computing Forces</a></div>
-            <div class="footer_nav"><a href="#">API</a><a href="#">Telegram Bot</a><a href="#">Чат</a></div><a class="footer_logo" href="#">
-              <svg class="pic-googleplay ">
-                <use xlink:href="img/svg/sprite.svg#googleplay"></use>
-              </svg></a>
-          </div>
-        </div>
-      </footer>
-      <script src="static/js/libs.min.js"></script>
-      <script src="js/svgxuse.min.js" defer></script>
-      <script src="https://cdn.polyfill.io/v3/polyfill.min.js?features=Array.from%2Ces5%2Ces6%2CSymbol%2CSymbol.iterator%2CDOMTokenList%2CObject.assign%2CCustomEvent%2CElement.prototype.classList%2CElement.prototype.closest%2CElement.prototype.dataset%2CArray.prototype.find%2CArray.prototype.includes"></script>
-      <script src="js/common.js"></script>
     </div>
   </body>
 </html>

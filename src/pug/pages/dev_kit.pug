@@ -22,7 +22,7 @@ html(lang="ru-RU")
                                 a(class="nav-link" href="#item-2") Структура проекта
                                 a(class="nav-link" href="#item-3") Создание новой страницы
                                 a(class="nav-link" href="#item-4") Правила именования элементов
-                                a(class="nav-link" href="#item-5") Компоненты и примеры их использования
+                                a(class="nav-link big" href="#item-5") Компоненты
                                 nav.nav.nav-pills.flex-column
                                     a(class="nav-link" href="#item-5-1") Кнопки и ссылки
                                     a(class="nav-link" href="#item-5-2") Элементы формы
@@ -67,10 +67,12 @@ html(lang="ru-RU")
 
                             .item
                                 h4(id="item-3") Создание новой страницы
-                                .content Создание новой страницы подразумевает создание нескольких файлов и написание некоторых зависимостей
-                                .content 1. в папке 
+                                .content Создадим несколько файлов:
+                                .content 
+                                    span.bold 1.
+                                    |  в папке 
                                     code pug/pages 
-                                    | создать новый файл и назвать его соответственно тех. заданию. (например page.pug). Скопировать шаблон вида (или из любой рядом лежащей страницы)
+                                    | создать файл и назвать его соответственно тех. заданию. (из этого файла будет происходить компиляция). Скопировать шаблон вида (или из любой рядом лежащей страницы)
                                 code.block.
                                     extends ../layout/layout.pug<br>
                                     block vars<br>
@@ -81,16 +83,24 @@ html(lang="ru-RU")
                                         &nbsp;&nbsp;&nbsp;&nbsp;include ../includes/content-file_name.pug<br>
                                     block footer<br>
                                         &nbsp;&nbsp;&nbsp;&nbsp;include ../includes/footer.pug <br>
-                                .content в папке <code>includes</code> создать контентную часть страницы, которая должна иметь название вида <code>content-file_name.pug</code>
-                                .content 2. Файл стилей для контентной части страницы создается в папке <code>static/import/pages/page.scss</code>
+                                .content
+                                    span.bold 2.
+                                    |  в папке <code>includes</code> создать контентную часть страницы, которая должна иметь название вида <code>content-file_name.pug</code>
+                                .content 
+                                    span.bold 3. 
+                                    |  Файл стилей для контентной части страницы создается в папке <code>static/import/pages/page.scss</code>
                                 .content Если необходимо создание стилей компонента, тогда создается файл в  <code>static/import/components/component.scss</code>
                                 .content В файле <code>main.scss</code> произвести импорт необходимого файла соответственно категории (компонент, страница, шаблон)
 
                             .item
                                 h4(id="item-4") Правила именования элементов
-                                .content Все кастомные классы, написанные верстальщиком записаны через нижнее подчеркивание. Для удобства выделения этих классов программистами.
-                                    |В проекте не используется BEM или любая другая методология названия классов и структуры.
-                                .content Названия идентификаторов - есть отображение их сущности (seller_name_block, purchase_title, etc). Кроме случаев абстракции компонентов, которые будут повторяться.
+                                .content Все кастомные классы, написанные верстальщиком записаны через 
+                                    span.bold нижнее подчеркивание
+                                    |. Для удобства выделения этих классов программистами.
+                                    |В проекте не используется BEM или любая другая сторонняя методология названия классов и структуры.
+                                .content 
+                                    span.bold Названия идентификаторов - есть отображение их сущности 
+                                    | (seller_name_block, purchase_title, etc). Кроме случаев абстракции компонентов, которые будут повторяться.
                                     |В случае когда компонент не отображает содержимого (напрпимер кнопки различного содержания, но одинакового вида: сохранить, отменить, submit), допустимо использовать название цвета.
 
                             .item
@@ -206,7 +216,7 @@ html(lang="ru-RU")
                                         .exercise_code
                                             code.block.
                                                 .form_element<br>
-                                                    &nbsp;&nbsp;label.for_check<br>
+                                                    &nbsp;&nbsp;label.for_check.disabled<br>
                                                         &nbsp;&nbsp;&nbsp;&nbsp;input(type="checkbox" disabled)<br>
                                                         &nbsp;&nbsp;&nbsp;&nbsp;span.text чекбокс disabled
 
@@ -219,7 +229,7 @@ html(lang="ru-RU")
                                         .exercise_code
                                             code.block.
                                                 .form_element<br>
-                                                    &nbsp;&nbsp;label.for_check<br>
+                                                    &nbsp;&nbsp;label.for_check.disabled<br>
                                                         &nbsp;&nbsp;&nbsp;&nbsp;input(type="checkbox" disabled checked)<br>
                                                         &nbsp;&nbsp;&nbsp;&nbsp;span.text чекбокс disabled checked
 
@@ -288,7 +298,7 @@ html(lang="ru-RU")
 
                             .item
                                 h4(id="item-5-3") Табы
-                                .content Для создания собственных табов необходимо ознакомиться с файлом 
+                                .content Для создания табов необходимо ознакомиться с файлом 
                                     code mixins.pug
                                     | и узнать как в целом пишутся миксины в pug + базовые знания JS
                                 .content В функции 
@@ -339,6 +349,10 @@ html(lang="ru-RU")
                                 .content Все новые иконки добавляются в папку 
                                     code svg
                                     |, после чего необходимо произвести сборку проекта, чтобы сформировался спрайт.
+                                h6 Платежные 
+                                .icon_list
+                                    .item
+                                        +icon('alp')
                                 .icon_list
                                     .item
                                         +icon('alp')
@@ -530,5 +544,3 @@ html(lang="ru-RU")
                                 
                                 .content По умолчанию все колонки таблицы делят ширину таблицы поровну. Если одна из колонок получает фиксированную ширину, то остальные колонки 
                                     |будут делить оставшееся место поровну.
-
-            include ../includes/footer.pug   

@@ -6,7 +6,7 @@
     <title>Digiseller</title>
     <link rel="stylesheet" href="css/libs.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/light-theme.css">
+    <link id="color_scheme" rel="stylesheet" href="css/light-theme.css">
     <link rel="shortcut icon" href="img/favicon.ico"><script>window.MSInputMethodContext && document.documentMode && document.write('<link rel="stylesheet" href="css/bootstrap-ie11.min.css"><script src="static/js/ie11-customProperty.js"><\/script><script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js"><\/script><script>!function () { var e, t; ((e = document.createEvent("CustomEvent")).initEvent("Bootstrap", !0, !0), e.preventDefault(), e.defaultPrevented) || (t = Event.prototype.preventDefault, Event.prototype.preventDefault = function () { this.cancelable && (t.call(this), Object.defineProperty(this, "defaultPrevented", { get: function () { return !0 }, configurable: !0 })) }) }();<\/script>');</script>
     <script src="https://cdn.tiny.cloud/1/sqoo5ez8oy5x8bram4focqll8rz90rodp0tusw0e7cytsx6y/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
   </head>
@@ -277,6 +277,8 @@
                           <div class="codeformat">JSON</div>
                           <div class="codeformat active">XML</div>
                         </div>
+                        <!-- тут в общем pug так всрато компилит, что оставляет все пробелы. Надо будет в html убрать все ненужные отступы-->
+                        <!-- при использовании xmp та же ситуация. Можно использовать оба варианта (просто .codepart или .codepart xmp)-->
                         <div class="codepart">
                           {
                           	"retval":"0",
@@ -286,6 +288,149 @@
                           	"img_url":"//shop.digiseller.ru/asp/turing_num.asp?nocash=3021&id=993812"
                           }
                         </div>
+                      </div>
+                    </div>
+                    <div class="form_data_block_item">
+                      <div class="form_data_block_title">Параметры запроса:</div>
+                      <div class="form_data_block_content">
+                        <table class="equal_cells api_table">
+                          <colgroup>
+                            <col style="width: 250px">
+                            <col style="width: 250px">
+                            <col>
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th>Название</th>
+                              <th>Назначение</th>
+                              <th>Примечание</th>
+                            </tr>
+                          </thead>
+                          <tbody> 
+                            <tr>
+                              <td>seller_id</td>
+                              <td>идентификатор продавца</td>
+                              <td>целое число</td>
+                            </tr>
+                            <tr>
+                              <td>timestamp</td>
+                              <td>время запроса</td>
+                              <td>время запроса</td>
+                            </tr>
+                            <tr>
+                              <td>sign	</td>
+                              <td>Подпись</td>
+                              <td>строка, формируется как SHA256 от строки, полученной конкатенацией следующих параметров:<br>- API_GUID продавца (<a class="main_link" href="#">отправляется в WM-сообщении</a>)<br>- timestamp (текущее время)<br>sign=SHA256(API_GUID + timestamp)</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="api_methods_item"> 
+                  <h3>Поиск и проверка платежа по уникальному коду</h3>
+                  <h4>2. Заголовок поменьше</h4>
+                  <div class="form_data_block">
+                    <div class="form_data_block_item">
+                      <div class="form_data_block_title"></div>
+                      <div class="form_data_block_content">
+                        <div class="tab_format">
+                          <div class="codeformat">JSON</div>
+                          <div class="codeformat active">XML</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form_data_block_item">
+                      <div class="form_data_block_title">URL и формат запроса:</div>
+                      <div class="form_data_block_content">
+                        <div class="codepart">https://api.digiseller.ru/api/purchases/unique-code/{unique-code}?token={token} - основной адрес</div>
+                        <div class="codepart">https://oplata.info/api/purchases/unique-code/{unique-code}?token={token} - резервный адрес</div>
+                      </div>
+                    </div>
+                    <div class="form_data_block_item">
+                      <div class="form_data_block_title">Метод:</div>
+                      <div class="form_data_block_content">
+                        <div class="codepart">GET</div>
+                      </div>
+                    </div>
+                    <div class="form_data_block_item">
+                      <div class="form_data_block_title">Заголовки запроса:</div>
+                      <div class="form_data_block_content">
+                        <div class="codepart">Accept: text/xml</div>
+                      </div>
+                    </div>
+                    <div class="form_data_block_item">
+                      <div class="form_data_block_title">Формат запроса JSON:<br><a class="main_link" href="#">пример JSON-ответа</a></div>
+                      <div class="form_data_block_content">
+                        <!-- тут в общем pug так всрато компилит, что оставляет все пробелы. Надо будет в html убрать все ненужные отступы-->
+                        <!-- при использовании xmp та же ситуация. Можно использовать оба варианта (просто .codepart или .codepart xmp)-->
+                        <div class="codepart">
+                          {
+                             "retval": 0,
+                             "retdesc": "",
+                             "inv": 0,
+                             "id_goods": 0,
+                             "amount": 0.0,
+                             "type_curr": "",
+                             "profit": "",
+                             "amount_usd": 0.0,
+                             "date_pay": "",
+                             "email": "",
+                             "agent_id": 0,
+                             "agent_percent": 0,
+                             "unit_goods": 0,
+                             "cnt_goods": 0,
+                             "promo_code": "",
+                             "bonus_code": "",
+                             "cart_uid": "",
+                             "unique_code_state": {
+                             "state": 0,
+                             "date_check": "",
+                             "date_delivery": "",
+                             "date_confirmed": "",
+                             "date_refuted": ""
+                             },
+                             "options":[
+                                {"id": "0", "name": "", "value": ""},
+                                {"id": "0", "name": "", "value": ""}
+                                ...
+                             ]
+                          }
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form_data_block_item">
+                      <div class="form_data_block_title">Параметры запроса:</div>
+                      <div class="form_data_block_content">
+                        <table class="equal_cells api_table">
+                          <colgroup>
+                            <col style="width: 170px">
+                            <col>
+                            <col>
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th>Название</th>
+                              <th>Назначение</th>
+                              <th>Примечание</th>
+                            </tr>
+                          </thead>
+                          <tbody> 
+                            <tr>
+                              <td>retval</td>
+                              <td>код выполнения запроса</td>
+                              <td>0 - запрос выполнен</td>
+                            </tr>
+                            <tr>
+                              <td>timestamp</td>
+                              <td>base64-закодированная строка, содержащая набор параметров, дополнительно переданных с вашего сайта на страницу оплаты oplata.info. Параметры могут нести в себе User ID, значения для отслеживания конверсии оплаты и т.п. После base64_decode, строка будет выглядеть примерно так: "param1=value1&param2=value2&..."
+                                <div class="api_table_warning">настоятельно рекомендуем сохранять это значение в базе и каждый раз проверять его на уникальность, чтобы избежать двойных начислений</div>
+                              </td>
+                              <td>пример:<br>bWVtYmVyX2lkPTIzNDE2NTQ0JnNvdXJjZT1yZWd1bGFyJmxheW91dF9pZD0xNSZnYV9jbGllbnRfaWQ9MjI2ODYyNDMyLjE0NjY2Njg5ODkmZm9ybV9pZD03<br><br>После base64_decode:<br>member_id=23416544&source=regular&layout_id=15&ga_client_id=226862432.1466668989&form_id=7</td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </div>
                   </div>

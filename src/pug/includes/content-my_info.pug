@@ -9,7 +9,7 @@ main
                                 .my_info_graph_canvas
                                     .my_info_graph_canvas_header
                                         .my_info_graph_canvas_title Валюта
-                                        +select(['USD', 'RUB', 'EUR', 'UAH'])
+                                        +select(['USD', 'RUB', 'EUR', 'UAH'], 'sm')
                                     canvas
                                 .my_info_graph_stat
                                     table
@@ -21,7 +21,7 @@ main
                                         thead
                                             tr
                                                 th
-                                                    +select(['День', 'Неделя', 'Месяц'])
+                                                    +select(['День', 'Неделя', 'Месяц'], 'sm')
                                                 th.align_right
                                                     +icon('square-blue')
                                                     | Всего продаж
@@ -102,7 +102,7 @@ main
                                         thead
                                             tr
                                                 th
-                                                    +select(['День', 'Неделя', 'Месяц'])
+                                                    +select(['День', 'Неделя', 'Месяц'], 'sm')
                                                 th.align_right
                                                     +icon('square-blue')
                                                     | Уникальных показов
@@ -129,7 +129,7 @@ main
                                         |Статистика показов товаров ведется только для товаров, размещённых на торговых площадках.
 
                 +section-content('', 'Мой магазин')
-                    table.my_shop
+                    table.equal_cells
                         colgroup
                             col(style="width: 170px")
                             col
@@ -220,15 +220,15 @@ main
                                     a.main_link(href="#") задать вопрос
 
                 +section-content('', 'Моя площадка')
-                    table.my_trading_floor
+                    table.equal_cells
                         colgroup
                             col(style="width: 135px")
                             col
                             col
                             col
-                            col(style="width: 45px")
-                            col(style="width: 45px")
-                            col
+                            col(style="width: 40px")
+                            col(style="width: 40px")
+                            col(style="width: 100px")
                             col(style="width: 200px")
                             col(style="width: 130px")
                         thead
