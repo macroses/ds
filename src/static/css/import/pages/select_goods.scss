@@ -65,32 +65,38 @@
         .collapse_btn {
             background: $main_links_color;
             border-radius: 4px;
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             @include box(18px);
             margin-right: 5px;
-            margin-bottom: -4px;
+            margin-bottom: -0px;
             position: relative;
-
+            border: 0;
             &:after {
                 content: '+';
+                display: inline-flex;
+                align-items: center;
+                text-align: center;
                 font-size: 14px;
                 color: #fff;
-                font-weight: 600;
-            }
-        }
-
-        &.collapsed {
-            .collapse_btn:after {
-                content: '-';
-                font-size: 14px;
-                color: #fff;
-                font-weight: 600;
             }
         }
     }
 
     .alert_box {
         margin-top: 10px;
+    }
+
+    .collapse_toggle[aria-expanded=true] {
+        .collapse_btn:after {
+            content: '-';
+                display: inline-flex;
+                align-items: center;
+                text-align: center;
+                font-size: 14px;
+                color: #fff;
+        }
     }
 }
 

@@ -21,361 +21,458 @@ main
         +tab-list(['Basic', 'Parameters', 'Gallery', ['Content', 10], 'Payment', 'Sales', 'Discount', 'HTML code', 'Notifications'], 0)
             +tab('Basic', 'active')
                 .content_box
-                    .form_data_block
-                        .form_data_block_item
-                            .form_data_block_title Тип товара:
-                            .form_data_block_content Уникальный товар с фиксированной ценой
-                        .form_data_block_item
-                            .form_data_block_title Содержимое товара:
-                            .form_data_block_content Уникальный текст
-                        .form_data_block_item
-                            .form_data_block_title Размещение товара:
-                            .form_data_block_content
-                                .goods_path_box
-                                    ul.goods_path_list
-                                        li Мой магазин
-                                        li Ужасы
-                                            a.main_link(href="#") изменить
-                                    ul.goods_path_list
-                                        li Мой магазин
-                                        li Тестирование [виджета]
-                                            a.main_link(href="#") изменить
-                                    button.btn.btn_gray добавить товар на торговую площадку
-                        .form_data_block_item
-                            .form_data_block_title 
-                                span.star *
-                                |Название товара:
-                            .form_data_block_content
-                                .goods_name_field
-                                    .form_element.counter_box(data-placement="top" data-toggle="tooltip" title="В поле должно быть указано название товара на русском языке")
-                                        input(type="text" maxlength="55")
-                                        .counter осталось символов: 55
-                                            span.lang
-                                                +icon('rus')
-                                    .form_element.counter_box(data-placement="top" data-toggle="tooltip" title="В поле должно быть указано название товара на английском языке")
-                                        input(type="text" maxlength="55")
-                                        .counter осталось символов: 55
+                    .description
+                        .form_data_block
+                            .form_data_block_item
+                                .form_data_block_title Тип товара:
+                                .form_data_block_content Уникальный товар с фиксированной ценой
+                            .form_data_block_item
+                                .form_data_block_title Содержимое товара:
+                                .form_data_block_content Уникальный текст
+                            .form_data_block_item
+                                .form_data_block_title Размещение товара:
+                                .form_data_block_content
+                                    .goods_path_box
+                                        ul.goods_path_list
+                                            li Мой магазин
+                                            li Ужасы
+                                                a.main_link(href="#") изменить
+                                        ul.goods_path_list
+                                            li Мой магазин
+                                            li Тестирование [виджета]
+                                                a.main_link(href="#") изменить
+                                        button.btn.btn_gray добавить товар на торговую площадку
+                            .form_data_block_item
+                                .form_data_block_title 
+                                    span.star *
+                                    |Название товара:
+                                .form_data_block_content
+                                    .goods_name_field
+                                        .form_element.counter_box(data-placement="top" data-toggle="tooltip" title="В поле должно быть указано название товара на русском языке")
+                                            input(type="text" maxlength="55")
+                                            .counter осталось символов: 55
+                                                span.lang
+                                                    +icon('rus')
+                                        .form_element.counter_box(data-placement="top" data-toggle="tooltip" title="В поле должно быть указано название товара на английском языке")
+                                            input(type="text" maxlength="55")
+                                            .counter осталось символов: 55
+                                                span.lang
+                                                    +icon('eng')
+                                        button.btn.btn_gray
                                             span.lang
                                                 +icon('eng')
-                                    button.btn.btn_gray
-                                        span.lang
-                                            +icon('eng')
-                                        |добавить английский перевод
-                                    .hint Название не должно содержать посторонних символов или фраз. Например,<br> символов : 
-                                        span.bold _ # * ! + % 
-                                        |и т.п., а также слов 
-                                        span.bold new, ok, распродажа 
-                                        |и т.п.
+                                            |добавить английский перевод
+                                        .hint Название не должно содержать посторонних символов или фраз. Например,<br> символов : 
+                                            span.bold _ # * ! + % 
+                                            |и т.п., а также слов 
+                                            span.bold new, ok, распродажа 
+                                            |и т.п.
 
-                        .form_data_block_item
-                            .form_data_block_title
-                                span.star *
-                                |Цена:
-                            .form_data_block_content
-                                .form_element.inline
-                                    input(type="number")
-                                    select
-                                        option(value="0") RUB
-                                        option(value="1") USD
-                                        option(value="2") EUR
-                                        option(value="3") UAH
-                                    .hint При продаже товара на ваш счёт будет зачислено: <br>
-                                        |0,04 WMZ 1 WMR 0,04 WME 0,41 WMU 
-                                        a.main_link(href="#") изменить курс RUB
-
-                        .form_data_block_item
-                            .form_data_block_title Партнерская программа:
-                            .form_data_block_content
-                                .form_element.inline
-                                    select
-                                        option(value="0" selected) отчисление агентам 
-                                        option(value="1") отчисление только избранным партнерам
-                                        option(value="2") товар не участвует в партнерской программе
-                                    .comission_agent
+                            .form_data_block_item
+                                .form_data_block_title
+                                    span.star *
+                                    |Цена:
+                                .form_data_block_content
+                                    .form_element.inline
                                         input(type="number")
-                                        span % от стоимости товара (минимум 1%)
-
-                        .form_data_block_item
-                            .form_data_block_title Бонус:
-                            .form_data_block_content
-                                .gift_block
-                                    .form_element
-                                        label.for_check
-                                            input(type="checkbox" data-toggle="collapse" data-target="#gift_block" aria-expanded="false" aria-controls="gift_block" role="checked")
-                                            span.text за положительный отзыв о товаре
-                                    .collapse.form_data_block_collapse(id="gift_block") 
-                                        .form_element.inline
-                                            label Я предоставлю покупателю подарочный сертификат в размере 
-                                            input(type="number")
-                                            span % от оплаченной им суммы
-                                        .alert_box.info
-                                            |После получения товара покупателю будет предложено оставить положительный отзыв и в качестве вознаграждения за это получить 
-                                            |подарочный сертификат на заданную сумму. Средства на выпуск (обеспечение) сертификата будут взяты из средств, оплаченных покупателем. 
-                                            |Обращаем ваше внимание, что размер бонуса не может превышать 
-                                            span.bold 30% 
-                                            |от суммы, оплаченной покупателем.
-                                
-                        .form_data_block_item
-                            .form_data_block_title Промо-код:
-                            .form_data_block_content
-                                .gift_block
-                                    .form_element
-                                        label.for_check
-                                            input(type="checkbox" data-toggle="collapse" data-target="#promo_block" aria-expanded="false" aria-controls="promo_block" role="checked")
-                                            span.text автоматически выдать покупателю после оплаты
-                                    .alert_box.additional_info У вас нет выпусков промо-кодов. 
-                                        a.main_link(href="#") Создайте выпуск
-                                        |, чтобы получить возможность автоматически выдавать промо-коды покупателям. Выпуск может содержать один код, новые будут добавляться автоматически.
-                                    .collapse.form_data_block_collapse(id="promo_block") 
-                                        .form_element.inline
-                                            label промо-код должен быть автоматически создан и добавлен в мой выпуск
-                                            select
-                                                option(value="0") выпуск 1
-                                                option(value="1") выпуск 2
-                                                option(value="2") выпуск 3
-                                            a.main_link(href="#") Новый выпуск
-
-                        .form_data_block_item
-                            .form_data_block_title Возврат платежа:
-                            .form_data_block_content
-                                .gift_block
-                                    .form_element.inline
-                                        label.for_check
-                                            input(type="checkbox" data-toggle="collapse" data-target="#return_block" aria-expanded="false" aria-controls="return_block")
-                                            span.text я гарантирую возврат оплаченных средств покупателю в течение
                                         select
-                                            option(value="0" selected) 0
-                                            option(value="1") 1
-                                            option(value="2") 2
-                                            option(value="3") 3
-                                            option(value="4") 4
-                                            option(value="5") 5
-                                            option(value="6") 6
-                                            option(value="7") 7
-                                            option(value="8") 8
-                                            option(value="9") 9
-                                            option(value="10") 10
-                                            option(value="11") 11
-                                            option(value="12") 12
-                                            option(value="13") 13
-                                            option(value="14") 14
-                                            option(value="15") 15
-                                            option(value="16") 16
-                                            option(value="17") 17
-                                            option(value="18") 18
-                                            option(value="19") 19
-                                            option(value="20") 20
-                                            option(value="21") 21
-                                            option(value="22") 22
-                                            option(value="23") 23
-                                            option(value="24") 24
-                                            option(value="25") 25
-                                            option(value="26") 26
-                                            option(value="27") 27
-                                            option(value="28") 28
-                                            option(value="29") 29
-                                            option(value="30") 30
-                                        span дней
-                                    .collapse.form_data_block_collapse(id="return_block") 
-                                        .alert_box.info Покупатель получит право 
-                                            span.bold самостоятельно и без вашего ведома 
-                                            |осуществить возврат оплаченных им средств за товар в установленный вами срок. На это время средства оплаченные покупателем резервируются на вашем личном счете.
+                                            option(value="0") RUB
+                                            option(value="1") USD
+                                            option(value="2") EUR
+                                            option(value="3") UAH
+                                        .hint При продаже товара на ваш счёт будет зачислено: <br>
+                                            |0,04 WMZ 1 WMR 0,04 WME 0,41 WMU 
+                                            a.main_link(href="#") изменить курс RUB
+                            .form_data_block_item
+                                .form_data_block_title
+                                    span.star *
+                                    |Цена:
+                                .form_data_block_content.vertical
+                                    .description_price 
+                                        .title Укажите единицу товара, её название (во множественном числе) и цену:
+                                        .description_price_table 
+                                            .item
+                                                .title Единица Товара:
+                                                .form_element 
+                                                    select.count
+                                                        option(value="0") 1
+                                                        option(value="1") 1'000'000'000(1 млрд.)
+                                                .hint например
+                                                    span.bold 100
+                                            .item
+                                                .title Название единицы:
+                                                .form_element 
+                                                    input(type="text")
+                                                .hint например
+                                                    span.bold GOLD 
+                                            .item
+                                                span.sep = 
+                                            .item
+                                                .title Цена:
+                                                .form_element 
+                                                    input(type="text")
+                                                    select
+                                                        option(value="0") USD
+                                                        option(value="1") RUB
+                                                .hint например 
+                                                    span.bold 0,1234
+                                                    br
+                                                    |разрешено указывать до 4-х знаков после запятой
+                                        .description_price_discounts
+                                            .title Вы можете установить скидки в зависимости от количества оплачиваемых единиц товара:
+                                            .description_price_discounts_list
+                                                .item более
+                                                    .form_element 
+                                                        input(type="text" value="10" disabled)
+                                                    .value_from_price_table x1000 
+                                                    span.bold единиц товара
+                                                    |, скидка
+                                                    .form_element 
+                                                        input(type="text" disabled)
+                                                    | %  
+                                                    button.btn.btn_gray 
+                                                        span.minus
+                                                .item более
+                                                    .form_element 
+                                                        input(type="text" value="10" disabled)
+                                                    .value_from_price_table x1000 
+                                                    span.bold единиц товара
+                                                    |, скидка
+                                                    .form_element 
+                                                        input(type="text" disabled)
+                                                    | %  
+                                                    button.btn.btn_gray 
+                                                        span.minus
+                                                .item более
+                                                    .form_element 
+                                                        input(type="text" value="10")
+                                                    .value_from_price_table x1000 
+                                                    span.bold единиц товара
+                                                    |, скидка
+                                                    .form_element 
+                                                        input(type="text")
+                                                    | %  
+                                                    button.btn.btn_gray 
+                                                        +icon('plus_button')
+                                        
+                                                
 
-                        .form_data_block_item
-                            .form_data_block_title Проверка уникального кода:
-                            .form_data_block_content
-                                .check_code_block
-                                    .form_element
-                                        label.for_radio
-                                            input(type="radio", name="check_code" checked)
-                                            span.text ручная
-                                        .hint (после оплаты покупатель сообщает вам уникальный код, вы проверяете его через форму в самом верху)
-                                    .form_element.inline
-                                        label.for_radio
-                                            input(type="radio", name="check_code" data-toggle="collapse" data-target="#check_code_block" aria-expanded="false" aria-controls="check_code_block")
-                                            span.text автоматическая
-                                        .hint (после оплаты покупатель будет автоматически перенаправлен на указанную вами web-страницу с кодом в строке запроса)
-                                    
-                                    .collapse(id="check_code_block")
-                                        .check_code_auto
+                            .form_data_block_item
+                                .form_data_block_title Ограничения:
+                                .form_data_block_content
+                                    .restrictions_block
+                                        .form_group
+                                            .title По количеству:
                                             .form_element
-                                                input(type="text" placeholder="http://")
-                                            .alert_box.additional_info 
-                                                |На указанный вами адрес (URL) система автоматически направит покупателя сразу после завершения им платежа. 
-                                                |Уникальный код будет добавлен к указанному URL в качестве GET-параметра 
-                                                span.bold uniquecode 
-                                                |(например, http://мой.сайт/моя_страница?
-                                                span.bold uniquecode=XXXXXXXXXXXXXXXX). 
-                                                |С помощью 
-                                                a.main_link(href="#") API 
-                                                |вы можете проверить его подлинность и получить все основные реквизиты платежа для завершения сделки на вашем сайте.<br>
-                                                br
-                                                |Если URL не указан или на момент завершения платежа URL будет недоступен, покупатель получит уникальный код на сайте 
-                                                a.main_link Oplata.Info
-                                                |. Ему будет рекомендовано связаться с вами, используя 
-                                                a.main_link(href="#") контактные данные
-                                                |, и сообщить данный код, который вы проверите через 
-                                                a.main_link(href="#") поиск
-                                                |.
+                                                label.for_radio
+                                                    input(type="radio" name="filter")
+                                                    span.text отсутствуют
+                                            .form_element
+                                                label.for_radio
+                                                    input(type="radio" name="filter")
+                                                    span.text по минимальному и (или) максимальному количеству единиц
+                                            .form_element
+                                                label.for_radio
+                                                    input(type="radio" name="filter")
+                                                    span.text редлагать только фиксированные значения количества единиц
                                             .form_element
                                                 label.for_check
-                                                    input(type="checkbox" data-toggle="collapse" data-target="#add_params" aria-expanded="false" aria-controls="add_params" role="checked")
-                                                    span.text я буду передавать на страницу оплаты свои дополнительные параметры
-                                            .alert_box.additional_info
-                                                |Кроме уникального кода, к указанному вами адресу будут добавлены все дополнительные параметры, которые вы передали в GET-запросе на 
-                                                a.main_link(href="#") страницу оплаты
-                                                |. Например, вы можете передать идентификатор зарегистрированного у вас пользователя или его логин. 
-                                                |Тогда, в случае сбоя, наша система дополнительно обратится с запросом на указанный вами URL и вы сможете произвести зачисление (учет покупки)
-                                            
-                                            .collapse(id="add_params")
-                                                .add_new_info_list
-                                                    ul.new_info_list
-                                                        li.new_info_item
-                                                            .form_element
-                                                                input(type="text" value="параметр 1" readonly)
-                                                                button.btn.btn_gray
-                                                                    span.minus
-                                                        li.new_info_item
-                                                            .form_element
-                                                                input(type="text" value="параметр 2" readonly)
-                                                                button.btn.btn_gray
-                                                                    span.minus
-                                                    .form_element
-                                                        input(type="text" placeholder="название параметра")
-                                                        button.btn.btn_gray
-                                                            +icon('plus_button')
-                                                    .title При отсутствии моих дополнительных параметров на странице оплаты :
-                                                    .form_element
-                                                        label.for_radio
-                                                            input(type="radio", name="continue_pay" checked)
-                                                            span.text разрешать продолжать оплату
-                                                    .form_element
-                                                        label.for_radio
-                                                            input(type="radio", name="continue_pay")
-                                                            span.text возвращать покупателя на
-                                                    .form_element
-                                                        input(type="text" placeholder="http://")
+                                                    input(type="checkbox" name="filter")
+                                                    span.text разрешаю указывать только целые значения количества единиц товара
 
-
-
-                        .form_data_block_item
-                            .form_data_block_title 
-                                span.star *
-                                |Описание товара:
-                            .form_data_block_content
-                                .text_block
-                                    .form_element
-                                        textarea
-                                            |Табы "Холостяк" - ЛСП, Feduk, Егор Крид (AkTabs.ru
-                                        span.lang(data-placement="top" data-toggle="tooltip" title="В поле должно быть указано название товара на русском языке")
-                                            +icon('rus')
-                                    .form_element
-                                        textarea
-                                        span.lang(data-placement="top" data-toggle="tooltip" title="В поле должно быть указано название товара на английском языке")
-                                            +icon('eng')
-                                    .alert_box.info Описание товара не должно содержать ссылок на любые другие товары продавца.  Допустимые теги - &#60;delivery&#62;особые условия доставки&#60;/delivery&#62; и &#60;attention&#62;важная информация&#60;/attention&#62;
-
-                        .form_data_block_item
-                            .form_data_block_title Дополнительная информация:
-                            .form_data_block_content
-                                .text_block
-                                    .form_element
-                                        textarea
-                                            |Табы "Холостяк" - ЛСП, Feduk, Егор Крид (AkTabs.ru
-                                        span.lang(data-placement="top" data-toggle="tooltip" title="В поле должно быть указано название товара на русском языке")
-                                            +icon('rus')
-                                    .form_element
-                                        textarea
-                                        span.lang(data-placement="top" data-toggle="tooltip" title="В поле должно быть указано название товара на английском языке")
-                                            +icon('eng')
-                                    .alert_box.warning Наличие перевода на английском на площадке Plati.Market является обязательным условием
-                                    .alert_box.info Текст не должен содержать партнерские ссылки.  Допустимые теги - &#60;delivery&#62;особые условия доставки&#60;/delivery&#62; и &#60;attention&#62;важная информация&#60;/attention&#62;
-
-                        .form_data_block_item
-                            .form_data_block_title Бонус-товар:
-                            .form_data_block_content
-                                .text_block
+                            .form_data_block_item
+                                .form_data_block_title  Партнерская программа:
+                                .form_data_block_content
                                     .form_element.inline
-                                        label.for_check
-                                            input(type="checkbox")
-                                            span.text предоставить покупателю в качестве подарка один из моих товаров
-                                        // хэлпер .hidden
-                                        select.hidden
-                                            option(value="0" selected) -
-                                            option(value="1") товар 2
-                                            option(value="2") товар 3
-                                            option(value="3") товар 3
-                                    
-                                    .alert_box.info В качестве подарка не могут быть предоставлены уникальные коды, автоматически создаваемые системой Digiseller, а так же товары в виде формы для заполнения регистрационных данных.
-                                
-                        .form_data_block_item
-                            .form_data_block_title Инструкция по использованию товара:
-                            .form_data_block_content
-                                .text_block
-                                    .form_element.inline
-                                        label.for_check
-                                            input(type="checkbox" data-toggle="collapse" data-target="#instruction_block" aria-expanded="false" aria-controls="instruction_block" role="checked")
-                                            span.text предоставить покупателю на странице описания покупки
-                                        // хелпер .hidden Для селекта добавить, когда чекбокс НЕ чекнут
                                         select
-                                            option(value="0" selected) в виде ссылки
-                                            option(value="1") в виде текста
-                                    .collapse(id="instruction_block")
-                                        // в виде ссылки
-                                        .instrtuctions
-                                            .form_element(data-placement="top" data-toggle="tooltip" title="В поле должна быть указаны ссылка на страницу с инструкцией на русском языке")
-                                                input(type="text" placeholder="http://")
-                                                span.lang
-                                                    +icon('rus')
-                                            .form_element(data-placement="top" data-toggle="tooltip" title="В поле должна быть указаны ссылка на страницу с инструкцией на английском языке")
-                                                input(type="text" placeholder="http://")
-                                                span.lang
-                                                    +icon('eng')
-                                            .alert_box.additional_info Покупатель перейдет на указанную страницу после нажатия на соответствующую кнопку
-                                        // в виде текста
-                                        .text_block
-                                            .form_element
-                                                textarea
-                                                span.lang(data-placement="top" data-toggle="tooltip" title="Инструкция (если необходима) должна быть указана на русском языке")
-                                                    +icon('rus')
-                                            .form_element
-                                                textarea
-                                                span.lang(data-placement="top" data-toggle="tooltip" title="Инструкция (если необходима) должна быть указана на английском языке")
-                                                    +icon('eng')
-                                            .alert_box.warning Наличие перевода на английском на площадке Plati.Market является обязательным условием
-                                            .alert_box.info Текст будет показан покупателю на странице описания покупки после нажатия на соответствующую кнопку и в письме с содержимым покупки.
+                                            option(value="0" selected) отчисление агентам 
+                                            option(value="1") отчисление только избранным партнерам
+                                            option(value="2") товар не участвует в партнерской программе
+                                        .comission_agent
+                                            input(type="number")
+                                            span % от стоимости товара (минимум 1%)
 
-                        .form_data_block_item
-                            .form_data_block_title Адрес доставки:
-                            .form_data_block_content
-                                .text_block
-                                    .form_element.inline
-                                        label.for_check
-                                            input(type="checkbox")
-                                            span.text перед оплатой покупатель должен указать адрес доставки
-                                    .alert_box.info
-                                        span.bold Внимание! 
-                                        |Этот флаг следует включать только если товар или какая-то его часть требует физической доставки.
-                        
-                        .form_data_block_item
-                            .form_data_block_title Отображение числа продаж:
-                            .form_data_block_content
-                                .text_block
-                                    .form_element
-                                        input(type="text")
-                                        // открывашку списка повесил на фокус по инпуту
-                                        ul.sales_count_list
-                                            li показывать
-                                            li не показывать
-                                            li 10
-                                            li 50
-                                            li 100
-                                            li 200
-                                            li 500
-                                    .alert_box.info Пустое поле - показывать; -1 - скрывать; любое другое число N>=0 - не показывать больше чем N
-                        
-                        .form_data_block_item
-                            .form_data_block_title
-                            .form_data_block_content
-                                button.btn.btn_blue сохранить
+                            .form_data_block_item
+                                .form_data_block_title Бонус:
+                                .form_data_block_content
+                                    .gift_block
+                                        .form_element
+                                            label.for_check
+                                                input(type="checkbox" data-toggle="collapse" data-target="#gift_block" aria-expanded="false" aria-controls="gift_block" role="checked")
+                                                span.text за положительный отзыв о товаре
+                                        .collapse.form_data_block_collapse(id="gift_block") 
+                                            .form_element.inline
+                                                label Я предоставлю покупателю подарочный сертификат в размере 
+                                                input(type="number")
+                                                span % от оплаченной им суммы
+                                            .alert_box.info
+                                                |После получения товара покупателю будет предложено оставить положительный отзыв и в качестве вознаграждения за это получить 
+                                                |подарочный сертификат на заданную сумму. Средства на выпуск (обеспечение) сертификата будут взяты из средств, оплаченных покупателем. 
+                                                |Обращаем ваше внимание, что размер бонуса не может превышать 
+                                                span.bold 30% 
+                                                |от суммы, оплаченной покупателем.
+                                    
+                            .form_data_block_item
+                                .form_data_block_title Промо-код:
+                                .form_data_block_content
+                                    .gift_block
+                                        .form_element
+                                            label.for_check
+                                                input(type="checkbox" data-toggle="collapse" data-target="#promo_block" aria-expanded="false" aria-controls="promo_block" role="checked")
+                                                span.text автоматически выдать покупателю после оплаты
+                                        .alert_box.additional_info У вас нет выпусков промо-кодов. 
+                                            a.main_link(href="#") Создайте выпуск
+                                            |, чтобы получить возможность автоматически выдавать промо-коды покупателям. Выпуск может содержать один код, новые будут добавляться автоматически.
+                                        .collapse.form_data_block_collapse(id="promo_block") 
+                                            .form_element.inline
+                                                label промо-код должен быть автоматически создан и добавлен в мой выпуск
+                                                select
+                                                    option(value="0") выпуск 1
+                                                    option(value="1") выпуск 2
+                                                    option(value="2") выпуск 3
+                                                a.main_link(href="#") Новый выпуск
+
+                            .form_data_block_item
+                                .form_data_block_title Возврат платежа:
+                                .form_data_block_content
+                                    .gift_block
+                                        .form_element.inline
+                                            label.for_check
+                                                input(type="checkbox" data-toggle="collapse" data-target="#return_block" aria-expanded="false" aria-controls="return_block")
+                                                span.text я гарантирую возврат оплаченных средств покупателю в течение
+                                            select
+                                                option(value="0" selected) 0
+                                                option(value="1") 1
+                                                option(value="2") 2
+                                                option(value="3") 3
+                                                option(value="4") 4
+                                                option(value="5") 5
+                                                option(value="6") 6
+                                                option(value="7") 7
+                                                option(value="8") 8
+                                                option(value="9") 9
+                                                option(value="10") 10
+                                                option(value="11") 11
+                                                option(value="12") 12
+                                                option(value="13") 13
+                                                option(value="14") 14
+                                                option(value="15") 15
+                                                option(value="16") 16
+                                                option(value="17") 17
+                                                option(value="18") 18
+                                                option(value="19") 19
+                                                option(value="20") 20
+                                                option(value="21") 21
+                                                option(value="22") 22
+                                                option(value="23") 23
+                                                option(value="24") 24
+                                                option(value="25") 25
+                                                option(value="26") 26
+                                                option(value="27") 27
+                                                option(value="28") 28
+                                                option(value="29") 29
+                                                option(value="30") 30
+                                            span дней
+                                        .collapse.form_data_block_collapse(id="return_block") 
+                                            .alert_box.info Покупатель получит право 
+                                                span.bold самостоятельно и без вашего ведома 
+                                                |осуществить возврат оплаченных им средств за товар в установленный вами срок. На это время средства оплаченные покупателем резервируются на вашем личном счете.
+
+                            .form_data_block_item
+                                .form_data_block_title Проверка уникального кода:
+                                .form_data_block_content
+                                    .check_code_block
+                                        .form_element
+                                            label.for_radio
+                                                input(type="radio", name="check_code" checked)
+                                                span.text ручная
+                                            .hint (после оплаты покупатель сообщает вам уникальный код, вы проверяете его через форму в самом верху)
+                                        .form_element.inline
+                                            label.for_radio
+                                                input(type="radio", name="check_code" data-toggle="collapse" data-target="#check_code_block" aria-expanded="false" aria-controls="check_code_block")
+                                                span.text автоматическая
+                                            .hint (после оплаты покупатель будет автоматически перенаправлен на указанную вами web-страницу с кодом в строке запроса)
+                                        
+                                        .collapse(id="check_code_block")
+                                            .check_code_auto
+                                                .form_element
+                                                    input(type="text" placeholder="http://")
+                                                .alert_box.additional_info 
+                                                    |На указанный вами адрес (URL) система автоматически направит покупателя сразу после завершения им платежа. 
+                                                    |Уникальный код будет добавлен к указанному URL в качестве GET-параметра 
+                                                    span.bold uniquecode 
+                                                    |(например, http://мой.сайт/моя_страница?
+                                                    span.bold uniquecode=XXXXXXXXXXXXXXXX). 
+                                                    |С помощью 
+                                                    a.main_link(href="#") API 
+                                                    |вы можете проверить его подлинность и получить все основные реквизиты платежа для завершения сделки на вашем сайте.<br>
+                                                    br
+                                                    |Если URL не указан или на момент завершения платежа URL будет недоступен, покупатель получит уникальный код на сайте 
+                                                    a.main_link Oplata.Info
+                                                    |. Ему будет рекомендовано связаться с вами, используя 
+                                                    a.main_link(href="#") контактные данные
+                                                    |, и сообщить данный код, который вы проверите через 
+                                                    a.main_link(href="#") поиск
+                                                    |.
+                                                .form_element
+                                                    label.for_check
+                                                        input(type="checkbox" data-toggle="collapse" data-target="#add_params" aria-expanded="false" aria-controls="add_params" role="checked")
+                                                        span.text я буду передавать на страницу оплаты свои дополнительные параметры
+                                                .alert_box.additional_info
+                                                    |Кроме уникального кода, к указанному вами адресу будут добавлены все дополнительные параметры, которые вы передали в GET-запросе на 
+                                                    a.main_link(href="#") страницу оплаты
+                                                    |. Например, вы можете передать идентификатор зарегистрированного у вас пользователя или его логин. 
+                                                    |Тогда, в случае сбоя, наша система дополнительно обратится с запросом на указанный вами URL и вы сможете произвести зачисление (учет покупки)
+                                                
+                                                .collapse(id="add_params")
+                                                    .add_new_info_list
+                                                        ul.new_info_list
+                                                            li.new_info_item
+                                                                .form_element
+                                                                    input(type="text" value="параметр 1" readonly)
+                                                                    button.btn.btn_gray
+                                                                        span.minus
+                                                            li.new_info_item
+                                                                .form_element
+                                                                    input(type="text" value="параметр 2" readonly)
+                                                                    button.btn.btn_gray
+                                                                        span.minus
+                                                        .form_element
+                                                            input(type="text" placeholder="название параметра")
+                                                            button.btn.btn_gray
+                                                                +icon('plus_button')
+                                                        .title При отсутствии моих дополнительных параметров на странице оплаты :
+                                                        .form_element
+                                                            label.for_radio
+                                                                input(type="radio", name="continue_pay" checked)
+                                                                span.text разрешать продолжать оплату
+                                                        .form_element
+                                                            label.for_radio
+                                                                input(type="radio", name="continue_pay")
+                                                                span.text возвращать покупателя на
+                                                        .form_element
+                                                            input(type="text" placeholder="http://")
+
+
+
+                            .form_data_block_item
+                                .form_data_block_title 
+                                    span.star *
+                                    |Описание товара:
+                                .form_data_block_content
+                                    .text_block
+                                        .form_element
+                                            textarea
+                                                |Табы "Холостяк" - ЛСП, Feduk, Егор Крид (AkTabs.ru
+                                            span.lang(data-placement="top" data-toggle="tooltip" title="В поле должно быть указано название товара на русском языке")
+                                                +icon('rus')
+                                        .form_element
+                                            textarea
+                                            span.lang(data-placement="top" data-toggle="tooltip" title="В поле должно быть указано название товара на английском языке")
+                                                +icon('eng')
+                                        .alert_box.info Описание товара не должно содержать ссылок на любые другие товары продавца.  Допустимые теги - &#60;delivery&#62;особые условия доставки&#60;/delivery&#62; и &#60;attention&#62;важная информация&#60;/attention&#62;
+
+                            .form_data_block_item
+                                .form_data_block_title Дополнительная информация:
+                                .form_data_block_content
+                                    .text_block
+                                        .form_element
+                                            textarea
+                                                |Табы "Холостяк" - ЛСП, Feduk, Егор Крид (AkTabs.ru
+                                            span.lang(data-placement="top" data-toggle="tooltip" title="В поле должно быть указано название товара на русском языке")
+                                                +icon('rus')
+                                        .form_element
+                                            textarea
+                                            span.lang(data-placement="top" data-toggle="tooltip" title="В поле должно быть указано название товара на английском языке")
+                                                +icon('eng')
+                                        .alert_box.warning Наличие перевода на английском на площадке Plati.Market является обязательным условием
+                                        .alert_box.info Текст не должен содержать партнерские ссылки.  Допустимые теги - &#60;delivery&#62;особые условия доставки&#60;/delivery&#62; и &#60;attention&#62;важная информация&#60;/attention&#62;
+
+                            .form_data_block_item
+                                .form_data_block_title Бонус-товар:
+                                .form_data_block_content
+                                    .text_block
+                                        .form_element.inline
+                                            label.for_check
+                                                input(type="checkbox")
+                                                span.text предоставить покупателю в качестве подарка один из моих товаров
+                                            // хэлпер .hidden
+                                            select.hidden
+                                                option(value="0" selected) -
+                                                option(value="1") товар 2
+                                                option(value="2") товар 3
+                                                option(value="3") товар 3
+                                        
+                                        .alert_box.info В качестве подарка не могут быть предоставлены уникальные коды, автоматически создаваемые системой Digiseller, а так же товары в виде формы для заполнения регистрационных данных.
+                                    
+                            .form_data_block_item
+                                .form_data_block_title Инструкция по использованию товара:
+                                .form_data_block_content
+                                    .text_block
+                                        .form_element.inline
+                                            label.for_check
+                                                input(type="checkbox" data-toggle="collapse" data-target="#instruction_block" aria-expanded="false" aria-controls="instruction_block" role="checked")
+                                                span.text предоставить покупателю на странице описания покупки
+                                            // хелпер .hidden Для селекта добавить, когда чекбокс НЕ чекнут
+                                            select
+                                                option(value="0" selected) в виде ссылки
+                                                option(value="1") в виде текста
+                                        .collapse(id="instruction_block")
+                                            // в виде ссылки
+                                            .instrtuctions
+                                                .form_element(data-placement="top" data-toggle="tooltip" title="В поле должна быть указаны ссылка на страницу с инструкцией на русском языке")
+                                                    input(type="text" placeholder="http://")
+                                                    span.lang
+                                                        +icon('rus')
+                                                .form_element(data-placement="top" data-toggle="tooltip" title="В поле должна быть указаны ссылка на страницу с инструкцией на английском языке")
+                                                    input(type="text" placeholder="http://")
+                                                    span.lang
+                                                        +icon('eng')
+                                                .alert_box.additional_info Покупатель перейдет на указанную страницу после нажатия на соответствующую кнопку
+                                            // в виде текста
+                                            .text_block
+                                                .form_element
+                                                    textarea
+                                                    span.lang(data-placement="top" data-toggle="tooltip" title="Инструкция (если необходима) должна быть указана на русском языке")
+                                                        +icon('rus')
+                                                .form_element
+                                                    textarea
+                                                    span.lang(data-placement="top" data-toggle="tooltip" title="Инструкция (если необходима) должна быть указана на английском языке")
+                                                        +icon('eng')
+                                                .alert_box.warning Наличие перевода на английском на площадке Plati.Market является обязательным условием
+                                                .alert_box.info Текст будет показан покупателю на странице описания покупки после нажатия на соответствующую кнопку и в письме с содержимым покупки.
+
+                            .form_data_block_item
+                                .form_data_block_title Адрес доставки:
+                                .form_data_block_content
+                                    .text_block
+                                        .form_element.inline
+                                            label.for_check
+                                                input(type="checkbox")
+                                                span.text перед оплатой покупатель должен указать адрес доставки
+                                        .alert_box.info
+                                            span.bold Внимание! 
+                                            |Этот флаг следует включать только если товар или какая-то его часть требует физической доставки.
+                            
+                            .form_data_block_item
+                                .form_data_block_title Отображение числа продаж:
+                                .form_data_block_content
+                                    .text_block
+                                        .form_element
+                                            input(type="text")
+                                            // открывашку списка повесил на фокус по инпуту
+                                            ul.sales_count_list
+                                                li показывать
+                                                li не показывать
+                                                li 10
+                                                li 50
+                                                li 100
+                                                li 200
+                                                li 500
+                                        .alert_box.info Пустое поле - показывать; -1 - скрывать; любое другое число N>=0 - не показывать больше чем N
+                            
+                            .form_data_block_item
+                                .form_data_block_title
+                                .form_data_block_content
+                                    button.btn.btn_blue сохранить
 

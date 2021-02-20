@@ -25,7 +25,7 @@ header {
     a {
         color: #e1f5fe;
         &.active {
-            color: $title_color;
+            color: $title_all_color;
             background: #f0faff;
         }
         &:hover {
@@ -36,9 +36,8 @@ header {
 
 .main_nav_bottom {
     background: #f0faff;
-    color: $title_color;
     a {
-        color: $title_color;
+        color: $footer_bg;
         &.active {
             background: #455a64;
             color: #eceff1;

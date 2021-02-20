@@ -9,9 +9,7 @@ button.btn, input[type="submit"].btn, a.btn, label.btn {
     min-height: 34px;
     max-height: 34px;
     min-width: 34px;
-    &:focus {
-        box-shadow: none;
-    }
+    
     &.btn_blue {
         color: #fff;
         position: relative;
@@ -36,6 +34,12 @@ button.btn, input[type="submit"].btn, a.btn, label.btn {
         &:hover:after {
             opacity: 1;
         }
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 4px 0 $main_links_color;
+            border-color: $main_links_color;
+        }
     }
     &.btn_gray {
         background: linear-gradient(to bottom, #fefefe, #edf0f2);
@@ -59,6 +63,12 @@ button.btn, input[type="submit"].btn, a.btn, label.btn {
         }
         &:hover:after {
             opacity: 1;
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 4px 0 $main_links_color;
+            border-color: $main_links_color;
         }
     }
     &.delete_btn {
