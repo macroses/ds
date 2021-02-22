@@ -84,7 +84,12 @@ button.btn, input[type="submit"].btn, a.btn, label.btn {
         border: solid 1px #cfd8dc;
     }
 
-    
+    &.sm_elem {
+        min-height: 28px!important;
+        max-height: 28px!important;
+        min-width: 34px;
+        padding: 0 5px;   
+    }
 }
 
 

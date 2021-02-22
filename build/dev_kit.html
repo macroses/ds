@@ -314,6 +314,44 @@
                 </div>
               </div>
               <div class="item">
+                <h5>Элементы формы низкие</h5>
+                <div class="content">Для создания элементов формы низкого размера (селекты, текстовые инпуты в шапках таблиц, кнопки), к элементу добавляется класс <code>.sm_elem</code></div>
+                <div class="exercises_list">
+                  <div class="exercise_item">
+                    <div class="exercise_item_content">
+                      <div class="form_element">
+                        <select class="sm_elem">
+                          <option value="0">test</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="exercise_code"><code class="block">
+                        .form_element<br>
+                            &nbsp;&nbsp;select.sm_elem<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;option(value="0") test</code></div>
+                  </div>
+                  <div class="exercise_item">
+                    <div class="exercise_item_content">
+                      <div class="form_element">
+                        <input class="sm_elem" type="text">
+                      </div>
+                    </div>
+                    <div class="exercise_code"><code class="block">
+                        .form_element<br>
+                            &nbsp;&nbsp;input.sm_elem(type="text")</code></div>
+                  </div>
+                  <div class="exercise_item">
+                    <div class="exercise_item_content">
+                      <button class="btn btn_gray sm_elem">Test button</button>
+                    </div>
+                    <div class="exercise_code"><code class="block">
+                        button.btn.btn_gray.sm_elem Test button
+                        
+                        </code></div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
                 <h4 id="item-5-3">Табы</h4>
                 <div class="content">Для создания табов необходимо ознакомиться с файлом <code>mixins.pug</code>и узнать как в целом пишутся миксины в pug + базовые знания JS</div>
                 <div class="content">В функции <code>+tab()</code>первый аргумент - массив названий вкладок, второй - числовое значение активной вкладки (начиная с нуля)</div>

@@ -297,6 +297,37 @@ html(lang="ru-RU")
 
 
                             .item
+                                h5 Элементы формы низкие
+                                .content Для создания элементов формы низкого размера (селекты, текстовые инпуты в шапках таблиц, кнопки), к элементу добавляется класс 
+                                    code .sm_elem
+                                .exercises_list
+                                    .exercise_item
+                                        .exercise_item_content
+                                            .form_element
+                                                select.sm_elem
+                                                    option(value="0") test
+                                        .exercise_code
+                                            code.block.
+                                                .form_element<br>
+                                                    &nbsp;&nbsp;select.sm_elem<br>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;option(value="0") test
+                                    .exercise_item
+                                        .exercise_item_content
+                                            .form_element
+                                                input.sm_elem(type="text")
+                                        .exercise_code
+                                            code.block.
+                                                .form_element<br>
+                                                    &nbsp;&nbsp;input.sm_elem(type="text")
+                                    .exercise_item
+                                        .exercise_item_content
+                                            button.btn.btn_gray.sm_elem Test button
+                                        .exercise_code
+                                            code.block.
+                                                button.btn.btn_gray.sm_elem Test button
+
+
+                            .item
                                 h4(id="item-5-3") Табы
                                 .content Для создания табов необходимо ознакомиться с файлом 
                                     code mixins.pug

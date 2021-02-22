@@ -1,5 +1,18 @@
 main
     .box
+        .content_box
+            .page_nav
+                ul.breadcrumbs_list
+                    li.breadcrumb_item.current
+                        .breadcrumb_item_name Новый товар 
+                        .breadcrumb_item_price 14895 
+                            span RUB
+                .page_nav_item
+                    .prev  предыдущий товар
+                    .next  следующий товар
+
+
+
         +tab-list(['Basic', 'Parameters', 'Gallery', 'Content', 'Payment', 'Sales', 'Discount', 'HTML_code', 'Notifications'], 0)
             +tab('Basic', 'acitve')
                 .content_box

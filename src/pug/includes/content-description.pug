@@ -171,10 +171,39 @@ main
                                                 label.for_radio
                                                     input(type="radio" name="filter")
                                                     span.text по минимальному и (или) максимальному количеству единиц
+                                            .restriction_hidden_box
+                                                .item минимально можно купить: 
+                                                    .form_element 
+                                                        input(type="text")
+                                                    .value_from_price_table x1000 
+                                                    span.bold единиц товара
+                                                .item максимально можно купить: 
+                                                    .form_element 
+                                                        input(type="text")
+                                                    .value_from_price_table x1000 
+                                                    span.bold единиц товара
                                             .form_element
                                                 label.for_radio
                                                     input(type="radio" name="filter")
-                                                    span.text редлагать только фиксированные значения количества единиц
+                                                    span.text предлагать только фиксированные значения количества единиц
+                                            .restriction_hidden_box
+                                                .item
+                                                    .form_element 
+                                                        input(type="text")
+                                                    .value_from_price_table x1000 
+                                                    span.bold единиц товара  
+                                                    |   (цена: 
+                                                    span.bold 11,64  
+                                                    |  USD)
+                                                    button.btn.btn_gray 
+                                                        span.minus
+                                                .item
+                                                    .form_element 
+                                                        input(type="text")
+                                                    .value_from_price_table x1000 
+                                                    span.bold единиц товара
+                                                    button.btn.btn_gray 
+                                                        +icon('plus_button')
                                             .form_element
                                                 label.for_check
                                                     input(type="checkbox" name="filter")

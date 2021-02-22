@@ -63,43 +63,43 @@ main
                         th.align_center Продано
                         th Содержимое
                         th.align_right
-                            button.btn.btn_gray(data-placement="top" data-toggle="tooltip" title="удалить выбранные товары")
+                            button.btn.btn_gray.sm_elem(data-placement="top" data-toggle="tooltip" title="удалить выбранные товары")
                                 +icon('delete-btn')
                     tr.head_selection
                         th
-                            .form_element(data-placement="top" data-toggle="tooltip" title="фильтр по состоянию оплаты (вкл/выкл)")
-                                select.focused
+                            .form_element(title="фильтр по состоянию оплаты (вкл/выкл)")
+                                select.sm_elem.focused
                                     option(value="0") -
                                     option(value="1") вкл
                                     option(value="2") выкл
                                     option(value="3") выкл (с подписчиками)
                         th
-                            .form_element(data-placement="top" data-toggle="tooltip" title="фильтр по ID товара")
-                                input.focused(type="text")
+                            .form_element(title="фильтр по ID товара")
+                                input.sm_elem.focused(type="text")
                                 span.remove
                                     +icon('remove_input_data')
                         th
                         th
-                            .form_element(data-placement="top" data-toggle="tooltip" title="фильтр по названию товара")
-                                input.focused(type="text")
+                            .form_element(title="фильтр по названию товара")
+                                input.sm_elem.focused(type="text")
                                 span.remove
                                     +icon('remove_input_data')
                         th
-                            .form_element(data-placement="top" data-toggle="tooltip" title="фильтр по площадкам")
-                                select
+                            .form_element(title="фильтр по площадкам")
+                                select.sm_elem
                                     option(value="0") -
                                     option(value="1") Мой магазин
                         th
                         th
-                            .form_element(data-placement="top" data-toggle="tooltip" title="фильтр по наличию скидки")
-                                select
+                            .form_element(title="фильтр по наличию скидки")
+                                select.sm_elem
                                     option(value="0") -
                                     option(value="1") да
                                     option(value="2") нет
                         th
                         th
-                            .form_element(data-placement="top" data-toggle="tooltip" title="фильтр по наличию товара")
-                                select
+                            .form_element(title="фильтр по наличию товара")
+                                select.sm_elem
                                     option(value="0") -
                                     option(value="1") да
                                     option(value="2") нет
@@ -115,7 +115,7 @@ main
                                             span.text только предзаказы
                                     span.sep Цена задана в:
                                     .form_element
-                                        select
+                                        select.sm_elem
                                             option(value="0") -
                                             option(value="1") USD
                                             option(value="2") RUB

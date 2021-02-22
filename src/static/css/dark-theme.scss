@@ -1287,5 +1287,9 @@ button.btn, input[type="submit"].btn, a.btn, label.btn {
 }
 
 .api_table th {
-    background: map-get($dark_bg, nav);;
+    background: map-get($dark_bg, nav);
+}
+
+.description_price_discounts .description_price_discounts_list .item:not(:last-child) {
+    border-color: map-get($dark_bg, nav);
 }
