@@ -12,6 +12,9 @@
   </head>
   <body>
     <button id="change_scheme">поменять цвет</button>
+    <!-- err для ошибок, info для остальных-->
+    <!-- active для появвления-->
+    <div class="alert_popup err">Введите номер телефона!</div>
     <div class="wrapper">
       <header>
         <div class="box">
@@ -240,7 +243,7 @@
               <div class="catalog">
                 <div class="fieldset">
                   <div class="legend">Каталог</div>
-                  <ul class="catalog_list">
+                  <ul class="catalog_list" id="catalog_list">
                     <li class="main_page">
                       <div class="catalog_list_item active">
                         <div class="catalog_list_item_icons"><span class="icon_item">

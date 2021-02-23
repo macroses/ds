@@ -12,6 +12,9 @@
   </head>
   <body>
     <button id="change_scheme">поменять цвет</button>
+    <!-- err для ошибок, info для остальных-->
+    <!-- active для появвления-->
+    <div class="alert_popup err">Введите номер телефона!</div>
     <div class="wrapper">
       <header>
         <div class="box">
@@ -327,6 +330,10 @@
                   </div>
                 </div>
                 <div class="debates_textarea">
+                  <div class="answerer_typing"> <span class="typing_view_box">
+                      <svg class="pic-pen ">
+                        <use xlink:href="img/svg/sprite.svg#pen"></use>
+                      </svg>Вам пишет собеседник</span></div>
                   <div class="form_element">
                     <textarea placeholder="Новое сообщение"></textarea>
                   </div>

@@ -12,6 +12,9 @@
   </head>
   <body>
     <button id="change_scheme">поменять цвет</button>
+    <!-- err для ошибок, info для остальных-->
+    <!-- active для появвления-->
+    <div class="alert_popup err">Введите номер телефона!</div>
     <div class="wrapper">
       <header>
         <div class="box">
@@ -345,6 +348,33 @@
                     <div class="my_security_ip">
                       <div class="invalid_ip"><span>Ошибка: </span>неверный формат IP-адреса</div>
                     </div>
+                    <table class="equal_cells"> 
+                      <colgroup>
+                        <col>
+                        <col>
+                        <col>
+                        <col style="width: 45px">
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th>IP-адрес</th>
+                          <th>Маска подсети</th>
+                          <th>Комментарий</th>
+                          <th> </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>91.227.52.20</td>
+                          <td>255.255.255.255</td>
+                          <td>внутренний</td>
+                          <td> 
+                            <button class="btn btn_gray sm_elem"> <span class="minus"></span></button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div class="alert_box warning"> <span class="bold">Внимание!</span> Ваш текущий IP адрес: 109.252.60.138 — этот адрес <span class="bold">не попадает</span> в список разрешенных.</div>
                   </div>
                 </div>
               </div>

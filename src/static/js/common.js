@@ -78,7 +78,7 @@ dragula([document.querySelector('.pm_sort_list')]);
 dragula([document.querySelector('.myshop_table tbody')]);
 
 // для вложенных списков
-dragula([].slice.apply(document.querySelectorAll('.catalog_list')));
+dragula([].slice.apply(document.querySelectorAll('#catalog_list')));
 
 // календарь
 flatpickr.localize(flatpickr.l10ns.ru);

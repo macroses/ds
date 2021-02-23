@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="color-scheme" content="dark light">
+    <title>Digiseller</title>
+    <link rel="stylesheet" href="css/libs.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link id="color_scheme" rel="stylesheet" href="css/light-theme.css">
+    <link rel="shortcut icon" href="img/favicon.ico"><script>window.MSInputMethodContext && document.documentMode && document.write('<link rel="stylesheet" href="css/bootstrap-ie11.min.css"><script src="static/js/ie11-customProperty.js"><\/script><script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js"><\/script><script>!function () { var e, t; ((e = document.createEvent("CustomEvent")).initEvent("Bootstrap", !0, !0), e.preventDefault(), e.defaultPrevented) || (t = Event.prototype.preventDefault, Event.prototype.preventDefault = function () { this.cancelable && (t.call(this), Object.defineProperty(this, "defaultPrevented", { get: function () { return !0 }, configurable: !0 })) }) }();<\/script>');</script>
+    <script src="https://cdn.tiny.cloud/1/sqoo5ez8oy5x8bram4focqll8rz90rodp0tusw0e7cytsx6y/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+  </head>
+  <body>
+    <button id="change_scheme">поменять цвет</button>
+    <!-- err для ошибок, info для остальных-->
+    <!-- active для появвления-->
+    <div class="alert_popup err">Введите номер телефона!</div>
+    <div class="wrapper">
+      <header>
+        <div class="box">
+          <div class="header_top"><a class="header_logo" href="/">
+              <svg class="pic-digiseller-logo ">
+                <use xlink:href="img/svg/sprite.svg#digiseller-logo"></use>
+              </svg></a>
+            <div class="header_search">
+              <div class="form_element">
+                <input type="text" autofocus placeholder="Товар, счет, уникальный код, email ...">
+              </div>
+              <div class="search_results">
+                <ul class="header_search_results_list">
+                  <li>
+                    <div class="section_title">Счет</div><a class="search_results_item-content" href="#">
+                      <div class="search_results_item-icon">
+                        <svg class="pic-invoice ">
+                          <use xlink:href="img/svg/sprite.svg#invoice"></use>
+                        </svg>
+                      </div><span class="search_results_item-text">eFootball PES 2021 ✅SEASON UPDATE STANDARD EDITION</span></a><a class="search_results_item-content" href="#">
+                      <div class="search_results_item-icon">
+                        <svg class="pic-search-res-customer ">
+                          <use xlink:href="img/svg/sprite.svg#search-res-customer"></use>
+                        </svg>
+                      </div><span class="search_results_item-text">mail@mail.com</span></a><a class="search_results_item-content" href="#">
+                      <div class="search_results_item-icon">
+                        <svg class="pic-good ">
+                          <use xlink:href="img/svg/sprite.svg#good"></use>
+                        </svg>
+                      </div><span class="search_results_item-text">Товар там какой то</span></a><a class="search_results_item-content" href="#">
+                      <div class="search_results_item-icon">
+                        <svg class="pic-invoice ">
+                          <use xlink:href="img/svg/sprite.svg#invoice"></use>
+                        </svg>
+                      </div><span class="search_results_item-text">GUID там какой то</span></a>
+                  </li>
+                  <li>
+                    <div class="section_title">Счет</div><a class="search_results_item-content" href="#">
+                      <div class="search_results_item-icon">
+                        <svg class="pic-invoice ">
+                          <use xlink:href="img/svg/sprite.svg#invoice"></use>
+                        </svg>
+                      </div><span class="search_results_item-text">eFootball PES 2021 ✅SEASON UPDATE STANDARD EDITION</span></a><a class="search_results_item-content" href="#">
+                      <div class="search_results_item-icon">
+                        <svg class="pic-search-res-customer ">
+                          <use xlink:href="img/svg/sprite.svg#search-res-customer"></use>
+                        </svg>
+                      </div><span class="search_results_item-text">mail@mail.com</span></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="header_top_nav">
+              <ul class="header_top_nav-list">
+                <li id="notice_item">
+                  <svg class="pic-notice ">
+                    <use xlink:href="img/svg/sprite.svg#notice"></use>
+                  </svg><span class="nav_list_item-title">Уведомления</span>
+                  <div class="notice_counter_box styled">
+                    <div class="notice_counter-item important">95</div>
+                    <div class="notice_counter-item">64</div>
+                  </div>
+                  <div class="notice_popup_wrap" id="notice_popup">
+                    <div class="notice_popup_box">
+                      <div class="triangle"></div>
+                      <div class="notice_popup_top">
+                        <div class="notice_popup_top-title">Список уведомлений</div>
+                        <div class="notice_popup-top_chck">
+                          <label>
+                            <input type="checkbox"><span>только важные</span>
+                          </label>
+                        </div>
+                      </div>
+                      <ul class="notice_popup_list">
+                        <!-- loader-->
+                        <li class="notice_popup_list-item">
+                          <div class="spinner-border" role="status"><span class="visually-hidden">Loading...</span></div>
+                        </li>
+                        <!-- важные-->
+                        <li class="notice_popup_list-item">
+                          <div class="item_top">
+                            <div class="item_top-title">
+                              <svg class="pic-notice-popup-important ">
+                                <use xlink:href="img/svg/sprite.svg#notice-popup-important"></use>
+                              </svg>Digiseller
+                            </div>
+                            <div class="item_top-additional">
+                              <div class="item_top-date">28.07.2020 14:56</div>
+                              <div class="item_top-settings"><a href="/" title="настройка уведомлений">
+                                  <svg class="pic-popup-settings ">
+                                    <use xlink:href="img/svg/sprite.svg#popup-settings"></use>
+                                  </svg></a></div>
+                            </div>
+                          </div>
+                          <div class="item_content">
+                            <div class="item_content_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo veritatis impedit iste assumenda non ipsum officia cum similique, ipsa repellat. <a href="/">Lorem ipsum dolor sit amet.</a></div>
+                            <div class="item_content_details"><a href="#">Подробнее</a></div>
+                          </div>
+                        </li>
+                        <!-- неважные-->
+                        <li class="notice_popup_list-item">
+                          <div class="item_top">
+                            <div class="item_top-title">
+                              <svg class="pic-notice-popup ">
+                                <use xlink:href="img/svg/sprite.svg#notice-popup"></use>
+                              </svg>Партнерская программа
+                            </div>
+                            <div class="item_top-additional">
+                              <div class="item_top-date">28.07.2020 14:56</div>
+                            </div>
+                          </div>
+                          <div class="item_content">
+                            <div class="item_content_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo veritatis impedit iste assumenda non ipsum officia cum similique, ipsa repellat. <a href="/">Lorem ipsum dolor sit amet.</a></div>
+                            <div class="item_content_details"><a href="#">Подробнее</a></div>
+                          </div>
+                        </li>
+                        <!-- непрочитанные-->
+                        <li class="notice_popup_list-item unread_notice">
+                          <div class="item_top">
+                            <div class="item_top-title">
+                              <svg class="pic-notice-popup ">
+                                <use xlink:href="img/svg/sprite.svg#notice-popup"></use>
+                              </svg>Партнерская программа
+                            </div>
+                            <div class="item_top-additional">
+                              <div class="item_top-date">28.07.2020 14:56</div>
+                            </div>
+                          </div>
+                          <div class="item_content">
+                            <div class="item_content_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo veritatis impedit iste assumenda non ipsum officia cum similique, ipsa repellat. <a href="/">Lorem ipsum dolor sit amet.</a></div>
+                            <div class="item_content_details"><a href="#">Подробнее</a></div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="sep">
+                  <svg class="pic-messages ">
+                    <use xlink:href="img/svg/sprite.svg#messages"></use>
+                  </svg><span class="nav_list_item-title">Сообщения</span>
+                  <div class="notice_counter_box">
+                    <div class="notice_counter-item">0</div>
+                  </div>
+                </li>
+                <li>
+                  <svg class="pic-responses ">
+                    <use xlink:href="img/svg/sprite.svg#responses"></use>
+                  </svg><span class="nav_list_item-title">Претенизии</span>
+                  <div class="notice_counter_box">
+                    <div class="notice_counter-item">0</div>
+                  </div>
+                </li>
+                <li>
+                  <svg class="pic-offer ">
+                    <use xlink:href="img/svg/sprite.svg#offer"></use>
+                  </svg><span class="nav_list_item-title">Предложения</span>
+                  <div class="notice_counter_box">
+                    <div class="notice_counter-item new_notice">999</div>
+                  </div>
+                </li>
+                <li> 
+                  <svg class="pic-chats ">
+                    <use xlink:href="img/svg/sprite.svg#chats"></use>
+                  </svg><span class="nav_list_item-title">Чаты</span>
+                  <div class="notice_counter_box">
+                    <div class="notice_counter-item">0</div>
+                  </div>
+                </li>
+                <li class="sep">
+                  <svg class="pic-logout ">
+                    <use xlink:href="img/svg/sprite.svg#logout"></use>
+                  </svg><span class="nav_list_item-title">Выход</span>
+                </li>
+                <li class="lang"><a class="active" href="/">
+                    <svg class="pic-rus ">
+                      <use xlink:href="img/svg/sprite.svg#rus"></use>
+                    </svg>рус</a><a href="/">
+                    <svg class="pic-eng ">
+                      <use xlink:href="img/svg/sprite.svg#eng"></use>
+                    </svg>eng</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <nav class="main_nav">
+        <div class="main_nav_top">
+          <div class="box">
+            <ul>
+              <li><a href="#">Товары</a></li>
+              <li><a href="#">Магазин</a></li>
+              <li><a href="#">Рекламные места</a></li>
+              <li><a href="#">Бухгалтерия</a></li>
+              <li><a class="active" href="#">Личный кабинет</a></li>
+              <li><a href="#">Партнерская программа</a></li>
+              <li><a href="#">Описание сервиса</a></li>
+              <li><a href="#">Торговая площадка</a></li>
+              <li><a class="question_mark" href="#" data-placement="top" data-toggle="tooltip" title="задать вопрос">
+                  <svg class="pic-question_mark ">
+                    <use xlink:href="img/svg/sprite.svg#question_mark"></use>
+                  </svg></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="main_nav_bottom">
+          <div class="box">
+            <ul>
+              <li><a class="active" href="my_info.html">Детали</a></li>
+              <li><a href="messages.html">Переписка</a></li>
+              <li><a href="news.html">Новости</a></li>
+              <li><a href="my_security.html">Безопасность</a></li>
+              <li><a href="space_rent.html">Дисковое пространство</a></li>
+              <li><a href="notify_settings.html">Уведомления</a></li>
+              <li><a href="staff.html">Сотрудники</a></li>
+              <li><a href="mailings.html">Рассылки</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <main>
+        <div class="box"> 
+          <div class="content_box"> 
+            <div class="pages_list"><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/account.html">account</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/account[paypal].html">account[paypal]</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/account[purse].html">account[purse]</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/account[robokassa].html">account[robokassa]</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/agent_new_main.html">agent_new_main</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/agent_new_product[main].html">agent_new_product[main]</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/agent_new_settings.html">agent_new_settings</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/agent_new_statistics_detailed.html">agent_new_statistics_detailed</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/agent_new_statistics_view.html">agent_new_statistics_view</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/agent_new_statistics.html">agent_new_statistics</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/analytics.html">analytics</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/api_general.html">api_general</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/api.html">api.html</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/black_list.html">black_list</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/buy_limits.html">buy_limits</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/cancellation.html">cancellation</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/checkticket.html">checkticket</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/clone_product.html">clone_product</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/comission_template.html">comission_template</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/comission_templates.html">comission_templates</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/create_task.html">create_task</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/curr2_rates.html">curr2_rates</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/day_reklama.html">day_reklama</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/description.html">description</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/discount_good.html">discount_good</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/discounts_personal.html">discounts_personal</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/discounts.html">discounts</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/edit_catalog.html">edit_catalog</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/editing_offsales_task.html">editing_offsales_task</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/exaccess.html">exaccess</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/exaccess[favicon].html">exaccess[favicon]</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/exaccess[settings].html">exaccess[settings]</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/exchange_answer.html">exchange_answer</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/exchange_detail.html">exchange_detail</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/exchange.html">exchange</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/export_catalog.html">export_catalog</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/export_excel.html">export_excel</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/export_graph.html">export_graph</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/fillup.html">fillup</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/good_link.html">good_link</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/good.html">good</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/goods.html">goods</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/individual_offer_page.html">individual_offer_page</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/mailings.html">mailings</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/messages.html">messages</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/my_info.html">my_info</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/my_reklama.html">my_reklama</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/my_reklama_adv.html">my_reklama_adv</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/my_security.html">my_security</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/myshop.html">myshop</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/myshop[category_html].html">myshop[category_html]</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/myshop[category_img].html">myshop[category_img]</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/myshop[category].html">myshop[category]</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/myshop[view_css].html">myshop[view_css]</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/myshop[view_html].html">myshop[view_html]</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/myshop[view_logo].html">myshop[view_logo]</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/myshop[view_settings].html">myshop[view_settings]</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/news.html">news</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/notify_goods.html">notify_goods</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/notify_settings.html">notify_settings</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/options.html">options</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/partner_info.html">partner_info</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/partner_offer.html">partner_offer</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/partner_sale.html">partner_sale</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/partners.html">partners</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/partners[favorite].html">partners[favorite]</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/partners[offers].html">partners[offers]</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/partners[reports].html">partners[reports]</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/partners[settings].html">partners[settings]</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/partners[shop].html">partners[shop]</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/payment.html">payment</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/place_code.html">place_code</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/place_cp.html">place_cp</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/place_new.html">place_new</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/place_options.html">place_options</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/place.html">place</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/places_history.html">places_history</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/places.html">places</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/pm_ds.html">pm_ds</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/pm_ik.html">pm_ik</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/pm_paymaster.html">pm_paymaster</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/pm_paypal.html">pm_paypal</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/pm_robox.html">pm_robox</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/pm_settings.html">pm_settings</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/pm_wm.html">pm_wm</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/pm_yandex.html">pm_yandex</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/pm.html">pm</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/preview.html">preview</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/price_change.html">price_change</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/promocodes.html">promocodes</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/promocodes[codes].html">promocodes[codes]</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/promocodes[goods].html">promocodes[goods]</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/promocodes[reports].html">promocodes[reports]</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/purchases_buyer.html">purchases_buyer</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/purchases_detail.html">purchases_detail</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/purchases_detail[id].html">purchases_detail[id]</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/purchases_inv_detail[debate].html">purchases_inv_detail[debate]</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/purchases_inv_detail[invoice].html">purchases_inv_detail[invoice]</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/purchases_inv_detail[response].html">purchases_inv_detail[response]</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/purchases.html">purchases</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/responses.html">responses</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/scheduler.html">scheduler</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/search.html">search</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/select_catalog.html">select_catalog</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/select_goods.html">select_goods</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/seller_data_wm.html">seller_data_wm</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/seller_data.html">seller_data</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/shop_rent.html">shop_rent</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/space_rent.html">space_rent</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/staff_new.html">staff_new</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/staff.html">staff</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/stat_move.html">stat_move</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/task_log_offsales.html">task_log_offsales</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/task_logs.html">task_logs</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/tasks.html">tasks</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/transfers_detail.html">transfers_detail</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/transfers.html">transfers</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/vk_publish_wiki.html">vk_publish_wiki</a><a class="main_link" target="_blank" href="https://sandbox.digiseller.ru/inside/old/newtest/build/vk_publish.html">vk_publish</a></div>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <div class="box">
+          <div class="footer_content">
+            <div class="copy">Copyright ©2020 Fincom Teh Ltd.<br>Designed by <a href="#">Computing Forces</a></div>
+            <div class="footer_nav"><a href="#">API</a><a href="#">Telegram Bot</a><a href="#">Чат</a></div><a class="footer_logo" href="#">
+              <svg class="pic-googleplay ">
+                <use xlink:href="img/svg/sprite.svg#googleplay"></use>
+              </svg></a>
+          </div>
+        </div>
+      </footer>
+      <script src="static/js/libs.min.js"></script>
+      <script src="js/svgxuse.min.js" defer></script>
+      <script src="https://cdn.polyfill.io/v3/polyfill.min.js?features=Array.from%2Ces5%2Ces6%2CSymbol%2CSymbol.iterator%2CDOMTokenList%2CObject.assign%2CCustomEvent%2CElement.prototype.classList%2CElement.prototype.closest%2CElement.prototype.dataset%2CArray.prototype.find%2CArray.prototype.includes"></script>
+      <script src="js/common.js"></script>
+    </div>
+  </body>
+</html>

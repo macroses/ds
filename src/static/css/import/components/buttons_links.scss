@@ -5,6 +5,7 @@ button.btn, input[type="submit"].btn, a.btn, label.btn {
     border-radius: $border-rad;
     padding: 7px 10px;
     outline: 0;
+    overflow: hidden;
 
     min-height: 34px;
     max-height: 34px;
@@ -87,7 +88,7 @@ button.btn, input[type="submit"].btn, a.btn, label.btn {
     &.sm_elem {
         min-height: 28px!important;
         max-height: 28px!important;
-        min-width: 34px;
+        min-width: 28px;
         padding: 0 5px;   
     }
 }
