@@ -215,17 +215,17 @@ main
                                     th Название товара
                                     th.align_center Оплата
                                     th 
-                                        button.btn.btn_gray
+                                        button.btn.btn_gray.sm_elem
                                             +icon('delete-btn')
                                 tr.head_selection
                                     th 
                                         .form_element
-                                            input.focused(type="text")
+                                            input.sm_elem.focused(type="text")
                                             span.remove
                                                 +icon('remove_input_data')
                                     th
                                         .form_element
-                                            input(type="text")
+                                            input.sm_elem(type="text")
                                     th
                                     th
                             tbody
@@ -235,7 +235,7 @@ main
                                         a.main_link(href="#") Название товара
                                     td 
                                         .form_element.start
-                                            select
+                                            select.sm_elem
                                                 option(value="0") Запустить продажи
                                                 option(value="1") Остановить продажи
                                     td
@@ -249,7 +249,7 @@ main
                                         a.main_link(href="#") Название товара
                                     td 
                                         .form_element.stop
-                                            select
+                                            select.sm_elem
                                                 option(value="0") Запустить продажи
                                                 option(value="1" selected) Остановить продажи
                                     td

@@ -356,16 +356,16 @@ main
                                     th
                                     th 
                                         .form_element
-                                            input(type="text")
+                                            input.sm_elem(type="text")
                                     th 
                                         .form_element
-                                            input.focused(type="text")
+                                            input.sm_elem.focused(type="text")
                                             span.remove
                                                 +icon('remove_input_data')
                                     th 
-                                        +select(['все валюты', 'в USD', 'в RUR', 'в EUR', 'в UAH'])
+                                        +select(['все валюты', 'в USD', 'в RUR', 'в EUR', 'в UAH'], 'sm')
                                     th 
-                                        +select(['все площадки', 'Мой магазин', 'Plati.Market'])
+                                        +select(['все площадки', 'Мой магазин', 'Plati.Market'], 'sm')
                             tbody
                                 tr
                                     td

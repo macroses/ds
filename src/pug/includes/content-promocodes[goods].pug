@@ -41,15 +41,15 @@ main
                                         tr.head_selection
                                             th
                                                 .form_element
-                                                    input.focused(type="text")
+                                                    input.sm_elem.focused(type="text")
                                                     span.remove
                                                         +icon('remove_input_data')
                                             th
                                                 .form_element
-                                                    input(type="text")
+                                                    input.sm_elem(type="text")
                                             th
                                             th
-                                                +select(['Все магазины', 'Собственный магазин', 'Plati.Market'])
+                                                +select(['Все магазины', 'Собственный магазин', 'Plati.Market'], 'sm')
                                             th.align_center 1 мес.
                                             th.align_center 6 мес.
                                             th.align_center 12 мес.
@@ -78,7 +78,7 @@ main
                                             td.align_center 0
                                             td.align_center 
                                                 .form_element
-                                                    input(type="text")
+                                                    input.sm_elem(type="text")
                                         tr
                                             td 1234567
                                             td 
@@ -90,7 +90,7 @@ main
                                             td.align_center 0
                                             td.align_center 
                                                 .form_element
-                                                    input(type="text" disabled value="55")
+                                                    input.sm_elem(type="text" disabled value="55")
 
                                 +pagination('Товаров на странице:')
                                 .promocodes_goods_form.all_goods_promo

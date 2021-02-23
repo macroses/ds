@@ -29,6 +29,7 @@ table {
     .head_selection {
         th {
             padding-top: 10px;
+            padding: 5px 8px 5px 0px;
         }
     }
 
@@ -230,6 +231,10 @@ tbody {
     justify-content: space-between;
     &:not(:last-child) {
         margin-bottom: 5px;
+    }
+
+    .title {
+        color: $titles_color;
     }
 }
 

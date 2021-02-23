@@ -32,7 +32,7 @@ main
                                     th 
                                         .head_inline_cell
                                             |Цена
-                                            +select(['RUB', 'USD', 'EUR', 'UAH'])
+                                            +select(['RUB', 'USD', 'EUR', 'UAH'], 'sm')
                                     th.align_center Комиссия
                                     th.align_center Инд. комиссия
                                     th Вознаграждение
@@ -41,32 +41,32 @@ main
                                 tr.head_selection 
                                     th 
                                         .form_element
-                                            input.focused(type="text")
+                                            input.sm_elem.focused(type="text")
                                             span.remove
                                                 +icon('remove_input_data')
                                     th 
                                         .form_element
-                                            input.focused(type="text")
+                                            input.sm_elem.focused(type="text")
                                             span.remove
                                                 +icon('remove_input_data')
                                     th 
                                         .head_inline_cell
                                             .form_element 
-                                                input(type="text" placeholder="от")
+                                                input.sm_elem(type="text" placeholder="от")
                                             |  –  
                                             .form_element 
-                                                input(type="text" placeholder="до")
+                                                input.sm_elem(type="text" placeholder="до")
                                     th 
                                     th 
                                         .head_inline_cell
                                             .form_element 
-                                                input(type="text" placeholder="от")
+                                                input.sm_elem(type="text" placeholder="от")
                                             |  – 
                                             .form_element 
-                                                input(type="text" placeholder="до")
+                                                input.sm_elem(type="text" placeholder="до")
                                     th 
                                     th 
-                                        +select(['Все магазины', 'Не все магазины'])
+                                        +select(['Все магазины', 'Не все магазины'], 'sm')
                                     th 
                                 tr
                                     th.filter_cell(colspan="8")
@@ -85,13 +85,13 @@ main
                                 tr
                                     td 1234567
                                     td 
-                                       a.main_link(href="#") Test Good Test Good Test Good Test Good Test Good Test Good Test Good Test Good Test Good Test Good Test Good Test Good Test Good Test Good Test Good  
+                                        a.main_link(href="#") Test Good Test Good Test Good Test Good Test Good Test Good Test Good Test Good Test Good Test Good Test Good Test Good Test Good Test Good Test Good  
                                     td.align_center 93.3
                                         small RUB
                                     td.align_center.positive 0%
                                     td.positive 
                                         .form_element 
-                                            input(type="text")
+                                            input.sm_elem(type="text")
                                             |  %
                                     td.align_center 93
                                         small RUB
@@ -100,13 +100,13 @@ main
                                 tr
                                     td 1234567
                                     td 
-                                       a.main_link(href="#") Test  
+                                        a.main_link(href="#") Test  
                                     td.align_center 93.3
                                         small RUB
                                     td.align_center.negative 0%
                                     td.negative 
                                         .form_element 
-                                            input(type="text")
+                                            input.sm_elem(type="text")
                                             |  %
                                     td.align_center 93
                                         small RUB
