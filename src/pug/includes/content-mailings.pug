@@ -109,7 +109,7 @@ main
                     .form_element
                         // dates
                         label Дата:
-                        input.dates(type="text")
+                        input.dates#mailingsDate(type="text")
                     .form_element
                         label Время:
                         select
@@ -187,7 +187,7 @@ main
                                 td Мой магазин
                                 td ru-RU
                                 td.align_center
-                                    button.btn.delete_btn
+                                    button.btn.btn_gray.sm_elem
                                         +icon('delete-btn')
                     
                 .mailings_table_filters_setting
